@@ -262,13 +262,18 @@ function Image_Click( eSrc , bLeaveOpen )
     }
 }
 
-function Toc_click()
+function Toc_click(event)
 {
-    var eSrc = parentElementRepeatLI(window.event.srcElement);
-	if (eSrc == null){
-		return;
-	}
-	event.returnValue = false;
+    var evt = event || window.event;
+    var eSrc = parentElementRepeatLI((evt.target || evt.srcElement));
+    if (eSrc == null){
+        return;
+    }
+    if (evt.preventDefault){
+        evt.preventDefault();
+    }else{
+        evt.returnValue = false;
+    }
     if("A" == eSrc.tagName.toUpperCase() && "LI" == eSrc.parentElement.tagName)
     {
         var eImg = eSrc.parentElement.children[0];
@@ -284,7 +289,7 @@ function Toc_click()
         Image_Click( eSrc , false );
         Navigate_URL( eSrc );
     }
-    return event.returnValue;
+    return evt.returnValue;
 }
 
 function Toc_dblclick()
@@ -292,9 +297,10 @@ function Toc_dblclick()
 	return;
 }
 
-function mouse_over()
+function mouse_over(event)
 {
-    var eSrc = window.event.srcElement;
+    var evt = event || window.event;
+    var eSrc = evt.target || evt.srcElement;
 }
 
 function window_load()
@@ -328,7 +334,7 @@ function NoOp()
 	return;
 }
 
-//LI‚ªo‚é‚Ü‚ÅŒJ‚è•Ô‚·
+//LIãŒå‡ºã‚‹ã¾ã§ç¹°ã‚Šè¿”ã™
 function parentElementRepeatLI(eSrc)
 {
 	var tagName = eSrc.parentElement.tagName;
