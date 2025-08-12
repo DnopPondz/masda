@@ -256,19 +256,20 @@ function Image_Click( eSrc , bLeaveOpen )
 //                eSrc.src = "/esicont/esi_common/images/minus2.png";
                 eUL.innerHTML = L_LoadingMsg_HTMLText;
                 var strLoc = eLink.href;
-	                document.frames["hiddenframe"].location.replace(strLoc);
+                // use standard frames reference for hidden frame loading
+                window.frames["hiddenframe"].location.replace(strLoc);
             }
         }
     }
 }
 
-function Toc_click()
+function Toc_click(event)
 {
-    var eSrc = parentElementRepeatLI(window.event.srcElement);
-	if (eSrc == null){
-		return;
-	}
-	event.returnValue = false;
+    var eSrc = parentElementRepeatLI(event.target || event.srcElement);
+    if (eSrc == null){
+        return false;
+    }
+    event.preventDefault();
     if("A" == eSrc.tagName.toUpperCase() && "LI" == eSrc.parentElement.tagName)
     {
         var eImg = eSrc.parentElement.children[0];
@@ -284,7 +285,7 @@ function Toc_click()
         Image_Click( eSrc , false );
         Navigate_URL( eSrc );
     }
-    return event.returnValue;
+    return false;
 }
 
 function Toc_dblclick()
@@ -292,31 +293,38 @@ function Toc_dblclick()
 	return;
 }
 
-function mouse_over()
+function mouse_over(event)
 {
-    var eSrc = window.event.srcElement;
+    var eSrc = event.target || event.srcElement;
 }
 
 function window_load()
 {
-    var objStyle = null;
-    if("object" == typeof ( ulRoot ) && "object" == typeof( objStyle = document.styleSheets[0] ) && "object" == typeof( objStyle.addRule ) )
+    var sheet = document.styleSheets[0];
+    if(typeof ulRoot === "object" && sheet && sheet.insertRule)
     {
-        window.eSynchedNode = document.all["eSynchedNode"];
-        objStyle.addRule( "UL.clsHidden" , "display:none" , 0 );
-        objStyle.addRule( "UL.hdn" , "display:none" , 0 );
-        ulRoot.onclick=Toc_click;
-        ulRoot.ondblclick=Toc_dblclick;
-        document.onmouseover = mouse_over;
+        window.eSynchedNode = document.getElementById("eSynchedNode");
+        sheet.insertRule("UL.clsHidden {display:none}", 0);
+        sheet.insertRule("UL.hdn {display:none}", 0);
+        // attach event listeners using standard model
+        ulRoot.addEventListener('click', Toc_click);
+        ulRoot.addEventListener('dblclick', Toc_dblclick);
+        document.addEventListener('mouseover', mouse_over);
         if( window.eSynchedNode )
         {
             MarkActive(window.eSynchedNode);
-            window.eSynchedNode.all.tags( "B" )[0].outerHTML = eSynchedNode.all.tags("B")[0].innerHTML;
+            var bTags = window.eSynchedNode.getElementsByTagName("B");
+            if (bTags.length > 0) {
+                bTags[0].outerHTML = bTags[0].innerHTML;
+            }
             window.scrollTo(0,window.eSynchedNode.offsetTop-(document.body.clientHeight/2));
         }
         else
         {
-            MarkActive(document.all.tags( "LI" )[0]);
+            var liTags = document.getElementsByTagName("LI");
+            if (liTags.length > 0) {
+                MarkActive(liTags[0]);
+            }
         }
     }
 }
@@ -328,14 +336,16 @@ function NoOp()
 	return;
 }
 
-//LI‚ªo‚é‚Ü‚ÅŒJ‚è•Ô‚·
+//LIãŒå‡ºã‚‹ã¾ã§ç¹°ã‚Šè¿”ã™
 function parentElementRepeatLI(eSrc)
 {
-	var tagName = eSrc.parentElement.tagName;
-	if(tagName == "LI"){
-		return eSrc;
-	}else if(tagName != "HTML"){
-		return parentElementRepeatLI(eSrc.parentElement);
-	}
-	return null;
+        if(!eSrc) return null;
+        var parent = eSrc.parentElement || eSrc.parentNode;
+        var tagName = parent.tagName;
+        if(tagName == "LI"){
+                return eSrc;
+        }else if(tagName != "HTML"){
+                return parentElementRepeatLI(parent);
+        }
+        return null;
 }
