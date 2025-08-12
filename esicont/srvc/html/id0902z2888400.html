@@ -1,0 +1,195 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>รหัสวิเคราะห์ปัญหา U3000:4B [ระบบตรวจจับรถด้านหลัง]</title>
+</head>
+<body><a name="id0902z2888400"></a><p class="servinfo-title"><span class="servinfo-head"></span>รหัสวิเคราะห์ปัญหา U3000:4B [ระบบตรวจจับรถด้านหลัง]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0902z2888400</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ตำแหน่งความบกพร่องของระบบ</p>
+</th>
+<th id="" align="left">
+<p class="thead">อุณหภูมิจะลดลงชั่วคราวตามปัจจัยภายนอกและสิ่งแวดล้อมต่างๆ (โมดูลควบคุมระบบการตรวจจับรถด้านหลัง (ซ้าย) หรือ (ขวา))</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สภาวะการตรวจพบ</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ตรวจพบอุณหภูมิภายในโมดูลควบคุมระบบตรวจจับรถด้านหลังที่ระดับ <span>85&deg;C {185 &deg;F} หรือสูงกว่า</span> เป็นเวลา <span>10 วินาที หรือมากกว่า</span></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>Fail-safe</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ยับยั้งระบบตรวจจับรถด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สาเหตุที่เป็นไปได้</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;อุณหภูมิสูงขึ้นชั่วคราวเนื่องจากปัจจัยแวดล้อมภายนอกบางอย่าง</div>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย) บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา) บกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>ผังวงจรระบบ</span></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p clear="all">
+<p class="table-title">ขั้นตอนการวิเคราะห์ปัญหา</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">การตรวจสอบ</p>
+</th>
+<th id="" align="center">
+<p class="thead">การปฏิบัติ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">1</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบอุณหภูมิภายในโมดูลควบคุมระบบตรวจจับรถด้านหลัง</div>
+<div class="list">•&nbsp;&nbsp;ใช้ M-MDS เพื่อแสดง PID ต่อไปนี้<div>(ดูที่ <font class="extxref-label"><a href="id0902z2960600.html">การตรวจสอบ PID/DATA [ระบบตรวจจับรถด้านหลัง]</a></font>)</div>
+</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;INTNL_TMP_L</div>
+<div class="list">―&nbsp;&nbsp;INTNL_TMP_R</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ค่าการตรวจสอบเท่ากับ <span>85 &deg;C {185 &deg;F} หรือมากกว่า</span>หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนโมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย) ที่บกพร่อง แล้วไปที่ขั้นตอนถัดไป</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200014600.html">การถอด / การติดตั้งโมดูลควบคุมระบบตรวจจับรถด้านหลัง</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">2</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ทำการตรวจสอบรหัสวิเคราะห์ปัญหา และตรวจสอบว่าชิ้นส่วนที่บกพร่องคือโมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย) หรือไม่</div>
+<div class="list">•&nbsp;&nbsp;ลบรหัสวิเคราะห์ปัญหาสำหรับโมดูลควบคุมระบบตรวจจับรถด้านหลังโดยใช้ M-MDS<div>(ดูที่ <font class="extxref-label"><a href="id0902z2400300.html">การลบรหัสวิเคราะห์ปัญหา [ระบบตรวจจับรถด้านหลัง]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน) และรอเป็นเวลา <span>10 วินาที หรือมากกว่า</span></div>
+<div class="list">•&nbsp;&nbsp;ทำการตรวจสอบรหัสวิเคราะห์ปัญหาสำหรับโมดูลควบคุมระบบตรวจจับรถด้านหลังโดยใช้ M-MDS<div>(ดูที่ <font class="extxref-label"><a href="id0902z2345400.html">การตรวจสอบรหัสวิเคราะห์ปัญหา [ระบบตรวจจับรถด้านหลัง]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;รหัสวิเคราะห์ปัญหา U3000:4B ปรากฏขึ้นหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนโมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย) แล้วไปที่ขั้นตอนถัดไป</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200014600.html">การถอด / การติดตั้งโมดูลควบคุมระบบตรวจจับรถด้านหลัง</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอน 4</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">3</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ทำการตรวจสอบรหัสวิเคราะห์ปัญหา และตรวจสอบว่าชิ้นส่วนที่บกพร่องคือโมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา) หรือไม่</div>
+<div class="list">•&nbsp;&nbsp;ลบรหัสวิเคราะห์ปัญหาสำหรับโมดูลควบคุมระบบตรวจจับรถด้านหลังโดยใช้ M-MDS<div>(ดูที่ <font class="extxref-label"><a href="id0902z2400300.html">การลบรหัสวิเคราะห์ปัญหา [ระบบตรวจจับรถด้านหลัง]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน) และรอเป็นเวลา <span>10 วินาที หรือมากกว่า</span></div>
+<div class="list">•&nbsp;&nbsp;ทำการตรวจสอบรหัสวิเคราะห์ปัญหาสำหรับโมดูลควบคุมระบบตรวจจับรถด้านหลังโดยใช้ M-MDS<div>(ดูที่ <font class="extxref-label"><a href="id0902z2345400.html">การตรวจสอบรหัสวิเคราะห์ปัญหา [ระบบตรวจจับรถด้านหลัง]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;รหัสวิเคราะห์ปัญหา U3000:4B ปรากฏขึ้นหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนโมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา) แล้วไปที่ขั้นตอนถัดไป</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200014600.html">การถอด / การติดตั้งโมดูลควบคุมระบบตรวจจับรถด้านหลัง</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">4</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบว่ามีรหัสวิเคราะห์ปัญหาอื่นๆ ปรากฏขึ้นหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;มีรหัสวิเคราะห์ปัญหาอื่นๆ ปรากฏขึ้นหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมชิ้นส่วนที่บกพร่องตามการค้นหาสาเหตุปัญหาของรหัสวิเคราะห์ปัญหานั้นๆ</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0902z2347100.html">ตารางรหัสวิเคราะห์ปัญหา [ระบบตรวจจับรถด้านหลัง]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การค้นหาสาเหตุปัญหาของรหัสวิเคราะห์ปัญหาเสร็จสมบูรณ์</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</body>
+</html>

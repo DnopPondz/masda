@@ -1,0 +1,314 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>รหัสวิเคราะห์ปัญหา B10E7:16 [ชุดเปิด/ปิดการทำงาน]</title>
+</head>
+<body><a name="id0902p6020200"></a><p class="servinfo-title"><span class="servinfo-head"></span>รหัสวิเคราะห์ปัญหา B10E7:16 [ชุดเปิด/ปิดการทำงาน]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0902p6020200</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead"><span>ตำแหน่งความบกพร่องของระบบ</span></p>
+</th>
+<th id="" align="left">
+<p class="thead">วงจรรีเลย์ IG1 บกพร่อง</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สภาวะการตรวจพบ</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ขณะสวิตช์สตาร์ทอยู่ที่ ON (เครื่องยนต์ไม่ทำงานหรือทำงาน) ชุดเปิด/ปิดการทำงานตรวจพบแรงดันไฟฟ้ารวจสอบ IG1 <span>น้อยกว่า 2.5 V</span> เป็นเวลา <span>1 วินาทีหรือมากกว่า</span></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>Fail-safe</span></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สาเหตุที่เป็นไปได้</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;รีเลย์ IG1 บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;วงจรแหล่งจ่ายไฟรีเลย์ IG1 บกพร่อง</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ชุดสายไฟระหว่างฟิวส์ MAIN 200 A กับขั้ว D ของรีเลย์ IG1 ลัดวงจรลงกราวด์</div>
+<div class="list">―&nbsp;&nbsp;ฟิวส์ MAIN 200 A บกพร่อง</div>
+<div class="list">―&nbsp;&nbsp;ชุดสายไฟระหว่างขั้วบวกแบตเตอรี่กับขั้ว D ของรีเลย์ IG1 ขาดวงจร</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อหรือขั้วชุดเปิด/ปิดการทำงานบกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;วงจรแหล่งจ่ายไฟชุดเปิด/ปิดการทำงาน (IG1) บกพร่อง</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ชุดสายไฟระหว่างขั้ว C ของรีเลย์ IG1 กับขั้ว 1B ของชุดเปิด/ปิดการทำงานลัดวงจรลงกราวด์</div>
+<div class="list">―&nbsp;&nbsp;ฟิวส์ C/U IG1 15 A บกพร่อง</div>
+<div class="list">―&nbsp;&nbsp;ชุดสายไฟระหว่างขั้ว C ของรีเลย์ IG1 กับขั้ว 1B ของชุดเปิด/ปิดการทำงานขาดวงจร</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ชุดเปิด/ปิดการทำงานบกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2"><img src="images/ac5wzw00003359.png"></td>
+</tr>
+</tbody>
+</table>
+</p>
+<p clear="all">
+<p class="table-title">ขั้นตอนการวิเคราะห์ปัญหา</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">การตรวจสอบ</p>
+</th>
+<th id="" align="center">
+<p class="thead">การปฏิบัติ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">1</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบรีเลย์ IG1 เพื่อหาความบกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;ปลดสายขั้วลบแบตเตอรี่<div>(ดูที่ <font class="extxref-label"><a href="id0117i0800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div>(ดูที่ <font class="extxref-label"><a href="id0117i08008i1.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (รุ่นที่ไม่มีระบบ i-stop)]</a></font>)</div>
+<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ถอดรีเลย์ IG1<div>(ดูที่ <font class="extxref-label"><a href="id092100800600.html">ตำแหน่งรีเลย์</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบรีเลย์ IG1<div>(ดูที่ <font class="extxref-label"><a href="id092100800300.html">การตรวจสอบรีเลย์</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;รีเลย์ IG1 เป็นปกติหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนรีเลย์ IG1 ใหม่ แล้วไปที่ขั้นตอน 5</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092100800600.html">ตำแหน่งรีเลย์</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">2</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการขาดวงจรหรือการลัดวงจรลงกราวด์ของวงจรแหล่งจ่ายไฟรีเลย์ IG1</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบว่ารีเลย์ IG1 ถูกถอดออกหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;ต่อสายขั้วลบแบตเตอรี่<div>(ดูที่ <font class="extxref-label"><a href="id0117i0800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div>(ดูที่ <font class="extxref-label"><a href="id0117i08008i1.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (รุ่นที่ไม่มีระบบ i-stop)]</a></font>)</div>
+<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;วัดแรงดันไฟฟ้าที่ขั้ว D ของรีเลย์ IG1 (ด้านชุดสายไฟของรถ)</div>
+<div class="list">•&nbsp;&nbsp;มีแรงดันไฟฟ้าเท่ากับ <span>B+</span> หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจสอบฟิวส์ MAIN 200 A</div>
+<div class="list">•&nbsp;&nbsp;หากฟิวส์ไหม้:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ซ่อมหรือเปลี่ยนชุดสายไฟที่มีการลัดวงจรลงกราวด์ใหม่</div>
+<div class="list">―&nbsp;&nbsp;เปลี่ยนฟิวส์</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;หากฟิวส์เสียหาย:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;เปลี่ยนฟิวส์</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;หากฟิวส์ปกติ:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ซ่อมหรือเปลี่ยนชุดสายไฟที่มีการขาดวงจรใหม่</div>
+</dd>
+</dl>
+<div class="tbody">ไปที่ขั้นตอน 5</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">3</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบสภาพขั้วต่อชุดเปิด/ปิดการทำงาน</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;ปลดสายขั้วลบแบตเตอรี่<div>(ดูที่ <font class="extxref-label"><a href="id0117i0800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div>(ดูที่ <font class="extxref-label"><a href="id0117i08008i1.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (รุ่นที่ไม่มีระบบ i-stop)]</a></font>)</div>
+<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อชุดเปิด/ปิดการทำงาน</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบการเชื่อมต่อของขั้วต่อและสภาพการเชื่อมต่อ และทำการตรวจสอบความเสียหาย การผิดรูป การผุกร่อน หรือการหลุดออกของขั้ว</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อเป็นปกติหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนขั้วต่อ แล้วไปที่ขั้นตอน 5</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">4</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการขาดวงจรหรือการลัดวงจรลงกราวด์ของวงจรแหล่งจ่ายไฟชุดเปิด/ปิดการทำงาน (IG1)</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบว่ามีการปลดขั้วต่อชุดเปิด/ปิดการทำงาน</div>
+<div class="list">•&nbsp;&nbsp;ต่อสายขั้วลบแบตเตอรี่<div>(ดูที่ <font class="extxref-label"><a href="id0117i0800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div>(ดูที่ <font class="extxref-label"><a href="id0117i08008i1.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (รุ่นที่ไม่มีระบบ i-stop)]</a></font>)</div>
+<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;วัดแรงดันไฟฟ้าที่ขั้ว C ของรีเลย์ IG1 (ด้านชุดสายไฟของรถ)</div>
+<div class="list">•&nbsp;&nbsp;มีแรงดันไฟฟ้าเท่ากับ <span>B+</span> หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจสอบฟิวส์ C/U IG1 15 A</div>
+<div class="list">•&nbsp;&nbsp;หากฟิวส์ไหม้:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ซ่อมหรือเปลี่ยนชุดสายไฟที่มีการลัดวงจรลงกราวด์ใหม่</div>
+<div class="list">―&nbsp;&nbsp;เปลี่ยนฟิวส์</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;หากฟิวส์เสียหาย:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;เปลี่ยนฟิวส์</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;หากฟิวส์ปกติ:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ซ่อมหรือเปลี่ยนชุดสายไฟที่มีการขาดวงจรใหม่</div>
+</dd>
+</dl>
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">5</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ยืนยันว่าการซ่อมเสร็จสมบูรณ์แล้ว</div>
+<div class="list">•&nbsp;&nbsp;ต่อขั้วต่อที่ปลดออกทั้งหมดกลับเข้าที่</div>
+<div class="list">•&nbsp;&nbsp;ต่อสายขั้วลบแบตเตอรี่ที่ปลดออกกลับเข้าที่<div>(ดูที่ <font class="extxref-label"><a href="id0117i0800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div>(ดูที่ <font class="extxref-label"><a href="id0117i08008i1.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (รุ่นที่ไม่มีระบบ i-stop)]</a></font>)</div>
+<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ลบรหัสวิเคราะห์ปัญหาของชุดเปิด/ปิดการทำงานโดยใช้ M-MDS<div>(ดูที่ <font class="extxref-label"><a href="id0902p6018900.html">การลบรหัสวิเคราะห์ปัญหา [ชุดเปิด/ปิดการทำงาน]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน) และรอเป็นเวลา <span>1 วินาที หรือมากกว่า</span></div>
+<div class="list">•&nbsp;&nbsp;ทำการตรวจสอบรหัสวิเคราะห์ปัญหาของชุดเปิด/ปิดการทำงานโดยใช้ M-MDS<div>(ดูที่ <font class="extxref-label"><a href="id0902p6018800.html">การตรวจสอบรหัสวิเคราะห์ปัญหา [ชุดเปิด/ปิดการทำงาน]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;รหัสวิเคราะห์ปัญหา B10E7:16 ปรากฏขึ้นหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ทำซ้ำการตรวจสอบตั้งแต่ขั้นตอน 1</div>
+<div class="list">•&nbsp;&nbsp;หากความบกพร่องเกิดขึ้นอีกครั้ง ให้เปลี่ยนชุดเปิด/ปิดการทำงาน แล้วไปที่ขั้นตอนถัดไป<div>(ดูที่ <font class="extxref-label"><a href="id091400110300.html">การถอด / การติดตั้งชุดเปิด/ปิดการทำงาน</a></font>)</div>
+</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">6</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบว่ามีรหัสวิเคราะห์ปัญหาอื่นๆ ปรากฏขึ้นหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;มีรหัสวิเคราะห์ปัญหาอื่นๆ ปรากฏขึ้นหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมชิ้นส่วนที่บกพร่องตามการค้นหาสาเหตุปัญหาของรหัสวิเคราะห์ปัญหานั้นๆ</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0902p6019000.html">ตารางรหัสวิเคราะห์ปัญหา [ชุดเปิด/ปิดการทำงาน]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การค้นหาสาเหตุปัญหาของรหัสวิเคราะห์ปัญหาเสร็จสมบูรณ์</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</body>
+</html>

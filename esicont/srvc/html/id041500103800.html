@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>ระบบควบคุม TCS</title>
+</head>
+<body><a name="id041500103800"></a><p class="servinfo-title"><span class="servinfo-head"></span>ระบบควบคุม TCS</p>
+<hr>
+<p class="servinfo-title-id" align="right">id041500103800</p><br clear="all"><a name="id04150010380001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รายละเอียด</p>
+<div class="list">•&nbsp;&nbsp;การควบคุม TCS จะสั่งการให้ลดแรงบิดผ่านการควบคุมเครื่องยนต์ รวมถึงการใช้การควบคุมเบรกเพื่อควบคุมการลื่นไถล</div>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;การควบคุมเครื่องยนต์: กำลังเครื่องยนต์จะลดลงจากการตัดน้ำมันเชื้อเพลิงและการควบคุมจังหวะการจุดระเบิดเพื่อลดการลื่นไถล ซึ่งจะเป็นการป้องกันการลื่นไถลของล้อขับเคลื่อน</div>
+<div class="list">•&nbsp;&nbsp;การควบคุมเบรก: เพิ่มแรงดันน้ำมันเบรกจากชุดไฮดรอลิก (HU) ไปยังล้อขับเคลื่อนที่กำลังลื่นไถล ซึ่งเป็นการสั่งให้เบรกทำงานและป้องกันการลื่นไถลของล้อขับเคลื่อน</div>
+</div>
+</dd>
+</dl><br clear="all"><a name="id04150010380002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>คุณสมบัติ</p>
+<div class="list">•&nbsp;&nbsp;ล้อด้านซ้ายและขวาจะถูกควบคุมพร้อมกันโดยการควบคุมเครื่องยนต์ ดังนั้น เมื่อค่าสัมประสิทธิ์แรงเสียดทานของพื้นผิวถนนมีความแตกต่างกันระหว่างล้อด้านซ้ายและขวา ระบบจะไม่สามารถดำเนินการลดแรงบิดที่เหมาะสมแยกเฉพาะแต่ละล้อได้ เมื่อเกิดเหตุการณ์นี้ การลดแรงบิดจะถูกดำเนินการโดยการควบคุมเบรกล้อด้านซ้ายและด้านขวาอย่างอิสระ เพื่อให้การควบคุมรถมีความเสถียรเพิ่มขึ้น</div>
+<div class="list">•&nbsp;&nbsp;สวิตช์ TCS OFF จะช่วยให้คนขับเลือกที่จะเปิด/ปิดใช้งานการควบคุม TCS ตามดุลยพินิจของคนขับรถ</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;เมื่อล้อขับเคลื่อนทั้งสองล้อติด การควบคุมแรงฉุดลากตามการใช้งานของคนขับสามารถดำเนินการโดยการยับยั้งการควบคุม TCS</div>
+<div class="list">―&nbsp;&nbsp;การควบคุม TCS จะกลับมาทำงานตามปกติโดยอัตโนมัติในรอบการจุดระเบิดถัดไป</div>
+</dd>
+</dl><br clear="all"><a name="id04150010380003"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>โครงสร้าง</p>
+<p class="figure-title">แผนผังแบบบล็อก</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001116.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001116</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id04150010380004"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<div class="list">•&nbsp;&nbsp;การควบคุม TCS จะตรวจจับการลื่นไถลของล้อขับเคลื่อนตามสัญญาณที่ระบุไว้ด้านล่าง ส่งสัญญาณขอการลดแรงบิดไปยัง PCM และควบคุมโซลินอยด์วาล์วและมอเตอร์ปั๊มใน DSC HU/CM</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;สัญญาณความเร็วล้อรถจากเซ็นเซอร์ความเร็วของระบบ ABS ด้านหน้าและหลัง</div>
+<div class="list">―&nbsp;&nbsp;สัญญาณแรงบิดเครื่องยนต์จาก PCM</div>
+<div class="list">―&nbsp;&nbsp;สัญญาณมุมบังคับเลี้ยวจาก EPS CM</div>
+<div class="list">―&nbsp;&nbsp;สัญญาณแรง G ด้านข้างและอัตราโคลงจากโมดูลควบคุม SAS</div>
+<div class="list">―&nbsp;&nbsp;สัญญาณแรงดันน้ำมันเบรกจากเซ็นเซอร์แรงดันน้ำมันเบรก (ติดตั้งอยู่ใน DSC HU/CM)</div>
+</dd>
+</dl>
+</body>
+</html>

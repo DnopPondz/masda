@@ -1,0 +1,326 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>รหัสวิเคราะห์ปัญหา U0073:00, U0100:00, U0121:00, U0131:00, U0155:00 [GW6A-EL, GW6AX-EL]</title>
+</head>
+<body><a name="id050230910000"></a><p class="servinfo-title"><span class="servinfo-head"></span>รหัสวิเคราะห์ปัญหา U0073:00, U0100:00, U0121:00, U0131:00, U0155:00 [GW6A-EL, GW6AX-EL]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id050230910000</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา U0073:00</p>
+</th>
+<th id="" align="left">
+<p class="thead">การสื่อสารระบบ CAN ผิดพลาด (HS CAN)</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สภาวะการตรวจพบ</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ภายใต้สภาวะต่อไปนี้ แสดงว่าเกิดการสื่อสารผิดพลาด (HS CAN):</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;แรงดันไฟฟ้าแบตเตอรี่อยู่ที่ <span>10 V หรือสูงกว่า</span></div>
+</dd>
+</dl>
+<div class="list-title">ข้อมูลสนับสนุนการวิเคราะห์ปัญหา</div>
+<div class="list">•&nbsp;&nbsp;ไฟเตือนตรวจเช็คเครื่องยนต์ไม่ติดสว่าง</div>
+<div class="list">•&nbsp;&nbsp;ไฟเตือนเกียร์อัตโนมัติไม่ติดสว่าง</div>
+<div class="list">•&nbsp;&nbsp;มีรหัสค้างอยู่</div>
+<div class="list">•&nbsp;&nbsp;ไม่มีข้อมูลสภาพรถยนต์</div>
+<div class="list">•&nbsp;&nbsp;รหัสวิเคราะห์ปัญหาถูกเก็บไว้ในหน่วยความจำ TCM</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>ฟังก์ชั่น Fail-safe</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ยับยั้งการควบคุมการตั้งค่าความจำ</div>
+<div class="list">•&nbsp;&nbsp;ยับยั้งรอบเดินเบาเกียร์ว่าง</div>
+<div class="list">•&nbsp;&nbsp;ยับยั้งการควบคุมระบบ i-stop</div>
+<div class="list">•&nbsp;&nbsp;ยับยั้ง AAS</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สาเหตุที่เป็นไปได้</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;สายการสื่อสารระบบบัส CAN (HS CAN) บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;TCM บกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>ผังวงจรระบบ</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่มี</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา U0100:00</p>
+</th>
+<th id="" align="left">
+<p class="thead">การสื่อสารกับ PCM (HS CAN) ผิดพลาด</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สภาวะการตรวจพบ</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ภายใต้สภาวะต่อไปนี้ แสดงว่า TCM ไม่สามารถรับสัญญาณจาก PCM (HS CAN) ได้:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;แรงดันไฟฟ้าแบตเตอรี่อยู่ที่ <span>10 V หรือสูงกว่า</span></div>
+</dd>
+</dl>
+<div class="list-title">ข้อมูลสนับสนุนการวิเคราะห์ปัญหา</div>
+<div class="list">•&nbsp;&nbsp;ไฟเตือนตรวจเช็คเครื่องยนต์จะติดสว่างถ้า TCM ตรวจพบสภาวะความบกพร่องดังกล่าวด้านบนในระหว่างรอบการขับขี่แรก</div>
+<div class="list">•&nbsp;&nbsp;ไฟเตือนเกียร์อัตโนมัติไม่ติดสว่าง</div>
+<div class="list">•&nbsp;&nbsp;มีรหัสค้างอยู่</div>
+<div class="list">•&nbsp;&nbsp;มีข้อมูลสภาพรถยนต์</div>
+<div class="list">•&nbsp;&nbsp;รหัสวิเคราะห์ปัญหาถูกเก็บไว้ในหน่วยความจำ TCM</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>ฟังก์ชั่น Fail-safe</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ยับยั้งการควบคุมการตั้งค่าความจำ</div>
+<div class="list">•&nbsp;&nbsp;ยับยั้งรอบเดินเบาเกียร์ว่าง</div>
+<div class="list">•&nbsp;&nbsp;ยับยั้งการควบคุมระบบ i-stop</div>
+<div class="list">•&nbsp;&nbsp;ยับยั้ง AAS</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สาเหตุที่เป็นไปได้</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;สายการสื่อสารระบบ CAN ระหว่าง PCM กับ TCM (HS CAN) บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;TCM บกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>ผังวงจรระบบ</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่มี</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา U0121:00</p>
+</th>
+<th id="" align="left">
+<p class="thead">การสื่อสารกับ DSC HU/CM ผิดพลาด</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สภาวะการตรวจพบ</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ภายใต้สภาวะต่อไปนี้ แสดงว่า TCM ไม่สามารถรับสัญญาณจาก DSC HU/CM ได้:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;แรงดันไฟฟ้าแบตเตอรี่อยู่ที่ <span>10 V หรือสูงกว่า</span></div>
+</dd>
+</dl>
+<div class="list-title">ข้อมูลสนับสนุนการวิเคราะห์ปัญหา</div>
+<div class="list">•&nbsp;&nbsp;ไฟเตือนตรวจเช็คเครื่องยนต์จะติดสว่างถ้า TCM ตรวจพบสภาวะความบกพร่องดังกล่าวด้านบนในระหว่างรอบการขับขี่แรก</div>
+<div class="list">•&nbsp;&nbsp;ไฟเตือนเกียร์อัตโนมัติไม่ติดสว่าง</div>
+<div class="list">•&nbsp;&nbsp;มีรหัสค้างอยู่</div>
+<div class="list">•&nbsp;&nbsp;มีข้อมูลสภาพรถยนต์</div>
+<div class="list">•&nbsp;&nbsp;รหัสวิเคราะห์ปัญหาถูกเก็บไว้ในหน่วยความจำ TCM</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>ฟังก์ชั่น Fail-safe</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ยับยั้งการควบคุมการตั้งค่าความจำ</div>
+<div class="list">•&nbsp;&nbsp;ยับยั้งรอบเดินเบาเกียร์ว่าง</div>
+<div class="list">•&nbsp;&nbsp;ยับยั้งการควบคุมระบบ i-stop</div>
+<div class="list">•&nbsp;&nbsp;ยับยั้ง AAS</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สาเหตุที่เป็นไปได้</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;สายการสื่อสารระบบ CAN ระหว่าง TCM กับ DSC HU/CM บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;TCM บกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>ผังวงจรระบบ</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่มี</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา U0131:00</p>
+</th>
+<th id="" align="left">
+<p class="thead">การสื่อสารกับโมดูลควบคุม EPS ผิดพลาด</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สภาวะการตรวจพบ</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ภายใต้สภาวะต่อไปนี้ แสดงว่า TCM ไม่สามารถรับสัญญาณจากโมดูลควบคุม EPS ได้:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;แรงดันไฟฟ้าแบตเตอรี่อยู่ที่ <span>10 V หรือสูงกว่า</span></div>
+</dd>
+</dl>
+<div class="list-title">ข้อมูลสนับสนุนการวิเคราะห์ปัญหา</div>
+<div class="list">•&nbsp;&nbsp;ไฟเตือนตรวจเช็คเครื่องยนต์ไม่ติดสว่าง</div>
+<div class="list">•&nbsp;&nbsp;ไฟเตือนเกียร์อัตโนมัติไม่ติดสว่าง</div>
+<div class="list">•&nbsp;&nbsp;มีรหัสค้างอยู่</div>
+<div class="list">•&nbsp;&nbsp;ไม่มีข้อมูลสภาพรถยนต์</div>
+<div class="list">•&nbsp;&nbsp;รหัสวิเคราะห์ปัญหาถูกเก็บไว้ในหน่วยความจำ TCM</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>ฟังก์ชั่น Fail-safe</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ยับยั้งการควบคุมการตั้งค่าความจำ</div>
+<div class="list">•&nbsp;&nbsp;ยับยั้งรอบเดินเบาเกียร์ว่าง</div>
+<div class="list">•&nbsp;&nbsp;ยับยั้งการควบคุมระบบ i-stop</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สาเหตุที่เป็นไปได้</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;สายการสื่อสารระบบ CAN ระหว่าง TCM กับโมดูลควบคุม EPS บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;TCM บกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>ผังวงจรระบบ</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่มี</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา U0155:00</p>
+</th>
+<th id="" align="left">
+<p class="thead">การสื่อสารกับแผงหน้าปัดผิดพลาด</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สภาวะการตรวจพบ</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ภายใต้สภาวะต่อไปนี้ แสดงว่า TCM ไม่สามารถรับสัญญาณจากแผงหน้าปัดได้:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;แรงดันไฟฟ้าแบตเตอรี่อยู่ที่ <span>10 V หรือสูงกว่า</span></div>
+</dd>
+</dl>
+<div class="list-title">ข้อมูลสนับสนุนการวิเคราะห์ปัญหา</div>
+<div class="list">•&nbsp;&nbsp;ไฟเตือนตรวจเช็คเครื่องยนต์จะติดสว่างถ้า TCM ตรวจพบสภาวะความบกพร่องดังกล่าวด้านบนในระหว่างรอบการขับขี่แรก</div>
+<div class="list">•&nbsp;&nbsp;ไฟเตือนเกียร์อัตโนมัติไม่ติดสว่าง</div>
+<div class="list">•&nbsp;&nbsp;มีรหัสค้างอยู่</div>
+<div class="list">•&nbsp;&nbsp;มีข้อมูลสภาพรถยนต์</div>
+<div class="list">•&nbsp;&nbsp;รหัสวิเคราะห์ปัญหาถูกเก็บไว้ในหน่วยความจำ TCM</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>ฟังก์ชั่น Fail-safe</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ยับยั้งการควบคุมการตั้งค่าความจำ</div>
+<div class="list">•&nbsp;&nbsp;ยับยั้งโหมดแมนน่วล</div>
+<div class="list">•&nbsp;&nbsp;ยับยั้งรอบเดินเบาเกียร์ว่าง</div>
+<div class="list">•&nbsp;&nbsp;ยับยั้งการควบคุมระบบ i-stop</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สาเหตุที่เป็นไปได้</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;สายการสื่อสารระบบ CAN ระหว่าง TCM กับแผงหน้าปัดบกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;TCM บกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>ผังวงจรระบบ</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่มี</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p><br clear="all"><a name="id05023091000001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ขั้นตอนการวิเคราะห์ปัญหา</p>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบตามขั้นตอนการวิเคราะห์ปัญหาในการวิเคราะห์ปัญหาบนรถ [ระบบการสื่อสารแบบมัลติเพล็กซ์] (ดูที่ <font class="extxref-label"><a href="id100205000000.html">คำนำ [SKYACTIV-D 2.2 (L.H.D.)]</a></font>) (ดูที่ <font class="extxref-label"><a href="id100206000000.html">คำนำ [SKYACTIV-D 2.2 (R.H.D.)]</a></font>)</div>
+</body>
+</html>

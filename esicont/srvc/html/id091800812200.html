@@ -1,0 +1,198 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>การตั้งค่าเริ่มต้นของระบบควบคุมระดับไฟหน้าอัตโนมัติ</title>
+</head>
+<body><a name="id091800812200"></a><p class="servinfo-title"><span class="servinfo-head"></span>การตั้งค่าเริ่มต้นของระบบควบคุมระดับไฟหน้าอัตโนมัติ</p>
+<hr>
+<p class="servinfo-title-id" align="right">id091800812200</p>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุม AFS จะบันทึกความสูงของรถขณะไม่มีการใช้ที่นั่งด้วยการดำเนินการตั้งค่าเริ่มต้นของระบบควบคุมระดับไฟหน้าอัตโนมัติ</div>
+<div class="list">•&nbsp;&nbsp;ดำเนินการตั้งค่าเริ่มต้นของระบบควบคุมระดับไฟหน้าอัตโนมัติ หากมีการดำเนินงานใดงานหนึ่งต่อไปนี้</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;การเปลี่ยนโมดูลควบคุม AFS</div>
+<div class="list">―&nbsp;&nbsp;การเปลี่ยน, การถอด / การติดตั้งเซ็นเซอร์ควบคุมระดับอัตโนมัติ</div>
+<div class="list">―&nbsp;&nbsp;การทำงานที่มีผลกระทบต่อความสูงของรถ เช่น การเปลี่ยนหรือการถอด / การติดตั้งระบบรองรับ</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ขั้นตอนสำหรับการตั้งค่าเริ่มต้นของระบบควบคุมระดับไฟหน้าอัตโนมัติมีสองแบบ คือ แบบที่ใช้ M-MDS และอีกแบบหนึ่งไม่ใช้ M-MDS</div>
+</div>
+</dd>
+</dl><br clear="all"><a name="id09180081220001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>เมื่อใช้ M-MDS</p>
+<p class="list">1.&nbsp;&nbsp;ทำให้รถว่างโดยให้ผู้โดยสารทั้งหมดออกจากรถและนำสัมภาระทั้งหมดออกมาด้วยยกเว้นยางอะไหล่ แม่แรง และเครื่องมือต่างๆ ที่ติดตั้งบนรถ</p>
+<p class="list"></p>
+<p class="list">2.&nbsp;&nbsp;ปรับแรงดันลมยางแต่ละล้อตามค่าที่กำหนด (ดูที่ <font class="extxref-label"><a href="id021200800100.html">ค่ากำหนดยางและล้อ</a></font>)</p>
+<p class="list"></p>
+<p class="list">3.&nbsp;&nbsp;เลื่อนรถไปยังพื้นราบ</p>
+<p class="list"></p>
+<p class="list">4.&nbsp;&nbsp;ต่อ M-MDS เข้ากับ DLC-2</p>
+<p class="list"></p>
+<p class="list">5.&nbsp;&nbsp;หลังจากระบุข้อมูลรถแล้ว ให้เลือกรายการตามลำดับต่อไปนี้จากหน้าจอการตั้งค่าเริ่มต้นของ M-MDS</p>
+<p class="list">
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;ไฟแสดงสถานะ AFS OFF กะพริบต่อเนื่องระหว่างการตั้งค่าเริ่มต้นครั้งแรก อย่างไรก็ตาม จะยังคงทำงานต่อไป เนื่องจากไม่ได้แสดงถึงขั้นตอนที่ไม่ถูกต้องแต่อย่างใด<table class="figure-flame">
+<tr>
+<td width="10mm"></td>
+<td>
+<table class="figure-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzw00001212.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzw00001212</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</dd>
+</dl>
+<dl class="list">
+<dd>(1)&nbsp;&nbsp;&quot;Electrical&quot;</dd>
+<dd></dd>
+</dl>
+<dl class="list">
+<dd>(2)&nbsp;&nbsp;&quot;ExteriorLighting&quot;</dd>
+<dd></dd>
+</dl>
+<dl class="list">
+<dd>(3)&nbsp;&nbsp;&quot;Headlamp&quot;</dd>
+<dd></dd>
+</dl>
+<dl class="list">
+<dd>(4)&nbsp;&nbsp;&quot;Auto Leveling Sensor&quot;</dd>
+<dd></dd>
+</dl>
+<dl class="list">
+<dd>(5)&nbsp;&nbsp;&quot;Auto Leveling Sensors Calibration&quot;</dd>
+<dd></dd>
+</dl>
+</p>
+<p class="list">6.&nbsp;&nbsp;ตรวจสอบว่าไฟแสดงสถานะ AFS OFF กะพริบสามครั้งๆ ละ <span>0.25 วินาที</span>และดับลง ตามที่แสดงในรูปภาพ</p>
+<p class="list">
+<table class="figure-flame">
+<tr>
+<td width="10mm"></td>
+<td>
+<table class="figure-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzw00003042.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzw00003042</div>
+</td>
+</tr>
+</table>
+</p>
+<p class="list">7.&nbsp;&nbsp;ปรับลำแสงไฟหน้า (ดูที่ <font class="extxref-label"><a href="id091800800400.html">การปรับไฟหน้า</a></font>)</p>
+<p class="list"></p><br clear="all"><a name="id09180081220002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>เมื่อไม่ได้ใช้ M-MDS</p>
+<dl>
+<dd>
+<div class="attention2-label">ข้อควรระวัง</div>
+</dd>
+<dd>
+<div class="attention2">
+<div class="list">•&nbsp;&nbsp;ดำเนินการขั้นตอนที่ 3-4 ภายใน 30 วินาที</div>
+</div>
+</dd>
+</dl>
+<p class="list">1.&nbsp;&nbsp;ทำให้รถว่างโดยให้ผู้โดยสารทั้งหมดออกจากรถและนำสัมภาระทั้งหมดออกมาด้วยยกเว้นยางอะไหล่ แม่แรง และเครื่องมือต่างๆ ที่ติดตั้งบนรถ</p>
+<p class="list"></p>
+<p class="list">2.&nbsp;&nbsp;ปรับแรงดันลมยางแต่ละล้อตามค่าที่กำหนด (ดูที่ <font class="extxref-label"><a href="id021200800100.html">ค่ากำหนดยางและล้อ</a></font>)</p>
+<p class="list"></p>
+<p class="list">3.&nbsp;&nbsp;บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</p>
+<p class="list">
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;ไฟแสดงสถานะ AFS OFF กะพริบต่อเนื่องระหว่างการตั้งค่าเริ่มต้นครั้งแรก อย่างไรก็ตาม จะยังคงทำงานต่อไป เนื่องจากไม่ได้แสดงถึงขั้นตอนที่ไม่ถูกต้องแต่อย่างใด<table class="figure-flame">
+<tr>
+<td width="10mm"></td>
+<td>
+<table class="figure-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzw00001212.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzw00001212</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</dd>
+</dl>
+</p>
+<p class="list">4.&nbsp;&nbsp;ใช้สายพ่วงเชื่อมต่อขั้ว B และขั้ว J (กราวด์) ของ DLC-2 สามครั้งๆ ละ <span>0.5 ถึง 1.5 วินาที</span> ตามที่แสดงในรูปภาพ</p>
+<p class="list">
+<dl>
+<dd>
+<div class="attention2-label">ข้อควรระวัง</div>
+</dd>
+<dd>
+<div class="attention2">
+<div class="list">•&nbsp;&nbsp;หากเชื่อมต่อขั้วผิดพลาด อาจเกิดความเสียหายต่อรถหรือเกิดเพลิงไหม้ได้ เมื่อต่อด้วยสายพ่วง ให้ตรวจสอบขั้วที่กำลังต่ออย่างละเอียดเพื่อป้องกันการเชื่อมต่อผิดพลาด<table class="figure-flame">
+<tr>
+<td width="10mm"></td>
+<td>
+<table class="figure-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzw00001214.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzw00001214</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</dd>
+</dl>
+</p>
+<p class="list">5.&nbsp;&nbsp;ตรวจสอบไฟแสดงสถานะ AFS OFF</p>
+<p class="list">
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบว่าไฟแสดงสถานะ AFS OFF กะพริบสามครั้งๆ ละ <span>0.25 วินาที</span>และดับลง ตามที่แสดงในรูปภาพ แสดงว่าการตั้งค่าเริ่มต้นเสร็จสมบูรณ์ ไปที่ขั้นตอนถัดไป<table class="figure-flame">
+<tr>
+<td width="10mm"></td>
+<td>
+<table class="figure-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzw00003042.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzw00003042</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="list">•&nbsp;&nbsp;หากไฟแสดงสถานะ AFS OFF กะพริบอย่างต่อเนื่อง แสดงว่าอาจมีการดำเนินการขั้นตอนไม่ถูกต้อง ทำซ้ำขั้นตอนตั้งแต่ขั้นตอน 3</div>
+<div class="list">•&nbsp;&nbsp;หากไฟแสดงสถานะ AFS OFF ติดสว่าง แสดงว่าระบบควบคุมระดับไฟหน้าอัตโนมัติอาจทำงานผิดปกติ ทำการตรวจสอบรหัสวิเคราะห์ปัญหา (ดูที่ <font class="extxref-label"><a href="id09021n960300.html">การตรวจสอบรหัสวิเคราะห์ปัญหา [ระบบปรับลำแสงไฟหน้า (AFS)]</a></font>)</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ซ่อมหรือเปลี่ยนบริเวณที่บกพร่อง แล้วทำซ้ำขั้นตอนที่ 3</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</p>
+<p class="list">6.&nbsp;&nbsp;ปรับลำแสงไฟหน้า (ดูที่ <font class="extxref-label"><a href="id091800800400.html">การปรับไฟหน้า</a></font>)</p>
+<p class="list"></p>
+</body>
+</html>

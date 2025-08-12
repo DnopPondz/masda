@@ -1,0 +1,317 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>รหัสวิเคราะห์ปัญหา P2458:00 [SKYACTIV-D 2.2]</title>
+</head>
+<body><a name="id0102s4154100"></a><p class="servinfo-title"><span class="servinfo-head"></span>รหัสวิเคราะห์ปัญหา P2458:00 [SKYACTIV-D 2.2]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0102s4154100</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา P2458:00</p>
+</th>
+<th id="" align="left">
+<p class="thead">กรองเขม่าดีเซลมีการสะสมมากเกินไป (ปานกลาง)</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สภาวะการตรวจพบ</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;PCM ตรวจพบว่ามีปริมาณการสะสมของเขม่า<span>สูงกว่า 10 g/l {0.6 Ib/ft<sup>3</sup>}</span></div>
+<div class="list-title">ข้อมูลสนับสนุนการวิเคราะห์ปัญหา</div>
+<div class="list">•&nbsp;&nbsp;กรณีนี้คือ การตรวจสอบต่อเนื่อง (อื่นๆ)</div>
+<div class="list">•&nbsp;&nbsp;ไฟเตือนตรวจเช็คเครื่องยนต์ไม่ติดสว่าง</div>
+<div class="list">•&nbsp;&nbsp;ไม่มีข้อมูลสภาพรถยนต์ (FREEZE FRAME DATA) (โหมด 2) / ข้อมูล Snapshot</div>
+<div class="list">•&nbsp;&nbsp;รหัสวิเคราะห์ปัญหาถูกเก็บไว้ในหน่วยความจำ PCM</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>ฟังก์ชั่น FAIL-SAFE</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;PCM จำกัดแรงบิดเครื่องยนต์</div>
+<div class="list">•&nbsp;&nbsp;ยับยั้งการควบคุมการฟื้นฟูไส้กรองเขม่าดีเซล</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สาเหตุที่เป็นไปได้</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ท่อระหว่างเซ็นเซอร์แรงดันก๊าซไอเสีย No.2 กับอุปกรณ์แปรสภาพก๊าซไอเสียอุดตันและ/หรือเสียหาย</div>
+<div class="list">•&nbsp;&nbsp;กรองเขม่าดีเซลอุดตันและ / หรือเสียหาย</div>
+<div class="list">•&nbsp;&nbsp;PCM บกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>ผังวงจรไฟฟ้าระบบ</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ไม่ได้</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p clear="all">
+<p class="table-title">ขั้นตอนการวิเคราะห์ปัญหา</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">การตรวจสอบ</p>
+</th>
+<th id="" align="center">
+<p class="thead">การดำเนินการ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">1</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบว่าข้อมูลสภาพรถยนต์ (FREEZE FRAME DATA) (โหมด 2) / ข้อมูล SNAPSHOT ได้รับการบันทึกแล้ว</div>
+<div class="list">•&nbsp;&nbsp;ข้อมูลสภาพรถยนต์ (FREEZE FRAME DATA) (โหมด 2) / ข้อมูล SNAPSHOT ได้รับการบันทึกแล้วหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">บันทึกข้อมูลสภาพรถยนต์ (FREEZE FRAME DATA) (โหมด 2) / ข้อมูล SNAPSHOT ตามคำสั่งซ่อม แล้วไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">2</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบว่ามีข้อมูลการบริการที่เกี่ยวข้อง</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบว่ามีข้อมูลการบริการที่เกี่ยวข้องหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;มีข้อมูลการบริการที่เกี่ยวข้องอื่นๆ หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ให้ทำการซ่อมหรือวิเคราะห์ปัญหาตามข้อมูลการบริการที่มี</div>
+<div class="list">•&nbsp;&nbsp;ถ้าแก้ไขปัญหาไม่ได้ ให้ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">3</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบรหัสวิเคราะห์ปัญหาและ/หรือรหัสที่ค้างอยู่ที่เกี่ยวข้อง</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF แล้วบิดไปที่ ON (เครื่องยนต์ไม่ทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;ให้ปฏิบัติตามขั้นตอนการเข้าถึงรหัสปัญหาที่ค้างอยู่และขั้นตอนการอ่านรหัสวิเคราะห์ปัญหา<div>(ดูที่ <font class="extxref-label"><a href="id0102s4801000.html">การทดสอบการวิเคราะห์ปัญหาบนรถ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;รหัสที่ค้างอยู่ / รหัสวิเคราะห์ปัญหา P242F:00 ปรากฏขึ้นด้วยหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่การตรวจสอบรหัสที่ค้างอยู่หรือรหัสวิเคราะห์ปัญหานั้นๆ</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0102s4153400.html">รหัสวิเคราะห์ปัญหา P242F:00 [SKYACTIV-D 2.2]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">4</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบท่อที่เกี่ยวข้องของเซ็นเซอร์แรงดันก๊าซไอเสีย No.2</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบท่อที่เกี่ยวข้องของเซ็นเซอร์แรงดันก๊าซไอเสีย No.2 ด้วยสายตาเพื่อหาการอุดตันและความเสียหาย<div>(ดูที่ <font class="extxref-label"><a href="id0140z7446000.html">การตรวจสอบเซ็นเซอร์แรงดันก๊าซไอเสีย [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีความบกพร่องใดๆ หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชิ้นส่วนที่บกพร่องตามผลที่ได้จากการตรวจสอบ แล้วไปที่ขั้นตอน 6</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ดำเนินการ &ldquo;ปรับแก้ปริมาณการฉีดของหัวฉีดน้ำมันเชื้อเพลิง&rdquo; แล้วทำ &ldquo;การฟื้นฟูสภาพกรองเขม่าดีเซลที่จำเป็น&rdquo;</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140z7421700.html">การปรับแก้ปริมาณการฉีดของหัวฉีดน้ำมันเชื้อเพลิง [SKYACTIV-D 2.2]</a></font>)</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140z7993400.html">การฟื้นฟูสภาพกรองเขม่าดีเซลที่จำเป็น [SKYACTIV-D 2.2]</a></font>)</div>
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;หากรหัสวิเคราะห์ปัญหาต่อไปนี้ถูกเก็บบันทึกใน PCM &ldquo;การฟื้นฟูสภาพกรองเขม่าดีเซลที่จำเป็น&rdquo; จะถูกบล็อกโดย PCM ก่อนอื่นให้ดำเนินการตามขั้นตอนการตรวจสอบรหัสวิเคราะห์ปัญหาที่เหมาะสม จากนั้นทำ &ldquo;การฟื้นฟูสภาพกรองเขม่าดีเซลที่จำเป็น&rdquo; อีกครั้ง</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;รหัสวิเคราะห์ปัญหา P0093:00, P0097:00, P0098:00, P0101:00, P0102:00, P0103:00, P0106:00, P0107:00, P0108:00, P0112:00, P0113:00, P0117:00, P0118:00, P0131:00, P0132:00, P0154:00, P0191:00, P0192:00, P0193:00, P0201:00, P0202:00, P0203:00, P0204:00, P0299:00, P0301:00, P0302:00, P0303:00, P0304:00, P0313:00, P0337:00, P0406:00, P0500:00, P0545:00, P0546:00, P0605:00, P0606:00, P062A:00, P115A:00, P1378:00, P1379:00, P1675:00, P1676:00, P2002:00, P2032:00, P2033:00, P2146:00, P2147:00, P2148:00, P2149:00, P2150:00, P2151:00, P2228:00, P2229:00, P242C:00, P242D:00, P242F:00<sup>*</sup>, P2454:00, P2455:00, P2456:00, P2463:00, P253F:00, P2621:00, P2622:00<div><sup>*</sup>: สำหรับรหัสวิเคราะห์ปัญหา P242F:00 &ldquo;การฟื้นฟูสภาพกรองเขม่าดีเซลที่จำเป็น&rdquo; จะถูกบล็อกหากมีปริมาณเขม่ามากเกินไปในกรองเขม่าดีเซล</div>
+</div>
+</dd>
+</dl>
+</div>
+</dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">5</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบรหัสวิเคราะห์ปัญหา</div>
+<div class="list">•&nbsp;&nbsp;ลบรหัสวิเคราะห์ปัญหาออกจากหน่วยความจำ PCM โดยใช้ M-MDS<div>(ดูที่ <font class="extxref-label"><a href="id0102s4801100.html">ขั้นตอนหลังจากงานซ่อม [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;สตาร์ทเครื่องยนต์ และอุ่นเครื่องจนถึงอุณหภูมิการทำงาน<dl>
+<dd>
+<div class="attention2-label">ข้อควรระวัง</div>
+</dd>
+<dd>
+<div class="attention2">
+<div class="list">•&nbsp;&nbsp;ในขณะที่ปฏิบัติขั้นตอนนี้ ให้ใช้งานรถในที่ที่ปลอดภัยและถูกต้องตามกฎหมายทุกครั้ง</div>
+<div class="list">•&nbsp;&nbsp;เมื่อใช้ M-MDS เพื่อดูสถานะระบบตรวจสอบในขณะขับขี่ ให้แน่ใจว่ามีช่างอีกคนพร้อมกับท่าน หรือบันทึกข้อมูลใน M-MDS โดยใช้ฟังก์ชั่นการจับข้อมูล PID/DATA MONITOR และ RECORD แล้วตรวจสอบภายหลัง</div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="list">•&nbsp;&nbsp;ขับรถในสภาวะข้อมูล SNAPSHOT / ข้อมูลสภาพรถยนต์ (FREEZE FRAME DATA) (โหมด 2)</div>
+<div class="list">•&nbsp;&nbsp;ปฏิบัติตามขั้นตอนการอ่านรหัสวิเคราะห์ปัญหา<div>(ดูที่ <font class="extxref-label"><a href="id0102s4801000.html">การทดสอบการวิเคราะห์ปัญหาบนรถ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีรหัสวิเคราะห์ปัญหาเดียวกันปรากฏขึ้นหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สาเหตุอาจเกิดจากกรองเขม่าดีเซลอุดตันและ/หรือเสียหาย</div>
+<div class="list">•&nbsp;&nbsp;เปลี่ยนอุปกรณ์แปรสภาพก๊าซไอเสีย แล้วไปที่ขั้นตอนถัดไป<div>(ดูที่ <font class="extxref-label"><a href="id0115z7800200.html">การถอด / การติดตั้งระบบไอเสีย [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอน 7</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">6</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบว่าการค้นหาสาเหตุปัญหาของรหัสวิเคราะห์ปัญหาเสร็จสมบูรณ์แล้ว</div>
+<div class="list">•&nbsp;&nbsp;ลบรหัสวิเคราะห์ปัญหาออกจากหน่วยความจำ PCM โดยใช้ M-MDS<div>(ดูที่ <font class="extxref-label"><a href="id0102s4801100.html">ขั้นตอนหลังจากงานซ่อม [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;สตาร์ทเครื่องยนต์ และอุ่นเครื่องจนถึงอุณหภูมิการทำงาน<dl>
+<dd>
+<div class="attention2-label">ข้อควรระวัง</div>
+</dd>
+<dd>
+<div class="attention2">
+<div class="list">•&nbsp;&nbsp;ในขณะที่ปฏิบัติขั้นตอนนี้ ให้ใช้งานรถในที่ที่ปลอดภัยและถูกต้องตามกฎหมายทุกครั้ง</div>
+<div class="list">•&nbsp;&nbsp;เมื่อใช้ M-MDS เพื่อดูสถานะระบบตรวจสอบในขณะขับขี่ ให้แน่ใจว่ามีช่างอีกคนพร้อมกับท่าน หรือบันทึกข้อมูลใน M-MDS โดยใช้ฟังก์ชั่นการจับข้อมูล PID/DATA MONITOR และ RECORD แล้วตรวจสอบภายหลัง</div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="list">•&nbsp;&nbsp;ขับรถในสภาวะข้อมูล SNAPSHOT / ข้อมูลสภาพรถยนต์ (FREEZE FRAME DATA) (โหมด 2)</div>
+<div class="list">•&nbsp;&nbsp;ปฏิบัติตามขั้นตอนการอ่านรหัสวิเคราะห์ปัญหา<div>(ดูที่ <font class="extxref-label"><a href="id0102s4801000.html">การทดสอบการวิเคราะห์ปัญหาบนรถ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีรหัสวิเคราะห์ปัญหาเดียวกันปรากฏขึ้นหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ทำซ้ำการตรวจสอบตั้งแต่ขั้นตอน 1</div>
+<div class="list">•&nbsp;&nbsp;ถ้าความบกพร่องเกิดขึ้นอีกครั้ง ให้เปลี่ยน PCM<div>(ดูที่ <font class="extxref-label"><a href="id0140z7802400.html">การถอด / การติดตั้ง PCM [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">7</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบขั้นตอนหลังจากงานซ่อม</div>
+<div class="list">•&nbsp;&nbsp;ปฏิบัติตาม &ldquo;ขั้นตอนหลังจากงานซ่อม&rdquo;<div>(ดูที่ <font class="extxref-label"><a href="id0102s4801100.html">ขั้นตอนหลังจากงานซ่อม [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีรหัสวิเคราะห์ปัญหาปรากฏขึ้นหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่การตรวจสอบรหัสวิเคราะห์ปัญหานั้นๆ</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0102s4801500.html">ตารางรหัสวิเคราะห์ปัญหา [SKYACTIV-D 2.2]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การค้นหาสาเหตุปัญหาของรหัสวิเคราะห์ปัญหาเสร็จสมบูรณ์</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</body>
+</html>

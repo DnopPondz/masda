@@ -1,0 +1,3302 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>การวิเคราะห์ปัญหาบนรถ</title>
+</head>
+<body><a name="id080200001500"></a><p class="servinfo-title"><span class="servinfo-head"></span>การวิเคราะห์ปัญหาบนรถ</p>
+<hr>
+<p class="servinfo-title-id" align="right">id080200001500</p><br clear="all"><a name="id08020000150001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รายละเอียด</p>
+<div class="list">•&nbsp;&nbsp;ระบบถุงลมนิรภัยมีฟังก์ชั่นการวิเคราะห์ปัญหาบนรถเพื่อช่วยให้การวิเคราะห์ระบบง่ายขึ้น</div>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่นการวิเคราะห์ปัญหาบนรถจะประกอบด้วยฟังก์ชั่นต่อไปนี้: ฟังก์ชั่นตรวจจับความบกพร่องซึ่งจะตรวจจับความบกพร่องทั้งหมดในชิ้นส่วนที่เกี่ยวข้องกับระบบถุงลมนิรภัย ฟังก์ชั่นหน่วยความจำซึ่งจะบันทึกรหัสวิเคราะห์ปัญหาที่ตรวจพบ ฟังก์ชั่นการแสดงผลซึ่งจะบ่งชี้ความบกพร่องของระบบผ่านจอแสดงผลรหัสวิเคราะห์ปัญหา และฟังก์ชั่นการตรวจสอบ PID/DATA ซึ่งจะอ่านสัญญาณอินพุท/เอาท์พุทแต่ละตัว</div>
+<div class="list">•&nbsp;&nbsp;เมื่อใช้ Mazda Modular Diagnostic System (M-MDS) สามารถอ่านและลบรหัสวิเคราะห์ปัญหา และสามารถเปิดใช้งานฟังก์ชั่นการตรวจสอบ PID/DATA ได้</div>
+<div class="list">•&nbsp;&nbsp;ระบบนี้มีฟังก์ชั่น Fail-safe เพื่อป้องกันการกระตุ้นถุงลมนิรภัยโดยบังเอิญในกรณีที่ระบบถุงลมนิรภัยบกพร่อง</div><br clear="all"><a name="id08020000150002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p><br clear="all"><p><a name="id08020000150003"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นการวิเคราะห์ด้วยตนเอง</p>
+<dl>
+<dd>
+<div class="list-title">ฟังก์ชั่นการตรวจจับความบกพร่อง</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความบกพร่องทั้งหมดในชิ้นส่วนที่เกี่ยวข้องกับระบบถุงลมนิรภัย</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">ฟังก์ชั่นหน่วยความจำ</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;บันทึกความบกพร่องต่างๆ ที่ตรวจพบในชิ้นส่วนที่เกี่ยวข้องกับระบบถุงลมนิรภัยโดยใช้ฟังก์ชั่นตรวจจับความบกพร่อง และรายละเอียดความบกพร่องที่บันทึกไว้จะไม่ถูกลบออกแม้ว่าจะบิดสวิตช์สตาร์ทไปที่ OFF หรือปลดสายแบตเตอรี่ขั้วลบออกก็ตาม</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">ฟังก์ชั่นการแสดงผล</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เมื่อฟังก์ชันการตรวจจับความบกพร่องตรวจพบความบกพร่อง ไฟเตือนระบบถุงลมนิรภัยจะติดสว่างเพื่อแจ้งให้คนขับทราบ เมื่อใช้ฟังก์ชันการสื่อสารของเครื่องทดสอบภายนอก รหัสวิเคราะห์ปัญหาสามารถส่งออกไปยัง DLC-2 ผ่านระบบ CAN</div>
+</dd>
+</dl>
+<p clear="all">
+<p>
+<div>X: สามารถทำได้</div>
+<div>−: ไม่มี</div>
+</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center" colspan="4">
+<p class="thead">รหัสวิเคราะห์ปัญหา</p>
+</th>
+<th id="" align="center" rowspan="3">
+<p class="thead">ตำแหน่งความบกพร่องของระบบ</p>
+</th>
+<th id="" align="center" rowspan="3">
+<p class="thead">ระบบ Fail safe</p>
+</th>
+<th id="" align="center" rowspan="3">
+<p class="thead">รอบการขับ</p>
+</th>
+<th id="" align="center" rowspan="3">
+<p class="thead">ประเภทการทดสอบด้วยตนเอง<sup>* 1</sup></p>
+</th>
+<th id="" align="center" rowspan="3">
+<p class="thead">ฟังก์ชั่นหน่วยความจำ</p>
+</th>
+</tr>
+<tr>
+<th id="" align="center" rowspan="2">
+<p class="thead">หน้าจอแสดงผล Mazda Modular Diagnostic System (M-MDS)</p>
+</th>
+<th id="" align="center" colspan="3">
+<p class="thead">ไฟเตือนระบบถุงลมนิรภัย</p>
+</th>
+</tr>
+<tr>
+<th id="" align="center" colspan="2">
+<p class="thead">รูปแบบการกะพริบ</p>
+</th>
+<th id="" align="center">
+<p class="thead">การจัดอันดับความสำคัญ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">B0001:11</div>
+</td>
+<td id="" align="center" rowspan="6">
+<div class="tbody">19</div>
+</td>
+<td id="" align="center" rowspan="6"><img src="images/ac5wzn00000776.png"></td>
+<td id="" align="center" rowspan="6">
+<div class="tbody">15</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรโมดูลถุงลมนิรภัยด้านคนขับลัดวงจรลงกราวด์ตัวถัง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B0001:12</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรโมดูลถุงลมนิรภัยด้านคนขับลัดวงจรกับแหล่งจ่ายไฟ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B0001:13</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรโมดูลถุงลมนิรภัยด้านคนขับขาดวงจรหรือมีความต้านทานสูง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B0001:19</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การลัดวงจรเข้ากับวงจรโมดูลถุงลมนิรภัยด้านคนขับและโมดูลถุงลมนิรภัยอื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B0001:1A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรโมดูลถุงลมนิรภัยด้านคนขับมีความต้านทานต่ำ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B0001:55</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การปรับตั้งการกำหนดค่าผิดพลาด (ข้อบกพร่องทางโครงสร้างของโมดูลถุงลมนิรภัยด้านคนขับ)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B0003:53</div>
+</td>
+<td id="" align="center">
+<div class="tbody">―</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">4</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การทำงาน (การพองตัว) ถูกยับยั้งเนื่องจากการปรับตั้งการกำหนดค่า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B0010:11</div>
+</td>
+<td id="" align="center" rowspan="6">
+<div class="tbody">21</div>
+</td>
+<td id="" align="center" rowspan="6"><img src="images/ac5wzn00000777.png"></td>
+<td id="" align="center" rowspan="6">
+<div class="tbody">14</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรโมดูลถุงลมนิรภัยด้านผู้โดยสารลัดวงจรลงกราวด์ตัวถัง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B0010:12</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรโมดูลถุงลมนิรภัยด้านผู้โดยสารลัดวงจรกับแหล่งจ่ายไฟ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B0010:13</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรโมดูลถุงลมนิรภัยด้านผู้โดยสารขาดวงจรหรือมีความต้านทานสูง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B0010:19</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การลัดวงจรเข้ากับวงจรโมดูลถุงลมนิรภัยด้านผู้โดยสารและโมดูลถุงลมนิรภัยอื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B0010:1A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรโมดูลถุงลมนิรภัยด้านผู้โดยสารมีความต้านทานต่ำ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B0010:55</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การปรับตั้งการกำหนดค่าผิดพลาด (ข้อบกพร่องทางโครงสร้างของโมดูลถุงลมนิรภัยด้านผู้โดยสาร)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B0094:11</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">42</div>
+</td>
+<td id="" align="center" rowspan="5"><img src="images/ac5wzn00000778.png"></td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">9</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรเซ็นเซอร์ตรวจจับโซนการชนด้านคนขับลัดวงจรลงกราวด์ตัวถัง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B0094:13</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรเซ็นเซอร์ตรวจจับโซนการชนด้านคนขับวงจรขาดหรือลัดวงจรกับแหล่งจ่ายไฟ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B0094:87</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความผิดพลาดการรับสัญญาณจากเซ็นเซอร์ตรวจจับโซนการชนด้านคนขับ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B0094:96</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในเซ็นเซอร์ตรวจจับโซนการชนด้านคนขับบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B0094:55</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การปรับตั้งการกำหนดค่าผิดพลาด (ข้อบกพร่องทางโครงสร้างของเซ็นเซอร์ตรวจจับโซนการชนด้านคนขับ)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B00D2:01</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">14</div>
+</td>
+<td id="" align="center" rowspan="2"><img src="images/ac5wzn00000779.png"></td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">5</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไฟเตือนระบบถุงลมนิรภัยบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B00D2:29</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณที่ส่งไปยังไฟเตือนระบบถุงลมนิรภัยไม่ถูกต้อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B00D5:01</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">18</div>
+</td>
+<td id="" align="center" rowspan="2"><img src="images/ac5wzn00000780.png"></td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">22</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรไฟแสดงสถานะ PAD OFF ขาดวงจรหรือลัดวงจรเข้ากับแหล่งจ่ายไฟ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B00D5:29</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารไฟแสดงสถานะ PAD OFF ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1011:95</div>
+</td>
+<td id="" align="center">
+<div class="tbody">58</div>
+</td>
+<td id="" align="center"><img src="images/ac5wzn00000781.png"></td>
+<td id="" align="center">
+<div class="tbody">7</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ต่อขั้วต่อโมดูลควบคุม SAS ไม่แน่น</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10FD:11</div>
+</td>
+<td id="" align="left" rowspan="5">
+<div class="tbody">43</div>
+</td>
+<td id="" align="center" rowspan="5"><img src="images/ac5wzn00000782.png"></td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">11</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรเซ็นเซอร์ถุงลมนิรภัยด้านข้าง No.1 ด้านคนขับลัดวงจรเข้ากับแหล่งจ่ายไฟหรือกราวด์ตัวถัง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10FD:13</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรเซ็นเซอร์ถุงลมนิรภัยด้านข้าง No.1 ด้านคนขับขาดวงจรหรือมีความต้านทานสูง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10FD:87</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความผิดพลาดการรับสัญญาณจากเซ็นเซอร์ถุงลมนิรภัยด้านข้าง No.1 ด้านคนขับ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10FD:96</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในเซ็นเซอร์ถุงลมนิรภัยด้านข้าง No.1 ด้านคนขับบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10FD:55</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การปรับตั้งการกำหนดค่าผิดพลาด (ข้อบกพร่องทางโครงสร้างของเซ็นเซอร์ถุงลมนิรภัยด้านข้าง No.1 ด้านคนขับ)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10FE:11</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">44</div>
+</td>
+<td id="" align="center" rowspan="5"><img src="images/ac5wzn00000783.png"></td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">10</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรเซ็นเซอร์ถุงลมนิรภัยด้านข้าง No.1 ด้านผู้โดยสารลัดวงจรเข้ากับแหล่งจ่ายไฟหรือกราวด์ตัวถัง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10FE:13</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรเซ็นเซอร์ถุงลมนิรภัยด้านข้างด้านผู้โดยสารขาดวงจรหรือมีความต้านทานสูง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10FE:87</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความผิดพลาดการรับสัญญาณจากเซ็นเซอร์ถุงลมนิรภัยด้านข้าง No.1 ด้านผู้โดยสาร</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10FE:96</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในเซ็นเซอร์ถุงลมนิรภัยด้านข้าง No.1 ด้านผู้โดยสารบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10FE:55</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การปรับตั้งการกำหนดค่าผิดพลาด (ข้อบกพร่องทางโครงสร้างของเซ็นเซอร์ถุงลมนิรภัยด้านข้าง No.1 ด้านผู้โดยสาร)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1126:11</div>
+</td>
+<td id="" align="center" rowspan="6">
+<div class="tbody">22</div>
+</td>
+<td id="" align="center" rowspan="6"><img src="images/ac5wzn00000784.png"></td>
+<td id="" align="center" rowspan="6">
+<div class="tbody">19</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรโมดูลถุงลมนิรภัยด้านข้างด้านคนขับลัดวงจรลงกราวด์ตัวถัง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1126:12</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรโมดูลถุงลมนิรภัยด้านข้างด้านคนขับลัดวงจรกับแหล่งจ่ายไฟ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1126:13</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรโมดูลถุงลมนิรภัยด้านข้างด้านคนขับขาดวงจรหรือมีความต้านทานสูง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1126:19</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การลัดวงจรเข้ากับวงจรโมดูลถุงลมนิรภัยด้านข้างด้านคนขับและโมดูลถุงลมนิรภัยอื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1126:1A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรโมดูลถุงลมนิรภัยด้านข้างด้านคนขับมีความต้านทานต่ำ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1126:55</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การปรับตั้งการกำหนดค่าผิดพลาด (ข้อบกพร่องทางโครงสร้างของโมดูลถุงลมนิรภัยด้านข้างด้านคนขับ)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1127:11</div>
+</td>
+<td id="" align="center" rowspan="6">
+<div class="tbody">23</div>
+</td>
+<td id="" align="center" rowspan="6"><img src="images/ac5wzn00000785.png"></td>
+<td id="" align="center" rowspan="6">
+<div class="tbody">18</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรโมดูลถุงลมนิรภัยด้านข้างด้านผู้โดยสารลัดวงจรลงกราวด์ตัวถัง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1127:12</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรโมดูลถุงลมนิรภัยด้านข้างด้านผู้โดยสารลัดวงจรกับแหล่งจ่ายไฟ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1127:13</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรโมดูลถุงลมนิรภัยด้านข้างด้านผู้โดยสารขาดวงจรหรือมีความต้านทานสูง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1127:19</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การลัดวงจรเข้ากับวงจรโมดูลถุงลมนิรภัยด้านข้างด้านผู้โดยสารและโมดูลถุงลมนิรภัยอื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1127:1A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรโมดูลถุงลมนิรภัยด้านข้างด้านผู้โดยสารมีความต้านทานต่ำ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1127:55</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การปรับตั้งการกำหนดค่าผิดพลาด (ข้อบกพร่องทางโครงสร้างของโมดูลถุงลมนิรภัยด้านข้างด้านผู้โดยสาร)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1128:11</div>
+</td>
+<td id="" align="center" rowspan="6">
+<div class="tbody">24</div>
+</td>
+<td id="" align="center" rowspan="6"><img src="images/ac5wzn00000786.png"></td>
+<td id="" align="center" rowspan="6">
+<div class="tbody">21</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรโมดูลม่านนิรภัยด้านคนขับลัดวงจรลงกราวด์ตัวถัง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1128:12</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรโมดูลม่านนิรภัยด้านคนขับลัดวงจรกับแหล่งจ่ายไฟ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1128:13</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรโมดูลม่านนิรภัยด้านคนขับขาดวงจรหรือมีความต้านทานสูง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1128:19</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การลัดวงจรเข้ากับวงจรโมดูลม่านนิรภัยด้านคนขับและโมดูลถุงลมนิรภัยอื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1128:1A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรโมดูลม่านนิรภัยด้านคนขับมีความต้านทานต่ำ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1128:55</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การปรับตั้งการกำหนดค่าผิดพลาด (ข้อบกพร่องทางโครงสร้างของโมดูลม่านนิรภัยด้านคนขับ)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1129:11</div>
+</td>
+<td id="" align="center" rowspan="6">
+<div class="tbody">25</div>
+</td>
+<td id="" align="center" rowspan="6"><img src="images/ac5wzn00000787.png"></td>
+<td id="" align="center" rowspan="6">
+<div class="tbody">20</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรโมดูลม่านนิรภัยด้านผู้โดยสารลัดวงจรลงกราวด์ตัวถัง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1129:12</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรโมดูลม่านนิรภัยด้านผู้โดยสารลัดวงจรกับแหล่งจ่ายไฟ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1129:13</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรโมดูลม่านนิรภัยด้านผู้โดยสารขาดวงจรหรือมีความต้านทานสูง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1129:19</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การลัดวงจรเข้ากับวงจรโมดูลม่านนิรภัยด้านผู้โดยสารและโมดูลถุงลมนิรภัยอื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1129:1A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรโมดูลม่านนิรภัยด้านผู้โดยสารมีความต้านทานต่ำ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1129:55</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การปรับตั้งการกำหนดค่าผิดพลาด (ข้อบกพร่องทางโครงสร้างของโมดูลม่านนิรภัยด้านผู้โดยสาร)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1193:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">13</div>
+</td>
+<td id="" align="center"><img src="images/ac5wzn00000788.png"></td>
+<td id="" align="center">
+<div class="tbody">3</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การทำงาน (การพองตัว) ของโมดูลควบคุม SAS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1196:11</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">45</div>
+</td>
+<td id="" align="center" rowspan="5"><img src="images/ac5wzn00000789.png"></td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">13</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรโมดูลถุงลมนิรภัยด้านข้าง No.2 ด้านคนขับลัดวงจรลงกราวด์ตัวถัง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1196:13</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรเซ็นเซอร์ถุงลมนิรภัยด้านข้าง No.2 ด้านคนขับขาดวงจรหรือลัดวงจรเข้ากับแหล่งจ่ายไฟ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1196:87</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความผิดพลาดการรับสัญญาณจากเซ็นเซอร์ถุงลมนิรภัยด้านข้าง No.2 ด้านคนขับ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1196:96</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในเซ็นเซอร์ถุงลมนิรภัยด้านข้าง No.2 ด้านคนขับบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1196:55</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การปรับตั้งการกำหนดค่าผิดพลาด (ข้อบกพร่องทางโครงสร้างของเซ็นเซอร์ถุงลมนิรภัยด้านข้าง No.2 ด้านคนขับ)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1197:11</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">46</div>
+</td>
+<td id="" align="center" rowspan="5"><img src="images/ac5wzn00000790.png"></td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">12</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรโมดูลถุงลมนิรภัยด้านข้าง No.2 ด้านผู้โดยสารลัดวงจรลงกราวด์ตัวถัง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1197:13</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรเซ็นเซอร์ถุงลมนิรภัยด้านข้าง No.2 ด้านผู้โดยสารขาดวงจรหรือลัดวงจรเข้ากับแหล่งจ่ายไฟ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1197:87</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความผิดพลาดการรับสัญญาณจากเซ็นเซอร์ถุงลมนิรภัยด้านข้าง No.2 ด้านผู้โดยสาร</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1197:96</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในเซ็นเซอร์ถุงลมนิรภัยด้านข้าง No.2 ด้านผู้โดยสารบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1197:55</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การปรับตั้งการกำหนดค่าผิดพลาด (ข้อบกพร่องทางโครงสร้างของเซ็นเซอร์ถุงลมนิรภัยด้านข้าง No.2 ด้านผู้โดยสาร)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1202:01</div>
+</td>
+<td id="" align="center">
+<div class="tbody">18</div>
+</td>
+<td id="" align="center"><img src="images/ac5wzn00000780.png"></td>
+<td id="" align="center">
+<div class="tbody">22</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรไฟแสดงสถานะ PAD ON ขาดวงจรหรือลัดวงจรเข้ากับแหล่งจ่ายไฟ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1206:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">―</div>
+</td>
+<td id="" align="center">
+<div class="tbody">―</div>
+</td>
+<td id="" align="center">
+<div class="tbody">―</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การทำงาน (การพองตัว) ของโมดูลควบคุม SAS (สัญญาณเอาท์พุทตัดน้ำมันเชื้อเพลิง)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">―</div>
+</td>
+<td id="" align="center">
+<div class="tbody">―</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1211:11</div>
+</td>
+<td id="" align="center" rowspan="6">
+<div class="tbody">38</div>
+</td>
+<td id="" align="center" rowspan="6"><img src="images/ac5wzn00000791.png"></td>
+<td id="" align="center" rowspan="6">
+<div class="tbody">17</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรเข็มขัดนิรภัยระบบดึงกลับอัตโนมัติด้านคนขับลัดวงจรลงกราวด์ตัวถัง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1211:12</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรเข็มขัดนิรภัยระบบดึงกลับอัตโนมัติด้านคนขับลัดวงจรเข้ากับแหล่งจ่ายไฟ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1211:13</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรเข็มขัดนิรภัยระบบดึงกลับอัตโนมัติด้านคนขับขาดวงจรหรือมีความต้านทานสูง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1211:19</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การลัดวงจรเข้ากับวงจรเข็มขัดนิรภัยระบบดึงกลับอัตโนมัติด้านคนขับและโมดูลถุงลมนิรภัยอื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1211:1A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรเข็มขัดนิรภัยระบบดึงกลับอัตโนมัติด้านคนขับมีความต้านทานต่ำ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1211:55</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การปรับตั้งการกำหนดค่าผิดพลาด (ข้อบกพร่องทางโครงสร้างของเข็มขัดนิรภัยระบบดึงกลับอัตโนมัติด้านคนขับ)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1214:11</div>
+</td>
+<td id="" align="center" rowspan="6">
+<div class="tbody">39</div>
+</td>
+<td id="" align="center" rowspan="6"><img src="images/ac5wzn00000792.png"></td>
+<td id="" align="center" rowspan="6">
+<div class="tbody">16</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรเข็มขัดนิรภัยระบบดึงกลับอัตโนมัติด้านผู้โดยสารลัดวงจรลงกราวด์ตัวถัง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1214:12</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรเข็มขัดนิรภัยระบบดึงกลับอัตโนมัติด้านผู้โดยสารลัดวงจรเข้ากับแหล่งจ่ายไฟ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1214:13</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรเข็มขัดนิรภัยระบบดึงกลับอัตโนมัติด้านผู้โดยสารขาดวงจรหรือมีความต้านทานสูง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1214:19</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การลัดวงจรเข้ากับวงจรเข็มขัดนิรภัยระบบดึงกลับอัตโนมัติด้านผู้โดยสารและโมดูลถุงลมนิรภัยอื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1214:1A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรเข็มขัดนิรภัยระบบดึงกลับอัตโนมัติด้านผู้โดยสารมีความต้านทานต่ำ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1214:55</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การปรับตั้งการกำหนดค่าผิดพลาด (ข้อบกพร่องทางโครงสร้างของเข็มขัดนิรภัยระบบดึงกลับอัตโนมัติด้านผู้โดยสาร)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1417:11</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">41</div>
+</td>
+<td id="" align="center" rowspan="5"><img src="images/ac5wzn00000793.png"></td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">8</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรเซ็นเซอร์ตรวจจับโซนการชนด้านผู้โดยสารลัดวงจรลงกราวด์ตัวถัง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1417:13</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรเซ็นเซอร์ตรวจจับโซนการชนด้านผู้โดยสารวงจรขาดหรือลัดวงจรกับแหล่งจ่ายไฟ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1417:87</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความผิดพลาดการรับสัญญาณจากเซ็นเซอร์ตรวจจับโซนการชนด้านผู้โดยสาร</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1417:96</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในเซ็นเซอร์ตรวจจับโซนการชนด้านผู้โดยสารบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1417:55</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การปรับตั้งการกำหนดค่าผิดพลาด (ข้อบกพร่องทางโครงสร้างของเซ็นเซอร์ตรวจจับโซนการชนด้านผู้โดยสาร)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1D75:55</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">56</div>
+</td>
+<td id="" align="center" rowspan="2"><img src="images/ac5wzn00000794.png"></td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">23</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การปรับตั้งการกำหนดค่าผิดพลาด (ข้อบกพร่องทางโครงสร้างของสวิตช์ PAD)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1D75:62</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ PAD ขาดหรือลัดวงจรลงกราวด์ตัวถัง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0061:29</div>
+</td>
+<td id="" align="center" rowspan="4">
+<div class="tbody">―</div>
+</td>
+<td id="" align="center" rowspan="4">
+<div class="tbody">―</div>
+</td>
+<td id="" align="center" rowspan="4">
+<div class="tbody">―</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เซ็นเซอร์ G ต่ำ (G ด้านข้าง) ในโมดูลควบคุม SAS (วงจรภายในถูกยกเลิกการทำงาน)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0062:29</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เซ็นเซอร์ G ต่ำ (G เดินหน้า) ในโมดูลควบคุม SAS (วงจรภายในถูกยกเลิกการทำงาน)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0063:29</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เซ็นเซอร์อัตราโคลงในโมดูลควบคุม SAS (วงจรภายในถูกยกเลิกการทำงาน)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P0666:29</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เซ็นเซอร์อุณหภูมิในโมดูลควบคุม SAS (วงจรภายในถูกยกเลิกการทำงาน)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0001:88</div>
+</td>
+<td id="" align="center">
+<div class="tbody">14</div>
+</td>
+<td id="" align="center"><img src="images/ac5wzn00000779.png"></td>
+<td id="" align="center">
+<div class="tbody">5</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารแบบ CAN ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0028:88</div>
+</td>
+<td id="" align="center">
+<div class="tbody">―</div>
+</td>
+<td id="" align="center">
+<div class="tbody">―</div>
+</td>
+<td id="" align="center">
+<div class="tbody">―</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความผิดพลาดการสื่อสาร DSC HU/CM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">14</div>
+</td>
+<td id="" align="center" rowspan="2"><img src="images/ac5wzn00000779.png"></td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">5</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารแผงหน้าปัดผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2005:68</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสาร PCM ผิดพลาด (สัญญาณความเร็วรถ)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0300:00</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">54</div>
+</td>
+<td id="" align="center" rowspan="2"><img src="images/ac5wzn00000795.png"></td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">6</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การปรับตั้งการกำหนดค่าไม่ถูกต้อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2100:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่ได้ปรับตั้งการกำหนดค่า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2107:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">―</div>
+</td>
+<td id="" align="center">
+<div class="tbody">―</div>
+</td>
+<td id="" align="center">
+<div class="tbody">―</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เอาท์พุทสัญญาณการทำงาน (การพองตัว) ของโมดูลควบคุม SAS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">―</div>
+</td>
+<td id="" align="center">
+<div class="tbody">―</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:49</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">12</div>
+</td>
+<td id="" align="center" rowspan="2"><img src="images/ac5wzn00000796.png"></td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">2</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในโมดูลควบคุม SAS บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:55</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การกำหนดค่าผิดพลาด (ภายในโมดูลควบคุม SAS บกพร่อง)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3003:16</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">―</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ติดสว่างต่อเนื่อง</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">1</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันแหล่งจ่ายไฟของโมดูลควบคุม SAS ลดลง (<span>น้อยกว่า 8 V</span>)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3003:17</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันแหล่งจ่ายไฟของโมดูลควบคุม SAS มากขึ้น (<span>18 V หรือมากกว่า</span>)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;:C: การทดสอบ CMDTC ด้วยตนเอง, D: การทดสอบ ODDTC ด้วยตนเอง</div>
+<dl>
+<dd>
+<div class="list-title">คำอธิบายรหัส 7 หลักของรหัสวิเคราะห์ปัญหา</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เมื่อระบบหรือส่วนประกอบที่เกี่ยวข้องทำงานผิดพลาด CM จะจัดเก็บรหัสวิเคราะห์ปัญหาของส่วนที่ทำงานบกพร่องไว้ในหน่วยความจำของ CM และสามารถเรียกดูข้อมูลที่จัดเก็บโดยใช้เครื่องมือสแกนได้เมื่อจำเป็น รหัสวิเคราะห์ปัญหาได้รับการกำหนดโดยใช้ตัวเลข 7 หลัก ซึ่งตัวเลขแต่ละหลักมีความหมายดังต่อไปนี้<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001322.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001322</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">ไบต์แสดงสถานะของรหัสวิเคราะห์ปัญหา</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ไบต์แสดงสถานะคือรหัสสองหลัก (หลังเครื่องหมายขีด (-)) หลังรหัสวิเคราะห์ปัญหา 7 หลัก<table class="figure-flame">
+<tr>
+<td width="10mm"></td>
+<td>
+<table class="figure-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001331.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001331</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="list">•&nbsp;&nbsp;ไบต์แสดงสถานะคือรหัสที่แสดงรหัสที่ค้างอยู่, สถานะความบกพร่องปัจจุบัน/ในอดีต หรือสถานะไฟเตือน</div>
+<div class="list">•&nbsp;&nbsp;ไบต์แสดงสถานะสามารถอ่านได้ด้วยการทดสอบ CMDTC ด้วยตนเองโดยใช้ Mazda Modular Diagnostic System (M-MDS)</div>
+<div class="list">•&nbsp;&nbsp;สำหรับรายละเอียดเกี่ยวกับไบต์แสดงสถานะ ให้ดูที่คำอธิบายใน Mazda Modular Diagnostic System (M-MDS) เมื่ออ่านรหัสวิเคราะห์ปัญหา</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id08020000150004"></a><p class="topic-title"><span class="topic-head"></span>ข้อมูล Snapshot</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ข้อมูลของรหัสวิเคราะห์ปัญหาทั้งหมดที่ตรวจพบในปัจจุบันจะถูกเก็บบันทึก</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;รายการข้อมูล Snapshot ไม่ปรากฏขึ้นตามรหัสวิเคราะห์ปัญหาที่ตรวจพบ</div>
+</div>
+</dd>
+</dl>
+<p clear="all">
+<p>
+<div>&mdash;: ไม่มี</div>
+</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รายการข้อมูล Snapshot</p>
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">หน่วย</p>
+</th>
+<th id="" align="center">
+<p class="thead">ความหมาย</p>
+</th>
+<th id="" align="center">
+<p class="thead">วิธีการอ่าน/ใช้ข้อมูล</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายการตรวจสอบข้อมูล PID ที่เกี่ยวข้อง</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">AAT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;F</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิภายนอก</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">APP_STATUS</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">Accelerator Pedal Off/</div>
+<div class="tbody">Under20%/</div>
+<div class="tbody">Over20%/FAIL</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สถานะของตำแหน่งแป้นคันเร่ง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">CFG_STATUS</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">Config Complete/</div>
+<div class="tbody">ไม่ได้กำหนดค่า</div>
+<div class="tbody">Config Error</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สถานะของการกำหนดค่าแผงหน้าปัด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ECT_STATUS</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">Under 0 degrees C/</div>
+<div class="tbody">0 - Under 80 degrees C/</div>
+<div class="tbody">Over 80 degrees C/</div>
+<div class="tbody">FAIL</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สถานะของอุณหภูมิน้ำหล่อเย็นเครื่องยนต์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">FAULT_CNT</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">จำนวนความบกพร่องที่ตรวจพบ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">FIRST_DET_IG</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">hh:mm:ss<sup>*2</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">เวลาที่มีความบกพร่องครั้งแรกเกิดขึ้น (จำนวน IG-ON)</div>
+<div class="list">•&nbsp;&nbsp;ช่วงเวลาที่ผ่านไปนับจากบิดสวิตช์สตาร์ทไปที่ ON (เครื่องยนต์ไม่ทำงานหรือทำงาน) จนกระทั่งโมดูลควบคุม SAS ตรวจพบความบกพร่องครั้งแรก<div>(ดูที่รูปแบบการนับในข้อมูล Snapshot)</div>
+</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">IC_VPWR</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันแหล่งจ่ายไฟแผงหน้าปัด</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุม SAS จะได้รับค่าแรงดันแหล่งจ่ายไฟของแผงหน้าปัดที่ส่งผ่านสัญญาณระบบ CAN จากแผงหน้าปัดอย่างต่อเนื่อง</div>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบรหัสวิเคราะห์ปัญหา โมดูลควบคุม SAS จะบันทึกแรงดันแหล่งจ่ายไฟของแผงหน้าปัดเมื่อตรวจพบรหัสวิเคราะห์ปัญหา และแสดงใน Mazda Modular Diagnostic System (M-MDS)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">VPWR<sup>*1</sup></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">IG-ON_TIMER</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">hh:mm:ss<sup>*2</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ช่วงเวลาที่ผ่านไปตั้งแต่บิดสวิตช์สตาร์ทไปที่ ON</div>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัดจะบันทึกข้อมูลช่วงเวลาที่ผ่านไปนับตั้งแต่บิดสวิตช์สตาร์ทไปที่ ON</div>
+</div>
+</dd>
+</dl>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุม SAS จะได้รับเวลาที่ผ่านไปตั้งแต่สวิตช์สตาร์ทอยู่ในตำแหน่ง ON ที่ส่งผ่านสัญญาณระบบ CAN จากแผงหน้าปัดอย่างต่อเนื่อง</div>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบรหัสวิเคราะห์ปัญหา โมดูลควบคุม SAS จะบันทึกเวลาที่ผ่านไปตั้งแต่สวิตช์สตาร์ทอยู่ในตำแหน่ง ON เมื่อตรวจพบรหัสวิเคราะห์ปัญหา และแสดงใน Mazda Modular Diagnostic System (M-MDS)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">LAST_CLR</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">hh:mm:ss<sup>*2</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">เวลาในการซ่อมสำหรับความบกพร่องครั้งสุดท้าย (จำนวน B+)</div>
+<div class="list">•&nbsp;&nbsp;เวลาที่ผ่านไปนับตั้งแต่เชื่อมต่อแบตเตอรี่จนกระทั่งโมดูลควบคุม SAS ตรวจพบว่าความบกพร่องครั้งสุดท้ายได้รับการซ่อมแล้ว<div>(ดูที่รูปแบบการนับในข้อมูล Snapshot)</div>
+</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">LAST_CLR_IG</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">hh:mm:ss<sup>*2</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">เวลาในการซ่อมสำหรับความบกพร่องครั้งสุดท้าย (จำนวน IG-ON)</div>
+<div class="list">•&nbsp;&nbsp;ช่วงเวลาที่ผ่านไปนับจากบิดสวิตช์สตาร์ทไปที่ ON (เครื่องยนต์ไม่ทำงานหรือทำงาน) จนกระทั่งโมดูลควบคุม SAS ตรวจพบว่าความบกพร่องครั้งสุดท้ายได้รับการซ่อมแล้ว<div>(ดูที่รูปแบบการนับในข้อมูล Snapshot)</div>
+</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">LAST_DET</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">hh:mm:ss<sup>*2</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">เวลาที่มีความบกพร่องครั้งสุดท้ายเกิดขึ้น (จำนวน B+)</div>
+<div class="list">•&nbsp;&nbsp;เวลาที่ผ่านไปนับตั้งแต่เชื่อมต่อแบตเตอรี่จนกระทั่งโมดูลควบคุม SAS ตรวจพบความบกพร่องครั้งสุดท้าย<div>(ดูที่รูปแบบการนับในข้อมูล Snapshot)</div>
+</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">LAST_DET_IG</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">hh:mm:ss<sup>*2</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">เวลาที่มีความบกพร่องครั้งสุดท้ายเกิดขึ้น (จำนวน IG-ON)</div>
+<div class="list">•&nbsp;&nbsp;ช่วงเวลาที่ผ่านไปนับจากบิดสวิตช์สตาร์ทไปที่ ON (เครื่องยนต์ไม่ทำงานหรือทำงาน) จนกระทั่งโมดูลควบคุม SAS ตรวจพบความบกพร่องครั้งสุดท้าย<div>(ดูที่รูปแบบการนับในข้อมูล Snapshot)</div>
+</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">PWR_MODE_KEY</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">Key Out/Key Recently Out (Position 0)/Accessory (Position 1)/Post Ignition (Position 2)/Ignition On (Position 2)/Running (Position 2)/Running - Starting</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Key Out: บิดสวิตช์สตาร์ทไปที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;Key Recently Out (Position 0): ช่วงเวลาที่ผ่านไป<span>ภายใน 3 s</span> นับตั้งแต่บิดสวิตช์สตาร์ทไปที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;Accessory (Position 1): บิดสวิตช์สตาร์ทไปที่ ACC</div>
+<div class="list">•&nbsp;&nbsp;Post Ignition (Position 2): ช่วงเวลาที่ผ่านไป<span>ภายใน 3 s</span> นับตั้งแต่บิดสวิตช์สตาร์ทไปที่ ON</div>
+<div class="list">•&nbsp;&nbsp;Ignition On (Position 2): บิดสวิตช์สตาร์ทไปที่ ON (เครื่องยนต์ไม่ทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;Running (Position 2): บิดสวิตช์สตาร์ทไปที่ ON (เครื่องยนต์ทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;Running - Starting: สภาวะการสตาร์ท</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุม SAS จะรับสถานะสวิตช์สตาร์ทผ่านสัญญาณ CAN จากแผงหน้าปัดอย่างต่อเนื่อง</div>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบรหัสวิเคราะห์ปัญหา โมดูลควบคุม SAS จะบันทึกสถานะสวิตช์สตาร์ทเมื่อตรวจพบรหัสวิเคราะห์ปัญหา และแสดงใน Mazda Modular Diagnostic System (M-MDS)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">RPM_STATUS</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">Engine Stop/</div>
+<div class="tbody">Under1500rpm/</div>
+<div class="tbody">Over1500rpm/</div>
+<div class="tbody">FAIL</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สถานะความเร็วรอบเครื่องยนต์</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุม SAS จะรับความเร็วรอบเครื่องยนต์ที่ส่งผ่านสัญญาณระบบ CAN จากแผงหน้าปัดอย่างต่อเนื่อง</div>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบรหัสวิเคราะห์ปัญหา โมดูลควบคุม SAS จะบันทึกความเร็วรอบเครื่องยนต์เมื่อตรวจพบรหัสวิเคราะห์ปัญหา และแสดงใน Mazda Modular Diagnostic System (M-MDS)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">TACHOMTR<sup>*1</sup></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">SHIFT_STATUS</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">P/N/</div>
+<div class="tbody">D/</div>
+<div class="tbody">R</div>
+<div class="tbody">FAIL</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สถานะตำแหน่งคันเกียร์</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุม SAS จะรับตำแหน่งคันเกียร์ที่ส่งผ่านสัญญาณระบบ CAN จากแผงหน้าปัดอย่างต่อเนื่อง</div>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบรหัสวิเคราะห์ปัญหา โมดูลควบคุม SAS จะบันทึกตำแหน่งคันเกียร์เมื่อตรวจพบรหัสวิเคราะห์ปัญหา และแสดงใน Mazda Modular Diagnostic System (M-MDS)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">TOTAL_TIME</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">hh:mm:ss<sup>*2</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">&lrm;&lrm;ระยะเวลาที่ผ่านไปโดยรวมสะสมตั้งแต่รถเสร็จสมบูรณ์จนกระทั่งโมดูลควบคุม SAS ตรวจพบรหัสวิเคราะห์ปัญหา</div>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;เมื่อถอดฟิวส์ ROOM และบิดสวิตช์สตาร์ทไปที่ OFF เวลาจะไม่ถูกนำไปรวมกับช่วงเวลาที่ผ่านไป</div>
+</div>
+</dd>
+</dl>
+</td>
+<td id="" align="left">
+<div class="tbody">ช่วงเวลาที่ผ่านไปเมื่อโมดูลควบคุม SAS ตรวจพบรหัสวิเคราะห์ปัญหาสามารถคำนวณได้ด้วยขั้นตอนต่อไปนี้</div>
+<div class="list">1.&nbsp;&nbsp;ตรวจสอบรายการ PID TOTAL_TIME บนแผงหน้าปัด</div>
+<div class="list">2.&nbsp;&nbsp;ตรวจสอบรายการข้อมูล Snapshot TOTAL_TIME</div>
+<div class="list">3.&nbsp;&nbsp;ลบ 2 ออกจาก 1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">TOTAL_TIME<sup>*1</sup></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">TOTAL_DIST</div>
+</td>
+<td id="" align="center">
+<div class="tbody">km</div>
+</td>
+<td id="" align="center">
+<div class="tbody">miles</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระยะทางรวมสะสมตั้งแต่รถเสร็จสมบูรณ์จนกระทั่งโมดูลควบคุม SAS ตรวจพบรหัสวิเคราะห์ปัญหา (ค่ามาตรบันทึกระยะทางในแผงหน้าปัด)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระยะการเคลื่อนที่เมื่อโมดูลควบคุม SAS ตรวจพบรหัสวิเคราะห์ปัญหาสามารถคำนวณได้ด้วยขั้นตอนต่อไปนี้</div>
+<div class="list">1.&nbsp;&nbsp;ตรวจสอบค่าจากมาตรบันทึกระยะทางในแผงหน้าปัด</div>
+<div class="list">2.&nbsp;&nbsp;ตรวจสอบรายการข้อมูล Snapshot TOTAL_DIST</div>
+<div class="list">3.&nbsp;&nbsp;ลบ 2 ออกจาก 1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">VPWR</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แหล่งจ่ายไฟโมดูลควบคุม SAS บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">VPWR_IGA</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">VSPD_STATUS</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">หยุด</div>
+<div class="tbody">0-10km/h/</div>
+<div class="tbody">Over10km/h/</div>
+<div class="tbody">FAIL</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สถานะความเร็วรถ</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุม SAS จะรับความเร็วรถที่ส่งผ่านสัญญาณระบบ CAN จากแผงหน้าปัดอย่างต่อเนื่อง</div>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบรหัสวิเคราะห์ปัญหา โมดูลควบคุม SAS จะบันทึกความเร็วรถเมื่อตรวจพบรหัสวิเคราะห์ปัญหา และแสดงใน Mazda Modular Diagnostic System (M-MDS)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">SPEEDOMTR<sup>*1</sup></div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;:PID ของแผงหน้าปัด</div>
+<div class="deflist">*2&nbsp;&nbsp;:หน่วยวินาที (s) อาจแสดงอยู่หลังจุดทศนิยม</div>
+<p class="figure-title">รูปแบบการนับในข้อมูล Snapshot</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzw00002982.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzw00002982</div>
+</td>
+</tr>
+</table>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center" rowspan="2">
+<p class="thead">เวลาตรวจเช็คในข้อมูล Snap-shot</p>
+</th>
+<th id="" align="center">
+<p class="thead">FAULT_CNT</p>
+</th>
+<th id="" align="center">
+<p class="thead">FIRST_DET_IG</p>
+</th>
+<th id="" align="center">
+<p class="thead">LAST_CLR</p>
+</th>
+<th id="" align="center">
+<p class="thead">LAST_CLR_IG</p>
+</th>
+<th id="" align="center">
+<p class="thead">LAST_DET</p>
+</th>
+<th id="" align="center">
+<p class="thead">LAST_DET_IG</p>
+</th>
+<th id="" align="center">
+<p class="thead">TOTAL_TIME</p>
+</th>
+</tr>
+<tr>
+<th id="" align="center">
+<p class="thead">จำนวนความบกพร่องที่ตรวจพบ</p>
+</th>
+<th id="" align="center">
+<p class="thead">เวลาที่มีความบกพร่องครั้งแรกเกิดขึ้น (จำนวน IG-ON)</p>
+</th>
+<th id="" align="center">
+<p class="thead">เวลาในการซ่อมสำหรับความบกพร่องครั้งสุดท้าย (จำนวน B+)</p>
+</th>
+<th id="" align="center">
+<p class="thead">เวลาในการซ่อมสำหรับความบกพร่องครั้งสุดท้าย (จำนวน IG-ON)</p>
+</th>
+<th id="" align="center">
+<p class="thead">เวลาที่มีความบกพร่องครั้งสุดท้ายเกิดขึ้น (จำนวน B+)</p>
+</th>
+<th id="" align="center">
+<p class="thead">เวลาที่มีความบกพร่องครั้งสุดท้ายเกิดขึ้น (จำนวน IG-ON)</p>
+</th>
+<th id="" align="center">
+<p class="thead">เวลาที่มีความบกพร่องครั้งแรกเกิดขึ้น (จำนวน B+)</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Tb1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Tb1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Tig1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Tig1</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Tb1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Tb4</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Tig4</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Tb3</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Tig3</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Tig1</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">3</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Tb1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Tb4</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Tig4</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Tb3</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Tig3</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Tig1</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">4</div>
+</td>
+<td id="" align="center">
+<div class="tbody">3</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Tb1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Tb4</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Tig4</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Tb5</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Tig5</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Tig1</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">5</div>
+</td>
+<td id="" align="center">
+<div class="tbody">3</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Tb1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Tb6</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Tig6</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Tb5</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Tig5</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Tig1</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</p><br clear="all"><p><a name="id08020000150005"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นการตรวจสอบข้อมูล / PID</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เมื่อใช้ฟังก์ชั่นการตรวจสอบข้อมูล / PID สามารถเลือกรายการตรวจสอบของสัญญาณอินพุท / เอาท์พุทตามที่กำหนดไว้บนโมดูลควบคุม SAS ได้อย่างอิสระและอ่านได้แบบเรียลไทม์ </div>
+<div class="list">•&nbsp;&nbsp;มีการนำ Mazda Modular Diagnostic System (M-MDS) มาใช้เพื่ออ่านรายละเอียดการตรวจสอบข้อมูล / PID</div>
+</dd>
+</dl>
+<p clear="all">
+<p class="table-title">ตารางการตรวจสอบข้อมูล / PID</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ชื่อ PID (ความหมาย)</p>
+</th>
+<th id="" align="center">
+<p class="thead">หน่วย/การทำงาน</p>
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">สถานะการทำงาน (ค่าอ้างอิง)</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">AB_WL</div>
+<div class="tbody">(สถานะไฟเตือนระบบถุงลมนิรภัย)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Lamp_Off/Lamp_On/Plant_Mode/Unknown</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="list">•&nbsp;&nbsp;ไฟเตือนระบบถุงลมนิรภัย OFF: Lamp_Off</div>
+<div class="list">•&nbsp;&nbsp;ไฟเตือนระบบถุงลมนิรภัย ON: Lamp_On</div>
+<div class="list">•&nbsp;&nbsp;สถานะไฟเตือนระบบถุงลมนิรภัย: Plant_Mode</div>
+<div class="list">•&nbsp;&nbsp;สถานะไฟเตือนระบบถุงลมนิรภัย: Unknown</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P_SEAT_M_S</div>
+<div class="tbody">(เซ็นเซอร์ตรวจจับการใช้ที่นั่ง)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="list">•&nbsp;&nbsp;ไม่มีผู้โดยสารนั่งอยู่ในที่นั่งด้านหน้าฝั่งผู้โดยสาร: OFF</div>
+<div class="list">•&nbsp;&nbsp;ผู้โดยสารนั่งอยู่ในที่นั่งด้านหน้าฝั่งผู้โดยสาร: ON</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">PAD_SW_FLT</div>
+<div class="tbody">(สถานะสวิตช์ PAD บกพร่อง)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">O.K./FAULT</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="list">•&nbsp;&nbsp;สวิตช์ PAD เป็นปกติ: O.K.</div>
+<div class="list">•&nbsp;&nbsp;สวิตช์ PAD ผิดปกติ: FAULT</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">RES_C_AB_D</div>
+<div class="tbody">(โมดูลม่านนิรภัยด้านคนขับมีความต้านทานปกติ)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ohm</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">ต่อเนื่อง: 0.81&ndash;6.42 ohm</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">RES_C_AB_P</div>
+<div class="tbody">(โมดูลม่านนิรภัยด้านผู้โดยสารมีความต้านทานปกติ)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ohm</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">ต่อเนื่อง: 0.81&ndash;6.42 ohm</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">RES_F_AB1_D</div>
+<div class="tbody">(โมดูลถุงลมนิรภัยด้านคนขับมีความต้านทานปกติ)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ohm</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">ต่อเนื่อง: 0.99&ndash;6.42 ohm</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">RES_F_AB1_P</div>
+<div class="tbody">(โมดูลถุงลมนิรภัยด้านผู้โดยสารมีความต้านทานปกติ)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ohm</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">ต่อเนื่อง: 0.81&ndash;6.42 ohm</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">RES_PCD_BAR</div>
+<div class="tbody">(ขั้วของแถบตัวตรวจจับที่เชื่อมต่อไม่แน่นมีความต้านทานปกติ (ขั้วต่อทั้งหมดของโมดูลควบคุม SAS))</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ohm</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="list">•&nbsp;&nbsp;เชื่อมต่อปกติ: 100 ohm หรือน้อยกว่า</div>
+<div class="list">•&nbsp;&nbsp;เชื่อมต่อไม่แน่น: 20 kilohm หรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">RES_S_AB_D</div>
+<div class="tbody">(โมดูลถุงลมนิรภัยด้านข้างด้านคนขับมีความต้านทานปกติ)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ohm</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">ต่อเนื่อง: 0.81&ndash;9.85 ohm</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">RES_S_AB_P</div>
+<div class="tbody">(โมดูลถุงลมนิรภัยด้านข้างด้านผู้โดยสารมีความต้านทานปกติ)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ohm</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">ต่อเนื่อง: 0.81&ndash;9.85 ohm</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">RES_SB_P_D</div>
+<div class="tbody">(เข็มขัดนิรภัยระบบดึงกลับอัตโนมัติด้านคนขับมีความต้านทานปกติ)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ohm</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">ต่อเนื่อง: 0.81&ndash;6.42 ohm</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">RES_SB_P_P</div>
+<div class="tbody">(เข็มขัดนิรภัยระบบดึงกลับอัตโนมัติด้านผู้โดยสารมีความต้านทานปกติ)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ohm</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">ต่อเนื่อง: 0.81&ndash;6.42 ohm</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">SEAT_B_D</div>
+<div class="tbody">(สถานะสวิตช์ปลอกล็อคเข็มขัดนิรภัยด้านคนขับ)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Unbuckled/Buckled</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="list">•&nbsp;&nbsp;คาดเข็มขัดนิรภัยของที่นั่งด้านหน้าฝั่งคนขับ (สวิตช์ปลอกล็อคเข็มขัดนิรภัยด้านคนขับ OFF): Buckled</div>
+<div class="list">•&nbsp;&nbsp;ไม่ได้คาดเข็มขัดนิรภัยของที่นั่งด้านหน้าฝั่งคนขับ (สวิตช์ปลอกล็อคเข็มขัดนิรภัยด้านคนขับ ON): Unbuckled</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">SEAT_B_P</div>
+<div class="tbody">(สถานะสวิตช์ปลอกล็อคเข็มขัดนิรภัยด้านผู้โดยสาร)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Unbuckled/Buckled</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ผู้โดยสารนั่งอยู่ในที่นั่งด้านหน้าฝั่งผู้โดยสาร: ON</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;คาดเข็มขัดนิรภัยของที่นั่งด้านหน้าฝั่งผู้โดยสาร (สวิตช์ปลอกล็อคเข็มขัดนิรภัยด้านผู้โดยสาร OFF): Buckled</div>
+<div class="list">•&nbsp;&nbsp;ไม่ได้คาดเข็มขัดนิรภัยของที่นั่งด้านหน้าฝั่งผู้โดยสาร (สวิตช์ปลอกล็อคเข็มขัดนิรภัยด้านผู้โดยสาร ON): Unbuckled</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">VPWR_IGA</div>
+<div class="tbody">(แรงดันแหล่งจ่ายไฟของโมดูลควบคุม SAS)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">สวิตช์สตาร์ทอยู่ที่ ON: แรงดันไฟฟ้า IG1</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</p>
+</body>
+</html>

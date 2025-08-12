@@ -1,0 +1,2 @@
+&txtLabel=REAR SEAT BELT REMINDER SYSTEM&
+&txtData=S0810_2&

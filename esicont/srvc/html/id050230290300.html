@@ -1,0 +1,2566 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>การตรวจสอบ PID/DATA ของระบบการวิเคราะห์ปัญหาบนรถ [GW6A-EL, GW6AX-EL]</title>
+</head>
+<body><a name="id050230290300"></a><p class="servinfo-title"><span class="servinfo-head"></span>การตรวจสอบ PID/DATA ของระบบการวิเคราะห์ปัญหาบนรถ [GW6A-EL, GW6AX-EL]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id050230290300</p>
+<p class="list">1.&nbsp;&nbsp;ต่อ M-MDS เข้ากับ DLC-2</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;หลังจากรถได้รับการระบุแล้ว ให้เลือกรายการต่อไปนี้จากหน้าจอการตั้งค่าเริ่มต้นของ M-MDS</p>
+<p class="list">
+<dl class="list">
+<dd>(1)&nbsp;&nbsp;เลือก &ldquo;Data logger&rdquo;</dd>
+<dd>
+</dd>
+</dl>
+<dl class="list">
+<dd>(2)&nbsp;&nbsp;เลือก &ldquo;Modules&rdquo;</dd>
+<dd>
+</dd>
+</dl>
+<dl class="list">
+<dd>(3)&nbsp;&nbsp;เลือก &ldquo;TCM&rdquo;</dd>
+<dd>
+</dd>
+</dl>
+</p>
+<p class="list">3.&nbsp;&nbsp;เลือก PID ที่ใช้ได้จากตาราง PID</p>
+<p class="list">
+</p>
+<p class="list">4.&nbsp;&nbsp;ตรวจสอบข้อมูล PID ตามคำแนะนำบนหน้าจอ</p>
+<p class="list">
+</p>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่นบนหน้าจอข้อมูล PID มีไว้เพื่อตรวจสอบค่าที่คำนวณได้ของสัญญาณอินพุท/เอาท์พุทในโมดูล ดังนั้น ถ้าค่าที่ตรวจสอบของส่วนที่ส่งสัญญาณเอาท์พุทไม่อยู่ในค่าที่กำหนด คุณจำเป็นต้องตรวจสอบค่าที่ตรวจสอบของส่วนที่รับสัญญาณอินพุทที่เกี่ยวข้องกับการควบคุมส่วนที่ส่งสัญญาณเอาท์พุทที่ใช้ได้ นอกจากนั้น คุณจำเป็นต้องตรวจสอบส่วนที่ส่งสัญญาณเอาท์พุทแต่ละส่วนด้วย เนื่องจากระบบไม่ได้แสดงความผิดพลาดในการทำงานของส่วนที่ส่งสัญญาณเอาท์พุทว่าเป็นความผิดปกติในค่าที่ตรวจสอบ</div>
+<div class="list">•&nbsp;&nbsp;เมื่อตรวจพบรหัสวิเคราะห์ปัญหา PID ที่เกี่ยวข้องกับระบบที่บกพร่องอาจไม่ปรากฏแม้ว่าโมดูลจะเป็นปกติก็ตาม ดังนั้น หาก PID ไม่ปรากฏ จำเป็นต้องทำการยืนยันรหัสวิเคราะห์ปัญหา ทำการวิเคราะห์ความบกพร่อง และทำการซ่อม</div>
+</div>
+</dd>
+</dl>
+<p clear="all">
+<p class="table-title">ตารางรายการตรวจสอบ PID / DATA (อ้างอิง)</p>
+<p>
+<div>&mdash;: ไม่มี</div>
+</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รายการ</p>
+</th>
+<th id="" align="center">
+<p class="thead">หน่วย / สภาวะ</p>
+</th>
+<th id="" align="center">
+<p class="thead">สภาวะการทดสอบ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ค่ากำหนด (อ้างอิง)</p>
+</th>
+<th id="" align="center">
+<p class="thead">ชื่อส่วนสัญญาณอินพุท</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">DGP_DIS_1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">km {mile}</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">แสดงระยะทางตั้งแต่การควบคุมป้องกันเฟืองท้ายทำงานเนื่องจากความแตกต่างในการหมุนมากเกินไประหว่างล้อขับซ้าย / ขวา</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">DGP_DIS_2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">km {mile}</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">แสดงระยะทางตั้งแต่อัพเดท DGP_MAX_DIF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">DGP_MAX_DIF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">RPM</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">แสดงความแตกต่างในการหมุนสูงสุดตั้งแต่การควบคุมป้องกันเฟืองท้ายทำงานเนื่องจากความแตกต่างในการหมุนมากเกินไประหว่างล้อขับซ้าย / ขวา</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">DGP_SPD</div>
+</td>
+<td id="" align="center">
+<div class="tbody">KPH {MPH}</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">แสดงความเร็วรถพร้อมล้อลากตั้งแต่การควบคุมป้องกันเฟืองท้ายทำงานเนื่องจากความแตกต่างในการหมุนมากเกินไประหว่างล้อขับซ้าย / ขวา</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ECT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C {&deg;F}</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">แสดง ECT</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เซ็นเซอร์ ECT</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ECU_A</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C {&deg;F}</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">แสดงอุณหภูมิภายใน ECU A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เซ็นเซอร์อุณหภูมิภายใน ECU A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ECU_B</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C {&deg;F}</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">แสดงอุณหภูมิภายใน ECU B</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เซ็นเซอร์อุณหภูมิภายใน ECU B</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ECU_C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C {&deg;F}</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">แสดงอุณหภูมิภายใน ECU C</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เซ็นเซอร์อุณหภูมิภายใน ECU C</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">EOP_DUTY</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">แสดง duty ratio ควบคุมปั๊มน้ำมันเกียร์ AT ไฟฟ้า</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปั๊มน้ำมันเกียร์ AT ไฟฟ้า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">EOP_RLY</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="tbody">รีเลย์ปั๊มน้ำมันเกียร์ AT ไฟฟ้าหยุดทำงาน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="tbody">รีเลย์ปั๊มน้ำมันเกียร์ AT ไฟฟ้า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การทำงานของรีเลย์ปั๊มน้ำมันเกียร์ AT ไฟฟ้า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="6">
+<div class="tbody">GEAR_RA</div>
+</td>
+<td id="" align="center" rowspan="6">
+<div class="tbody">Ratio</div>
+</td>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ในสถานะ 1GR ที่ตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 3.5526</div>
+</td>
+<td id="" align="left" rowspan="6">
+<div class="list">•&nbsp;&nbsp;ชิพโซลินอยด์ No.1</div>
+<div class="list">•&nbsp;&nbsp;ชิพโซลินอยด์ No.2</div>
+<div class="list">•&nbsp;&nbsp;ชิพโซลินอยด์ No.3</div>
+<div class="list">•&nbsp;&nbsp;ชิพโซลินอยด์ No.4</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ในสถานะ 2GR ที่ตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 2.0228</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ในสถานะ 3GR ที่ตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 1.4522</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ในสถานะ 4GR ที่ตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 1.0000</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ในสถานะ 5GR ที่ตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0.7084</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ในสถานะ 6GR ที่ตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0.5993</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="6">
+<div class="tbody">GEAR_SEL</div>
+</td>
+<td id="" align="center" rowspan="6">
+<div class="tbody">1/2/3/4/5/6</div>
+</td>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ในสถานะ 1GR ที่ตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="left" rowspan="6">
+<div class="list">•&nbsp;&nbsp;ชิพโซลินอยด์ No.1</div>
+<div class="list">•&nbsp;&nbsp;ชิพโซลินอยด์ No.2</div>
+<div class="list">•&nbsp;&nbsp;ชิพโซลินอยด์ No.3</div>
+<div class="list">•&nbsp;&nbsp;ชิพโซลินอยด์ No.4</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ในสถานะ 2GR ที่ตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ในสถานะ 3GR ที่ตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">3</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ในสถานะ 4GR ที่ตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">4</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ในสถานะ 5GR ที่ตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">5</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ในสถานะ 6GR ที่ตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">6</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">HI_TEMP</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">แสดงปริมาณการกำหนดโหมดอุณหภูมิ ATF สูง (อุณหภูมิ ATF 132 &deg;C {270 &deg;F} หรือสูงกว่า)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">HTM_CNT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">แสดงปริมาณการกำหนดโหมดอุณหภูมิ ATF สูง (อุณหภูมิ ATF 132 &deg;C {270 &deg;F} หรือสูงกว่า)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">HTM_DIS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">km {mile}</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">แสดงระยะทางหลังจากกำหนดโหมดอุณหภูมิ ATF สูง (อุณหภูมิ ATF 132 &deg;C {270 &deg;F} หรือสูงกว่า)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">LINEDES</div>
+</td>
+<td id="" align="center">
+<div class="tbody">kPa {kgf/cm<sup>2</sup>, psi}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เดินเบาที่ตำแหน่ง P หลังจากอุ่นเครื่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 500 kPa {5.10 kgf/cm<sup>2</sup>, 72.5 psi}</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">LN_C_CLUTCH</div>
+</td>
+<td id="" align="center">
+<div class="tbody">kPa {kgf/cm<sup>2</sup>, psi}</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">แสดงข้อมูลค่าความจำการควบคุมไฮดรอลิก</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">LN_O_CLUTCH</div>
+</td>
+<td id="" align="center">
+<div class="tbody">kPa {kgf/cm<sup>2</sup>, psi}</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">แสดงข้อมูลค่าความจำการควบคุมไฮดรอลิก</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">LN_OV_SCOPE</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">แสดงข้อมูลค่าความจำการควบคุมไฮดรอลิก</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">LN_T_CLUTCH</div>
+</td>
+<td id="" align="center">
+<div class="tbody">kPa {kgf/cm<sup>2</sup>, psi}</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">แสดงข้อมูลค่าความจำการควบคุมไฮดรอลิก</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">LOCK_UP</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF/SLIP/ON</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">OFF</div>
+<div class="list">•&nbsp;&nbsp;ยกเว้นด้านล่าง</div>
+<div class="tbody">SLIP:</div>
+<div class="list">•&nbsp;&nbsp;&quot;SLIP&quot; แสดงในระหว่างการควบคุม TCC ขณะที่ความแตกต่างระหว่างความเร็วรอบเครื่องยนต์กับความเร็วเพลาเทอร์ไบน์น้อยกว่าค่าการควบคุม</div>
+<div class="list">•&nbsp;&nbsp;รีเซ็ทในขณะหยุดการควบคุม TCC หรือกรณีที่ความแตกต่างระหว่างความเร็วรอบเครื่องยนต์กับความเร็วเพลา / เทอร์ไบน์อยู่ที่ค่ากำหนด หรือมากกว่า</div>
+<div class="tbody">ON</div>
+<div class="list">•&nbsp;&nbsp;&quot;ON&quot; แสดงในระหว่างการควบคุม TCC และเกือบไม่มีความแตกต่างระหว่างความเร็วรอบเครื่องยนต์กับความเร็วเพลาเทอร์ไบน์<sup>*</sup></div>
+<div class="list">•&nbsp;&nbsp;รีเซ็ทในขณะหยุดการควบคุม TCC หรือกรณีที่ความแตกต่างระหว่างความเร็วรอบเครื่องยนต์กับความเร็วเพลาเทอร์ไบน์อยู่ที่ค่ากำหนด หรือมากกว่า</div>
+<div class="tbody"><sup>*</sup>: TCC จะควบคุมแรงดันไฮดรอลิก TCC เพื่อยับยั้งการสูญเสียแรงดันไฮดรอลิกและการสั่นของเกียร์เนื่องจากการจับคลัตช์ TCC ดังนั้น โดยปกติแล้วจะมีความแตกต่างระหว่างความเร็วรอบเครื่องยนต์กับความเร็วเพลาเทอร์ไบน์ เนื่องจากแรงดันไฮดรอลิก TCC เพิ่มขึ้นโดยระบบ fail-safe และ TCC ทำงานในขณะที่ ATF ร้อน แสดงว่าเกือบไม่มีความแตกต่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">LONGI_ACCEL</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">แสดงการเร่งความเร็วที่คำนวณได้จากล้อขับ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="9">
+<div class="tbody">OP_SW1</div>
+</td>
+<td id="" align="center" rowspan="9">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ที่ตำแหน่ง P</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left" rowspan="9">
+<div class="tbody">สวิตช์แรงดันน้ำมัน No.1</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ที่ตำแหน่ง R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ที่ตำแหน่ง N</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ในสถานะ 1GR ที่ตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ในสถานะ 2GR ที่ตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ในสถานะ 3GR ที่ตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ในสถานะ 4GR ที่ตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ในสถานะ 5GR ที่ตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ในสถานะ 6GR ที่ตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">OP_SW1_OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">kPa {kgf/cm<sup>2</sup>, psi}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หลังจากปฏิบัติโหมดทดสอบการวิเคราะห์ปัญหาบนรถ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">มากกว่า 50 kPa {0.51 kgf/cm<sup>2</sup>, 7.3 psi} (0 kPa {0 kgf/cm<sup>2</sup>, 0 psi} ก่อนปฏิบัติโหมดทดสอบการวิเคราะห์ปัญหาบนรถ)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">สวิตช์แรงดันน้ำมัน No.1</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">OP_SW1_ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">kPa {kgf/cm<sup>2</sup>, psi}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หลังจากปฏิบัติโหมดทดสอบการวิเคราะห์ปัญหาบนรถ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">น้อยกว่า 320 kPa {3.26 kgf/cm<sup>2</sup>, 46.4 psi} (0 kPa {0 kgf/cm<sup>2</sup>, 0 psi} ก่อนปฏิบัติโหมดทดสอบการวิเคราะห์ปัญหาบนรถ)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">สวิตช์แรงดันน้ำมัน No.1</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="9">
+<div class="tbody">OP_SW2</div>
+</td>
+<td id="" align="center" rowspan="9">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ที่ตำแหน่ง P</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left" rowspan="9">
+<div class="tbody">สวิตช์แรงดันน้ำมัน No.2</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ที่ตำแหน่ง R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ที่ตำแหน่ง N</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ในสถานะ 1GR ที่ตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ในสถานะ 2GR ที่ตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ในสถานะ 3GR ที่ตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ในสถานะ 4GR ที่ตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ในสถานะ 5GR ที่ตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ในสถานะ 6GR ที่ตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">OP_SW2_OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">kPa {kgf/cm<sup>2</sup>, psi}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หลังจากปฏิบัติโหมดทดสอบการวิเคราะห์ปัญหาบนรถ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">มากกว่า 50 kPa {0.51 kgf/cm<sup>2</sup>, psi} (0 kPa {0 kgf/cm<sup>2</sup>, 0 psi} ก่อนปฏิบัติโหมดทดสอบการวิเคราะห์ปัญหาบนรถ)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">สวิตช์แรงดันน้ำมัน No.2</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">OP_SW2_ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">kPa {kgf/cm<sup>2</sup>, psi}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หลังจากปฏิบัติโหมดทดสอบการวิเคราะห์ปัญหาบนรถ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">น้อยกว่า 260 kPa {2.65 kgf/cm<sup>2</sup>, 37.7 psi} (0 kPa {0 kgf/cm<sup>2</sup>, 0 psi} ก่อนปฏิบัติโหมดทดสอบการวิเคราะห์ปัญหาบนรถ)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">สวิตช์แรงดันน้ำมัน No.2</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="9">
+<div class="tbody">OP_SW3</div>
+</td>
+<td id="" align="center" rowspan="9">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ที่ตำแหน่ง P</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left" rowspan="9">
+<div class="tbody">สวิตช์แรงดันน้ำมัน No.3</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ที่ตำแหน่ง R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ที่ตำแหน่ง N</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ในสถานะ 1GR ที่ตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ในสถานะ 2GR ที่ตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ในสถานะ 3GR ที่ตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ในสถานะ 4GR ที่ตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ในสถานะ 5GR ที่ตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ในสถานะ 6GR ที่ตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">OP_SW3_OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">kPa {kgf/cm<sup>2</sup>, psi}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หลังจากปฏิบัติโหมดทดสอบการวิเคราะห์ปัญหาบนรถ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">มากกว่า 50 kPa {0.51 kgf/cm<sup>2</sup>, 7.3 psi} (0 kPa {0 kgf/cm<sup>2</sup>, 0 psi} ก่อนปฏิบัติโหมดทดสอบการวิเคราะห์ปัญหาบนรถ)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">สวิตช์แรงดันน้ำมัน No.3</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">OP_SW3_ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">kPa {kgf/cm<sup>2</sup>, psi}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หลังจากปฏิบัติโหมดทดสอบการวิเคราะห์ปัญหาบนรถ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">น้อยกว่า 215 kPa {2.19 kgf/cm<sup>2</sup>, 31.2 psi} (0 kPa {0 kgf/cm<sup>2</sup>, 0 psi} ก่อนปฏิบัติโหมดทดสอบการวิเคราะห์ปัญหาบนรถ)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">สวิตช์แรงดันน้ำมัน No.3</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="9">
+<div class="tbody">OP_SW4</div>
+</td>
+<td id="" align="center" rowspan="9">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ที่ตำแหน่ง P</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left" rowspan="9">
+<div class="tbody">สวิตช์แรงดันน้ำมัน No.4</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ที่ตำแหน่ง R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ที่ตำแหน่ง N</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ในสถานะ 1GR ที่ตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ในสถานะ 2GR ที่ตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ในสถานะ 3GR ที่ตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ในสถานะ 4GR ที่ตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ในสถานะ 5GR ที่ตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ในสถานะ 6GR ที่ตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">OP_SW4_OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">kPa {kgf/cm<sup>2</sup>, psi}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หลังจากปฏิบัติโหมดทดสอบการวิเคราะห์ปัญหาบนรถ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">มากกว่า 50 kPa {0.51 kgf/cm<sup>2</sup>, 7.3 psi} (0 kPa {0 kgf/cm<sup>2</sup>, 0 psi} ก่อนปฏิบัติโหมดทดสอบการวิเคราะห์ปัญหาบนรถ)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">สวิตช์แรงดันน้ำมัน No.4</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">OP_SW4_ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">kPa {kgf/cm<sup>2</sup>, psi}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หลังจากปฏิบัติโหมดทดสอบการวิเคราะห์ปัญหาบนรถ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">น้อยกว่า 260 kPa {2.65 kgf/cm<sup>2</sup>, 37.7 psi} (0 kPa {0 kgf/cm<sup>2</sup>, 0 psi} ก่อนปฏิบัติโหมดทดสอบการวิเคราะห์ปัญหาบนรถ)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">สวิตช์แรงดันน้ำมัน No.4</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">OSS</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">RPM</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หยุดรถ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">0 RPM</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="tbody">เซ็นเซอร์ความเร็วเพลาส่งกำลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ความเร็วรถ 30 km/h {19 mph} ในสถานะ 3GR ที่ตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 1000 RPM</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">PUMP_SPEED</div>
+</td>
+<td id="" align="center">
+<div class="tbody">RPM</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;หยุดรถที่ตำแหน่ง D</div>
+<div class="list">•&nbsp;&nbsp;การควบคุมระบบ i-stop</div>
+</td>
+<td id="" align="center">
+<div class="tbody">200&mdash;2,000 RPM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">RPM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">RPM</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">แสดงความเร็วรอบเครื่องยนต์</div>
+</td>
+<td id="" align="left">
+<div class="tbody">PCM</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">SC_STATE</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Not Active/Active</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">แสดงสภาวะการทำงานของการควบคุมการเปลี่ยนเกียร์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">SE_TYPE</div>
+</td>
+<td id="" align="center">
+<div class="tbody">No valid data/Bf_1st Af_2nd/Bf_1st Af_3rd/Bf_1st Af_4th/Bf_1st Af_5th/Bf_1st Af_6th/Bf_2nd Af_1st/Bf_2nd Af_3rd/Bf_2nd Af_4th/Bf_2nd Af_5th/Bf_2nd Af_6th/Bf_3rd Af_1st/Bf_3rd Af_2nd/Bf_3rd Af_4th/Bf_3rd Af_5th/Bf_3rd Af_6th/Bf_4th Af_1st/Bf_4th Af_2nd/Bf_4th Af_3rd/Bf_4th Af_5th/Bf_4th Af_6th/Bf_5th Af_1st/Bf_5th Af_2nd/Bf_5th Af_3rd/Bf_5th Af_4th/Bf_5th Af_6th/Bf_6th Af_1st/Bf_6th Af_2nd/Bf_6th Af_3rd/Bf_6th Af_4th/Bf_6th Af_5th</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">แสดงตำแหน่งเกียร์ก่อนเปลี่ยนเกียร์</div>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">Bf แสดงตำแหน่งเกียร์ก่อนการเปลี่ยนเกียร์</div>
+<div class="list">Af แสดงตำแหน่งเกียร์หลังจากการเปลี่ยนเกียร์</div>
+<dl>
+<dd class="list">
+<div class="list">(ตัวอย่างการแสดง) Bf_1st Af_2nd</div>
+<dl>
+<dd class="list">
+<div class="list">•&nbsp;&nbsp;Bf_1st: ตำแหน่งเกียร์ที่เกียร์ 1 ก่อนการเปลี่ยนเกียร์</div>
+<div class="list">•&nbsp;&nbsp;Af_2nd: ตำแหน่งเกียร์ที่เกียร์ 2 หลังจากการเปลี่ยนเกียร์</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</dd>
+</dl>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="6">
+<div class="tbody">SHIFT_CTRL</div>
+</td>
+<td id="" align="center" rowspan="6">
+<div class="tbody">DEFAULT/MANUAL/C_CONTROL/HIGH_TEMP/D_MANUAL/FAIL_SAFE</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โหมดปกติตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">DEFAULT</div>
+</td>
+<td id="" align="center" rowspan="6">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">โหมดแมนน่วลตำแหน่ง M</div>
+</td>
+<td id="" align="center">
+<div class="tbody">MANUAL</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมความเร็วอัตโนมัติ (ระบบการควบคุมความเร็วอัตโนมัติ)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C_CONTROL</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">โหมดป้องกันเกียร์อัตโนมัติ (โหมดอุณหภูมิ ATF สูง)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">HIGH_TEMP</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">โหมดไดเร็ำกตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">D_MANUAL</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">โหมด Fail-safe</div>
+</td>
+<td id="" align="center">
+<div class="tbody">FAIL_SAFE</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">SS_ON-OFF</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โซลินอยด์ ON/OFF อยู่ที่ OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="tbody">โซลินอยด์ ON/OFF</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">โซลินอยด์ ON/OFF อยู่ที่ ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="9">
+<div class="tbody">SS1</div>
+</td>
+<td id="" align="center" rowspan="9">
+<div class="tbody">A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หยุดรถที่ตำแหน่ง P</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+<td id="" align="left" rowspan="9">
+<div class="tbody">ชิพโซลินอยด์ No.1</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">หยุดรถที่ตำแหน่ง R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">หยุดรถที่ตำแหน่ง N</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 1 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 1 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 2 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 1 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 3 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 1 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 4 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 1 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 5 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 6 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="9">
+<div class="tbody">SS1_C</div>
+</td>
+<td id="" align="center" rowspan="9">
+<div class="tbody">A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หยุดรถที่ตำแหน่ง P</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+<td id="" align="left" rowspan="9">
+<div class="tbody">ชิพโซลินอยด์ No.1</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">หยุดรถที่ตำแหน่ง R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">หยุดรถที่ตำแหน่ง N</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 1 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 1 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 2 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 1 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 3 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 1 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 4 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 1 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 5 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 6 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="9">
+<div class="tbody">SS2</div>
+</td>
+<td id="" align="center" rowspan="9">
+<div class="tbody">A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หยุดรถที่ตำแหน่ง P</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+<td id="" align="left" rowspan="9">
+<div class="tbody">ชิพโซลินอยด์ No.2</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">หยุดรถที่ตำแหน่ง R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">หยุดรถที่ตำแหน่ง N</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 1 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 2 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 1 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 3 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 4 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 5 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 6 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 1 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="9">
+<div class="tbody">SS2_C</div>
+</td>
+<td id="" align="center" rowspan="9">
+<div class="tbody">A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หยุดรถที่ตำแหน่ง P</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+<td id="" align="left" rowspan="9">
+<div class="tbody">ชิพโซลินอยด์ No.2</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">หยุดรถที่ตำแหน่ง R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">หยุดรถที่ตำแหน่ง N</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 1 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 2 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 1 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 3 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 4 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 5 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 6 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 1 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="9">
+<div class="tbody">SS3</div>
+</td>
+<td id="" align="center" rowspan="9">
+<div class="tbody">A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หยุดรถที่ตำแหน่ง P</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 1 A</div>
+</td>
+<td id="" align="left" rowspan="9">
+<div class="tbody">ชิพโซลินอยด์ No.3</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">หยุดรถที่ตำแหน่ง R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">หยุดรถที่ตำแหน่ง N</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 1 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 1 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 1 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 2 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 1 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 3 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 4 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 1 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 5 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 6 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 1 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="9">
+<div class="tbody">SS3_C</div>
+</td>
+<td id="" align="center" rowspan="9">
+<div class="tbody">A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หยุดรถที่ตำแหน่ง P</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 1 A</div>
+</td>
+<td id="" align="left" rowspan="9">
+<div class="tbody">ชิพโซลินอยด์ No.3</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">หยุดรถที่ตำแหน่ง R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">หยุดรถที่ตำแหน่ง N</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 1 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 1 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 1 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 2 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 1 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 3 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 4 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 1 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 5 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 6 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 1 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="9">
+<div class="tbody">SS4</div>
+</td>
+<td id="" align="center" rowspan="9">
+<div class="tbody">A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หยุดรถที่ตำแหน่ง P</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+<td id="" align="left" rowspan="9">
+<div class="tbody">ชิพโซลินอยด์ No.4</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">หยุดรถที่ตำแหน่ง R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">หยุดรถที่ตำแหน่ง N</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 1 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 2 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 1 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 3 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 1 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 4 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 5 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 6 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="9">
+<div class="tbody">SS4_C</div>
+</td>
+<td id="" align="center" rowspan="9">
+<div class="tbody">A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หยุดรถที่ตำแหน่ง P</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+<td id="" align="left" rowspan="9">
+<div class="tbody">ชิพโซลินอยด์ No.4</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">หยุดรถที่ตำแหน่ง R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">หยุดรถที่ตำแหน่ง N</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 1 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 2 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 1 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 3 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 1 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 4 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 5 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การขับขี่ในเกียร์ 6 ของตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="9">
+<div class="tbody">SSLU</div>
+</td>
+<td id="" align="center" rowspan="9">
+<div class="tbody">A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หยุดรถที่ตำแหน่ง P</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+<td id="" align="left" rowspan="9">
+<div class="tbody">โซลินอยด์ควบคุม TCC</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">หยุดรถที่ตำแหน่ง R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">หยุดรถที่ตำแหน่ง N</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;การขับขี่ในเกียร์ 1 ของตำแหน่ง D</div>
+<div class="list">•&nbsp;&nbsp;มุมเปิดแป้นคันเร่งอยู่ที่ประมาณ 10 %</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 430 mA</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;การขับขี่ในเกียร์ 2 ของตำแหน่ง D</div>
+<div class="list">•&nbsp;&nbsp;มุมเปิดแป้นคันเร่งอยู่ที่ประมาณ 10 %</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 430 mA</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;การขับขี่ในเกียร์ 3 ของตำแหน่ง D</div>
+<div class="list">•&nbsp;&nbsp;มุมเปิดแป้นคันเร่งอยู่ที่ประมาณ 10 %</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 430 mA</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;การขับขี่ในเกียร์ 4 ของตำแหน่ง D</div>
+<div class="list">•&nbsp;&nbsp;มุมเปิดแป้นคันเร่งอยู่ที่ประมาณ 10 %</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 430 mA</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;การขับขี่ในเกียร์ 5 ของตำแหน่ง D</div>
+<div class="list">•&nbsp;&nbsp;มุมเปิดแป้นคันเร่งอยู่ที่ประมาณ 10 %</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 430 mA</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;การขับขี่ในเกียร์ 6 ของตำแหน่ง D</div>
+<div class="list">•&nbsp;&nbsp;มุมเปิดแป้นคันเร่งอยู่ที่ประมาณ 10 %</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 430 mA</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="9">
+<div class="tbody">SSLU_C</div>
+</td>
+<td id="" align="center" rowspan="9">
+<div class="tbody">A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หยุดรถที่ตำแหน่ง P</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+<td id="" align="left" rowspan="9">
+<div class="tbody">โซลินอยด์ควบคุม TCC</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">หยุดรถที่ตำแหน่ง R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">หยุดรถที่ตำแหน่ง N</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 0 A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;การขับขี่ในเกียร์ 1 ของตำแหน่ง D</div>
+<div class="list">•&nbsp;&nbsp;มุมเปิดแป้นคันเร่งอยู่ที่ประมาณ 10 %</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 430 mA</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;การขับขี่ในเกียร์ 2 ของตำแหน่ง D</div>
+<div class="list">•&nbsp;&nbsp;มุมเปิดแป้นคันเร่งอยู่ที่ประมาณ 10 %</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 430 mA</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;การขับขี่ในเกียร์ 3 ของตำแหน่ง D</div>
+<div class="list">•&nbsp;&nbsp;มุมเปิดแป้นคันเร่งอยู่ที่ประมาณ 10 %</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 430 mA</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;การขับขี่ในเกียร์ 4 ของตำแหน่ง D</div>
+<div class="list">•&nbsp;&nbsp;มุมเปิดแป้นคันเร่งอยู่ที่ประมาณ 10 %</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 430 mA</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;การขับขี่ในเกียร์ 5 ของตำแหน่ง D</div>
+<div class="list">•&nbsp;&nbsp;มุมเปิดแป้นคันเร่งอยู่ที่ประมาณ 10 %</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 430 mA</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;การขับขี่ในเกียร์ 6 ของตำแหน่ง D</div>
+<div class="list">•&nbsp;&nbsp;มุมเปิดแป้นคันเร่งอยู่ที่ประมาณ 10 %</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 430 mA</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="9">
+<div class="tbody">SSLU_PRES</div>
+</td>
+<td id="" align="center" rowspan="9">
+<div class="tbody">kPa {kgf/cm<sup>2</sup>, psi}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หยุดรถที่ตำแหน่ง P</div>
+</td>
+<td id="" align="center">
+<div class="tbody">0 kPa {0 kgf/cm<sup>2</sup>, 0 psi}</div>
+</td>
+<td id="" align="left" rowspan="9">
+<div class="tbody">โซลินอยด์ควบคุม TCC</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">หยุดรถที่ตำแหน่ง R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">0 kPa {0 kgf/cm<sup>2</sup>, 0 psi}</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">หยุดรถที่ตำแหน่ง N</div>
+</td>
+<td id="" align="center">
+<div class="tbody">0 kPa {0 kgf/cm<sup>2</sup>, 0 psi}</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;การขับขี่ในเกียร์ 1 ของตำแหน่ง D</div>
+<div class="list">•&nbsp;&nbsp;มุมเปิดแป้นคันเร่งอยู่ที่ประมาณ 10 %</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 360 kPa {3.67 kgf/cm<sup>2</sup>, 52.2 psi}</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;การขับขี่ในเกียร์ 2 ของตำแหน่ง D</div>
+<div class="list">•&nbsp;&nbsp;มุมเปิดแป้นคันเร่งอยู่ที่ประมาณ 10 %</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 360 kPa {3.67 kgf/cm<sup>2</sup>, 52.2 psi}</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;การขับขี่ในเกียร์ 3 ของตำแหน่ง D</div>
+<div class="list">•&nbsp;&nbsp;มุมเปิดแป้นคันเร่งอยู่ที่ประมาณ 10 %</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 360 kPa {3.67 kgf/cm<sup>2</sup>, 52.2 psi}</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;การขับขี่ในเกียร์ 4 ของตำแหน่ง D</div>
+<div class="list">•&nbsp;&nbsp;มุมเปิดแป้นคันเร่งอยู่ที่ประมาณ 10 %</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 360 kPa {3.67 kgf/cm<sup>2</sup>, 52.2 psi}</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;การขับขี่ในเกียร์ 5 ของตำแหน่ง D</div>
+<div class="list">•&nbsp;&nbsp;มุมเปิดแป้นคันเร่งอยู่ที่ประมาณ 10 %</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 360 kPa {3.67 kgf/cm<sup>2</sup>, 52.2 psi}</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;การขับขี่ในเกียร์ 6 ของตำแหน่ง D</div>
+<div class="list">•&nbsp;&nbsp;มุมเปิดแป้นคันเร่งอยู่ที่ประมาณ 10 %</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 360 kPa {3.67 kgf/cm<sup>2</sup>, 52.2 psi}</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="9">
+<div class="tbody">SSP</div>
+</td>
+<td id="" align="center" rowspan="9">
+<div class="tbody">A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หยุดรถที่ตำแหน่ง P</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 980 mA</div>
+</td>
+<td id="" align="left" rowspan="9">
+<div class="tbody">โซลินอยด์ควบคุมแรงดัน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">หยุดรถที่ตำแหน่ง R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 930 mA</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">หยุดรถที่ตำแหน่ง N</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 980 mA</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;การขับขี่ในเกียร์ 1 ของตำแหน่ง D</div>
+<div class="list">•&nbsp;&nbsp;มุมเปิดแป้นคันเร่งอยู่ที่ประมาณ 10 %</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 400&mdash;800 mA</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;การขับขี่ในเกียร์ 2 ของตำแหน่ง D</div>
+<div class="list">•&nbsp;&nbsp;มุมเปิดแป้นคันเร่งอยู่ที่ประมาณ 10 %</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 400&mdash;800 mA</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;การขับขี่ในเกียร์ 3 ของตำแหน่ง D</div>
+<div class="list">•&nbsp;&nbsp;มุมเปิดแป้นคันเร่งอยู่ที่ประมาณ 10 %</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 400&mdash;800 mA</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;การขับขี่ในเกียร์ 4 ของตำแหน่ง D</div>
+<div class="list">•&nbsp;&nbsp;มุมเปิดแป้นคันเร่งอยู่ที่ประมาณ 10 %</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 400&mdash;800 mA</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;การขับขี่ในเกียร์ 5 ของตำแหน่ง D</div>
+<div class="list">•&nbsp;&nbsp;มุมเปิดแป้นคันเร่งอยู่ที่ประมาณ 10 %</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 400&mdash;800 mA</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;การขับขี่ในเกียร์ 6 ของตำแหน่ง D</div>
+<div class="list">•&nbsp;&nbsp;มุมเปิดแป้นคันเร่งอยู่ที่ประมาณ 10 %</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 400&mdash;800 mA</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="9">
+<div class="tbody">SSP_C</div>
+</td>
+<td id="" align="center" rowspan="9">
+<div class="tbody">A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หยุดรถที่ตำแหน่ง P</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 980 mA</div>
+</td>
+<td id="" align="left" rowspan="9">
+<div class="tbody">โซลินอยด์ควบคุมแรงดัน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">หยุดรถที่ตำแหน่ง R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 930 mA</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">หยุดรถที่ตำแหน่ง N</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 980 mA</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;การขับขี่ในเกียร์ 1 ของตำแหน่ง D</div>
+<div class="list">•&nbsp;&nbsp;มุมเปิดแป้นคันเร่งอยู่ที่ประมาณ 10 %</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 400&mdash;800 mA</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;การขับขี่ในเกียร์ 2 ของตำแหน่ง D</div>
+<div class="list">•&nbsp;&nbsp;มุมเปิดแป้นคันเร่งอยู่ที่ประมาณ 10 %</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 400&mdash;800 mA</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;การขับขี่ในเกียร์ 3 ของตำแหน่ง D</div>
+<div class="list">•&nbsp;&nbsp;มุมเปิดแป้นคันเร่งอยู่ที่ประมาณ 10 %</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 400&mdash;800 mA</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;การขับขี่ในเกียร์ 4 ของตำแหน่ง D</div>
+<div class="list">•&nbsp;&nbsp;มุมเปิดแป้นคันเร่งอยู่ที่ประมาณ 10 %</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 400&mdash;800 mA</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;การขับขี่ในเกียร์ 5 ของตำแหน่ง D</div>
+<div class="list">•&nbsp;&nbsp;มุมเปิดแป้นคันเร่งอยู่ที่ประมาณ 10 %</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 400&mdash;800 mA</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;การขับขี่ในเกียร์ 6 ของตำแหน่ง D</div>
+<div class="list">•&nbsp;&nbsp;มุมเปิดแป้นคันเร่งอยู่ที่ประมาณ 10 %</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 400&mdash;800 mA</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="9">
+<div class="tbody">SSP_PRES</div>
+</td>
+<td id="" align="center" rowspan="9">
+<div class="tbody">kPa {kgf/cm<sup>2</sup>, psi}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หยุดรถที่ตำแหน่ง P</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 45 kPa {0.46 kgf/cm<sup>2</sup>, 6.5 psi}</div>
+</td>
+<td id="" align="left" rowspan="9">
+<div class="tbody">โซลินอยด์ควบคุมแรงดัน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">หยุดรถที่ตำแหน่ง R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 80 kPa {0.82 kgf/cm<sup>2</sup>, 12 psi}</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">หยุดรถที่ตำแหน่ง N</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 45 kPa {0.46 kgf/cm<sup>2</sup>, 6.5 psi}</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;การขับขี่ในเกียร์ 1 ของตำแหน่ง D</div>
+<div class="list">•&nbsp;&nbsp;มุมเปิดแป้นคันเร่งอยู่ที่ประมาณ 10 %</div>
+</td>
+<td id="" align="center">
+<div class="tbody">130&mdash;460 kPa {1.33&mdash;4.69 kgf/cm<sup>2</sup>, 18.9&mdash;66.7 psi}</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;การขับขี่ในเกียร์ 2 ของตำแหน่ง D</div>
+<div class="list">•&nbsp;&nbsp;มุมเปิดแป้นคันเร่งอยู่ที่ประมาณ 10 %</div>
+</td>
+<td id="" align="center">
+<div class="tbody">130&mdash;460 kPa {1.33&mdash;4.69 kgf/cm<sup>2</sup>, 18.9&mdash;66.7 psi}</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;การขับขี่ในเกียร์ 3 ของตำแหน่ง D</div>
+<div class="list">•&nbsp;&nbsp;มุมเปิดแป้นคันเร่งอยู่ที่ประมาณ 10 %</div>
+</td>
+<td id="" align="center">
+<div class="tbody">130&mdash;460 kPa {1.33&mdash;4.69 kgf/cm<sup>2</sup>, 18.9&mdash;66.7 psi}</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;การขับขี่ในเกียร์ 4 ของตำแหน่ง D</div>
+<div class="list">•&nbsp;&nbsp;มุมเปิดแป้นคันเร่งอยู่ที่ประมาณ 10 %</div>
+</td>
+<td id="" align="center">
+<div class="tbody">130&mdash;460 kPa {1.33&mdash;4.69 kgf/cm<sup>2</sup>, 18.9&mdash;66.7 psi}</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;การขับขี่ในเกียร์ 5 ของตำแหน่ง D</div>
+<div class="list">•&nbsp;&nbsp;มุมเปิดแป้นคันเร่งอยู่ที่ประมาณ 10 %</div>
+</td>
+<td id="" align="center">
+<div class="tbody">130&mdash;460 kPa {1.33&mdash;4.69 kgf/cm<sup>2</sup>, 18.9&mdash;66.7 psi}</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;การขับขี่ในเกียร์ 6 ของตำแหน่ง D</div>
+<div class="list">•&nbsp;&nbsp;มุมเปิดแป้นคันเร่งอยู่ที่ประมาณ 10 %</div>
+</td>
+<td id="" align="center">
+<div class="tbody">130&mdash;460 kPa {1.33&mdash;4.69 kgf/cm<sup>2</sup>, 18.9&mdash;66.7 psi}</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">TFT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C {&deg;F}</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">แสดงอุณหภูมิ ATF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เซ็นเซอร์ TFT</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">THOP</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">%</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปล่อยแป้นคันเร่งสุด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 22 %</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="tbody">PCM</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">เหยียบแป้นคันเร่งสุด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 91 %</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">TORQUE_ACT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Nm</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">แสดงแรงบิดเครื่องยนต์จริง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">TORQUE_DES</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Nm</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">แสดงแรงบิดเครื่องยนต์ที่ต้องการ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="7">
+<div class="tbody">TR</div>
+</td>
+<td id="" align="center" rowspan="7">
+<div class="tbody">P/SHIFT_DOWN/SHIFT_UP/M/D/N/R</div>
+</td>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ที่ตำแหน่ง P</div>
+</td>
+<td id="" align="center">
+<div class="tbody">P</div>
+</td>
+<td id="" align="left" rowspan="7">
+<div class="tbody">เซ็นเซอร์ช่วงตำแหน่งเกียร์</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์ที่ตำแหน่งด้าน (−) ของตำแหน่ง M</div>
+</td>
+<td id="" align="center">
+<div class="tbody">SHIFT_DOWN</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์ที่ตำแหน่งด้าน (+) ของตำแหน่ง M</div>
+</td>
+<td id="" align="center">
+<div class="tbody">SHIFT_UP</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์ที่ตำแหน่ง M</div>
+</td>
+<td id="" align="center">
+<div class="tbody">M</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์ที่ตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">D</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ที่ตำแหน่ง N</div>
+</td>
+<td id="" align="center">
+<div class="tbody">N</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คันเกียร์อยู่ที่ตำแหน่ง R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">R</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">TSS</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">RPM</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หยุดรถที่ตำแหน่ง D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">0 RPM</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="tbody">เซ็นเซอร์ความเร็วเพลารับกำลัง / เทอร์ไบน์</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ความเร็วรอบเครื่องยนต์ 1,000 rpm ที่ตำแหน่ง P</div>
+</td>
+<td id="" align="center">
+<div class="tbody">900&mdash;1,100 RPM</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">UPSHIFT_REV</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การเปลี่ยนเกียร์ขึ้นเนื่องจากการขอของเครื่องยนต์ไม่ถูกบันทึก (สามารถรีเซ็ทการขอเปลี่ยนเกียร์ขึ้นโดยการลบรหัสวิเคราะห์ปัญหาได้)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การเปลี่ยนเกียร์ขึ้นเนื่องจากการขอของเครื่องยนต์ถูกบันทึก</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">VPWR</div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">แสดงแรงดันไฟฟ้าแหล่งจ่ายไฟ TCM</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;แบตเตอรี่</div>
+<div class="list">•&nbsp;&nbsp;TCM</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">VSS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">KPH {MPH}</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">แสดงความเร็วรถ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เซ็นเซอร์ความเร็วเพลาส่งกำลัง</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</body>
+</html>

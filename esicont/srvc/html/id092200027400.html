@@ -1,0 +1,245 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>โมดูลควบคุมระบบตรวจสอบจุดบอด (BSM)</title>
+</head>
+<body><a name="id092200027400"></a><p class="servinfo-title"><span class="servinfo-head"></span>โมดูลควบคุมระบบตรวจสอบจุดบอด (BSM)</p>
+<hr>
+<p class="servinfo-title-id" align="right">id092200027400</p><br clear="all"><a name="id09220002740001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>จุดประสงค์:</p>
+<div class="list">•&nbsp;&nbsp;ควบคุมระบบการตรวจสอบจุดบอด (BSM)</div><br clear="all"><a name="id09220002740002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุม BSM จะส่งคลื่นไมโครเวฟเพื่อตรวจจับตำแหน่งของรถที่กำลังเข้ามาใกล้และข้อมูลความเร็วผ่านคลื่นไมโครเวฟที่สะท้อนกลับ</div>
+<div class="list">•&nbsp;&nbsp;ระบบ BSM ถูกควบคุมตามตำแหน่งและข้อมูลความเร็วของรถที่ตรวจพบ</div>
+<div class="list">•&nbsp;&nbsp;ใช้ฟังก์ชั่นการวิเคราะห์ปัญหาด้วยตนเอง</div><br clear="all"><a name="id09220002740003"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>โครงสร้าง</p>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุม BSM และเรดาร์จะรวมอยู่ด้วยกัน</div>
+<div class="list">•&nbsp;&nbsp;คลื่นไมโครเวฟจะถูกปล่อยมาจากเรดาร์</div>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมสองตัวจะอยู่ทางด้านซ้ายและด้านขวาของตัวถังด้านในกันชนหลัง</div><br clear="all"><a name="id09220002740004"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุม BSM ปล่อยคลื่นไมโครเวฟไปยังรถด้านหลังเพื่อตรวจจับสิ่งกีดขวางผ่านคลื่นไมโครเวฟที่สะท้อนกลับ</div><br clear="all"><p><a name="id09220002740005"></a><p class="topic-title"><span class="topic-head"></span>พื้นที่การปล่อยเรดาร์</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;แนวขวาง: <span>1 m {3 ft}</span> ไปทางด้านหน้าของตัวรถ และ <span>7 m {23 ft}</span> ไปทางด้านหลังของตัวรถจากส่วนท้ายสุดของรถ (รวมทั้งหมด <span>8 m {26 ft}</span>)</div>
+<div class="list">•&nbsp;&nbsp;แนวด้านข้าง: <span>0.5&mdash;3.8 m {2&mdash;12 ft}</span> จากด้านข้างของรถ (รวมทั้งหมด <span>3.3 m {11 ft}</span>)<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5jjn00000792.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5jjn00000792</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+</p>
+<div class="list">•&nbsp;&nbsp;เมื่อรถอยู่ในมุม เช่น เลี้ยวเข้าไปในสี่แยก รูปทรงของพื้นที่เตือนที่ด้านในจะเปลี่ยนไป</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;แนวขวาง: ความยาวของด้างหลังรถจะเปลี่ยนไปตามมุมพวงมาลัย</div>
+<div class="list">―&nbsp;&nbsp;แนวด้านข้าง: มุมของพื้นที่การเตือนเปลี่ยนไปตามวงเี้ลี้ยวของรถ</div>
+</dd>
+</dl><br clear="all"><a name="id09220002740006"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>Fail-safe</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา</p>
+</th>
+<th id="" align="center">
+<p class="thead">ฟังก์ชั่น Fail-safe</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">B118C:11</div>
+</td>
+<td id="" align="left">
+<div class="tbody">BSM หยุดทำงาน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">B118C:15</div>
+</td>
+<td id="" align="left">
+<div class="tbody">BSM หยุดทำงาน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">B118D:11</div>
+</td>
+<td id="" align="left">
+<div class="tbody">BSM หยุดทำงาน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">B118D:15</div>
+</td>
+<td id="" align="left">
+<div class="tbody">BSM หยุดทำงาน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U0001:88</div>
+</td>
+<td id="" align="left">
+<div class="tbody">BSM หยุดทำงาน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U0100:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">BSM หยุดทำงาน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U0131:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">BSM หยุดทำงาน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">BSM หยุดทำงาน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U0214:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">BSM หยุดทำงาน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U0232:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">BSM หยุดทำงาน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U0233:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">BSM หยุดทำงาน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U0401:68</div>
+</td>
+<td id="" align="left">
+<div class="tbody">BSM หยุดทำงาน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U0420:68</div>
+</td>
+<td id="" align="left">
+<div class="tbody">BSM หยุดทำงาน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U0423:68</div>
+</td>
+<td id="" align="left">
+<div class="tbody">BSM หยุดทำงาน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U0515:68</div>
+</td>
+<td id="" align="left">
+<div class="tbody">BSM หยุดทำงาน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U0533:68</div>
+</td>
+<td id="" align="left">
+<div class="tbody">BSM หยุดทำงาน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U0534:68</div>
+</td>
+<td id="" align="left">
+<div class="tbody">BSM หยุดทำงาน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U3000:01</div>
+</td>
+<td id="" align="left">
+<div class="tbody">BSM หยุดทำงาน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U3000:09</div>
+</td>
+<td id="" align="left">
+<div class="tbody">BSM หยุดทำงาน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U3000:4A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่มี</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U3000:97</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่มี</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U3003:16</div>
+</td>
+<td id="" align="left">
+<div class="tbody">BSM หยุดทำงาน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U3003:17</div>
+</td>
+<td id="" align="left">
+<div class="tbody">BSM หยุดทำงาน</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</body>
+</html>

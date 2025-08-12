@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>นาฬิกา</title>
+</head>
+<body><a name="id092200029400"></a><p class="servinfo-title"><span class="servinfo-head"></span>นาฬิกา</p>
+<hr>
+<p class="servinfo-title-id" align="right">id092200029400</p><br clear="all"><a name="id09220002940001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>จุดประสงค์:</p>
+<div class="list">•&nbsp;&nbsp;นาฬิกาแสดงเวลาปัจจุบัน, สถานะของเข็มขัดนิรภัยด้านผู้โดยสารและที่นั่งด้านหลัง, สถานะสวิตช์การปิดใช้งานถุงลมนิรภัย (PAD) และการทำงานของตัวอุ่นที่นั่งเพื่อแจ้งให้คนขับทราบ</div><br clear="all"><a name="id09220002940002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<div class="list">•&nbsp;&nbsp;จัดเก็บเวลาที่ตั้งโดยผู้ใช้และแสดงเวลาปัจจุบัน</div><br clear="all"><p><a name="id09220002940003"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นไฟเตือนเข็มขัดนิรภัย</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เมื่อนาฬิกาได้รับสัญญาณขอไฟเตือนเข็มขัดนิรภัยที่ส่งผ่านการส่งข้อมูลระบบ CAN จากแผงหน้าปัด ไฟเตือนเข็มขัดนิรภัยจะติดสว่างขึ้น</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09220002940004"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นไฟแสดงสถานะการปิดใช้งานถุงลมนิรภัยด้านผู้โดยสารด้านหน้า</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เมื่อนาฬิกาได้รับสัญญาณขอไฟแสดงสถานะการปิดใช้งานถุงลมนิรภัยด้านผู้โดยสารด้านหน้าที่ส่งผ่านสัญญาณ CAN จากแผงหน้าปัด ไฟแสดงสถานะการปิดใช้งานถุงลมนิรภัยด้านผู้โดยสารด้านหน้าจะติดสว่างขึ้น</div>
+</dd>
+</dl>
+</p><br clear="all"><a name="id09220002940005"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>โครงสร้าง</p>
+<div class="list">•&nbsp;&nbsp;ประกอบด้วยจอแสดงผลที่แสดงเวลาปัจจุบันและไฟแสดงสถานะ/ไฟเตือน, ปุ่มการปรับเวลา และสวิตช์ตัวอุ่นที่นั่ง (รุ่นที่มีตัวอุ่นที่นั่ง)</div>
+<div class="list">•&nbsp;&nbsp;ประกอบกับชุดควบคุมอุณหภูมิ</div>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001386.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001386</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id09220002940006"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<div class="list">•&nbsp;&nbsp;นาฬิกาแสดงเวลาปัจจุบันเมื่อบิดสวิตช์สตาร์ทไปที่ ACC หรือ ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div><br clear="all"><p><a name="id09220002940007"></a><p class="topic-title"><span class="topic-head"></span>การทำงานของไฟเตือน/ไฟแสดงสถานะ</p>
+<dl>
+<dd>
+<div class="list">1.&nbsp;&nbsp;นาฬิกาได้รับ (1) สัญญาณขอไฟเตือนเข็มขัดนิรภัยและสัญญาณขอไฟแสดงสถานะการปิดใช้งานถุงลมนิรภัยด้านผู้โดยสารด้านหน้าจากแผงหน้าปัด</div>
+<div class="list">2.&nbsp;&nbsp;ไมโครคอมพิวเตอร์ของนาฬิกาจะเปิดใช้งานทรานซิสเตอร์ (2) ตามสัญญาณแต่ละตัว</div>
+<div class="list">3.&nbsp;&nbsp;เมื่อทรานซิสเตอร์เปิดใช้งาน วงจรกราวด์ที่มีไฟเตือน/ไฟแสดงสถานะจะถูกสร้างขึ้น และไฟเตือน/ไฟแสดงสถานะจะติดสว่าง (3)</div>
+</dd>
+</dl>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001387.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001387</div>
+</td>
+</tr>
+</table>
+</p><br clear="all"><p><a name="id09220002940008"></a><p class="topic-title"><span class="topic-head"></span>สวิตช์ตัวอุ่นที่นั่ง</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;สำหรับรายละเอียดเกี่ยวกับการทำงานของสวิตช์ตัวอุ่นที่นั่ง ให้ดูที่<font class="extxref-label"><a href="id091300101200.html">ระบบอุ่นที่นั่ง</a></font></div>
+</dd>
+</dl>
+</p><br clear="all"><a name="id09220002940009"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>Fail-safe</p>
+<div class="list">•&nbsp;&nbsp;ไม่มีฟังก์ชั่นนี้</div>
+</body>
+</html>

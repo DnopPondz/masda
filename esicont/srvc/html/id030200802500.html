@@ -1,0 +1,1151 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>การวิเคราะห์ปัญหาบนรถของระบบควบคุม 4WD อิเล็กทรอนิกส์</title>
+</head>
+<body><a name="id030200802500"></a><p class="servinfo-title"><span class="servinfo-head"></span>การวิเคราะห์ปัญหาบนรถของระบบควบคุม 4WD อิเล็กทรอนิกส์</p>
+<hr>
+<p class="servinfo-title-id" align="right">id030200802500</p><br clear="all"><a name="id03020080250001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>คำอธิบายการทดสอบการวิเคราะห์ปัญหาบนรถ (OBD)</p>
+<div class="list">•&nbsp;&nbsp;การทดสอบ OBD จะตรวจสอบความสมบูรณ์และการทำงานของโมดูลควบคุม 4WD และส่งผลที่ได้ออกมาเมื่อมีการขอจากการทดสอบค่ากำหนด</div>
+<div class="list">•&nbsp;&nbsp;การทดสอบการวิเคราะห์ปัญหาบนรถยังรวมถึง:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;โดยปกติแล้ว การตรวจสอบอย่างรวดเร็วของโมดูลควบคุม 4WD จะทำเมื่อเริ่มการทำงานของแต่ละขั้นตอนการวิเคราะห์ปัญหา</div>
+<div class="list">―&nbsp;&nbsp;ทำการตรวจสอบความถูกต้องหลังการซ่อมแซมเพื่อให้แน่ใจว่าไม่มีความผิดพลาดอื่นๆ เกิดขึ้นระหว่างการซ่อม</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;การทดสอบ OBD แบ่งออกเป็น 3 การทดสอบ:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;อ่าน/ลบผลการวิเคราะห์ปัญหา, ตรวจสอบและบันทึก PID และโหมดคำสั่งการทำงาน</div>
+</dd>
+</dl><br clear="all"><p><a name="id03020080250002"></a><p class="topic-title"><span class="topic-head"></span>อ่าน/ลบผลการวิเคราะห์ปัญหา</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่นนี้จะทำให้ท่านสามารถอ่านหรือลบรหัสวิเคราะห์ปัญหาในหน่วยความจำโมดูลควบคุม 4WD ได้</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id03020080250003"></a><p class="topic-title"><span class="topic-head"></span>ตรวจสอบและบันทึก PID/Data</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชันนี้ทำให้คุณสามารถเข้าถึงค่าของข้อมูลค่าใดค่าหนึ่ง, สัญญาณอินพุท, ค่าที่คำนวณ และข้อมูลสถานะระบบ</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id03020080250004"></a><p class="topic-title"><span class="topic-head"></span>โหมดคำสั่งการทำงาน</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชันนี้ทำให้คุณสามารถควบคุมอุปกรณ์ต่างๆ ได้ด้วย M-MDS</div>
+</dd>
+</dl>
+</p><br clear="all"><a name="id03020080250005"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ขั้นตอนการอ่านรหัสวิเคราะห์ปัญหา</p><br clear="all"><p><a name="id03020080250006"></a><p class="topic-title"><span class="topic-head"></span>การทดสอบ CMDTC ด้วยตนเอง</p>
+<p class="list">1.&nbsp;&nbsp;ต่อ M-MDS (IDS) เข้ากับ DLC-2</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;หลังจากรถได้รับการระบุแล้ว ให้เลือกรายการต่อไปนี้จากหน้าจอการตั้งค่าเริ่มต้นของ IDS</p>
+<p class="list">
+<dl class="list">
+<dd>(1)&nbsp;&nbsp;เลือก &ldquo;Self Test&rdquo;</dd>
+<dd>
+</dd>
+</dl>
+<dl class="list">
+<dd>(2)&nbsp;เลือก &ldquo;All CMDTCs&rdquo;</dd>
+<dd>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;ข้อมูล Snapshot จะปรากฏขึ้นที่ด้านบนของหน้าจอช่วยเหลือ เมื่อเลือกรหัสวิเคราะห์ปัญหาที่ปรากฏ</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</p>
+<p class="list">3.&nbsp;&nbsp;ทำการตรวจสอบรหัสวิเคราะห์ปัญหาตามคำแนะนำบนหน้าจอ</p>
+<p class="list">
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;หากมีรหัสวิเคราะห์ปัญหาปรากฏขึ้น ให้ดำเนินการแก้ไขปัญหาตามการตรวจสอบรหัสวิเคราะห์ปัญหานั้นๆ หลังการบันทึกข้อมูล Snapshot</div>
+</dd>
+</dl>
+</p>
+<p class="list">4.&nbsp;&nbsp;หลังจากการซ่อมเสร็จสมบูรณ์แล้ว ให้ลบรหัสวิเคราะห์ปัญหาทั้งหมดที่เก็บบันทึกอยู่ในโมดูลควบคุม 4WD (ดูที่ <font class="intxref-label"><a href="#id03020080250007">ขั้นตอนการลบรหัสวิเคราะห์ปัญหา</a></font>)</p>
+<p class="list">
+</p>
+</p><br clear="all"><a name="id03020080250007"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ขั้นตอนการลบรหัสวิเคราะห์ปัญหา</p><br clear="all"><p><a name="id03020080250008"></a><p class="topic-title"><span class="topic-head"></span>การทดสอบ CMDTC ด้วยตนเอง</p>
+<p class="list">1.&nbsp;&nbsp;ต่อ M-MDS (IDS) เข้ากับ DLC-2</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;หลังจากรถได้รับการระบุแล้ว ให้เลือกรายการต่อไปนี้จากหน้าจอการตั้งค่าเริ่มต้นของ IDS</p>
+<p class="list">
+<dl class="list">
+<dd>(1)&nbsp;&nbsp;เลือก &ldquo;Self Test&rdquo;</dd>
+<dd>
+</dd>
+</dl>
+<dl class="list">
+<dd>(2)&nbsp;เลือก &ldquo;All CMDTCs&rdquo;</dd>
+<dd>
+</dd>
+</dl>
+</p>
+<p class="list">3.&nbsp;&nbsp;ทำการตรวจสอบรหัสวิเคราะห์ปัญหาตามคำแนะนำบนหน้าจอ</p>
+<p class="list">
+</p>
+<p class="list">4.&nbsp;&nbsp;กดปุ่ม Clear บนหน้าจอรหัสวิเคราะห์ปัญหาเพื่อลบรหัสวิเคราะห์ปัญหา</p>
+<p class="list">
+</p>
+<p class="list">5.&nbsp;&nbsp;บิดสวิตช์สตาร์ท OFF</p>
+<p class="list">
+</p>
+<p class="list">6.&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ ON (เครื่องยนต์ไม่ทำงาน) และรอเป็นเวลา <span>5 s หรือมากกว่า</span></p>
+<p class="list">
+</p>
+<p class="list">7.&nbsp;&nbsp;ทำการตรวจสอบรหัสวิเคราะห์ปัญหา (ดูที่ <font class="intxref-label"><a href="#id03020080250005">ขั้นตอนการอ่านรหัสวิเคราะห์ปัญหา</a></font>)</p>
+<p class="list">
+</p>
+<p class="list">8.&nbsp;&nbsp;ตรวจสอบว่าไม่มีรหัสวิเคราะห์ปัญหาปรากฏขึ้น</p>
+<p class="list">
+</p>
+</p><br clear="all"><a name="id03020080250009"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ขั้นตอนการตรวจสอบและบันทึก PID/Data</p>
+<p class="list">1.&nbsp;&nbsp;ต่อ M-MDS (IDS) เข้ากับ DLC-2</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;หลังจากรถได้รับการระบุแล้ว ให้เลือกรายการต่อไปนี้จากหน้าจอการตั้งค่าเริ่มต้นของ IDS</p>
+<p class="list">
+<dl class="list">
+<dd>(1)&nbsp;&nbsp;เลือก &ldquo;Data logger&rdquo;</dd>
+<dd>
+</dd>
+</dl>
+<dl class="list">
+<dd>(2)&nbsp;&nbsp;เลือก &ldquo;Modules&rdquo;</dd>
+<dd>
+</dd>
+</dl>
+<dl class="list">
+<dd>(3)&nbsp;&nbsp;เลือก &ldquo;4X4&rdquo;</dd>
+<dd>
+</dd>
+</dl>
+</p>
+<p class="list">3.&nbsp;&nbsp;เลือก PID ที่ใช้ได้จากตาราง PID</p>
+<p class="list">
+</p>
+<p class="list">4.&nbsp;&nbsp;ตรวจสอบข้อมูล PID ตามคำแนะนำบนหน้าจอ</p>
+<p class="list">
+</p>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่นบนหน้าจอข้อมูล PID มีไว้เพื่อตรวจสอบค่าที่คำนวณได้ของสัญญาณอินพุท/เอาท์พุทในโมดูล ดังนั้น ถ้าค่าที่ตรวจสอบของส่วนที่ส่งสัญญาณเอาท์พุทไม่อยู่ในค่าที่กำหนด คุณจำเป็นต้องตรวจสอบค่าที่ตรวจสอบของส่วนที่รับสัญญาณอินพุทที่เกี่ยวข้องกับการควบคุมส่วนที่ส่งสัญญาณเอาท์พุทที่ใช้ได้ นอกจากนั้น คุณจำเป็นต้องตรวจสอบส่วนที่ส่งสัญญาณเอาท์พุทแต่ละส่วนด้วย เนื่องจากระบบไม่ได้แสดงความผิดพลาดในการทำงานของส่วนที่ส่งสัญญาณเอาท์พุทว่าเป็นความผิดปกติในค่าที่ตรวจสอบ</div>
+<div class="list">•&nbsp;&nbsp;เมื่อตรวจพบรหัสวิเคราะห์ปัญหา PID ที่เกี่ยวข้องกับระบบที่บกพร่องอาจไม่ปรากฏแม้ว่าโมดูลจะเป็นปกติก็ตาม ดังนั้น หาก PID ไม่ปรากฏ จำเป็นต้องทำการยืนยันรหัสวิเคราะห์ปัญหา ทำการวิเคราะห์ความบกพร่อง และทำการซ่อม</div>
+</div>
+</dd>
+</dl><br clear="all"><a name="id03020080250010"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ขั้นตอนของโหมดคำสั่งการทำงาน</p>
+<p class="list">1.&nbsp;&nbsp;ต่อ M-MDS (IDS) เข้ากับ DLC-2</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;หลังจากรถได้รับการระบุแล้ว ให้เลือกรายการต่อไปนี้จากหน้าจอการตั้งค่าเริ่มต้นของ IDS</p>
+<p class="list">
+<dl class="list">
+<dd>(1)&nbsp;&nbsp;เลือก &ldquo;Data logger&rdquo;</dd>
+<dd>
+</dd>
+</dl>
+<dl class="list">
+<dd>(2)&nbsp;&nbsp;เลือก &ldquo;Modules&rdquo;</dd>
+<dd>
+</dd>
+</dl>
+<dl class="list">
+<dd>(3)&nbsp;&nbsp;เลือก &ldquo;4X4&rdquo;</dd>
+<dd>
+</dd>
+</dl>
+</p>
+<p class="list">3.&nbsp;&nbsp;เลือกรายการจำลองจากตาราง PID</p>
+<p class="list">
+</p>
+<p class="list">4.&nbsp;&nbsp;ใช้ฟังก์ชั่นของโหมดคำสั่งการทำงานเพื่อตรวจสอบการทำงานของแต่ละส่วน</p>
+<p class="list">
+<dl>
+<dd>
+<div class="list">•&nbsp; ถ้าไม่สามารถตรวจสอบการทำงานของส่วนที่ส่งเอาท์พุทหลังการตรวจสอบโหมดคำสั่งการทำงาน อาจมีความเป็นไปได้ว่าเกิดการขาดหรือลัดวงจร การติดขัด หรือความบกพร่องในการทำงานในส่วนที่ส่งสัญญาณเอาท์พุท</div>
+</dd>
+</dl>
+</p><br clear="all"><a name="id03020080250011"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ตารางรหัสวิเคราะห์ปัญหา</p>
+<p clear="all">
+<p>
+<div>&times;: สามารถทำได้</div>
+<div>&mdash;: ไม่มี</div>
+</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา</p>
+</th>
+<th id="" align="center" rowspan="2">
+<p class="thead">สถานะการติดสว่างของไฟเตือน 4WD</p>
+</th>
+<th id="" align="center" rowspan="2">
+<p class="thead">ส่วนประกอบของระบบวิเคราะห์ปัญหา</p>
+</th>
+<th id="" align="center" rowspan="2">
+<p class="thead">Fail-safe</p>
+</th>
+<th id="" align="center" rowspan="2">
+<p class="thead">รอบการขับ</p>
+</th>
+<th id="" align="center" rowspan="2">
+<p class="thead">ประเภทการทดสอบด้วยตนเอง<sup>*1</sup></p>
+</th>
+<th id="" align="center" rowspan="2">
+<p class="thead">ฟังก์ชั่นหน่วยความจำ</p>
+</th>
+<th id="" align="center" rowspan="2">
+<p class="thead">หน้า</p>
+</th>
+</tr>
+<tr>
+<th id="" align="center">
+<p class="thead">M-MDS</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">P164D:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การตั้งค่า 4WD CM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id030200200100.html">รหัสวิเคราะห์ปัญหา P164D:00</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P182F:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody"> กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">4WD CM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id030200200200.html">รหัสวิเคราะห์ปัญหา P182F:00</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P187B:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">4WD CM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id030200200300.html">รหัสวิเคราะห์ปัญหา P187B:00</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P1886:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">4WD CM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id030200200400.html">รหัสวิเคราะห์ปัญหา P1886:00</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P1887:11</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรโซลินอยด์ 4WD</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="left" rowspan="4">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id030200200500.html">รหัสวิเคราะห์ปัญหา P1887:11/P1887:12/P1887:13/P1887:14)</a></font></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P1887:12</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรโซลินอยด์ 4WD</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P1887:13</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรโซลินอยด์ 4WD</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P1887:14</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรโซลินอยด์ 4WD</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P1888:11</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรเซ็นเซอร์อุณหภูมิน้ำมันเฟืองท้าย</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id030200200600.html">รหัสวิเคราะห์ปัญหา P1888:11/P1888:15</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P1888:15</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรเซ็นเซอร์อุณหภูมิน้ำมันเฟืองท้าย</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P188A:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody"> กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">4WD CM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id030200200700.html">รหัสวิเคราะห์ปัญหา P188A:00</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0001:88</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารระบบ CAN ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="left" rowspan="4">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id030200200800.html">รหัสวิเคราะห์ปัญหา U0001:88/U0100:00/U0101:00/U0121:00</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0100:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ PCM ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0101:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารระบบ CAN ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0121:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารระบบ CAN ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0401:68</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความบกพร่องของสัญญาณจาก PCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id030200201200.html">รหัสวิเคราะห์ปัญหา U0401:68</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0402:68</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความบกพร่องของสัญญาณจาก TCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่<font class="extxref-label"><a href="id030200201300.html">รหัสวิเคราะห์ปัญหา U0402:68</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0415:68</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความบกพร่องของสัญญาณจาก DSC HU/CM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id030200201400.html">รหัสวิเคราะห์ปัญหา U0415:68</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2100:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การตั้งค่า 4WD CM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id030200201500.html">รหัสวิเคราะห์ปัญหา U2100:00</a></font>)</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;:C: การทดสอบ CMDTC ด้วยตนเอง</div><br clear="all"><a name="id03020080250012"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ตารางข้อมูล Snapshot</p>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;รายการข้อมูล Snapshot ไม่ปรากฏขึ้นตามรหัสวิเคราะห์ปัญหาที่ตรวจพบ</div>
+</div>
+</dd>
+</dl>
+<p clear="all">
+<p>
+<div>&mdash;: ไม่มี</div>
+</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รายการข้อมูล Snapshot</p>
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">หน่วย</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายละเอียดข้อมูล</p>
+</th>
+<th id="" align="center">
+<p class="thead">วิธีการอ่าน/ใช้ข้อมูล</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายการตรวจสอบข้อมูลที่เกี่ยวข้อง</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">AAT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;F</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิภายนอก</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">IC_VPWR</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันแหล่งจ่ายไฟแผงหน้าปัด</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;AWD CM จะรับค่าแรงดันไฟฟ้าแหล่งจ่ายไฟของแผงหน้าปัดที่ส่งผ่านสัญญาณ CAN จากแผงหน้าปัดตลอดเวลา</div>
+<div class="list">•&nbsp;&nbsp;ถ้าตรวจพบรหัสวิเคราะห์ปัญหา AWD CM จะบันทึกแรงดันไฟฟ้าแหล่งจ่ายไฟของแผงหน้าปัดเมื่อตรวจพบรหัสวิเคราะห์ปัญหา และแสดงใน M-MDS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">VPWR<sup>*1</sup></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">IG-ON_TIMER</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">hh:mm:ss<sup>*2</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระยะเวลาที่ผ่านไปตั้งแต่บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัดจะบันทึกข้อมูลช่วงเวลาที่ผ่านไปนับตั้งแต่บิดสวิตช์สตาร์ทไปที่ ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+</div>
+</dd>
+</dl>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;AWD CM จะรับระยะเวลาที่ผ่านไปตั้งแต่บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน) ที่ส่งผ่านสัญญาณ CAN จากแผงหน้าปัดตลอดเวลา</div>
+<div class="list">•&nbsp;&nbsp;ถ้าตรวจพบรหัสวิเคราะห์ปัญหา AWD CM จะบันทึกระยะเวลาที่ผ่านไปตั้งแต่บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน) เมื่อตรวจพบรหัสวิเคราะห์ปัญหา และแสดงใน M-MDS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">PWR_MODE_KEY</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">Key Out/Key Recently Out (Position 0)/Accessory (Position 1)/Post Ignition (Position 2)/Ignition On (Position 2)/Running (Position 2)/Running - Starting</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Key Out: บิดสวิตช์สตาร์ท OFF</div>
+<div class="list">•&nbsp;&nbsp;Key Recently Out (Position 0): ช่วงเวลาที่ผ่านไป<span>ภายใน 3 วินาที</span>นับตั้งแต่บิดสวิตช์สตาร์ท OFF</div>
+<div class="list">•&nbsp;&nbsp;Accessory (Position 1): บิดสวิตช์สตาร์ทไปที่ ACC</div>
+<div class="list">•&nbsp;&nbsp;Post Ignition (Position 2): ช่วงเวลาที่ผ่านไป<span>ภายใน 3 วินาที</span>นับตั้งแต่บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;Ignition On (Position 2): บิดสวิตช์สตาร์ทไปที่ ON (เครื่องยนต์ไม่ทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;Running (Position 2): บิดสวิตช์สตาร์ทไปที่ ON (เครื่องยนต์ทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;Running - Starting: สภาวะการสตาร์ท</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;AWD CM จะรับสถานะสวิตช์สตาร์ทผ่านสัญญาณ CAN จากแผงหน้าปัดตลอดเวลา</div>
+<div class="list">•&nbsp;&nbsp;ถ้าตรวจพบรหัสวิเคราะห์ปัญหา AWD CM จะบันทึกสถานะสวิตช์สตาร์ทเมื่อตรวจพบรหัสวิเคราะห์ปัญหา และแสดงใน M-MDS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">TOTAL_DIST</div>
+</td>
+<td id="" align="center">
+<div class="tbody">km</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Miles</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระยะทางรวมสะสมจนกระทั่ง AWD CM ตรวจพบรหัสวิเคราะห์ปัญหา (ค่ามาตรบันทึกระยะทางในแผงหน้าปัด)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระยะทางรวมตั้งแต่ AWD CM ตรวจพบรหัสวิเคราะห์ปัญหาจนถึงปัจจุบันสามารถคำนวณได้โดยการปฏิบัติตามขั้นตอนดังต่อไปนี้</div>
+<div class="list">1.&nbsp;&nbsp;ตรวจสอบค่าจากมาตรบันทึกระยะทางในแผงหน้าปัด</div>
+<div class="list">2.&nbsp;&nbsp;ตรวจสอบรายการข้อมูล Snapshot TOTAL_DIST</div>
+<div class="list">3.&nbsp;&nbsp;ลบ 2 ออกจาก 1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">TOTAL_TIME</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">hh:mm:ss<sup>*2</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระยะเวลาที่ผ่านไปโดยรวมสะสมจนกระทั่ง AWD CM ตรวจพบรหัสวิเคราะห์ปัญหา</div>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;เมื่อถอดฟิวส์ ROOM และบิดสวิตช์สตาร์ท OFF เวลาจะไม่ถูกนำไปรวมกับช่วงเวลาที่ผ่านไป</div>
+</div>
+</dd>
+</dl>
+</td>
+<td id="" align="left">
+<div class="tbody">ระยะเวลาที่ผ่านไปตั้งแต่ AWD CM ตรวจพบรหัสวิเคราะห์ปัญหาจนถึงปัจจุบันสามารถคำนวณได้โดยการปฏิบัติตามขั้นตอนดังต่อไปนี้</div>
+<div class="list">1.&nbsp;&nbsp;ตรวจสอบรายการ PID TOTAL_TIME บนแผงหน้าปัด</div>
+<div class="list">2.&nbsp;&nbsp;ตรวจสอบรายการข้อมูล Snapshot TOTAL_TIME</div>
+<div class="list">3.&nbsp;&nbsp;ลบ 2 ออกจาก 1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">TOTAL_TIME<sup>*1</sup></div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;:PID แผงหน้าปัด (ดูที่ <font class="extxref-label"><a href="id0902e8960700.html">ตารางการตรวจสอบ PID/DATA [แผงหน้าปัด]</a></font>)</div>
+<div class="deflist">*2&nbsp;&nbsp;:หน่วยวินาที (s) อาจแสดงอยู่หลังจุดทศนิยม</div><br clear="all"><a name="id03020080250013"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ตารางการตรวจสอบข้อมูล / PID</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ชื่อ PID (ความหมาย)</p>
+</th>
+<th id="" align="center">
+<p class="thead">หน่วย / สภาวะ</p>
+</th>
+<th id="" align="center">
+<p class="thead">สภาวะการทำงาน (ค่าอ้างอิง)</p>
+</th>
+<th id="" align="center">
+<p class="thead">การปฏิบัติ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">WARN_LAMP</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;แสดงสถานะไฟเตือน</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจสอบ 4WD CM</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id031800805900.html">การตรวจสอบโมดูลควบคุม 4WD</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">AAT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C,&deg;F</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;แสดงอุณหภูมิอากาศภายนอก </div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจสอบเซ็นเซอร์อุณหภูมิอากาศภายนอก</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0740a1803300.html">การตรวจสอบเซ็นเซอร์อุณหภูมิภายนอก [ระบบปรับอากาศแบบอัตโนมัติ]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">APP</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;แสดงตำแหน่งแป้นคันเร่ง </div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจสอบเซ็นเซอร์ตำแหน่งแป้นคันเร่ง</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140g2803200.html">การตรวจสอบเซ็นเซอร์ตำแหน่งแป้นคันเร่ง (APP) [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>) (ดูที่ <font class="extxref-label"><a href="id0140z7803200.html">การตรวจสอบเซ็นเซอร์ตำแหน่งแป้นคันเร่ง (APP) [SKYACTIV-D 2.2]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">CAL_TABLE</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;แสดงตารางการตั้งค่ามาตรฐานที่เลือก</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">CUP_SOL</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;แสดงวงจร duty ของคลับปิ้งโซลินอยด์</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจสอบ 4WD CM</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id031800805900.html">การตรวจสอบโมดูลควบคุม 4WD</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">เกียร์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1st/2nd/3rd/4th/5th/6th/7th/Park/Neutral/Drive/Reverse</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;แสดงตำแหน่งเกียร์</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจสอบ PCM</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140g2802500.html">การตรวจสอบ PCM [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>) (ดูที่ <font class="extxref-label"><a href="id0140z7802500.html">การตรวจสอบ PCM [SKYACTIV-D 2.2]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">OIL_TEMP</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C,&deg;F</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;แสดงอุณหภูมิน้ำมันเฟืองท้าย </div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจสอบเซ็นเซอร์อุณหภูมิน้ำมันเฟืองท้าย</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id031800805600.html">การตรวจสอบเซ็นเซอร์อุณหภูมิน้ำมันเฟืองท้าย</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">RPM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">RPM</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;แสดงความเร็วรอบเครื่องยนต์ </div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจสอบเซ็นเซอร์ CKP</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140g2800500.html">การตรวจสอบเซ็นเซอร์ตำแหน่งเพลาข้อเหวี่ยง (CKP) [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>) (ดูที่ <font class="extxref-label"><a href="id0140z7800500.html">การตรวจสอบเซ็นเซอร์ตำแหน่งเพลาข้อเหวี่ยง (CKP) [SKYACTIV-D 2.2]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การเปลี่ยนเกียร์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">P/R/N/D/S/L</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;แสดงตำแหน่งคันเกียร์ </div>
+</td>
+<td id="" align="left">
+<div class="tbody">ทำการตรวจสอบรหัสวิเคราะห์ปัญหาของ TCM</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id050227290200.html">ตารางรหัสวิเคราะห์ปัญหาของระบบการวิเคราะห์ปัญหาบนรถ [FW6A-EL, FW6AX-EL]</a></font>) (ดูที่ <font class="extxref-label"><a href="id050230290200.html">ตารางรหัสวิเคราะห์ปัญหาของระบบการวิเคราะห์ปัญหาบนรถ [GW6A-EL, GW6AX-EL]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">VPWR</div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ดับเครื่องยนต์: <span>ประมาณ 12 V </span></div>
+<div class="list">•&nbsp;&nbsp;เดินเบา: <span>ประมาณ 14 V</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจสอบแรงดันไฟฟ้าขั้ว I ของโมดูลควบคุม 4WD</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id031800805900.html">การตรวจสอบโมดูลควบคุม 4WD</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">WSPD_LF</div>
+</td>
+<td id="" align="center" rowspan="4">
+<div class="tbody">KPH, MPH</div>
+</td>
+<td id="" align="left" rowspan="4">
+<div class="list">•&nbsp;&nbsp;หยุดรถ:<span> 0 KPH, 0 MPH</span></div>
+<div class="list">•&nbsp;&nbsp;รถแล่น: ความเร็วรถ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจสอบเซ็นเซอร์ความเร็วล้อหน้าของระบบ ABS</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id041500800400.html">การตรวจสอบเซ็นเซอร์ความเร็วล้อหน้าของระบบ ABS</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">WSPD_LR</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจสอบเซ็นเซอร์ความเร็วล้อหลังของระบบ ABS</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0415008002a5.html">การตรวจสอบเซ็นเซอร์ความเร็วล้อหลังของระบบ ABS [4WD]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">WSPD_RF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจสอบเซ็นเซอร์ความเร็วล้อหน้าของระบบ ABS</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id041500800400.html">การตรวจสอบเซ็นเซอร์ความเร็วล้อหน้าของระบบ ABS</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">WSPD_RR</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจสอบเซ็นเซอร์ความเร็วล้อหลังของระบบ ABS</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0415008002a5.html">การตรวจสอบเซ็นเซอร์ความเร็วล้อหลังของระบบ ABS [4WD]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">TORQUE</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Nm</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;แสดงแรงบิดของล้อโดยรวม </div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p><br clear="all"><a name="id03020080250014"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ารางโหมดคำสั่งการทำงาน</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ชื่อคำสั่ง</p>
+</th>
+<th id="" align="center">
+<p class="thead">ส่วนส่งสัญญาณเอาท์พุท</p>
+</th>
+<th id="" align="center">
+<p class="thead">การทำงาน</p>
+</th>
+<th id="" align="center">
+<p class="thead">สภาวะการทำงาน</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">CUP_SOL</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โซลินอยด์ 4WD</div>
+</td>
+<td id="" align="center">
+<div class="tbody">On/Off</div>
+</td>
+<td id="" align="left">
+<div class="tbody">บิดสวิตช์สตาร์ทไปที่ ON (เครื่องยนต์ไม่ทำงานหรือทำงาน) </div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</body>
+</html>

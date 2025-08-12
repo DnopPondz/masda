@@ -1,0 +1,2 @@
+&txtLabel=TURN AND HAZARD WARNING LIGHT&
+&txtData=S0918_5&

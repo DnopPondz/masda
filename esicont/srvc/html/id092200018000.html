@@ -1,0 +1,226 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>ระบบคอมพิวเตอร์แสดงข้อมูลรอบการขับ</title>
+</head>
+<body><a name="id092200018000"></a><p class="servinfo-title"><span class="servinfo-head"></span>ระบบคอมพิวเตอร์แสดงข้อมูลรอบการขับ</p>
+<hr>
+<p class="servinfo-title-id" align="right">id092200018000</p><br clear="all"><a name="id09220001800001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รายละเอียด</p>
+<div class="list">•&nbsp;&nbsp;ระบบคอมพิวเตอร์แสดงข้อมูลรอบการขับจะแสดงการประหยัดน้ำมันเชื้อเพลิงขณะนั้น การประหยัดน้ำมันเชื้อเพลิงโดยเฉลี่ย ระยะทางที่ขับขี่ได้ก่อนน้ำมันหมด ความเร็วรถโดยเฉลี่ย และสัญญาณเตือนความเร็วรถ</div>
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัดจะสั่งงานโหมด Fail-safe ของระบบคอมพิวเตอร์แสดงข้อมูลรอบการขับ (ดูที่ <font class="extxref-label"><a href="id092200018500.html">แผงหน้าปัด</a></font>)</div><br clear="all"><a name="id09220001800002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัดจะควบคุมระบบคอมพิวเตอร์แสดงข้อมูลรอบการขับตามสัญญาณระบบ CAN ต่อไปนี้</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;สัญญาณความเร็วรถ สัญญาณปริมาณการฉีดน้ำมันเชื้อเพลิง สัญญาณระยะการเคลื่อนที่ซึ่งส่งจาก PCM</div>
+<div class="list">―&nbsp;&nbsp;สัญญาณแรงดันไฟฟ้าของชุดส่งสัญญาณเกจวัดระดับน้ำมันเชื้อเพลิงที่ส่งจากโมดูลควบคุมตัวถังด้านหลัง (RBCM)</div>
+<div class="list">―&nbsp;&nbsp;สัญญาณการทำงานของสวิตช์ที่พวงมาลัยที่ส่งจากชุดเปิด/ปิดการทำงาน</div>
+</dd>
+</dl><br clear="all"><p><a name="id09220001800003"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นคำนวณการประหยัดน้ำมันเชื้อเพลิงขณะนั้น</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัดจะคำนวณการประหยัดน้ำมันเชื้อเพลิงในขณะนั้นตามอัตราการสิ้นเปลืองน้ำมันเชื้อเพลิงและระยะการเคลื่อนที่ตลอดช่วง 2 วินาทีเมื่อความเร็วรถอยู่ในระดับค่าที่ตั้งไว้หรือมากกว่า นอกจากนี้ ผลการคำนวณยังได้รับการอัพเดททุก 2 วินาทีอีกด้วย<p class="figure-title">สูตรหาการประหยัดน้ำมันเชื้อเพลิงขณะนั้น</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00002300.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00002300</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="list">•&nbsp;&nbsp;เมื่อไม่มีการใช้น้ำมันเชื้อเพลิง เช่น ระหว่างการเบรกด้วยเครื่องยนต์ ค่า &lt;0.0 L/100 km&gt; หรือ &lt;99.9 mpg&gt; จะปรากฏขึ้น</div>
+<div class="list">•&nbsp;&nbsp;การประหยัดน้ำมันเชื้อเพลิงขณะนั้นจะปรากฏขึ้นเมื่อความเร็วรถอยู่ที่อัตรา 7.06 km/h {4.39 mph} หรือมากกว่า และค่า &lt;--- L/100 km&gt; หรือ &lt;--- mpg&gt; ปรากฏเมื่อความเร็วรถอยู่ที่อัตรา 4.24 km/h {2.63 mph} หรือน้อยกว่า<table class="figure-flame">
+<tr>
+<td width="10mm"></td>
+<td>
+<table class="figure-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00000873.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00000873</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09220001800004"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นคำนวณการประหยัดน้ำมันเชื้อเพลิงโดยเฉลี่ย</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัดจะคำนวณการประหยัดน้ำมันเชื้อเพลิงโดยเฉลี่ยตามระยะการเคลื่อนที่และอัตราการสิ้นเปลืองน้ำมันจากการต่อแบตเตอรี่หรือรีเซ็ตการประหยัดน้ำมันเชื้อเพลิงโดยเฉลี่ย นอกจากนี้ ผลการคำนวณยังได้รับการอัพเดททุกนาทีอีกด้วย<p class="figure-title">สูตรหาการประหยัดน้ำมันเชื้อเพลิงโดยเฉลี่ย</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00002301.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00002301</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="list">•&nbsp;&nbsp;หากระยะการเคลื่อนที่รวมอยู่ที่ 0 km ค่า &lt;99.9 L/100 km&gt; หรือ &lt;0.0 mpg&gt; จะปรากฏขึ้น</div>
+<div class="list">•&nbsp;&nbsp;หากกดสวิตช์ INFO เป็นเวลาประมาณ 1.5 วินาทีหรือมากกว่า ขณะที่การประหยัดน้ำมันเชื้อเพลิงโดยเฉลี่ยแสดงผลอยู่ ข้อมูลการประหยัดน้ำมันเชื้อเพลิงรวมและระยะการเคลื่อนที่รวมจะถูกรีเซ็ต</div>
+<div class="list">•&nbsp;&nbsp;หากมาตรวัดระยะทางถูกรีเซ็ต การประหยัดน้ำมันเชื้อเพลิงโดยเฉลี่ยจะถูกรีเซ็ตเช่นกัน</div>
+<div class="list">•&nbsp;&nbsp;ในช่วงระยะเวลา 1 นาทีหลังจากที่รีเซ็ตข้อมูลแล้ว ค่า &lt;--- L/100 km&gt; หรือ &lt;--- mpg&gt; จะปรากฏขึ้น</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09220001800005"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นคำนวณระยะทางที่ขับขี่ได้อีก</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัดจะคำนวณระยะทางที่ขับขี่ได้อีกตามการประหยัดน้ำมันเชื้อเพลิงขณะนั้น การประหยัดน้ำมันเชื้อเพลิงรวม และระดับถังน้ำมันเชื้อเพลิง นอกจากนี้ ผลการคำนวณยังได้รับการอัพเดททุกวินาทีอีกด้วย<p class="figure-title">สูตรหาระยะทางที่ขับขี่ได้อีก</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00002302.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00002302</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="list">•&nbsp;&nbsp;เมื่อระดับถังน้ำมันเชื้อเพลิงอยู่ที่ 6 L {2 US gal, 1 Imp gal} หรือน้อยกว่า แผงหน้าปัดจะแสดง &lt;0 km&gt; หรือ &lt;0 miles&gt;</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09220001800006"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นคำนวณความเร็วรถโดยเฉลี่ย</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัดจะคำนวณความเร็วรถโดยเฉลี่ยตามระยะการเคลื่อนที่รวมและระยะเวลาในการเคลื่อนที่รวมจากการต่อแบตเตอรี่หรือรีเซ็ตความเร็วรถโดยเฉลี่ย นอกจากนี้ ผลการคำนวณยังได้รับการอัพเดททุก 10 วินาทีอีกด้วย<p class="figure-title">สูตรหาความเร็วรถโดยเฉลี่ย</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00002303.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00002303</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="list">•&nbsp;&nbsp;หากกดสวิตช์ INFO เป็นเวลาประมาณ 1.5 วินาทีหรือมากกว่า ขณะที่ความเร็วรถโดยเฉลี่ยแสดงผลอยู่ ความเร็วรถโดยเฉลี่ย (ข้อมูลระยะการเคลื่อนที่รวมและระยะเวลาในการเคลื่อนที่รวม) จะถูกรีเซ็ต</div>
+<div class="list">•&nbsp;&nbsp;ในช่วงระยะเวลา 1 นาทีหลังจากที่รีเซ็ตข้อมูลแล้ว ค่า &lt;--- km/h&gt; หรือ &lt;--- mph&gt; จะปรากฏขึ้น</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09220001800007"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นสัญญาณเตือนความเร็วรถ</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัดจะเปรียบเทียบความเร็วรถปัจจุบันกับความเร็วที่ผู้ใช้กำหนด และหากความเร็วรถปัจจุบันมีค่าเกินความเร็วรถที่กำหนดไว้ จะมีสัญญาณเตือนดังขึ้น</div>
+<div class="list">•&nbsp;&nbsp;ความเร็วรถที่กำหนดอาจตั้งให้อยู่ในช่วงละ 10 km/h {10 mph} ระหว่าง 30 km/h&mdash;250 km/h {20 mph&mdash;150 mph}</div>
+<div class="list">•&nbsp;&nbsp;หากไม่ได้ตั้งสัญญาณเตือนความเร็วรถเอาไว้ ค่า &lt;--- km/h&gt; หรือ &lt;--- mph&gt; จะปรากฏขึ้น</div>
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัดจะแสดงหน้าจอเตือนและเสียงเตือนเมื่อความเร็วรถปัจจุบันเท่ากับความเร็วรถที่กำหนด<table class="figure-flame">
+<tr>
+<td width="10mm"></td>
+<td>
+<table class="figure-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00000874.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00000874</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัดจะเปลี่ยนหน้าจอเตือนกลับคืนสู่หน้าจอก่อนหน้าหน้าจอเตือนเมื่อความเร็วรถปัจจุบันน้อยกว่าความเร็วรถที่ตั้งไว้ -5 km/h {-3 mph} หรือน้อยกว่า</div>
+<div class="list">•&nbsp;&nbsp;รูปแบบเสียงเตือนมีดังนี้:<table class="figure-flame">
+<tr>
+<td width="10mm"></td>
+<td>
+<table class="figure-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00000875.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00000875</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+</p><br clear="all"><a name="id09220001800008"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ภาพโครงสร้าง</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00002322.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00002322</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id09220001800009"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ผังวงจรระบบ</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00000877.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00000877</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id09220001800010"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<div class="list">1.&nbsp;&nbsp;เมื่อบิดสวิตช์สตาร์ท ON (เครื่องยนต์ทำงาน) แผงหน้าปัดจะได้รับ (1) สัญญาณความเร็วรถ สัญญาณปริมาณการฉีดน้ำมันเชื้อเพลิง สัญญาณระยะการเคลื่อนที่ซึ่งส่งจาก PCM สัญญาณแรงดันไฟฟ้าของชุดส่งสัญญาณเกจวัดระดับน้ำมันเชื้อเพลิงจากโมดูลควบคุมตัวถังด้านหลัง (RBCM) และสัญญาณการทำงานของสวิตช์ที่พวงมาลัยจากชุดเปิด/ปิดการทำงาน</div>
+<div class="list">2.&nbsp;&nbsp;ไมโครคอมพิวเตอร์ของแผงหน้าปัดจะคำนวณ (2) การประหยัดน้ำมันเชื้อเพลิงขณะนั้นและการประหยัดน้ำมันเชื้อเพลิงโดยเฉลี่ยตามข้อมูลที่ได้รับ</div>
+<div class="list">3.&nbsp;&nbsp;ไมโครคอมพิวเตอร์ของแผงหน้าปัดจะแสดง (3) ผลที่คำนวณได้ในหน้าจอการแสดงผลระบบคอมพิวเตอร์แสดงข้อมูลรอบการขับ</div>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00000878.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00000878</div>
+</td>
+</tr>
+</table><br clear="all"><p><a name="id09220001800011"></a><p class="topic-title"><span class="topic-head"></span>การเปลี่ยนการทำงานของจอแสดงผลระบบคอมพิวเตอร์แสดงข้อมูลรอบการขับ</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัดจะสลับเนื้อหาที่แสดงบนระบบคอมพิวเตอร์แสดงข้อมูลรอบการขับดังนี้ตามสัญญาณการทำงานของสวิตช์ที่พวงมาลัยจากชุดเปิด/ปิดการทำงาน</div>
+</dd>
+</dl>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00002334.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00002334</div>
+</td>
+</tr>
+</table>
+<p class="figure-title">ตารางหน้าจอการแสดงผล</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00000880.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00000880</div>
+</td>
+</tr>
+</table>
+</p>
+</body>
+</html>

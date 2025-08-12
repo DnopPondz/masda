@@ -1,0 +1,1589 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>การวิเคราะห์ปัญหาบนรถ [ระบบปรับลำแสงไฟหน้า (AFS)]</title>
+</head>
+<body><a name="id091800693100"></a><p class="servinfo-title"><span class="servinfo-head"></span>การวิเคราะห์ปัญหาบนรถ [ระบบปรับลำแสงไฟหน้า (AFS)]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id091800693100</p><br clear="all"><a name="id09180069310001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รายละเอียด</p>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่นการวิเคราะห์ปัญหาบนรถจะประกอบด้วยฟังก์ชั่นต่อไปนี้: ฟังก์ชั่นตรวจจับความบกพร่องซึ่งจะตรวจจับความบกพร่องทั้งหมดในชิ้นส่วนที่เกี่ยวข้องกับโมดูลควบคุม AFS ฟังก์ชั่นหน่วยความจำซึ่งจะบันทึกรหัสวิเคราะห์ปัญหาที่ตรวจพบ ฟังก์ชั่นการแสดงผลซึ่งจะบ่งชี้ตำแหน่งและสถานะความบกพร่องผ่านรหัสวิเคราะห์ปัญหาที่เอาท์พุท และฟังก์ชั่นการตรวจสอบ PID/DATA ซึ่งจะอ่านสัญญาณอินพุท/เอาท์พุทจำเพาะและตรวจสอบสภาวะอินพุท/เอาท์พุทดังกล่าว</div>
+<div class="list">•&nbsp;&nbsp;เมื่อใช้ Mazda Modular Diagnostic System (M-MDS) สามารถอ่านและลบรหัสวิเคราะห์ปัญหา และสามารถเปิดใช้งานฟังก์ชั่นการตรวจสอบ PID/DATA ได้</div><br clear="all"><a name="id09180069310002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ฟังก์ชั่นการตรวจจับความบกพร่อง</p>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความบกพร่องในสัญญาณอินพุทและเอาท์พุท</div>
+<div class="list">•&nbsp;&nbsp;หากมีความบกพร่องเกิดขึ้น โมดูลควบคุม AFS จะบันทึกความบกพร่องดังกล่าวเป็นรหัสวิเคราะห์ปัญหา สามารถอ่านรหัสวิเคราะห์ปัญหาที่บันทึกไว้โดย Mazda Modular Diagnostic System (M-MDS)</div>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;หากมีความบกพร่องเกิดขึ้นในระบบ โมดูลควบคุม AFS จะสั่งให้ไฟ AFS OFF กะพริบดังนี้<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001406.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001406</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</dd>
+</dl>
+<p clear="all">
+<p class="table-title">ตารางรหัสวิเคราะห์ปัญหา</p>
+<p>
+<div>&times;: สามารถทำได้</div>
+<div>&mdash;: ไม่มี</div>
+</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟแสดงสถานะ AFS OFF</p>
+</th>
+<th id="" align="center">
+<p class="thead">คำอธิบาย</p>
+</th>
+<th id="" align="center">
+<p class="thead">ฟังก์ชั่น Fail-safe</p>
+</th>
+<th id="" align="center">
+<p class="thead">รอบการขับ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ประเภทการทดสอบด้วยตนเอง<sup>*1</sup></p>
+</th>
+<th id="" align="center">
+<p class="thead">ฟังก์ชั่นหน่วยความจำ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1041:14</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+<div class="tbody">(รูปแบบ 1)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรแอ็คชิวเอเตอร์ควบคุมระดับไฟหน้าบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1041:54</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+<div class="tbody">(รูปแบบ 2)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การตั้งค่าเริ่มต้นระบบควบคุมระดับไฟหน้าอัตโนมัติผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1044:01</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+<div class="tbody">(รูปแบบ 1)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรเซ็นเซอร์ควบคุมระดับอัตโนมัติบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10A3:86</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+<div class="tbody">(รูปแบบ 1)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับแอ็คชิวเอเตอร์หมุนไฟหน้า (ด้านซ้าย) ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10A3:87</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+<div class="tbody">(รูปแบบ 1)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับแอ็คชิวเอเตอร์หมุนไฟหน้า (ด้านซ้าย) ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10A4:86</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+<div class="tbody">(รูปแบบ 1)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับแอ็คชิวเอเตอร์หมุนไฟหน้า (ด้านขวา) ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10A4:87</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+<div class="tbody">(รูปแบบ 1)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับแอ็คชิวเอเตอร์หมุนไฟหน้า (ด้านขวา) ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0051:86</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+<div class="tbody">(รูปแบบ 1)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ได้รับสัญญาณมุมพวงมาลัยผิดพลาดจากโมดูลควบคุม EPS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0001:88</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+<div class="tbody">(รูปแบบ 1)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารชุดอุปกรณ์ผิดพลาด (HS-CAN)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0100:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+<div class="tbody">(รูปแบบ 1)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ PCM ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0131:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+<div class="tbody">(รูปแบบ 1)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุม EPS ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0140:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+<div class="tbody">(รูปแบบ 1)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุมตัวถังด้านหน้า (FBCM) ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+<div class="tbody">(รูปแบบ 1)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับแผงหน้าปัดผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0320:09</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+<div class="tbody">(รูปแบบ 1)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุม EPS บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0420:68</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+<div class="tbody">(รูปแบบ 1)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ได้รับสัญญาณข้อผิดพลาดจากโมดูลควบคุม EPS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="4">
+<div class="tbody">U0423:68</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ได้รับสัญญาณข้อผิดพลาดจากแผงหน้าปัด</div>
+<div class="list">•&nbsp;&nbsp;สัญญาณความผิดพลาดของสวิตช์ AFS OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ได้รับสัญญาณข้อผิดพลาดจากแผงหน้าปัด</div>
+<div class="list">•&nbsp;&nbsp;สัญญาณความผิดพลาดของสวิตช์สตาร์ท</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+<div class="tbody">(รูปแบบ 1)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ได้รับสัญญาณข้อผิดพลาดจากแผงหน้าปัด</div>
+<div class="list">•&nbsp;&nbsp;ความผิดพลาดของสัญญาณตำแหน่งคันเกียร์ (ตำแหน่ง R) (ATX)/เกียร์ถอย (MTX)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ได้รับสัญญาณข้อผิดพลาดจากแผงหน้าปัด</div>
+<div class="list">•&nbsp;&nbsp;สัญญาณตำแหน่งคันเกียร์ (ตำแหน่ง R) (ATX)/เกียร์ถอย (MTX) ไม่มีการกำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2005:86</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+<div class="tbody">(รูปแบบ 1)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณที่ได้รับจาก PCM ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2300:54</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+<div class="tbody">(รูปแบบ 1)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ข้อมูลการกำหนดค่าที่ได้รับจากแผงหน้าปัดผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2300:55</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่ได้ใช้การกำหนดค่าแผงหน้าปัด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2300:56</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+<div class="tbody">(รูปแบบ 1)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ข้อมูลการกำหนดค่าไม่ตรงกับแผงหน้าปัด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:42</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+<div class="tbody">(รูปแบบ 1)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในโมดูลควบคุม AFS บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="3">
+<div class="tbody">U3000:49</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในโมดูลควบคุม AFS บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;RAM/ROM บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในโมดูลควบคุม AFS บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่น AFS บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในโมดูลควบคุม AFS บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;ฮาร์ดแวร์ระบบ CAN บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3003:16</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทแรงดันไฟฟ้าแหล่งจ่ายไฟต่ำที่โมดูลควบคุม AFS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3003:17</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทแรงดันไฟฟ้าแหล่งจ่ายไฟสูงที่โมดูลควบคุม AFS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;:C: การทดสอบ CMDTC ด้วยตนเอง, D: การทดสอบ ODDTC ด้วยตนเอง</div><br clear="all"><p><a name="id09180069310003"></a><p class="topic-title"><span class="topic-head"></span>คำอธิบายรหัส 7 หลักของรหัสวิเคราะห์ปัญหา</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เมื่อระบบหรือส่วนประกอบที่เกี่ยวข้องทำงานผิดพลาดของกล่องควบคุมจะจัดเก็บรหัสวิเคราะห์ปัญหาของส่วนที่ทำงานบกพร่องไว้ในหน่วยความจำของกล่องควบคุม และสามารถเรียกดูข้อมูลที่จัดเก็บโดยใช้เครื่องมือสแกนได้เมื่อจำเป็น รหัสวิเคราะห์ปัญหาได้รับการกำหนดโดยใช้ตัวเลข 7 หลัก ซึ่งตัวเลขแต่ละหลักมีความหมายดังต่อไปนี้<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5uun00001106.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5uun00001106</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09180069310004"></a><p class="topic-title"><span class="topic-head"></span>ไบต์แสดงสถานะของรหัสวิเคราะห์ปัญหา</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ไบต์แสดงสถานะคือรหัสสองหลัก (สองหลักหลังเครื่องหมายขีด (-)) หลังรหัสวิเคราะห์ปัญหา 7 หลัก<table class="figure-flame">
+<tr>
+<td width="10mm"></td>
+<td>
+<table class="figure-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00002013.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00002013</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="list">•&nbsp;&nbsp;ไบต์แสดงสถานะคือรหัสที่แสดงรหัสที่ค้างอยู่, สถานะความบกพร่องปัจจุบัน/ในอดีต หรือสถานะไฟเตือน</div>
+<div class="list">•&nbsp;&nbsp;ไบต์แสดงสถานะสามารถอ่านได้ด้วยการทดสอบ CMDTC ด้วยตนเองโดยใช้ Mazda Modular Diagnostic System (M-MDS)</div>
+<div class="list">•&nbsp;&nbsp;สำหรับรายละเอียดเกี่ยวกับไบต์แสดงสถานะ ให้ดูที่คำอธิบายใน Mazda Modular Diagnostic System (M-MDS) เมื่ออ่านรหัสวิเคราะห์ปัญหา</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09180069310005"></a><p class="topic-title"><span class="topic-head"></span>สภาวะการตรวจพบสำหรับรหัสวิเคราะห์ปัญหานั้นๆ</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา</p>
+</th>
+<th id="" align="center">
+<p class="thead">ตำแหน่งความบกพร่องของระบบ</p>
+</th>
+<th id="" align="center">
+<p class="thead">สภาวะการตรวจพบ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1041:14</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรแอ็คชิวเอเตอร์ควบคุมระดับไฟหน้าบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบแรงดันไฟฟ้าของวงจรแอ็คชิวเอเตอร์ควบคุมระดับไฟหน้าระดับ 3.2 V หรือน้อยกว่า เป็นเวลาตั้งแต่ 5 วินาทีขึ้นไปขณะที่บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1041:54</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การตั้งค่าเริ่มต้นระบบควบคุมระดับไฟหน้าอัตโนมัติผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน) และการเริ่มต้นระบบควบคุมระดับไฟหน้าอัตโนมัติไม่ถูกดำเนินการ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1044:01</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรเซ็นเซอร์ควบคุมระดับอัตโนมัติบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody"> ตรวจพบแรงดันไฟฟ้าของวงจรเซ็นเซอร์ควบคุมระดับอัตโนมัติระดับ 0.25 V หรือน้อยกว่า หรือ 4.75 V หรือมากกว่า โดยโมดูลควบคุม AFS เป็นเวลาตั้งแต่ 10 วินาทีขึ้นไปขณะที่บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10A3:86</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับแอ็คชิวเอเตอร์หมุนไฟหน้า (ด้านซ้าย) ผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุม AFS ได้รับสัญญาณความผิดพลาดจากแอ็คชิวเอเตอร์หมุนไฟหน้า (ด้านซ้าย) สามครั้งอย่างต่อเนื่อง ขณะบิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุม AFS ไม่ได้รับสัญญาณจากแอ็คชิวเอเตอร์หมุนไฟหน้า (ด้านซ้าย) เป็นเวลา 5 วินาที หรือมากกว่า ขณะบิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10A3:87</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับแอ็คชิวเอเตอร์หมุนไฟหน้า (ด้านซ้าย) ผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุม AFS ตรวจพบความผิดพลาดของการสื่อสารกับแอ็คชิวเอเตอร์หมุนไฟหน้า (ด้านซ้าย) เป็นเวลา 5 วินาที หรือมากกว่า ขณะบิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10A4:86</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับแอ็คชิวเอเตอร์หมุนไฟหน้า (ด้านขวา) ผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุม AFS ได้รับสัญญาณความผิดพลาดจากแอ็คชิวเอเตอร์หมุนไฟหน้า (ขวา) สามครั้งอย่างต่อเนื่อง ขณะบิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุม AFS ไม่ได้รับสัญญาณจากแอ็คชิวเอเตอร์หมุนไฟหน้า (ด้านขวา) เป็นเวลา 5 วินาที หรือมากกว่า ขณะบิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10A4:87</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับแอ็คชิวเอเตอร์หมุนไฟหน้า (ด้านขวา) ผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุม AFS ตรวจพบความผิดพลาดของการสื่อสารกับแอ็คชิวเอเตอร์หมุนไฟหน้า (ด้านขวา) เป็นเวลา 5 วินาที หรือมากกว่า ขณะบิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0051:86</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ได้รับสัญญาณมุมพวงมาลัยผิดพลาดจากโมดูลควบคุม EPS</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบสภาวะที่เซ็นเซอร์มุมบังคับเลี้ยวมีความบกพร่องและโมดูลควบคุม EPS ยังไม่ได้ทำการตั้งค่าความจำตำแหน่งกลางมุมพวงมาลัยอัตโนมัติ หรือสภาวะที่โมดูลควบคุม EPS มีความบกพร่องเป็นเวลา 5 วินาที หรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0001:88</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารชุดอุปกรณ์ผิดพลาด (HS-CAN)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุม AFS ตรวจพบความบกพร่องในสายบัสการสื่อสารระบบ CAN (HS-CAN) ต่อเนื่องกันสิบครั้ง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0100:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ PCM ผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุม AFS ไม่ได้รับสัญญาณ CAN จาก PCM เป็นเวลา 5 วินาที หรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0131:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุม EPS ผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุม AFS ไม่ได้รับสัญญาณ CAN จากโมดูลควบคุม EPS เป็นเวลา 5 วินาที หรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0140:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุมตัวถังด้านหน้า (FBCM) ผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุม AFS ไม่ได้รับสัญญาณ CAN จากโมดูลควบคุมตัวถังด้านหน้า (FBCM) เป็นเวลา 5 วินาที หรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับแผงหน้าปัดผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุม AFS ไม่ได้รับสัญญาณ CAN จากแผงหน้าปัดเป็นเวลา 5 วินาที หรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0320:09</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุม EPS บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุม AFS ไม่ได้รับสัญญาณระบบ CAN ผิดพลาดจากโมดูลควบคุม EPS เป็นเวลา 5 วินาที หรือมากกว่า ขณะบิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0420:68</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ได้รับสัญญาณข้อผิดพลาดจากโมดูลควบคุม EPS</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุม AFS ไม่ได้รับสัญญาณความผิดพลาดจากโมดูลควบคุม EPS เป็นเวลา 5 วินาที หรือมากกว่า ขณะบิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="4">
+<div class="tbody">U0423:68</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณความผิดพลาดของสวิตช์ AFS OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุม AFS ได้รับสัญญาณความผิดพลาดของสวิตช์ AFS OFF เป็นเวลา 5 วินาที หรือมากกว่า ขณะบิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">สัญญาณความผิดพลาดของสวิตช์สตาร์ท</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุม AFS ได้รับสัญญาณความผิดพลาดของสวิตช์สตาร์ทเป็นเวลา 5 วินาที หรือมากกว่า ขณะบิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ความผิดพลาดของสัญญาณตำแหน่งคันเกียร์ (ตำแหน่ง R) (ATX)/เกียร์ถอย (MTX)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุม AFS ได้รับความผิดพลาดของสัญญาณตำแหน่งคันเกียร์ (ตำแหน่ง R) (ATX)/เกียร์ถอย (MTX) เป็นเวลา 5 วินาที หรือมากกว่า ขณะบิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">สัญญาณตำแหน่งคันเกียร์ (ตำแหน่ง R) (ATX)/เกียร์ถอย (MTX) ไม่มีการกำหนด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุม AFS ตรวจพบสัญญาณตำแหน่งคันเกียร์ (ตำแหน่ง R) (ATX)/เกียร์ถอย (MTX) ที่ไม่ได้กำหนด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2005:86</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณที่ได้รับจาก PCM ผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุม AFS ได้รับความผิดพลาดของสัญญาณความเร็วรถจาก PCM เป็นเวลา 5 วินาที หรือมากกว่า ขณะบิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2300:54</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ข้อมูลการกำหนดค่าที่ได้รับจากแผงหน้าปัดผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุม AFS ได้รับข้อมูลการตั้งค่าความผิดพลาดจากแผงหน้าปัดเป็นเวลา 30 วินาที หรือมากกว่า ขณะบิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2300:55</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่ได้ใช้การกำหนดค่าแผงหน้าปัด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุม AFS ได้รับสัญญาณที่ระบุว่าไม่ได้ทำการตั้งค่าแผงหน้าปัด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2300:56</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ข้อมูลการกำหนดค่าไม่ตรงกับแผงหน้าปัด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ข้อมูลการตั้งค่าของโมดูลควบคุม AFS กับแผงหน้าปัดไม่ตรงกัน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:42</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในโมดูลควบคุม AFS บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบความบกพร่องใน EEPROM ภายในโมดูลควบคุม AFS</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="3">
+<div class="tbody">U3000:49</div>
+</td>
+<td id="" align="left">
+<div class="tbody">RAM/ROM บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุม AFS ตรวจพบความบกพร่องใน RAM/ROM ภายใน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ฟังก์ชั่น AFS บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุม AFS ตรวจพบความบกพร่องของฟังก์ชั่น AFS สามครั้ง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ฮาร์ดแวร์ระบบ CAN บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุม AFS ตรวจพบความบกพร่องของฮาร์ดแวร์ระบบ CAN สามครั้ง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3003:16</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทแรงดันไฟฟ้าแหล่งจ่ายไฟต่ำที่โมดูลควบคุม AFS</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบแรงดันไฟฟ้าของวงจรแหล่งจ่ายไฟโมดูลควบคุม AFS ระดับ 9 V หรือน้อยกว่า เป็นเวลาตั้งแต่ 5 วินาทีขึ้นไปขณะที่บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3003:17</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทแรงดันไฟฟ้าแหล่งจ่ายไฟสูงที่โมดูลควบคุม AFS</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบแรงดันไฟฟ้าของวงจรแหล่งจ่ายไฟโมดูลควบคุม AFS ระดับ 18.1 V หรือมากกว่า เป็นเวลาตั้งแต่ 5 วินาทีขึ้นไปขณะที่บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</p><br clear="all"><p><a name="id09180069310006"></a><p class="topic-title"><span class="topic-head"></span>ข้อมูล Snapshot</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ข้อมูลของรหัสวิเคราะห์ปัญหาทั้งหมดที่ตรวจพบในปัจจุบันจะถูกเก็บบันทึก</div>
+</dd>
+</dl>
+<p clear="all">
+<p>
+<div>&mdash;: ไม่มี</div>
+</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รายการข้อมูล Snapshot</p>
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">หน่วย</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายละเอียดข้อมูล</p>
+</th>
+<th id="" align="center">
+<p class="thead">วิธีการอ่าน/ใช้ข้อมูล</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายการตรวจสอบข้อมูลที่เกี่ยวข้อง</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">AAT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;F</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิภายนอก</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">APP_STATUS</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">Accelerator Pedal Off/Under20%/Over20%/FAIL</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สถานะของตำแหน่งแป้นคันเร่ง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">CFG_STATUS</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">Config Complete/Not Configured/Config Error</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สถานะของการกำหนดค่าแผงหน้าปัด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ECT_STATUS</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">Under 0 degrees C/0-Under 80 degrees C/Over 80 degrees C/FAIL</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สถานะของอุณหภูมิน้ำหล่อเย็นเครื่องยนต์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">IC_VPWR</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันแหล่งจ่ายไฟแผงหน้าปัด</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุม AFS จะได้รับค่าแรงดันแหล่งจ่ายไฟของแผงหน้าปัดที่ส่งผ่านสัญญาณระบบ CAN จากแผงหน้าปัดอย่างต่อเนื่อง</div>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบรหัสวิเคราะห์ปัญหา โมดูลควบคุม AFS จะบันทึกแรงดันแหล่งจ่ายไฟของแผงหน้าปัดเมื่อตรวจพบรหัสวิเคราะห์ปัญหา และแสดงใน M-MDS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">VPWR<sup>*1</sup></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">IG-ON_TIMER</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">hh:mm:ss<sup>*2</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระยะเวลาที่ผ่านไปตั้งแต่บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัดจะบันทึกข้อมูลช่วงเวลาที่ผ่านไปนับตั้งแต่บิดสวิตช์สตาร์ทไปที่ ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+</div>
+</dd>
+</dl>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุม AFS จะได้รับระยะเวลาที่ผ่านไปตั้งแต่บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน) ที่ส่งผ่านสัญญาณ CAN จากแผงหน้าปัดตลอดเวลา</div>
+<div class="list">•&nbsp;&nbsp;ถ้าตรวจพบรหัสวิเคราะห์ปัญหา โมดูลควบคุม AFS จะบันทึกระยะเวลาที่ผ่านไปตั้งแต่บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน) เมื่อตรวจพบรหัสวิเคราะห์ปัญหา และแสดงใน M-MDS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">PWR_MODE_KEY</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">Key Out/Key Recently Out (Position 0)/Accessory (Position 1)/Post Ignition (Position 2)/Ignition On (Position 2)/Running (Position 2)/Running - Starting</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Key Out: บิดสวิตช์สตาร์ท OFF</div>
+<div class="list">•&nbsp;&nbsp;Key Recently Out (Position 0): ช่วงเวลาที่ผ่านไป<span>ภายใน 3 วินาที</span>นับตั้งแต่บิดสวิตช์สตาร์ท OFF</div>
+<div class="list">•&nbsp;&nbsp;Accessory (Position 1): บิดสวิตช์สตาร์ทไปที่ ACC</div>
+<div class="list">•&nbsp;&nbsp;Post Ignition (Position 2): ช่วงเวลาที่ผ่านไป<span>ภายใน 3 วินาที</span>นับตั้งแต่บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;Ignition On (Position 2): บิดสวิตช์สตาร์ทไปที่ ON (เครื่องยนต์ไม่ทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;Running (Position 2): บิดสวิตช์สตาร์ทไปที่ ON (เครื่องยนต์ทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;Running - Starting: สภาวะการสตาร์ท</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุม AFS จะได้รับสถานะสวิตช์สตาร์ทผ่านสัญญาณ CAN จากแผงหน้าปัดอย่างต่อเนื่อง</div>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบรหัสวิเคราะห์ปัญหา โมดูลควบคุม AFS จะบันทึกสถานะของสวิตช์สตาร์ทเมื่อรหัสวิเคราะห์ปัญหาถูกตรวจพบ และมีการแสดงใน M-MDS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">RPM_STATUS</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">Engine Stop/Under1500rpm/Over1500rpm/FAIL</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สถานะความเร็วรอบเครื่องยนต์</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุม AFS จะได้รับความเร็วรอบเครื่องยนต์ที่ส่งผ่านสัญญาณระบบ CAN จากแผงหน้าปัดอย่างต่อเนื่อง</div>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบรหัสวิเคราะห์ปัญหา โมดูลควบคุม AFS จะบันทึกความเร็วรอบเครื่องยนต์เมื่อรหัสวิเคราะห์ปัญหาถูกตรวจพบ และมีการแสดงใน M-MDS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">TACHOMTR<sup>*1</sup></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">SHIFT_STATUS</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">P/N/D/R/FAIL</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สถานะตำแหน่งคันเกียร์</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุม AFS จะได้รับตำแหน่งคันเกียร์ที่ส่งผ่านสัญญาณระบบ CAN จากแผงหน้าปัดอย่างต่อเนื่อง</div>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบรหัสวิเคราะห์ปัญหา โมดูลควบคุม AFS จะบันทึกตำแหน่งคันเกียร์เมื่อรหัสวิเคราะห์ปัญหาถูกตรวจพบ และมีการแสดงใน M-MDS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">TOTAL_DIST</div>
+</td>
+<td id="" align="center">
+<div class="tbody">km</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Miles</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระยะทางรวมสะสมตั้งแต่รถเสร็จสมบูรณ์จนกระทั่งโมดูลควบคุม AFS ตรวจพบรหัสวิเคราะห์ปัญหา (ค่ามาตรบันทึกระยะทางในแผงหน้าปัด)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระยะทางรวมตั้งแต่โมดูลควบคุม AFS ตรวจพบรหัสวิเคราะห์ปัญหาจนถึงปัจจุบันสามารถคำนวณได้โดยการปฏิบัติตามขั้นตอนดังต่อไปนี้</div>
+<div class="list">1.&nbsp;&nbsp;ตรวจสอบค่าจากมาตรบันทึกระยะทางในแผงหน้าปัด</div>
+<div class="list">2.&nbsp;&nbsp;ตรวจสอบรายการข้อมูล Snapshot TOTAL_DIST</div>
+<div class="list">3.&nbsp;&nbsp;ลบ 2 ออกจาก 1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">TOTAL_TIME</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">hh:mm:ss<sup>*2</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">&lrm;&lrm;ระยะเวลาที่ผ่านไปโดยรวมสะสมตั้งแต่รถเสร็จสมบูรณ์จนกระทั่งโมดูลควบคุม AFS ตรวจพบรหัสวิเคราะห์ปัญหา</div>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;เมื่อถอดฟิวส์ ROOM และบิดสวิตช์สตาร์ท OFF เวลาจะไม่ถูกนำไปรวมกับช่วงเวลาที่ผ่านไป</div>
+</div>
+</dd>
+</dl>
+</td>
+<td id="" align="left">
+<div class="tbody">ระยะเวลาที่ผ่านไปตั้งแต่โมดูลควบคุม AFS ตรวจพบรหัสวิเคราะห์ปัญหาจนถึงปัจจุบันสามารถคำนวณได้โดยการปฏิบัติตามขั้นตอนดังต่อไปนี้</div>
+<div class="list">1.&nbsp;&nbsp;ตรวจสอบรายการ PID TOTAL_TIME บนแผงหน้าปัด</div>
+<div class="list">2.&nbsp;&nbsp;ตรวจสอบรายการข้อมูล Snapshot TOTAL_TIME</div>
+<div class="list">3.&nbsp;&nbsp;ลบ 2 ออกจาก 1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">TOTAL_TIME<sup>*1</sup></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">VPWR</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันไฟฟ้าแหล่งจ่ายไฟที่โมดูลควบคุม AFS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">VPWR_IG</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">VSPD_STATUS</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">Stop/0-10km/h/Over10km/h/FAIL</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สถานะความเร็วรถ</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุม AFS จะรับความเร็วรถที่ส่งผ่านสัญญาณระบบ CAN จากแผงหน้าปัดอย่างต่อเนื่อง</div>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบรหัสวิเคราะห์ปัญหา โมดูลควบคุม AFS จะบันทึกความเร็วรถเมื่อรหัสวิเคราะห์ปัญหาถูกตรวจพบ และมีการแสดงใน M-MDS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">SPEEDOMTR<sup>*1</sup></div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;: PID แผงหน้าปัด (ดูที่ <font class="extxref-label"><a href="id092200021843.html">การวิเคราะห์ปัญหาบนรถ [แผงหน้าปัด]</a></font>)</div>
+<div class="deflist">*2&nbsp;&nbsp;:หน่วยวินาที (s) อาจแสดงอยู่หลังจุดทศนิยม</div>
+</p><br clear="all"><a name="id09180069310007"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ฟังก์ชั่นการตรวจสอบข้อมูล</p>
+<div class="list">•&nbsp;&nbsp;เมื่อใช้ฟังก์ชั่นการตรวจสอบข้อมูล/PID สามารถเลือกและอ่านค่ารายการตรวจสอบสัญญาณอินพุท/เอาท์พุทที่กำหนดไว้ในโมดูลควบคุม AFS ได้แบบเรียลไทม์</div>
+<p clear="all">
+<p class="table-title">ตารางการตรวจสอบข้อมูล / PID</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">PID</p>
+</th>
+<th id="" align="center">
+<p class="thead">หน่วย/การทำงาน</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายละเอียดข้อมูล</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายการการตรวจสอบ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">AFS_ST</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: AFS ไม่ทำงาน</div>
+<div class="list">•&nbsp;&nbsp;On: AFS ทำงาน</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;สวิตช์ AFS OFF</div>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุม AFS</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">H/L_CS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF/DRL/TNS/H/L_LOW/H/L_HI</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์ไฟอยู่ที่ตำแหน่ง OFF</div>
+<div class="list">•&nbsp;&nbsp;DRL: สวิตช์ไฟอยู่ที่ตำแหน่ง AUTO และเซ็นเซอร์ไฟส่องสว่างอัตโนมัติจะส่งสัญญาณปิดใช้งาน</div>
+<div class="list">•&nbsp;&nbsp;TNS: สวิตช์ไฟอยู่ที่ตำแหน่ง TNS</div>
+<div class="list">•&nbsp;&nbsp;H/L_LOW: สวิตช์ไฟอยู่ที่ตำแหน่ง LO</div>
+<div class="list">•&nbsp;&nbsp;H/L_HI: สวิตช์ไฟอยู่ที่ตำแหน่ง HI</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ไฟ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">R_HGT_S</div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันไฟฟ้าที่เซ็นเซอร์ควบคุมระดับอัตโนมัติจะปรากฏขึ้น</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เซ็นเซอร์ควบคุมระดับอัตโนมัติ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">R_HGT_S_INI</div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันไฟฟ้าที่การตั้งค่าเริ่มต้นระบบควบคุมระดับไฟหน้าอัตโนมัติจะปรากฏขึ้น</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เซ็นเซอร์ควบคุมระดับอัตโนมัติ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">R_LMP_CS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On/Unknown/Fault</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ATX:</div>
+<div class="list">•&nbsp;&nbsp;Off: ไม่ได้รับสัญญาณตำแหน่งคันเกียร์ (ตำแหน่ง R)</div>
+<div class="list">•&nbsp;&nbsp;On: ได้รับสัญญาณตำแหน่งคันเกียร์ (ตำแหน่ง R)</div>
+<div class="list">•&nbsp;&nbsp;Unknown: ไม่ได้กำหนดสัญญาณตำแหน่งคันเกียร์ (ตำแหน่ง R)</div>
+<div class="list">•&nbsp;&nbsp;Fault: ได้รับความผิดพลาดสัญญาณตำแหน่งคันเกียร์ (ตำแหน่ง R)</div>
+<div class="tbody">MTX:</div>
+<div class="list">•&nbsp;&nbsp;Off: ไม่ได้รับสัญญาณถอยหลัง</div>
+<div class="list">•&nbsp;&nbsp;On: ได้รับสัญญาณถอยหลัง</div>
+<div class="list">•&nbsp;&nbsp;Unknown: ไม่ได้กำหนดสัญญาณถอยหลัง</div>
+<div class="list">•&nbsp;&nbsp;Fault: ได้รับความผิดพลาดสัญญาณถอยหลัง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ATX:</div>
+<div class="list">•&nbsp;&nbsp;เซ็นเซอร์ช่วงตำแหน่งเกียร์ (TCM)</div>
+<div class="tbody">MTX:</div>
+<div class="list">•&nbsp;&nbsp;สวิตช์ไฟถอย</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">STR_AB_ANG</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg; (deg)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แสดงสัญญาณมุมบังคับเลี้ยว (มุมสัมบูรณ์โดยประมาณ)</div>
+<div class="list">•&nbsp;&nbsp;พวงมาลัยอยู่ในตำแหน่งกลาง: ใกล้ <span>0 องศา</span></div>
+<div class="list">•&nbsp;&nbsp;พวงมาลัยหมุนไปทางซ้าย: เปลี่ยนจาก <span>0 องศา</span>เป็นค่าบวก</div>
+<div class="list">•&nbsp;&nbsp;พวงมาลัยหมุนไปทางขวา: เปลี่ยนจาก <span>0 องศา</span>เป็นค่าลบ</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ทำการตรวจสอบรหัสวิเคราะห์ปัญหาสำหรับ PCM, DSC HU/CM และ EPS CM และหากมีรหัสวิเคราะห์ปัญหาตัวใดตัวหนึ่งปรากฏขึ้น ให้ซ่อมชิ้นส่วนที่บกพร่องตามการค้นหาสาเหตุปัญหาของรหัสวิเคราะห์ปัญหานั้นๆ</div>
+<div class="list">•&nbsp;&nbsp;หลังจากทำการตรวจสอบรหัสวิเคราะห์ปัญหานั้นแล้ว ให้ปฏิบัติตามขั้นตอนดังต่อไปนี้:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF และหลังจากผ่านไปแล้ว <span>2 นาที หรือมากกว่า</span> ให้บิดสวิตช์สตาร์ทไปที่ ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+<div class="list">―&nbsp;&nbsp;สตาร์ทเครื่องยนต์และขับขี่รถในทางตรงเป็นระยะทาง <span>10 m {33 ft} หรือมากกว่า</span> ที่ความเร็ว <span>10 km/h {6.2 mph} หรือมากกว่า</span></div>
+<div class="list">―&nbsp;&nbsp;จอดรถขณะที่ล้ออยู่ในตำแหน่งตั้งตรงไปข้างหน้า</div>
+<div class="list">―&nbsp;&nbsp;ตรวจสอบสภาวะการทำงานของ STR_AB_ANG โดยใช้ M-MDS</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;หากมีการแสดงค่าผิดปกติอีกครั้ง ให้เปลี่ยน EPS CM ใหม่</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">VPWR_IG</div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันไฟฟ้าแหล่งจ่ายไฟที่โมดูลควบคุม AFS จะปรากฏขึ้น</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุม AFS</div>
+<div class="list">•&nbsp;&nbsp;รีเลย์ IG1</div>
+<div class="list">•&nbsp;&nbsp;แบตเตอรี่</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">VSPD</div>
+</td>
+<td id="" align="center">
+<div class="tbody">KPH, MPH</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความเร็วรถปรากฏขึ้น</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</body>
+</html>

@@ -1,0 +1,872 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>ลำดับการวิเคราะห์ปัญหาระบบเครือข่ายควบคุมพื้นที่ (CAN) [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (L.H.D.)]</title>
+</head>
+<body><a name="id100208000100"></a><p class="servinfo-title"><span class="servinfo-head"></span>ลำดับการวิเคราะห์ปัญหาระบบเครือข่ายควบคุมพื้นที่ (CAN) [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (L.H.D.)]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id100208000100</p>
+<div class="list">•&nbsp;&nbsp;ถ้ามีการร้องเรียนความบกพร่องของรถใดๆ จากลูกค้า ให้อ้างอิง &quot;<font class="extxref-label"><a href="id100208000000.html">คำนำ [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (L.H.D.)]</a></font>&quot; และทำการวิเคราะห์ปัญหาระบบ CAN โดยปฏิบัติตามขั้นตอนในขั้นตอนการค้นหาสาเหตุปัญหา</div><br clear="all"><a name="id10020800010001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ลำดับการวิเคราะห์ปัญหาของระบบ CAN</p>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;แผนผังและลำดับการวิเคราะห์ของขั้นตอนการวิเคราะห์ปัญหาคือสิ่งเดียวกัน และรายละเอียดขั้นตอนของแผนผังคือขั้นตอนการวิเคราะห์ปัญหา </div>
+<div class="list">•&nbsp;&nbsp;หมายเลขขั้นตอนในแผนผังแสดงถึงหมายเลขขั้นตอนของขั้นตอนการวิเคราะห์ปัญหา</div>
+</div>
+</dd>
+</dl><br clear="all"><p><a name="id10020800010002"></a><p class="topic-title"><span class="topic-head"></span>แผนผังการทำงาน</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzw00004422.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzw00004422</div>
+</td>
+</tr>
+</table>
+</p><br clear="all"><p><a name="id10020800010003"></a><p class="topic-title"><span class="topic-head"></span>ขั้นตอนการวิเคราะห์ปัญหา</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">การตรวจสอบ</p>
+</th>
+<th id="" align="center">
+<p class="thead">การปฏิบัติ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">1</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบว่าการสื่อสารระหว่าง M-MDS กับ PCM สามารถทำได้</div>
+<div class="list">•&nbsp;&nbsp;ต่อ M-MDS เข้ากับ DLC-2</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;ทำการระบุรถ</div>
+<div class="list">•&nbsp;&nbsp;สามารถระบุรถได้หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอน 5 เนื่องจากเกิดความบกพร่องขึ้นในวงจร HS-CAN</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">2</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบความไม่สามารถในการสื่อสารของโมดูลเนื่องจากความบกพร่องของ CAN</div>
+<div class="list">•&nbsp;&nbsp;ทำการทดสอบระบบเครือข่ายโดยใช้ M-MDS<div>(ดูที่ <font class="extxref-label"><a href="id100208000200.html">การทดสอบระบบเครือข่าย [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (L.H.D.)]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีโมดูลที่แสดงความบกพร่องหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอน 14 เนื่องจากเกิดความบกพร่องขึ้นในวงจร CAN</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">3</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรกับแหล่งจ่ายไฟที่ด้าน CAN_H ของ MS-CAN หรือ HS-CAN</div>
+<div class="list">•&nbsp;&nbsp;วัดแรงดันไฟฟ้าระหว่างขั้วต่างๆ ต่อไปนี้:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ระหว่างขั้ว F ของ DLC-2 (ด้าน CAN_H ของ HS CAN) กับกราวด์ตัวถัง</div>
+<div class="list">―&nbsp;&nbsp;ระหว่างขั้ว L ของ DLC-2 (ด้าน CAN_H ของ MS CAN) กับกราวด์ตัวถัง</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;แรงดันไฟฟ้าที่วัดได้ระหว่างขั้วใดๆ เท่ากับ B+ หรือไม่<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;หากมีการลัดวงจรเข้ากับแหล่งจ่ายไฟอื่นที่ไม่ใช่แหล่งจ่ายไฟ B+ เกิดขึ้น แรงดันไฟฟ้าคงที่ซึ่งไม่ใช่ B+ อาจถูกวัด</div>
+</div>
+</dd>
+</dl>
+</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การลัดวงจรกับแหล่งจ่ายไฟที่ด้าน CAN_H ของ MS-CAN หรือ HS-CAN</div>
+<div class="tbody">ตัดสินตำแหน่งของการลัดวงจรกับแหล่งจ่ายไฟตามขั้นตอนการวิเคราะห์ปัญหาเพื่อตัดสินตำแหน่งของการลัดวงจรกับแหล่งจ่ายไฟ</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id100208000700.html">การตัดสินตำแหน่งการลัดวงจรกับแหล่งจ่ายไฟ (HS-CAN) [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (L.H.D.)]</a></font>)</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id100208001000.html">การตัดสินตำแหน่งการลัดวงจรกับแหล่งจ่ายไฟ (MS-CAN) [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (L.H.D.)])</a></font></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">4</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรลงกราวด์ที่ด้าน CAN_L ของ HS-CAN หรือ MS-CAN</div>
+<div class="list">•&nbsp;&nbsp;วัดแรงดันไฟฟ้าระหว่างขั้วต่างๆ ต่อไปนี้:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ระหว่างขั้ว E ของ DLC-2 (ด้าน CAN_L ของ HS-CAN) กับกราวด์</div>
+<div class="list">―&nbsp;&nbsp;ระหว่างขั้ว E ของ DLC-2 (ด้าน CAN_L ของ MS-CAN) กับกราวด์</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;แรงดันไฟฟ้าที่วัดได้เท่ากับ 0 V หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เกิดการลัดวงจรลงกราวด์ทางด้าน CAN_L ของ HS-CAN หรือ MS-CAN</div>
+<div class="tbody">ตัดสินตำแหน่งของการลัดวงจรลงกราวด์ตามขั้นตอนการวิเคราะห์ปัญหาเพื่อตัดสินตำแหน่งของการลัดวงจรลงกราวด์</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id100208000600.html">การตัดสินตำแหน่งการลัดวงจรลงกราวด์ (HS-CAN) [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (L.H.D.)]</a></font>)</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id100208000900.html">การตัดสินตำแหน่งการลัดวงจรลงกราวด์ (MS-CAN) [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (L.H.D.)]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจร CAN นั้นเป็นปกติ ให้กลับไปที่คำนำ และไปที่ขั้นตอนถัดไปของการวิเคราะห์ปัญหาระบบ CAN ในขั้นตอนการค้นหาสาเหตุปัญหา</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id100208000000.html">คำนำ [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (L.H.D.)]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">5</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบว่ารถที่ทำการวิเคราะห์ปัญหาติดตั้งระบบปุ่มกดสตาร์ทอัจฉริยะ</div>
+<div class="list">•&nbsp;&nbsp;รถติดตั้งระบบปุ่มกดสตาร์ทอัจฉริยะหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอน 7</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">6</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบว่าระบบปุ่มกดสตาร์ทอัจฉริยะมีความบกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;สามารถกดสวิตช์สตาร์ท ON ได้หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เกิดความบกพร่องในระบบปุ่มกดสตาร์ทอัจฉริยะ</div>
+<div class="tbody">ทำการวิเคราะห์ปัญหาตามการค้นหาสาเหตุปัญหา</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">7</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบความบกพร่องใน M-MDS</div>
+<div class="list">•&nbsp;&nbsp;ต่อ M-MDS เข้ากับรถที่ปกติและทำการระบุรถ</div>
+<div class="list">•&nbsp;&nbsp;สามารถระบุรถได้หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อาจมีความบกพร่องใน M-MDS</div>
+<div class="tbody">ซ่อม M-MDS</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">8</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรกับแหล่งจ่ายไฟของ HS-CAN</div>
+<div class="list">•&nbsp;&nbsp;วัดแรงดันไฟฟ้าระหว่างขั้วต่างๆ ต่อไปนี้:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ระหว่างขั้ว F ของ DLC-2 (ด้าน CAN_H) กับกราวด์ตัวถัง</div>
+<div class="list">―&nbsp;&nbsp;ระหว่างขั้ว E ของ DLC-2 (ด้าน CAN_L) กับกราวด์ตัวถัง</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;แรงดันไฟฟ้าที่วัดได้ระหว่างขั้วใดๆ เท่ากับ B+ หรือไม่<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;หากมีการลัดวงจรเข้ากับแหล่งจ่ายไฟอื่นที่ไม่ใช่แหล่งจ่ายไฟ B+ เกิดขึ้น แรงดันไฟฟ้าคงที่ซึ่งไม่ใช่ B+ อาจถูกวัด</div>
+</div>
+</dd>
+</dl>
+</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การลัดวงจรกับแหล่งจ่ายไฟที่ด้าน CAN_H หรือ CAN_L ของ HS-CAN</div>
+<div class="tbody">ตัดสินตำแหน่งของการลัดวงจรกับแหล่งจ่ายไฟตามขั้นตอนการวิเคราะห์ปัญหาเพื่อตัดสินตำแหน่งของการลัดวงจรกับแหล่งจ่ายไฟ</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id100208000700.html">การตัดสินตำแหน่งการลัดวงจรกับแหล่งจ่ายไฟ (HS-CAN) [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (L.H.D.)]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">9</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการขาดวงจรของ HS-CAN</div>
+<div class="list">•&nbsp;&nbsp;วัดแรงดันไฟฟ้าระหว่างขั้วต่างๆ ต่อไปนี้:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ระหว่างขั้ว F ของ DLC-2 (ด้าน CAN_H) กับกราวด์ตัวถัง</div>
+<div class="list">―&nbsp;&nbsp;ระหว่างขั้ว E ของ DLC-2 (ด้าน CAN_L) กับกราวด์ตัวถัง</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;แรงดันไฟฟ้าระหว่างทั้งสองขั้ว (ด้าน CAN_H และด้าน CAN_L) เท่ากันหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอน 13 เนื่องจากเกิดการลัดวงจรลงกราวด์หรือลัดวงจรระหว่างวงจรใน HS-CAN</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">10</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตัดสินว่าตำแหน่งการขาดวงจรในวงจร HS-CAN อยู่ระหว่าง DLC และขั้วต่อ C-35 หรือที่อื่น</div>
+<div class="list">•&nbsp;&nbsp;สตาร์ทเครื่องยนต์เพื่อตรวจสอบว่าระบบยับยั้งการทำงานของเครื่องยนต์ทำงานตามปกติ</div>
+<div class="list">•&nbsp;&nbsp;สามารถสตาร์ทเครื่องยนต์ได้หรือไม่<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;ถ้ามีการขาดวงจรในชุดสายไฟระหว่าง PCM กับชุดเปิด/ปิดการทำงาน เครื่องยนต์จะไม่สามารถสตาร์ทได้เนื่องจากการตรวจสอบหมายเลข ID กุญแจของระบบยับยั้งการทำงานของเครื่องยนต์จะทำผ่านการสื่อสาร CAN</div>
+</div>
+</dd>
+</dl>
+</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เกิดการขาดวงจรระหว่าง PCM กับขั้วต่อ C-35 ใน HS-CAN</div>
+<div class="tbody">ตัดสินตำแหน่งของการขาดวงจรตามขั้นตอนการวิเคราะห์ปัญหาเพื่อตัดสินตำแหน่งของการขาดวงจร</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id100208000400.html">การตัดสินตำแหน่งการขาดวงจร (HS-CAN) [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (L.H.D.)]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">11</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตัดสินว่าตำแหน่งการขาดวงจรในวงจร HS-CAN อยู่ระหว่าง DLC และขั้วต่อ C-35 หรือที่อื่น</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบว่าไฟเตือนตรวจเช็คเครื่องยนต์ในแผงหน้าปัดติดสว่าง</div>
+<div class="list">•&nbsp;&nbsp;สตาร์ทเครื่องยนต์</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบว่าไฟเตือนตรวจเช็คเครื่องยนต์ดับลง</div>
+<div class="list">•&nbsp;&nbsp;ไฟเตือนตรวจเช็คเครื่องยนต์ดับลงหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เกิดการขาดวงจรระหว่าง DLC-2 กับขั้วต่อ C-35</div>
+<div class="tbody">ซ่อมหรือเปลี่ยนชุดสายไฟที่เกิดการขาดวงจร แล้วกลับไปที่ขั้นตอน 1</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เกิดการขาดวงจรระหว่าง PCM กับขั้วต่อ C-35 ใน HS-CAN</div>
+<div class="tbody">ตัดสินตำแหน่งของการขาดวงจรตามขั้นตอนการวิเคราะห์ปัญหาเพื่อตัดสินตำแหน่งของการขาดวงจร</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id100208000400.html">การตัดสินตำแหน่งการขาดวงจร (HS-CAN) [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (L.H.D.)]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">12</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบความบกพร่องที่เกิดขึ้นในวงจร HS-CAN</div>
+<div class="list">•&nbsp;&nbsp;วัดแรงดันไฟฟ้าระหว่างขั้วต่างๆ ต่อไปนี้:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ระหว่างขั้ว F ของ DLC-2 (ด้าน CAN_H) กับกราวด์ตัวถัง</div>
+<div class="list">―&nbsp;&nbsp;ระหว่างขั้ว E ของ DLC-2 (ด้าน CAN_L) กับกราวด์ตัวถัง</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;แรงดันไฟฟ้าระหว่างทั้งสองขั้ว (ด้าน CAN_H และด้าน CAN_L) อยู่ที่ 0 V หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เกิดการลัดวงจรลงกราวด์ที่ด้าน CAN_H ของ HS-CAN</div>
+<div class="tbody">ตัดสินตำแหน่งของการลัดวงจรลงกราวด์ตามขั้นตอนการวิเคราะห์ปัญหาเพื่อตัดสินตำแหน่งของการลัดวงจรลงกราวด์</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id100208000600.html">การตัดสินตำแหน่งการลัดวงจรลงกราวด์ (HS-CAN) [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (L.H.D.)]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เกิดการลัดวงจรระหว่างวงจรที่ด้าน CAN_H กับด้าน CAN_L ของ HS-CAN</div>
+<div class="tbody">ตัดสินตำแหน่งของการลัดวงจรระหว่างวงจรตามขั้นตอนการวิเคราะห์ปัญหาเพื่อตัดสินตำแหน่งของการลัดวงจรระหว่างวงจร</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id100208000800.html">การตัดสินตำแหน่งการลัดวงจรระหว่างวงจร (HS-CAN) [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (L.H.D.)]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">13</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">หาข้อมูลจำเพาะการสื่อสารระบบ CAN ที่ซึ่งความบกพร่องเกิดขึ้น</div>
+<div class="list">•&nbsp;&nbsp;อ้างอิงตารางอ้างอิงของข้อมูลจำเพาะการสื่อสารระบบ CAN และตรวจสอบข้อมูลจำเพาะการสื่อสารระบบ CAN (HS-CAN หรือ MS-CAN) ที่เชื่อมต่อกับโมดูลซึ่งแสดงความบกพร่อง<div>(ดูที่ <font class="intxref-label"><a href="#id10020800010004">ตารางอ้างอิงข้อมูลจำเพาะการสื่อสารระบบ CAN</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;โมดูลที่แสดงความบกพร่องคือ HS-CAN หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เกิดการขาดวงจรใน HS-CAN</div>
+<div class="tbody">ตัดสินตำแหน่งของการขาดวงจรตามขั้นตอนการวิเคราะห์ปัญหาเพื่อตัดสินตำแหน่งของการขาดวงจร</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id100208000400.html">การตัดสินตำแหน่งการขาดวงจร (HS-CAN) [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (L.H.D.)]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">14</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรกับแหล่งจ่ายไฟด้าน CAN_L ของ MS-CAN</div>
+<div class="list">•&nbsp;&nbsp;วัดแรงดันไฟฟ้าระหว่างขั้ว K ของ DLC-2 (ด้าน CAN_L) กับกราวด์ตัวถัง</div>
+<div class="list">•&nbsp;&nbsp;สามารถวัดค่าแรงดันไฟฟ้า B+ ได้หรือไม่<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;หากมีการลัดวงจรเข้ากับแหล่งจ่ายไฟอื่นที่ไม่ใช่แหล่งจ่ายไฟ B+ เกิดขึ้น แรงดันไฟฟ้าคงที่ซึ่งไม่ใช่ B+ อาจถูกวัด</div>
+</div>
+</dd>
+</dl>
+</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เกิดการลัดวงจรกับแหล่งจ่ายไฟที่ด้าน CAN_L ของ MS-CAN</div>
+<div class="tbody">ตัดสินตำแหน่งของการลัดวงจรกับแหล่งจ่ายไฟตามขั้นตอนการวิเคราะห์ปัญหาเพื่อตัดสินตำแหน่งของการลัดวงจรกับแหล่งจ่ายไฟ</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id100208001000.html">การตัดสินตำแหน่งการลัดวงจรกับแหล่งจ่ายไฟ (MS-CAN) [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (L.H.D.)]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">15</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการขาดวงจรของ MS-CAN</div>
+<div class="list">•&nbsp;&nbsp;วัดแรงดันไฟฟ้าระหว่างขั้วต่างๆ ต่อไปนี้:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ระหว่างขั้ว L ของ DLC-2 (ด้าน CAN_H) กับกราวด์ตัวถัง</div>
+<div class="list">―&nbsp;&nbsp;ระหว่างขั้ว K ของ DLC-2 (ด้าน CAN_L) กับกราวด์ตัวถัง</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;แรงดันไฟฟ้าระหว่างทั้งสองขั้ว (ด้าน CAN_H และด้าน CAN_L) เท่ากันหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เกิดการขาดวงจรใน MS-CAN</div>
+<div class="tbody">ตัดสินตำแหน่งของการขาดวงจรตามขั้นตอนการวิเคราะห์ปัญหาเพื่อตัดสินตำแหน่งของการขาดวงจร</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id100208000500.html">การตัดสินตำแหน่งการขาดวงจร (MS-CAN) [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (L.H.D.)]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">16</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบความบกพร่องที่เกิดขึ้นในวงจร MS-CAN</div>
+<div class="list">•&nbsp;&nbsp;วัดแรงดันไฟฟ้าระหว่างขั้วต่างๆ ต่อไปนี้:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ระหว่างขั้ว L ของ DLC-2 (ด้าน CAN_H) กับกราวด์ตัวถัง</div>
+<div class="list">―&nbsp;&nbsp;ระหว่างขั้ว K ของ DLC-2 (ด้าน CAN_L) กับกราวด์ตัวถัง</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;แรงดันไฟฟ้าระหว่างทั้งสองขั้ว (ด้าน CAN_H และด้าน CAN_L) เท่ากันหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เกิดการลัดวงจรลงกราวด์ที่ด้าน CAN_H ของ MS-CAN</div>
+<div class="tbody">ตัดสินตำแหน่งของการลัดวงจรลงกราวด์ตามขั้นตอนการวิเคราะห์ปัญหาเพื่อตัดสินตำแหน่งของการลัดวงจรลงกราวด์</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id100208000900.html">การตัดสินตำแหน่งการลัดวงจรลงกราวด์ (MS-CAN) [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (L.H.D.)]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เกิดการลัดวงจรระหว่างวงจรทางด้าน CAN_H กับด้าน CAN_L ของ MS-CAN</div>
+<div class="tbody">ตัดสินตำแหน่งของการลัดวงจรระหว่างวงจรตามขั้นตอนการวิเคราะห์ปัญหาเพื่อตัดสินตำแหน่งของการลัดวงจรระหว่างวงจร</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id100208001100.html">การตัดสินตำแหน่งการลัดวงจรระหว่างวงจร (MS-CAN) [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (L.H.D.)]</a></font>)</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</p><br clear="all"><p><a name="id10020800010004"></a><p class="topic-title"><span class="topic-head"></span>ตารางอ้างอิงข้อมูลจำเพาะการสื่อสารระบบ CAN</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="left" rowspan="2">
+<p class="thead">โมดูลที่เกี่ยวข้องกับการสื่อสารระบบ CAN (หน้าจอ M-MDS)</p>
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">ข้อมูลจำเพาะการสื่อสารระบบ CAN</p>
+</th>
+</tr>
+<tr>
+<th id="" align="center">
+<p class="thead">HS-CAN-</p>
+</th>
+<th id="" align="center">
+<p class="thead">MS-CAN</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">PCM (PCM)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">DSC HU/CM (ABS)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">TCM (TCM)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุม AFS (AFS)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมตัวถังด้านหน้า (FBCM) (F_BCM)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุม 4WD (4&times;4)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">เซ็นเซอร์เลเซอร์ (SCBS)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">กล้องตรวจจับด้านหน้า (FSC)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงาน (SSU)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุม EPS (EPS)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุม SAS (RCM)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">แผงหน้าปัด (IC)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมตัวถังด้านหลัง (RBCM) (R_BCM)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">กล้องจับภาพด้านหลัง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมการตรวจจับรถด้านหลัง (ด้านขวา) (RVM)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมเซ็นเซอร์ช่วยจอด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">นาฬิกา</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ชุดควบคุมอุณหภูมิ (EATC)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ชุดเครื่องเสียง (ACU)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</p><br clear="all"><a name="id10020800010005"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รูปคลื่นสัญญาณ HS-CAN</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">สภาวะวงจร CAN</p>
+</th>
+<th id="" align="center">
+<p class="thead">รูปคลื่นสัญญาณ (อ้างอิง)</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left" rowspan="2">
+<div class="tbody">ปกติ</div>
+</td>
+<td id="" align="center"><img src="images/ac5wzw00001216.png"></td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;CAN_H</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ขั้วเชื่อมต่อ: DLC-2: ขั้ว F (+) ↔ กราวด์ตัวถัง ( &mdash; )</div>
+<div class="list">―&nbsp;&nbsp;การตั้งค่าออสซิลโคลสโคป: 0.5 V/DIV (Y), 200 &micro;s/DIV (X), DC range</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;CAN_L</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ขั้วเชื่อมต่อ: DLC-2: ขั้ว E (+) ↔ กราวด์ตัวถัง ( &mdash; )</div>
+<div class="list">―&nbsp;&nbsp;การตั้งค่าออสซิลโคลสโคป: 0.5 V/DIV (Y), 200 &micro;s/DIV (X), DC range</div>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</p><br clear="all"><a name="id10020800010006"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รูปคลื่นสัญญาณ MS-CAN</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">สภาวะวงจร CAN</p>
+</th>
+<th id="" align="center">
+<p class="thead">รูปคลื่นสัญญาณ (อ้างอิง)</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left" rowspan="2">
+<div class="tbody">ปกติ</div>
+</td>
+<td id="" align="center"><img src="images/ac5wzw00001217.png"></td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;CAN_H</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ขั้วเชื่อมต่อ: DLC-2: ขั้ว L (+) ↔ กราวด์ตัวถัง ( &mdash; )</div>
+<div class="list">―&nbsp;&nbsp;การตั้งค่าออสซิลโคลสโคป: 0.5 V/DIV (Y), 1 ms/DIV (X), DC range</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;CAN_L</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ขั้วเชื่อมต่อ: DLC-2: ขั้ว K (+) ↔ กราวด์ตัวถัง ( &mdash; )</div>
+<div class="list">―&nbsp;&nbsp;การตั้งค่าออสซิลโคลสโคป: 0.5 V/DIV (Y), 1 ms/DIV (X), DC range</div>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>ฟังก์ชั่นการสื่อสารเครื่องวิเคราะห์ปัญหาภายนอกของระบบการวิเคราะห์ปัญหาบนรถ</title>
+</head>
+<body><a name="id030200108600"></a><p class="servinfo-title"><span class="servinfo-head"></span>ฟังก์ชั่นการสื่อสารเครื่องวิเคราะห์ปัญหาภายนอกของระบบการวิเคราะห์ปัญหาบนรถ</p>
+<hr>
+<p class="servinfo-title-id" align="right">id030200108600</p>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่นการสื่อสารเครื่องวิเคราะห์ปัญหาภายนอกจะทำให้การสื่อสารข้อมูลการวิเคราะห์ปัญหา (การอ่านรหัสวิเคราะห์ปัญหา การอ่านสัญญาณอินพุท / เอาท์พุท และการทำงานของส่วนสัญญาณอินพุท / เอาท์พุท) ระหว่างโมดูลควบคุม (CM) การขับเคลื่อน 4 ล้อ (4WD) กับเครื่องวิเคราะห์ปัญหาสามารถทำได้</div><br clear="all"><a name="id03020010860001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รายละเอียดการเชื่อมต่อและการสื่อสาร</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center" rowspan="3">
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">เครื่องมือทดสอบภายนอก</p>
+</th>
+</tr>
+<tr>
+<th id="" align="center" colspan="2">
+<p class="thead">Mazda Modular Diagnostic System (M-MDS)</p>
+</th>
+</tr>
+<tr>
+<th id="" align="center">
+<p class="thead">การเชื่อมต่อ</p>
+</th>
+<th id="" align="center">
+<p class="thead">วิธีการสื่อสาร</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">ฟังก์ชั่นการวิเคราะห์ปัญหาบนรถ (การตรวจจับความบกพร่อง)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อินพุท/เอาท์พุท: HS_CAN_H, HS_CAN_L</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การสื่อสารแบบอนุกรม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ฟังก์ชั่นการตรวจสอบข้อมูล / PID</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อินพุท/เอาท์พุท: HS_CAN_H, HS_CAN_L</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การสื่อสารแบบอนุกรม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ฟังก์ชั่นโหมดคำสั่งการทำงาน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อินพุท/เอาท์พุท: HS_CAN_H, HS_CAN_L</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การสื่อสารแบบอนุกรม</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p><br clear="all"><a name="id03020010860002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การสื่อสารแบบอนุกรม</p>
+<div class="list">•&nbsp;&nbsp;การสื่อสารแบบอนุกรม (การสื่อสารแบบสองทาง) ช่วยให้การรับและส่งข้อมูลจำนวนมากสามารถทำได้พร้อมกันในสายการสื่อสารเดียวกัน</div>
+<div class="list">•&nbsp;&nbsp;โดยการต่อ Mazda Modular Diagnostic System (M-MDS) เข้ากับ DLC-2 จะสามารถรับและส่งข้อมูลการวิเคราะห์ปัญหาระหว่าง M-MDS กับ 4WD CM ได้โดยใช้ขั้ว HS_CAN_H และ HS_CAN_L (ภายใน DLC-2)</div>
+<div class="list">•&nbsp;&nbsp;4WD CM จะรับสัญญาณคำสั่งของฟังก์ชั่นการตรวจจับความบกพร่อง ฟังก์ชั่นการแสดงค่าพารามิเตอร์ (PID) / การตรวจสอบข้อมูล และฟังก์ชั่นโหมดคำสั่งกระตุ้นจาก M-MDS และส่งรหัสวิเคราะห์ปัญหา และข้อมูลที่เกี่ยวข้องกับสภาวะการทำงานและสถานะของส่วนสัญญาณอินพุท / เอาท์พุทแต่ละส่วนไปที่ M-MDS</div>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ชื่อฟังก์ชั่นการวิเคราะห์ปัญหา</p>
+</th>
+<th id="" align="center">
+<p class="thead">สัญญาณที่ได้รับ</p>
+</th>
+<th id="" align="center">
+<p class="thead">สัญญาณที่ส่ง</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">ฟังก์ชั่นการตรวจจับความบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณการตรวจสอบรหัสวิเคราะห์ปัญหา</div>
+</td>
+<td id="" align="left">
+<div class="tbody">รหัสวิเคราะห์ปัญหา</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ฟังก์ชั่นการตรวจสอบข้อมูล / PID</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณคำสั่งที่ใช้อ่านรายการตรวจสอบที่เลือก</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ข้อมูลที่ตรวจสอบสำหรับรายการตรวจสอบที่ขอ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ฟังก์ชั่นโหมดคำสั่งการทำงาน</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณคำสั่งการทำงานสำหรับรายการโหมดคำสั่งการทำงานที่เลือก</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชื่อส่วนสัญญาณอินพุท / เอาท์พุท</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</body>
+</html>

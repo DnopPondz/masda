@@ -1,0 +1,88 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>โมดูลควบคุมไฟหน้าแบบคายประจุ</title>
+</head>
+<body><a name="id091800010400"></a><p class="servinfo-title"><span class="servinfo-head"></span>โมดูลควบคุมไฟหน้าแบบคายประจุ</p>
+<hr>
+<p class="servinfo-title-id" align="right">id091800010400</p><br clear="all"><a name="id09180001040001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>จุดประสงค์:</p>
+<div class="list">•&nbsp;&nbsp;แปลงแรงดันไฟฟ้า DC จากแบตเตอรี่เป็นแรงดันไฟฟ้า AC และส่งแรงดันไฟฟ้าที่มีค่าคงที่แล้วไปยังไฟหน้าแบบคายประจุ</div><br clear="all"><a name="id09180001040002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมไฟหน้าแบบคายประจุจะควบคุมแรงดันไฟฟ้าจากแบตเตอรี่เพื่อทำให้ไฟหน้าแบบคายประจุติดสว่าง</div>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมไฟหน้าแบบคายประจุมีฟังก์ชั่น Fail-safe ที่จะยกเลิกการทำงานของไฟหน้าแบบคายประจุหากแรงดันไฟฟ้าอินพุท/เอาท์พุทผิดปกติเพื่อป้องกันการทำงานผิดพลาดและเป็นการปกป้องอุปกรณ์</div><br clear="all"><a name="id09180001040003"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>โครงสร้าง</p>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมไฟหน้าแบบคายประจุจะประกอบด้วยตัวช่วยจุดระเบิดที่เพิ่มแรงดันไฟฟ้าจากแบตเตอรี่ให้ถึงระดับประมาณ 25,000 V และอินเวอร์เตอร์ที่ทำหน้าที่แปลงแรงดันไฟฟ้า DC จากแบตเตอรี่ให้เป็นแรงดันไฟฟ้า AC</div>
+<div class="list">•&nbsp;&nbsp;อินเวอร์เตอร์จะประกอบรวมอยู่ในโมดูลควบคุมไฟหน้าแบบคายประจุ</div>
+<div class="list">•&nbsp;&nbsp;ตัวช่วยจุดระเบิดจะติดตั้งไว้ในหลอดไฟหน้าแบบคายประจุ<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00000514.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00000514</div>
+</td>
+</tr>
+</table>
+</div><br clear="all"><a name="id09180001040004"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<p class="list">1.&nbsp;&nbsp;เมื่อเปิดใช้งานรีเลย์ของไฟหน้า (LO) โมดูลควบคุมไฟหน้าแบบคายประจุจะเพิ่มแรงดันไฟฟ้า DC จากแบตเตอรี่จากประมาณ 12 V เป็นประมาณ 25,000 V โดยใช้ตัวช่วยจุดระเบิดและส่งไปยังหลอดไฟหน้าแบบคายประจุ</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;หลังจากที่ทำให้หลอดไฟหน้าแบบคายประจุติดสว่างแล้ว โมดูลควบคุมไฟหน้าแบบคายประจุจะแปลงแรงดันไฟฟ้า DC จากแบตเตอรี่เป็นแรงดันไฟฟ้า AC (ประมาณ 42 V) โดยใช้อินเวอร์เตอร์และส่งไปยังหลอดไฟหน้าแบบคายประจุ</p>
+<p class="list">
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5uun00000542.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5uun00000542</div>
+</td>
+</tr>
+</table>
+</p><br clear="all"><a name="id09180001040005"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>Fail-safe</p>
+<div class="list">•&nbsp;&nbsp;หากแรงดันไฟฟ้าอินพุท/เอาท์พุทผิดปกติ ฟังก์ชั่น Fail-safe จะเริ่มทำงาน</div>
+<p clear="all">
+<table class="table-flame" border="1">
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สภาวะการทำงาน</span></div>
+</td>
+<td id="" align="center">
+<div class="tbody"><span>Fail-safe</span></div>
+</td>
+<td id="" align="center">
+<div class="tbody"><span>สภาวะกลับสู่การทำงาน</span></div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">แรงดันไฟฟ้าอินพุท/เอาท์พุทจากโมดูลควบคุมไฟหน้าแบบคายประจุไม่อยู่ในช่วง 6&mdash;18 V</div>
+<div class="tbody">(ยกเว้นในกรณีที่แรงดันไฟฟ้าลดลงทันทีหลังจากการติดสว่างของไฟหน้าแบบคายประจุ)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปิดไฟหน้าแบบคายประจุ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบว่าแรงดันไฟฟ้าอินพุทเป็นปกติ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ตรวจพบว่ามีความผิดปกติของแรงดันไฟฟ้าเอาท์พุทจากโมดูลควบคุมไฟหน้าแบบคายประจุ (ชุดสายไฟมีการขาดวงจรหรือลัดวงจรลงกราวด์)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปิดไฟหน้าแบบคายประจุ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปิดสวิตช์ไฟส่องสว่าง แล้วเปิดใช้งานอีกครั้ง</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>การควบคุมน้ำมันเครื่อง [SKYACTIV-D 2.2]</title>
+</head>
+<body><a name="id0140z7004200"></a><p class="servinfo-title"><span class="servinfo-head"></span>การควบคุมน้ำมันเครื่อง [SKYACTIV-D 2.2]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0140z7004200</p><br clear="all"><a name="id0140z700420001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รายละเอียด</p>
+<div class="list">•&nbsp;&nbsp;PCM จะลดภาระปั๊มน้ำมันเครื่องที่จ่ายไปที่เครื่องยนต์โดยการควบคุมแรงดันไฮดรอลิกเครื่องยนต์ที่เหมาุะสมตามสภาวะการทำงานของเครื่องยนต์</div>
+<div class="list">•&nbsp;&nbsp;แรงดันไฮดรอลิกเครื่องยนต์เป็นสองระดับ เมื่อไม่จำเป็นต้องใช้แรงดันไฮดรอลิก ปริมาณการจ่ายของปั๊มน้ำมันเครื่องจะลดลงโดยการทำงานของโซลินอยด์วาล์วน้ำมันเครื่อง</div><br clear="all"><a name="id0140z700420002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>แผนผังแบบบล็อก</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00002148.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00002148</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id0140z700420003"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<div class="list">•&nbsp;&nbsp;PCM จะสับเปลี่ยนแรงดันน้ำมันเครื่องซึ่งหล่อลื่นเครื่องยนต์เป็นสองระดับโดยการควบคุมโซลินอยด์วาล์วน้ำมันเครื่องตามสภาวะการทำงานของเครื่องยนต์</div>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5uun00001149.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5uun00001149</div>
+</td>
+</tr>
+</table><br clear="all"><p><a name="id0140z700420004"></a><p class="topic-title"><span class="topic-head"></span>การกำหนดค่า Duty สัญญาณเอาท์พุท</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;PCM จะควบคุมแรงดันไฟฟ้าการทำงานที่จ่ายให้กับโซลินอยด์น้ำมันเครื่องตามสัญญาณ Duty หลังจากเปิดโซลินอยด์วาล์วน้ำมันเครื่องที่ duty ratio สัญญาณเอาท์พุท 100% ภาระที่จ่ายไปยังชิ้นส่วนต่างๆ จะลดลงโดยการลดค่า duty ไปที่ค่า duty สัญญาณเอาท์พุทที่สามารถรักษาสภาวะวาล์วเปิดได้ ค่า duty สัญญาณเอาท์พุทในการรักษาค่าการเปิดจะเปลี่ยนแปลงตามแรงดันไฟฟ้าแบตเตอรี่</div>
+</dd>
+</dl>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5uun00001150.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5uun00001150</div>
+</td>
+</tr>
+</table>
+</p><br clear="all"><p><a name="id0140z700420005"></a><p class="topic-title"><span class="topic-head"></span>สภาวะการทำงานของโซลินอยด์วาล์วน้ำมันเครื่อง</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;PCM จะสั่งให้โซลินอยด์วาล์วน้ำมันเครื่องทำงานเมื่อเป็นไปตามสภาวะทั้งหมดดังต่อไปนี้:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ความเร็วรอบเครื่องยนต์: ต่ำกว่า 4,000 rpm</div>
+<div class="list">―&nbsp;&nbsp;อุณหภูมิน้ำหล่อเย็นเครื่องยนต์: ต่ำกว่า 98 &deg;C {208 &deg;F}</div>
+<div class="list">―&nbsp;&nbsp;ประสิทธิภาพการชาร์จไฟ: ต่ำกว่าค่ากำหนด (แปรผันตามความเร็วรอบเครื่องยนต์)</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;สำหรับรายละเอียดเกี่ยวกับโซลินอยด์วาล์วน้ำมันเครื่อง ให้อ้างอิงระบบหล่อลื่น (ดูที่ <font class="extxref-label"><a href="id0111s6002700.html">โซลินอยด์วาล์วน้ำมันเครื่อง [SKYACTIV-D 2.2]</a></font>)</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id0140z700420006"></a><p class="topic-title"><span class="topic-head"></span>กลไกการเปลี่ยนแรงดันไฮดรอลิก</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เมื่อโซลินอยด์วาล์วน้ำมันเครื่องทำงาน วงจรไฮดรอลิกจะเปลี่ยนแปลงตามสภาวะต่อไปนี้ ปริมาณการจ่ายน้ำมันเครื่องจะถูกควบคุมโดยการเปลี่ยนวงจรไฮดรอลิก</div>
+<dl>
+<div class="list-title">การไหลของน้ำมันเครื่องเมื่อตั้งแรงดันน้ำมันเครื่องต่ำ (โซลินอยด์วาล์วน้ำมันเครื่อง ON)</div>
+<dd class="list">
+<div class="list">a.&nbsp;&nbsp;เมื่อเปิดโซลินอยด์วาล์วน้ำมันเครื่อง (ON) แรงดันน้ำมันเครื่องจะถูกจ่้ายไปที่ส่วนบนของวาล์วนำร่องด้วยเช่นกัน เนื่องจากแรงดันน้ำมันเครื่องที่จ่ายไปที่ส่วนบนและส่วนล่างของวาล์วนำร่องเกือบเท่ากัน วาล์วนำร่องจะถูกกดขึ้นโดยแรงดันสปริง</div>
+<div class="list">b.&nbsp;&nbsp;แรงดันน้ำมันเครื่องจะถูกจ่ายไปที่ส่วนบนของวาล์วระบาย</div>
+<div class="list">c.&nbsp;&nbsp;เมื่อแรงดันน้ำมันเครื่องเกินแรงดันในการเปิดวาล์วระบาย วาล์วระบายจะถูกกดลงและน้ำมันเครื่องจะไหล</div>
+<div class="list">d.&nbsp;&nbsp;เมื่อแรงดันน้ำมันเครื่องต่ำกว่าแรงดันการเปิดวาล์วระบาย วาล์วระบายจะปิด ด้วยเหตุนี้ การไหลของน้ำมันเครื่องจะหยุดลง (แรงดันน้ำมันเครื่องจะเพิ่มขึ้น)</div>
+<div class="list">e.&nbsp;&nbsp;แรงดันน้ำมันเครื่องจะถูกปรับโดยการทำซ้ำขั้นตอน (c) ถึง (d)<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5uun00001155.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5uun00001155</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+<dl>
+<div class="list-title">การไหลของน้ำมันเครื่องเมื่อตั้งแรงดันน้ำมันเครื่องสูง (โซลินอยด์วาล์วน้ำมันเครื่อง OFF)</div>
+<dd class="list">
+<div class="list">a.&nbsp;&nbsp;เมื่อแรงดันน้ำมันเครื่องเกินแรงดันการเปิดวาล์วนำร่อง วาล์วนำร่องจะถูกกดขึ้นและแรงดันน้ำมันจะจ่ายไปที่ส่วนบนของวาล์วระบาย</div>
+<div class="list">b.&nbsp;&nbsp;เนื่องจากแรงดันการเปิดวาล์วระบายจะเกินโดยการจ่ายแรงดันน้ำมันเครื่องไปที่ส่วนบนของวาล์วระบาย วาล์วระบายจะถูกกดลงและน้ำมันเครื่องจะไหล (แรงดันน้ำมันเครื่องจะลดลง)</div>
+<div class="list">c.&nbsp;&nbsp;เมื่อแรงดันน้ำมันเครื่องต่ำกว่าแรงดันการเปิดวาล์วนำร่อง วาล์วนำร่องจะปิด ด้วยเหตุนี้ วาล์วระบายจะปิดและการไหลของน้ำมันเครื่องจะหยุดลง (แรงดันน้ำมันเครื่องจะเพิ่มขึ้น)</div>
+<div class="list">d.&nbsp;&nbsp;แรงดันน้ำมันเครื่องจะถูกปรับโดยการทำซ้ำขั้นตอน (c) ถึง (d)<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5uun00001156.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5uun00001156</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</p>
+</body>
+</html>

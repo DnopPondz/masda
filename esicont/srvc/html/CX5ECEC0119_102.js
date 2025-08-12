@@ -1,0 +1,2 @@
+&txtLabel=STARTING SYSTEM (SKYACTIV-G 2.0, SKYACTIV-D 2.2)&
+&txtData=S0119_1&

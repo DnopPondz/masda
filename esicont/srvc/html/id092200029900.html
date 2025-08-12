@@ -1,0 +1,454 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>โมดูลควบคุมระบบตรวจจับรถด้านหลัง</title>
+</head>
+<body><a name="id092200029900"></a><p class="servinfo-title"><span class="servinfo-head"></span>โมดูลควบคุมระบบตรวจจับรถด้านหลัง</p>
+<hr>
+<p class="servinfo-title-id" align="right">id092200029900</p><br clear="all"><a name="id09220002990001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>จุดประสงค์:</p>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมระบบตรวจจับรถด้านหลังตรวจพบรถที่เข้ามาใกล้จากด้านหลังและควบคุมระบบตรวจจับรถด้านหลัง</div><br clear="all"><a name="id09220002990002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมระบบตรวจจับรถด้านหลังจะส่งคลื่นไมโครเวฟจากเรดาร์ที่ติดอยู่กับโมดูลควบคุมการตรวจจับรถด้านหลังเพื่อตรวจจับตำแหน่งและความเร็วรถที่ใกล้เข้ามาผ่านคลื่นไมโครเวฟที่สะท้อนกลับ</div>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมระบบตรวจจับรถด้านหลังจะควบคุมระบบตรวจจับรถด้านหลังตามข้อมูลจากรถที่ใกล้เข้ามาที่ตรวจพบได้และสัญญาณระบบ CAN ต่อไปนี้:</div>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="left">
+<p class="thead">โมดูลการส่งสัญญาณระบบ CAN</p>
+</th>
+<th id="" align="left">
+<p class="thead">ชื่อสัญญาณ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">DSC HU/CM</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอัตราการโคลง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงาน</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณสวิตช์ไฟเลี้ยว</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">แผงหน้าปัด</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;สัญญาณการทำงานของสวิตช์ RVM</div>
+<div class="list">•&nbsp;&nbsp;สัญญาณไฟส่องสว่างแผงหน้าปัด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">TCM (ATX)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณตำแหน่งคันเกียร์</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">PCM</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;สัญญาณความเร็วรถ</div>
+<div class="list">•&nbsp;&nbsp;สัญญาณตำแหน่งเกียร์ (MTX)</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p><br clear="all"><p><a name="id09220002990003"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นการเปลี่ยนระดับความสว่างของไฟแสดงสถานะการเตือน RVM</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เมื่อโมดูลควบคุมระบบตรวจจับรถด้านหลังได้รับสัญญาณไฟส่องสว่างแผงหน้าปัดจากแผงหน้าปัด ระบบจะตัดสินว่ารถกำลังขับขี่ตอนกลางคืนหรือในที่มืด และเปลี่ยนแปลงความสว่างของไฟแสดงสถานะการเตือน RVM</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09220002990004"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชันการวิเคราะห์ปัญหาบนรถ</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมระบบตรวจจับรถด้านหลังตรวจพบข้อผิดพลาดในการสื่อสารของระบบและความบกพร่องภายในโมดูลควบคุมและเอาท์พุทรหัสวิเคราะห์ปัญหา สำหรับรายละเอียดรหัสวิเคราะห์ปัญหา ให้ดูที่ระบบวิเคราะห์ปัญหาบนรถ [ระบบตรวจจับรถด้านหลัง]</div>
+</dd>
+</dl>
+</p><br clear="all"><a name="id09220002990005"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>โครงสร้าง</p>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมจะรวมอยู่กับเรดาร์ซึ่งจะส่งคลื่นไมโครเวฟและรับคลื่นไมโครเวฟที่สะท้อนกลับ</div>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมสองตัวจะอยู่ทางด้านซ้ายและด้านขวาของตัวถังด้านในกันชนหลัง<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001440.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001440</div>
+</td>
+</tr>
+</table>
+</div><br clear="all"><a name="id09220002990006"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<div class="list">•&nbsp;&nbsp;เมื่อบิดสวิตช์สตาร์ทไปที่ ON (เครื่องยนต์ทำงาน) และความเร็วรถอยู่ที่ 30 km/h หรือมากกว่านั้น โมดูลควบคุมระบบตรวจจับรถด้านหลังจะส่งคลื่นไมโครเวฟจากเรดาร์และเริ่มต้นการตรวจจับรถที่เข้าใกล้มา</div><br clear="all"><p><a name="id09220002990007"></a><p class="topic-title"><span class="topic-head"></span>พื้นที่การตรวจจับ</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ทิศทางเดินหน้าและถอยหลัง: จากเสากลางรถไปถึงด้านหลังของรถที่ระยะห่าง<span>ประมาณ 50 m {164 ft}</span></div>
+<div class="list">•&nbsp;&nbsp;แนวด้านข้าง: <span>ประมาณ 3 m {9.8 ft}</span> สำหรับพื้นผิวด้านรถ<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001441.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001441</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+</p><br clear="all"><a name="id09220002990008"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>Fail-safe</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟเตือนระบบตรวจจับรถด้านหลัง (RVM) (สีเหลือง)</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">B11CB:11</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ยับยั้งระบบตรวจจับรถด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B11CB:15</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ยับยั้งระบบตรวจจับรถด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B11D3:11</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ยับยั้งระบบตรวจจับรถด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B11D3:15</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ยับยั้งระบบตรวจจับรถด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B11F2:23</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ยับยั้งระบบตรวจจับรถด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0001:88</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ยับยั้งระบบตรวจจับรถด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0028:87</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ยับยั้งระบบตรวจจับรถด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0100:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ยับยั้งระบบตรวจจับรถด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0121:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ยับยั้งระบบตรวจจับรถด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ยับยั้งระบบตรวจจับรถด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0214:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ยับยั้งระบบตรวจจับรถด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0401:68</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ยับยั้งระบบตรวจจับรถด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0415:68</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ยับยั้งระบบตรวจจับรถด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0423:68</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ยับยั้งระบบตรวจจับรถด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0515:68</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ยับยั้งระบบตรวจจับรถด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U1A4B:16</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ยับยั้งระบบตรวจจับรถด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U1A4B:17</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ยับยั้งระบบตรวจจับรถด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U1A4B:43</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ยับยั้งระบบตรวจจับรถด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U1A4B:44</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ยับยั้งระบบตรวจจับรถด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U1A4B:45</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ยับยั้งระบบตรวจจับรถด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U1A4B:46</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ยับยั้งระบบตรวจจับรถด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U1A4B:47</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ยับยั้งระบบตรวจจับรถด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U1A4B:48</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ยับยั้งระบบตรวจจับรถด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U1A4B:49</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ยับยั้งระบบตรวจจับรถด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U1A4B:54</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ยับยั้งระบบตรวจจับรถด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U1A4B:96</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ยับยั้งระบบตรวจจับรถด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2100:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ยับยั้งระบบตรวจจับรถด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:43</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ยับยั้งระบบตรวจจับรถด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:44</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ยับยั้งระบบตรวจจับรถด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:45</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ยับยั้งระบบตรวจจับรถด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:46</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ยับยั้งระบบตรวจจับรถด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:47</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ยับยั้งระบบตรวจจับรถด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:48</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ยับยั้งระบบตรวจจับรถด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:49</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ยับยั้งระบบตรวจจับรถด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:4B</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ยับยั้งระบบตรวจจับรถด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:54</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ยับยั้งระบบตรวจจับรถด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:96</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ยับยั้งระบบตรวจจับรถด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:97</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ยับยั้งระบบตรวจจับรถด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3003:16</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ยับยั้งระบบตรวจจับรถด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3003:17</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ยับยั้งระบบตรวจจับรถด้านหลัง</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</body>
+</html>

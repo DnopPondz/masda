@@ -1,0 +1,158 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>เซ็นเซอร์ตรวจจับหยดน้ำฝน</title>
+</head>
+<body><a name="id091900001000"></a><p class="servinfo-title"><span class="servinfo-head"></span>เซ็นเซอร์ตรวจจับหยดน้ำฝน</p>
+<hr>
+<p class="servinfo-title-id" align="right">id091900001000</p><br clear="all"><a name="id09190000100001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รายละเอียด</p>
+<div class="list">•&nbsp;&nbsp;เซ็นเซอร์ตรวจจับหยดน้ำฝนจะตรวจจับปริมาณหยดน้ำฝนบนกระจกบังลมหน้าและคำนวณความเร็วในการทำงานของที่ปัดน้ำฝนกระจกบังลมหน้าตามปริมาณของหยดน้ำฝนที่ตรวจจับได้</div>
+<div class="list">•&nbsp;&nbsp;เซ็นเซอร์ตรวจจับหยดน้ำฝนจะเอาท์พุทสัญญาณการทำงานของที่ปัดน้ำฝนกระจกบังลมหน้าที่คำนวณได้ไปยังโมดูลควบคุมตัวถังด้านหน้า (FBCM)</div>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมตัวถังด้านหน้า (FBCM) จะสั่งงานโหมด Fail-safe ของเซ็นเซอร์ตรวจจับหยดน้ำฝน (ดูที่ <font class="extxref-label"><a href="id094000002500.html">โมดูลควบคุมตัวถังด้านหน้า (FBCM)</a></font>)</div><br clear="all"><a name="id09190000100002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p><br clear="all"><p><a name="id09190000100003"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นตรวจจับปริมาณหยดน้ำฝน</p>
+<dl>
+<dd>
+<div class="attention2-label">ข้อควรระวัง</div>
+</dd>
+<dd>
+<div class="attention2">
+<div class="list">•&nbsp;&nbsp;หากกระจกบังลมหน้าอยู่ในสภาวะใดสภาวะหนึ่งต่อไปนี้ เซ็นเซอร์ตรวจจับหยดน้ำฝนจะไม่สามารถตรวจจับปริมาณของหยดน้ำฝนได้อย่างถูกต้อง และที่ปัดน้ำฝนกระจกบังลมหน้าจะทำงานไม่ถูกต้อง</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;มีสติ๊กเกอร์หรือฉลากติดอยู่ในบริเวณตรวจจับของเซ็นเซอร์ตรวจจับหยดน้ำฝนที่ส่วนบนของกระจกบังลมหน้า</div>
+<div class="list">―&nbsp;&nbsp;บริเวณตรวจจับของเซ็นเซอร์ตรวจจับหยดน้ำฝนในส่วนบนของกระจกบังลมหน้าสกปรก</div>
+</dd>
+</dl>
+</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เซ็นเซอร์ตรวจจับหยดน้ำฝนจะตรวจจับปริมาณหยดน้ำฝนตามอัตราของแสงสะท้อนอินฟราเรดซึ่งปล่อยจากหลอด LED ที่ติดตั้งไว้ภายใน</div>
+<div class="list">•&nbsp;&nbsp;สัญญาณการทำงานของที่ปัดน้ำฝนกระจกบังลมหน้าถูกคำนวณตามปริมาณหยดน้ำฝนที่ตรวจพบ</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09190000100004"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นการตั้งค่าเริ่มต้น</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เมื่อบิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน) เซ็นเซอร์ตรวจจับหยดน้ำฝนจะตรวจจับและบันทึกความโปร่งใสของพื้นผิวกระจกบังลมหน้า ซึ่งมีการเปลี่ยนแปลงตามการสึกหรอและการสะสมของฝุ่น </div>
+<div class="list">•&nbsp;&nbsp;ด้วยเหตุนี้ เซ็นเซอร์ตรวจจับหยดน้ำฝนจึงทำหน้าที่ตัดสินความเร็วที่เหมาะสม (LO/HI) สำหรับที่ปัดน้ำฝนกระจกบังลมหน้า และส่งสัญญาณการทำงานของที่ปัดน้ำฝนกระจกบังลมหน้าไปยังโมดูลควบคุมตัวถังด้านหน้า (FBCM)</div>
+<div class="list">•&nbsp;&nbsp;การตั้งค่าเริ่มต้นถูกดำเนินการทุกครั้งที่บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09190000100005"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นปรับความไว</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เมื่อที่ปัดน้ำฝนอัตโนมัติกำลังทำงาน ความไวของเซ็นเซอร์ตรวจจับหยดน้ำฝนจะสามารถเลือกปรับได้โดยการใช้ระดับการปรับความไวบนสวิตช์ที่ปัดน้ำฝนและที่ฉีดล้างกระจกซึ่งจะทำการเปลี่ยนสัญญาณระดับที่ส่งไปยังโมดูลควบคุมตัวถังด้านหน้า (FBCM)</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ความไวของเซ็นเซอร์ตรวจจับหยดน้ำฝนสามารถปรับได้ระหว่าง 1 (ความไวต่ำ) ถึง 5 (ความไวสูง) โดยการใช้ระดับการปรับความไวตามสภาวะต่างๆ เช่น ความแรงของฝน</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;เมื่อที่ปัดน้ำฝนอัตโนมัติกำลังทำงาน ความไวของเซ็นเซอร์ตรวจจับหยดน้ำฝนจะถูกปรับโดยอัตโนมัติตามสัญญาณรถที่ส่งจาก PCM ผ่านโมดูลควบคุมตัวถังด้านหน้า (FBCM)</div>
+<div class="list">•&nbsp;&nbsp;เมื่อที่ปัดน้ำฝนอัตโนมัติกำลังทำงาน เซ็นเซอร์ตรวจจับหยดน้ำฝน (เซ็นเซอร์ไฟส่องสว่างอัตโนมัติ) จะตรวจจับระดับการส่องสว่างด้านบนและด้านหน้ารถ </div>
+<div class="list">•&nbsp;&nbsp;เมื่อเซ็นเซอร์ตรวจจับหยดน้ำฝนตรวจพบว่าระดับการส่องสว่างสูงกว่าระดับที่กำหนดไว้สำหรับการเปิดใช้งาน TNS ความไวของเซ็นเซอร์ตรวจจับหยดน้ำฝนจะเพิ่มขึ้น</div>
+</dd>
+</dl>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00000479.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00000479</div>
+</td>
+</tr>
+</table>
+</p><br clear="all"><p><a name="id09190000100006"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชันการวิเคราะห์ปัญหาบนรถ</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เซ็นเซอร์ตรวจจับหยดน้ำฝนจะดำเนินการวิเคราะห์ปัญหาบนรถเมื่อบิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน) </div>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบความบกพร่องในเซ็นเซอร์ตรวจจับหยดน้ำฝน สัญญาณความผิดพลาดจะถูกส่งไปยังโมดูลควบคุมตัวถังด้านหน้า (FBCM)</div>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมตัวถังด้านหน้า (FBCM) จะเอาท์พุทรหัสวิเคราะห์ปัญหาตามสัญญาณความผิดพลาดจากเซ็นเซอร์ตรวจจับหยดน้ำฝน</div>
+<div class="list">•&nbsp;&nbsp;สำหรับรายละเอียดเกี่ยวกับรหัสวิเคราะห์ปัญหา ให้ดูที่ระบบการวิเคราะห์ปัญหา (FBCM) ตารางรหัสวิเคราะห์ปัญหา (FBCM) ในคู่มือซ่อม</div>
+</dd>
+</dl>
+</p><br clear="all"><a name="id09190000100007"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>โครงสร้าง</p>
+<div class="list">•&nbsp;&nbsp;เซ็นเซอร์ตรวจจับหยดน้ำฝนจะติดตั้งไว้ที่ตัวยึดในส่วนกึ่งกลางทางด้านบนของกระจกบังลมหน้า<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00000480.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00000480</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="list">•&nbsp;&nbsp;เซ็นเซอร์ตรวจจับหยดน้ำฝนจะรวมอยู่กับเซ็นเซอร์ไฟส่องสว่างอัตโนมัติ</div>
+<div class="list">•&nbsp;&nbsp;เซ็นเซอร์ตรวจจับหยดน้ำฝนประกอบรวมด้วยเลนส์ ไฟ LED โฟโต้ไดโอด และไมโครคอมพิวเตอร์ และส่ง/รับสัญญาณระหว่างโมดูลควบคุมตัวถังด้านหน้า (FBCM) โดยใช้การสื่อสารแบบ LIN<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00000481.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00000481</div>
+</td>
+</tr>
+</table>
+</div><br clear="all"><a name="id09190000100008"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p><br clear="all"><p><a name="id09190000100009"></a><p class="topic-title"><span class="topic-head"></span>การทำงานกับกระจกบังลมหน้าที่ไม่สัมผัสหยดฝน</p>
+<p class="list">1.&nbsp;&nbsp;แสงอินฟราเรดถูกปล่อยแสงออกจากหลอด LED ในเซ็นเซอร์ตรวจจับหยดน้ำฝนไปยังกระจกบังลมหน้า</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;แสงอินฟราเรดที่ปล่อยออกไปจะสะท้อนกระจกบังลมหน้า</p>
+<p class="list">
+</p>
+<p class="list">3.&nbsp;&nbsp;โฟโต้ไดโอดในเซ็นเซอร์ตรวจจับหยดน้ำฝนรับแสงอินฟราเรดที่สะท้อนกระจกบังลมหน้า</p>
+<p class="list">
+</p>
+<p class="list">4.&nbsp;&nbsp;เมื่อโฟโต้ไดโอดได้รับแสงแล้ว ไมโครคอมพิวเตอร์ในเซ็นเซอร์ตรวจจับหยดน้ำฝนจะคำนวณปริมาณหยดน้ำฝนจากอัตราการสะท้อน และส่งสัญญาณควบคุมที่ปัดน้ำฝนกระจกบังลมหน้าไปยังโมดูลควบคุมตัวถังด้านหน้า (FBCM)</p>
+<p class="list">
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00002332.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00002332</div>
+</td>
+</tr>
+</table>
+</p>
+</p><br clear="all"><p><a name="id09190000100010"></a><p class="topic-title"><span class="topic-head"></span>การทำงานกับกระจกบังลมหน้าที่สัมผัสหยดฝน</p>
+<p class="list">1.&nbsp;&nbsp;แสงอินฟราเรดถูกปล่อยแสงออกจากหลอด LED ในเซ็นเซอร์ตรวจจับหยดน้ำฝนไปยังกระจกบังลมหน้า</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;แสงอินฟราเรดที่ปล่อยออกมาจะผ่านกระจกบังลมหน้าและทะลุผานหยดน้ำฝนบนกระจกบังลมหน้า</p>
+<p class="list">
+</p>
+<p class="list">3.&nbsp;&nbsp;แสงอินฟราเรดที่ไม่สามารถทะลุผ่านได้จะสะท้อนกระจกบังลมหน้าและโฟโต้ไดโอดในเซ็นเซอร์ตรวจจับหยดน้ำฝนจะเป็นตัวรับไว้</p>
+<p class="list">
+</p>
+<p class="list">4.&nbsp;&nbsp;เมื่อโฟโต้ไดโอดได้รับแสงแล้ว ไมโครคอมพิวเตอร์ในเซ็นเซอร์ตรวจจับหยดน้ำฝนจะคำนวณปริมาณหยดน้ำฝนจากอัตราการสะท้อน และแปลงเป็นสัญญาณไฟฟ้า จากนั้นส่งสัญญาณควบคุมที่ปัดน้ำฝนกระจกบังลมหน้าไปยังโมดูลควบคุมตัวถังด้านหน้า (FBCM)</p>
+<p class="list">
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00002333.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00002333</div>
+</td>
+</tr>
+</table>
+</p>
+</p><br clear="all"><a name="id09190000100011"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>Fail-safe</p>
+<div class="list">•&nbsp;&nbsp;ไม่มีฟังก์ชั่นนี้</div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>รหัสวิเคราะห์ปัญหา U0001:88/U0100:00/U0121:00/U0155:00</title>
+</head>
+<body><a name="id060200814600"></a><p class="servinfo-title"><span class="servinfo-head"></span>รหัสวิเคราะห์ปัญหา U0001:88/U0100:00/U0121:00/U0155:00</p>
+<hr>
+<p class="servinfo-title-id" align="right">id060200814600</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<tbody>
+<tr>
+<td id="" align="center" rowspan="4">
+<div class="tbody"><span>รหัสวิเคราะห์ปัญหา</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody"><span>U0001:88</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody"><span>การสื่อสารระบบ CAN ผิดพลาด</span></div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody"><span>U0100:00</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody"><span>การสื่อสารกับ PCM ผิดพลาด</span></div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody"><span>U0121:00</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody"><span>การสื่อสารกับ DSC HU/CM ผิดพลาด</span></div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody"><span>U0155:00</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody"><span>การสื่อสารกับแผงหน้าปัดผิดพลาด</span></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody"><span>สภาวะการตรวจพบ</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;U0001:88</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ตรวจพบความผิดพลาดในสายระหว่างโมดูลการเชื่อมต่อระบบ CAN กับสายบัสการสื่อสารระบบ CAN</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;U0100:00</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ตรวจพบความผิดพลาดในการสื่อสารไปยัง PCM ในการสื่อสารระบบ CAN</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;U0121:00</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ตรวจพบความผิดพลาดในการสื่อสารไปยัง DSC CM ในการสื่อสารระบบ CAN</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;U0155:00</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ตรวจพบความผิดพลาดในการสื่อสารไปยังแผงหน้าปัดในการสื่อสารระบบ CAN</div>
+</dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody"><span>ฟังก์ชั่น Fail-safe</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;U0001:88</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;เปิดการควบคุม</div>
+<div class="list">―&nbsp;&nbsp;ไฟแสดงความบกพร่องของพวงมาลัยเพาเวอร์: ติดสว่าง</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;U0100:00</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;รักษาการควบคุมโดยค่อยๆ เปลี่ยนความเร็วรถที่ควบคุมไว้และการตั้งค่าเป็น <span>120 km/h{74.6 mph}</span></div>
+</dd>
+</dl>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ไฟแสดงความบกพร่องของพวงมาลัยเพาเวอร์: ติดสว่าง</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;U0121:00, U0155:00</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;เปิดการควบคุม</div>
+<div class="list">―&nbsp;&nbsp;ไฟแสดงความบกพร่องของพวงมาลัยเพาเวอร์: ไม่ติดสว่าง</div>
+</dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody"><span>สาเหตุที่เป็นไปได้</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระบบ CAN ขาดหรือลัดวงจรกับ PCM</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระบบ CAN ขาดหรือลัดวงจรกับ DSC HU/CM</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระบบ CAN ขาดหรือลัดวงจรกับแผงหน้าปัด</div>
+<div class="list">•&nbsp;&nbsp;การเชื่อมต่อไม่ดีที่ขั้วต่อ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody"><span>ผังวงจรระบบ</span></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="list-title">ขั้นตอนการวิเคราะห์ปัญหา</div>
+<div class="list">•&nbsp;&nbsp;ทำการตรวจสอบตามขั้นตอนการวิเคราะห์ในระบบการสื่อสารแบบมัลติเพล็กซ์ (ดูที่ <font class="extxref-label"><a href="id100208000000.html">คำนำ [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (L.H.D.)]</a></font>) (ดูที่ <font class="extxref-label"><a href="id100209000000.html">คำนำ [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (R.H.D.)]</a></font>) (ดูที่ <font class="extxref-label"><a href="id100205000000.html">คำนำ [SKYACTIV-D 2.2 (L.H.D.)]</a></font>) (ดูที่ <font class="extxref-label"><a href="id100206000000.html">คำนำ [SKYACTIV-D 2.2 (R.H.D.)]</a></font>)</div>
+</body>
+</html>

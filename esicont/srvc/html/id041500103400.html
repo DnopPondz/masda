@@ -1,0 +1,138 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>ระบบควบคุม EBD</title>
+</head>
+<body><a name="id041500103400"></a><p class="servinfo-title"><span class="servinfo-head"></span>ระบบควบคุม EBD</p>
+<hr>
+<p class="servinfo-title-id" align="right">id041500103400</p><br clear="all"><a name="id04150010340001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รายละเอียด</p>
+<div class="list">•&nbsp;&nbsp;การควบคุม EBD จะใช้ระบบ ABS เพื่อควบคุมการกระจายแรงดันน้ำมันเบรกไปยังล้อหลังเพื่อไม่ให้ล้อหลังถูกล็อกก่อนล้อหน้าระหว่างการเบรก ซึ่งจะช่วยป้องกันไม่ให้สูญเสียการควบคุมเพื่อรักษาการทรงตัว</div><br clear="all"><a name="id04150010340002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>คุณสมบัติ</p>
+<div class="list">•&nbsp;&nbsp;การควบคุม EBD จะมีระบบควบคุมแบบอิสระทั้งล้อด้านหน้าและด้านหลัง</div>
+<div class="list">•&nbsp;&nbsp;ระบบควบคุม EBD จะมีการกระจายแรงดันน้ำมันเบรกที่ถูกต้องและสม่ำเสมอโดยไม่เกี่ยวข้องกับน้ำหนักของรถ</div><br clear="all"><a name="id04150010340003"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>โครงสร้าง</p>
+<p class="figure-title">แผนผังแบบบล็อก </p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00000233.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00000233</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id04150010340004"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<div class="list">•&nbsp;&nbsp;ระบบควบคุม EBD จะตรวจจับอัตราการลื่นไถลระหว่างความเร็วรถที่ประเมินไว้กับล้อหลังจากสัญญาณเซ็นเซอร์ความเร็วล้อของ ABS หากอัตราการลื่นไถลของล้อหลังเมื่อเปรียบเทียบกับล้อหน้ามากกว่าขีดจำกัดที่กำหนดไว้ DSC HU/CM จะลดแรงดันน้ำมันเบรกที่จะกระจายไปยังล้อหลัง ด้วยวิธีการนี้ การกระจายแรงดันเบรกจะถูกควบคุมให้อยู่ในสัดส่วนที่เหมาะสมตลอดเวลาและสัมพันธ์กับภาระโหลดของรถ สภาพพื้นผิวถนน และความเร็วรถ</div>
+<div class="list">•&nbsp;&nbsp;การกำหนดอัตราการลื่นไถลของล้อหลังจะถูกแยกเป็นสภาวะ 0-3 ตามที่แสดงในตารางด้านล่าง จากการเปรียบเทียบความเร็วล้อหน้าต่ำสุดและความเร็วรถที่ประเมินไว้กับความเร็วล้อด้านหลัง</div>
+<div class="list">•&nbsp;&nbsp;โซลินอยด์วาล์วช่องทางเข้าและช่องทางออกของ DSC HU จะทำงานและแรงดันน้ำมันเบรกจะถูกควบคุมตามสภาวะเหล่านี้</div>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบสภาวะการควบคุม ABS ระหว่างการควบคุม EBD การควบคุม EBD จะหยุดทำงานและการควบคุม ABS จะถูกให้ความสำคัญเป็นลำดับแรก</div>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">สถานะ</p>
+</th>
+<th id="" align="center">
+<p class="thead">การกำหนดอัตราการลื่นไถลของล้อหลัง</p>
+</th>
+<th id="" align="center">
+<p class="thead">ระบบควบคุม EBD</p>
+</th>
+<th id="" align="center">
+<p class="thead">โซลินอยด์วาล์ว</p>
+</th>
+<th id="" align="center">
+<p class="thead">ข้อคิดเห็น</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">0</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ลื่นไถล</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เพิ่มแรงดัน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">α%&mdash;β%</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">รักษาแรงดัน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">หลังจากการควบคุม EBD อัตราการลื่นไถลเท่ากับ γ%</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เพิ่ม/รักษา</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">3</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อัตราการลื่นไถลของล้อหน้าเท่ากับ δ% หรือมากกว่า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ลด/รักษา/เพิ่มแรงดัน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุม ABS ทำงาน</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">α&mdash;δ&nbsp;&nbsp;: ค่าที่ระบุ</div>
+<p class="figure-title">แผนภาพการเปลี่ยนสภาวะการทำงาน</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00000234.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00000234</div>
+</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,2 @@
+&txtLabel=THEFT-DETERRENT SYSTEM (European (L.H.D.) specs.)?ILLUMINATION LIGHT&
+&txtData=S0914_3?S0918_8&

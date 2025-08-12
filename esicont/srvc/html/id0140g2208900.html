@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>การควบคุมเจนเนอร์เรเตอร์ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</title>
+</head>
+<body><a name="id0140g2208900"></a><p class="servinfo-title"><span class="servinfo-head"></span>การควบคุมเจนเนอร์เรเตอร์ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0140g2208900</p><br clear="all"><a name="id0140f420890001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รายละเอียด</p>
+<div class="list">•&nbsp;&nbsp;เสภียรภาพขณะเดินเบาได้รับการปรับให้ดียิ่งขึ้นโดยการควบคุมแรงดันไฟฟ้าเจนเนอร์เรเตอร์ที่เหมาะสมที่สุดตามการทำงานของเครื่องยนต์และุสภาวะโหลดทางไฟฟ้า</div>
+<div class="list">•&nbsp;&nbsp;PCM จะตัดสินการทำงานของเครื่องยนต์และสภาวะโหลดทางไฟฟ้าตามสัญญาณอินพุทจากแต่ละส่วนควบคุมและควบคุมระยะเวลาการให้กำลังไฟฟ้าของฟีลคอล์ยเจนเนอเรเตอร์</div><br clear="all"><a name="id0140f420890002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>แผนผังแบบบล็อก</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00002293.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00002293</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id0140f420890003"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p><br clear="all"><p><a name="id0140f420890004"></a><p class="topic-title"><span class="topic-head"></span>วิธีการกำหนดกระแสไฟฟ้ากระตุ้นการทำงานเป้าหมาย</p>
+<dl>
+<dd>
+<div class="list-title">รุ่นที่ไม่มีระบบ i-stop</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;กระแสไฟฟ้ากระตุ้นการทำงานเป้าหมายจะคำนวณได้จากปริมาณสัญญาณเอาท์พุทเป้าหมายของเจนเนอร์เรเตอร์ (กำหนดโดยอุณหภูมิไอดี ความเร็วรอบเครื่องยนต์ และความเร็วรถ) และความเร็วในการหมุนของเจนเนอร์เรเตอร์จริง</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">รุ่นที่มีระบบ i-stop</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;สภาวะแบตเตอรี่จะถูกตัดสินตามสัญญาณเซ็นเซอร์กระแสไฟฟ้าและกระแสไฟฟ้ากระตุ้นการทำงานเป้าหมายจะถูกคำนวณตามสภาวะแบตเตอรี่ ถ้าเซ็นเซอร์กระแสไฟฟ้าบกพร่อง กระแสไฟฟ้ากระตุ้นการทำงานเป้าหมายจะคำนวณได้จากปริมาณสัญญาณเอาท์พุทเป้าหมายของเจนเนอร์เรเตอร์ (กำหนดโดยอุณหภูมิไอดี ความเร็วรอบเครื่องยนต์ และความเร็วรถ) และความเร็วในการหมุนของเจนเนอร์เรเตอร์จริง</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id0140f420890005"></a><p class="topic-title"><span class="topic-head"></span>วิธีการกำหนดระยะเวลาการกระตุ้นการทำงานของฟีลคอล์ย</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;PCM จะเพิ่มหรือลดกระแสไฟฟ้ากระตุ้นการทำงานของฟีลคอล์ยโดยส่งสัญญาณ Duty ไปที่เพาเวอร์ทรานซิสเตอร์ที่ติดตั้งอยู่ในเจนเนอร์เรเตอร์</div>
+<div class="list">•&nbsp;&nbsp;กระแสไฟฟ้าที่จ่ายให้กับฟีลคอล์ยจะเปลี่ยนแปลงตามการเปลี่ยนแปลงของระยะเวลากระตุ้นการทำงานของเพาเวอร์ทรานซิสเตอร์โดยการเปลี่ยน duty ratio สัญญาณ duty ตัวอย่างเช่น เมื่อแรงดันไฟฟ้าขั้วบวกแบตเตอรี่ลดลง duty ratio ของสัญญาณ duty ที่ส่งไปยังเพาเวอร์ทรานซิสเตอร์จะมากขึ้น จึงเป็นการเพิ่มกระแสไฟฟ้ากระตุ้นการทำงานของฟีลคอล์ย<table class="figure-flame">
+<tr>
+<td width="10mm"></td>
+<td>
+<table class="figure-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/am3uun00001960.png"></td>
+</tr>
+</table>
+<div class="figure-caption">am3uun00001960</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ในระหว่างการตัดน้ำมันเชื้อเพลิงขณะลดความเร็ว PCM จะเพิ่มแรงดันไฟฟ้าของเจนเนอร์เรเตอร์และเก็บกระแสไฟฟ้าไว้ในแบตเตอรี่ ณ เวลาที่นอกเหนือจากการลดความเร็ว PCM จะทำการจ่ายไฟฟ้าจากแบตเตอรี่เพื่อลดภาระเจนเนอร์เรเตอร์ (รุ่นที่มีระบบ i-stop)</div>
+<div class="list">•&nbsp;&nbsp;โดยตรงหลังจากสตาร์ทเครื่องยนต์ ภาระเจนเนอร์เรเตอร์จะลดลงโดยการเปลี่ยนไปที่ระดับที่จำเป็นตามสภาวะแบตเตอรี่ซึ่งแบตเตอรี่ไม่ได้รับการชาร์จไฟไปที่ค่าสูงสุดเท่านั้น (รุ่นที่มีระบบ i-stop)</div>
+</dd>
+</dl>
+</p>
+</body>
+</html>

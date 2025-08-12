@@ -1,0 +1,326 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>โมดูลควบคุม AFS (ระบบปรับลำแสงไฟหน้า)</title>
+</head>
+<body><a name="id091800012900"></a><p class="servinfo-title"><span class="servinfo-head"></span>โมดูลควบคุม AFS (ระบบปรับลำแสงไฟหน้า)</p>
+<hr>
+<p class="servinfo-title-id" align="right">id091800012900</p><br clear="all"><a name="id09180001290001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>จุดประสงค์:</p>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุม AFS จะคำนวณแนวแกนลำแสงเป้าหมายตามสัญญาณความสูงของรถและเอาท์พุทสัญญาณแนวแกนลำแสงเป้าหมายไปยังแอ็คชิวเอเตอร์ควบคุมระดับไฟหน้า</div><br clear="all"><a name="id09180001290002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุม AFS จะทำการควบคุม AFS และควบคุมระดับไฟหน้าอัตโนมัติ</div><br clear="all"><p><a name="id09180001290003"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชันการกำหนดค่าแบบอัตโนมัติ</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เมื่อบิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน) หลังจากเปลี่ยนโมดูลควบคุม AFS แล้ว โมดูลควบคุม AFS จะอ่านข้อมูลจำเพาะของรถที่ส่งผ่านการสื่อสารระบบ CAN จากแผงหน้าปัด และบันทึกข้อมูลจำเพาะของรถ</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09180001290004"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชันการวิเคราะห์ปัญหาบนรถ</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุม AFS เป็นอุปกรณ์ที่มีฟังก์ชั่นการวิเคราะห์ปัญหาบนรถที่จะบันทึกรหัสวิเคราะห์ปัญหาในกรณีที่มีความบกพร่อง</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">ฟังก์ชั่นการตรวจจับความบกพร่อง</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ตรวจจับความบกพร่องของ AFS และชิ้นส่วนที่เกี่ยวข้องกับการควบคุมระดับไฟหน้าอัตโนมัติ</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">ฟังก์ชั่นการแสดงผล</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบความบกพร่อง ไฟแสดงสถานะ AFS OFF ในแผงหน้าปัดจะกะพริบเพื่อเตือนให้คนขับทราบว่าระบบเกิดการบกพร่อง</div>
+</dd>
+</dl>
+</p><br clear="all"><a name="id09180001290005"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<div class="list">•&nbsp;&nbsp;สำหรับการทำงานของโมดูลควบคุม AFS ดูที่<font class="extxref-label"><a href="id091800010900.html">ระบบควบคุมระดับไฟหน้าอัตโนมัติ</a></font>และ <font class="extxref-label"><a href="id091800012800.html">AFS (ระบบปรับลำแสงไฟหน้า)</a></font></div><br clear="all"><a name="id09180001290006"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>Fail-safe</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา</p>
+</th>
+<th id="" align="center">
+<p class="thead">ฟังก์ชั่น Fail-safe</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">B1041:14</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์หมุนไฟหน้าเลื่อนไปยังจุดกึ่งกลาง</div>
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์ควบคุมระดับไฟหน้าหยุดทำงานที่ตำแหน่งนี้เมื่อตัดสินว่ามีความบกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">B1041:54</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์หมุนไฟหน้าเลื่อนไปยังจุดกึ่งกลาง</div>
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์ควบคุมระดับไฟหน้าหยุดทำงานที่ตำแหน่งนี้เมื่อตัดสินว่ามีความบกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">B1044:01</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์หมุนไฟหน้าเลื่อนไปยังจุดกึ่งกลาง</div>
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์ควบคุมระดับไฟหน้าหยุดทำงานที่ตำแหน่งนี้เมื่อตัดสินว่ามีความบกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">B10A3:86</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์หมุนไฟหน้า (ด้านซ้าย) หยุดทำงานที่ตำแหน่งนี้เมื่อตัดสินว่ามีความบกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์หมุนไฟหน้า (ด้านขวา) เลื่อนไปยังจุดกึ่งกลาง</div>
+<div class="list">•&nbsp;&nbsp;การควบคุมระบบควบคุมระดับไฟหน้าอัตโนมัติจะดำเนินการอย่างไปขณะที่แอ็คชิวเอเตอร์ควบคุมระดับไฟหน้าอยู่ในตำแหน่ง -0.6&deg; จากจุดที่มีการตัดสินว่าเกิดการบกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">B10A3:87</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์หมุนไฟหน้า (ด้านซ้าย) หยุดทำงานที่ตำแหน่งนี้เมื่อตัดสินว่ามีความบกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์หมุนไฟหน้า (ด้านซ้าย) จะเลื่อนไปยังจุดกึ่งกลาง หรือแอ็คชิวเอเตอร์หมุนไฟหน้า (ด้านซ้าย) และ (ด้านขวา) เลื่อนไปยังจุดกึ่งกลาง</div>
+<div class="list">•&nbsp;&nbsp;การควบคุมระบบควบคุมระดับไฟหน้าอัตโนมัติจะดำเนินการอย่างไปขณะที่แอ็คชิวเอเตอร์ควบคุมระดับไฟหน้าอยู่ในตำแหน่ง -0.6&deg; จากจุดที่มีการตัดสินว่าเกิดการบกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">B10A4:86</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์หมุนไฟหน้า (ด้านขวา) หยุดทำงานที่ตำแหน่งนี้เมื่อตัดสินว่ามีความบกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์หมุนไฟหน้า (ด้านซ้าย) เลื่อนไปยังจุดกึ่งกลาง</div>
+<div class="list">•&nbsp;&nbsp;การควบคุมระบบควบคุมระดับไฟหน้าอัตโนมัติจะดำเนินการอย่างไปขณะที่แอ็คชิวเอเตอร์ควบคุมระดับไฟหน้าอยู่ในตำแหน่ง -0.6&deg; จากจุดที่มีการตัดสินว่าเกิดการบกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">B10A4:87</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์หมุนไฟหน้า (ด้านขวา) หยุดทำงานที่ตำแหน่งนี้เมื่อตัดสินว่ามีความบกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์หมุนไฟหน้า (ขวา) จะเลื่อนไปยังจุดกึ่งกลาง หรือแอ็คชิวเอเตอร์หมุนไฟหน้า (ซ้าย) และ (ขวา) เลื่อนไปยังจุดกึ่งกลาง</div>
+<div class="list">•&nbsp;&nbsp;การควบคุมระบบควบคุมระดับไฟหน้าอัตโนมัติจะดำเนินการอย่างไปขณะที่แอ็คชิวเอเตอร์ควบคุมระดับไฟหน้าอยู่ในตำแหน่ง -0.6&deg; จากจุดที่มีการตัดสินว่าเกิดการบกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">C0051:86</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์หมุนไฟหน้าเลื่อนไปยังจุดกึ่งกลาง</div>
+<div class="list">•&nbsp;&nbsp;การควบคุมระบบควบคุมระดับไฟหน้าอัตโนมัติดำเนินการต่อไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U0001:88</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์หมุนไฟหน้าเลื่อนไปยังจุดกึ่งกลาง</div>
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์ควบคุมระดับไฟหน้าหยุดทำงานที่ตำแหน่งนี้เมื่อตัดสินว่ามีความบกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U0100:00</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์หมุนไฟหน้าเลื่อนไปยังจุดกึ่งกลาง</div>
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์ควบคุมระดับไฟหน้าหยุดทำงานที่ตำแหน่งนี้เมื่อตัดสินว่ามีความบกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U0131:00</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์หมุนไฟหน้าเลื่อนไปยังจุดกึ่งกลาง</div>
+<div class="list">•&nbsp;&nbsp;การควบคุมระบบควบคุมระดับไฟหน้าอัตโนมัติดำเนินการต่อไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U0140:00</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์หมุนไฟหน้าเลื่อนไปยังจุดกึ่งกลาง</div>
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์ควบคุมระดับไฟหน้าหยุดทำงานที่ตำแหน่งนี้เมื่อตัดสินว่ามีความบกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์หมุนไฟหน้าเลื่อนไปยังจุดกึ่งกลาง</div>
+<div class="list">•&nbsp;&nbsp;การควบคุมระบบควบคุมระดับไฟหน้าอัตโนมัติดำเนินการต่อไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U0320:09</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์หมุนไฟหน้าเลื่อนไปยังจุดกึ่งกลาง</div>
+<div class="list">•&nbsp;&nbsp;การควบคุมระบบควบคุมระดับไฟหน้าอัตโนมัติดำเนินการต่อไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U0420:68</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์หมุนไฟหน้าเลื่อนไปยังจุดกึ่งกลาง</div>
+<div class="list">•&nbsp;&nbsp;การควบคุมระบบควบคุมระดับไฟหน้าอัตโนมัติดำเนินการต่อไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U0423:68</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;สัญญาณความผิดพลาดของสวิตช์ AFS OFF</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;การควบคุมแอ็คชิวเอเตอร์หมุนไฟหน้าดำเนินการต่อไปขณะที่สวิตช์ AFS OFF อยู่ในสภาวะเดิมเมื่อตรวจพบความบกพร่อง</div>
+<div class="list">―&nbsp;&nbsp;การควบคุมระบบควบคุมระดับไฟหน้าอัตโนมัติดำเนินการต่อไป</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;สัญญาณความผิดพลาดของสวิตช์สตาร์ท</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;การควบคุม AFS ดำเนินต่อไปขณะบิดสวิตช์สตาร์ท ON (เครื่องยนต์ทำงาน)</div>
+<div class="list">―&nbsp;&nbsp;การควบคุมระบบควบคุมระดับไฟหน้าอัตโนมัติดำเนินการต่อไป</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ความผิดพลาดของสัญญาณตำแหน่งคันเกียร์ (ตำแหน่ง R) (ATX)/เกียร์ถอย (MTX)</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;แอ็คชิวเอเตอร์หมุนไฟหน้าเลื่อนไปยังจุดกึ่งกลาง</div>
+<div class="list">―&nbsp;&nbsp;การควบคุมระบบควบคุมระดับไฟหน้าอัตโนมัติดำเนินการต่อไป</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;สัญญาณตำแหน่งคันเกียร์ (ตำแหน่ง R) (ATX)/เกียร์ถอย (MTX) ไม่มีการกำหนด</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;การควบคุมแอ็คชิวเอเตอร์หมุนไฟหน้าดำเนินการต่อไปขณะที่เซ็นเซอร์ช่วงเกียร์ (ATX)/สวิตช์ไฟถอย (MTX) อยู่ในสภาวะเดิมเมื่อตรวจพบความบกพร่อง</div>
+<div class="list">―&nbsp;&nbsp;การควบคุมระบบควบคุมระดับไฟหน้าอัตโนมัติดำเนินการต่อไป</div>
+</dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U2005:86</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์หมุนไฟหน้าเลื่อนไปยังจุดกึ่งกลาง</div>
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์ควบคุมระดับไฟหน้าหยุดทำงานที่ตำแหน่งนี้เมื่อตัดสินว่ามีความบกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U2300:54</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;การควบคุม AFS ดำเนินการต่อไป</div>
+<div class="list">•&nbsp;&nbsp;การควบคุมระบบควบคุมระดับไฟหน้าอัตโนมัติดำเนินการต่อไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U2300:55</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์หมุนไฟหน้าเลื่อนไปยังจุดกึ่งกลาง</div>
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์ควบคุมระดับไฟหน้าหยุดทำงานที่ตำแหน่งนี้เมื่อตัดสินว่ามีความบกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U2300:56</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;การควบคุม AFS ดำเนินการต่อไป</div>
+<div class="list">•&nbsp;&nbsp;การควบคุมระบบควบคุมระดับไฟหน้าอัตโนมัติดำเนินการต่อไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U3000:42</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์หมุนไฟหน้าเลื่อนไปยังจุดกึ่งกลาง</div>
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์ควบคุมระดับไฟหน้าหยุดทำงานที่ตำแหน่งนี้เมื่อตัดสินว่ามีความบกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U3000:49</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;RAM/ROM บกพร่อง</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;แอ็คชิวเอเตอร์หมุนไฟหน้าเลื่อนไปยังจุดกึ่งกลาง</div>
+<div class="list">―&nbsp;&nbsp;แอ็คชิวเอเตอร์ควบคุมระดับไฟหน้าหยุดทำงานที่ตำแหน่งนี้เมื่อตัดสินว่ามีความบกพร่อง</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่น AFS บกพร่อง</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ใช้ไม่ได้</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ฮาร์ดแวร์ระบบ CAN บกพร่อง</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;แอ็คชิวเอเตอร์หมุนไฟหน้าเลื่อนไปยังจุดกึ่งกลาง</div>
+<div class="list">―&nbsp;&nbsp;แอ็คชิวเอเตอร์ควบคุมระดับไฟหน้าหยุดทำงานที่ตำแหน่งนี้เมื่อตัดสินว่ามีความบกพร่อง</div>
+</dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U3003:16</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์หมุนไฟหน้าหยุดทำงานที่ตำแหน่งนี้เมื่อตัดสินว่ามีความบกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์ควบคุมระดับไฟหน้าหยุดทำงานที่ตำแหน่งนี้เมื่อตัดสินว่ามีความบกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U3003:17</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์หมุนไฟหน้าหยุดทำงานที่ตำแหน่งนี้เมื่อตัดสินว่ามีความบกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์ควบคุมระดับไฟหน้าหยุดทำงานที่ตำแหน่งนี้เมื่อตัดสินว่ามีความบกพร่อง</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</body>
+</html>

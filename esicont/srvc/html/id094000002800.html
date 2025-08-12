@@ -1,0 +1,2409 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>ระบบการวิเคราะห์ปัญหาบนรถ [โมดูลควบคุมตัวถังด้านหลัง (RBCM)]</title>
+</head>
+<body><a name="id094000002800"></a><p class="servinfo-title"><span class="servinfo-head"></span>ระบบการวิเคราะห์ปัญหาบนรถ [โมดูลควบคุมตัวถังด้านหลัง (RBCM)]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id094000002800</p><br clear="all"><a name="id09400000280001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รายละเอียด</p>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่นการวิเคราะห์ปัญหาบนรถจะประกอบด้วยฟังก์ชั่นต่อไปนี้: ฟังก์ชั่นการตรวจจับความบกพร่อง ซึ่งจะตรวจจับความบกพร่องทั้งหมดในชิ้นส่วนที่เกี่ยวข้องกับโมดูลควบคุมตัวถังด้านหลัง (RBCM) ฟังก์ชั่นหน่วยความจำ ซึ่งจะเก็บบันทึกรหัสวิเคราะห์ปัญหาที่ตรวจพบ ฟังก์ชั่นการแสดงผล ซึ่งจะแสดงตำแหน่งและสถานะความบกพร่องผ่านรหัสวิเคราะห์ปัญหาที่ปรากฏออกมา และฟังก์ชั่นการตรวจสอบ PID / ข้อมูล ซึ่งจะอ่านสัญญาณอินพุท / เอาท์พุทที่กำหนด และตรวจสอบสภาวะสัญญาณอินพุท / เอาท์พุท</div>
+<div class="list">•&nbsp;&nbsp;เมื่อใช้ Mazda Modular Diagnostic System (M-MDS) สามารถอ่านและลบรหัสวิเคราะห์ปัญหา และสามารถเปิดใช้งานฟังก์ชั่นการตรวจสอบ PID/DATA ได้</div><br clear="all"><a name="id09400000280002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ฟังก์ชั่นการตรวจจับความบกพร่อง</p>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความบกพร่องในสัญญาณอินพุทและเอาท์พุท</div>
+<div class="list">•&nbsp;&nbsp;ถ้าความบกพร่องเกิดขึ้น โมดูลควบคุมตัวถังด้านหลัง (RBCM) จะบันทึกความบกพร่องเป็นรหัสวิเคราะห์ปัญหา สามารถอ่านรหัสวิเคราะห์ปัญหาที่บันทึกไว้โดย Mazda Modular Diagnostic System (M-MDS)</div>
+<p clear="all">
+<p>
+<div>&times;: สามารถทำได้</div>
+<div>&mdash;: ไม่มี</div>
+</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟเตือน/ไฟแสดงสถานะ</p>
+</th>
+<th id="" align="center">
+<p class="thead">คำอธิบาย</p>
+</th>
+<th id="" align="center">
+<p class="thead">ฟังก์ชั่น Fail-safe</p>
+</th>
+<th id="" align="center">
+<p class="thead">รอบการขับ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ประเภทการทดสอบด้วยตนเอง<sup>*1</sup></p>
+</th>
+<th id="" align="center">
+<p class="thead">ฟังก์ชั่นหน่วยความจำ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1079:13</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ฝากระโปรงหน้าบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B108F:16</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ล็อคประตูบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B109E:87</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับชุดเปิด/ปิดการทำงานผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B109F:49<sup>*2</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในเซ็นเซอร์แจ้งเตือนเมื่อมีผู้บุกรุกบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B109F:86<sup>*2</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">รับสัญญาณผิดพลาดจากเซ็นเซอร์ตรวจจับผู้บุกรุก</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B109F:87<sup>*2</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับเซ็นเซอร์แจ้งเตือนเมื่อมีผู้บุกรุกผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10A5:49<sup>*2</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในไซเรนของระบบป้องกันการโจรกรรมบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10A5:86<sup>*2</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">รับสัญญาณผิดพลาดจากไซเรนระบบกันขโมย</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10A5:87<sup>*2</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับไซเรนของระบบป้องกันการโจรกรรมผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B113E:11</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ตัวเปิดประตูท้ายบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1172:11</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรปลดล็อคของสวิตช์เชื่อมโยงล็อคประตูหน้า (ด้านคนขับ) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1172:13</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรปลดล็อคของสวิตช์เชื่อมโยงล็อคประตูหน้า (ด้านคนขับ) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1174:11<sup>*3</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรปลดล็อคของสวิตช์เชื่อมโยงล็อคประตูหน้า (ด้านผู้โดยสาร)/สวิตช์เชื่อมโยงล็อคประตูหลัง (ด้านซ้าย)/(ด้านขวา) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1174:13<sup>*3</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรปลดล็อคของสวิตช์เชื่อมโยงล็อคประตูหน้า (ด้านผู้โดยสาร)/สวิตช์เชื่อมโยงล็อคประตูหลัง (ด้านซ้าย)/(ด้านขวา) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1175:11</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรของสวิตช์สลักล็อคประตูหน้า (ด้านคนขับ) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1176:11</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรของสวิตช์สลักล็อคประตูหน้า (ด้านผู้โดยสาร) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1178:11</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ล็อคประตูท้ายบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B11DA:16</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์เบ้าเสียบกุญแจประตูหน้าบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B11E9:11</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ล็อคประตูหลัง (ด้านซ้าย) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B11EA:11</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ล็อคประตูหลัง (ด้านขวา) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B126A:11</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรล็อคของสวิตช์เชื่อมโยงล็อคประตูหน้า (ด้านคนขับ) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B126A:13</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรล็อคของสวิตช์เชื่อมโยงล็อคประตูหน้า (ด้านคนขับ) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1A79:13<sup>*3</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรไฟตัดหมอกด้านหลังบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0023:14<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในโมดูลควบคุมตัวถังด้านหลัง (RBCM) บกพร่อง (วงจรขับไฟเบรก)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0010:88</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารชุดอุปกรณ์ผิดพลาด (MS-CAN)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับแผงหน้าปัดผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0447:86<sup>*3</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารระหว่างโมดูลควบคุมตัวถังด้านหน้า (FBCM) กับแผงหน้าปัดผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2100:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การกำหนดค่าโมดูลควบคุมตัวถังด้านหลัง (RBCM) ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:49</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในโมดูลควบคุมตัวถังด้านหลัง (RBCM) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3003:16</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทแรงดันไฟฟ้าแหล่งจ่ายไฟโมดูลควบคุมตัวถังด้านหลัง (RBCM) ต่ำ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;:C: การทดสอบ CMDTC ด้วยตนเอง, การทดสอบ D:ODDTC ด้วยตนเอง</div>
+<div class="deflist">*2&nbsp;&nbsp;: รุ่นที่มีระบบป้องกันการโจรกรรม</div>
+<div class="deflist">*3&nbsp;&nbsp;: รุ่นที่มีไฟตัดหมอกหลัง</div>
+<div class="deflist">*4&nbsp;&nbsp;: รุ่นที่มีระบบสมาร์ทซิตี้เบรก</div><br clear="all"><p><a name="id09400000280003"></a><p class="topic-title"><span class="topic-head"></span>คำอธิบายรหัส 7 หลักของรหัสวิเคราะห์ปัญหา</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เมื่อระบบหรือส่วนประกอบที่เกี่ยวข้องทำงานผิดพลาด CM จะจัดเก็บรหัสวิเคราะห์ปัญหาของส่วนที่ทำงานบกพร่องไว้ในหน่วยความจำของ CM และสามารถเรียกดูข้อมูลที่จัดเก็บโดยใช้เครื่องมือสแกนได้เมื่อจำเป็น รหัสวิเคราะห์ปัญหาได้รับการกำหนดโดยใช้ตัวเลข 7 หลัก ซึ่งตัวเลขแต่ละหลักมีความหมายดังต่อไปนี้<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001567.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001567</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09400000280004"></a><p class="topic-title"><span class="topic-head"></span>ไบต์แสดงสถานะของรหัสวิเคราะห์ปัญหา</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ไบต์แสดงสถานะคือรหัสสองหลัก (หลังเครื่องหมายขีด (-)) หลังรหัสวิเคราะห์ปัญหา 7 หลัก<table class="figure-flame">
+<tr>
+<td width="10mm"></td>
+<td>
+<table class="figure-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001328.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001328</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="list">•&nbsp;&nbsp;ไบต์แสดงสถานะคือรหัสที่แสดงรหัสที่ค้างอยู่, สถานะความบกพร่องปัจจุบัน/ในอดีต หรือสถานะไฟเตือน</div>
+<div class="list">•&nbsp;&nbsp;ไบต์แสดงสถานะสามารถอ่านได้ด้วยการทดสอบ CMDTC ด้วยตนเองโดยใช้ Mazda Modular Diagnostic System (M-MDS)</div>
+<div class="list">•&nbsp;&nbsp;สำหรับรายละเอียดเกี่ยวกับไบต์แสดงสถานะ ให้ดูที่คำอธิบายใน Mazda Modular Diagnostic System (M-MDS) เมื่ออ่านรหัสวิเคราะห์ปัญหา</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09400000280005"></a><p class="topic-title"><span class="topic-head"></span>สภาวะการตรวจพบสำหรับรหัสวิเคราะห์ปัญหานั้นๆ</p>
+<p clear="all">
+<p>
+<div>&times;: สามารถทำได้</div>
+<div>&mdash;: ไม่มี</div>
+</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา</p>
+</th>
+<th id="" align="center">
+<p class="thead">ตำแหน่งความบกพร่องของระบบ</p>
+</th>
+<th id="" align="center">
+<p class="thead">สภาวะการตรวจพบ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1079:13</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ฝากระโปรงหน้าบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมตัวถังด้านหลัง (RBCM) ตรวจพบการขาดวงจรในวงจรสวิตช์ล็อคฝากระโปรงหน้า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B108F:16</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ล็อคประตูบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ขณะที่สวิตช์ล็อคประตู OFF โมดูลควบคุมตัวถังด้านหลัง (RBCM) ตรวจพบแรงดันไฟฟ้าวงจรสวิตช์ล็อคประตูอยู่ที่ 4 V หรือต่ำกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B109E:87</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับชุดเปิด/ปิดการทำงานผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมตัวถังด้านหลัง (RBCM) ตรวจพบการสื่อสารกับชุดเปิด/ปิดการทำงานผิดพลาด 10 ครั้งอย่างต่อเนื่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B109F:49<sup>*1</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในเซ็นเซอร์แจ้งเตือนเมื่อมีผู้บุกรุกบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมตัวถังด้านหลัง (RBCM) ตรวจพบความบกพร่องภายในเซ็นเซอร์ตรวจจับผู้บุกรุก</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B109F:86<sup>*1</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">รับสัญญาณผิดพลาดจากเซ็นเซอร์ตรวจจับผู้บุกรุก</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมตัวถังด้านหลัง (RBCM) รับสัญญาณผิดพลาดจากเซ็นเซอร์ตรวจจับผู้บุกรุกเป็นเวลา 1.5 วินาทีหรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B109F:87<sup>*1</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับเซ็นเซอร์แจ้งเตือนเมื่อมีผู้บุกรุกผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมตัวถังด้านหลัง (RBCM) ไม่สามารถรับสัญญาณจากเซ็นเซอร์ตรวจจับผู้บุกรุกได้เป็นเวลา 1.5 วินาทีหรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10A5:49<sup>*1</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในไซเรนของระบบป้องกันการโจรกรรมบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมตัวถังด้านหลัง (RBCM) ตรวจพบความบกพร่องภายในไซเรนระบบกันขโมย</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10A5:86<sup>*1</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">รับสัญญาณผิดพลาดจากไซเรนระบบกันขโมย</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมตัวถังด้านหลัง (RBCM) รับสัญญาณผิดพลาดจากไซเรนระบบกันขโมยเป็นเวลา 1.5 วินาทีหรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10A5:87<sup>*1</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับไซเรนของระบบป้องกันการโจรกรรมผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมตัวถังด้านหลัง (RBCM) ไม่สามารถรับสัญญาณจากไซเรนระบบกันขโมยได้เป็นเวลา 1.5 วินาทีหรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B113E:11</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ตัวเปิดประตูท้ายบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมตัวถังด้านหลัง (RBCM) ตรวจพบการลัดวงจรลงกราวด์ในวงจรสวิตช์เปิดฝากระโปรงท้าย</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1172:11</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรปลดล็อคของสวิตช์เชื่อมโยงล็อคประตูหน้า (ด้านคนขับ) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ขณะที่ล็อคสวิตช์เชื่อมโยงล็อคประตูหน้า (ด้านคนขับ) โมดูลควบคุมตัวถังด้านหลัง (RBCM) ตรวจพบการลัดวงจรลงกราวด์ในวงจรปลดล็อคสวิตช์เชื่อมโยงล็อคประตูหน้า (ด้านคนขับ)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1172:13</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรปลดล็อคของสวิตช์เชื่อมโยงล็อคประตูหน้า (ด้านคนขับ) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมตัวถังด้านหลัง (RBCM) ตรวจพบการขาดวงจรในวงจรด้านปลดล็อคสวิตช์เชื่อมโยงล็อคประตูหน้า (ด้านคนขับ) ขณะที่ปลดล็อคสวิตช์เชื่อมโยงล็อคประตูหน้า (ด้านคนขับ)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1174:11<sup>*1</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรปลดล็อคของสวิตช์เชื่อมโยงล็อคประตูหน้า (ด้านผู้โดยสาร)/สวิตช์เชื่อมโยงล็อคประตูหลัง (ด้านซ้าย)/(ด้านขวา) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ขณะที่ล็อคสวิตช์เชื่อมโยงล็อคประตูหน้า (ด้านผู้โดยสาร) / สวิตช์เชื่อมโยงล็อคประตูหลัง (ด้านซ้าย) / (ด้านขวา) โมดูลควบคุมตัวถังด้านหลัง (RBCM) ตรวจพบการลัดวงจรลงกราวด์ในวงจรปลดล็อคสวิตช์เชื่อมโยงล็อคประตู</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1174:13<sup>*1</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรปลดล็อคของสวิตช์เชื่อมโยงล็อคประตูหน้า (ด้านผู้โดยสาร)/สวิตช์เชื่อมโยงล็อคประตูหลัง (ด้านซ้าย)/(ด้านขวา) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ขณะที่ปลดล็อคสวิตช์เชื่อมโยงล็อคประตูหน้า (ด้านผู้โดยสาร) / สวิตช์เชื่อมโยงล็อคประตูหลัง (ด้านซ้าย) / (ด้านขวา) โมดูลควบคุมตัวถังด้านหลัง (RBCM) ตรวจพบการขาดวงจรในวงจรปลดล็อคสวิตช์เชื่อมโยงล็อคประตู</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1175:11</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรของสวิตช์สลักล็อคประตูหน้า (ด้านคนขับ) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ขณะที่ปิดประตูหน้า (ด้านคนขับ) (สวิตช์ล็อคประตูหน้า (ด้านคนขับ) off, โมดูลควบคุมตัวถังด้านหลัง (RBCM) ตรวจพบการลัดวงจรลงกราวด์ในวงจรสวิตช์ล็อคประตูหน้า (ด้านคนขับ))</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1176:11</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรของสวิตช์สลักล็อคประตูหน้า (ด้านผู้โดยสาร) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ขณะที่ปิดประตูหน้า (ด้านผู้โดยสาร) (สวิตช์ล็อคประตูหน้า (ด้านผู้โดยสาร) off, โมดูลควบคุมตัวถังด้านหลัง (RBCM) ตรวจพบการลัดวงจรลงกราวด์ในวงจรสวิตช์ล็อคประตูหน้า (ด้านผู้โดยสาร))</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1178:11</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ล็อคประตูท้ายบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ขณะที่ปิดประตูท้าย (สวิตช์ล็อคประตูท้าย off) โมดูลควบคุมตัวถังด้านหลัง (RBCM) ตรวจพบการลัดวงจรลงกราวด์ในวงจรสวิตช์ล็อคประตูท้าย</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B11DA:16</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์เบ้าเสียบกุญแจประตูหน้าบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ขณะที่สวิตช์เบ้าเสียบกุญแจประตูหน้า (ด้านคนขับ) off โมดูลควบคุมตัวถังด้านหลัง (RBCM) ตรวจพบแรงดันไฟฟ้าสวิตช์เบ้าเสียบกุญแจประตูหน้า (ด้านคนขับ) อยู่ที่ 4 V หรือต่ำกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B11E9:11</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ล็อคประตูหลัง (ด้านซ้าย) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ขณะที่ปิดประตูหลัง (ด้านซ้าย) (สวิตช์ล็อคประตูหลัง (ด้านซ้าย) off) โมดูลควบคุมตัวถังด้านหลัง (RBCM) ตรวจพบการลัดวงจรลงกราวด์ในเบ้าสวิตช์ล็อคประตูหลัง (ด้านซ้าย)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B11EA:11</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ล็อคประตูหลัง (ด้านขวา) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ขณะที่ปิดประตูหลัง (ด้านขวา) (สวิตช์ล็อคประตูหลัง (ด้านขวา) off) โมดูลควบคุมตัวถังด้านหลัง (RBCM) ตรวจพบการลัดวงจรลงกราวด์ในเบ้าสวิตช์ล็อคประตูหลัง (ด้านขวา)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B126A:11</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรล็อคของสวิตช์เชื่อมโยงล็อคประตูหน้า (ด้านคนขับ) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ขณะที่ปลดล็อคสวิตช์เชื่อมโยงล็อคประตูหน้า (ด้านคนขับ) โมดูลควบคุมตัวถังด้านหลัง (RBCM) ตรวจพบการลัดวงจรลงกราวด์ในวงจรล็อคสวิตช์เชื่อมโยงล็อคประตูหน้า (ด้านคนขับ)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B126A:13</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรล็อคของสวิตช์เชื่อมโยงล็อคประตูหน้า (ด้านคนขับ) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมตัวถังด้านหลัง (RBCM) ตรวจพบการขาดวงจรในวงจรด้านล็อคสวิตช์เชื่อมโยงล็อคประตูหน้า (ด้านคนขับ) ขณะที่ล็อคสวิตช์เชื่อมโยงล็อคประตูหน้า (ด้านคนขับ)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1A79:13 <sup>*2</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรไฟตัดหมอกด้านหลังบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมตัวถังด้านหลัง (RBCM) ตรวจพบการขาดวงจรในวงจรไฟตัดหมอกหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0023:14<sup>*3</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในโมดูลควบคุมตัวถังด้านหลัง (RBCM) บกพร่อง (วงจรขับไฟเบรก)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมตัวถังด้านหลัง (RBCM) ตรวจพบการขาดวงจรในวงจรไฟเบรก</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0010:88</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารชุดอุปกรณ์ผิดพลาด (MS-CAN)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมตัวถังด้านหลัง (RBCM) ตรวจพบการขาดวงจรในวงจรไฟเบรก</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับแผงหน้าปัดผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมตัวถังด้านหลัง (RBCM) ไม่สามารถรับสัญญาณ CAN จากแผงหน้าปัดได้เป็นเวลา 5 วินาทีหรือมากกว่าขณะที่บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0447:86<sup>*2</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารระหว่างโมดูลควบคุมตัวถังด้านหน้า (FBCM) กับแผงหน้าปัดผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมตัวถังด้านหลัง (RBCM) รับสัญญาณผิดพลาดจากแผงหน้าปัดเป็นเวลา 10 วินาทีหรือมากกว่าอย่างต่อเนื่องขณะที่บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2100:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การกำหนดค่าโมดูลควบคุมตัวถังด้านหลัง (RBCM) ผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบการตั้งค่าโมดูลควบคุมตัวถังด้านหลัง (RBCM) ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:49</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในโมดูลควบคุมตัวถังด้านหลัง (RBCM) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบความบกพร่องภายในโมดูลควบคุมตัวถังด้านหลัง (RBCM)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3003:16</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทแรงดันไฟฟ้าแหล่งจ่ายไฟโมดูลควบคุมตัวถังด้านหลัง (RBCM) ต่ำ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบแรงดันไฟฟ้าวงจรแหล่งจ่ายไฟโมดูลควบคุมตัวถังด้านหลัง (RBCM) อยู่ที่ 5 V หรือสูงกว่า แต่น้อยกว่า 9 V เป็นเวลา 10 วินาทีหรือมากกว่า</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;: รุ่นที่มีระบบกันขโมย</div>
+<div class="deflist">*2&nbsp;&nbsp;: รุ่นที่มีไฟตัดหมอกหลัง</div>
+<div class="deflist">*3&nbsp;&nbsp;:รุ่นที่มีระบบสมาร์ทซิตี้เบรก</div>
+</p><br clear="all"><p><a name="id09400000280006"></a><p class="topic-title"><span class="topic-head"></span>ข้อมูล Snapshot</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ข้อมูลของรหัสวิเคราะห์ปัญหาทั้งหมดที่ตรวจพบในปัจจุบันจะถูกเก็บบันทึก</div>
+</dd>
+</dl>
+<p clear="all">
+<p class="table-title">ตารางข้อมูล Snapshot</p>
+<p>
+<div>&mdash;: ไม่มี</div>
+</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รายการข้อมูล Snapshot</p>
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">หน่วย</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายละเอียดข้อมูล</p>
+</th>
+<th id="" align="center">
+<p class="thead">วิธีการอ่าน/ใช้ข้อมูล</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายการตรวจสอบข้อมูลที่เกี่ยวข้อง</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">AAT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;F</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิภายนอก</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">APP_STATUS</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">Accelerator Pedal Off/Under20%/Over20%/FAIL</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สถานะของตำแหน่งแป้นคันเร่ง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">CFG_STATUS</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">Config Complete/Not Configured/Config Error</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สถานะของการกำหนดค่าแผงหน้าปัด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ECT_STATUS</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">Under 0 degrees C/0-Under 80 degrees C/Over 80 degrees C/FAIL</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สถานะของอุณหภูมิน้ำหล่อเย็นเครื่องยนต์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">IC_VPWR</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันแหล่งจ่ายไฟแผงหน้าปัด</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมตัวถังด้านหลัง (RBCM) จะได้รับค่าแรงดันแหล่งจ่ายไฟของแผงหน้าปัดที่ส่งผ่านสัญญาณระบบ CAN จากแผงหน้าปัดอย่างต่อเนื่อง</div>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบรหัสวิเคราะห์ปัญหา โมดูลควบคุมตัวถังด้านหลัง (RBCM) จะบันทึกแรงดันแหล่งจ่ายไฟของแผงหน้าปัดเมื่อตรวจพบรหัสวิเคราะห์ปัญหาดังกล่าวและแสดงใน M-MDS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">VPWR<sup>*1</sup></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">IG-ON_TIMER</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">hh:mm:ss<sup>*2</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระยะเวลาที่ผ่านไปตั้งแต่บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัดจะบันทึกข้อมูลช่วงเวลาที่ผ่านไปนับตั้งแต่บิดสวิตช์สตาร์ทไปที่ ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+</div>
+</dd>
+</dl>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมตัวถังด้านหลัง (RBCM) จะได้รับระยะเวลาที่ผ่านไปตั้งแต่บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน) ที่ส่งผ่านสัญญาณ CAN จากแผงหน้าปัดตลอดเวลา</div>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบรหัสวิเคราะห์ปัญหา โมดูลควบคุมตัวถังด้านหลัง (RBCM) จะบันทึกระยะเวลาที่ผ่านไปตั้งแต่บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน) เมื่อตรวจพบรหัสวิเคราะห์ปัญหาดังกล่าวและแสดงใน M-MDS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">PWR_MODE_KEY</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">Key Out/Key Recently Out (Position 0)/Accessory (Position 1)/Post Ignition (Position 2)/Ignition On (Position 2)/Running (Position 2)/Running - Starting</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Key Out: บิดสวิตช์สตาร์ท OFF</div>
+<div class="list">•&nbsp;&nbsp;Key Recently Out (Position 0): ช่วงเวลาที่ผ่านไป<span>ภายใน 3 วินาที</span>นับตั้งแต่บิดสวิตช์สตาร์ท OFF</div>
+<div class="list">•&nbsp;&nbsp;Accessory (Position 1): บิดสวิตช์สตาร์ทไปที่ ACC</div>
+<div class="list">•&nbsp;&nbsp;Post Ignition (Position 2): ช่วงเวลาที่ผ่านไป<span>ภายใน 3 วินาที</span>นับตั้งแต่บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;Ignition On (Position 2): บิดสวิตช์สตาร์ทไปที่ ON (เครื่องยนต์ไม่ทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;Running (Position 2): บิดสวิตช์สตาร์ทไปที่ ON (เครื่องยนต์ทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;Running - Starting: สภาวะการสตาร์ท</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมตัวถังด้านหลัง (RBCM) จะได้รับสถานะสวิตช์สตาร์ทที่ส่งผ่านสัญญาณระบบ CAN จากแผงหน้าปัดอย่างต่อเนื่อง</div>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบรหัสวิเคราะห์ปัญหา โมดูลควบคุมตัวถังด้านหลัง (RBCM) จะบันทึกสถานะของสวิตช์สตาร์ทเมื่อตรวจพบรหัสวิเคราะห์ปัญหาดังกล่าวและแสดงใน M-MDS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">RPM_STATUS</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">Engine Stop/Under1500rpm/Over1500rpm/FAIL</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สถานะความเร็วรอบเครื่องยนต์</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมตัวถังด้านหลัง (RBCM) จะได้รับความเร็วรอบเครื่องยนต์ที่ส่งผ่านสัญญาณระบบ CAN จากแผงหน้าปัดอย่างต่อเนื่อง</div>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบรหัสวิเคราะห์ปัญหา โมดูลควบคุมตัวถังด้านหลัง (RBCM) จะบันทึกความเร็วรอบเครื่องยนต์เมื่อตรวจพบรหัสวิเคราะห์ปัญหาดังกล่าวและแสดงใน M-MDS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">TACHOMTR<sup>*1</sup></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">SHIFT_STATUS</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">P/N/D/R/FAIL</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สถานะตำแหน่งคันเกียร์</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมตัวถังด้านหลัง (RBCM) จะได้รับตำแหน่งคันเกียร์ที่ส่งผ่านสัญญาณระบบ CAN จากแผงหน้าปัดอย่างต่อเนื่อง</div>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบรหัสวิเคราะห์ปัญหา โมดูลควบคุมตัวถังด้านหลัง (RBCM) จะบันทึกตำแหน่งคันเกียร์เมื่อตรวจพบรหัสวิเคราะห์ปัญหาดังกล่าวและแสดงใน M-MDS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">TOTAL_DIST</div>
+</td>
+<td id="" align="center">
+<div class="tbody">km</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Miles</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระยะทางรวมสะสมตั้งแต่รถเสร็จสมบูรณ์จนกระทั่งโมดูลควบคุมตัวถังด้านหลัง (RBCM) ตรวจพบรหัสวิเคราะห์ปัญหา (ค่ามาตรบันทึกระยะทางในแผงหน้าปัด)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระยะทางรวมตั้งแต่โมดูลควบคุมตัวถังด้านหลัง (RBCM) ตรวจพบรหัสวิเคราะห์ปัญหาจนถึงปัจจุบันสามารถคำนวณได้โดยการปฏิบัติตามขั้นตอนดังต่อไปนี้</div>
+<div class="list">1.&nbsp;&nbsp;ตรวจสอบค่าจากมาตรบันทึกระยะทางในแผงหน้าปัด</div>
+<div class="list">2.&nbsp;&nbsp;ตรวจสอบรายการข้อมูล Snapshot TOTAL_DIST</div>
+<div class="list">3.&nbsp;&nbsp;ลบ 2 ออกจาก 1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">TOTAL_TIME</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">hh:mm:ss<sup>*2</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">&lrm;&lrm;ระยะเวลาที่ผ่านไปโดยรวมสะสมตั้งแต่รถเสร็จสมบูรณ์จนกระทั่งโมดูลควบคุมตัวถังด้านหลัง (RBCM) ตรวจพบรหัสวิเคราะห์ปัญหา</div>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;เมื่อถอดฟิวส์ ROOM และบิดสวิตช์สตาร์ท OFF เวลาจะไม่ถูกนำไปรวมกับช่วงเวลาที่ผ่านไป</div>
+</div>
+</dd>
+</dl>
+</td>
+<td id="" align="left">
+<div class="tbody">ระยะทางรวมตั้งแต่โมดูลควบคุมตัวถังด้านหลัง (RBCM) ตรวจพบรหัสวิเคราะห์ปัญหาจนถึงปัจจุบันสามารถคำนวณได้โดยการปฏิบัติตามขั้นตอนดังต่อไปนี้</div>
+<div class="list">1.&nbsp;&nbsp;ตรวจสอบรายการ PID TOTAL_TIME บนแผงหน้าปัด</div>
+<div class="list">2.&nbsp;&nbsp;ตรวจสอบรายการข้อมูล Snapshot TOTAL_TIME</div>
+<div class="list">3.&nbsp;&nbsp;ลบ 2 ออกจาก 1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">TOTAL_TIME<sup>*1</sup></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">VPWR</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันแหล่งจ่ายไฟของโมดูลควบคุมตัวถังด้านหลัง (RBCM)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">VPWR_IG1</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">VSPD_STATUS</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">Stop/0-10km/h/Over10km/h/FAIL</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สถานะความเร็วรถ</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมตัวถังด้านหลัง (RBCM) จะได้รับความเร็วรถที่ส่งผ่านสัญญาณระบบ CAN จากแผงหน้าปัดอย่างต่อเนื่อง</div>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบรหัสวิเคราะห์ปัญหา โมดูลควบคุมตัวถังด้านหลัง (RBCM) จะบันทึกความเร็วรถเมื่อตรวจพบรหัสวิเคราะห์ปัญหาดังกล่าวและแสดงใน M-MDS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">SPEEDOMTR<sup>*1</sup></div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;: PID แผงหน้าปัด (ดูที่ <font class="extxref-label"><a href="id092200021843.html">การวิเคราะห์ปัญหาบนรถ [แผงหน้าปัด]</a></font>)</div>
+<div class="deflist">*2&nbsp;&nbsp;:หน่วยวินาที (s) อาจแสดงอยู่หลังจุดทศนิยม</div>
+</p><br clear="all"><a name="id09400000280007"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ฟังก์ชั่นการตรวจสอบข้อมูล</p>
+<div class="list">•&nbsp;&nbsp;สามารถเลือกและอ่านรายการการตรวจสอบสัญญาณอินพุท / เอาท์พุทที่อยู่ในโมดูลควบคุมตัวถังด้านหลัง (RBCM) แบบเรียลไทม์ได้ด้วยฟังก์ชั่นตรวจสอบ PID / ข้อมูล</div><br clear="all"><p><a name="id09400000280008"></a><p class="topic-title"><span class="topic-head"></span>ตารางการตรวจสอบข้อมูล / PID</p>
+<p clear="all">
+<p>
+<div>&mdash;: ไม่มี</div>
+</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">PID</p>
+</th>
+<th id="" align="center">
+<p class="thead">หน่วย/การทำงาน</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายละเอียดข้อมูล</p>
+</th>
+<th id="" align="center">
+<p class="thead">วิธีการอ่าน/ใช้ข้อมูล</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายการการตรวจสอบ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">AT_DL_IG</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: แอ็คชิวเอเตอร์ล็อคประตูไม่ทำการปลดล็อคตามสถานะสวิตช์สตาร์ท OFF</div>
+<div class="list">•&nbsp;&nbsp;On: แอ็คชิวเอเตอร์ล็อคประตูทำการปลดล็อคตามสถานะสวิตช์สตาร์ท OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แอ็คชิวเอเตอร์ล็อคประตู</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">AT_DL_SHIFT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: แอ็คชิวเอเตอร์ล็อคประตูไม่ทำการล็อคหรือปลดล็อคตามการเข้าเกียร์</div>
+<div class="list">•&nbsp;&nbsp;On: แอ็คชิวเอเตอร์ล็อคประตูทำการล็อคหรือปลดล็อคตามการเข้าเกียร์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แอ็คชิวเอเตอร์ล็อคประตู</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">AT_DL_VSPD</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: แอ็คชิวเอเตอร์ล็อคประตูไม่ทำการล็อคตามความเร็วรถ</div>
+<div class="list">•&nbsp;&nbsp;On: แอ็คชิวเอเตอร์ล็อคประตูทำการล็อคตามความเร็วรถ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แอ็คชิวเอเตอร์ล็อคประตู</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">BG_HORN_RLY<sup>*1</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: รีเลย์ของแตรระบบป้องกันการโจรกรรมปิดใช้งาน</div>
+<div class="list">•&nbsp;&nbsp;On: รีเลย์ของแตรระบบป้องกันการโจรกรรมเปิดใช้งาน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;รีเลย์ของแตรระบบป้องกันการโจรกรรม</div>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมตัวถังด้านหลัง (RBCM)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">BRAKE_SW<sup>*2</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์ไฟเบรก (สัญญาณ No. 1) ปิดใช้งาน (ไม่มีการเหยียบแป้นเบรก)</div>
+<div class="list">•&nbsp;&nbsp;On: สวิตช์ไฟเบรก (สัญญาณ No. 1) เปิดใช้งาน (มีการเหยียบแป้นเบรก)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ไฟเบรก</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">C_DL_SW_LK<sup>*3</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์ล็อคประตูไม่อยู่ในสถานะล็อค</div>
+<div class="list">•&nbsp;&nbsp;On: สวิตช์ล็อคประตูอยู่ในสถานะล็อค</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ล็อคประตู</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">C_DL_SW_UNL<sup>*3</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์ล็อคประตูไม่อยู่ในสถานะปลดล็อค</div>
+<div class="list">•&nbsp;&nbsp;On: สวิตช์ล็อคประตูอยู่ในสถานะปลดล็อค</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ล็อคประตู</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">CNT_S_COMM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมตัวถังด้านหลัง (RBCM) นับสัญญาณขอการล็อค/การปลดล็อค (การส่งแบบเป็นชุด) ที่ได้รับจากชุดเปิด/ปิดการทำงาน</div>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;หาก<span>จำนวนเกิน 15 ครั้ง</span> จอแสดงผลจะกลับสู่ 0</div>
+</div>
+</dd>
+</dl>
+</td>
+<td id="" align="left">
+<div class="tbody">หากการล็อค/การปลดล็อคถูกดำเนินการโดยรีโมทหรือสวิตช์ส่งคำขอ ชุดเปิด/ปิดการทำงานจะส่งสัญญาณขอการล็อค/การปลดล็อคไปยังโมดูลควบคุมตัวถังด้านหลัง (RBCM) หากได้รับสัญญาณขอการล็อค/การปลดล็อคตามปกติ โมดูลควบคุมตัวถังด้านหลัง (RBCM) จะเพิ่มจำนวนนับทีละหนึ่งให้กับ PID เมื่อต้องการตรวจสอบค่า PID รายการ CNT_S_COMM ให้บิดสวิตช์สตาร์ท OFF เนื่องจากชุดเปิด/ปิดการทำงานจะไม่ส่งออกสัญญาณการล็อค/ปลดล็อคเมื่อบิดสวิตช์สตาร์ท ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงาน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">DL_MT_A_LK</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: แอ็คชิวเอเตอร์ล็อคประตูทั้งหมดไม่ทำการล็อค</div>
+<div class="list">•&nbsp;&nbsp;On: แอ็คชิวเอเตอร์ล็อคประตูทั้งหมดทำการล็อค</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แอ็คชิวเอเตอร์ล็อคประตู</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">DL_MT_A_UNL</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: แอ็คชิวเอเตอร์ล็อคประตูทั้งหมดไม่ทำการปลดล็อค</div>
+<div class="list">•&nbsp;&nbsp;On: แอ็คชิวเอเตอร์ล็อคประตูทั้งหมดทำการปลดล็อค</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แอ็คชิวเอเตอร์ล็อคประตู</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">DL_MT_D_UNL<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: แอ็คชิวเอเตอร์ล็อคประตูหน้า (ด้านคนขับ) ไม่ทำการปลดล็อค</div>
+<div class="list">•&nbsp;&nbsp;On: แอ็คชิวเอเตอร์ล็อคประตูหน้า (ด้านคนขับ) ทำการปลดล็อค</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แอ็คชิวเอเตอร์ล็อคประตูหน้า (ด้านคนขับ)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">DL_MT_S-LK<sup>*5</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: ระบบล็อคแบบดับเบิลไม่ทำงาน</div>
+<div class="list">•&nbsp;&nbsp;On: ระบบล็อคแบบดับเบิลทำงาน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แอ็คชิวเอเตอร์ล็อคประตู</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">DOOR_ALL</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Close/OPEN</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Close: ประตูรถทุกบานปิด</div>
+<div class="list">•&nbsp;&nbsp;OPEN: ประตูบานใดบานหนึ่งเปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ล็อคประตู</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">DOOR_D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Close/OPEN</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Close: ประตูด้านคนขับปิด</div>
+<div class="list">•&nbsp;&nbsp;OPEN: ประตูด้านคนขับเปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ล็อคประตูหน้า (ด้านคนขับ)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ELAT_MT_RLY</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: ล็อคประตูท้ายไม่ทำการปลดล็อค</div>
+<div class="list">•&nbsp;&nbsp;On: ล็อคประตูท้ายทำการปลดล็อค</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แอ็คชิวเอเตอร์สลักล็อคและตัวล็อคประตูท้าย</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ELAT_UNL</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: ล็อคประตูท้ายไม่ทำการปลดล็อค</div>
+<div class="list">•&nbsp;&nbsp;On: ล็อคประตูท้ายทำการปลดล็อค</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แอ็คชิวเอเตอร์สลักล็อคและตัวล็อคประตูท้าย</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">FUEL_SEN_M</div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แสดงแรงดันไฟฟ้าอินพุทของชุดส่งสัญญาณเกจวัดระดับน้ำมันเชื้อเพลิงที่ส่งจากโมดูลควบคุมตัวถังด้านหลัง (RBCM)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หากถังน้ำมันเชื้อเพลิงอยู่ในระดับต่ำ แรงดันไฟฟ้าอินพุทของโมดูลควบคุมตัวถังด้านหลัง (RBCM) จะเพิ่มขึ้นเนื่องจากความต้านทานของชุดส่งสัญญาณเกจวัดระดับน้ำมันเชื้อเพลิงลดลง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดส่งสัญญาณเกจวัดระดับน้ำมันเชื้อเพลิง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">FUEL_SEN_S<sup>*6</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แสดงแรงดันไฟฟ้าอินพุทของชุดส่งสัญญาณเกจวัดระดับน้ำมันเชื้อเพลิง (SUB) ที่ส่งจากโมดูลควบคุมตัวถังด้านหลัง (RBCM)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หากไม่มีชุดส่งสัญญาณเกจวัดระดับน้ำมันเชื้อเพลิง (SUB) จะส่งออกค่าแรงดันไฟฟ้าคงที่ขนาด <span>5 V</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดส่งสัญญาณเกจวัดระดับน้ำมันเชื้อเพลิง (รอง)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">FUEL_SEN_SV</div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แสดงแรงดันไฟฟ้าที่จ่ายไปยังชุดส่งสัญญาณเกจวัดระดับน้ำมันเชื้อเพลิงจากโมดูลควบคุมตัวถังด้านหลัง (RBCM)</div>
+<dl>
+<dd>
+<div class="attention2-label">ข้อควรระวัง</div>
+</dd>
+<dd>
+<div class="attention2">
+<div class="list">•&nbsp;&nbsp;แม้ว่าแรงดันไฟฟ้าแบตเตอรี่จะถุกจ่ายไปยังชุดส่งสัญญาณเกจวัดระดับน้ำมันเชื้อเพลิงจากโมดูลควบคุมตัวถังด้านหลัง (RBCM) แต่การแสดงผลรายการ PID จะถูกควบคุมโดยไมโครคอมพิวเตอร์ ด้วยเหตุนี้จึงแสดงค่าแรงดันไฟฟ้าที่ <span>5 V</span> เพราะฉะนั้น แม้ว่าแรงดันไฟฟ้าขั้วตามจริงจะแตกต่างจากค่าที่แสดงของรายการ PID แต่ไม่ได้แปลว่ามีความผิดปกติแต่อย่างใด</div>
+</div>
+</dd>
+</dl>
+</td>
+<td id="" align="left">
+<div class="tbody">หลังจากบิดสวิตช์สตาร์ท OFF แล้ว การจ่ายแรงดันไฟฟ้าแบตเตอรี่ไปยังชุดส่งสัญญาณเกจวัดระดับน้ำมันเชื้อเพลิงจากโมดูลควบคุมตัวถังด้านหลัง (RBCM) จะดำเนินการต่อไปจนกระทั่งการสื่อสารระบบ CAN อยู่ในโหมดสแตนด์บาย</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ชุดส่งสัญญาณเกจวัดระดับน้ำมันเชื้อเพลิง</div>
+<div class="list">•&nbsp;&nbsp;ชุดส่งสัญญาณเกจวัดระดับน้ำมันเชื้อเพลิง (รอง)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">HOOD<sup>*7</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">Close/OPEN</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Close: ฝากระโปรงหน้าปิด</div>
+<div class="list">•&nbsp;&nbsp;OPEN: ฝากระโปรงหน้าเปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ล็อคฝากระโปรงหน้า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">IG1_SW</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แสดงสภาวะการจ่ายกำลังของโมดูลควบคุมตัวถังด้านหลัง (RBCM)</div>
+<div class="list">•&nbsp;&nbsp;Off: กำลัง IG1 ไม่ถูกส่งไปยังโมดูลควบคุมตัวถังด้านหลัง (RBCM)</div>
+<div class="list">•&nbsp;&nbsp;On: กำลัง IG1 ถูกส่งไปยังโมดูลควบคุมตัวถังด้านหลัง (RBCM)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หากมีความบกพร่องในแหล่งจ่ายไฟ IG1 ที่ส่งไปยังโมดูลควบคุมตัวถังด้านหลัง (RBCM), ระบบควบคุมล็อคประตูและไฟภายในห้องโดยสารซึ่งเป็นส่วนที่ควบคุมโดยโมดูลควบคุมตัวถังด้านหลัง (RBCM) จะไม่ทำงานตามปกติเนื่องจากค่า PID รายการ IG1_SW ถูกนำมาใช้เพื่อพิจารณาตัดสินการบิดสวิตช์สตาร์ท ON/OFF สำหรับโมดูลควบคุมตัวถังด้านหลัง (RBCM)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">รีเลย์ IG1</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">KC_SW_D_LK</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์เบ้าเสียบกุญแจประตูหน้าไม่อยู่ในสถานะล็อค</div>
+<div class="list">•&nbsp;&nbsp;On: สวิตช์เบ้าเสียบกุญแจประตูหน้าอยู่ในสถานะล็อค</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์เบ้าเสียบกุญแจประตูหน้า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">KC_SW_D_UNL</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์เบ้าเสียบกุญแจประตูหน้าไม่อยู่ในสถานะปลดล็อค</div>
+<div class="list">•&nbsp;&nbsp;On: สวิตช์เบ้าเสียบกุญแจประตูหน้าอยู่ในสถานะปลดล็อค</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์เบ้าเสียบกุญแจประตูหน้า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">LL_P/R<sup>*7</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">Unlock/Other</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Unlock: สวิตช์เชื่อมโยงล็อคประตูหน้า (ด้านผู้โดยสาร), สวิตช์เชื่อมโยงล็อคประตูหลัง (ด้านซ้าย), สวิตช์เชื่อมโยงล็อคประตูหลัง (ด้านขวา) อยู่ในสถานะปลดล็อค</div>
+<div class="list">•&nbsp;&nbsp;Other: สวิตช์เชื่อมโยงล็อคประตูหน้า (ด้านผู้โดยสาร), สวิตช์เชื่อมโยงล็อคประตูหลัง (ด้านซ้าย), สวิตช์เชื่อมโยงล็อคประตูหลัง (ด้านขวา) อยู่ในสถานะล็อค</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;สวิตช์เชื่อมโยงล็อคประตูหน้า (ด้านผู้โดยสาร)</div>
+<div class="list">•&nbsp;&nbsp;สวิตช์เชื่อมโยงล็อคประตูหลัง (ด้านซ้าย)</div>
+<div class="list">•&nbsp;&nbsp;สวิตช์เชื่อมโยงล็อคประตูหลัง (ด้านขวา)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">LL_SW_D_LK</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์เชื่อมโยงล็อคประตูหน้า (ด้านคนขับ) อยู่ในสถานะปลดล็อค</div>
+<div class="list">•&nbsp;&nbsp;On: สวิตช์เชื่อมโยงล็อคประตูหน้า (ด้านคนขับ) อยู่ในสถานะล็อค</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์เชื่อมโยงล็อคประตูหน้า (ด้านคนขับ)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">LL_SW_D_UNL</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์เชื่อมโยงล็อคประตูหน้า (ด้านคนขับ) อยู่ในสถานะล็อค</div>
+<div class="list">•&nbsp;&nbsp;On: สวิตช์เชื่อมโยงล็อคประตูหน้า (ด้านคนขับ) อยู่ในสถานะปลดล็อค</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์เชื่อมโยงล็อคประตูหน้า (ด้านคนขับ)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">R_FOG_L_CS<sup>*8</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: ไม่ได้รับสัญญาณเปิดไฟตัดหมอกด้านหลัง</div>
+<div class="list">•&nbsp;&nbsp;On: ได้รับสัญญาณเปิดไฟตัดหมอกด้านหลัง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมตัวถังด้านหน้า (FBCM)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">R_FOG_LMP<sup>*8</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: ไฟตัดหมอกด้านหลังปิดใช้งาน</div>
+<div class="list">•&nbsp;&nbsp;On: ไฟตัดหมอกด้านหลังเปิดใช้งาน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไฟตัดหมอกด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">R_LMP</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: ปิดใช้งานไฟถอย</div>
+<div class="list">•&nbsp;&nbsp;On: เปิดใช้งานไฟถอย</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไฟถอย</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">R_LMP_CS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On/Unknown/Fault</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: ได้รับสัญญาณปิดไฟถอย</div>
+<div class="list">•&nbsp;&nbsp;On: ได้รับสัญญาณเปิดไฟถอย</div>
+<div class="list">•&nbsp;&nbsp;Unknown: ไม่ได้กำหนดสัญญาณปิดไฟถอย</div>
+<div class="list">•&nbsp;&nbsp;Fault: การสื่อสารกับแผงหน้าปัดล้มเหลว</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัด</div>
+<div class="list">•&nbsp;&nbsp;ไฟถอย</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">R_WIP_MT_LO</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: มอเตอร์ที่ปัดน้ำฝนกระจกหลังไม่ทำงาน</div>
+<div class="list">•&nbsp;&nbsp;On: มอเตอร์ที่ปัดน้ำฝนกระจกหลังทำงาน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">มอเตอร์ที่ปัดน้ำฝนกระจกหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ROOM_LMP</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: ไฟส่องเอกสารปิดใช้งาน</div>
+<div class="list">•&nbsp;&nbsp;On: ไฟส่องเอกสารเปิดใช้งาน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ไฟส่องเอกสารด้านหน้า</div>
+<div class="list">•&nbsp;&nbsp;ไฟส่องเอกสารด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">SEAT_B_2C<sup>*9</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">Unbuckled/Buckled</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Unbuckled: ไม่มีการคาดเข็มขัดนิรภัยเบาะกลางแถวสอง</div>
+<div class="list">•&nbsp;&nbsp;Buckled: มีการคาดเข็มขัดนิรภัยเบาะกลางแถวสอง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ปลอกล็อคเข็มขัดนิรภัยเบาะกลางที่นั่งด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">SEAT_B_2L<sup>*9</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">Unbuckled/Buckled</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Unbuckled: ไม่มีการคาดเข็มขัดนิรภัยเบาะริมด้านซ้ายแถวสอง</div>
+<div class="list">•&nbsp;&nbsp;Buckled: มีการคาดเข็มขัดนิรภัยเบาะริมด้านซ้ายแถวสอง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ปลอกล็อคเข็มขัดนิรภัยที่นั่งด้านหลัง (ซ้าย)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">SEAT_B_2R<sup>*9</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">Unbuckled/Buckled</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Unbuckled: ไม่มีการคาดเข็มขัดนิรภัยเบาะริมด้านขวาแถวสอง</div>
+<div class="list">•&nbsp;&nbsp;Buckled: มีการคาดเข็มขัดนิรภัยเบาะริมด้านขวาแถวสอง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ปลอกล็อคเข็มขัดนิรภัยที่นั่งด้านหลัง (ขวา)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">STOP_LMP<sup>*2</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: ไฟเบรกปิดใช้งาน</div>
+<div class="list">•&nbsp;&nbsp;On: ไฟเบรกเปิดใช้งาน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไฟเบรก</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">STOP_LMP_CS<sup>*2</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: ได้รับสัญญาณปิดไฟเบรก</div>
+<div class="list">•&nbsp;&nbsp;On: ได้รับสัญญาณเปิดไฟเบรก</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัด</div>
+<div class="list">•&nbsp;&nbsp;ไฟเบรก</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">T_ROOM_LMP</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: ไฟห้องเก็บสัมภาระปิดใช้งาน</div>
+<div class="list">•&nbsp;&nbsp;On: ไฟห้องเก็บสัมภาระเปิดใช้งาน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไฟห้องเก็บสัมภาระ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">T_UNL_SW</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: ไม่มีการกดสวิตช์ตัวเปิดประตูท้าย</div>
+<div class="list">•&nbsp;&nbsp;On: มีการกดสวิตช์ตัวเปิดประตูท้าย</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ตัวเปิดประตูท้าย</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">TRUNK</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Close/OPEN</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Close: ประตูท้ายปิด</div>
+<div class="list">•&nbsp;&nbsp;OPEN: ประตูท้ายเปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ล็อคประตูท้าย</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">VPWR_B_R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันไฟฟ้าที่ขั้ว 2P ของโมดูลควบคุมตัวถังด้านหลัง (RBCM) (แหล่งจ่ายไฟ +B) ปรากฏขึ้น</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แบตเตอรี่</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">VPWR_IG1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันไฟฟ้าที่ขั้ว 2I ของโมดูลควบคุมตัวถังด้านหลัง (RBCM) (แหล่งจ่ายไฟ IG1) ปรากฏขึ้น</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;รีเลย์ IG1</div>
+<div class="list">•&nbsp;&nbsp;แบตเตอรี่</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;:รุ่นที่มีแตรของระบบป้องกันการโจรกรรม</div>
+<div class="deflist">*2&nbsp;&nbsp;: รุ่นที่มีระบบสมาร์ทซิตี้เบรก</div>
+<div class="deflist">*3&nbsp;&nbsp;:รุ่นที่มีสวิตช์ล็อคประตู</div>
+<div class="deflist">*4&nbsp;&nbsp;:รุ่นที่มีระบบปลดล็อค 2 ขั้นตอน</div>
+<div class="deflist">*5&nbsp;&nbsp;:รุ่นที่มีระบบล็อคแบบดับเบิล</div>
+<div class="deflist">*6&nbsp;&nbsp;:ขับเคลื่อน 4 ล้อ</div>
+<div class="deflist">*7&nbsp;&nbsp;: รุ่นที่มีระบบกันขโมย</div>
+<div class="deflist">*8&nbsp;&nbsp;:รุ่นที่มีไฟตัดหมอกด้านหลัง</div>
+<div class="deflist">*9&nbsp;&nbsp;:รุ่นที่มีระบบเตือนเข็มขัดนิรภัยที่นั่งด้านหลัง</div>
+</p><br clear="all"><a name="id09400000280009"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ฟังก์ชั่นโหมดคำสั่งการทำงาน</p>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่น Active Command Mode แสดงไว้ทางด้านล่างนี้</div>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รายการการจำลองสภาพปัญหา</p>
+</th>
+<th id="" align="center">
+<p class="thead">หน่วย/การทำงาน</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายละเอียดข้อมูล</p>
+</th>
+<th id="" align="center">
+<p class="thead">ชื่อส่วนสัญญาณอินพุท</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">BG_HORN_RLY<sup>*1</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: ปิดเสียงแตรระบบป้องกันการโจรกรรม</div>
+<div class="list">•&nbsp;&nbsp;On: เปิดเสียงแตรระบบป้องกันการโจรกรรม</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมตัวถังด้านหลัง (RBCM)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">DL_MT_A</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Lock/Unlock</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Lock: ล็อคประตูทุกบาน</div>
+<div class="list">•&nbsp;&nbsp;Unlock: ปลดล็อคประตูทุกบาน</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แอ็คชิวเอเตอร์ล็อคประตู</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ELAT_MT_RLY</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สั่งให้การปลดล็อคประตูท้ายหยุดทำงาน</div>
+<div class="list">•&nbsp;&nbsp;On: ปลดล็อคประตูท้าย</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แอ็คชิวเอเตอร์สลักล็อคและตัวล็อคประตูท้าย</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ELAT_UNL</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สั่งให้การปลดล็อคประตูท้ายหยุดทำงาน</div>
+<div class="list">•&nbsp;&nbsp;On: ปลดล็อคประตูท้าย</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แอ็คชิวเอเตอร์สลักล็อคและตัวล็อคประตูท้าย</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">R_FOG_LMP<sup>*2</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: ปิดใช้งานไฟตัดหมอกด้านหลัง</div>
+<div class="list">•&nbsp;&nbsp;On: สั่งให้ไฟตัดหมอกด้านหลังติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไฟตัดหมอกด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">R_LMP</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: ปิดใช้งานไฟถอย</div>
+<div class="list">•&nbsp;&nbsp;On: สั่งให้ไฟถอยติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไฟถอย</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">R_WIP_MT_LO</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สั่งให้มอเตอร์ที่ปัดน้ำฝนกระจกหลังหยุดทำงาน</div>
+<div class="list">•&nbsp;&nbsp;On: ใช้งานมอเตอร์ที่ปัดน้ำฝนกระจกหลัง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">มอเตอร์ที่ปัดน้ำฝนกระจกหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">STOP_LMP_CS<sup>*3</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: ปิดใช้งานไฟเบรก</div>
+<div class="list">•&nbsp;&nbsp;On: สั่งให้ไฟเบรกติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไฟเบรก</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;:รุ่นที่มีแตรของระบบป้องกันการโจรกรรม</div>
+<div class="deflist">*2&nbsp;&nbsp;: รุ่นที่มีไฟตัดหมอกหลัง</div>
+<div class="deflist">*3&nbsp;&nbsp;:รุ่นที่มีระบบสมาร์ทซิตี้เบรก</div>
+</body>
+</html>

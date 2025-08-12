@@ -1,0 +1,819 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>การตรวจสอบรหัสวิเคราะห์ปัญหาของระบบการวิเคราะห์ปัญหาบนรถ [GW6A-EL, GW6AX-EL]</title>
+</head>
+<body><a name="id050230290100"></a><p class="servinfo-title"><span class="servinfo-head"></span>การตรวจสอบรหัสวิเคราะห์ปัญหาของระบบการวิเคราะห์ปัญหาบนรถ [GW6A-EL, GW6AX-EL]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id050230290100</p><br clear="all"><a name="id05023029010001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ขั้นตอนการอ่านรหัสวิเคราะห์ปัญหา</p>
+<p class="list">1.&nbsp;&nbsp;ต่อ M-MDS เข้ากับ DLC-2</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;หลังจากรถได้รับการระบุแล้ว ให้เลือกรายการต่อไปนี้จากหน้าจอการตั้งค่าเริ่มต้นของ M-MDS</p>
+<p class="list">
+<dl class="list">
+<dd>(1)&nbsp;&nbsp;เลือก &ldquo;Self Test&rdquo;</dd>
+<dd>
+</dd>
+</dl>
+<dl class="list">
+<dd>(2)&nbsp;&nbsp;เลือก &ldquo;Modules&rdquo;</dd>
+<dd>
+</dd>
+</dl>
+<dl class="list">
+<dd>(3)&nbsp;&nbsp;เลือก &ldquo;TCM&rdquo;</dd>
+<dd>
+</dd>
+</dl>
+</p>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;ข้อมูลสภาพรถยนต์ / ข้อมูล Snapshot จะปรากฏขึ้นที่ด้านบนของหน้าจอช่วยเหลือเมื่อเลือกรหัสวิเคราะห์ปัญหาที่แสดง</div>
+<div class="list-title">ข้อมูลสภาพรถยนต์ (Freeze frame data)</div>
+<div class="list">•&nbsp;&nbsp;ข้อมูลสภาพรถยนต์ประกอบด้วยข้อมูลสภาวะการทำงานของระบบควบคุมเกียร์และรถเมื่อตรวจพบความบกพร่องในระบบควบคุมเกียร์และเก็บบันทึกไว้ใน TCM</div>
+<div class="list">•&nbsp;&nbsp;ข้อมูลสภาพรถยนต์จะถูกเก็บบันทึกในขณะที่ไฟแสดงสถานะความบกพร่องติดสว่าง และเฉพาะส่วนของข้อมูลรหัสวิเคราะห์ปัญหาจะถูกเก็บบันทึกไว้</div>
+<div class="list-title">ข้อมูล Snapshot</div>
+<div class="list">•&nbsp;&nbsp;ข้อมูลของรหัสวิเคราะห์ปัญหาทั้งหมดที่ตรวจพบในปัจจุบันจะถูกเก็บบันทึก</div>
+<dl>
+<div class="list-title">จังหวะรหัสวิเคราะห์ปัญหาที่บันทึก</div>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;สำหรับรหัสวิเคราะห์ปัญหาด้วยหนึ่งรอบการขับขี่ ข้อมูลจะถูกบันทึกในระหว่างช่วงระยะเวลาการตัดสินความบกพร่อง</div>
+<div class="list">―&nbsp;&nbsp;สำหรับรหัสวิเคราะห์ปัญหาด้วยสองรอบการขับขี่ ข้อมูลจะถูกบันทึกในระหว่างช่วงระยะเวลาที่ไม่ใช่การตัดสินความบกพร่อง (การวิเคราะห์ปัญหาครั้งที่ 1)</div>
+</dd>
+</dl>
+</div>
+</dd>
+</dl>
+<p class="list">3.&nbsp;&nbsp;จากนั้น เลือก &ldquo;Retrieve CMDTCs&rdquo; และปฏิบัติขั้นตอนต่างๆ ตามคำแนะนำบนหน้าจอ M-MDS</p>
+<p class="list">
+</p>
+<p class="list">4.&nbsp;&nbsp;ตรวจสอบรหัสวิเคราะห์ปัญหาตามคำแนะนำบนหน้าจอ</p>
+<p class="list">
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;หากมีรหัสวิเคราะห์ปัญหาปรากฏขึ้น ให้ดำเนินการแก้ไขปัญหาตามการตรวจสอบรหัสวิเคราะห์ปัญหานั้นๆ</div>
+</dd>
+</dl>
+</p>
+<p class="list">5.&nbsp;&nbsp;หลังจากการซ่อมเสร็จสมบูรณ์แล้ว ให้ลบรหัสวิเคราะห์ปัญหาทั้งหมดที่เก็บบันทึกอยู่ใน TCM (ดูที่ <font class="intxref-label"><a href="#id05023029010002">ตารางรายการข้อมูลสภาพรถยนต์</a></font>)</p>
+<p class="list">
+</p><br clear="all"><p><a name="id05023029010002"></a><p class="topic-title"><span class="topic-head"></span>ตารางรายการข้อมูลสภาพรถยนต์</p>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;อ้างอิงตารางตรวจสอบ PID/DATA เพื่อตรวจยืนยันสถานะการทำงานของระบบควบคุมเกียร์ในขณะที่ TCM ไม่เก็บบันทึกรหัสวิเคราะห์ปัญหา (ดูที่ <font class="extxref-label"><a href="id050230290300.html">การตรวจสอบ PID/DATA MONITOR ในระบบวิเคราะห์ปัญหาบนรถ [GW6A-EL, GW6AX-EL]</a></font>)</div>
+<div class="list">•&nbsp;&nbsp;รายการข้อมูลสภาพรถยนต์ไม่แสดงตามรหัสวิเคราะห์ปัญหาที่ตรวจพบ</div>
+</div>
+</dd>
+</dl>
+<p clear="all">
+<p>
+<div>&mdash;: ไม่มี</div>
+</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รายการข้อมูลสภาพรถยนต์</p>
+</th>
+<th id="" align="center">
+<p class="thead">หน่วย</p>
+</th>
+<th id="" align="center">
+<p class="thead">คำอธิบาย</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายการตรวจสอบ PID/DATA ที่เกี่ยวข้อง</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">LOAD</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภาระเครื่องยนต์ที่คำนวณได้</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ECT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C {&deg;F}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิน้ำหล่อเย็นเครื่องยนต์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ECT</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">RPM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">RPM</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความเร็วรอบเครื่องยนต์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">RPM</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">VS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">KPH {MPH}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความเร็วรถ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">VSS</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">IAT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C {&deg;F}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิไอดี</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">TP</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตำแหน่งลิ้นเร่ง No.1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">RUNTM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">hh:mm:ss</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระยะเวลาตั้งแต่สตาร์ทเครื่องยนต์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">VPWR</div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันไฟฟ้าของโมดูล</div>
+</td>
+<td id="" align="center">
+<div class="tbody">VPWR</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">APP_D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตำแหน่งแป้นคันเร่ง No.1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</p><br clear="all"><p><a name="id05023029010003"></a><p class="topic-title"><span class="topic-head"></span>ตารางรายการข้อมูล Snapshot</p>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;อ้างอิงตารางตรวจสอบ PID/DATA เพื่อตรวจยืนยันสถานะการทำงานของระบบควบคุมเกียร์ในขณะที่ TCM ไม่เก็บบันทึกรหัสวิเคราะห์ปัญหา (ดูที่ <font class="extxref-label"><a href="id050230290300.html">การตรวจสอบ PID/DATA MONITOR ในระบบวิเคราะห์ปัญหาบนรถ [GW6A-EL, GW6AX-EL]</a></font>)</div>
+<div class="list">•&nbsp;&nbsp;รายการข้อมูล Snapshot ไม่ปรากฏขึ้นตามรหัสวิเคราะห์ปัญหาที่ตรวจพบ</div>
+</div>
+</dd>
+</dl>
+<p clear="all">
+<p>
+<div>&mdash;: ไม่มี</div>
+</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รายการข้อมูล Snapshot</p>
+</th>
+<th id="" align="center">
+<p class="thead">หน่วย</p>
+</th>
+<th id="" align="center">
+<p class="thead">คำอธิบาย</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายการตรวจสอบ PID/DATA ที่เกี่ยวข้อง</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">LOAD</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภาระเครื่องยนต์ที่คำนวณได้</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ECT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C {&deg;F}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิน้ำหล่อเย็นเครื่องยนต์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ECT</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">RPM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">RPM</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความเร็วรอบเครื่องยนต์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">RPM</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">VSS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">KPH {MPH}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความเร็วรถ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">VSS</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">IAT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C {&deg;F}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิไอดี</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">EG_RUN_TIME</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระยะเวลาตั้งแต่สตาร์ทเครื่องยนต์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">VPWR</div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันไฟฟ้าของโมดูล</div>
+</td>
+<td id="" align="center">
+<div class="tbody">VPWR</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">APP1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตำแหน่งแป้นคันเร่ง No.1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">GEAR_SEL</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1/2/3/4/5/6</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตำแหน่งการเปลี่ยนเกียร์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">GEAR_SEL</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">TSS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">RPM</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความเร็วเพลารับกำลัง / เทอร์ไบน์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">TSS</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">TFT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C {&deg;F}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิ ATF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">TFT</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">OSS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">RPM</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความเร็วเพลาส่งกำลัง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OSS</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">LOCK_UP</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/SLIP/On</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ทอร์คคอนเวอร์เตอร์ (สภาวะ TCC)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">LOCK_UP</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">OIL_PRES_SW2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สภาวะสวิตช์แรงดันน้ำมัน No.2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OP_SW2</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">OIL_PRES_SW1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สภาวะสวิตช์แรงดันน้ำมัน No.1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OP_SW1</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">SS_ON_OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สภาวะโซลินอยด์ ON/OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">SS_ON-OFF</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">TORQUE_DES</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Nm</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงบิดเครื่องยนต์ที่ต้องการ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">TORQUE_DES</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">APP</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตำแหน่งแป้นคันเร่ง No.1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">G_INHIBIT_6</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เกียร์ 6 ถูกยับยั้งเนื่องจากความบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">G_INHIBIT_5</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เกียร์ 5 ถูกยับยั้งเนื่องจากความบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">G_INHIBIT_4</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เกียร์ 4 ถูกยับยั้งเนื่องจากความบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">G_INHIBIT_3</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เกียร์ 3 ถูกยับยั้งเนื่องจากความบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">G_INHIBIT_2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เกียร์ 2 ถูกยับยั้งเนื่องจากความบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">G_INHIBIT_1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เกียร์ 1 ถูกยับยั้งเนื่องจากความบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">G_INHIBIT_R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เกียร์ R ถูกยับยั้งเนื่องจากความบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">G_INHIBIT_N</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เกียร์ N ถูกยับยั้งเนื่องจากความบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">OIL_PRES_SW4</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สภาวะสวิตช์แรงดันน้ำมัน No.4</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OP_SW4</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">OIL_PRES_SW3</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สภาวะสวิตช์แรงดันน้ำมัน No.3</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OP_SW3</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">EOP_RLY</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สภาวะรีเลย์ปั๊มน้ำมันเกียร์ AT ไฟฟ้า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">EOP_RLY</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">SHIFT_CTRL</div>
+</td>
+<td id="" align="center">
+<div class="tbody">DEFAULT/MANUAL/C_CONTROL/HIGH_TEMP/D_MANUAL/FAIL_SAFE</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โหมดควบคุมการเปลี่ยนเกียร์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">SHIFT_CTRL</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">SLIP_VALUE</div>
+</td>
+<td id="" align="center">
+<div class="tbody">RPM</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ค่าการลื่นจริงระหว่าง TSS กับ OSS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">HTM_DIS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">km {mile}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระยะทางตั้งแต่การตัดสินของโหมดอุณหภูมิ ATF สูง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">HTM_DIS</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">MST_REC_SFT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แสดงตำแหน่งเกียร์ก่อนเปลี่ยนเกียร์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">SE_TYPE</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">SFT_CTL_STS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แสดงสภาวะการทำงานของการควบคุมการเปลี่ยนเกียร์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">SC_STATE</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">SERIAL_DTC</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">รหัสวิเคราะห์ปัญหา</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">TR</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตำแหน่งเซ็นเซอร์ช่วงตำแหน่งเกียร์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">TR</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</p><br clear="all"><a name="id05023029010004"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ขั้นตอนการลบรหัสวิเคราะห์ปัญหา</p>
+<p class="list">1.&nbsp;&nbsp;ต่อ M-MDS เข้ากับ DLC-2</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;หลังจากรถได้รับการระบุแล้ว ให้เลือกรายการต่อไปนี้จากหน้าจอการตั้งค่าเริ่มต้นของ M-MDS</p>
+<p class="list">
+<dl class="list">
+<dd>(1)&nbsp;&nbsp;เลือก &ldquo;Self Test&rdquo;</dd>
+<dd>
+</dd>
+</dl>
+<dl class="list">
+<dd>(2)&nbsp;&nbsp;เลือก &ldquo;Modules&rdquo;</dd>
+<dd>
+</dd>
+</dl>
+<dl class="list">
+<dd>(3)&nbsp;&nbsp;เลือก &ldquo;TCM&rdquo;</dd>
+<dd>
+</dd>
+</dl>
+<dl class="list">
+<dd>(4)&nbsp;&nbsp;เลือก &ldquo;Retrieve CMDTCs&rdquo;</dd>
+<dd>
+</dd>
+</dl>
+</p>
+<p class="list">3.&nbsp;&nbsp;ทำการตรวจสอบรหัสวิเคราะห์ปัญหาตามคำแนะนำบนหน้าจอ</p>
+<p class="list">
+</p>
+<p class="list">4.&nbsp;&nbsp;กดปุ่ม Clear บนหน้าจอรหัสวิเคราะห์ปัญหาเพื่อลบรหัสวิเคราะห์ปัญหา</p>
+<p class="list">
+</p>
+<p class="list">5.&nbsp;&nbsp;บิดสวิตช์สตาร์ท OFF</p>
+<p class="list">
+</p>
+<p class="list">6.&nbsp;&nbsp;ปิดประตูทุกบาน ฝากระโปรงหน้า ฝากระโปรงท้าย และประตูท้าย และล็อคประตู แล้วรอเป็นเวลา <span>3 นาที</span></p>
+<p class="list">
+</p>
+<p class="list">7.&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ ON (เครื่องยนต์ไม่ทำงานหรือทำงาน) และรอเป็นเวลา <span>5 วินาที หรือมากกว่า</span></p>
+<p class="list">
+</p>
+<p class="list">8.&nbsp;&nbsp;ทำการตรวจสอบรหัสวิเคราะห์ปัญหา (ดูที่ <font class="intxref-label"><a href="#id05023029010001">ขั้นตอนการอ่านรหัสวิเคราะห์ปัญหา</a></font>)</p>
+<p class="list">
+</p>
+<p class="list">9.&nbsp;&nbsp;ตรวจสอบว่าไม่มีรหัสวิเคราะห์ปัญหาปรากฏขึ้น</p>
+<p class="list">
+</p>
+</body>
+</html>

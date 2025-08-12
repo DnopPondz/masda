@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>โมดูลควบคุมพัดลม [SKYACTIV-D 2.2]</title>
+</head>
+<body><a name="id0112s6101200"></a><p class="servinfo-title"><span class="servinfo-head"> </span>โมดูลควบคุมพัดลม [SKYACTIV-D 2.2]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0112s6101200</p><br clear="all"><a name="id0112s610120001"></a><p class="servinfosub-title"><span class="servinfosub-head"> </span>จุดประสงค์/การทำงาน</p>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมพัดลมจะทำงานโดยรับสัญญาณจาก PCM เพื่อจ่ายกำลังไฟฟ้าไปที่มอเตอร์พัดลมระบายความร้อน</div><br clear="all"><a name="id0112s610120002"></a><p class="servinfosub-title"><span class="servinfosub-head"> </span>โครงสร้าง</p>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมพัดลมจะติดตั้งอยู่ที่โครงพัดลมหม้อน้ำ </div>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001848.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001848</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id0112s610120003"></a><p class="servinfosub-title"><span class="servinfosub-head"> </span>การทำงาน</p>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมพัดลมจะให้การควบคุมแปรผันอย่างต่อเนื่องของอัตราการหมุนของมอเตอร์พัดลมระบายความร้อน จึงช่วยลดเสียงการทำงานของพัดลมและการกินกำลังไฟฟ้า</div>
+<div class="list">•&nbsp;&nbsp;พัดลมระบายความร้อนอาจยังทำงานเป็นเวลาหลายวินาทีหรือหลายนาทีหลังจากปิดสวิตช์สตาร์ทขึ้นอยู่กับสัญญาณอินพุทจากส่วนควบคุม (ดูที่ <font class="extxref-label"><a href="id0140z7205000.html">การควบคุมพัดลมไฟฟ้า [SKYACTIV-D 2.2]</a></font>)</div>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00002026.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00002026</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id0112s610120004"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>Fail-safe</p>
+<div class="ptxt">โมดูลควบคุมพัดลมมีฟังก์ชั่นแหล่งจ่ายไฟเพื่อให้มอเตอร์พัดลมระบายความร้อนและฟังก์ชั่นการป้องกันดังต่อไปนี้ทำงาน</div>
+<p class="list">1.&nbsp;&nbsp;ระบบ fail-safe ป้องกันกระแสไฟฟ้าเกิน</p>
+<p class="list">
+<dl>
+<dd>
+<div class="list">―&nbsp;&nbsp;ถ้ากระแสไฟฟ้าไปที่มอเตอร์พัดลมระบายความร้อนเกินค่ากำหนด ฟังก์ชั่นป้องกันกระแสไฟฟ้าเกินของโมดูลควบคุมพัดลมจะทำงาน และค่ากระแสไฟฟ้าไปที่มอเตอร์พัดลมระบายความร้อนจะถูกควบคุมให้น้อยกว่าค่ากำหนด</div>
+</dd>
+</dl>
+</p>
+<p class="list">2.&nbsp;&nbsp;ระบบ fail-safe ป้องกันความร้อนเกิน</p>
+<p class="list">
+<dl>
+<dd>
+<div class="list">―&nbsp;&nbsp;ถ้าอุณหภูมิภายในโมดูลควบคุมพัดลมถึงอุณหภูมิที่กำหนดหรือสูงกว่า ฟังก์ชั่นป้องกันความร้อนเกินของโมดูลควบคุมพัดลมจะทำงานตามลำดับดังต่อไปนี้</div>
+<dl>
+<dd class="list">
+<div class="list">1.&nbsp;&nbsp;ความเร็วในการหมุนของมอเตอร์พัดลมระบายความร้อนจะเพิ่มขึ้นเพื่อเพิ่มการไหลของอากาศเย็นไปที่โมดูลควบคุมพัดลม</div>
+<div class="list">2.&nbsp;&nbsp;ถ้าอุณหภูมิเพิ่มขึ้นต่อไปอีก มอเตอร์พัดลมระบายความร้อนจะหยุดทำงานเพื่อยับยั้งการเกิดความร้อนจากการให้กำลังไฟฟ้า</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</p>
+<p class="list">3.&nbsp;&nbsp;ระบบ fail-safe วงจรสัญญาณอินพุทขาดวงจร</p>
+<p class="list">
+<dl>
+<dd>
+<div class="list">―&nbsp;&nbsp;ถ้าเกิดการขาดวงจรขึ้นในชุดสายไฟระหว่าง PCM กับโมดูลควบคุมพัดลม ฟังก์ชั่นป้องกันวงจรสัญญาณอินพุทขาดวงจรของโมดูลควบคุมพัดลมจะทำงานเพื่อเพิ่มความเร็วในการหมุนของมอเตอร์พัดลมระบายความร้อนเพื่อหลีกเลี่ยงการเกิดความร้อนเกินของเครื่องยนต์</div>
+</dd>
+</dl>
+</p>
+</body>
+</html>

@@ -1,0 +1,1672 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>การตัดสินตำแหน่งการขาดวงจร (MS-CAN) [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (R.H.D.)]</title>
+</head>
+<body><a name="id100209000500"></a><p class="servinfo-title"><span class="servinfo-head"></span>การตัดสินตำแหน่งการขาดวงจร (MS-CAN) [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (R.H.D.)]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id100209000500</p>
+<dl>
+<dd>
+<div class="attention2-label">ข้อควรระวัง</div>
+</dd>
+<dd>
+<div class="attention2">
+<div class="list">•&nbsp;&nbsp;ทำการวิเคราะห์ปัญหาดังต่อไปนี้เฉพาะเมื่อวิเคราะห์ปัญหาที่มีการขาดวงจรโดย<font class="extxref-label"><a href="id100209000100.html">ลำดับการวิเคราะห์ปัญหาระบบเครือข่ายควบคุมพื้นที่ (CAN) [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (R.H.D.)]</a></font></div>
+<div class="list">•&nbsp;&nbsp;ถ้าตรวจพบชิ้นส่วนที่บกพร่องในสายการสื่อสาร ก่อนทำการปลดขั้วต่อที่เกี่ยวข้องสำหรับการตรวจสอบ ให้กดขั้วต่อในทิศทางการเชื่อมต่อเพื่อตรวจสอบว่าไม่มีการหลุดหลวมหรือการไม่เชื่อมต่อ</div>
+<div class="list">•&nbsp;&nbsp;เมื่อปลดขั้วต่อ ให้ตรวจสอบว่าไม่มีความเสียหาย เสียรูป หรือการผุกร่อนของขั้วต่างๆ ของขั้วต่อ</div>
+</div>
+</dd>
+</dl>
+<p class="list">1.&nbsp;&nbsp;ตรวจสอบรหัสวิเคราะห์ปัญหาของโมดูลที่เกี่ยวข้องกับระบบ CAN</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;ใช้รหัสวิเคราะห์ปัญหาการสื่อสารผิดพลาดและโมดูลที่ทำงานล้มเหลวกับ<font class="intxref-label"><a href="#id10020900050001">รูปแบบการแสดงรหัสวิเคราะห์ปัญหาและตำแหน่งที่บกพร่อง</a></font> และเลือกสาเหตุที่เป็นไปได้สำหรับผลการวิเคราะห์และอ้างอิงสำหรับรายการการตรวจสอบ</p>
+<p class="list">
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;สามารถตัดสินตำแหน่งการขาดวงจรได้โดยรหัสวิเคราะห์ปัญหาที่แสดงในตาราง<font class="intxref-label"><a href="#id10020900050001">รูปแบบการแสดงรหัสวิเคราะห์ปัญหาและตำแหน่งที่บกพร่อง</a></font> รหัสวิเคราะห์ปัญหาที่ไม่ได้ระบุไว้ในตารางจะไม่ใช้สำหรับการตัดสินตำแหน่งการขาดวงจร</div>
+</div>
+</dd>
+</dl>
+</p>
+<p class="list">3.&nbsp;&nbsp;ตรวจสอบสาเหตุที่เป็นไปได้และรายการการตรวจสอบของชิ้นส่วนที่บกพร่องนั้นๆ</p>
+<p class="list">
+</p>
+<p class="list">4.&nbsp;&nbsp;หลังจากการซ่อม ให้กลับไปที่<font class="extxref-label"><a href="id100209000100.html">ลำดับการวิเคราะห์ปัญหาระบบเครือข่ายควบคุมพื้นที่ (CAN) [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (R.H.D.)]</a></font> และตรวจสอบว่าการซ่อมเสร็จสมบูรณ์</p>
+<p class="list">
+</p><br clear="all"><a name="id10020900050001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รูปแบบการแสดงรหัสวิเคราะห์ปัญหาและตำแหน่งที่บกพร่อง</p>
+<p clear="all">
+<p>
+<div>กากบาท (&times;): แสดงขึ้น</div>
+</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center" colspan="2">
+<p class="thead"><span>การแสดงผลของ M-MDS</span></p>
+</th>
+<th id="" align="center" colspan="10" rowspan="2">
+<p class="thead"><span>รูปแบบการแสดงรหัสวิเคราะห์ปัญหาและตำแหน่งที่บกพร่อง</span></p>
+</th>
+</tr>
+<tr>
+<th id="" align="center">
+<p class="thead"><span>โมดูลที่รหัสวิเคราะห์ปัญหาแสดงออกมา</span></p>
+</th>
+<th id="" align="center">
+<p class="thead"><span>รหัสวิเคราะห์ปัญหา</span></p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">R_BCM</div>
+<div class="tbody">(โมดูลควบคุมตัวถังด้านหลัง (RBCM))</div>
+</td>
+<td id="" align="center">
+<div class="tbody">U0155</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="5">
+<div class="tbody">BSML<sup>*1</sup></div>
+<div class="tbody">(โมดูลควบคุม BSM (ด้านซ้าย))</div>
+</td>
+<td id="" align="center">
+<div class="tbody">U0100:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0131:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0214:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0233:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="5">
+<div class="tbody">BSMR<sup>*1</sup></div>
+<div class="tbody">(โมดูลควบคุม BSM (ด้านขวา))</div>
+</td>
+<td id="" align="center">
+<div class="tbody">U0100:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0131:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0214:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0232:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="4">
+<div class="tbody">RVM<sup>*2</sup></div>
+<div class="tbody">(โมดูลควบคุมการตรวจจับรถด้านหลัง (ด้านขวา))</div>
+</td>
+<td id="" align="center">
+<div class="tbody">U0100:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0121:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0214:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">EATC<sup>*3</sup></div>
+<div class="tbody">(ชุดควบคุมอุณหภูมิ)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="2">
+<div class="tbody">ACU<sup>*4</sup></div>
+<div class="tbody">(ชุดเครื่องเสียง)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">U0142:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="3">
+<div class="tbody">IC</div>
+<div class="tbody">(แผงหน้าปัด)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">U0142:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0232:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0233:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody"><span>โมดูลหน้าจอ M-MDS</span></div>
+</td>
+<td id="" align="center" colspan="10">
+<div class="tbody"><span>รูปแบบการแสดง [ความล้มเหลว]</span></div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" colspan="2">
+<div class="tbody">R_BCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" colspan="2">
+<div class="tbody">BSML<sup>*1</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" colspan="2">
+<div class="tbody">BSMR<sup>*1</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" colspan="2">
+<div class="tbody">RVM<sup>*2</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" colspan="2">
+<div class="tbody">EATC<sup>*3</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" colspan="2">
+<div class="tbody">ACU<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" colspan="2">
+<div class="tbody">IC</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="12">
+<div class="tbody"><span>ผลการวิเคราะห์</span></div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" colspan="2">
+<div class="tbody">สาเหตุที่เป็นไปได้และรายการการตรวจสอบ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">
+<font class="intxref-label"><a href="#id10020900050002">A</a></font>
+</div>
+</td>
+<td id="" align="center">
+<div class="tbody">
+<font class="intxref-label"><a href="#id10020900050006">B</a></font>
+</div>
+</td>
+<td id="" align="center">
+<div class="tbody">
+<font class="intxref-label"><a href="#id10020900050010">C</a></font>
+</div>
+</td>
+<td id="" align="center">
+<div class="tbody">
+<font class="intxref-label"><a href="#id10020900050013">D</a></font>
+</div>
+</td>
+<td id="" align="center">
+<div class="tbody">
+<font class="intxref-label"><a href="#id10020900050017">E</a></font>
+</div>
+</td>
+<td id="" align="center">
+<div class="tbody">
+<font class="intxref-label"><a href="#id10020900050021">F</a></font>
+</div>
+</td>
+<td id="" align="center">
+<div class="tbody">
+<font class="intxref-label"><a href="#id10020900050025">G</a></font>
+</div>
+</td>
+<td id="" align="center">
+<div class="tbody">
+<font class="intxref-label"><a href="#id10020900050029">H</a></font>
+</div>
+</td>
+<td id="" align="center">
+<div class="tbody">
+<font class="intxref-label"><a href="#id10020900050033">I</a></font>
+</div>
+</td>
+<td id="" align="center">
+<div class="tbody">
+<font class="intxref-label"><a href="#id10020900050037">J</a></font>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;:รุ่นที่มี BSM</div>
+<div class="deflist">*2&nbsp;&nbsp;:รุ่นที่มีระบบตรวจจับรถด้านหลัง</div>
+<div class="deflist">*3&nbsp;&nbsp;:รุ่นที่มีระบบปรับอากาศแบบอัตโนมัติ</div>
+<div class="deflist">*4&nbsp;&nbsp;:รุ่นที่มีชุดเครื่องเสียง</div><br clear="all"><a name="id10020900050002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>A</p><br clear="all"><p><a name="id10020900050003"></a><p class="topic-title"><span class="topic-head"></span>สาเหตุที่เป็นไปได้</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;การไม่เชื่อมต่อ การสัมผัสไม่แน่น ความเสียหาย การเสียรูป การผุกร่อนของขั้วของขั้วต่อ</div>
+<div class="list">•&nbsp;&nbsp;การขาดวงจรของชุดสายไฟระหว่างโมดูลควบคุม BSM (ด้านซ้าย) กับขั้วต่อ C-23</div>
+<div class="list">•&nbsp;&nbsp;การขาดวงจรของชุดสายไฟระหว่างขั้วต่อ C-23 กับ RCBM</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อ C-23 บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุม BSM (ด้านซ้าย) บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;วงจรระบบ CAN ของโมดูลควบคุมตัวถังด้านหน้า (RBCM) บกพร่อง</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id10020900050004"></a><p class="topic-title"><span class="topic-head"></span>ผังวงจรระบบ</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzw00003567.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzw00003567</div>
+</td>
+</tr>
+</table>
+</p><br clear="all"><p><a name="id10020900050005"></a><p class="topic-title"><span class="topic-head"></span>รายการที่ตรวจสอบ</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อโมดูลควบคุม BSM (ด้านซ้าย)</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อโมดูลควบคุมตัวถังด้านหลัง (RBCM)</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อ C-23</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระหว่างขั้ว H ของโมดูลควบคุม BSM (ด้านซ้าย) กับขั้วต่อ C-23</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระหว่างขั้ว G ของโมดูลควบคุม BSM (ด้านซ้าย) กับขั้วต่อ C-23</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระหว่างขั้ว 4I ของโมดูลควบคุมตัวถังด้านหลัง (RBCM) กับขั้วต่อ C-23</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระหว่างขั้ว 4L ของโมดูลควบคุมตัวถังด้านหลัง (RBCM) กับขั้วต่อ C-23</div>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุม BSM (ด้านซ้าย)</div>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมตัวถังด้านหลัง (RBCM)</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ระหว่างขั้ว 4G ของโมดูลควบคุมตัวถังด้านหลัง (RBCM) กับขั้ว 4I ของโมดูลควบคุมตัวถังด้านหลัง (RBCM)</div>
+<div class="list">―&nbsp;&nbsp;ระหว่างขั้ว 4J ของโมดูลควบคุมตัวถังด้านหลัง (RBCM) กับขั้ว 4L ของโมดูลควบคุมตัวถังด้านหลัง (RBCM)</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</p><br clear="all"><a name="id10020900050006"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>B</p><br clear="all"><p><a name="id10020900050007"></a><p class="topic-title"><span class="topic-head"></span>สาเหตุที่เป็นไปได้</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;การไม่เชื่อมต่อ การสัมผัสไม่แน่น ความเสียหาย การเสียรูป การผุกร่อนของขั้วของขั้วต่อ</div>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมตัวถังด้านหลัง (RBCM) บกพร่อง</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id10020900050008"></a><p class="topic-title"><span class="topic-head"></span>ผังวงจรระบบ</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzw00003568.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzw00003568</div>
+</td>
+</tr>
+</table>
+</p><br clear="all"><p><a name="id10020900050009"></a><p class="topic-title"><span class="topic-head"></span>รายการที่ตรวจสอบ</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมตัวถังด้านหลัง (RBCM)</div>
+</dd>
+</dl>
+</p><br clear="all"><a name="id10020900050010"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>C</p><br clear="all"><p><a name="id10020900050011"></a><p class="topic-title"><span class="topic-head"></span>รุ่นที่มีระบบตรวจจับรถด้านหลังหรือระบบ BSM</p>
+<dl>
+<dd>
+<div class="list-title">สาเหตุที่เป็นไปได้</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;การไม่เชื่อมต่อ การสัมผัสไม่แน่น ความเสียหาย การเสียรูป การผุกร่อนของขั้วของขั้วต่อ</div>
+<div class="list">•&nbsp;&nbsp;การขาดวงจรของชุดสายไฟระหว่างโมดูลควบคุมตัวถังด้านหลัง (RBCM) กับขั้วต่อ C-47, C-48</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อ C-47, C-48 บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;วงจรระบบ CAN ของโมดูลควบคุมตัวถังด้านหน้า (RBCM) บกพร่อง</div>
+</dd>
+</dl>
+<p class="figure-title">ผังวงจรระบบ</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzw00003569.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzw00003569</div>
+</td>
+</tr>
+</table>
+<dl>
+<dd>
+<div class="list-title">รายการที่ตรวจสอบ</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อโมดูลควบคุมตัวถังด้านหลัง (RBCM)</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อ C-47, C-48</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระหว่างขั้ว 4G ของโมดูลควบคุมตัวถังด้านหลัง (RBCM) กับขั้วต่อ C-47</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระหว่างขั้ว 4J ของโมดูลควบคุมตัวถังด้านหลัง (RBCM) กับขั้วต่อ C-48</div>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมตัวถังด้านหลัง (RBCM)</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ระหว่างขั้ว 4G ของโมดูลควบคุมตัวถังด้านหลัง (RBCM) กับขั้ว 4I ของโมดูลควบคุมตัวถังด้านหลัง (RBCM)</div>
+<div class="list">―&nbsp;&nbsp;ระหว่างขั้ว 4J ของโมดูลควบคุมตัวถังด้านหลัง (RBCM) กับขั้ว 4L ของโมดูลควบคุมตัวถังด้านหลัง (RBCM)</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id10020900050012"></a><p class="topic-title"><span class="topic-head"></span>รุ่นที่ไม่มีระบบตรวจจับรถด้านหลังหรือระบบ BSM</p>
+<dl>
+<dd>
+<div class="list-title">สาเหตุที่เป็นไปได้</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;การไม่เชื่อมต่อ การสัมผัสไม่แน่น ความเสียหาย การเสียรูป การผุกร่อนของขั้วของขั้วต่อ</div>
+<div class="list">•&nbsp;&nbsp;การขาดวงจรของชุดสายไฟระหว่างโมดูลควบคุมตัวถังด้านหลัง (RBCM) กับขั้วต่อ C-14</div>
+<div class="list">•&nbsp;&nbsp;การขาดวงจรของชุดสายไฟระหว่างขั้วต่อ C-14 กับขั้วต่อ C-08</div>
+<div class="list">•&nbsp;&nbsp;การขาดวงจรของชุดสายไฟระหว่างขั้วต่อ C-08 กับขั้วต่อ C-34</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อ C-14 บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อ C-08 บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อ C-34 บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมตัวถังด้านหลัง (RBCM) บกพร่อง</div>
+</dd>
+</dl>
+<p class="figure-title">ผังวงจรระบบ</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzw00003570.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzw00003570</div>
+</td>
+</tr>
+</table>
+<dl>
+<dd>
+<div class="list-title">รายการที่ตรวจสอบ</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อโมดูลควบคุมตัวถังด้านหลัง (RBCM)</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อ C-14</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อ C-08</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อ C-34</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระหว่างขั้ว 4G ของโมดูลควบคุมตัวถังด้านหลัง (RBCM) กับขั้วต่อ C-14</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระหว่างขั้ว 4J ของโมดูลควบคุมตัวถังด้านหลัง (RBCM) กับขั้วต่อ C-14</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระหว่างขั้วต่อ C-14 กับขั้วต่อ C-08</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระหว่างขั้วต่อ C-08 กับขั้วต่อ C-34</div>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมตัวถังด้านหลัง (RBCM)</div>
+</dd>
+</dl>
+</p><br clear="all"><a name="id10020900050013"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>D</p><br clear="all"><p><a name="id10020900050014"></a><p class="topic-title"><span class="topic-head"></span>สาเหตุที่เป็นไปได้</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;การไม่เชื่อมต่อ การสัมผัสไม่แน่น ความเสียหาย การเสียรูป การผุกร่อนของขั้วของขั้วต่อ</div>
+<div class="list">•&nbsp;&nbsp;การขาดวงจรของชุดสายไฟระหว่างขั้วต่อระบบตรวจจับรถด้านหลัง (ด้านขวา) กับขั้วต่อ C-43</div>
+<div class="list">•&nbsp;&nbsp;การขาดวงจรของชุดสายไฟระหว่างขั้วต่อ C-43 กับขั้วต่อ C-47, C-48</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อ C-43 บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อ C-47, C-48 บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา) บกพร่อง</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id10020900050015"></a><p class="topic-title"><span class="topic-head"></span>ผังวงจรระบบ</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzw00003571.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzw00003571</div>
+</td>
+</tr>
+</table>
+</p><br clear="all"><p><a name="id10020900050016"></a><p class="topic-title"><span class="topic-head"></span>รายการที่ตรวจสอบ</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อโมดูลควบคุมการตรวจจับรถด้านหลัง (ด้านขวา)</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อ C-43</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อ C-47, C-48</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระหว่างขั้ว L ของโมดูลควบคุมการตรวจจับรถด้านหลัง (ด้านขวา) กับขั้วต่อ C-43</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระหว่างขั้ว I ของโมดูลควบคุมการตรวจจับรถด้านหลัง (ด้านขวา) กับขั้วต่อ C-43</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระหว่างขั้วต่อ C-43 กับขั้วต่อ C-47, C-48</div>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมการตรวจจับรถด้านหลัง (ด้านขวา)</div>
+</dd>
+</dl>
+</p><br clear="all"><a name="id10020900050017"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>E</p><br clear="all"><p><a name="id10020900050018"></a><p class="topic-title"><span class="topic-head"></span>สาเหตุที่เป็นไปได้</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;การไม่เชื่อมต่อ การสัมผัสไม่แน่น ความเสียหาย การเสียรูป การผุกร่อนของขั้วของขั้วต่อ</div>
+<div class="list">•&nbsp;&nbsp;การขาดวงจรของชุดสายไฟระหว่างโมดูลควบคุม BSM (ด้านขวา) กับขั้วต่อ C-47, C-48</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อ C-47, C-48 บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุม BSM (ด้านขวา) บกพร่อง</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id10020900050019"></a><p class="topic-title"><span class="topic-head"></span>ผังวงจรระบบ</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzw00003572.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzw00003572</div>
+</td>
+</tr>
+</table>
+</p><br clear="all"><p><a name="id10020900050020"></a><p class="topic-title"><span class="topic-head"></span>รายการที่ตรวจสอบ</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อโมดูลควบคุม BSM (ด้านขวา)</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อ C-47, C-48</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระหว่างขั้ว H ของโมดูลควบคุม BSM (ด้านขวา) กับขั้วต่อ C-47</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระหว่างขั้ว G ของโมดูลควบคุม BSM (ด้านขวา) กับขั้วต่อ C-48</div>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุม BSM (ด้านขวา)</div>
+</dd>
+</dl>
+</p><br clear="all"><a name="id10020900050021"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>F</p><br clear="all"><p><a name="id10020900050022"></a><p class="topic-title"><span class="topic-head"></span>สาเหตุที่เป็นไปได้</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;การไม่เชื่อมต่อ การสัมผัสไม่แน่น ความเสียหาย การเสียรูป การผุกร่อนของขั้วของขั้วต่อ</div>
+<div class="list">•&nbsp;&nbsp;การขาดวงจรของชุดสายไฟระหว่างขั้วต่อ C-47, C-48 กับขั้วต่อ C-14</div>
+<div class="list">•&nbsp;&nbsp;การขาดวงจรของชุดสายไฟระหว่างขั้วต่อ C-14 กับ C-08</div>
+<div class="list">•&nbsp;&nbsp;การขาดวงจรของชุดสายไฟระหว่างขั้วต่อ C-08 กับ C-34</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อ C-47, C-48 บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อ C-14 บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อ C-08 บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อ C-34 บกพร่อง</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id10020900050023"></a><p class="topic-title"><span class="topic-head"></span>ผังวงจรระบบ</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzw00003573.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzw00003573</div>
+</td>
+</tr>
+</table>
+</p><br clear="all"><p><a name="id10020900050024"></a><p class="topic-title"><span class="topic-head"></span>รายการที่ตรวจสอบ</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อ C-47, C-48</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อ C-14</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อ C-08</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อ C-34</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระหว่างขั้วต่อ C-47, C-48 กับขั้วต่อ C-14</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระหว่างขั้วต่อ C-14 กับขั้วต่อ C-08</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระหว่างขั้วต่อ C-08 กับขั้วต่อ C-34</div>
+</dd>
+</dl>
+</p><br clear="all"><a name="id10020900050025"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>G</p><br clear="all"><p><a name="id10020900050026"></a><p class="topic-title"><span class="topic-head"></span>สาเหตุที่เป็นไปได้</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;การไม่เชื่อมต่อ การสัมผัสไม่แน่น ความเสียหาย การเสียรูป การผุกร่อนของขั้วของขั้วต่อ</div>
+<div class="list">•&nbsp;&nbsp;การขาดวงจรของชุดสายไฟระหว่างชุดควบคุมอุณหภูมิกับขั้วต่อ C-34</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อ C-34 บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;ชุดควบคุมอุณหภูมิบกพร่อง</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id10020900050027"></a><p class="topic-title"><span class="topic-head"></span>ผังวงจรระบบ</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzw00003574.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzw00003574</div>
+</td>
+</tr>
+</table>
+</p><br clear="all"><p><a name="id10020900050028"></a><p class="topic-title"><span class="topic-head"></span>สาเหตุที่เป็นไปได้</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;การไม่เชื่อมต่อ การสัมผัสไม่แน่น ความเสียหาย การเสียรูป การผุกร่อนของขั้วของขั้วต่อ</div>
+<div class="list">•&nbsp;&nbsp;การขาดวงจรของชุดสายไฟระหว่างชุดควบคุมอุณหภูมิกับขั้วต่อ C-34</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อ C-34 บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;ชุดควบคุมอุณหภูมิบกพร่อง</div>
+</dd>
+</dl>
+</p><br clear="all"><a name="id10020900050029"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>H</p><br clear="all"><p><a name="id10020900050030"></a><p class="topic-title"><span class="topic-head"></span>สาเหตุที่เป็นไปได้</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;การไม่เชื่อมต่อ การสัมผัสไม่แน่น ความเสียหาย การเสียรูป การผุกร่อนของขั้วของขั้วต่อ</div>
+<div class="list">•&nbsp;&nbsp;การขาดวงจรของชุดสายไฟระหว่างรถที่มีชุดเครื่องเสียงกับขั้วต่อ C-34</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อ C-34 บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;ชุดเครื่องเสียงบกพร่อง</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id10020900050031"></a><p class="topic-title"><span class="topic-head"></span>ผังวงจรระบบ</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzw00003575.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzw00003575</div>
+</td>
+</tr>
+</table>
+</p><br clear="all"><p><a name="id10020900050032"></a><p class="topic-title"><span class="topic-head"></span>รายการที่ตรวจสอบ</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อชุดเครื่องเสียง</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อ C-34</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระหว่างขั้ว 1O ของชุดเครื่องเสียงกับขั้วต่อ C-34</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระหว่างขั้ว 1Q ของชุดเครื่องเสียงกับขั้วต่อ C-34</div>
+<div class="list">•&nbsp;&nbsp;ชุดเครื่องเสียง</div>
+</dd>
+</dl>
+</p><br clear="all"><a name="id10020900050033"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>I</p><br clear="all"><p><a name="id10020900050034"></a><p class="topic-title"><span class="topic-head"></span>สาเหตุที่เป็นไปได้</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;การไม่เชื่อมต่อ การสัมผัสไม่แน่น ความเสียหาย การเสียรูป การผุกร่อนของขั้วของขั้วต่อ</div>
+<div class="list">•&nbsp;&nbsp;การขาดวงจรของชุดสายไฟระหว่างแผงหน้าปัดกับขั้วต่อ C-34</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อ C-34 บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัดบกพร่อง</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id10020900050035"></a><p class="topic-title"><span class="topic-head"></span>ผังวงจรระบบ</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzw00003576.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzw00003576</div>
+</td>
+</tr>
+</table>
+</p><br clear="all"><p><a name="id10020900050036"></a><p class="topic-title"><span class="topic-head"></span>รายการที่ตรวจสอบ</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อแผงหน้าปัด</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อ C-34</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระหว่างขั้ว C ของแผงหน้าปัดกับขั้วต่อ C-34</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระหว่างขั้ว E ของแผงหน้าปัดกับขั้วต่อ C-34</div>
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัด</div>
+</dd>
+</dl>
+</p><br clear="all"><a name="id10020900050037"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>J</p>
+<p class="list">1.&nbsp;&nbsp;ปฏิบัติตามโหมดตรวจเช็คสัญญาณอินพุท/เอาท์พุทนาฬิกา (ดูที่ <font class="extxref-label"><a href="id092200031700.html">โหมดตรวจเช็คอินพุท/เอาท์พุทของนาฬิกา</a></font>)</p>
+<p class="list">
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ถ้า &quot;2:00&quot; ปรากฏขึ้น ให้ไปที่ขั้นตอนถัดไป</div>
+<div class="list">•&nbsp;&nbsp;ถ้า &quot;2:Er ปรากฏขึ้น ให้ตรวจสอบรายการการตรวจสอบในสาเหตุที่เป็นไปได้สำหรับ<font class="intxref-label"><a href="#id10020900050038">ความบกพร่องของวงจรนาฬิกา</a></font></div>
+</dd>
+</dl>
+</p>
+<p class="list">2.&nbsp;&nbsp;เลื่อนคันเกียร์ (ATX) หรือคันเกียร์ (MTX) ไปที่ตำแหน่ง R</p>
+<p class="list">
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ถ้าภาพจากกล้องตรวจจับด้านหลังปรากฏขึ้นในชุดเครื่องเสียง ให้ตรวจสอบรายการการตรวจสอบในสาเหตุที่เป็นไปได้สำหรับ<font class="intxref-label"><a href="#id10020900050039">ความบกพร่องของวงจรโมดูลควบคุมเซ็นเซอร์ช่วยจอด</a></font></div>
+<div class="list">•&nbsp;&nbsp;ถ้าภาพจากกล้องตรวจจับด้านหลังไม่ปรากฏขึ้นในชุดเครื่องเสียง ให้ตรวจสอบรายการการตรวจสอบในสาเหตุที่เป็นไปได้สำหรับ<font class="intxref-label"><a href="#id10020900050040">ความบกพร่องของวงจรกล้องตรวจจับด้านหลัง</a></font></div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id10020900050038"></a><p class="topic-title"><span class="topic-head"></span>วงจรนาฬิกาบกพร่อง</p>
+<dl>
+<dd>
+<div class="list-title">สาเหตุที่เป็นไปได้</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;การไม่เชื่อมต่อ การสัมผัสไม่แน่น ความเสียหาย การเสียรูป การผุกร่อนของขั้วของขั้วต่อ</div>
+<div class="list">•&nbsp;&nbsp;การขาดวงจรของชุดสายไฟระหว่างชิ้นส่วนประกอบนาฬิกากับขั้วต่อ C-34</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อ C-34 บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;ชิ้นส่วนประกอบนาฬิกาบกพร่อง</div>
+</dd>
+</dl>
+<p class="figure-title">ผังวงจรระบบ</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzw00003577.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzw00003577</div>
+</td>
+</tr>
+</table>
+<dl>
+<dd>
+<div class="list-title">รายการที่ตรวจสอบ</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อชิ้นส่วนประกอบนาฬิกา</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อ C-34</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระหว่างขั้ว E ของชิ้นส่วนประกอบนาฬิกากับขั้วต่อ C-34</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระหว่างขั้ว G ของชิ้นส่วนประกอบนาฬิกากับขั้วต่อ C-34</div>
+<div class="list">•&nbsp;&nbsp;ชิ้นส่วนประกอบนาฬิกา</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id10020900050039"></a><p class="topic-title"><span class="topic-head"></span>วงจรโมดูลควบคุมเซ็นเซอร์ช่วยจอดบกพร่อง</p>
+<dl>
+<dd>
+<div class="list-title">สาเหตุที่เป็นไปได้</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;การไม่เชื่อมต่อ การสัมผัสไม่แน่น ความเสียหาย การเสียรูป การผุกร่อนของขั้วของขั้วต่อ</div>
+<div class="list">•&nbsp;&nbsp;การขาดวงจรของชุดสายไฟระหว่างโมดูลควบคุมเซ็นเซอร์ช่วยจอดกับขั้วต่อ C-34</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อ C-34 บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมเซ็นเซอร์ช่วยจอดบกพร่อง</div>
+</dd>
+</dl>
+<p class="figure-title">ผังวงจรระบบ</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzw00003578.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzw00003578</div>
+</td>
+</tr>
+</table>
+<dl>
+<dd>
+<div class="list-title">รายการที่ตรวจสอบ</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อโมดูลควบคุมเซ็นเซอร์ช่วยจอด</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อ C-34</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระหว่างขั้ว AA ของโมดูลควบคุมเซ็นเซอร์ช่วยจอดกับขั้วต่อ C-34</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระหว่างขั้ว AB ของโมดูลควบคุมเซ็นเซอร์ช่วยจอดกับขั้วต่อ C-34</div>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมเซ็นเซอร์ช่วยจอด</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id10020900050040"></a><p class="topic-title"><span class="topic-head"></span>วงจรกล้องตรวจจับด้านหลังบกพร่อง</p>
+<dl>
+<dd>
+<div class="list-title">สาเหตุที่เป็นไปได้</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;การไม่เชื่อมต่อ การสัมผัสไม่แน่น ความเสียหาย การเสียรูป การผุกร่อนของขั้วของขั้วต่อ</div>
+<div class="list">•&nbsp;&nbsp;การขาดวงจรของชุดสายไฟระหว่างกล้องตรวจจับด้านหลังกับขั้วต่อ C-21</div>
+<div class="list">•&nbsp;&nbsp;การขาดวงจรของชุดสายไฟระหว่างขั้วต่อ C-21 กับ RCBM</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อ C-21 บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;กล้องจับภาพด้านหลังบกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;วงจรระบบ CAN ของโมดูลควบคุมตัวถังด้านหน้า (RBCM) บกพร่อง</div>
+</dd>
+</dl>
+<p class="figure-title">ผังวงจรระบบ</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzw00003579.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzw00003579</div>
+</td>
+</tr>
+</table>
+<dl>
+<dd>
+<div class="list-title">รายการที่ตรวจสอบ</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อกล้องตรวจจับด้านหลัง</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อโมดูลควบคุมตัวถังด้านหลัง (RBCM)</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อ C-21</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระหว่างขั้ว G ของกล้องตรวจจับด้านหลังกับขั้วต่อ C-21</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระหว่างขั้ว H ของกล้องตรวจจับด้านหลังกับขั้วต่อ C-21</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระหว่างขั้ว 4I ของโมดูลควบคุมตัวถังด้านหลัง (RBCM) กับขั้วต่อ C-21</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระหว่างขั้ว 4L ของโมดูลควบคุมตัวถังด้านหลัง (RBCM) กับขั้วต่อ C-21</div>
+<div class="list">•&nbsp;&nbsp;กล้องตรวจจับด้านหลัง</div>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมตัวถังด้านหลัง (RBCM)</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ระหว่างขั้ว 4G ของโมดูลควบคุมตัวถังด้านหลัง (RBCM) กับขั้ว 4I ของโมดูลควบคุมตัวถังด้านหลัง (RBCM)</div>
+<div class="list">―&nbsp;&nbsp;ระหว่างขั้ว 4J ของโมดูลควบคุมตัวถังด้านหลัง (RBCM) กับขั้ว 4L ของโมดูลควบคุมตัวถังด้านหลัง (RBCM)</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</p>
+</body>
+</html>

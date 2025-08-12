@@ -1,0 +1,160 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>รหัสวิเคราะห์ปัญหา U0001:88/U0100:00/U0131:00/U0155:00/U0214:00/U0232:00/U0233:00 [ระบบตรวจสอบจุดบอด (BSM)]</title>
+</head>
+<body><a name="id0902i3018200"></a><p class="servinfo-title"><span class="servinfo-head"></span>รหัสวิเคราะห์ปัญหา U0001:88/U0100:00/U0131:00/U0155:00/U0214:00/U0232:00/U0233:00 [ระบบตรวจสอบจุดบอด (BSM)]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0902i3018200</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ตำแหน่งความบกพร่องของระบบ</p>
+</th>
+<th id="" align="left">
+<p class="thead">U0001:88</p>
+<div class="list">•&nbsp;&nbsp;การสื่อสารโมดูลผิดพลาด (HS-CAN)</div>
+<p class="thead">U0100:00</p>
+<div class="list">•&nbsp;&nbsp;การสื่อสารกับ PCM ผิดพลาด</div>
+<p class="thead">U0131:00</p>
+<div class="list">•&nbsp;&nbsp;การสื่อสารกับโมดูลควบคุม EPS ผิดพลาด</div>
+<p class="thead">U0155:00</p>
+<div class="list">•&nbsp;&nbsp;การสื่อสารกับแผงหน้าปัดผิดพลาด</div>
+<p class="thead">U0214:00</p>
+<div class="list">•&nbsp;&nbsp;การสื่อสารกับชุดเปิด/ปิดการทำงานผิดพลาด</div>
+<p class="thead">U0232:00</p>
+<div class="list">•&nbsp;&nbsp;การสื่อสารกับโมดูลควบคุม BSM (ด้านซ้าย) ผิดพลาด</div>
+<p class="thead">U0233:00</p>
+<div class="list">•&nbsp;&nbsp;การสื่อสารกับโมดูลควบคุม BSM (ด้านขวา) ผิดพลาด</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สภาวะการตรวจพบ</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;U0001:88</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;โมดูลควบคุม BSM ตรวจพบความบกพร่องในสายบัสการสื่อสารระบบ CAN (HS-CAN)</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;U0100:00</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;โมดูลควบคุม BSM ไม่ได้รับสัญญาณระบบ CAN จาก PCM</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;U0131:00</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;โมดูลควบคุม BSM ไม่ได้รับสัญญาณระบบ CAN จากโมดูลควบคุม EPS</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;U0155:00</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;โมดุลควบคุม BSM ไม่ได้รับสัญญาณระบบ CAN จากแผงหน้าปัด</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;U0214:00</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;โมดูลควบคุม BSM ไม่ได้รับสัญญาณระบบ CAN จากชุดเปิด/ปิดการทำงาน</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;U0232:00</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;โมดูลควบคุม BSM (ด้านขวา) ไม่ได้รับสัญญาณระบบ CAN จากโมดูลควบคุม BSM (ด้านซ้าย)</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;U0233:00</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;โมดูลควบคุม BSM (ด้านซ้าย) ไม่ได้รับสัญญาณระบบ CAN จากโมดูลควบคุม BSM (ด้านขวา)</div>
+</dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>Fail-safe</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;U0001:88</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;BSM หยุดทำงาน</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;U0100:00</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;BSM หยุดทำงาน</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;U0131:00</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;BSM หยุดทำงาน</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;U0155:00</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;BSM หยุดทำงาน</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;U0214:00</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;BSM หยุดทำงาน</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;U0232:00</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;BSM หยุดทำงาน</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;U0233:00</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;BSM หยุดทำงาน</div>
+</dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สาเหตุที่เป็นไปได้</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ความบกพร่องในสายบัสการสื่อสารระบบ CAN</div>
+<div class="list">•&nbsp;&nbsp;สายการสื่อสารระบบ CAN ระหว่าง PCM กับโมดูลควบคุม BSM บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;สายการสื่อสารระบบ CAN ระหว่างโมดูลควบคุม EPS กับโมดูลควบคุม BSM บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;สายการสื่อสารระบบ CAN ระหว่างแผงหน้าปัดกับโมดูลควบคุม BSM บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;สายการสื่อสารระบบ CAN ระหว่างชุดเปิด/ปิดการทำงานกับโมดูลควบคุม BSM บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;สายการสื่อสารระบบ CAN ระหว่างโมดูลควบคุม BSM (ด้านขวา) กับโมดูลควบคุม BSM (ด้านซ้าย) บกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>ผังวงจรระบบ</span></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p><br clear="all"><a name="id0902i301820001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ขั้นตอนการวิเคราะห์ปัญหา</p>
+<div class="list">•&nbsp;&nbsp;ทำการวิเคราะห์ความบกพร่องตามขั้นตอนการวิเคราะห์ปัญหาของระบบการสื่อสารแบบมัลติเพล็กซ์ (ดูที่ <font class="extxref-label"><a href="id100209000000.html">คำนำ [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (R.H.D.)]</a></font>) (ดูที่ <font class="extxref-label"><a href="id100206000000.html">คำนำ [SKYACTIV-D 2.2 (R.H.D.)]</a></font>)</div>
+</body>
+</html>

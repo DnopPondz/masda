@@ -1,0 +1,2192 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>การควบคุมระบบ i-stop [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</title>
+</head>
+<body><a name="id0140g2008900"></a><p class="servinfo-title"><span class="servinfo-head"></span>การควบคุมระบบ i-stop [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0140g2008900</p><br clear="all"><a name="id0140g200890001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รายละเอียด</p>
+<div class="list">•&nbsp;&nbsp;เมื่อหยุดรถ เช่น ที่ไฟแดง การควบคุมระบบ i-stop จะดับ/สตาร์ทเครื่องยนต์โดยอัตโนมัติเพื่อให้การประหยัดน้ำมันเชื้อเพลิงที่ดียิ่งขึ้นและลดก๊าซไอเสียและเสียงรบกวนขณะเดินเบา</div>
+<div class="list">•&nbsp;&nbsp;PCM จะตัดสินว่าให้อนุญาต/ยับยั้งการควบคุมระบบ i-stop ตามสัญญาณจากแต่ละชิ้นส่วนสัญญาณอินพุทและการสื่อสารแบบ CAN</div>
+<div class="list">•&nbsp;&nbsp;การควบคุมระบบ i-stop ประกอบด้วยการควบคุมการดับเครื่องยนต์ การควบคุมการสตาร์ทเครื่องยนต์อีกครั้ง การควบคุมชุดควบคุมปั้มน้ำมันเกียร์ AT ไฟฟ้า และฟังก์ชั่นช่วยออกตัวบนทางลาดชัน</div>
+<p clear="all">
+<p class="table-title">ตารางการควบคุม</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ชื่อการควบคุม</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายละเอียดการควบคุม</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมการดับเครื่องยนต์</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ดับเครื่องยนต์เมื่อพบสภาวะระบบ i-stop (การควบคุมการดับเครื่องยนต์)<div>(ดูที่ <font class="intxref-label"><a href="#id0140g200890004">การควบคุมการดับเครื่องยนต์</a></font>)</div>
+</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมการสตาร์ทเครื่องยนต์อีกครั้ง</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;เครื่องยนต์สตาร์ทอีกครั้งเมื่อพบสภาวะระบบ i-stop (การควบคุมการสตาร์ทเครื่องยนต์อีกครั้ง)<div>(ดูที่ <font class="intxref-label"><a href="#id0140g200890005">การควบคุมการสตาร์ทเครื่องยนต์อีกครั้ง</a></font>)</div>
+</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมชุดควบคุมปั้มน้ำมันเกียร์ AT ไฟฟ้า</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ควบคุมปั้มน้ำมันเกียร์ AT ไฟฟ้าเพื่อให้มีแรงดันท่อทางในระหว่างการดับเครื่องยนต์โดยการควบคุมระบบ i-stop</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ฟังก์ชั่นช่วยออกตัวบนทางลาดชัน</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ควบคุมโซลินอยด์วาล์วระบบป้องกันการลื่นไถลใน DSC HU/CM เพื่อรักษา หรือลดแรงดันน้ำมันเบรก</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p><br clear="all"><a name="id0140g200890002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>แผนผังแบบบล็อก</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/am3uun00001952.png"></td>
+</tr>
+</table>
+<div class="figure-caption">am3uun00001952</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id0140g200890003"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p><br clear="all"><p><a name="id0140g200890004"></a><p class="topic-title"><span class="topic-head"></span>การควบคุมการดับเครื่องยนต์</p>
+<dl>
+<dd>
+<div class="list-title">สภาวะการอนุญาตระบบ i-stop (การควบคุมการดับเครื่องยนต์)</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;สภาวะการดับเครื่องยนต์โดยการควบคุมระบบ i-stop มีดังนี้:</div>
+</dd>
+</dl>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">จุดประสงค์</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายการสภาวะ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ATX:</p>
+</th>
+<th id="" align="center">
+<p class="thead">MTX</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center" rowspan="7">
+<div class="tbody">สมรรถนะการขับขี่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความเร็วรถ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">0 km/h {0 mph}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">3 km/h {2 mph} หรือต่ำกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">แป้นเบรก</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เหยียบแป้นเบรกในตำแหน่ง D หรือตำแหน่ง M (ยกเว้นโหมดล็อกเกียร์ 2)</div>
+<div class="tbody">(ถ้า ABS ทำงานในระหว่างการลดความเร็ว การทำงานของระบบ i-stop จะถูกยับยั้ง)</div>
+</td>
+<td id="" align="center">
+<div class="tbody"> ไม่มี</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">แรงดันน้ำมันเบรก</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันน้ำมันเบรกอยู่ที่ 1.25 MPa {12.7 kgf/cm<sup>2</sup>, 181 psi} หรือมากกว่าในตำแหน่ง D หรือตำแหน่ง M (ยกเว้นโหมดล็อกเกียร์ 2) </div>
+<div class="tbody">(แรงเหยียบแป้นที่เพียงพอที่จะหยุดรถไม่ให้เคลื่อนเมื่อเครื่องยนต์สตาร์ทอีกครั้ง)</div>
+</td>
+<td id="" align="center">
+<div class="tbody"> ไม่มี</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">แป้นคันเร่ง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปล่อย (ยกเท้าออกจากแป้นคันเร่ง)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">←</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">แป้นคลัตช์</div>
+</td>
+<td id="" align="center">
+<div class="tbody"> ไม่มี</div>
+</td>
+<td id="" align="left">
+<div class="tbody">30% หรือน้อยกว่า (มุมการเปิดแป้นคลัตช์) </div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ตำแหน่งเกียร์</div>
+</td>
+<td id="" align="center">
+<div class="tbody"> ไม่มี</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปกติ </div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">สภาวะรถ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หยุดรถในตำแหน่ง D (หลังจากหยุดรถและเปลี่ยนเกียร์ไปที่ตำแหน่ง N เครื่องยนต์ดับ 0.6 วินาทีหลังจากการทำงาน) นอกจากนี้ หลังจากหยุดรถในตำแหน่ง D และถ้าเปลี่ยนเกียร์ไปที่ตำแหน่ง P สภาวะการดับเครื่องยนต์จะทำงานต่อเนื่องโดยการควบคุมระบบ i-stop</div>
+</td>
+<td id="" align="center">
+<div class="tbody"> ไม่มี</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="10">
+<div class="tbody">การทำตลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิห้องโดยสาร</div>
+<div class="tbody">(รุ่นที่มีระบบปรับอากาศแบบอัตโนมัติ)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความแตกต่างระหว่างอุณหภูมิในห้องโดยสารเป้าหมายกับอุณหภูมิในห้องโดยสารอยู่ภายในค่ากำหนด (ทำการควบคุมอุณหภูมิห้องโดยสารของระบบปรับอากาศ)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">←</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิของระบบปรับอากาศ</div>
+<div class="tbody">(รุ่นที่มีระบบปรับอากาศแบบอัตโนมัติ)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การตั้งค่านอกเหนือจาก MAX/MIN</div>
+</td>
+<td id="" align="center">
+<div class="tbody">←</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">สภาวะอุ่น</div>
+<div class="tbody">(รุ่นที่มีระบบปรับอากาศแบบธรรมดา)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิภายนอกอยู่ที่ 10 &deg;C {50 &deg;F} หรือสูงกว่า และอุณหภูมิน้ำหล่อเย็นเครื่องยนต์อยู่ที่ 60 &deg;C {140 &deg;F} หรือสูงกว่า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">←</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">สภาวะเย็น</div>
+<div class="tbody">(รุ่นที่มีระบบปรับอากาศแบบธรรมดา)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิภายนอกอยู่ที่ 29 &deg;C {84 &deg;F} หรือต่ำกว่า และอุณหภูมิอีวาปอเรเตอร์อยู่ที่ 9 &deg;C {48 &deg;F} หรือต่ำกว่า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">←</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิภายนอก</div>
+</td>
+<td id="" align="left">
+<div class="tbody">-10―50 &deg;C {14―122 &deg;F}</div>
+</td>
+<td id="" align="center">
+<div class="tbody">←</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ความเร็วการบังคับเลี้ยว</div>
+</td>
+<td id="" align="left">
+<div class="tbody">15 deg/sec หรือน้อยกว่า </div>
+</td>
+<td id="" align="center">
+<div class="tbody">←</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">มุมในการบังคับเลี้ยว</div>
+</td>
+<td id="" align="left">
+<div class="tbody">-65―65 &deg;(กึ่งกลาง) </div>
+<div class="tbody">(หลังจากโมดูลควบคุม EPS จดจำค่ากึ่งกลาง)</div>
+</td>
+<td id="" align="center">
+<div class="tbody"> ไม่มี</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">แรงบิดในการบังคับเลี้ยว</div>
+</td>
+<td id="" align="left">
+<div class="tbody">1.4 N&middot;m {14 kgf&middot;cm, 12 in&middot;lbf} หรือน้อยกว่า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">←</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">สวิตช์ i-stop OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">←</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ประวัติความเร็วรถ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">3 km/h {2 mph} หรือสูงกว่า</div>
+</td>
+<td id="" align="left">
+<div class="tbody">4 km/h {2.5 mph} หรือสูงกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="13">
+<div class="tbody">ความปลอดภัย</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สภาวะไฟชาร์จแบตเตอรี่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">68.4% หรือมากกว่า (ตัดสินจากสัญญาณเซ็นเซอร์กระแสไฟฟ้า)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">←</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิน้ำกรดแบตเตอรี่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">0&mdash;70 &deg;C {32&mdash;158 &deg;F}</div>
+</td>
+<td id="" align="center">
+<div class="tbody">←</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">แรงดันไฟฟ้าแบตเตอรี่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">11.2 V หรือสูงกว่า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">←</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">แรงดันไฟฟ้าแบตเตอรี่ในระหว่างเครื่องยนต์สตาร์ทอีกครั้งโดยประมาณ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">7.45 หรือมากกว่า<sup>*1</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">←</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">สวิตช์ไล่ฝ้า</div>
+</td>
+<td id="" align="left">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">←</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">สุญญากาศชุดหม้อลมเบรก</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="list">-45 kPa {-0.46 kgf/cm<sup>2</sup>, -6.5 psi} หรือน้อยกว่า</div>
+<div class="list">
+<table class="figure-flame">
+<tr>
+<td width="10mm"></td>
+<td>
+<table class="figure-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/am3uun00001953.png"></td>
+</tr>
+</table>
+<div class="figure-caption">am3uun00001953</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ประตู (ด้านหน้า, ด้านหลัง)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">←</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ฝากระโปรงหน้า</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปิด<sup>*2</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">←</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ประตูท้าย</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">←</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">มุมการเอียงของรถ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เมื่อรถอยู่บนพื้นแนวระดับ น้อยกว่า &plusmn; 7%</div>
+</td>
+<td id="" align="center">
+<div class="tbody"> ไม่มี</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">เข็มขัดนิรภัย (คนขับ)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">คาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">←</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ระบบปุ่มกดสตาร์ท</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปกติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">←</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">สภาวะระบบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลที่เกี่ยวข้องกับระบบ i-stop ปกติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">←</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="9">
+<div class="tbody">ข้อจำกัดระบบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">จำนวนการทำงานของมอเตอร์สตาร์ท</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายใน 180,000 ครั้ง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">←</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">จำนวนการทำงานของรีเลย์มอเตอร์สตาร์ท</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายใน 180,000 ครั้ง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">←</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">จำนวนการทำงานของระบบ i-stop</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายใน 300,000 ครั้ง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">←</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การตั้งค่าความจำ ISC</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เสร็จสมบูรณ์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">←</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การตั้งค่าความจำสภาวะแบตเตอรี่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เสร็จสมบูรณ์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">←</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การตั้งค่าเริ่มต้นเซ็นเซอร์มุมพวงมาลัย</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เสร็จสมบูรณ์</div>
+</td>
+<td id="" align="center">
+<div class="tbody"> ไม่มี</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การตั้งค่าเริ่มต้นเซ็นเซอร์ DSC</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เสร็จสมบูรณ์</div>
+</td>
+<td id="" align="center">
+<div class="tbody"> ไม่มี</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ระยะเวลาหลังจากเครื่องยนต์สตาร์ทอีกครั้งโดยประมาณ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สูงสุด 6.4 วินาที หรือมากกว่า (การเปลี่ยนแปลงระยะเวลาการดับเครื่องยนต์โดยการควบคุมระบบ i-stop)</div>
+</td>
+<td id="" align="center">
+<div class="tbody"> ไม่มี</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">รหัสวิเคราะห์ปัญหา PCM</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่พบรหัสวิเคราะห์ปัญหายกเว้นรหัส P11A:00 และ P117A:00 และ P2299:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">←</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="3">
+<div class="tbody">สภาวะเครื่องยนต์</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิน้ำหล่อเย็นเครื่องยนต์</div>
+</td>
+<td id="" align="left">
+<div class="tbody">55&mdash;110 &deg;C {131&mdash;230 &deg;F}</div>
+</td>
+<td id="" align="center">
+<div class="tbody">←</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิไอดี</div>
+</td>
+<td id="" align="left">
+<div class="tbody">100&deg;C {212 &deg;F} หรือต่ำกว่า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">←</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิ ATF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">20―120 &deg;C {68―248 &deg;F}</div>
+</td>
+<td id="" align="center">
+<div class="tbody"> ไม่มี</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">สภาพแวดล้อม</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระดับความสูง</div>
+</td>
+<td id="" align="left">
+<div class="list-title">สเปคยุโรป (ประเทศอังกฤษ พวงมาลัยซ้าย)</div>
+<div class="list">•&nbsp;&nbsp;1,800 m หรือต่ำกว่า </div>
+<div class="list-title">ยกเว้นสเปคยุโรป (ประเทศอังกฤษ พวงมาลัยซ้าย</div>
+<div class="list">•&nbsp;&nbsp;1,500 m หรือต่ำกว่า </div>
+</td>
+<td id="" align="center">
+<div class="tbody">←</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;: ถ้าระบบ i-stop ทำงานซ้ำหลายครั้งโดยที่มีระบบเครื่องเสียงประสิทธิภาพสูงหรือมีอุปกรณ์อิเล็กทรอนิกส์เสริมต่ออยู่กับ DC-DC คอนเวอเตอร์ การดับเครื่องยนต์โดยการควบคุมระบบ i-stop จะถูกยับยั้งด้วยระยะเวลาที่เร็วกว่าปกติ</div>
+<div class="deflist">*2&nbsp;&nbsp;:ถ้าสตาร์ทเครื่องยนต์ในขณะที่เปิดฝากระโปรง ระบบ i-stop จะถูกยับยั้งจนกว่าจะดับเครื่องยนต์</div>
+<dl>
+<dd>
+<div class="list-title">ระบบ i-stop (การควบคุมการดับเครื่องยนต์)</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เมื่อพบสภาวะการอนุญาตระบบ i-stop (การควบคุมการดับเครื่องยนต์) PCM จะดับเครื่องยนต์ตามการควบคุมดังต่อไปนี้:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;การควบคุมการฉีดน้ำมันเชื้อเพลิง (การตัดน้ำมันเชื้อเพลิง)</div>
+<dl>
+<dd class="list">
+<div class="list">•&nbsp;&nbsp;ความเร็วรอบเครื่องยนต์จะลดลงโดยการตัดน้ำมันเชื้อเพลิง</div>
+</dd>
+</dl>
+<div class="list">―&nbsp;&nbsp;การควบคุมแบบไม่ใช้สายคันเร่ง (Drive-by-wire) (เปิด / ปิดลิ้นเร่ง)</div>
+<dl>
+<dd class="list">
+<div class="list">•&nbsp;&nbsp;โดยการปรับตั้งมุมการเปิดลิ้นเร่ง ความเร็วรอบเครื่องยนต์จะลดลงและการสูญเสียกำลังจะถูกใช้เพื่อดับเครื่องยนต์</div>
+</dd>
+</dl>
+<div class="list">―&nbsp;&nbsp;การควบคุมไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า (หน่วงจังหวะการเปิด/ปิดวาล์วไอดี)</div>
+<dl>
+<dd class="list">
+<div class="list">•&nbsp;&nbsp;การหน่วงจังหวะการเปิด/ปิดวาล์วไอดีจะทำเพื่อการสตาร์ทเครื่องยนต์อีกครั้งโดยการควบคุมระบบ i-stop</div>
+</dd>
+</dl>
+<div class="list">―&nbsp;&nbsp;การควบคุมสัญญาณเอาท์พุทเจนเนอร์เรเตอร์ (ภาระเจนเนอร์เรเตอร์)</div>
+<dl>
+<dd class="list">
+<div class="list">•&nbsp;&nbsp;ความเร็วรอบเครื่องยนต์จะลดลงโดยการลดภาระเจนเนอร์เรเตอร์</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/am3uun00001954.png"></td>
+</tr>
+</table>
+<div class="figure-caption">am3uun00001954</div>
+</td>
+</tr>
+</table>
+</p><br clear="all"><p><a name="id0140g200890005"></a><p class="topic-title"><span class="topic-head"></span>การควบคุมการสตาร์ทเครื่องยนต์อีกครั้ง </p>
+<dl>
+<dd>
+<div class="list-title">สภาวะระบบ i-stop (การควบคุมการสตาร์ทเครื่องยนต์อีกครั้ง)</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;สภาวะสำหรับการสตาร์ทเครื่องยนต์อีกครั้งในระหว่างการควบคุมระบบ i-stop (ดับเครื่องยนต์) มีดังนี้:</div>
+</dd>
+</dl>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center" rowspan="2">
+<p class="thead">จุดประสงค์</p>
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">รายการสภาวะ</p>
+</th>
+</tr>
+<tr>
+<th id="" align="center">
+<p class="thead">ATX:</p>
+</th>
+<th id="" align="center">
+<p class="thead">MTX</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left" rowspan="8">
+<div class="tbody">การใช้งานของคนขับ</div>
+</td>
+<td id="" align="center">
+<div class="tbody"> ไม่มี</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อัตราการเหยียบแป้นคลัตช์: 86% หรือมากกว่า</div>
+<div class="tbody">(ถ้าเหยียบแป้นคลัตช์แล้วปล่อยในขณะที่เครื่องยนต์หมุนเพื่อสตาร์ทเครื่องยนต์อีกครั้งโดยการควบคุมระบบ i-stop การดับเครื่องยนต์โดยการควบคุมระบบ i-stop จะทำงานต่อเนื่อง ถ้าทำซ้ำการทำงานเดียวกันหลายๆ ครั้ง เครื่องยนต์จะดับ)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ปล่อย → เหยียบแป้นเบรกขณะอยู่ที่ตำแหน่ง P หรือ N</div>
+</td>
+<td id="" align="center">
+<div class="tbody"> ไม่มี</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">แรงดันน้ำมันเบรกอยู่ที่ 0.35 MPa {3.6 kgf/cm2, 51 psi} หรือน้อยกว่าในตำแหน่ง D หรือตำแหน่ง M</div>
+</td>
+<td id="" align="center">
+<div class="tbody"> ไม่มี</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">เหยียบแป้นคันเร่งขณะอยู่ที่ตำแหน่ง D หรือ M</div>
+</td>
+<td id="" align="center">
+<div class="tbody"> ไม่มี</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">แรงบิดในการบังคับเลี้ยวอยู่ที่ 2.8 N&middot;m {29 kgf&middot;cm, 25 in&middot;lbf} หรือมากกว่าในตำแหน่ง D หรือ M</div>
+</td>
+<td id="" align="center">
+<div class="tbody"> ไม่มี</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">มุมในการบังคับเลี้ยว (ตำแหน่ง D หรือ M (ยกเว้นโหมดล็อกเกียร์ 2)): -70&deg; หรือน้อยกว่า หรือ 70&deg; หรือมากกว่า</div>
+<div class="tbody"> (หลังจากโมดูลควบคุม EPS จดจำค่ากึ่งกลาง)</div>
+</td>
+<td id="" align="center">
+<div class="tbody"> ไม่มี</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การสตาร์ทเครื่องยนต์โดยการใช้งานกุญแจ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">←</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="list-title">การเปลี่ยนเกียร์</div>
+<div class="list">•&nbsp;&nbsp;เมื่อเปลี่ยนไปที่ตำแหน่ง M (ยกเว้นโหมดล็อกเกียร์ 2)</div>
+<div class="list">•&nbsp;&nbsp;ตำแหน่ง P หรือ N → ตำแหน่ง D หรือ M หรือ R</div>
+</td>
+<td id="" align="center">
+<div class="tbody"> ไม่มี</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="9">
+<div class="tbody">การทำตลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การขอการทำงานของระบบปรับอากาศ</div>
+<div class="tbody">(รุ่นที่มีระบบปรับอากาศแบบอัตโนมัติ)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">←</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การตั้งค่า MIN, การตั้งค่า MAX ของอุณหภูมิระบบปรับอากาศ</div>
+<div class="tbody">(รุ่นที่มีระบบปรับอากาศแบบอัตโนมัติ)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">←</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">สภาวะอุ่น (รุ่นที่มีระบบปรับอากาศแบบธรรมดา): อุณหภูมิภายนอกอยู่ที่ 9 &deg;C {48 &deg;F} หรือต่ำกว่า และอุณหภูมิน้ำหล่อเย็นเครื่องยนต์อยู่ที่ 57 &deg;C {135 &deg;F} หรือต่ำกว่า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">←</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">สภาวะเย็น (รุ่นที่มีระบบปรับอากาศแบบธรรมดา): </div>
+<div class="tbody">อุณหภูมิภายนอกอยู่ที่ 30 &deg;C {86 &deg;F} หรือสูงกว่า และอุณหภูมิอีวาปอเรเตอร์อยู่ที่ 10 &deg;C {50 &deg;F} หรือสูงกว่า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">←</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ไฟชาร์จแบตเตอรี่ 67.9% หรือน้อยกว่า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">←</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">อัตราไฟชาร์จแบตเตอรี่อยู่ที่ค่ากำหนด หรือมากกว่า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">←</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">แรงดันไฟฟ้าแบตเตอรี่โดยประมาณเมื่อเครื่องยนต์สตาร์ทอีกครั้งอยู่ที่ 7.25 V หรือต่ำกว่า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">←</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">สวิตช์ i-stop OFF ทำงาน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">←</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ตรวจพบสภาวะต่อไปนี้</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;เข็มขัดนิรภัย (คนขับ): ไม่คาด</div>
+<div class="list">―&nbsp;&nbsp;ประตู หรือประตูท้าย: เปิด</div>
+</dd>
+</dl>
+</td>
+<td id="" align="center">
+<div class="tbody">←</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="5">
+<div class="tbody">ความปลอดภัย</div>
+</td>
+<td id="" align="left">
+<div class="list-title">ยกเว้นสเปคยุโรป (ประเทศอังกฤษ พวงมาลัยซ้าย</div>
+<div class="list">•&nbsp;&nbsp;ตรวจพบสภาวะต่อไปนี้ขณะอยู่ที่ตำแหน่ง P หรือ N (ตัดสินว่าคนขับไม่ได้อยู่ในรถ)</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;เข็มขัดนิรภัย (คนขับ): ไม่คาด</div>
+<div class="list">―&nbsp;&nbsp;ประตู (คนขับ): เปิด</div>
+</dd>
+</dl>
+</td>
+<td id="" align="left">
+<div class="list-title">ยกเว้นสเปคยุโรป (ประเทศอังกฤษ พวงมาลัยซ้าย</div>
+<div class="list">•&nbsp;&nbsp;ตรวจพบสภาวะต่อไปนี้ขณะอยู่ที่ตำแหน่งเกียร์ว่าง (ตัดสินว่าคนขับไม่ได้อยู่ในรถ)</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;เข็มขัดนิรภัย (คนขับ): ไม่คาด</div>
+<div class="list">―&nbsp;&nbsp;ประตู (คนขับ): เปิด</div>
+</dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">สวิตช์ไล่ฝ้าทำงาน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">←</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">สุญญากาศหม้อลมเบรก: -43 kPa {-0.44 kgf/cm<sup>2</sup>, -6.2 psi} หรือมากกว่า</div>
+<div class="list">
+<table class="figure-flame">
+<tr>
+<td width="10mm"></td>
+<td>
+<table class="figure-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/am3uun00001955.png"></td>
+</tr>
+</table>
+<div class="figure-caption">am3uun00001955</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td id="" align="center">
+<div class="tbody">←</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ความเร็วรถ: 1 km/h {0.6 mph} หรือสูงกว่า</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความเร็วรถ: 4 km/h {2.5 mph} หรือสูงกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ระยะเวลาการดับเครื่องยนต์โดยการควบคุมระบบ i-stop: 120 วินาที หรือมากกว่า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">←</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<dl>
+<dd>
+<div class="list-title">ระบบ i-stop (การควบคุมการสตาร์ทเครื่องยนต์อีกครั้ง)</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เมื่อพบสภาวะระบบ i-stop (การควบคุมการสตาร์ทเครื่องยนต์อีกครั้ง) PCM จะสตาร์ทเครื่องยนต์โดยการควบคุมดังต่อไปนี้: </div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;การควบคุมการฉีดน้ำมันเชื้อเพลิง (ตั้งแต่ครั้งแรก การฉีดน้ำมันเชื้อเพลิงไปยังสูบที่กำหนด (จังหวะระเบิด)</div>
+<dl>
+<dd class="list">
+<div class="list">•&nbsp;&nbsp;น้ำมันเชื้อเพลิงจะถูกฉีดไปยังสูบที่ถูกตัดสินว่าจะหยุดที่จังหวะระเบิด ในระหว่างการควบคุมระบบ i-stop (การดับเครื่องยนต์) สูบจะถูกระบุตามสัญญาณจากเซ็นเซอร์ตำแหน่งเพลาข้อเหวี่ยงและสามารถฉีดน้ำมันเชื้อเพลิงไปยังสูบซึ่งถูกระบุไว้ก่อนว่าหยุดอยู่ในจังหวะระเบิด</div>
+</dd>
+</dl>
+<div class="list">―&nbsp;&nbsp;การควบคุม DC-DC คอนเวอเตอร์</div>
+<dl>
+<dd class="list">
+<div class="list">•&nbsp;&nbsp;เมื่อเครื่องยนต์สตาร์ทอีกครั้งโดยการควบคุมระบบ i-stop แรงดันไฟฟ้าแบตเตอรี่จะลดลงเพื่อทำให้มอเตอร์สตาร์ททำงานโดยการจ่ายกำลังไฟฟ้าจากแบตเตอรี่ เมื่อมอเตอร์สตาร์ททำงาน แรงดันไฟฟ้าแหล่งจ่ายไฟสำหรับอุปกรณ์อิเล็กทรอนิกส์จะเพิ่มขึ้นโดย DC-DC คอนเวอเตอร์</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/am3uun00001956.png"></td>
+</tr>
+</table>
+<div class="figure-caption">am3uun00001956</div>
+</td>
+</tr>
+</table>
+</p><br clear="all"><p><a name="id0140g200890006"></a><p class="topic-title"><span class="topic-head"></span>การขอการติดสว่างของไฟแสดงสถานะ</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;PCM จะส่งสัญญาณขอการติดสว่าง หรือการกะพริบของไฟแสดงสถานะระบบ i-stop (สีเขียว) / ไฟเตือนระบบ i-stop (สีเหลืองอำพัน) ไปที่แผงหน้าปัดตามสภาวะของรถ</div>
+<div class="list">•&nbsp;&nbsp;สภาวะการขอการติดสว่าง / การกะพริบของไฟแสดงสถานะระบบ i-stop (สีเขียว) / ไฟเตือนระบบ i-stop (สีเหลืองอำพัน) มีดังนี้:</div>
+</dd>
+</dl>
+<p clear="all">
+<p class="table-title">สเปคยุโรป (ประเทศอังกฤษ พวงมาลัยซ้าย)</p>
+<p>
+<div> IS: การดับเครื่องยนต์โดยการควบคุมระบบ i-stop</div>
+<div>IR: การสตาร์ทเครื่องยนต์อีกครั้งโดยการควบคุมระบบ i-stop</div>
+<div>&times;: สามารถทำได้</div>
+</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center" colspan="3" rowspan="2">
+<p class="thead">สภาวะรถ</p>
+</th>
+<th id="" align="center" rowspan="2">
+<p class="thead">สภาวะรถ</p>
+</th>
+<th id="" align="center" colspan="3">
+<p class="thead">การแสดงผลไฟแสดงสถานะระบบ i-stop (สีเขียว) / ไฟเตือนระบบ i-stop (สีเหลืองอำพัน)</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟแสดงสถานะ (อื่นๆ)</p>
+</th>
+<th id="" align="center" rowspan="2">
+<p class="thead">เสียงเตือน</p>
+</th>
+</tr>
+<tr>
+<th id="" align="center">
+<p class="thead">การติดสว่าง ON</p>
+</th>
+<th id="" align="center">
+<p class="thead">กะพริบ (0.5 วินาที)</p>
+</th>
+<th id="" align="center">
+<p class="thead">การติดสว่าง OFF</p>
+</th>
+<th id="" align="center">
+<p class="thead">การติดสว่าง ON / กะพริบ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">การขับขี่</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ไม่พบสภาวะ IS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody">พบสภาวะ IS<sup>*7</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">จอดรถ</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ไม่พบสภาวะ IS<sup>*7</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">Idle</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody">พบสภาวะ IS<sup>*7</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">IS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">สีเขียว</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="8">
+<div class="tbody">ในระหว่าง IS</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">พบสภาวะ IS<sup>*7</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">IS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">สีเขียว</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">IS ต่อเนื่องตามปกติ</div>
+</td>
+<td id="" align="left">
+<div class="entry-title">ATX:</div>
+<div class="tbody">เมื่อตรวจพบสภาวะต่างๆ ต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;เหยียบเบรก</div>
+<div class="list">•&nbsp;&nbsp;ตำแหน่ง D หรือ M (ยกเว้นโหมดล็อกเกียร์ 2)</div>
+<div class="list">•&nbsp;&nbsp;มุมในการบังคับเลี้ยวน้อยกว่า 70&deg;</div>
+<div class="tbody">เมื่อตรวจพบสภาวะต่างๆ ต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;ปล่อยเบรก</div>
+<div class="list">•&nbsp;&nbsp;ตำแหน่ง D หรือ M (ยกเว้นโหมดล็อกเกียร์ 2) → ตำแหน่ง N</div>
+<div class="list">•&nbsp;&nbsp;ตำแหน่ง D หรือ M (ยกเว้นโหมดล็อกเกียร์ 2) → ตำแหน่ง N → ตำแหน่ง P</div>
+<div class="list">•&nbsp;&nbsp;มุมในการบังคับเลี้ยวน้อยกว่า 70&deg;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">IS ต่อเนื่อง</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">สีเขียว</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="entry-title">MTX</div>
+<div class="tbody">เหยียบแป้นคลัตช์ → ปล่อยแป้นคลัตช์ในขณะเครื่องยนต์หมุนเพื่อสตาร์ทเครื่องยนต์อีกครั้งโดยการควบคุมระบบ i-stop</div>
+</td>
+<td id="" align="center">
+<div class="tbody">IS ต่อเนื่อง / เครื่องยนต์ดับ<sup>*11</sup></div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="5">
+<div class="tbody">การขอ IR (การใช้งานของคนขับ)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เมื่อเปลี่ยนไปที่ตำแหน่ง M (ยกเว้นโหมดล็อกเกียร์ 2)</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">IR</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">&times;<sup>*2</sup></div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การสตาร์ทเครื่องยนต์โดยการใช้งานกุญแจ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การตั้งค่า MIN, การตั้งค่า MAX ของอุณหภูมิระบบปรับอากาศ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="entry-title">ATX:</div>
+<div class="list">•&nbsp;&nbsp;ปล่อย → เหยียบแป้นเบรกขณะอยู่ที่ตำแหน่ง P หรือ N</div>
+<div class="list">•&nbsp;&nbsp;แรงดันน้ำมันเบรกอยู่ที่ 0.35 MPa {3.6 kgf/cm2, 51 psi} หรือน้อยกว่าในตำแหน่ง D หรือตำแหน่ง M</div>
+<div class="list">•&nbsp;&nbsp;เหยียบแป้นคันเร่งขณะอยู่ที่ตำแหน่ง D หรือ M</div>
+<div class="list">•&nbsp;&nbsp;แรงบิดในการบังคับเลี้ยวอยู่ที่ 2.8 N&middot;m {29 kgf&middot;cm, 25 in&middot;lbf} หรือมากกว่าในตำแหน่ง D หรือตำแหน่ง M</div>
+<div class="list">•&nbsp;&nbsp;มุมในการบังคับเลี้ยว (ตำแหน่ง D หรือ M (ยกเว้นโหมดล็อกเกียร์ 2)): -70&deg; หรือน้อยกว่า หรือ 70&deg; หรือมากกว่า</div>
+<div class="list">•&nbsp;&nbsp;การเปลี่ยนเกียร์</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;เมื่อเปลี่ยนไปที่ตำแหน่ง M (ยกเว้นโหมดล็อกเกียร์ 2)</div>
+<div class="list">―&nbsp;&nbsp;ตำแหน่ง P หรือ N → ตำแหน่ง D หรือ M หรือ R</div>
+</dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="entry-title">MTX<span class="entry-title"></span></div>
+<div class="list">•&nbsp;&nbsp;มุมการเปิดแป้นคลัตช์อยู่ที่ 86% หรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="9">
+<div class="tbody">ในระหว่าง IS</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การขอ IR (การใช้งานของคนขับ)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เมื่อตรวจพบสภาวะต่างๆ ต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;เข็มขัดนิรภัย (คนขับ): ไม่คาด</div>
+<div class="list">•&nbsp;&nbsp;ประตู (คนขับ): เปิด</div>
+<div class="list">•&nbsp;&nbsp;ตำแหน่ง P หรือ N (ATX)</div>
+<div class="list">•&nbsp;&nbsp;ตำแหน่งเกียร์ว่าง (MTX)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เครื่องยนต์ดับ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">สีเหลืองอำพัน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การติดสว่างเหมือนกับสภาวะการดับเครื่องยนต์ปกติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เว้นช่วงระยะ 0.25 วินาทีเป็นเวลา 3 วินาที</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="4">
+<div class="tbody">เปลี่ยนไปที่สภาวะไม่ปลอดภัย (การใช้งานของคนขับ)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ประตู (คนขับ) เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">IS ต่อเนื่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">สีเขียว</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เว้นช่วงระยะ 0.25 วินาที</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">เมื่อตรวจพบสภาวะต่างๆ ต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;เข็มขัดนิรภัย (คนขับ): ไม่คาด</div>
+<div class="list">•&nbsp;&nbsp;ประตู (คนขับ): เปิด</div>
+<div class="list">•&nbsp;&nbsp;ตำแหน่ง D หรือ M (ยกเว้นโหมดล็อกเกียร์ 2) (ATX)</div>
+<div class="list">•&nbsp;&nbsp;เข้าเกียร์ (MTX)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เครื่องยนต์ดับ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">สีเหลืองอำพัน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การติดสว่างเหมือนกับสภาวะการดับเครื่องยนต์ปกติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เว้นช่วงระยะ 0.25 วินาทีเป็นเวลา 3 วินาที</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ฝากระโปรงหน้าเปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เครื่องยนต์ดับ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">สีเหลืองอำพัน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การติดสว่างเหมือนกับสภาวะการดับเครื่องยนต์ปกติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เว้นช่วงระยะ 0.25 วินาทีเป็นเวลา 3 วินาที</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="entry-title">MTX</div>
+<div class="tbody">เข้าเกียร์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">IS ต่อเนื่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">สีเขียว</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="3">
+<div class="tbody">การขอ IR (สัญญาณขอของรถ)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบสภาวะใดๆ ต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;การขอการทำงานของระบบปรับอากาศ</div>
+<div class="list">•&nbsp;&nbsp;ไฟชาร์จแบตเตอรี่ 67.9% หรือน้อยกว่า</div>
+<div class="list">•&nbsp;&nbsp;อัตราไฟชาร์จแบตเตอรี่อยู่ที่ค่ากำหนด หรือมากกว่า</div>
+<div class="list">•&nbsp;&nbsp;แรงดันไฟฟ้าแบตเตอรี่โดยประมาณเมื่อเครื่องยนต์สตาร์ทอีกครั้งอยู่ที่ 7.25 V หรือต่ำกว่า</div>
+<div class="list">•&nbsp;&nbsp;สวิตช์ไล่ฝ้าทำงาน</div>
+<div class="list">•&nbsp;&nbsp;ระยะเวลาการดับเครื่องยนต์โดยการควบคุมระบบ i-stop: 120 วินาที หรือมากกว่า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">IR</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">สีเขียว<sup>*9</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;<sup>*2</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ตรวจพบสภาวะใดๆ ต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;ความเร็วรถ: 1 km/h {0.6 mph} หรือสูงกว่า (ATX)</div>
+<div class="list">•&nbsp;&nbsp;ความเร็วรถ: 4 km/h {2.5 mph} หรือสูงกว่า (MTX)</div>
+<div class="list">•&nbsp;&nbsp;สุญญากาศหม้อลมเบรกลดลง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">IR</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;<sup>*2</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ถือกุญแจอัจฉริยะออกนอกรถ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">IR<sup>*6</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;<sup>*2</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไฟเตือนกุญแจรีโมท (สีแดง) กะพริบ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เสียงเตือนโมดูลควบคุมกุญแจรีโมทปกติ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">IR ไม่ทำงาน</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;การสตาร์ทเป็นเวลา 3 วินาที หรือมากกว่าเมื่อสตาร์ทเครื่องยนต์อีกครั้ง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เครื่องยนต์ดับ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">สีเหลืองอำพัน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การติดสว่างเหมือนกับสภาวะการดับเครื่องยนต์ปกติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2" rowspan="2">
+<div class="tbody">การอนุญาต / การยับยั้ง IS</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;สวิตช์ i-stop OFF ทำงาน (กดค้างเป็นเวลา 0.5 วินาที หรือมากกว่า)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">IS ไม่ได้รับอนุญาต<sup>*8</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">สีเหลืองอำพัน<sup>*3</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เสียงบี๊บ</div>
+<div class="tbody">1 ครั้ง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;สวิตช์ i-stop OFF ไม่ทำงาน (กดค้างเป็นเวลา 0.5 วินาที หรือมากกว่า)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">IS ได้รับอนุญาต</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เสียงบี๊บ</div>
+<div class="tbody">1 ครั้ง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="3">
+<div class="tbody">ระบบบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">IS ไม่ได้รับอนุญาต</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">สีเหลืองอำพัน<sup>*5</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;<sup>*10</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;: เปลี่ยนการติดสว่างไปที่ IS เมื่อพบสภาวะต่างๆ สำหรับการใช้งานของคนขับ (แรงเหยียบแป้นเบรก)</div>
+<div class="deflist">*2&nbsp;&nbsp;: ไม่มีการกะพริบ, ดับลงเมื่อเครื่องยนต์สตาร์ทอีกครั้ง</div>
+<div class="deflist">*3&nbsp;&nbsp;: ติดสว่างตามการทำงานของสวิตช์ i-stop OFF (กดค้างเป็นเวลา 0.5 วินาที หรือนานกว่า)</div>
+<div class="deflist">*4&nbsp;&nbsp;: ดับลงตามการทำงานของสวิตช์ i-stop OFF (กดค้างเป็นเวลา 0.5 วินาที หรือนานกว่า)</div>
+<div class="deflist">*5&nbsp;&nbsp;: อาจติดสว่างเป็นสีเหลืองอำพันเมื่อการสื่อสารระหว่าง PCM ถูกตัด</div>
+<div class="deflist">*6&nbsp;&nbsp;: เฉพาะเมื่อกุญแจอัจฉริยะอยู่นอกรถขณะที่ประตูนอกเหนือจากประตูด้านคนขับเปิด</div>
+<div class="deflist">*7&nbsp;&nbsp;: สภาวะการอนุญาตระบบ i-stop (การควบคุมการดับเครื่องยนต์) จะแตกต่างกันตามสภาวะการขับขี่ (ดูที่ <font class="extxref-label"><a href="id0140g2008600.html">ไฟแสดงสถานะระบบ i-stop (สีเขียว) [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div class="deflist">*8&nbsp;&nbsp;: ถ้าในระหว่างการดับเครื่องยนต์โดยการควบคุมระบบ i-stop, เครื่องยนต์สตาร์ทอีกครั้งโดยการควบคุมระบบ i-stop</div>
+<div class="deflist">*9&nbsp;&nbsp;: IR ทำงานหลังจากไฟแสดงสถานะระบบ i-stop (สีเขียว) กะพริบเป็นเวลา 3 วินาที</div>
+<div class="deflist">*10&nbsp;&nbsp;: ถ้ามีความบกพร่องเกี่ยวกับแบตเตอรี่, ไฟเตือนหลักจะติดสว่าง</div>
+<div class="deflist">*11&nbsp;&nbsp;: ถ้าเหยียบแป้นคลัตช์แล้วปล่อยในขณะที่เครื่องยนต์หมุนเพื่อสตาร์ทเครื่องยนต์อีกครั้งโดยการควบคุมระบบ i-stop การดับเครื่องยนต์โดยการควบคุมระบบ i-stop จะทำงานต่อเนื่อง ถ้าทำซ้ำการทำงานเดียวกันหลายๆ ครั้ง เครื่องยนต์จะดับ</div>
+<p clear="all">
+<p class="table-title">ยกเว้นสเปคยุโรป (ประเทศอังกฤษ พวงมาลัยซ้าย</p>
+<p>
+<div>     IS: การดับเครื่องยนต์โดยการควบคุมระบบ i-stop</div>
+<div>IR: การสตาร์ทเครื่องยนต์อีกครั้งโดยการควบคุมระบบ i-stop</div>
+<div>&times;: สามารถทำได้</div>
+</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center" colspan="3" rowspan="2">
+<p class="thead">สภาวะรถ</p>
+</th>
+<th id="" align="center" rowspan="2">
+<p class="thead">สภาวะรถ</p>
+</th>
+<th id="" align="center" colspan="3">
+<p class="thead">การแสดงผลไฟแสดงสถานะระบบ i-stop (สีเขียว) / ไฟเตือนระบบ i-stop (สีเหลืองอำพัน)</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟแสดงสถานะ (อื่นๆ)</p>
+</th>
+<th id="" align="center" rowspan="2">
+<p class="thead">เสียงเตือน</p>
+</th>
+</tr>
+<tr>
+<th id="" align="center">
+<p class="thead">การติดสว่าง ON</p>
+</th>
+<th id="" align="center">
+<p class="thead">กะพริบ (0.5 วินาที)</p>
+</th>
+<th id="" align="center">
+<p class="thead">การติดสว่าง OFF</p>
+</th>
+<th id="" align="center">
+<p class="thead">การติดสว่าง ON / กะพริบ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">การขับขี่</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ไม่พบสภาวะ IS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody">พบสภาวะ IS<sup>*7</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">สีเขียว</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="3">
+<div class="tbody">จอดรถ</div>
+</td>
+<td id="" align="center" colspan="2" rowspan="2">
+<div class="tbody">ไม่พบสภาวะ IS<sup>*7</sup></div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">Idle</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">สีเขียว<sup>*1</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody">พบสภาวะ IS<sup>*7</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">IS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">สีเขียว</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="8">
+<div class="tbody">ในระหว่าง IS</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">พบสภาวะ IS<sup>*7</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">IS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">สีเขียว</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">IS ต่อเนื่องตามปกติ</div>
+</td>
+<td id="" align="left">
+<div class="entry-title">ATX:</div>
+<div class="tbody">เมื่อตรวจพบสภาวะต่างๆ ต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;เหยียบเบรก</div>
+<div class="list">•&nbsp;&nbsp;ตำแหน่ง D หรือ M (ยกเว้นโหมดล็อกเกียร์ 2)</div>
+<div class="list">•&nbsp;&nbsp;มุมในการบังคับเลี้ยวน้อยกว่า 70&deg;</div>
+<div class="tbody">เมื่อตรวจพบสภาวะต่างๆ ต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;ปล่อยเบรก</div>
+<div class="list">•&nbsp;&nbsp;ตำแหน่ง D หรือ M (ยกเว้นโหมดล็อกเกียร์ 2) → ตำแหน่ง N</div>
+<div class="list">•&nbsp;&nbsp;ตำแหน่ง D หรือ M (ยกเว้นโหมดล็อกเกียร์ 2) → ตำแหน่ง N → ตำแหน่ง P</div>
+<div class="list">•&nbsp;&nbsp;มุมในการบังคับเลี้ยวน้อยกว่า 70&deg;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">IS ต่อเนื่อง</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">สีเขียว</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="entry-title">MTX</div>
+<div class="tbody">เหยียบแป้นคลัตช์ → ปล่อยแป้นคลัตช์ในขณะเครื่องยนต์หมุนเพื่อสตาร์ทเครื่องยนต์อีกครั้งโดยการควบคุมระบบ i-stop</div>
+</td>
+<td id="" align="center">
+<div class="tbody">IS ต่อเนื่อง / เครื่องยนต์ดับ<sup>*10</sup></div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="5">
+<div class="tbody">การขอ IR (การใช้งานของคนขับ)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เมื่อเปลี่ยนไปที่ตำแหน่ง M (ยกเว้นโหมดล็อกเกียร์ 2)</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">IR</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">&times;<sup>*2</sup></div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การสตาร์ทเครื่องยนต์โดยการใช้งานกุญแจ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การตั้งค่า MIN, การตั้งค่า MAX ของอุณหภูมิระบบปรับอากาศ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="entry-title">ATX:</div>
+<div class="list">•&nbsp;&nbsp;ปล่อย → เหยียบแป้นเบรกขณะอยู่ที่ตำแหน่ง P หรือ N</div>
+<div class="list">•&nbsp;&nbsp;แรงดันน้ำมันเบรกอยู่ที่ 0.35 MPa {3.6 kgf/cm2, 51 psi} หรือน้อยกว่าในตำแหน่ง D หรือตำแหน่ง M</div>
+<div class="list">•&nbsp;&nbsp;เหยียบแป้นคันเร่งขณะอยู่ที่ตำแหน่ง D หรือ M</div>
+<div class="list">•&nbsp;&nbsp;แรงบิดในการบังคับเลี้ยวอยู่ที่ 2.8 N&middot;m {29 kgf&middot;cm, 25 in&middot;lbf} หรือมากกว่าในตำแหน่ง D หรือตำแหน่ง M</div>
+<div class="list">•&nbsp;&nbsp;มุมในการบังคับเลี้ยว (ตำแหน่ง D หรือ M (ยกเว้นโหมดล็อกเกียร์ 2)): -70&deg; หรือน้อยกว่า หรือ 70&deg; หรือมากกว่า</div>
+<div class="list">•&nbsp;&nbsp;การเปลี่ยนเกียร์</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;เมื่อเปลี่ยนไปที่ตำแหน่ง M (ยกเว้นโหมดล็อกเกียร์ 2)</div>
+<div class="list">―&nbsp;&nbsp;ตำแหน่ง P หรือ N → ตำแหน่ง D หรือ M หรือ R</div>
+</dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="entry-title">MTX<span class="entry-title"></span></div>
+<div class="list">•&nbsp;&nbsp;มุมการเปิดแป้นคลัตช์อยู่ที่ 86% หรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="9">
+<div class="tbody">ในระหว่าง IS</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การขอ IR (การใช้งานของคนขับ)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เมื่อตรวจพบสภาวะต่างๆ ต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;เข็มขัดนิรภัย (คนขับ): ไม่คาด</div>
+<div class="list">•&nbsp;&nbsp;ประตู (คนขับ): เปิด</div>
+<div class="list">•&nbsp;&nbsp;ตำแหน่ง P หรือ N (ATX)</div>
+<div class="list">•&nbsp;&nbsp;ตำแหน่งเกียร์ว่าง (MTX)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">IR</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;<sup>*2</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="4">
+<div class="tbody">เปลี่ยนไปที่สภาวะไม่ปลอดภัย (การใช้งานของคนขับ)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ประตู (คนขับ) เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">IS ต่อเนื่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">สีเขียว</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เว้นช่วงระยะ 0.25 วินาที</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">เมื่อตรวจพบสภาวะต่างๆ ต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;เข็มขัดนิรภัย (คนขับ): ไม่คาด</div>
+<div class="list">•&nbsp;&nbsp;ประตู (คนขับ): เปิด</div>
+<div class="list">•&nbsp;&nbsp;ตำแหน่ง D หรือ M (ยกเว้นโหมดล็อกเกียร์ 2) (ATX)</div>
+<div class="list">•&nbsp;&nbsp;เข้าเกียร์ (MTX)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เครื่องยนต์ดับ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">สีเหลืองอำพัน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การติดสว่างเหมือนกับสภาวะการดับเครื่องยนต์ปกติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เว้นช่วงระยะ 0.25 วินาทีเป็นเวลา 3 วินาที</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ฝากระโปรงหน้าเปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เครื่องยนต์ดับ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">สีเหลืองอำพัน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การติดสว่างเหมือนกับสภาวะการดับเครื่องยนต์ปกติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เว้นช่วงระยะ 0.25 วินาทีเป็นเวลา 3 วินาที</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="entry-title">MTX</div>
+<div class="tbody">เข้าเกียร์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">IS ต่อเนื่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">สีเขียว</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="3">
+<div class="tbody">การขอ IR (สัญญาณขอของรถ)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบสภาวะใดๆ ต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;การขอการทำงานของระบบปรับอากาศ</div>
+<div class="list">•&nbsp;&nbsp;ไฟชาร์จแบตเตอรี่ 67.9% หรือน้อยกว่า</div>
+<div class="list">•&nbsp;&nbsp;อัตราไฟชาร์จแบตเตอรี่อยู่ที่ค่ากำหนด หรือมากกว่า</div>
+<div class="list">•&nbsp;&nbsp;แรงดันไฟฟ้าแบตเตอรี่โดยประมาณเมื่อเครื่องยนต์สตาร์ทอีกครั้งอยู่ที่ 7.25 V หรือต่ำกว่า</div>
+<div class="list">•&nbsp;&nbsp;สวิตช์ไล่ฝ้าทำงาน</div>
+<div class="list">•&nbsp;&nbsp;ระยะเวลาการดับเครื่องยนต์โดยการควบคุมระบบ i-stop: 120 วินาที หรือมากกว่า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">IR</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;<sup>*2</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ตรวจพบสภาวะใดๆ ต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;ความเร็วรถ: 1 km/h {0.6 mph} หรือสูงกว่า (ATX)</div>
+<div class="list">•&nbsp;&nbsp;ความเร็วรถ: 4 km/h {2.5 mph} หรือสูงกว่า (MTX)</div>
+<div class="list">•&nbsp;&nbsp;สุญญากาศหม้อลมเบรกลดลง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">IR</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;<sup>*2</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ถือกุญแจอัจฉริยะออกนอกรถ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">IR<sup>*6</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;<sup>*2</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไฟเตือนกุญแจรีโมท (สีแดง) กะพริบ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เสียงเตือนโมดูลควบคุมกุญแจรีโมทปกติ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">IR ไม่ทำงาน</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;การสตาร์ทเป็นเวลา 3 วินาที หรือมากกว่าเมื่อสตาร์ทเครื่องยนต์อีกครั้ง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เครื่องยนต์ดับ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">สีเหลืองอำพัน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การติดสว่างเหมือนกับสภาวะการดับเครื่องยนต์ปกติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2" rowspan="2">
+<div class="tbody">การอนุญาต / การยับยั้ง IS</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;สวิตช์ i-stop OFF ทำงาน (กดค้างเป็นเวลา 0.5 วินาที หรือมากกว่า)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">IS ไม่ได้รับอนุญาต<sup>*8</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">สีเหลืองอำพัน<sup>*3</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เสียงบี๊บ</div>
+<div class="tbody">1 ครั้ง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;สวิตช์ i-stop OFF ไม่ทำงาน (กดค้างเป็นเวลา 0.5 วินาที หรือมากกว่า)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">IS ได้รับอนุญาต</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เสียงบี๊บ</div>
+<div class="tbody">1 ครั้ง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="3">
+<div class="tbody">ระบบบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">IS ไม่ได้รับอนุญาต</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">สีเหลืองอำพัน<sup>*5</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;<sup>*9</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;: เปลี่ยนการติดสว่างไปที่ IS เมื่อพบสภาวะต่างๆ สำหรับการใช้งานของคนขับ (แรงเหยียบแป้นเบรก)</div>
+<div class="deflist">*2&nbsp;&nbsp;: ไม่มีการกะพริบ, ดับลงเมื่อเครื่องยนต์สตาร์ทอีกครั้ง</div>
+<div class="deflist">*3&nbsp;&nbsp;: ติดสว่างตามการทำงานของสวิตช์ i-stop OFF (กดค้างเป็นเวลา 0.5 วินาที หรือนานกว่า)</div>
+<div class="deflist">*4&nbsp;&nbsp;: ดับลงตามการทำงานของสวิตช์ i-stop OFF (กดค้างเป็นเวลา 0.5 วินาที หรือนานกว่า)</div>
+<div class="deflist">*5&nbsp;&nbsp;: อาจติดสว่างเป็นสีเหลืองอำพันเมื่อการสื่อสารระหว่าง PCM ถูกตัด</div>
+<div class="deflist">*6&nbsp;&nbsp;: เฉพาะเมื่อกุญแจอัจฉริยะอยู่นอกรถขณะที่ประตูนอกเหนือจากประตูด้านคนขับเปิด</div>
+<div class="deflist">*7&nbsp;&nbsp;: สภาวะการอนุญาตระบบ i-stop (การควบคุมการดับเครื่องยนต์) จะแตกต่างกันตามสภาวะการขับขี่ (ดูที่ <font class="extxref-label"><a href="id0140g2008600.html">ไฟแสดงสถานะระบบ i-stop (สีเขียว) [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div class="deflist">*8&nbsp;&nbsp;: ถ้าในระหว่างการดับเครื่องยนต์โดยการควบคุมระบบ i-stop, เครื่องยนต์สตาร์ทอีกครั้งโดยการควบคุมระบบ i-stop</div>
+<div class="deflist">*9&nbsp;&nbsp;: ถ้ามีความบกพร่องเกี่ยวกับแบตเตอรี่, ไฟเตือนหลักจะติดสว่าง</div>
+<div class="deflist">*10&nbsp;&nbsp;: ถ้าเหยียบแป้นคลัตช์แล้วปล่อยในขณะที่เครื่องยนต์หมุนเพื่อสตาร์ทเครื่องยนต์อีกครั้งโดยการควบคุมระบบ i-stop การดับเครื่องยนต์โดยการควบคุมระบบ i-stop จะทำงานต่อเนื่อง ถ้าทำซ้ำการทำงานเดียวกันหลายๆ ครั้ง เครื่องยนต์จะดับ</div>
+</p>
+</body>
+</html>

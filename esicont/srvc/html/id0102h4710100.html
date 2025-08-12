@@ -1,0 +1,921 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>รหัสวิเคราะห์ปัญหา P0011:00, P0012:00 [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</title>
+</head>
+<body><a name="id0102h4710100"></a><p class="servinfo-title"><span class="servinfo-head"></span>รหัสวิเคราะห์ปัญหา P0011:00, P0012:00 [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0102h4710100</p>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;ในการตัดสินชิ้นส่วนที่บกพร่อง ให้ดำเนินการด้วยการวิเคราะห์ปัญหาจาก &quot;การตรวจสอบฟังก์ชั่นโดยใช้ M-MDS&quot;</div>
+</div>
+</dd>
+</dl><br clear="all"><a name="id0102h471010001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รายละเอียดเกี่ยวกับรหัสวิเคราะห์ปัญหา</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">คำอธิบาย</p>
+</th>
+<th id="" align="left" colspan="2">
+<p class="thead">ระบบควบคุมไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า:</p>
+<div class="list">•&nbsp;&nbsp;P0011:00: ล่วงหน้ามากเกินไป</div>
+<div class="list">•&nbsp;&nbsp;P0012:00: หน่วงมากเกินไป</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center" rowspan="7">
+<div class="tbody"><span>สภาวะการตรวจพบ</span></div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="tbody">สภาพการกำหนด</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;P0011:00: สภาวะที่การล่วงหน้าจังหวะการเปิด/ปิดวาล์วไอดีจริง (การล่วงหน้าที่มากเกินไป) เมื่อเปรียบเทียบกับจังหวะการเปิด/ปิดวาล์วไอดีเป้าหมายเกิดขึ้นอย่างต่อเนื่องในช่วงระยะเวลาหนึ่ง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;P0012:00: สภาวะที่การหน่วงจังหวะการเปิด/ปิดวาล์วไอดีจริง (การหน่วงที่มากเกินไป) เมื่อเปรียบเทียบกับจังหวะการเปิด/ปิดวาล์วไอดีเป้าหมายเกิดขึ้นอย่างต่อเนื่องในช่วงระยะเวลาหนึ่ง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">สภาพก่อนหน้า</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;แรงดันไฟฟ้าแบตเตอรี่: <span>สูงกว่า 11 V</span><sup>*1</sup></div>
+<div class="list">•&nbsp;&nbsp;ความเร็วรอบเครื่องยนต์: <span>5,000 rpm หรือต่ำกว่า<sup>*1</sup></span></div>
+<div class="list">•&nbsp;&nbsp;อุณหภูมิน้ำหล่อเย็นเครื่องยนต์: <span>60 &deg;C {140 &deg;F} หรือมากกว่า</span><sup>*1</sup></div>
+<div class="list">•&nbsp;&nbsp;ตรวจไม่พบรหัสวิเคราะห์ปัญหาต่อไปนี้:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;P0010:00, P0335:00, P0340:00</div>
+</dd>
+</dl>
+<div class="list"><sup>*1</sup>: สามารถตรวจสอบค่าได้ด้วยการแสดง PID โดยใช้ M-MDS</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ระยะเวลาการกำหนดการทำงานผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ผลต่างอยู่ที่ 15 องศาเซลเซียส หรือมากกว่า เป็นเวลาประมาณ <span>10 วินาที</span>ต่อเนื่องกัน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">รอบการขับ</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;<span>1</span></div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ประเภทการทดสอบด้วยตนเอง</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;การทดสอบ CMDTC ด้วยตนเอง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">เซ็นเซอร์ที่ใช้</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;เซ็นเซอร์ CKP</div>
+<div class="list">•&nbsp;&nbsp;เซ็นเซอร์ CMP ไอดี</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>ฟังก์ชั่น FAIL-SAFE</span></div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="list">•&nbsp;&nbsp;ใช้ไม่ได้</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สถานะของรถเมื่อแสดงค่ารหัสวิเคราะห์ปัญหา</span></div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="list">•&nbsp;&nbsp;ไฟเตือนตรวจเช็คเครื่องยนต์ติดสว่าง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สาเหตุที่เป็นไปได้</span></div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="list">•&nbsp;&nbsp;ขั้วต่อหรือขั้วของมอเตอร์ / ตัวขับไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า</div>
+<div class="list">•&nbsp;&nbsp;วงจรแหล่งจ่ายไฟรีเลย์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้าขาดหรือลัดวงจรลงกราวด์</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ชุดสายไฟระหว่างขั้วบวกแบตเตอรี่กับขั้ว D ของรีเลย์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้าลัดวงจรลงกราวด์</div>
+<div class="list">―&nbsp;&nbsp;ฟิวส์ MAIN 200 A และ/หรือฟิวส์ EVVT 20 A บกพร่อง</div>
+<div class="list">―&nbsp;&nbsp;ชุดสายไฟระหว่างขั้วบวกแบตเตอรี่กับขั้ว D ของรีเลย์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้าขาดวงจร</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระหว่างขั้วต่างๆ ต่อไปนี้ลัดวงจรลงกราวด์:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ขั้ว C ของรีเลย์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า &mdash; ขั้ว 1E ของมอเตอร์ / ตัวขับไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า</div>
+<div class="list">―&nbsp;&nbsp;ขั้ว C ของรีเลย์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า &mdash; ขั้ว 2B ของมอเตอร์ / ตัวขับไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระหว่างขั้วต่างๆ ต่อไปนี้ขาดวงจร:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ขั้ว C ของรีเลย์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า &mdash; ขั้ว 1E ของมอเตอร์ / ตัวขับไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า</div>
+<div class="list">―&nbsp;&nbsp;ขั้ว C ของรีเลย์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า &mdash; ขั้ว 2B ของมอเตอร์ / ตัวขับไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อหรือขั้วของ PCM บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;รีเลย์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้าบกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;มอเตอร์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้าบกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้าบกพร่อง</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;แอ็คชิวเอเตอร์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้าติดขัดในตำแหน่งล่วงหน้า</div>
+<div class="list">―&nbsp;&nbsp;แอ็คชิวเอเตอร์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้าติดขัดในตำแหน่งหน่วง</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;โซ่ไทม์มิ่งหย่อน หรือจังหวะการเปิด/ปิดวาล์วไอดีไม่ถูกต้องเนื่องจากโซ่ไทม์มิ่งเลื่อนหลุด</div>
+<div class="list">•&nbsp;&nbsp;โซ่ไทม์มิ่งบกพร่อง</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;การประกอบโซ่ไทม์มิ่งไม่ดี</div>
+<div class="list">―&nbsp;&nbsp;หลวมหรือหลุด</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;เซ็นเซอร์ CMP ไอดีตรวจจับผิดพลาด</div>
+<div class="list">•&nbsp;&nbsp;เซ็นเซอร์ CKP ตรวจจับผิดพลาด</div>
+<div class="list">•&nbsp;&nbsp;PCM บกพร่อง</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p><br clear="all"><a name="id0102h471010002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ผังวงจรไฟฟ้าระบบ</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/am6zzw00011802.png"></td>
+</tr>
+</table>
+<div class="figure-caption">am6zzw00011802</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id0102h471010003"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>คำอธิบายฟังก์ชั่น (รายละเอียดการตรวจพบรหัสวิเคราะห์ปัญหา)</p>
+<div class="list-title">P0011:00</div>
+<div class="list">•&nbsp;&nbsp;เมื่อตรงตามสภาพก่อนหน้า PCM จะตรวจสอบความสอดคล้องกันของจังหวะเปิด/ปิดตามจริงกับจังหวะเปิด/ปิดวาล์วเป้าหมาย ถ้าไม่ตรงตามช่วงการตัดสินปกติ (ผลต่างระหว่างจังหวะการเปิด/ปิดวาล์วเป้าหมายกับจังหวะการเปิด/ปิดวาล์วจริงอยู่ที่ 15 องศา หรือน้อยกว่า) ระหว่างช่วงการตัดสินความบกพร่อง (ประมาณ 9 วินาที) แม้ว่าจังหวะการเปิด/ปิดวาล์วเป้าหมายจะปรับตั้งไว้ที่ด้านหน่วง PCM จะตัดสินว่าเป็นสภาวะความบกพร่องการล่วงหน้าที่มากเกินไปและเก็บบันทึกรหัสวิเคราะห์ปัญหา<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/am6zzw00011803.png"></td>
+</tr>
+</table>
+<div class="figure-caption">am6zzw00011803</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="list-title">P0012:00</div>
+<div class="list">•&nbsp;&nbsp;เมื่อตรงตามสภาพก่อนหน้า PCM จะตรวจสอบความสอดคล้องกันของจังหวะเปิด/ปิดตามจริงกับจังหวะเปิด/ปิดวาล์วเป้าหมาย ถ้าไม่ตรงตามช่วงการตัดสินปกติ (ผลต่างระหว่างจังหวะการเปิด/ปิดวาล์วเป้าหมายกับจังหวะการเปิด/ปิดวาล์วจริงอยู่ที่ 15 องศา หรือน้อยกว่า) ระหว่างช่วงการตัดสินความบกพร่อง (ประมาณ 9 วินาที) แม้ว่าจังหวะการเปิด/ปิดวาล์วเป้าหมายจะปรับตั้งไว้ที่ด้านล่วงหน้า PCM จะตัดสินว่าเป็นสภาวะความบกพร่องการหน่วงที่มากเกินไปและเก็บบันทึกรหัสวิเคราะห์ปัญหา<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/am6xuw00006289.png"></td>
+</tr>
+</table>
+<div class="figure-caption">am6xuw00006289</div>
+</td>
+</tr>
+</table>
+</div><br clear="all"><a name="id0102h471010004"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ขั้นตอนการตรวจสอบการปรากฏซ้ำได้</p>
+<div class="list">1.&nbsp;อุ่นเครื่องยนต์เพื่อทำให้อุณหภูมิน้ำหล่อเย็นเครื่องยนต์ขึ้นถึง <span>80 &deg;C {176 &deg;F} หรือมากกว่านั้น</span><dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;ทำให้อุณหภูมิน้ำหล่อเย็นเครื่องยนต์ในข้อมูลสภาพรถยนต์ (โหมด 2) ที่บันทึกไว้/ข้อมูล Snapshot, ความเร็วรถ และค่าความเร็วรอบเครื่องยนต์ตรงกับค่าที่เป็นไปได้มากที่สุดขณะขับขี่รถ</div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="list">2.&nbsp;&nbsp;พยายามทำให้เกิดความบกพร่องอีกครั้งโดยการขับรถเป็นเวลา <span>5 นาที</span>ตามค่าที่แสดงในข้อมูลสภาพรถยนต์ (FREEZE FRAME DATA) (โหมด 2) / ข้อมูล Snapshot</div><br clear="all"><a name="id0102h471010005"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รายการ PID/รายการการจำลองที่ใช้ในการวิเคราะห์ปัญหา</p>
+<p clear="all">
+<p class="table-title">ตารางรายการตรวจสอบ PID/DATA</p>
+<p>
+<div>
+</div>
+</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รายการ</p>
+</th>
+<th id="" align="center">
+<p class="thead">คำอธิบาย</p>
+</th>
+<th id="" align="center">
+<p class="thead">ชุดอุปกรณ์/สภาวะ</p>
+</th>
+<th id="" align="center">
+<p class="thead">สภาวะ/ค่าที่กำหนด (ค่าอ้างอิง)</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">VT IN_ACT</div>
+</td>
+<td id="" align="left">
+<div class="tbody">จังหวะการเปิด/ปิดวาล์วไอดีตามจริง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg; (องศา)</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;แสดงจังหวะการเปิด/ปิดวาล์วไอดีจริง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">VT IN_DES</div>
+</td>
+<td id="" align="left">
+<div class="tbody">จังหวะการเปิด/ปิดวาล์วไอดีที่ต้องการ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg; (องศา)</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;แสดงจังหวะการเปิด/ปิดวาล์วไอดีที่ต้องการ</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p><br clear="all"><a name="id0102h471010006"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การตรวจสอบฟังก์ชั่นโดยใช้ M-MDS</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center">
+<p class="thead">การตรวจสอบ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ผลลัพธ์</p>
+</th>
+<th id="" align="center">
+<p class="thead">การดำเนินการ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">1</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">จุดประสงค์: ตรวจสอบว่ามีข้อมูลการบริการที่เกี่ยวข้อง</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบว่ามีข้อมูลการบริการที่เกี่ยวข้องหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;มีข้อมูลการบริการที่เกี่ยวข้องอื่นๆ หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ให้ทำการซ่อมหรือวิเคราะห์ปัญหาตามข้อมูลการบริการที่มี</div>
+<div class="list">•&nbsp;&nbsp;ถ้าแก้ไขปัญหาไม่ได้ ให้ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">2</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">จุดประสงค์: บันทึกข้อมูลสถานะของรถเมื่อมีการตรวจพบรหัสวิเคราะห์ปัญหา เพื่อนำไปใช้กับการตรวจสอบการปรากฏซ้ำได้</div>
+<div class="list">•&nbsp;&nbsp;ข้อมูลสภาพรถยนต์ (FREEZE FRAME DATA) (โหมด 2) / ข้อมูล SNAPSHOT ได้รับการบันทึกแล้วหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">บันทึกข้อมูลสภาพรถยนต์ (FREEZE FRAME DATA) (โหมด 2) / ข้อมูล SNAPSHOT ตามคำสั่งซ่อม แล้วไปที่ขั้นตอนถัดไป</div>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;การบันทึกข้อมูลสามารถทำได้ง่ายๆ โดยการใช้ฟังก์ชั่นจับภาพหน้าจอของ PC</div>
+</div>
+</dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">3</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">จุดประสงค์: ตรวจสอบว่าผลการวิเคราะห์ปัญหาได้รับผลกระทบจากการเกิดรหัสวิเคราะห์ปัญหาอื่นๆ ที่เกี่ยวข้องหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;ให้ปฏิบัติตามขั้นตอนการเข้าถึงรหัสปัญหาที่ค้างอยู่และขั้นตอนการอ่านรหัสวิเคราะห์ปัญหา<div>(ดูที่ <font class="extxref-label"><a href="id0102h4801000.html">การทดสอบการวิเคราะห์ปัญหาบนรถ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีรหัสที่ค้างอยู่ / รหัสวิเคราะห์ปัญหา P0010:00, P0335:00, P0340:00 หรือ P1380:00 ปรากฏขึ้นด้วยหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่การตรวจสอบรหัสวิเคราะห์ปัญหานั้นๆ</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0102h4310700.html">รหัสวิเคราะห์ปัญหา P0010:00 [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0102h4703600.html">รหัสวิเคราะห์ปัญหา P0335:00 [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0102h4703700.html">รหัสวิเคราะห์ปัญหา P0340:00 [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0102h4009700.html">รหัสวิเคราะห์ปัญหา P1380:00 [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">4</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">จุดประสงค์: ตรวจสอบความสอดคล้องกันของจังหวะการเปิด/ปิดวาล์วไอดีจริง</div>
+<div class="list">•&nbsp;&nbsp;สตาร์ทเครื่องยนต์และปล่อยทำงานในรอบเดินเบา</div>
+<div class="list">•&nbsp;&nbsp;เข้า PID ต่อไปนี้โดยใช้ M-MDS:<div>(ดูที่ <font class="extxref-label"><a href="id0102h4801000.html">การทดสอบการวิเคราะห์ปัญหาบนรถ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;VT IN_ACT</div>
+<div class="list">―&nbsp;&nbsp;VT IN_DES</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ปฏิบัติดังนี้:</div>
+<dl>
+<dd class="list">
+<div class="list">1.&nbsp;&nbsp;เร่งรอบเครื่องยนต์ที่ความเร็ว <span>3,000 rpm หรือน้อยกว่า</span></div>
+<div class="list">2.&nbsp;&nbsp;ปล่อยทำงานในรอบเดินเบา</div>
+<div class="list">3.&nbsp;&nbsp;ปฏิบัติซ้ำขั้นตอน 1 และ 2 มากกว่า 5 ครั้งติดต่อกัน</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ค่าบนหน้าจอของรายการ PID VT IN_ACT สอดคล้องกับค่า PID VT IN_DES หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนการค้นหาสาเหตุปัญหาเพื่อดำเนินการตามขั้นตอนตั้งแต่ขั้นตอน 1</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">5</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">จุดประสงค์: ตรวจสอบการต่อขั้วต่อ</div>
+<div class="list">•&nbsp;&nbsp;สตาร์ทเครื่องยนต์</div>
+<div class="list">•&nbsp;&nbsp;เข้า VT IN_ACT PID โดยใช้ M-MDS<div>(ดูที่ <font class="extxref-label"><a href="id0102h4801000.html">การทดสอบการวิเคราะห์ปัญหาบนรถ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ค่า PID ผันผวนหรือไม่เมื่อขยับขั้วต่อดังต่อไปนี้</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;มอเตอร์/ตัวขับไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า</div>
+<div class="list">―&nbsp;&nbsp;PCM</div>
+</dd>
+</dl>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชุดสายไฟหรือชิ้นส่วนของขั้วต่อนั้นๆ</div>
+<div class="tbody">ไปที่ขั้นตอนการค้นหาสาเหตุปัญหาเพื่อดำเนินการตามขั้นตอนตั้งแต่ขั้นตอน 12</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนการค้นหาสาเหตุปัญหาเพื่อดำเนินการตามขั้นตอนตั้งแต่ขั้นตอน 1</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p><br clear="all"><a name="id0102h471010007"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ขั้นตอนการวิเคราะห์แก้ไขปัญหา</p>
+<div class="list-title">จุดประสงค์ของขั้นตอนการค้นหาสาเหตุปัญหา</div>
+<div class="list">•&nbsp;&nbsp;ขั้นตอน 1&mdash;5</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ดำนินการตรวจสอบขั้วต่อและชุดสายไฟระหว่างขั้วบวกแบตเตอรี่และรีเลย์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้าและตัวขับ / มอเตอร์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ขั้นตอน 6</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ดำเนินการตรวจสอบชุดรีเลย์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ขั้นตอน 7&mdash;9</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ดำเนินการตรวจสอบชิ้นส่วนตัวขับไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ขั้นตอน 10&mdash;11</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ตรวจสอบการยึดเกาะของวัสดุแปลกปลอมที่บริเวณการตรวจจับของเซ็นเซอร์ CMP ไอดีและเซ็นเซอร์ CKP</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ขั้นตอน 12&mdash;13</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ตรวจสอบว่าความบกพร่องหลักได้รับการแก้ไขเรียบร้อยแล้ว และไม่มีความบกพร่องอื่นๆ</div>
+</dd>
+</dl>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center">
+<p class="thead">การตรวจสอบ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ผลลัพธ์</p>
+</th>
+<th id="" align="center">
+<p class="thead">การดำเนินการ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">1</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">จุดประสงค์: ตรวจสอบการลัดวงจรลงกราวด์หรือการขาดวงจรของวงจรแหล่งจ่ายไฟรีเลย์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;ถอดรีเลย์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า</div>
+<div class="list">•&nbsp;&nbsp;วัดแรงดันไฟฟ้าที่ขั้ว D ของรีเลย์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า (ด้านชุดสายไฟ)</div>
+<div class="list">•&nbsp;&nbsp;มีแรงดันไฟฟ้าเท่ากับ <span>B+</span> หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจสอบฟิวส์ MAIN 200 A และฟิวส์ EVVT 20 A</div>
+<div class="list">•&nbsp;&nbsp;ถ้าฟิวส์ขาด:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ดูที่ผังวงจรไฟฟ้าและตรวจสอบว่ามีขั้วต่อร่วมระหว่างขั้วบวกแบตเตอรี่กับขั้ว D ของรีเลย์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้าหรือไม่</div>
+<dl>
+<div class="list-title">ถ้ามีขั้วต่อร่วม:</div>
+<dd class="list">
+<div class="list">•&nbsp;&nbsp;ระบุชิ้นส่วนที่ทำงานผิดปกติโดยการตรวจสอบขั้วต่อร่วมและขั้วเพื่อหาการผุกร่อน การชำรุด หรือการหลุดออกจากกันของขั้ว และตรวจสอบชุดสายไฟร่วมเพื่อหาการลัดวงจรลงกราวด์</div>
+<div class="list">•&nbsp;&nbsp;ซ่อมหรือเปลี่ยนชิ้นส่วนที่บกพร่อง</div>
+</dd>
+</dl>
+<dl>
+<div class="list-title">ถ้าไม่มีขั้วต่อร่วม:</div>
+<dd class="list">
+<div class="list">•&nbsp;&nbsp;ซ่อมหรือเปลี่ยนชุดสายไฟที่เกิดการลัดวงจรลงกราวด์</div>
+<div class="list">•&nbsp;&nbsp;เปลี่ยนฟิวส์ที่บกพร่อง</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ถ้าฟิวส์เสียหาย:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;เปลี่ยนฟิวส์ที่บกพร่อง</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ถ้าฟิวส์ทั้งหมดปกติ:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ดูที่ผังวงจรไฟฟ้าและตรวจสอบว่ามีขั้วต่อร่วมระหว่างขั้วบวกแบตเตอรี่กับขั้ว D ของรีเลย์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้าหรือไม่</div>
+<dl>
+<div class="list-title">ถ้ามีขั้วต่อร่วม:</div>
+<dd class="list">
+<div class="list">•&nbsp;&nbsp;ระบุชิ้นส่วนที่ทำงานผิดปกติโดยการตรวจสอบขั้วต่อร่วมและขั้วเพื่อหาการผุกร่อน การชำรุด หรือการหลุดออกจากกันของขั้ว และตรวจสอบชุดสายไฟร่วมเพื่อหาการขาดวงจร</div>
+<div class="list">•&nbsp;&nbsp;ซ่อมหรือเปลี่ยนชิ้นส่วนที่บกพร่อง</div>
+</dd>
+</dl>
+<dl>
+<div class="list-title">ถ้าไม่มีขั้วต่อร่วม:</div>
+<dd class="list">
+<div class="list">•&nbsp;&nbsp;ซ่อมหรือเปลี่ยนชุดสายไฟที่เกิดการขาดวงจร</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="tbody">ไปที่ขั้นตอน 12</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">2</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">จุดประสงค์: ตรวจสอบสภาพขั้วต่อมอเตอร์ / ตัวขับไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อมอเตอร์ / ตัวขับไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบการเชื่อมต่อที่ไม่สมบูรณ์ (เช่น ขั้วไฟฟ้าเสียหาย / หลุดออก การผุกร่อน)</div>
+<div class="list">•&nbsp;&nbsp;มีความบกพร่องใดๆ หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนขั้วต่อและ/หรือขั้วไฟฟ้า แล้วไปที่ขั้นตอน 12</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">3</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">จุดประสงค์: ตรวจสอบการลัดวงจรลงกราวด์ของวงจรควบคุมรีเลย์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า</div>
+<div class="list">•&nbsp;&nbsp;ถอดรีเลย์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบว่าขั้วต่อมอเตอร์ / ตัวขับไทม์มิ่งวาล์วแปรผันแบบไฟฟ้าถูกปลดออกหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต่อเนื่องระหว่างขั้ว C ของรีเลย์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า (ด้านชุดสายไฟ) กับกราวด์ตัวถัง</div>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ดูที่ผังวงจรไฟฟ้า และตรวจสอบว่ามีขั้วต่อร่วมระหว่างขั้วต่างๆ ต่อไปนี้หรือไม่:</div>
+<div class="list">•&nbsp;&nbsp;ขั้ว C ของรีเลย์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า &mdash; ขั้ว 1E ของมอเตอร์ / ตัวขับไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า</div>
+<div class="list">•&nbsp;&nbsp;ขั้ว C ของรีเลย์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า &mdash; ขั้ว 2B ของมอเตอร์ / ตัวขับไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า</div>
+<div class="list-title">ถ้ามีขั้วต่อร่วม:</div>
+<div class="list">•&nbsp;&nbsp;ระบุชิ้นส่วนที่ทำงานผิดปกติโดยการตรวจสอบขั้วต่อร่วมและขั้วเพื่อหาการผุกร่อน การชำรุด หรือการหลุดออกจากกันของขั้ว และตรวจสอบชุดสายไฟร่วมเพื่อหาการลัดวงจรลงกราวด์</div>
+<div class="list">•&nbsp;&nbsp;ซ่อมหรือเปลี่ยนชิ้นส่วนที่บกพร่อง</div>
+<div class="list-title">ถ้าไม่มีขั้วต่อร่วม:</div>
+<div class="list">•&nbsp;&nbsp;ซ่อมหรือเปลี่ยนชุดสายไฟที่เกิดการลัดวงจรลงกราวด์</div>
+<div class="tbody">ไปที่ขั้นตอน 12</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">4</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">จุดประสงค์: ตรวจสอบการขาดวงจรของวงจรควบคุมรีเลย์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า</div>
+<div class="list">•&nbsp;&nbsp;ถอดรีเลย์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบว่าขั้วต่อมอเตอร์ / ตัวขับไทม์มิ่งวาล์วแปรผันแบบไฟฟ้าถูกปลดออกหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต่อเนื่องระหว่างขั้วต่างๆ ต่อไปนี้ (ด้านชุดสายไฟ):</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ขั้ว C ของรีเลย์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า &mdash; ขั้ว 1E ของมอเตอร์ / ตัวขับไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า</div>
+<div class="list">―&nbsp;&nbsp;ขั้ว C ของรีเลย์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า &mdash; ขั้ว 2B ของมอเตอร์ / ตัวขับไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ดูที่ผังวงจรไฟฟ้า และตรวจสอบว่ามีขั้วต่อร่วมระหว่างขั้วต่างๆ ต่อไปนี้หรือไม่:</div>
+<div class="list">•&nbsp;&nbsp;ขั้ว C ของรีเลย์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า &mdash; ขั้ว 1E ของมอเตอร์ / ตัวขับไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า</div>
+<div class="list">•&nbsp;&nbsp;ขั้ว C ของรีเลย์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า &mdash; ขั้ว 2B ของมอเตอร์ / ตัวขับไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า</div>
+<div class="list-title">ถ้ามีขั้วต่อร่วม:</div>
+<div class="list">•&nbsp;&nbsp;ระบุชิ้นส่วนที่ทำงานผิดปกติโดยการตรวจสอบขั้วต่อร่วมและขั้วเพื่อหาการผุกร่อน การชำรุด หรือการหลุดออกจากกันของขั้ว และตรวจสอบชุดสายไฟร่วมเพื่อหาการขาดวงจร</div>
+<div class="list">•&nbsp;&nbsp;ซ่อมหรือเปลี่ยนชิ้นส่วนที่บกพร่อง</div>
+<div class="list-title">ถ้าไม่มีขั้วต่อร่วม:</div>
+<div class="list">•&nbsp;&nbsp;ซ่อมหรือเปลี่ยนชุดสายไฟที่เกิดการขาดวงจร</div>
+<div class="tbody">ไปที่ขั้นตอน 12</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">5</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">จุดประสงค์: ตรวจสอบสภาพขั้วต่อ PCM</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อ PCM</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบการเชื่อมต่อที่ไม่สมบูรณ์ (เช่น ขั้วไฟฟ้าเสียหาย / หลุดออก การผุกร่อน)</div>
+<div class="list">•&nbsp;&nbsp;มีความบกพร่องใดๆ หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนขั้วต่อและ/หรือขั้วไฟฟ้า แล้วไปที่ขั้นตอน 12</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">6</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">จุดประสงค์: ตัดสินความสมบูรณ์ของรีเลย์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบรีเลย์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า<div>(ดูที่ <font class="extxref-label"><a href="id092100800300.html">การตรวจสอบรีเลย์</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีความบกพร่องใดๆ หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนรีเลย์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า แล้วไปที่ขั้นตอน 12</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">7</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">จุดประสงค์: ตัดสินความสมบูรณ์ของมอเตอร์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบมอเตอร์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า<div>(ดูที่ <font class="extxref-label"><a href="id0110h3828100.html">การตรวจสอบมอเตอร์ / ตัวขับไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีความบกพร่องใดๆ หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนมอเตอร์ / ตัวขับไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า แล้วไปที่ขั้นตอน 12</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0110h3808100.html">การถอด / การติดตั้งมอเตอร์ / ตัวขับไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">8</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">จุดประสงค์: ตัดสินความสมบูรณ์ของแอ็คชิวเอเตอร์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบแอ็คชิวเอเตอร์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า<div>(ดูที่ <font class="extxref-label"><a href="id0110h3555500.html">การตรวจสอบแอ็คชิวเอเตอร์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีความบกพร่องใดๆ หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนแอ็คชิวเอเตอร์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า แล้วไปที่ขั้นตอน 12</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0110h3126900.html">การถอด / การติดตั้งแอ็คชิวเอเตอร์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า, แอ็คชิวเอเตอร์ไทม์มิ่งวาล์วแปรผันแบบไฮดรอลิก [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">9</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">จุดประสงค์: ตรวจสอบสภาพการประกอบของโซ่ไทม์มิ่ง</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบสภาวะของการประกอบโซ่ไทม์มิ่ง (จังหวะการเปิด/ปิดวาล์วไอดี, การหลุดหลวม, การกระตุก)<div>(ดูที่ <font class="extxref-label"><a href="id0110h3801000.html">การถอด / การติดตั้งโซ่ไทม์มิ่ง [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีความบกพร่องใดๆ หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชิ้นส่วนที่บกพร่อง</div>
+<div class="tbody">ประกอบโซ่ไทม์มิ่งโดยใช้ไทม์มิ่งที่ถูกต้อง แล้วไปที่ขั้นตอน 12</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0110h3801000.html">การถอด / การติดตั้งโซ่ไทม์มิ่ง [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">10</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">จุดประสงค์: ตรวจสอบว่าวัสดุแปลกปลอมบนบริเวณการตรวจจับของเซ็นเซอร์ CMP ไอดีส่งผลต่อผลการวิเคราะห์หรือไม่</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบเซ็นเซอร์ CMP ไอดีด้วยสายตา<div>(ดูที่ <font class="extxref-label"><a href="id0140g2801400.html">การตรวจสอบเซ็นเซอร์ตำแหน่งเพลาราวลิ้น (CMP) [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีวัสดุแปลกปลอม เช่น ผงโลหะ บนบริเวณการตรวจจับของเซ็นเซอร์ CMP ไอดีหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ขจัดวัสดุแปลกปลอมออก แล้วไปที่ขั้นตอน 12</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">11</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">จุดประสงค์: ตรวจสอบว่าวัสดุแปลกปลอมบนบริเวณการตรวจจับของเซ็นเซอร์ CKP ส่งผลต่อผลการวิเคราะห์หรือไม่</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบเซ็นเซอร์ CKP ด้วยสายตา<div>(ดูที่ <font class="extxref-label"><a href="id0140g2800500.html">การตรวจสอบเซ็นเซอร์ตำแหน่งเพลาข้อเหวี่ยง (CKP) [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีวัสดุแปลกปลอม เช่น ผงโลหะ บนบริเวณการตรวจจับของเซ็นเซอร์ CKP หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ขจัดวัสดุแปลกปลอมออก แล้วไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">12</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">จุดประสงค์: การตรวจสอบความสมบูรณ์ของการซ่อมแซมรถยนต์</div>
+<div class="list">•&nbsp;&nbsp;ต่อขั้วต่อที่ปลดออกทั้งหมดกลับเข้าที่ทุกครั้ง</div>
+<div class="list">•&nbsp;&nbsp;ลบรหัสวิเคราะห์ปัญหาออกจากหน่วยความจำ PCM โดยใช้ M-MDS<div>(ดูที่ <font class="extxref-label"><a href="id0102h4801100.html">ขั้นตอนหลังจากงานซ่อม [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;นำขั้นตอนการตรวจสอบการปรากฏซ้ำได้ไปใช้<div>(ดูที่ <font class="intxref-label"><a href="#id0102h471010004">ขั้นตอนการตรวจสอบการปรากฏซ้ำได้</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ปฏิบัติตามขั้นตอนการอ่านรหัสวิเคราะห์ปัญหา<div>(ดูที่ <font class="extxref-label"><a href="id0102h4801000.html">การทดสอบการวิเคราะห์ปัญหาบนรถ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;รหัสวิเคราะห์ปัญหา P0011:00 หรือ P0012:00 ปรากฏขึ้นด้วยหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ทำซ้ำการตรวจสอบตั้งแต่ขั้นตอน 1</div>
+<div class="list">•&nbsp;&nbsp;ถ้าความบกพร่องเกิดขึ้นอีกครั้ง ให้เปลี่ยน PCM<div>(ดูที่ <font class="extxref-label"><a href="id0140g2802400.html">การถอด / การติดตั้ง PCM [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</div>
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">13</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">จุดประสงค์: ตรวจสอบว่ามีความบกพร่องในส่วนอื่นๆ อีกหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;รหัสวิเคราะห์หรือรหัสที่ค้างอยู่อื่นๆ ได้รับการจัดเก็บไว้หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่การตรวจสอบรหัสวิเคราะห์ปัญหานั้นๆ</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0102h4801500.html">ตารางรหัสวิเคราะห์ปัญหา [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การค้นหาสาเหตุปัญหาของรหัสวิเคราะห์ปัญหาเสร็จสมบูรณ์</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</body>
+</html>

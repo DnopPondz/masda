@@ -1,0 +1,1994 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>การวิเคราะห์ปัญหาบนรถ [ระบบตรวจสอบจุดบอด (BSM)]</title>
+</head>
+<body><a name="id092200021846"></a><p class="servinfo-title"><span class="servinfo-head"></span>การวิเคราะห์ปัญหาบนรถ [ระบบตรวจสอบจุดบอด (BSM)]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id092200021846</p><br clear="all"><a name="id09220002184601"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รายละเอียด</p>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่นการวิเคราะห์ปัญหาบนรถจะประกอบด้วยฟังก์ชั่นต่อไปนี้: ฟังก์ชั่นตรวจจับความบกพร่องซึ่งจะตรวจจับความบกพร่องทั้งหมดในชิ้นส่วนที่เกี่ยวข้องกับโมดูลควบคุม BSM ฟังก์ชั่นหน่วยความจำซึ่งจะบันทึกรหัสวิเคราะห์ปัญหาที่ตรวจพบ ฟังก์ชั่นการแสดงผลซึ่งจะบ่งชี้ตำแหน่งและสถานะความบกพร่องผ่านรหัสวิเคราะห์ปัญหาที่เอาท์พุท และฟังก์ชั่นการตรวจสอบ PID/DATA ซึ่งจะอ่านสัญญาณอินพุท/เอาท์พุทจำเพาะและตรวจสอบสภาวะอินพุท/เอาท์พุทดังกล่าว</div>
+<div class="list">•&nbsp;&nbsp;เมื่อใช้ Mazda Modular Diagnostic System (M-MDS) สามารถอ่านและลบรหัสวิเคราะห์ปัญหา และสามารถเปิดใช้งานฟังก์ชั่นการตรวจสอบ PID/DATA ได้</div><br clear="all"><a name="id09220002184602"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ฟังก์ชั่นการตรวจจับความบกพร่อง</p>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความบกพร่องในสัญญาณอินพุทและเอาท์พุท</div>
+<div class="list">•&nbsp;&nbsp;หากมีความบกพร่องเกิดขึ้น โมดูลควบคุม BSM (ขวา) จะบันทึกความบกพร่องดังกล่าวเป็นรหัสวิเคราะห์ปัญหา สามารถอ่านรหัสวิเคราะห์ปัญหาที่บันทึกไว้โดย Mazda Modular Diagnostic System (M-MDS)</div><br clear="all"><p><a name="id09220002184603"></a><p class="topic-title"><span class="topic-head"></span>ตารางรหัสวิเคราะห์ปัญหา</p>
+<p clear="all">
+<p class="table-title">โมดูลควบคุม BSM (ด้านซ้าย)</p>
+<p>
+<div>&times;: สามารถทำได้</div>
+<div>&mdash;: ไม่มี</div>
+</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟแสดงสถานะ BSM OFF</p>
+</th>
+<th id="" align="center">
+<p class="thead">คำอธิบาย</p>
+</th>
+<th id="" align="center">
+<p class="thead">ฟังก์ชั่น Fail-safe</p>
+</th>
+<th id="" align="center">
+<p class="thead">รอบการขับ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ประเภทการทดสอบด้วยตนเอง<sup>*1</sup></p>
+</th>
+<th id="" align="center">
+<p class="thead">ฟังก์ชั่นหน่วยความจำ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">B118C:11</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรไฟแสดงสถานะ BSM (ด้านซ้าย) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B118C:15</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรไฟแสดงสถานะ BSM (ด้านซ้าย) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0001:88</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารโมดูลผิดพลาด (HS-CAN)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0100:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ PCM ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0131:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุม EPS ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับแผงหน้าปัดผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0214:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับชุดเปิด/ปิดการทำงานผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0233:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุม BSM (ด้านขวา) ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0401:68</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณที่ได้รับจาก PCM ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0420:68</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ได้รับสัญญาณข้อผิดพลาดจากโมดูลควบคุม EPS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0423:68</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ได้รับสัญญาณข้อผิดพลาดจากแผงหน้าปัด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0515:68</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณที่ได้รับจากชุดเปิด/ปิดการทำงานผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0534:68</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ได้รับสัญญาณข้อผิดพลาดจากโมดูลควบคุม BSM (ด้านขวา)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:01</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไฟฟ้าขัดข้องภายในโมดูลควบคุม BSM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:09</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในโมดูลควบคุม BSM บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:4A</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดโมดูลควบคุม BSM (ด้านซ้าย) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:97</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สมรรถนะของเรดาร์บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3003:16</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทแรงดันไฟฟ้าแหล่งจ่ายไฟต่ำที่โมดูลควบคุม BSM (ซ้าย)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3003:17</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทแรงดันไฟฟ้าแหล่งจ่ายไฟสูงที่โมดูลควบคุม BSM (ซ้าย)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;:C: การทดสอบ CMDTC ด้วยตนเอง, การทดสอบ D:ODDTC ด้วยตนเอง</div>
+<p clear="all">
+<p class="table-title">โมดูลควบคุม BSM (ด้านขวา)</p>
+<p>
+<div>&times;: สามารถทำได้</div>
+<div>&mdash;: ไม่มี</div>
+</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟแสดงสถานะ BSM OFF</p>
+</th>
+<th id="" align="center">
+<p class="thead">คำอธิบาย</p>
+</th>
+<th id="" align="center">
+<p class="thead">ฟังก์ชั่น Fail-safe</p>
+</th>
+<th id="" align="center">
+<p class="thead">รอบการขับ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ประเภทการทดสอบด้วยตนเอง<sup>*1</sup></p>
+</th>
+<th id="" align="center">
+<p class="thead">ฟังก์ชั่นหน่วยความจำ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">B118D:11</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรไฟแสดงสถานะ BSM (ด้านขวา) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B118D:15</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรไฟแสดงสถานะ BSM (ด้านขวา) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0001:88</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารโมดูลผิดพลาด (HS-CAN)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0100:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ PCM ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0131:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุม EPS ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับแผงหน้าปัดผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0214:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับชุดเปิด/ปิดการทำงานผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0232:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุม BSM (ด้านซ้าย) ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0401:68</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณที่ได้รับจาก PCM ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0420:68</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ได้รับสัญญาณข้อผิดพลาดจากโมดูลควบคุม EPS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0423:68</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ได้รับสัญญาณข้อผิดพลาดจากแผงหน้าปัด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0515:68</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณที่ได้รับจากชุดเปิด/ปิดการทำงานผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0533:68</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ได้รับสัญญาณข้อผิดพลาดจากโมดูลควบคุม BSM (ด้านซ้าย)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:01</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปัญหาไฟฟ้าภายในโมดูลควบคุม BSM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:09</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในโมดูลควบคุม BSM บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:4A</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดโมดูลควบคุม BSM (ด้านขวา) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:97</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สมรรถนะของเรดาร์บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3003:16</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทแรงดันไฟฟ้าแหล่งจ่ายไฟต่ำที่โมดูลควบคุม BSM (ขวา)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3003:17</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทแรงดันไฟฟ้าแหล่งจ่ายไฟสูงที่โมดูลควบคุม BSM (ขวา)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;:C: การทดสอบ CMDTC ด้วยตนเอง, การทดสอบ D:ODDTC ด้วยตนเอง</div>
+</p><br clear="all"><p><a name="id09220002184604"></a><p class="topic-title"><span class="topic-head"></span>คำอธิบายรหัส 7 หลักของรหัสวิเคราะห์ปัญหา</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เมื่อระบบหรือส่วนประกอบที่เกี่ยวข้องทำงานผิดพลาดของกล่องควบคุม จะจัดเก็บรหัสวิเคราะห์ปัญหาของส่วนที่ทำงานบกพร่องไว้ในหน่วยความจำของกล่องควบคุม และสามารถเรียกดูข้อมูลที่จัดเก็บโดยใช้เครื่องมือสแกนได้เมื่อจำเป็น รหัสวิเคราะห์ปัญหาได้รับการกำหนดโดยใช้ตัวเลข 7 หลัก ซึ่งตัวเลขแต่ละหลักมีความหมายดังต่อไปนี้<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001568.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001568</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09220002184605"></a><p class="topic-title"><span class="topic-head"></span>ไบต์แสดงสถานะของรหัสวิเคราะห์ปัญหา</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ไบต์แสดงสถานะคือรหัสสองหลัก (สองหลักหลังเครื่องหมายขีด (-)) หลังรหัสวิเคราะห์ปัญหา 7 หลัก<table class="figure-flame">
+<tr>
+<td width="10mm"></td>
+<td>
+<table class="figure-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00002009.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00002009</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="list">•&nbsp;&nbsp;ไบต์แสดงสถานะคือรหัสที่แสดงรหัสที่ค้างอยู่, สถานะความบกพร่องปัจจุบัน/ในอดีต หรือสถานะไฟเตือน</div>
+<div class="list">•&nbsp;&nbsp;ไบต์แสดงสถานะสามารถอ่านได้ด้วยการทดสอบ CMDTC ด้วยตนเองโดยใช้ Mazda Modular Diagnostic System (M-MDS)</div>
+<div class="list">•&nbsp;&nbsp;สำหรับรายละเอียดเกี่ยวกับไบต์แสดงสถานะ ให้ดูที่คำอธิบายใน Mazda Modular Diagnostic System (M-MDS) เมื่ออ่านรหัสวิเคราะห์ปัญหา</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09220002184606"></a><p class="topic-title"><span class="topic-head"></span>สภาวะการตรวจพบสำหรับรหัสวิเคราะห์ปัญหานั้นๆ</p>
+<p clear="all">
+<p class="table-title">โมดูลควบคุม BSM (ด้านซ้าย)</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา</p>
+</th>
+<th id="" align="center">
+<p class="thead">ตำแหน่งความบกพร่องของระบบ</p>
+</th>
+<th id="" align="center">
+<p class="thead">สภาวะการตรวจพบ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">B118C:11</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรไฟแสดงสถานะ BSM (ด้านซ้าย) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ขณะที่ไฟแสดงสถานะ BSM (ซ้าย) กำลังทำงาน โมดูลควบคุม BSM (ซ้าย) จะคอยตรวจสอบโหลดแรงดันไฟฟ้าของไฟแสดงสถานะ BSM (ซ้าย) เมื่อมีการเพิ่มขึ้นของโหลดแรงดันไฟฟ้าของไฟแสดงสถานะ BSM (ด้านซ้าย) ที่ตรวจพบจนเป็นค่าที่กำหนด หรือมากกว่า โมดูลควบคุม BSM (ด้านซ้าย) จะตัดสินว่ามีการลัดวงจรลงกราวด์ในวงจรไฟแสดงสถานะ BSM (ด้านซ้าย)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B118C:15</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรไฟแสดงสถานะ BSM (ด้านซ้าย) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ขณะที่ไฟแสดงสถานะ BSM (ซ้าย) กำลังทำงาน โมดูลควบคุม BSM (ซ้าย) จะคอยตรวจสอบโหลดแรงดันไฟฟ้าของไฟแสดงสถานะ BSM (ซ้าย) เมื่อมีการลดลงของโหลดแรงดันไฟฟ้าของไฟแสดงสถานะ BSM (ด้านซ้าย) จนเป็นค่าที่กำหนด หรือน้อยกว่า โมดูลควบคุม BSM (ด้านซ้าย) จะตัดสินว่ามีการลัดวงจรเข้ากับแหล่งจ่ายไฟหรือการขาดวงจรในวงจรไฟแสดงสถานะ BSM (ด้านซ้าย)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0001:88</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารโมดูลผิดพลาด (HS-CAN)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดควบคุม BSM จะตรวจจับความบกพร่องในสายบัสการสื่อสารระบบ CAN (HS-CAN)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0100:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ PCM ผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดควบคุม BSM ไม่ได้รับสัญญาณระบบ CAN จาก PCM</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0131:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุม EPS ผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดควบคุม BSM ไม่ได้รับสัญญาณระบบ CAN จากชุดควบคุม EPS</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับแผงหน้าปัดผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดควบคุม BSM ไม่ได้รับสัญญาณระบบ CAN จากแผงหน้าปัด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0214:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับชุดเปิด/ปิดการทำงานผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดควบคุม BSM ไม่ได้รับสัญญาณระบบ CAN จากชุดเปิด/ปิดการทำงาน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0233:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุม BSM (ด้านขวา) ผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดควบคุม BSM (ซ้าย) ไม่ได้รับสัญญาณระบบ CAN จากชุดควบคุม BSM (ขวา)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0401:68</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณที่ได้รับจาก PCM ผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดควบคุม BSM ได้รับสัญญาณข้อผิดพลาดจาก PCM</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0420:68</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ได้รับสัญญาณข้อผิดพลาดจากโมดูลควบคุม EPS</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดควบคุม BSM ได้รับสัญญาณข้อผิดพลาดจากชุดควบคุม EPS</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0423:68</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ได้รับสัญญาณข้อผิดพลาดจากแผงหน้าปัด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดควบคุม BSM ได้รับสัญญาณข้อผิดพลาดจากแผงหน้าปัด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0515:68</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณที่ได้รับจากชุดเปิด/ปิดการทำงานผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดควบคุม BSM ได้รับสัญญาณข้อผิดพลาดจากชุดเปิด/ปิดการทำงาน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0534:68</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ได้รับสัญญาณข้อผิดพลาดจากโมดูลควบคุม BSM (ด้านขวา)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดควบคุม BSM (ซ้าย) ได้รับสัญญาณข้อผิดพลาดจากชุดควบคุม BSM (ขวา)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:01</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไฟฟ้าขัดข้องภายในโมดูลควบคุม BSM</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบไฟฟ้าขัดข้องภายใจชุดควบคุม BSM</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:09</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในโมดูลควบคุม BSM บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุม BSM ตรวจพบความบกพร่องภายในออสซิลเลเตอร์ควบคุมแรงดันไฟฟ้า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:4A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดโมดูลควบคุม BSM บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ติดตั้งชุดควบคุม BSM ด้านซ้ายและด้านขวาสลับกัน หรือตรวจพบการขาดวงจรของวงจรโมดูลควบคุม BSM</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:97</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สมรรถนะของเรดาร์บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ความไวของเรดาร์เซ็นเซอร์ภายในโมดูลควบคุม BSM ลดลง</div>
+<div class="list">•&nbsp;&nbsp;แกนของเรดาร์เซ็นเซอร์ภายในโมดูลควบคุม BSM บิดเบี้ยว</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3003:16</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อินพุทแรงดันแหล่งจ่ายไฟของโมดูลควบคุม BSM ต่ำ (น้อยกว่า 9 V)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบแรงดันไฟฟ้าของแหล่งจ่ายไฟโมดูลควบคุม BSM น้อยกว่า 9 V เป็นเวลา 10 วินาที หรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3003:17</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อินพุทแรงดันแหล่งจ่ายไฟของโมดูลควบคุม BSM สูง (16 V หรือมากกว่า)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบแรงดันไฟฟ้าของแหล่งจ่ายไฟโมดูลควบคุม BSM 16 V ขึ้นไป เป็นเวลา 10 วินาที หรือมากกว่า</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p clear="all">
+<p class="table-title">โมดูลควบคุม BSM (ด้านขวา)</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา</p>
+</th>
+<th id="" align="center">
+<p class="thead">ตำแหน่งความบกพร่องของระบบ</p>
+</th>
+<th id="" align="center">
+<p class="thead">สภาวะการตรวจพบ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">B118D:11</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรไฟแสดงสถานะ BSM (ด้านขวา) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ขณะที่ไฟแสดงสถานะ BSM (ขวา) กำลังทำงาน โมดูลควบคุม BSM (ขวา) จะคอยตรวจสอบโหลดแรงดันไฟฟ้าของไฟแสดงสถานะ BSM (ขวา) เมื่อมีการเพิ่มขึ้นของโหลดแรงดันไฟฟ้าของไฟแสดงสถานะ BSM (ด้านขวา) ที่ตรวจพบจนเป็นค่าที่กำหนด หรือมากกว่า โมดูลควบคุม BSM (ด้านขวา) จะตัดสินว่ามีการลัดวงจรลงกราวด์ในวงจรไฟแสดงสถานะ BSM (ด้านขวา)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B118D:15</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรไฟแสดงสถานะ BSM (ด้านขวา) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ขณะที่ไฟแสดงสถานะ BSM (ขวา) กำลังทำงาน โมดูลควบคุม BSM (ขวา) จะคอยตรวจสอบโหลดแรงดันไฟฟ้าของไฟแสดงสถานะ BSM (ขวา) เมื่อมีการลดลงของโหลดแรงดันไฟฟ้าของไฟแสดงสถานะ BSM (ด้านขวา) จนเป็นค่าที่กำหนด หรือน้อยกว่า โมดูลควบคุม BSM (ด้านขวา) จะตัดสินว่ามีการลัดวงจรเข้ากับแหล่งจ่ายไฟหรือการขาดวงจรในวงจรไฟแสดงสถานะ BSM (ด้านขวา)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0001:88</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารโมดูลผิดพลาด (HS-CAN)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดควบคุม BSM จะตรวจจับความบกพร่องในสายบัสการสื่อสารระบบ CAN (HS-CAN)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0100:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ PCM ผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดควบคุม BSM ไม่ได้รับสัญญาณระบบ CAN จาก PCM</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0131:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุม EPS ผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดควบคุม BSM ไม่ได้รับสัญญาณระบบ CAN จากชุดควบคุม EPS</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับแผงหน้าปัดผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดควบคุม BSM ไม่ได้รับสัญญาณระบบ CAN จากแผงหน้าปัด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0214:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับชุดเปิด/ปิดการทำงานผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดควบคุม BSM ไม่ได้รับสัญญาณระบบ CAN จากชุดเปิด/ปิดการทำงาน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0232:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุม BSM (ด้านซ้าย) ผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดควบคุม BSM (ขวา) ไม่ได้รับสัญญาณระบบ CAN จากชุดควบคุม BSM (ซ้าย)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0401:68</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณที่ได้รับจาก PCM ผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดควบคุม BSM ได้รับสัญญาณข้อผิดพลาดจาก PCM</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0420:68</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ได้รับสัญญาณข้อผิดพลาดจากโมดูลควบคุม EPS</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดควบคุม BSM ได้รับสัญญาณข้อผิดพลาดจากชุดควบคุม EPS</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0423:68</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ได้รับสัญญาณข้อผิดพลาดจากแผงหน้าปัด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดควบคุม BSM ได้รับสัญญาณข้อผิดพลาดจากแผงหน้าปัด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0515:68</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณที่ได้รับจากชุดเปิด/ปิดการทำงานผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดควบคุม BSM ได้รับสัญญาณข้อผิดพลาดจากชุดเปิด/ปิดการทำงาน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0533:68</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ได้รับสัญญาณข้อผิดพลาดจากโมดูลควบคุม BSM (ด้านซ้าย)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดควบคุม BSM (ขวา) ได้รับสัญญาณข้อผิดพลาดจากชุดควบคุม BSM (ซ้าย)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:01</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไฟฟ้าขัดข้องภายในโมดูลควบคุม BSM</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบไฟฟ้าขัดข้องภายใจชุดควบคุม BSM</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:09</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในโมดูลควบคุม BSM บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุม BSM ตรวจพบความบกพร่องภายในออสซิลเลเตอร์ควบคุมแรงดันไฟฟ้า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:4A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดโมดูลควบคุม BSM บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ติดตั้งชุดควบคุม BSM ด้านซ้ายและด้านขวาสลับกัน หรือตรวจพบการขาดวงจรของวงจรโมดูลควบคุม BSM</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:97</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สมรรถนะของเรดาร์บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ความไวของเรดาร์เซ็นเซอร์ภายในโมดูลควบคุม BSM ลดลง</div>
+<div class="list">•&nbsp;&nbsp;แกนของเรดาร์เซ็นเซอร์ภายในโมดูลควบคุม BSM บิดเบี้ยว</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3003:16</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อินพุทแรงดันแหล่งจ่ายไฟของโมดูลควบคุม BSM ต่ำ (น้อยกว่า 9 V)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบแรงดันไฟฟ้าของแหล่งจ่ายไฟโมดูลควบคุม BSM น้อยกว่า 9 V เป็นเวลา 10 วินาที หรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3003:17</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อินพุทแรงดันแหล่งจ่ายไฟของโมดูลควบคุม BSM สูง (16 V หรือมากกว่า)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบแรงดันไฟฟ้าของแหล่งจ่ายไฟโมดูลควบคุม BSM 16 V ขึ้นไป เป็นเวลา 10 วินาที หรือมากกว่า</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</p><br clear="all"><a name="id09220002184607"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ฟังก์ชั่นการตรวจสอบข้อมูล</p>
+<div class="list">•&nbsp;&nbsp;เมื่อใช้ฟังก์ชั่นการตรวจสอบข้อมูล/PID สามารถเลือกและอ่านค่ารายการตรวจสอบสัญญาณอินพุท/เอาท์พุทที่กำหนดไว้ในโมดูลควบคุม BSM ได้แบบเรียลไทม์</div><br clear="all"><p><a name="id09220002184608"></a><p class="topic-title"><span class="topic-head"></span>ตารางการตรวจสอบข้อมูล / PID</p>
+<p clear="all">
+<p class="table-title">โมดูลควบคุม BSM (ด้านซ้าย)</p>
+<p>
+<div>&mdash;: ไม่มี</div>
+</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ชื่อ PID</p>
+</th>
+<th id="" align="center">
+<p class="thead">หน่วย/สถานะ</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายละเอียดข้อมูล</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายการการตรวจสอบ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">BSM_ST</div>
+</td>
+<td id="" align="center">
+<div class="tbody">On/Off</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;On: BSM ทำงาน</div>
+<div class="list">•&nbsp;&nbsp;Off: BSM ไม่ทำงาน</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุม BSM (ด้านซ้าย)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">DTC_CNT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">จำนวนของรหัสวิเคราะห์ปัญหาที่บันทึกไว้ในโมดูลควบคุม BSM (ด้านซ้าย) ปรากฏขึ้น</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุม BSM (ด้านซ้าย)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">SHIFT_R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Not_R/R</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ATX:</div>
+<div class="list">•&nbsp;&nbsp;Not_R: คันเกียร์อยู่ในตำแหน่งอื่นที่ไม่ใช่ตำแหน่ง R</div>
+<div class="list">•&nbsp;&nbsp;R: คันเกียร์อยู่ในตำแหน่ง R</div>
+<div class="tbody">MTX:</div>
+<div class="list">•&nbsp;&nbsp;Not_R: คันเกียร์อยู่ในตำแหน่งอื่นที่ไม่ใช่ตำแหน่งเกียร์ถอย</div>
+<div class="list">•&nbsp;&nbsp;R: เลื่อนคันเกียร์ไปที่ตำแหน่งเกียร์ถอย</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ATX:</div>
+<div class="list">•&nbsp;&nbsp;คันเกียร์</div>
+<div class="tbody">MTX:</div>
+<div class="list">•&nbsp;&nbsp;คันเกียร์</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">SWA_POS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg; (deg)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แสดงสัญญาณมุมบังคับเลี้ยว (มุมสัมบูรณ์โดยประมาณ)</div>
+<div class="list">•&nbsp;&nbsp;พวงมาลัยอยู่ในตำแหน่งกลาง: ใกล้ <span>0 องศา</span></div>
+<div class="list">•&nbsp;&nbsp;พวงมาลัยหมุนไปทางซ้าย: เปลี่ยนจาก <span>0 องศา</span>เป็นค่าบวก</div>
+<div class="list">•&nbsp;&nbsp;พวงมาลัยหมุนไปทางขวา: เปลี่ยนจาก <span>0 องศา</span>เป็นค่าลบ</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ทำการตรวจสอบรหัสวิเคราะห์ปัญหาสำหรับ PCM, DSC HU/CM และ EPS CM และหากมีรหัสวิเคราะห์ปัญหาตัวใดตัวหนึ่งปรากฏขึ้น ให้ซ่อมชิ้นส่วนที่บกพร่องตามการค้นหาสาเหตุปัญหาของรหัสวิเคราะห์ปัญหานั้นๆ</div>
+<div class="list">•&nbsp;&nbsp;หลังจากทำการตรวจสอบรหัสวิเคราะห์ปัญหานั้นแล้ว ให้ปฏิบัติตามขั้นตอนดังต่อไปนี้:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF และหลังจากผ่านไปแล้ว <span>2 นาที หรือมากกว่า</span> ให้บิดสวิตช์สตาร์ทไปที่ ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+<div class="list">―&nbsp;&nbsp;สตาร์ทเครื่องยนต์และขับขี่รถในทางตรงเป็นระยะทาง <span>10 m {33 ft} หรือมากกว่า</span> ที่ความเร็ว <span>10 km/h {6.2 mph} หรือมากกว่า</span></div>
+<div class="list">―&nbsp;&nbsp;จอดรถขณะที่ล้ออยู่ในตำแหน่งตั้งตรงไปข้างหน้า</div>
+<div class="list">―&nbsp;&nbsp;ตรวจสอบสภาวะการทำงานของ STR_AB_ANG โดยใช้ M-MDS</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;หากมีการแสดงค่าผิดปกติอีกครั้ง ให้เปลี่ยน EPS CM ใหม่</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">TURN_SW_L</div>
+</td>
+<td id="" align="center">
+<div class="tbody">On/Off</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;On: สวิตช์ไฟเลี้ยวอยู่ในตำแหน่ง LH</div>
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์ไฟเลี้ยวอยู่ในตำแหน่งอื่นที่ไม่ใช่ LH (ซ้าย)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ไฟเลี้ยว</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">TURN_SW_R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">On/Off</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;On: สวิตช์ไฟเลี้ยวอยู่ในตำแหน่ง RH</div>
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์ไฟเลี้ยวอยู่ในตำแหน่งอื่นที่ไม่ใช่ RH (ขวา)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ไฟเลี้ยว</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">VPWR_IG1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันแหล่งจ่ายไฟที่โมดูลควบคุม BSM (ด้านซ้าย) จะปรากฏขึ้น</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุม BSM (ด้านซ้าย)</div>
+<div class="list">•&nbsp;&nbsp;รีเลย์ IG1</div>
+<div class="list">•&nbsp;&nbsp;แบตเตอรี่</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">VSPD</div>
+</td>
+<td id="" align="center">
+<div class="tbody">KPH, MPH</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความเร็วรถปรากฏขึ้น</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">WRN_IND_L</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: ไฟแสดงสถานะ BSM (ซ้าย) ไม่ติดสว่าง</div>
+<div class="list">•&nbsp;&nbsp;On: ไฟแสดงสถานะ BSM (ซ้าย) ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะ BSM (ด้านซ้าย)</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p clear="all">
+<p class="table-title">โมดูลควบคุม BSM (ด้านขวา)</p>
+<p>
+<div>&mdash;: ไม่มี</div>
+</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ชื่อ PID</p>
+</th>
+<th id="" align="center">
+<p class="thead">หน่วย/สถานะ</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายละเอียดข้อมูล</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายการการตรวจสอบ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">BSM_OFF_IL</div>
+</td>
+<td id="" align="center">
+<div class="tbody">On/Off</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;On: ไฟแสดงสถานะ BSM OFF ติดสว่าง</div>
+<div class="list">•&nbsp;&nbsp;Off: ไฟแสดงสถานะ BSM OFF ไม่ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;สวิตช์ BSM OFF</div>
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">BSM_ST</div>
+</td>
+<td id="" align="center">
+<div class="tbody">On/Off</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;On: BSM ทำงาน</div>
+<div class="list">•&nbsp;&nbsp;Off: BSM ไม่ทำงาน</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุม BSM (ด้านขวา)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">เสียงเตือน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">On/Off</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;On: เสียงเตือน BSM ทำงาน</div>
+<div class="list">•&nbsp;&nbsp;Off: เสียงเตือน BSM ไม่ทำงาน</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุม BSM</div>
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">DTC_CNT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">จำนวนของรหัสวิเคราะห์ปัญหาที่บันทึกไว้ในโมดูลควบคุม BSM (ด้านขวา) ปรากฏขึ้น</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุม BSM (ด้านขวา)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">SHIFT_R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Not_R/R</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ATX:</div>
+<div class="list">•&nbsp;&nbsp;Not_R: คันเกียร์อยู่ในตำแหน่งอื่นที่ไม่ใช่ตำแหน่ง R</div>
+<div class="list">•&nbsp;&nbsp;R: คันเกียร์อยู่ในตำแหน่ง R</div>
+<div class="tbody">MTX:</div>
+<div class="list">•&nbsp;&nbsp;Not_R: คันเกียร์อยู่ในตำแหน่งอื่นที่ไม่ใช่ตำแหน่งเกียร์ถอย</div>
+<div class="list">•&nbsp;&nbsp;R: เลื่อนคันเกียร์ไปที่ตำแหน่งเกียร์ถอย</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ATX:</div>
+<div class="list">•&nbsp;&nbsp;คันเกียร์</div>
+<div class="tbody">MTX:</div>
+<div class="list">•&nbsp;&nbsp;คันเกียร์</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">SWA_POS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg; (deg)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แสดงสัญญาณมุมบังคับเลี้ยว (มุมสัมบูรณ์โดยประมาณ)</div>
+<div class="list">•&nbsp;&nbsp;พวงมาลัยอยู่ในตำแหน่งกลาง: ใกล้ <span>0 องศา</span></div>
+<div class="list">•&nbsp;&nbsp;พวงมาลัยหมุนไปทางซ้าย: เปลี่ยนจาก <span>0 องศา</span>เป็นค่าบวก</div>
+<div class="list">•&nbsp;&nbsp;พวงมาลัยหมุนไปทางขวา: เปลี่ยนจาก <span>0 องศา</span>เป็นค่าลบ</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ทำการตรวจสอบรหัสวิเคราะห์ปัญหาสำหรับ PCM, DSC HU/CM และ EPS CM และหากมีรหัสวิเคราะห์ปัญหาตัวใดตัวหนึ่งปรากฏขึ้น ให้ซ่อมชิ้นส่วนที่บกพร่องตามการค้นหาสาเหตุปัญหาของรหัสวิเคราะห์ปัญหานั้นๆ</div>
+<div class="list">•&nbsp;&nbsp;หลังจากทำการตรวจสอบรหัสวิเคราะห์ปัญหานั้นแล้ว ให้ปฏิบัติตามขั้นตอนดังต่อไปนี้:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF และหลังจากผ่านไปแล้ว <span>2 นาที หรือมากกว่า</span> ให้บิดสวิตช์สตาร์ทไปที่ ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+<div class="list">―&nbsp;&nbsp;สตาร์ทเครื่องยนต์และขับขี่รถในทางตรงเป็นระยะทาง <span>10 m {33 ft} หรือมากกว่า</span> ที่ความเร็ว <span>10 km/h {6.2 mph} หรือมากกว่า</span></div>
+<div class="list">―&nbsp;&nbsp;จอดรถขณะที่ล้ออยู่ในตำแหน่งตั้งตรงไปข้างหน้า</div>
+<div class="list">―&nbsp;&nbsp;ตรวจสอบสภาวะการทำงานของ STR_AB_ANG โดยใช้ M-MDS</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;หากมีการแสดงค่าผิดปกติอีกครั้ง ให้เปลี่ยน EPS CM ใหม่</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">TURN_SW_L</div>
+</td>
+<td id="" align="center">
+<div class="tbody">On/Off</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;On: สวิตช์ไฟเลี้ยวอยู่ในตำแหน่ง LH</div>
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์ไฟเลี้ยวอยู่ในตำแหน่งอื่นที่ไม่ใช่ LH (ซ้าย)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ไฟเลี้ยว</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">TURN_SW_R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">On/Off</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;On: สวิตช์ไฟเลี้ยวอยู่ในตำแหน่ง RH</div>
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์ไฟเลี้ยวอยู่ในตำแหน่งอื่นที่ไม่ใช่ RH (ขวา)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ไฟเลี้ยว</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">VPWR_IG1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันแหล่งจ่ายไฟที่โมดูลควบคุม BSM (ด้านขวา) จะปรากฏขึ้น</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุม BSM (ด้านขวา)</div>
+<div class="list">•&nbsp;&nbsp;รีเลย์ IG1</div>
+<div class="list">•&nbsp;&nbsp;แบตเตอรี่</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">VSPD</div>
+</td>
+<td id="" align="center">
+<div class="tbody">KPH, MPH</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความเร็วรถปรากฏขึ้น</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">WRN_IND_L</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: ไฟแสดงสถานะ BSM (ขวา) ไม่ติดสว่าง</div>
+<div class="list">•&nbsp;&nbsp;On: ไฟแสดงสถานะ BSM (ขวา) ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะ BSM (ด้านขวา)</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</p><br clear="all"><a name="id09220002184609"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ฟังก์ชั่นโหมดคำสั่งการทำงาน</p>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่น Active Command Mode แสดงไว้ทางด้านล่างนี้</div><br clear="all"><p><a name="id09220002184610"></a><p class="topic-title"><span class="topic-head"></span>โมดูลควบคุม BSM (ด้านซ้าย)</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ชื่อคำสั่ง</p>
+</th>
+<th id="" align="center">
+<p class="thead">หน่วย/การทำงาน</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายละเอียดข้อมูล</p>
+</th>
+<th id="" align="center">
+<p class="thead">ชื่อส่วนสัญญาณอินพุท</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">VSPD</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: ไม่ได้ป้อนข้อมูลความเร็วรถ</div>
+<div class="list">•&nbsp;&nbsp;On: ป้อนความเร็วรถที่ 34 km/h {21 mph}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุม BSM (ด้านซ้าย)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">WRN_IND_L</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: ปิดไฟแสดงสถานะ BSM (ด้านซ้าย)</div>
+<div class="list">•&nbsp;&nbsp;On: สั่งให้ไฟแสดงสถานะ BSM (ด้านซ้าย) ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะ BSM (ด้านซ้าย)</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</p><br clear="all"><p><a name="id09220002184611"></a><p class="topic-title"><span class="topic-head"></span>โมดูลควบคุม BSM (ด้านขวา)</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ชื่อคำสั่ง</p>
+</th>
+<th id="" align="center">
+<p class="thead">หน่วย/การทำงาน</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายละเอียดข้อมูล</p>
+</th>
+<th id="" align="center">
+<p class="thead">ชื่อส่วนสัญญาณอินพุท</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">BSM_OFF_IL</div>
+</td>
+<td id="" align="center">
+<div class="tbody">On/Off</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;On: สั่งให้ไฟแสดงสถานะ BSM OFF ติดสว่าง</div>
+<div class="list">•&nbsp;&nbsp;On: ปิดไฟแสดงสถานะ BSM OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะ BSM OFF (แผงหน้าปัด)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">เสียงเตือน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">On/Off</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;On: เปิดใช้งานเสียงเตือน BSM</div>
+<div class="list">•&nbsp;&nbsp;Off: ปิดใช้งานเสียงเตือน BSM</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เสียงเตือน BSM (แผงหน้าปัด)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">VSPD</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: ไม่ได้ป้อนข้อมูลความเร็วรถ</div>
+<div class="list">•&nbsp;&nbsp;On: ป้อนความเร็วรถที่ 34 km/h {21 mph}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุม BSM (ด้านขวา)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">WRN_IND_L</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: ปิดไฟแสดงสถานะ BSM (ด้านขวา)</div>
+<div class="list">•&nbsp;&nbsp;On: สั่งให้ไฟแสดงสถานะ BSM (ด้านขวา) ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะ BSM (ด้านขวา)</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</p>
+</body>
+</html>

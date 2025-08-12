@@ -1,0 +1,81 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>มาตรบันทึกระยะทาง/มาตรวัดระยะทาง</title>
+</head>
+<body><a name="id092200032900"></a><p class="servinfo-title"><span class="servinfo-head"></span>มาตรบันทึกระยะทาง/มาตรวัดระยะทาง</p>
+<hr>
+<p class="servinfo-title-id" align="right">id092200032900</p><br clear="all"><a name="id09220003290001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>จุดประสงค์:</p>
+<div class="list">•&nbsp;&nbsp;มาตรบันทึกระยะทาง/มาตรวัดระยะทางจะแจ้งผู้ใช้ถึงระยะการเดินทางรวมหรือระยะการเดินทางเมื่อผ่านรอบเวลาที่ระบุ</div><br clear="all"><a name="id09220003290002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัดจะคำนวณและแสดงระยะการเดินทางตามสัญญาณบอกระยะการเดินทางที่ได้รับจาก PCM</div>
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัดจะจัดเก็บข้อมูลระยะการเดินทางที่คำนวณได้ไว้ในไมโครคอมพิวเตอร์ของแผงหน้าปัด</div><br clear="all"><p><a name="id09220003290003"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นการคำนวณมาตรบันทึกระยะทาง</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัดจะคำนวณและแสดงระยะการเดินทางรวมตามสัญญาณบอกระยะการเดินทางที่ได้รับจาก PCM และระยะการเดินทางที่จัดเก็บไว้</div>
+<div class="list">•&nbsp;&nbsp;ระยะการเดินทางรวมที่สามารถแสดงผลได้จาก 0 ถึง 999,999</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09220003290004"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นการคำนวณมาตรวัดระยะทาง A/B</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัดจะคำนวณและแสดงระยะการเดินทางรวมตามสัญญาณบอกระยะการเดินทางที่ได้รับจาก PCM และระยะการเดินทางนับตั้งแต่รีเซ็ทมาตรวัดระยะทาง</div>
+<div class="list">•&nbsp;&nbsp;มาตรวัดระยะทางประกอบด้วยมาตรวัด A และ B และการแสดงผลของแต่ละรายการสามารถสลับไปมาได้ด้วยการกดสวิตช์มาตรวัดระยะทางแต่ละครั้ง</div>
+<div class="list">•&nbsp;&nbsp;ถ้ากดสวิตช์มาตรวัดระยะทางค้างไว้เป็นเวลา<span>ประมาณ 1 วินาทีขึ้นไป</span> จะเป็นการรีเซ็ทระยะการเดินทางของมาตรวัดระยะทาง (0.0)</div>
+<div class="list">•&nbsp;&nbsp;ระยะการเดินทางที่สามารถแสดงผลได้จาก 0.0 ถึง 999.9 เมื่อผ่าน 999.9 มาตรวัดจะกลับไปเริ่มต้นที่ 0</div>
+</dd>
+</dl>
+</p><br clear="all"><a name="id09220003290005"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>โครงสร้าง</p>
+<div class="list">•&nbsp;&nbsp;มาตรบันทึกระยะทาง/มาตรวัดระยะทางจะปรากฏขึ้นบนหน้าจอ LCD ของแผงหน้าปัด<table class="figure-flame">
+<tr>
+<td width="10mm"></td>
+<td>
+<table class="figure-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001388.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001388</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="list">•&nbsp;&nbsp;สวิตข์มาตรวัดระยะทางได้รับการติดตั้งอยู่บนแผงหน้าปัด</div>
+<div class="list">•&nbsp;&nbsp;การคำนวณของหน้าจอมาตรบันทึกระยะทาง/มาตรวัดระยะทางและระยะการเดินทางได้รับการดำเนินการโดยไมโครคอมพิวเตอร์ของแผงหน้าปัด</div><br clear="all"><a name="id09220003290006"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<div class="list">1.&nbsp;&nbsp;แผงหน้าปัดได้รับ (1) สัญญาณระยะการเดินทางจาก PCM เมื่อบิดสวิตช์สตาร์ทไปที่ ON (เครื่องยนต์ทำงาน)</div>
+<div class="list">2.&nbsp;&nbsp;แผงหน้าปัดจะคำนวณระยะการเดินทาง (2) ที่อยู่ในข้อมูลระยะการเดินทางรวมที่บันทึกไว้ (มาตรบันทึกระยะทาง) และระยะการเดินทางเมื่อผ่านรอบเวลาที่ระบุ (มาตรวัดระยะทาง) ตามสัญญาณบอกระยะการเดินทางที่ได้รับ</div>
+<div class="list">3.&nbsp;&nbsp;แผงหน้าปัดจะแสดง (3) ระยะการเดินทางที่คำนวณได้บน LCD<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001389.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001389</div>
+</td>
+</tr>
+</table>
+</div><br clear="all"><p><a name="id09220003290007"></a><p class="topic-title"><span class="topic-head"></span>การสลับการทำงานของมาตรบันทึกระยะทาง/มาตรวัดระยะทาง</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัดจะสลับหน้าจอมาตรบันทึกระยะทาง/มาตรวัดระยะทาง เมื่อมีการตรวจพบว่าตั้งค่าสวิตข์มาตรวัดระยะทางไว้ที่ ON</div>
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัดจะกลับไปเริ่มต้นการแสดงผลระยะการเดินทางที่ 0.0 เมื่อตรวจพบว่ามีการกดเปิดสวิตช์มาตรวัดระยะทางเป็นเวลา 1 วินาทีขึ้นไป ขณะที่มาตรวัดระยะทาง A หรือ B ปรากฏอยู่<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001390.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001390</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+</p><br clear="all"><a name="id09220003290008"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>Fail-safe</p>
+<div class="list">•&nbsp;&nbsp;ไม่มีฟังก์ชั่นนี้</div>
+</body>
+</html>

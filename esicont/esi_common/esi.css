@@ -1,0 +1,43 @@
+﻿.c-txt-menu {
+	font-size: 11px;
+}
+.c-txt-menu-main {
+	font-size: 15px;
+}
+.c-txt-menu-title {
+	font-size: 13px;
+	font-weight: bold;
+	font-family: "Arial", "Helvetica", "sans-serif";
+}
+body {
+	font-size: 13px;
+	color: #333333;
+}
+td {
+	font-size: 13px;
+}
+a:link {
+	color: #333333;
+}
+a:visited {
+	color: #333333;
+}
+a:hover {
+	color: #FF9900;
+}
+.c-txt-cntents-title {
+	font-size: 17px;
+	font-weight: bold;
+	color: #333333;
+	border-top: 0px solid #333333;
+	border-right: 0px solid #333333;
+	border-bottom: 1px solid #333333;
+	border-left: 0px solid #333333;
+}
+.c-txt-copyright {
+	font-size: 11px;
+	color: #666666;
+	text-align: right;
+	font-family: "Arial", "Helvetica", "sans-serif";
+	background-color: #333333;
+}

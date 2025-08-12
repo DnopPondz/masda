@@ -1,0 +1,229 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>ระบบควบคุมไฟส่องสว่างในห้องโดยสาร</title>
+</head>
+<body><a name="id091800012300"></a><p class="servinfo-title"><span class="servinfo-head"></span>ระบบควบคุมไฟส่องสว่างในห้องโดยสาร</p>
+<hr>
+<p class="servinfo-title-id" align="right">id091800012300</p><br clear="all"><a name="id09180001230001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รายละเอียด</p>
+<div class="list">•&nbsp;&nbsp;ระบบควบคุมไฟส่องสว่างในห้องโดยสารจะเปลี่ยนสภาวะการติดสว่างและระดับการส่องสว่างของไฟส่องสว่างภายในห้องโดยสาร (ตำแหน่งประตู) ตามสภาวะที่ประตูเปิด/ปิด และล็อค/ปลดล็อค</div>
+<div class="list">•&nbsp;&nbsp;ระบบควบคุมไฟส่องสว่างในห้องโดยสารถูกควบคุมโดยโมดูลควบคุมตัวถังด้านหลัง (RBCM)</div>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมตัวถังด้านหลัง (RBCM) จะสั่งงานโหมด Fail-safe ของระบบควบคุมไฟส่องสว่างในห้องโดยสาร (ดูที่ <font class="extxref-label"><a href="id094000002600.html">โหมดควบคุมตัวถังด้านหลัง (RBCM)</a></font>)</div><br clear="all"><a name="id09180001230002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ภาพโครงสร้าง</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001478.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001478</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id09180001230003"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ผังวงจรระบบ</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001408.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001408</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id09180001230004"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center" rowspan="2">
+<p class="thead">สภาวะการทำงาน</p>
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">ไฟส่องสว่างภายในห้องโดยสาร</p>
+</th>
+<th id="" align="center" rowspan="2">
+<p class="thead">สภาวะการปิดใช้งานไฟส่องสว่าง</p>
+<p class="thead">(ตรวจพบสภาวะใดๆ ต่อไปนี้)</p>
+</th>
+</tr>
+<tr>
+<th id="" align="center">
+<p class="thead">ระยะเวลาการติดสว่าง</p>
+</th>
+<th id="" align="center">
+<p class="thead">ระดับความสว่าง</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ตรวจพบสภาวะที่ประตูบานใดบานหนึ่งเปิดอยู่ (สวิตช์ล็อคประตูด้านใดด้านหนึ่งอยู่ที่ ON) จากสภาวะที่บิดสวิตช์สตาร์ท OFF (LOCK) หรืออยู่ในตำแหน่ง ACC และประตูทุกบานปิดอยู่ (สวิตช์ล็อคประตูและสวิตช์ประตูทั้งหมดอยู่ที่ OFF)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 30 นาที</div>
+</td>
+<td id="" align="center">
+<div class="tbody">100 %</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ปิดประตูทุกบานยกเว้นประตูท้าย<div>(สวิตช์ล็อคประตูและสวิตช์ประตูทั้งหมดอยู่ที่ OFF)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;หลังจากเวลาการติดสว่างผ่านไป <sup>*1</sup></div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ประตูทุกบานปิดอยู่ (สวิตช์ล็อคประตูและสวิตช์ประตูทั้งหมดอยู่ที่ OFF) และปุ่มล็อคประตูด้านคนขับถูกปลดล็อคจากตำแหน่งล็อค</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 30 วินาที</div>
+</td>
+<td id="" align="center">
+<div class="tbody">100 %</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ท ON</div>
+<div class="list">•&nbsp;&nbsp;ล็อคปุ่มล็อคประตูด้านคนขับ<div>(สวิตช์เชื่อมโยงล็อคประตูอยู่ในตำแหน่งล็อค)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;หลังจากเวลาการติดสว่างผ่านไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ตรวจพบสภาวะที่บิดสวิตช์สตาร์ทไปที่ OFF (LOCK) ขณะที่สวิตช์สตาร์ทอยู่ที่ ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 30 วินาที</div>
+</td>
+<td id="" align="center">
+<div class="tbody">100 %</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ท ON</div>
+<div class="list">•&nbsp;&nbsp;หลังจากเวลาการติดสว่างผ่านไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ตรวจพบสภาวะที่ประตูทุกบานปิดอยู่ (สวิตช์ล็อคประตูและสวิตช์ประตูทั้งหมดอยู่ที่ OFF) จากสภาวะที่บิดสวิตช์สตาร์ท OFF (LOCK) หรืออยู่ในตำแหน่ง ACC และประตูบานใดบานหนึ่งเปิดอยู่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ประมาณ 15 วินาที</div>
+</td>
+<td id="" align="center">
+<div class="tbody">60 %</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ท ON</div>
+<div class="list">•&nbsp;&nbsp;ล็อคปุ่มล็อคประตูด้านคนขับ<div>(สวิตช์เชื่อมโยงล็อคประตูอยู่ในตำแหน่งล็อค)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;หลังจากเวลาการติดสว่างผ่านไป</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;:หลังจากที่ไฟส่องสว่างภายในห้องโดยสารถูกปิดใช้งานตามสภาวะการยกเลิก ไฟส่องสว่างจะเปิดใช้งานอีกครั้งหากพบสภาวะใดสภาวะหนึ่งต่อไปนี้</div>
+<div class="list">―&nbsp;&nbsp;หลังจากประตูทุกบานปิด มีประตูบานใดบานหนึ่งเปิดอีกครั้ง (หลังจากที่สวิตช์ล็อคประตูและสวิตช์ประตูทั้งหมดอยู่ที่ OFF สวิตช์ล็อคประตูและสวิตช์ประตูบานใดบานหนึ่งอยู่ที่ ON)</div>
+<div class="list">―&nbsp;&nbsp;บิดสวิตช์สตาร์ท ON</div>
+<p clear="all">
+<p>
+<div>x: รุ่นที่มีระบบควบคุมไฟส่องสว่างในห้องโดยสาร</div>
+<div>-: ไม่มีการไหลของอากาศ</div>
+</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center" colspan="2">
+<p class="thead">ชนิด</p>
+</th>
+<th id="" align="center">
+<p class="thead">ตำแหน่งการติดตั้ง</p>
+</th>
+<th id="" align="center">
+<p class="thead">ระบบควบคุมไฟส่องสว่างในห้องโดยสาร</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">ไฟส่องเอกสารด้านหน้า</div>
+</td>
+<td id="" align="center"><img src="images/ac5wzn00000599.png"></td>
+<td id="" align="center">
+<div class="tbody">บริเวณหลังคาด้านหน้า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">x:</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ไฟส่องเอกสารด้านหลัง</div>
+</td>
+<td id="" align="center"><img src="images/ac5wzn00000600.png"></td>
+<td id="" align="center">
+<div class="tbody">บริเวณหลังคาตรงกลาง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">x:</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ไฟห้องเก็บสัมภาระ</div>
+</td>
+<td id="" align="center"><img src="images/ac5wzn00000601.png"></td>
+<td id="" align="center">
+<div class="tbody">ห้องเก็บสัมภาระ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ระบบส่องสว่างกระจกแต่งหน้า</div>
+</td>
+<td id="" align="center"><img src="images/ac5wzn00000602.png"></td>
+<td id="" align="center">
+<div class="tbody">ที่บังแดด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ไฟช่องเก็บของ</div>
+</td>
+<td id="" align="center"><img src="images/ac5wzn00000603.png"></td>
+<td id="" align="center">
+<div class="tbody">แผงปิดพื้นด้านผู้โดยสาร</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001409.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001409</div>
+</td>
+</tr>
+</table>
+</body>
+</html>

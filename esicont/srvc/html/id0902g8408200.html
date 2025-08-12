@@ -1,0 +1,593 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>รหัสวิเคราะห์ปัญหา: U0197:00/26:Er81 [ระบบ Bluetooth (ระบบโทรศัพท์แฮนด์ฟรี (HF/TEL)]</title>
+</head>
+<body><a name="id0902g8408200"></a><p class="servinfo-title"><span class="servinfo-head"></span>รหัสวิเคราะห์ปัญหา U0197:00/26:Er81 [ระบบ Bluetooth (ระบบโทรศัพท์แฮนด์ฟรี (HF/TEL)]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0902g8408200</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">คำอธิบาย</p>
+</th>
+<th id="" align="left">
+<div class="list">•&nbsp;&nbsp;U0197:00: การสื่อสารกับชุดเครื่องเสียงผิดพลาด</div>
+<div class="list">•&nbsp;&nbsp;26:Er81: การสื่อสารระบบ CAN ผิดพลาด</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สภาวะการตรวจพบ</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่มีการส่งสัญญาณระบบ CAN จากชุด Bluetooth</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>ฟังก์ชั่น Fail-safe</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่มี</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สาเหตุที่เป็นไปได้</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;การลัดวงจรในชุดสายไฟระหว่างชุด Bluetooth กับชุดเครื่องเสียง การเข้าวงจรเข้ากับแหล่งจ่ายไฟ การลัดลงกราวด์หรือวงจรลงกราวด์ขาด</div>
+<div class="list">•&nbsp;&nbsp;ชุดเครื่องเสียงบกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;ชุด Bluetooth บกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2"><img src="images/am6xuw00005620.png"></td>
+</tr>
+</tbody>
+</table>
+</p>
+<p clear="all">
+<p class="table-title">ขั้นตอนการวิเคราะห์ปัญหา</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">การตรวจสอบ</p>
+</th>
+<th id="" align="center">
+<p class="thead">การปฏิบัติ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">1</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจระหว่างวงจรต่างๆ ของระบบ CAN</div>
+<div class="list">•&nbsp;&nbsp;ถอดช่องเก็บของ<div>(ดูที่ <font class="extxref-label"><a href="id091700800700.html">การถอด / การติดตั้งช่องเก็บของ</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;วัดแรงดันไฟฟ้าระหว่างขั้วต่างๆ ต่อไปนี้:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ระหว่างขั้ว S ของชุด Bluetooth กับกราวด์ตัวถัง</div>
+<div class="list">―&nbsp;&nbsp;ระหว่างขั้ว T ของชุด Bluetooth กับกราวด์ตัวถัง</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ค่าแรงดันไฟฟ้าที่วัดได้ระหว่าง 2 ขั้วเท่ากันหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอน 4</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">2</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตัดสินว่าการลัดวงจรที่เกิดขึ้นระหว่างสายต่างๆ อยู่ในชุดเครื่องเสียงหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF (LOCK)</div>
+<div class="list">•&nbsp;&nbsp;ปลดสายขั้วลบแบตเตอรี่<div>(ดูที่ <font class="extxref-label"><a href="id0117i0800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div>(ดูที่ <font class="extxref-label"><a href="id0117i08008i1.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (รุ่นที่ไม่มีระบบ i-stop)]</a></font>)</div>
+<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ถอดชุดเครื่องเสียง<div>(ดูที่ <font class="extxref-label"><a href="id092000805500.html">การถอด / การติดตั้งชุดเครื่องเสียง</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อชุดเครื่องเสียง</div>
+<div class="list">•&nbsp;&nbsp;ต่อสายขั้วลบแบตเตอรี่<div>(ดูที่ <font class="extxref-label"><a href="id0117i0800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div>(ดูที่ <font class="extxref-label"><a href="id0117i08008i1.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (รุ่นที่ไม่มีระบบ i-stop)]</a></font>)</div>
+<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;วัดแรงดันไฟฟ้าระหว่างขั้วต่างๆ ต่อไปนี้:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ขั้ว 2I ของขั้วต่อชุดเครื่องเสียง (ชุดสายไฟรถ) กับกราวด์ตัวถัง</div>
+<div class="list">―&nbsp;&nbsp;ขั้ว 2J ของขั้วต่อชุดเครื่องเสียง (ชุดสายไฟรถ) กับกราวด์ตัวถัง</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ค่าแรงดันไฟฟ้าที่วัดได้ระหว่าง 2 ขั้วเท่ากันหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนชุดเครื่องเสียงใหม่เนื่องจากมีการลัดระหว่างวงจรต่างๆ ในชุดเครื่องเสียง</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092000805500.html">การถอด / การติดตั้งชุดเครื่องเสียง</a></font>)</div>
+<div class="tbody">หลังจากเปลี่ยนใหม่แล้ว ให้ไปที่ขั้นตอน 13</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">3</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตัดสินว่าการลัดวงจรที่เกิดขึ้นระหว่างสายต่างๆ อยู่ในชุด BLUETOOTH หรือไม่</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF (LOCK)</div>
+<div class="list">•&nbsp;&nbsp;ปลดสายขั้วลบแบตเตอรี่<div>(ดูที่ <font class="extxref-label"><a href="id0117i0800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div>(ดูที่ <font class="extxref-label"><a href="id0117i08008i1.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (รุ่นที่ไม่มีระบบ i-stop)]</a></font>)</div>
+<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ถอดชุด Bluetooth <div>(ดูที่ <font class="extxref-label"><a href="id092000833300.html">การถอด / การติดตั้งชุด Bluetooth</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อชุด Bluetooth</div>
+<div class="list">•&nbsp;&nbsp;ต่อสายขั้วลบแบตเตอรี่<div>(ดูที่ <font class="extxref-label"><a href="id0117i0800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div>(ดูที่ <font class="extxref-label"><a href="id0117i08008i1.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (รุ่นที่ไม่มีระบบ i-stop)]</a></font>)</div>
+<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;วัดแรงดันไฟฟ้าระหว่างขั้วต่างๆ ต่อไปนี้:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ขั้ว 2I ของขั้วต่อชุดเครื่องเสียง (ชุดสายไฟรถ) กับกราวด์ตัวถัง</div>
+<div class="list">―&nbsp;&nbsp;ขั้ว 2J ของขั้วต่อชุดเครื่องเสียง (ชุดสายไฟรถ) กับกราวด์ตัวถัง</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ค่าแรงดันไฟฟ้าที่วัดได้ระหว่าง 2 ขั้วเท่ากันหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชุดสายไฟระหว่างชุดเครื่องเสียงกับชุด Bluetooth เนื่องจากมีการลัดระหว่างวงจรต่างๆ ของชุดสายไฟ แล้วไปที่ขั้นตอน 13</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนชุด Bluetooth ใหม่เนื่องจากมีการลัดระหว่างวงจรต่างๆ ในชุด Bluetooth</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092000833300.html">การถอด / การติดตั้งชุด Bluetooth</a></font>)</div>
+<div class="tbody">หลังจากเปลี่ยนใหม่แล้ว ให้ไปที่ขั้นตอน 13</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">4</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรเข้ากับแหล่งจ่ายไฟในวงจรระบบ CAN</div>
+<div class="list">•&nbsp;&nbsp;วัดแรงดันไฟฟ้าระหว่างขั้วต่างๆ ต่อไปนี้:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ระหว่างขั้ว S ของชุด Bluetooth กับกราวด์ตัวถัง</div>
+<div class="list">―&nbsp;&nbsp;ระหว่างขั้ว T ของชุด Bluetooth กับกราวด์ตัวถัง</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;สามารถวัดค่าแรงดันไฟฟ้า B+ ได้หรือไม่<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;หากมีการลัดวงจรเข้ากับแหล่งจ่ายไฟอื่นที่ไม่ใช่แหล่งจ่ายไฟ B+ เกิดขึ้น แรงดันไฟฟ้าคงที่ซึ่งไม่ใช่ B+ อาจถูกวัด</div>
+</div>
+</dd>
+</dl>
+</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอน 7</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">5</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตัดสินว่าการลัดวงจรเข้ากับแหล่งจ่ายไฟกำลังเกิดขึ้นในชุดเครื่องเสียงหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF (LOCK)</div>
+<div class="list">•&nbsp;&nbsp;ปลดสายขั้วลบแบตเตอรี่<div>(ดูที่ <font class="extxref-label"><a href="id0117i0800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div>(ดูที่ <font class="extxref-label"><a href="id0117i08008i1.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (รุ่นที่ไม่มีระบบ i-stop)]</a></font>)</div>
+<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ถอดชุดเครื่องเสียง<div>(ดูที่ <font class="extxref-label"><a href="id092000805500.html">การถอด / การติดตั้งชุดเครื่องเสียง</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อชุดเครื่องเสียง</div>
+<div class="list">•&nbsp;&nbsp;ต่อสายขั้วลบแบตเตอรี่<div>(ดูที่ <font class="extxref-label"><a href="id0117i0800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div>(ดูที่ <font class="extxref-label"><a href="id0117i08008i1.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (รุ่นที่ไม่มีระบบ i-stop)]</a></font>)</div>
+<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;วัดแรงดันไฟฟ้าระหว่างขั้วต่างๆ ต่อไปนี้:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ขั้ว 2I ของขั้วต่อชุดเครื่องเสียง (ชุดสายไฟรถ) กับกราวด์ตัวถัง</div>
+<div class="list">―&nbsp;&nbsp;ขั้ว 2J ของขั้วต่อชุดเครื่องเสียง (ชุดสายไฟรถ) กับกราวด์ตัวถัง</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;สามารถวัดค่าแรงดันไฟฟ้า B+ ได้หรือไม่<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;หากมีการลัดวงจรเข้ากับแหล่งจ่ายไฟอื่นที่ไม่ใช่แหล่งจ่ายไฟ B+ เกิดขึ้น แรงดันไฟฟ้าคงที่ซึ่งไม่ใช่ B+ อาจถูกวัด</div>
+</div>
+</dd>
+</dl>
+</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนชุดเครื่องเสียงใหม่เนื่องจากมีการลัดวงจรเข้ากับแหล่งจ่ายไฟในชุดเครื่องเสียง</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092000805500.html">การถอด / การติดตั้งชุดเครื่องเสียง</a></font>)</div>
+<div class="tbody">หลังจากเปลี่ยนใหม่แล้ว ให้ไปที่ขั้นตอน 13</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">6</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตัดสินว่าการลัดวงจรเข้ากับแหล่งจ่ายไฟกำลังเกิดขึ้นในชุด BLUETOOTH หรือไม่</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF (LOCK)</div>
+<div class="list">•&nbsp;&nbsp;ปลดสายขั้วลบแบตเตอรี่<div>(ดูที่ <font class="extxref-label"><a href="id0117i0800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div>(ดูที่ <font class="extxref-label"><a href="id0117i08008i1.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (รุ่นที่ไม่มีระบบ i-stop)]</a></font>)</div>
+<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ถอดชุด Bluetooth <div>(ดูที่ <font class="extxref-label"><a href="id092000833300.html">การถอด / การติดตั้งชุด Bluetooth</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อชุด Bluetooth</div>
+<div class="list">•&nbsp;&nbsp;ต่อสายขั้วลบแบตเตอรี่<div>(ดูที่ <font class="extxref-label"><a href="id0117i0800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div>(ดูที่ <font class="extxref-label"><a href="id0117i08008i1.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (รุ่นที่ไม่มีระบบ i-stop)]</a></font>)</div>
+<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;วัดแรงดันไฟฟ้าระหว่างขั้วต่างๆ ต่อไปนี้:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ขั้ว 2I ของขั้วต่อชุดเครื่องเสียง (ชุดสายไฟรถ) กับกราวด์ตัวถัง</div>
+<div class="list">―&nbsp;&nbsp;ขั้ว 2J ของขั้วต่อชุดเครื่องเสียง (ชุดสายไฟรถ) กับกราวด์ตัวถัง</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;สามารถวัดค่าแรงดันไฟฟ้า B+ ได้หรือไม่<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;หากมีการลัดวงจรเข้ากับแหล่งจ่ายไฟอื่นที่ไม่ใช่แหล่งจ่ายไฟ B+ เกิดขึ้น แรงดันไฟฟ้าคงที่ซึ่งไม่ใช่ B+ อาจถูกวัด</div>
+</div>
+</dd>
+</dl>
+</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชุดสายไฟระหว่างชุดเครื่องเสียงกับชุด Bluetooth เนื่องจากชุดสายไฟถูกลัดวงจรเข้ากับแหล่งจ่ายไฟ แล้วไปที่ขั้นตอน 13</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนชุด Bluetooth ใหม่เนื่องจากมีการลัดวงจรเข้ากับแหล่งจ่ายไฟในชุด Bluetooth</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092000833300.html">การถอด / การติดตั้งชุด Bluetooth</a></font>)</div>
+<div class="tbody">หลังจากเปลี่ยนใหม่แล้ว ให้ไปที่ขั้นตอน 13</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">7</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรลงกราวด์ในวงจรระบบ CAN</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF (LOCK)</div>
+<div class="list">•&nbsp;&nbsp;ปลดสายขั้วลบแบตเตอรี่<div>(ดูที่ <font class="extxref-label"><a href="id0117i0800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div>(ดูที่ <font class="extxref-label"><a href="id0117i08008i1.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (รุ่นที่ไม่มีระบบ i-stop)]</a></font>)</div>
+<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต่อเนื่องระหว่างขั้วต่างๆ ต่อไปนี้:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ระหว่างขั้ว S ของชุด Bluetooth กับกราวด์ตัวถัง</div>
+<div class="list">―&nbsp;&nbsp;ระหว่างขั้ว T ของชุด Bluetooth กับกราวด์ตัวถัง</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องหรือไม่?</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอน 10</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">8</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตัดสินว่าการลัดวงจรลงกราวด์กำลังเกิดขึ้นในชุดเครื่องเสียงหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;ถอดชุดเครื่องเสียง<div>(ดูที่ <font class="extxref-label"><a href="id092000805500.html">การถอด / การติดตั้งชุดเครื่องเสียง</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อชุดเครื่องเสียง</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต่อเนื่องระหว่างขั้วต่างๆ ต่อไปนี้:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ขั้ว 2I ของขั้วต่อชุดเครื่องเสียง (ชุดสายไฟรถ) กับกราวด์ตัวถัง</div>
+<div class="list">―&nbsp;&nbsp;ขั้ว 2J ของขั้วต่อชุดเครื่องเสียง (ชุดสายไฟรถ) กับกราวด์ตัวถัง</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องหรือไม่?</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนชุดเครื่องเสียงใหม่เนื่องจากมีการลัดวงจรลงกราวด์ภายในชุดอุปกรณ์</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092000805500.html">การถอด / การติดตั้งชุดเครื่องเสียง</a></font>)</div>
+<div class="tbody">หลังจากเปลี่ยนใหม่แล้ว ให้ไปที่ขั้นตอน 13</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">9</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตัดสินว่าการลัดวงจรลงกราวด์กำลังเกิดขึ้นในชุด BLUETOOTH หรือไม่</div>
+<div class="list">•&nbsp;&nbsp;ถอดชุด Bluetooth <div>(ดูที่ <font class="extxref-label"><a href="id092000833300.html">การถอด / การติดตั้งชุด Bluetooth</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อชุด Bluetooth</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต่อเนื่องระหว่างขั้วต่างๆ ต่อไปนี้:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ขั้ว 2I ของขั้วต่อชุดเครื่องเสียง (ชุดสายไฟรถ) กับกราวด์ตัวถัง</div>
+<div class="list">―&nbsp;&nbsp;ขั้ว 2J ของขั้วต่อชุดเครื่องเสียง (ชุดสายไฟรถ) กับกราวด์ตัวถัง</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องหรือไม่?</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชุดสายไฟระหว่างชุดเครื่องเสียงกับชุด Bluetooth เนื่องจากชุดสายไฟถูกลัดวงจรลงกราวด์ แล้วไปที่ขั้นตอน 13</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนชุด Bluetooth ใหม่เนื่องจากมีการลัดวงจรลงกราวด์ภายในชุดอุปกรณ์</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092000833300.html">การถอด / การติดตั้งชุด Bluetooth)</a></font></div>
+<div class="tbody">หลังจากเปลี่ยนใหม่แล้ว ให้ไปที่ขั้นตอน 13</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">10</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการขาดวงจรของวงจรระบบ CAN</div>
+<div class="list">•&nbsp;&nbsp;ถอดชุดเครื่องเสียง<div>(ดูที่ <font class="extxref-label"><a href="id092000805500.html">การถอด / การติดตั้งชุดเครื่องเสียง</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อชุดเครื่องเสียง</div>
+<div class="list">•&nbsp;&nbsp;ถอดชุด Bluetooth<div>(ดูที่ <font class="extxref-label"><a href="id092000833300.html">การถอด / การติดตั้งชุด Bluetooth</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อชุด Bluetooth</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต่อเนื่องระหว่างขั้วต่างๆ ต่อไปนี้:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ตรวจสอบความต่อเนื่องของชุดสายไฟระหว่างขั้ว S ของขั้วต่อชุด Bluetooth (ด้านชุดสายไฟรถ) กับขั้ว 2I ของขั้วต่อชุดเครื่องเสียง (ด้านชุดสายไฟรถ)</div>
+<div class="list">―&nbsp;&nbsp;ตรวจสอบความต่อเนื่องของชุดสายไฟระหว่างขั้ว T ของขั้วต่อชุด Bluetooth (ด้านชุดสายไฟรถ) กับขั้ว 2J ของขั้วต่อชุดเครื่องเสียง (ด้านชุดสายไฟรถ)</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องหรือไม่?</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอน 13</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">11</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบความต้านทานของชุดเครื่องเสียง</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต้านทานระหว่างขั้ว 2I กับขั้ว 2J (ด้านชิ้นส่วน) ของชุดเครื่องเสียง</div>
+<div class="list">•&nbsp;&nbsp;ค่าความต้านทานอยู่ระหว่าง <span>118―130 Ω</span> หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนชุดเครื่องเสียงใหม่</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092000805500.html">การถอด / การติดตั้งชุดเครื่องเสียง</a></font>)</div>
+<div class="tbody">หลังจากเปลี่ยนใหม่แล้ว ให้ไปที่ขั้นตอน 13</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">12</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบความต้านทานของชุด BLUETOOTH</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต้านทานระหว่างขั้ว S และ T (ด้านชิ้นส่วน) ของชุด Bluetooth</div>
+<div class="list">•&nbsp;&nbsp;ค่าความต้านทานอยู่ระหว่าง <span>118―130 Ω</span> หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนชุด Bluetooth ใหม่</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092000833300.html">การถอด / การติดตั้งชุด Bluetooth</a></font>)</div>
+<div class="tbody">หลังจากเปลี่ยนใหม่แล้ว ให้ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">13</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ยืนยันว่าการซ่อมเสร็จสมบูรณ์แล้ว</div>
+<div class="list">•&nbsp;&nbsp;ต่อขั้วต่อทั้งหมด</div>
+<div class="list">•&nbsp;&nbsp;ทำการตรวจสอบรหัสวิเคราะห์ปัญหาของชุด Bluetooth<div>(ดูที่ <font class="extxref-label"><a href="id0902g8440500.html">การตรวจสอบรหัสวิเคราะห์ปัญหา [ระบบ Bluetooth (ระบบโทรศัพท์แฮนด์ฟรี (HF/TEL))]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีรหัสวิเคราะห์ปัญหาชุดเดียวกันปรากฏขึ้นหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กลับไปยังขั้นตอน 1 และตรวจสอบเพื่อหาสาเหตุอื่นๆ ที่เป็นไปได้ หากความบกพร่องเกิดขึ้นอีกครั้ง ให้เปลี่ยนชุด Bluetooth แล้วไปที่ขั้นตอนถัดไป </div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092000833300.html">การถอด / การติดตั้งชุด Bluetooth</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">14</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบว่ามีรหัสวิเคราะห์ปัญหาอื่นๆ ปรากฏขึ้นหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;มีรหัสวิเคราะห์ปัญหาอื่นๆ ปรากฏขึ้นหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมชิ้นส่วนที่บกพร่องตามการค้นหาสาเหตุปัญหาของรหัสวิเคราะห์ปัญหานั้นๆ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การค้นหาสาเหตุปัญหาของรหัสวิเคราะห์ปัญหาเสร็จสมบูรณ์</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</body>
+</html>

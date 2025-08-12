@@ -1,0 +1,188 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>ฟังก์ชั่น PID ระบบการวิเคราะห์ปัญหาบนรถ / การตรวจสอบข้อมูล</title>
+</head>
+<body><a name="id030200108400"></a><p class="servinfo-title"><span class="servinfo-head"></span>ฟังก์ชั่น PID ระบบการวิเคราะห์ปัญหาบนรถ / การตรวจสอบข้อมูล</p>
+<hr>
+<p class="servinfo-title-id" align="right">id030200108400</p>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่นการแสดงค่าพารามิเตอร์ (PID) / การตรวจสอบข้อมูลจะถูกใช้สำหรับการเลือกรายการตรวจสอบสัญญาณอินพุท / เอาท์พุทที่ตั้งไว้ในโมดูลควบคุม (CM) การขับเคลื่อน 4 ล้อ (4WD) และอ่านแบบเรียลไทม์</div><br clear="all"><a name="id03020010840001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ตารางการตรวจสอบข้อมูล / PID</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รายการตรวจสอบ PID / ข้อมูล</p>
+</th>
+<th id="" align="center">
+<p class="thead">ส่วนสัญญาณอินพุท / เอาท์พุท</p>
+</th>
+<th id="" align="center">
+<p class="thead">หน่วย / สภาวะ</p>
+<p class="thead">(หน้าจอเครื่องวิเคราะห์ปัญหา)</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">WARN_LAMP</div>
+</td>
+<td id="" align="left">
+<div class="tbody">4WD CM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">AAT</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิอากาศภายนอก</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C,&deg;F</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">APP</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตำแหน่งแป้นคันเร่ง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">CAL_TABLE</div>
+</td>
+<td id="" align="left">
+<div class="tbody">4WD CM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">CUP_SOL</div>
+</td>
+<td id="" align="left">
+<div class="tbody">4WD CM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">% </div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">เกียร์</div>
+</td>
+<td id="" align="left">
+<div class="tbody">PCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1st/2nd/3rd/4th/5th/6th/7th/Park/Neutral/Drive/Reverse</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">OIL_TEMP</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันไฟฟ้าการจุดระเบิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C,&deg;F</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">RPM</div>
+</td>
+<td id="" align="left">
+<div class="tbody">PCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">RPM</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การเปลี่ยนเกียร์</div>
+</td>
+<td id="" align="left">
+<div class="tbody">TCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">P/R/N/D/S/L</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">VPWR</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันไฟฟ้าการจุดระเบิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">WSPD_LF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เซ็นเซอร์ความเร็วล้อระบบ ABS (ด้านหน้าซ้าย)</div>
+</td>
+<td id="" align="center" rowspan="4">
+<div class="tbody">KPH, MPH</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">WSPD_LR</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เซ็นเซอร์ความเร็วล้อระบบ ABS (ด้านหลังซ้าย)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">WSPD_RF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เซ็นเซอร์ความเร็วล้อระบบ ABS (ด้านหน้าขวา)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">WSPD_RR</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เซ็นเซอร์ความเร็วล้อระบบ ABS (ด้านหลังขวา)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">TORQUE</div>
+</td>
+<td id="" align="left">
+<div class="tbody">4WD CM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Nm</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</body>
+</html>

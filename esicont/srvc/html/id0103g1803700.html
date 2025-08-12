@@ -1,0 +1,338 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>การตรวจสอบการทำงานของระบบควบคุมเครื่องยนต์ [SKYACTIV-D 2.2]</title>
+</head>
+<body><a name="id0103g1803700"></a><p class="servinfo-title"><span class="servinfo-head"></span>การตรวจสอบการทำงานของระบบควบคุมเครื่องยนต์ [SKYACTIV-D 2.2]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0103g1803700</p><br clear="all"><a name="id0103g180370001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การตรวจสอบการทำงานของชัตเตอร์วาล์วไอดี</p>
+<p class="list">1.&nbsp;&nbsp;เชื่อมต่อ M-MDS เข้ากับ DLC-2</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;สตาร์ทเครื่องยนต์ และเดินเครื่องที่รอบเดินเบา</p>
+<p class="list">
+</p>
+<p class="list">3.&nbsp;&nbsp;เข้าและตรวจสอบ PID ของ ETC_DSD, TP และ MAP (ดูที่ <font class="extxref-label"><a href="id0102s4801000.html">การทดสอบการวิเคราะห์ปัญหาบนรถ [SKYACTIV-D 2.2]</a></font>)</p>
+<p class="list">
+</p>
+<p class="list">4.&nbsp;&nbsp;ตรวจสอบว่า MAP PID เพิ่มขึ้นและ TP PID เพิ่มขึ้นเป็นเส้นตรง ขณะที่เพิ่มองศาการเปิดชัตเตอร์วาล์วไอดีโดยใช้ฟังก์ชั่น Active Command Mode ของ ETC_DSD หรือไม่</p>
+<p class="list">
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ถ้าค่า PID ทั้งสองตัวไม่เพิ่มขึ้นตามองศาการเปิดชัตเตอร์วาล์วไอดี ให้ตรวจสอบโดยใช้ขั้นตอนต่อไปนี้</div>
+<dl>
+<dd class="list">
+<div class="list">1.&nbsp;&nbsp;ถอดชัตเตอร์วาล์วไอดีโดยที่ยังต่อขั้วต่ออยู่ (ดูที่ <font class="extxref-label"><a href="id0116e1708200.html">การถอด / การติดตั้งวาล์วเปิด-ปิดไอดี [SKYACTIV-D 2.2]</a></font>)</div>
+<div class="list">2.&nbsp;&nbsp;ตรวจสอบว่าชัตเตอร์วาล์วไอดีเปิดและปิดขณะที่ทำงานโดยใช้ฟังก์ชั่น Active Command Mode ของ ETC_DSD หรือไม่</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ถ้าไม่ผ่านการตรวจสอบ ให้ทดสอบอีกครั้งหลังจากทำความสะอาดชัตเตอร์วาล์วไอดีและตรวจสอบชุดสายไฟและขั้วต่อที่เกี่ยวข้องแล้ว</div>
+</dd>
+</dl>
+<div class="list">3.&nbsp;&nbsp;ถ้าชัตเตอร์วาล์วไอดีไม่ทำงาน ให้เปลี่ยนชัตเตอร์วาล์วไอดี (ดูที่ <font class="extxref-label"><a href="id0116e1708200.html">การถอด / การติดตั้งวาล์วเปิด-ปิดไอดี [SKYACTIV-D 2.2]</a></font>)</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ถ้า MAP PID เพิ่มขึ้นแต่ TP PID ไม่เพิ่มขึ้นเป็นเส้นตรงตามองศาการเปิดชัตเตอร์วาล์วไอดี ให้ตรวจสอบโดยใช้ขั้นตอนต่อไปนี้</div>
+<dl>
+<dd class="list">
+<div class="list">1.&nbsp;&nbsp;ตรวจสอบชุดสายไฟและขั้วต่อที่เกี่ยวข้องกับเซ็นเซอร์ตำแหน่งชัตเตอร์วาล์วไอดี (ดูที่ <font class="extxref-label"><a href="id0140z7217000.html">การตรวจสอบเซ็นเซอร์ตำแหน่งวาล์วเปิด-ปิดไอดี [SKYACTIV-D 2.2]</a></font>)</div>
+<div class="list">2.&nbsp;&nbsp;ถอดชัตเตอร์วาล์วไอดีโดยที่ยังต่อขั้วต่ออยู่ (ดูที่ <font class="extxref-label"><a href="id0116e1708200.html">การถอด / การติดตั้งวาล์วเปิด-ปิดไอดี [SKYACTIV-D 2.2]</a></font>)</div>
+<div class="list">3.&nbsp;&nbsp;ตรวจสอบว่ามีค่า TP PID เพิ่มขึ้นและลดลงเป็นเส้นตรงขณะที่ชัตเตอร์วาล์วไอดีได้รับการสั่งงานโดยใช้ฟังก์ชั่น Active Command Mode ของ ETC_DSD หรือไม่</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ถ้า TP PID ไม่เพิ่มขึ้นและลดลงเป็นเส้นตรง ให้เปลี่ยนชัตเตอร์วาล์วไอดี (ดูที่ <font class="extxref-label"><a href="id0116e1708200.html">การถอด / การติดตั้งวาล์วเปิด-ปิดไอดี [SKYACTIV-D 2.2]</a></font>)</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ถ้า TP PID เพิ่มขึ้นเป็นเส้นตรงแต่ MAP PID ไม่เพิ่มขึ้นเป็นเส้นตรงตามองศาการเปิดชัตเตอร์วาล์วไอดี ให้ตรวจสอบโดยใช้ขั้นตอนต่อไปนี้</div>
+<dl>
+<dd class="list">
+<div class="list">1.&nbsp;&nbsp;ตรวจสอบการรั่วของอากาศที่ชัตเตอร์วาล์วไอดีและฝาสูบ</div>
+<div class="list">2.&nbsp;&nbsp;ถ้าเป็นปกติ ให้ตรวจสอบและเปลี่ยนเซ็นเซอร์ MAP (ดูที่ <font class="extxref-label"><a href="id0140z7800900.html">การตรวจสอบเซ็นเซอร์แรงดันสัมบูรณ์ท่อร่วมไอดี (MAP) [SKYACTIV-D 2.2]</a></font>) (ดูที่ <font class="extxref-label"><a href="id0140z7804300.html">การถอด / การติดตั้งเซ็นเซอร์แรงดันสัมบูรณ์ท่อร่วมไอดี (MAP) [SKYACTIV-D 2.2]</a></font>)</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</p><br clear="all"><a name="id0103g180370002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การตรวจสอบการทำงานของระบบยับยั้งแรงขับเคลื่อน (Brake override system)</p>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;ถ้าระบบยับยั้งแรงขับเคลื่อนทำงานตามปกติหลังจากทำการตรวจสอบดังต่อไปนี้ PCM จะตรวจพบรหัสวิเคราะห์ปัญหา P2299:00</div>
+</div>
+</dd>
+</dl>
+<p class="list">1.&nbsp;&nbsp;สตาร์ทเครื่องยนต์ และเดินเครื่องขณะเดินเบา</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;ตรวจสอบว่าความเร็วรอบเครื่องยนต์อยู่ที่<span>ประมาณ 1,000 rpm</span>ภายใต้สภาวะต่อไปนี้</p>
+<p class="list">
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เกียร์ว่าง</div>
+<div class="list">•&nbsp;&nbsp;ความเร็วรอบเครื่องยนต์ที่ <span>875 rpm หรือมากกว่า</span>รอบเดินเบา</div>
+<div class="list">•&nbsp;&nbsp;เหยียบแป้นเบรก</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ถ้าความเร็วรอบเครื่องยนต์อยู่ที่<span>ประมาณ 1,000 rpm</span> ให้ลบรหัสวิเคราะห์ปัญหาของ PCM โดยใช้ M-MDS (การทำงานของระบบปกติ) (ดูที่ <font class="extxref-label"><a href="id0102s4801100.html">ขั้นตอนหลังจากงานซ่อม [SKYACTIV-D 2.2]</a></font>)</div>
+<div class="list">―&nbsp;&nbsp;ถ้าความเร็วรอบเครื่องยนต์ไม่อยู่ที่<span>ประมาณ 1,000 rpm</span> ให้ตรวจสอบชิ้นส่วนต่อไปนี้ แล้วซ่อมหรือเปลี่ยนชิ้นส่วนที่บกพร่อง:</div>
+<dl>
+<dd class="list">
+<div class="list">•&nbsp;&nbsp;เซ็นเซอร์ APP (ดูที่ <font class="extxref-label"><a href="id0140z7803200.html">การตรวจสอบเซ็นเซอร์ตำแหน่งแป้นคันเร่ง (APP) [SKYACTIV-D 2.2]</a></font>)</div>
+<div class="list">•&nbsp;&nbsp;สวิตช์เกียร์ว่าง (MTX) (ดูที่ <font class="extxref-label"><a href="id0140z7800800.html">การตรวจสอบสวิตช์เกียร์ว่าง [SKYACTIV-D 2.2]</a></font>)</div>
+<div class="list">•&nbsp;&nbsp;สวิตช์ CPP (MTX) (ดูที่ <font class="extxref-label"><a href="id0140z7801600.html">การตรวจสอบสวิตช์ตำแหน่งแป้นคลัตช์ (CPP) [SKYACTIV-D 2.2]</a></font>)</div>
+<div class="list">•&nbsp;&nbsp;สวิตช์เบรก (สัญญาณ No.1) (ดูที่ <font class="extxref-label"><a href="id041100801900.html">การตรวจสอบสวิตช์ไฟเบรก</a></font>)</div>
+<div class="list">•&nbsp;&nbsp;สวิตช์เบรก (สัญญาณ No.2) (ดูที่ <font class="extxref-label"><a href="id041100801900.html">การตรวจสอบสวิตช์ไฟเบรก</a></font>)</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</p><br clear="all"><a name="id0103g180370003"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การตรวจสอบการทำงานของวาล์ว EGR</p>
+<p class="list">1.&nbsp;&nbsp;ตรวจสอบว่าเซ็นเซอร์ MAP เป็นปกติ (ดูที่ <font class="extxref-label"><a href="id0140z7800900.html">การตรวจสอบเซ็นเซอร์แรงดันสัมบูรณ์ท่อร่วมไอดี (MAP) [SKYACTIV-D 2.2]</a></font>)</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;เชื่อมต่อ M-MDS เข้ากับ DLC-2</p>
+<p class="list">
+</p>
+<p class="list">3.&nbsp; สตาร์ทเครื่องยนต์</p>
+<p class="list">
+</p>
+<p class="list">4.&nbsp;&nbsp;เข้ารายการตรวจสอบ EGRP และ MAP ของ PID/DATA (ดูที่ <font class="extxref-label"><a href="id0102s4801000.html">การทดสอบการวิเคราะห์ปัญหาบนรถ [SKYACTIV-D 2.2]</a></font>)</p>
+<p class="list">
+</p>
+<p class="list">5.&nbsp;&nbsp;ตรวจสอบค่า MAP PID เมื่อรายการการจำลองสภาพปัญหา EGRP เพิ่มขึ้นจาก 0 % เป็น 100 %</p>
+<p class="list">
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ถ้าค่า MAP PID ไม่เปลี่ยนแปลง:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ไปที่ขั้นตอนถัดไป</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ถ้าค่า MAP PID เปลี่ยนแปลง:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;วาล์ว EGR เป็นปกติ</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</p>
+<p class="list">6.&nbsp;&nbsp;สวิตช์สตาร์ทอยู่ที่ OFF</p>
+<p class="list">
+</p>
+<p class="list">7.&nbsp;&nbsp;ถอดวาล์ว EGR (ดูที่ <font class="extxref-label"><a href="id0116e1801000.html">การถอด / การติดตั้งวาล์ว EGR [SKYACTIV-D 2.2]</a></font>)</p>
+<p class="list">
+</p>
+<p class="list">8.&nbsp;&nbsp;ต่อขั้วต่อวาล์ว EGR/เซ็นเซอร์ตำแหน่งวาล์ว EGR</p>
+<p class="list">
+</p>
+<p class="list">9.&nbsp;&nbsp;บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงาน)</p>
+<p class="list">
+</p>
+<p class="list">10.&nbsp;&nbsp;ตรวจสอบการทำงานของวาล์ว EGR เมื่อรายการการจำลองสภาพปัญหา EGRP เพิ่มขึ้นจาก 0 % เป็น 100 %</p>
+<p class="list">
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ถ้าวาล์ว EGR ไม่ทำงาน:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ดำเนินการตรวจสอบความต้านทานวาล์ว EGR (ดูที่ <font class="extxref-label"><a href="id0116e1801100.html">การตรวจสอบวาล์ว EGR [SKYACTIV-D 2.2]</a></font>)</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ถ้าวาล์ว EGR ทำงาน:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ตรวจสอบการอุดตันของท่อ EGR แล้วทำการซ่อมหรือเปลี่ยนชิ้นส่วนที่บกพร่องตามผลที่ได้จากการตรวจสอบ</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</p><br clear="all"><a name="id0103g180370004"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การตรวจสอบการทำงานของวาล์วบายพาสของหม้อหล่อเย็น EGR</p>
+<p class="list">1.&nbsp;&nbsp;ตรวจสอบว่าเซ็นเซอร์ MAP เป็นปกติ (ดูที่ <font class="extxref-label"><a href="id0140z7800900.html">การตรวจสอบเซ็นเซอร์แรงดันสัมบูรณ์ท่อร่วมไอดี (MAP) [SKYACTIV-D 2.2]</a></font>)</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;เชื่อมต่อ M-MDS เข้ากับ DLC-2</p>
+<p class="list">
+</p>
+<p class="list">3.&nbsp; สตาร์ทเครื่องยนต์</p>
+<p class="list">
+</p>
+<p class="list">4.&nbsp;&nbsp;เข้ารายการตรวจสอบ EGR_C_BP และ MAP ของ PID/DATA (ดูที่ <font class="extxref-label"><a href="id0102s4801000.html">การทดสอบการวิเคราะห์ปัญหาบนรถ [SKYACTIV-D 2.2]</a></font>)</p>
+<p class="list">
+</p>
+<p class="list">5.&nbsp;&nbsp;ตรวจสอบค่า MAP PID เมื่อรายการการจำลองสภาพปัญหา EGR_C_BP เพิ่มขึ้นจาก 0 % เป็น 100 %</p>
+<p class="list">
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ถ้าค่า MAP PID ไม่เปลี่ยนแปลง:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ไปที่ขั้นตอนถัดไป</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ถ้าค่า MAP PID เปลี่ยนแปลง:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;วาล์วบายพาสของหม้อหล่อเย็น EGR เป็นปกติ</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</p>
+<p class="list">6.&nbsp;&nbsp;สวิตช์สตาร์ทอยู่ที่ OFF</p>
+<p class="list">
+</p>
+<p class="list">7.&nbsp;&nbsp;ถอดวาล์วบายพาสของหม้อหล่อเย็น EGR (ดูที่ <font class="extxref-label"><a href="id0116e1299000.html">การถอด / การติดตั้งวาล์วบายพาสระบบคูลเลอร์ EGR [SKYACTIV-D 2.2]</a></font>)</p>
+<p class="list">
+</p>
+<p class="list">8.&nbsp;&nbsp;ต่อขั้วต่อวาล์วบายพาสของหม้อหล่อเย็น EGR/เซ็นเซอร์ตำแหน่งวาล์วบายพาสของหม้อหล่อเย็น EGR</p>
+<p class="list">
+</p>
+<p class="list">9.&nbsp;&nbsp;บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงาน)</p>
+<p class="list">
+</p>
+<p class="list">10.&nbsp;&nbsp;ตรวจสอบการทำงานของวาล์วบายพาสของหม้อหล่อเย็น EGR เมื่อรายการการจำลองสภาพปัญหา EGR_C_BP เพิ่มขึ้นจาก 0 % เป็น 100 %</p>
+<p class="list">
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ถ้าวาล์วบายพาสของหม้อหล่อเย็น EGR ไม่ทำงาน:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ดำเนินการตรวจสอบความต้านทานวาล์วบายพาสของหม้อหล่อเย็น EGR (ดูที่ <font class="extxref-label"><a href="id0116e1299100.html">การตรวจสอบวาล์วบายพาสระบบคูลเลอร์ EGR [SKYACTIV-D 2.2]</a></font>)</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ถ้าวาล์วบายพาสของหม้อหล่อเย็น EGR ทำงาน:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ตรวจสอบการอุดตันของท่อ EGR แล้วทำการซ่อมหรือเปลี่ยนชิ้นส่วนที่บกพร่องตามผลที่ได้จากการตรวจสอบ</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</p><br clear="all"><a name="id0103g180370005"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การตรวจสอบการทำงานของหัวฉีดน้ำมันเชื้อเพลิง</p>
+<p class="list">1.&nbsp;&nbsp;เชื่อมต่อ M-MDS เข้ากับ DLC-2</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;สตาร์ทเครื่องยนต์ และอุ่นเครื่องจนถึงอุณหภูมิการทำงานปกติ</p>
+<p class="list">
+</p>
+<p class="list">3.&nbsp;&nbsp;ทำการทดสอบตัวเองแบบ KOEO (ดูที่ <font class="extxref-label"><a href="id0102s4801200.html">การทดสอบตัวเองแบบ KOEO/KOER [SKYACTIV-D 2.2]</a></font>)</p>
+<p class="list">
+</p>
+<p class="list">4.&nbsp;&nbsp;ตรวจสอบว่าไม่มีรหัสวิเคราะห์ปัญหา P0201:00, P0202:00, P0203:00 และ/หรือ P0204:00 แสดงขึ้นโดยใช้การทดสอบตัวเองแบบ KOEO</p>
+<p class="list">
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ถ้ารหัสวิเคราะห์ปัญหา P0201:00, P0202:00, P0203:00 และ/หรือ P0204:00 แสดงขึ้น ให้ดำเนินการตามขั้นตอนการค้นหาสาเหตุปัญหาของรหัสวิเคราะห์ปัญหาดังกล่าว (ดูที่ <font class="extxref-label"><a href="id0102s4801500.html">ตารางรหัสวิเคราะห์ปัญหา [SKYACTIV-D 2.2]</a></font>)</div>
+</dd>
+</dl>
+</p>
+<p class="list">5.&nbsp;&nbsp;ตรวจสอบว่าความเร็วรอบเครื่องยนต์ลดลงหรือหยุดนิ่งเมื่อหัวฉีดน้ำมันเชื้อเพลิงของแต่ละสูบเปลี่ยนจากตำแหน่ง ON เป็น OFF โดยใช้ฟังก์ชั่น M-MDS Active Command Mode (ดูที่ <font class="extxref-label"><a href="id0102s4801000.html">การทดสอบการวิเคราะห์ปัญหาบนรถ [SKYACTIV-D 2.2]</a></font>)</p>
+<p class="list">
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ถ้าไม่ผ่านการตรวจสอบ ให้ตรวจสอบรายการต่อไปนี้ในสูบที่เกิดปัญหาดังกล่าว</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;หัวฉีดน้ำมันเชื้อเพลิง (ดูที่ <font class="extxref-label"><a href="id0114z7800700.html">การตรวจสอบหัวฉีดน้ำมันเชื้อเพลิง [SKYACTIV-D 2.2]</a></font>)</div>
+</dd>
+</dl>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ชุดสายไฟสำหรับ PCM&mdash;หัวฉีดน้ำมันเชื้อเพลิง</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</p><br clear="all"><a name="id0103g180370006"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การตรวจสอบระบบควบคุมตัดการทำงานของระบบปรับอากาศ</p>
+<p class="list">1.&nbsp;&nbsp;สตาร์ทเครื่องยนต์</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;เปิดสวิตช์ A/C และสวิตช์พัดลม</p>
+<p class="list">
+</p>
+<p class="list">3.&nbsp;&nbsp;ตรวจสอบว่าคลัตช์แม่เหล็กคอมเพรสเซอร์เครื่องปรับอากาศทำงานหรือไม่</p>
+<p class="list">
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ถ้าไม่มีการสั่งงาน ให้ไปที่การค้นหาสาเหตุปัญหา &ldquo;A/C ทำงานไม่เพียงพอ NO.28&rdquo;<div>(ดูที่ <font class="extxref-label"><a href="id0103g1899500.html">A/C ทำงานไม่เพียงพอ NO.28 [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+</dd>
+</dl>
+</p>
+<p class="list">4.&nbsp;&nbsp;เปิดลิ้นเร่งสุด และตรวจสอบว่าคลัตช์แม่เหล็กคอมเพรสเซอร์เครื่องปรับอากาศไม่ทำงานเป็นเวลา <span>2&mdash;5 วินาที</span></p>
+<p class="list">
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ถ้ามีการสั่งงาน ให้ตรวจสอบรายการต่อไปนี้:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;รีเลย์ A/C (ดูที่ <font class="extxref-label"><a href="id092100800300.html">การตรวจสอบรีเลย์</a></font>)</div>
+<div class="list">―&nbsp;&nbsp;ชุดสายไฟและขั้วต่อมีการขาดวงจรหรือลัดวงจรลงกราวด์ (ขั้ว 1C ของโมดูลควบคุมตัวถังด้านหน้า (FBCM) &mdash;รีเลย์ A/C&mdash;ขั้ว 2BE ของ PCM)</div>
+<div class="list">―&nbsp;&nbsp;ชิ้นส่วนที่เกี่ยวข้องกับระบบปรับอากาศ</div>
+<div class="list">―&nbsp;&nbsp;APP1, APP2 PID (ดูที่ <font class="extxref-label"><a href="id0102s4801000.html">การทดสอบการวิเคราะห์ปัญหาบนรถ [SKYACTIV-D 2.2]</a></font>) (ดูที่ <font class="extxref-label"><a href="id0140z7802500.html">การตรวจสอบ PCM [SKYACTIV-D 2.2]</a></font>)</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</p><br clear="all"><a name="id0103g180370007"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การตรวจสอบการทำงานของโซลินอยด์วาล์วน้ำมันเครื่อง</p>
+<p class="list">1.&nbsp;&nbsp;ตรวจสอบว่าแรงดันน้ำมันเครื่องเป็นปกติ (ดูที่ <font class="extxref-label"><a href="id0111s6800300.html">การตรวจสอบแรงดันน้ำมัน [SKYACTIV-D 2.2]</a></font>)</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;เชื่อมต่อ M-MDS เข้ากับ DLC-2</p>
+<p class="list">
+</p>
+<p class="list">3.&nbsp;สตาร์ทเครื่องยนต์</p>
+<p class="list">
+</p>
+<p class="list">4.&nbsp;&nbsp;เข้ารายการตรวจสอบ OIL_P_DUTY, RPM และ ECT ของ PID/DATA (ดูที่ <font class="extxref-label"><a href="id0102s4801000.html">การทดสอบการวิเคราะห์ปัญหาบนรถ [SKYACTIV-D 2.2]</a></font>)</p>
+<p class="list">
+</p>
+<p class="list">5.&nbsp;&nbsp;เมื่อตรวจพบสภาวะต่อไปนี้ ให้ทำการตรวจสอบค่าเกจวัดแรงดันน้ำมันเครื่อง:</p>
+<p class="list">
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;อุณหภูมิน้ำหล่อเย็นเครื่องยนต์ (PID: ECT): <span>98 &deg;C {208 &deg;F} หรือ มากกว่า</span></div>
+<div class="list">•&nbsp;&nbsp;ความเร็วรอบเครื่องยนต์: <span>3,000 rpm หรือมากกว่า</span></div>
+<div class="list">•&nbsp;&nbsp;ค่า OIL_P_DUTY PID กำลังเปลี่ยนแปลง</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ถ้าค่าเกจวัดแรงดันน้ำมันเครื่องไม่เปลี่ยนแปลง:</div>
+<dl>
+<dd class="list">
+<div class="list">•&nbsp;&nbsp;ตรวจสอบโซลินอยด์วาล์วน้ำมันเครื่อง (ดูที่ <font class="extxref-label"><a href="id0111s6002900.html">การตรวจสอบโซลินอยด์วาล์วน้ำมันเครื่อง [SKYACTIV-D 2.2]</a></font>)</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ถ้าค่าเกจวัดแรงดันน้ำมันเครื่องเปลี่ยนแปลง:</div>
+<dl>
+<dd class="list">
+<div class="list">•&nbsp;&nbsp;โซลินอยด์วาล์วน้ำมันเครื่องเป็นปกติ</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</p>
+</body>
+</html>

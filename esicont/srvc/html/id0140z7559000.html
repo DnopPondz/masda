@@ -1,0 +1,151 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>ตัวแสดงสถานะการเปลี่ยนเกียร์ [SKYACTIV-D 2.2]</title>
+</head>
+<body><a name="id0140z7559000"></a><p class="servinfo-title"><span class="servinfo-head"></span>ตัวแสดงสถานะการเปลี่ยนเกียร์ [SKYACTIV-D 2.2]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0140z7559000</p><br clear="all"><a name="id0140f255900001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>จุดประสงค์, การทำงาน</p>
+<div class="list">•&nbsp;&nbsp;ตัวแสดงสถานะการเปลี่ยนเกียร์ ติดตั้งอยู่ในแผงหน้าปัด จะแจ้งให้คนขับทราบว่าตำแหน่งเกียร์และการเปลี่ยนเกียร์ขึ้น/ลงได้รับการแนะนำตามสภาวะการขับขี่</div>
+<div class="list">•&nbsp;&nbsp;PCM จะส่งสัญญาณขอการติดสว่างของตัวแสดงสถานะการเปลี่ยนเกียร์ไปที่แผงหน้าปัดผ่านการสื่อสารแบบ CAN</div><br clear="all"><a name="id0140f255900002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>โครงสร้าง</p>
+<div class="list">•&nbsp;&nbsp;ตัวแสดงสถานะการเปลี่ยนเกียร์จะติดตั้งอยู่ในแผงหน้าปัด (ดูที่ <font class="extxref-label"><a href="id092200018500.html">แผงหน้าปัด</a></font>)</div><br clear="all"><a name="id0140f255900003"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<div class="list">•&nbsp;&nbsp;PCM จะเปรียบเทียบความเร็วเกียร์เป้าหมายที่คำนวณได้จากแต่ละสัญญาณและความเร็วเกียร์จริงเพื่อกำหนดสัญญาณขอการติดสว่างของตัวแสดงสถานะการเปลี่ยนเกียร์<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/am3zzn00003274.png"></td>
+</tr>
+</table>
+<div class="figure-caption">am3zzn00003274</div>
+</td>
+</tr>
+</table>
+</div>
+<dl>
+<div class="list-title">ความเร็วเกียร์เป้าหมาย (ตำแหน่งเกียร์ที่แนะนำ)</div>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ความเร็วเกียร์เป้าหมายจะถูกกำหนดโดยความเร็วรถ มุมเปิดแป้นคันเร่ง ความลาดชัน และความสูง</div>
+</dd>
+</dl>
+<dl>
+<div class="list-title">ความเร็วเกียร์จริง (ตำแหน่งเกียร์ขณะนั้น)</div>
+<dd class="list">
+<div class="list">ความเร็วเกียร์จริงจะถูกกำหนดโดยความเร็วรถ ความเร็วรอบเครื่องยนต์ เส้นผ่าศูนย์กลางล้อ อัตราทดเฟืองท้าย และการขบของเฟืองเกียร์ (ตำแหน่งเกียร์)</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;สภาวะการติดสว่าง/ดับของตัวแสดงสถานะการเปลี่ยนเกียร์มีดังนี้:</div><br clear="all"><p><a name="id0140f255900004"></a><p class="topic-title"><span class="topic-head"></span>สภาวะการติดสว่างของตัวแสดงสถานะการเปลี่ยนเกียร์</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;มีการติดสว่างของตัวแสดงสถานะการเปลี่ยนเกียร์สามรูปแบบ การทำงานปกติ การทำงานที่แนะนำการเปลี่ยนเกียร์ลง และการทำงานที่แนะนำการเปลี่ยนเกียร์ขึ้น</div>
+<dl>
+<div class="list-title">การทำงานปกติ</div>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;เมื่อพบสภาวะต่อไปนี้ ตำแหน่งเกียร์ที่เลือกขณะนั้นจะแสดงขึ้ัน</div>
+<dl>
+<dd class="list">
+<div class="list">•&nbsp;&nbsp;ความเร็วเกียร์เป้าหมายและความเร็วเกียร์จริงเท่ากัน</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dd class="list">
+<div class="list">
+<p class="figure-title">ตัวอย่าง: ภาพต่อไปนี้จะแสดงว่าตำแหน่งเกียร์ที่เลือกขณะนั้นอยู่ที่เกียร์ 5</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/am3zzn00003283.png"></td>
+</tr>
+</table>
+<div class="figure-caption">am3zzn00003283</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+<dl>
+<div class="list-title">การทำงานที่แนะนำการเปลี่ยนเกียร์ลง</div>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ถ้าทำการเปลี่ยนเกียร์ลงเมื่อพบสภาวะต่อไปนี้ (กำหนดการขับขี่ที่ราบรื่นได้ยาก) ตำแหน่งเกียร์ที่แนะนำจะแสดงในขณะนั้น</div>
+<dl>
+<dd class="list">
+<div class="list">•&nbsp;&nbsp;ความเร็วเกียร์เป้าหมายต่ำกว่าความเร็วเกียร์จริง</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dd class="list">
+<div class="list">
+<p class="figure-title">ตัวอย่าง: ภาพต่อไปนี้จะแสดงว่าได้แนะนำการทำงานในการเปลี่ยนเกียร์ลงไปที่เกียร์ 4</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/am3zzn00003284.png"></td>
+</tr>
+</table>
+<div class="figure-caption">am3zzn00003284</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+<dl>
+<div class="list-title">การทำงานที่แนะนำการเปลี่ยนเกียร์ขึ้น</div>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ถ้าทำการเปลี่ยนเกียร์ลงเมื่อพบสภาวะต่อไปนี้ (มีการสิ้นเปลืองน้ำมันเชื้อเพลิง) ตำแหน่งเกียร์ที่แนะนำจะแสดงในขณะนั้น</div>
+<dl>
+<dd class="list">
+<div class="list">•&nbsp;&nbsp;ความเร็วเกียร์เป้าหมายสูงกว่าความเร็วเกียร์จริง</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dd class="list">
+<div class="list">
+<p class="figure-title">ตัวอย่าง: ภาพต่อไปนี้จะแสดงว่าได้แนะนำการทำงานในการเปลี่ยนเกียร์ลงไปที่เกียร์ 6</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/am3zzn00003285.png"></td>
+</tr>
+</table>
+<div class="figure-caption">am3zzn00003285</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id0140f255900005"></a><p class="topic-title"><span class="topic-head"></span>สภาวะปิดตัวแสดงสถานะการเปลี่ยนเกียร์</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เมื่อพบสภาวะใดสภาวะหนึ่งดังต่อไปนี้ ตัวแสดงสถานะการเปลี่ยนเกียร์จะดับลง</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;หยุดรถ</div>
+<div class="list">―&nbsp;&nbsp;เกียร์อยู่ในตำแหน่งเกียร์ว่างหรือตำแหน่งเกียร์ถอย</div>
+<div class="list">―&nbsp;&nbsp;จนกระทั่งคลัตช์จับแน่นเมื่อออกรถ</div>
+<div class="list">―&nbsp;&nbsp;เหยียบแป้นคลัตช์เป็นเวลา 1.5 วินาที หรือมากกว่าในขณะขับขี่</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ถ้าขับรถโดยที่ไม่เปลี่ยนเกียร์เมื่อมีการแนะนำการทำงานการเปลี่ยนเกียร์ขึ้น/ลง ตัวแสดงสถานะการเปลี่ยนเกียร์อาจดับลงชั่วคราว</div>
+</dd>
+</dl>
+</p>
+</body>
+</html>

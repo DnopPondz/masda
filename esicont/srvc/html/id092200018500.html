@@ -1,0 +1,2627 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>แผงหน้าปัด</title>
+</head>
+<body><a name="id092200018500"></a><p class="servinfo-title"><span class="servinfo-head"></span>แผงหน้าปัด</p>
+<hr>
+<p class="servinfo-title-id" align="right">id092200018500</p><br clear="all"><a name="id09220001850001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รายละเอียด</p>
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัดเป็นตัวกลางในการควบคุมมาตรวัดความเร็วรถ มาตรวัดความเร็วรอบ มาตรบันทึกระยะทาง/มาตรวัดความเร็วรอบ เกจวัดระดับน้ำมันเชื้อเพลิง ไฟเตือน/ไฟแสดงสถานะ, จอ TFT LCD (รุ่นที่มี TFT LCD) คอมพิวเตอร์แสดงข้อมูลรอบ เสียงเตือน และไฟส่องสว่างแผงหน้าปัด</div><br clear="all"><a name="id09220001850002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัดจะแสดงข้อมูลต่อไปนี้เพื่อแจ้งให้ผู้ใช้ทราบเกี่ยวกับสภาวะของรถ</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ความเร็วรถ (มาตรวัดความเร็วรถ)</div>
+<div class="list">―&nbsp;&nbsp;ความเร็วรอบเครื่องยนต์ (มาตรวัดความเร็วรอบ)</div>
+<div class="list">―&nbsp;&nbsp;ปริมาณน้ำมันเชื้อเพลิงที่เหลืออยู่ (เกจวัดระดับน้ำมันเชื้อเพลิง)</div>
+<div class="list">―&nbsp;&nbsp;ระยะการเคลื่อนที่ (มาตรบันทึกระยะทาง/มาตรวัดระยะทาง) </div>
+<div class="list">―&nbsp;&nbsp;ไฟแสดงสถานะ/ไฟเตือน</div>
+<div class="list">―&nbsp;&nbsp;ข้อความ (รุ่นที่มี TFT LCD)</div>
+<div class="list">―&nbsp;&nbsp;การประหยัดน้ำมันเชื้อเพลิงโดยเฉลี่ย ความเร็วรถโดยเฉลี่ย การประหยัดน้ำมันเชื้อเพลิงขณะนั้น ระยะทางที่ขับขี่ได้ก่อนน้ำมันหมด (ระบบคอมพิวเตอร์แสดงข้อมูลรอบการขับ)</div>
+</dd>
+</dl><br clear="all"><p><a name="id09220001850003"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นการแสดงผลของมาตรวัดความเร็วรถ</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัดจะควบคุมเข็มตามสัญญาณความเร็วรถที่ส่งผ่านการสื่อสารระบบ CAN จาก PCM และแสดงความเร็วรถปัจจุบัน สำหรับรายละเอียดเกี่ยวกับมาตรวัดความเร็วรถ ให้ดูที่<font class="extxref-label"><a href="id092200032500.html">มาตรวัดความเร็วรถ</a></font></div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09220001850004"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นการแสดงผลของมาตรวัดความเร็วรอบ</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัดจะควบคุมเข็มตามสัญญาณความเร็วรอบเครื่องยนต์ที่ส่งผ่านการสื่อสารระบบ CAN จาก PCM และแสดงความเร็วรอบเครื่องยนต์ในปัจจุบัน สำหรับรายละเอียดเกี่ยวกับมาตรวัดความเร็วรอบ ให้ดูที่<font class="extxref-label"><a href="id092200032600.html">มาตรวัดความเร็วรอบ</a></font></div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09220001850005"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นการแสดงผลของเกจวัดระดับน้ำมันเชื้อเพลิง</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัดจะแสดงปริมาณน้ำมันเชื้อเพลิงที่เหลืออยู่ตามสัญญาณความต้านทานของเกจวัดระดับน้ำมันเชื้อเพลิงที่ส่งผ่านการสื่อสารระบบ CAN จาก RBCM และสัญญาณปริมาณการฉีดน้ำมันเชื้อเพลิงที่ส่งผ่านการสื่อสารระบบ CAN จาก PCM สำหรับรายละเอียดเกี่ยวกับเกจวัดระดับน้ำมันเชื้อเพลิง ให้ดูที่<font class="extxref-label"><a href="id092200032700.html">เกจวัดระดับน้ำมันเชื้อเพลิง</a></font></div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09220001850006"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นการแสดงผลของมาตรบันทึกระยะทาง/มาตรวัดระยะทาง</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัดจะแสดงระยะการเคลื่อนที่/ระยะเวลาในการเคลื่อนที่โดยรวมเมื่อผ่านรอบเวลาหนึ่งตามสัญญาณระยะการเคลื่อนที่ซึ่งส่งผ่านการสื่อสารระบบ CAN จาก PCM สำหรับรายละเอียดเกี่ยวกับมาตรบันทึกระยะทาง/มาตรวัดความเร็วรถ ให้ดูที่<font class="extxref-label"><a href="id092200032900.html">มาตรบันทึกระยะทาง/มาตรวัดระยะทาง</a></font></div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09220001850007"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นคำนวณของคอมพิวเตอร์แสดงข้อมูลรอบการขับ</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัดจะคำนวณการประหยัดน้ำมันเชื้อเพลิงโดยเฉลี่ย ความเร็วรถโดยเฉลี่ย การประหยัดน้ำมันเชื้อเพลิงขณะนั้น และระยะทางที่ขับขี่ได้ก่อนน้ำมันหมด และแสดงบนจอ LCD ในแผงหน้าปัด สำหรับรายละเอียดเกี่ยวกับคอมพิวเตอร์แสดงข้อมูลรอบการขับ ให้ดูที่<font class="extxref-label"><a href="id092200018000.html">ระบบคอมพิวเตอร์แสดงข้อมูลรอบการขับ</a></font></div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09220001850008"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นการติดสว่าง/การกะพริบไฟเตือน/ไฟแสดงสถานะ</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัดจะสั่งให้ไฟเตือน/ไฟแสดงสถานะติดสว่าง/กะพริบเพื่อแจ้งให้ผู้ใช้ทราบเกี่ยวกับสภาวะของรถ</div>
+<div class="list">•&nbsp;&nbsp;ประเภทของไฟแสดงสถานะ/ไฟเตือนมีดังนี้: ดูข้อมูลอ้างอิงสำหรับรายละเอียดเกี่ยวกับไฟแสดงสถานะ/ไฟเตือนแต่ละรายการ</div>
+</dd>
+</dl>
+<p class="figure-title">รุ่นที่ไม่มีจอ TFT LCD</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001550.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001550</div>
+</td>
+</tr>
+</table>
+<p clear="all">
+<p>
+<div>&times;: สามารถทำได้</div>
+<div>&mdash;: ไม่มี</div>
+</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="left">
+<p class="thead">หมายเลข</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟเตือน/ไฟแสดงสถานะ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ชื่อ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ข้อคิดเห็น</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟเตือน/ไฟแสดงสถานะที่ติดสว่างระหว่างการตรวจสอบครั้งแรก</p>
+</th>
+<th id="" align="center">
+<p class="thead">อ้างอิง</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000103.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะ TCS/DSC</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id041500108900.html">ไฟแสดงสถานะ TCS/DSC</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000113.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะระบบควบคุมไฟสูง (HBC) (เขียว)/ไฟเตือนระบบควบคุมไฟสูง (HBC) (เหลืองอำพัน)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">รุ่นที่มีระบบควบคุมไฟสูง (HBC)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id091800005200.html">ไฟแสดงสถานะ HBC (สีเขียว)/ไฟเตือน HBC (สีเหลืองอำพัน)</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">3</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000091.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟเตือนน้ำมันเครื่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200034300.html">ไฟเตือนน้ำมันเครื่อง</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">4</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000114.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะหัวเผา</div>
+</td>
+<td id="" align="left">
+<div class="tbody">SKYACTIV-D 2.2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140z7265300.html">ไฟแสดงสถานะหัวเผา [SKYACTIV-D 2.2]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">5</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000115.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะกรองเขม่าดีเซล</div>
+</td>
+<td id="" align="left">
+<div class="tbody">SKYACTIV-D 2.2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140z7265400.html">ไฟแสดงสถานะกรองเขม่าดีเซล [SKYACTIV-D 2.2]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">6</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000097.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟเตือนกุญแจ (แดง)/ไฟแสดงสถานะกุญแจ (เขียว)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id091400603400.html">ไฟเตือนกุญแจ (สีแดง)/ไฟแสดงสถานะกุญแจ (สีเขียว)</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">7</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000094.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะของไฟตัดหมอกด้านหน้า</div>
+</td>
+<td id="" align="left">
+<div class="tbody">รุ่นที่มีไฟตัดหมอกด้านหน้า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id091800013700.html">ไฟแสดงสถานะไฟตัดหมอกด้านหน้า</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">8</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000109.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะประแจ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">SKYACTIV-D 2.2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140z7265500.html">ไฟแสดงสถานะประแจ [SKYACTIV-D 2.2]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">9</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000107.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟเตือนตรวจเช็คเครื่องยนต์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0102h4549100.html">ไฟเตือนตรวจเช็คเครื่องยนต์ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">10</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000087.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะสัญญาณไฟเลี้ยว/ไฟเตือนฉุกเฉิน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id091800013500.html">ไฟแสดงสถานะสัญญาณไฟเลี้ยว/ไฟเตือนฉุกเฉิน</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">11</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000108.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟเตือนเกียร์อัตโนมัติ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ATX:</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0517h2361900.html">ไฟเตือนเกียร์อัตโนมัติ [FW6A-EL, FW6AX-EL]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">12</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000135.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะหลักระบบควบคุมความเร็วอัตโนมัติ (เหลืองอำพัน)/ไฟแสดงสถานะการตั้งระบบควบคุมความเร็วอัตโนมัติ (เขียว)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">รุ่นที่มีระบบควบคุมความเร็วอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0120e7903600.html">ไฟแสดงสถานะหลักระบบควบคุมความเร็วอัตโนมัติ (สีเหลืองอำพัน) [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0120e7903500.html">ไฟแสดงสถานะการตั้งระบบควบคุมความเร็วอัตโนมัติ (สีเขียว) [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0120e5903600.html">ไฟแสดงสถานะหลักระบบควบคุมความเร็วอัตโนมัติ (สีเหลืองอำพัน) [SKYACTIV-D 2.2]</a></font>)</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0120e5903500.html">ไฟแสดงสถานะการตั้งระบบควบคุมความเร็วอัตโนมัติ (สีเขียว) [SKYACTIV-D 2.2]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">13</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000086.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะการเปิดไฟส่องสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id091800013400.html">ไฟแสดงสถานะการเปิดไฟส่องสว่าง</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">14</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000092.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟเตือน i-stop (เหลืองอำพัน)/ไฟแสดงสถานะ i-stop (เขียว)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">รุ่นที่มีระบบ i-stop</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140g2008600.html">ไฟแสดงสถานะระบบ i-stop (สีเขียว) [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140g2008700.html">ไฟเตือนระบบ i-stop (สีเหลืองอำพัน) [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">15</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000112.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะระบบเตือนออกนอกช่องทางเดินรถ (LDWS) (เขียว)/ไฟเตือนระบบเตือนออกนอกช่องทางเดินรถ (LDWS) (เหลืองอำพัน)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">รุ่นที่มี LDWS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200029700.html">ไฟแสดงสถานะ LDWS (สีเขียว)/ไฟเตือน LDWS (สีเหลืองอำพัน)</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">16</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000101.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟเตือนปิดประตูไม่สนิท</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200018700.html">ไฟเตือนประตูปิดไม่สนิท)</a></font></div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">17</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000085.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะอุณหภูมิน้ำหล่อเย็นเครื่องยนต์ต่ำ (สีน้ำเงิน) / ไฟเตือนอุณหภูมิน้ำหล่อเย็นเครื่องยนต์สูง (สีแดง)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200018300.html">ไฟแสดงสถานะอุณหภูมิน้ำหล่อเย็นเครื่องยนต์ต่ำ (สีน้ำเงิน) / ไฟเตือนอุณหภูมิน้ำหล่อเย็นเครื่องยนต์สูง (สีแดง)</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">18</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000104.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟเตือนระดับน้ำมันเชื้อเพลิงต่ำ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200023000.html">ไฟเตือนระดับน้ำมันเชื้อเพลิงต่ำ</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">19</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000117.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟเตือนความเร็ว 120 km/h</div>
+</td>
+<td id="" align="left">
+<div class="tbody">รุ่นที่มีไฟเตือนความเร็ว 120 km/h</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200034000.html">ไฟเตือนเมื่อขับขี่ที่ความเร็ว 120 km/h</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">20</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000106.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟเตือน ABS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id041500108800.html">ไฟเตือนระบบเบรก/ABS</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">21</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000136.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟเตือนระดับน้ำฉีดล้างกระจกต่ำ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id091900103300.html">เซ็นเซอร์ระดับน้ำฉีดล้างกระจก</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">22</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000118.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะ AFS OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">รุ่นที่มี AFS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id091800014000.html">ไฟแสดงสถานะ AFS OFF</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">23</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000090.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟเตือนระบบไฟชาร์จ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0117i0308400.html">ไฟเตือนระบบไฟชาร์จ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0117h6308400.html">ไฟเตือนระบบไฟชาร์จ [SKYACTIV-D 2.2]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">24</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000098.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟเตือนระบบเบรก</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id041500108800.html">ไฟเตือนระบบเบรก/ABS</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">25</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000089.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะไฟสูงของไฟหน้า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id091800013600.html">ไฟแสดงสถานะไฟสูงของไฟหน้า</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">26</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000102.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟเตือนเข็มขัดนิรภัย</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200022900.html">ไฟเตือนเข็มขัดนิรภัย</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="2">
+<div class="tbody">27</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000137.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟเตือนระบบตรวจจับรถด้านหลัง (RVM) (เหลืองอำพัน)/ไฟแสดงสถานะระบบตรวจจับรถด้านหลัง (RVM) (เขียว)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">รุ่นที่มีระบบตรวจจับรถด้านหลัง (RVM)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200034100.html">ไฟเตือน (สีเหลืองอำพัน)/ไฟแสดงสถานะ (สีเขียว) ของระบบตรวจจับรถด้านหลัง (RVM))</a></font></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center"><img src="images/ac5jjn00000665.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะ BSM OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">รุ่นที่มี BSM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200027500.html">ไฟแสดงสถานะระบบตรวจสอบจุดบอด (BSM) OFF</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">28</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000099.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะระบบรักษาความปลอดภัย</div>
+</td>
+<td id="" align="left">
+<div class="tbody">รุ่นที่มีระบบอิมโมบิไลเซอร์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id091400603300.html">ไฟแสดงสถานะระบบรักษาความปลอดภัย</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">29</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000111.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟเตือนระบบเตือนแรงดันลมยาง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">รุ่นที่มี TPMS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id021200202000.html">ไฟเตือนระบบเตือนแรงดันลมยาง</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">30</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000093.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟเตือน 4WD</div>
+</td>
+<td id="" align="left">
+<div class="tbody">4WD</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id031800172000.html">ไฟเตือน 4WD</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">31</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000110.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟเตือนหลัก</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200032400.html">ไฟเตือนหลัก</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">32</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000100.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟเตือนระบบถุงลมนิรภัย/ระบบดึงรั้งเข็มขัดนิรภัยด้านหน้า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id081000310100.html">ไฟเตือนระบบถุงลมนิรภัย</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">33</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000105.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะพวงมาลัยเพาเวอร์บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id061300245300.html">ไฟแสดงสถานะพวงมาลัยเพาเวอร์บกพร่อง</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">34</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000095.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะไฟตัดหมอกด้านหลัง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">รุ่นที่มีไฟตัดหมอกด้านหลัง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id091800013900.html">ไฟแสดงสถานะไฟตัดหมอกด้านหลัง</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="2">
+<div class="tbody">35</div>
+</td>
+<td id="" align="center" rowspan="2"><img src="images/ac5jjn00000088.png"></td>
+<td id="" align="left">
+<div class="tbody">ตัวระบุตำแหน่งเกียร์ </div>
+</td>
+<td id="" align="left">
+<div class="tbody">ATX:</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0517h2361700.html">ไฟแสดงสถานะเตือนตำแหน่งเกียร์ [FW6A-EL, FW6AX-EL]</a></font>)</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0517h2361800.html">ไฟแสดงสถานะตำแหน่งเกียร์ [FW6A-EL, FW6AX-EL]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ตัวระบุตำแหน่งเกียร์</div>
+</td>
+<td id="" align="left">
+<div class="tbody">MTX (รุ่นที่มีตัวระบุตำแหน่งเกียร์)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140g2559000.html">ไฟแสดงสถานะการเปลี่ยนเกียร์ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">36</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000096.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะ TCS OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id041500108700.html">สวิตช์ TCS OFF, ไฟแสดงสถานะ TCS OFF</a></font>)</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p class="figure-title">รุ่นที่มีจอ TFT LCD</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00000947.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00000947</div>
+</td>
+</tr>
+</table>
+<p clear="all">
+<p class="table-title">VIN ที่ใช้ได้ (ที่ได้รับการยอมรับ): JMZ KE19760# 100001&mdash;120304, JMZ KE19780# 100001&mdash;120237, JMZ KE89780# 100001&mdash;120237, JMZ KEC9760# 100001&mdash;120304, JMZ KEF9160# 100001&mdash;133074, JMZ KEF9180# 100001&mdash;133074, JMZ KEK9760# 100001&mdash;120304, JMZ KEK9780# 100001&mdash;120237, JMZ KEN9160# 100001&mdash;133074, JMZ KEN9180# 100001&mdash;133074, JMZ KEN9260# 100001&mdash;133074, JMZ KEN9280# 100001&mdash;133074</p>
+<p>
+<div>&times;: สามารถทำได้</div>
+<div>&mdash;: ไม่มี</div>
+</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="left">
+<p class="thead">ไม่ใช่</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟเตือน/ไฟแสดงสถานะ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ชื่อ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ข้อความ<sup>*1</sup></p>
+</th>
+<th id="" align="center">
+<p class="thead">การติดสว่างในเวลาเดียวกันของไฟเตือนหลัก</p>
+</th>
+<th id="" align="center">
+<p class="thead">ข้อคิดเห็น</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟเตือน/ไฟแสดงสถานะที่ติดสว่างระหว่างการตรวจสอบครั้งแรก</p>
+</th>
+<th id="" align="center">
+<p class="thead">อ้างอิง</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000103.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะ TCS/DSC</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id041500108900.html">ไฟแสดงสถานะ TCS/DSC</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000113.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะระบบควบคุมไฟสูง (HBC) (สีเขียว)/ไฟเตือนระบบควบคุมไฟสูง (HBC) (สีเหลืองอำพัน)</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;HBC Inspection Required</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">รุ่นที่มีระบบ HBC</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id091800005200.html">ไฟแสดงสถานะ HBC (สีเขียว)/ไฟเตือน HBC (สีเหลืองอำพัน)</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">3</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000118.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะ AFS OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">รุ่นที่มี AFS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id091800014000.html">ไฟแสดงสถานะ AFS OFF</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">4</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000096.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะ TCS OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id041500108700.html">สวิตช์ TCS OFF, ไฟแสดงสถานะ TCS OFF</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">5</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000092.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟเตือน i-stop (เหลืองอำพัน)/ไฟแสดงสถานะ i-stop (เขียว)</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Ready Apply more Brake Pressure</div>
+<div class="list">•&nbsp;&nbsp;Can't be activated Turn Steering Wheel to Neutral</div>
+<div class="list">•&nbsp;&nbsp;Can't be activatedAir Conditioninghas Priority</div>
+<div class="list">•&nbsp;&nbsp;Can't be activated.</div>
+<dl>
+<dd class="list">
+<div class="list">•&nbsp;&nbsp;Steering wheel</div>
+<div class="list">•&nbsp;&nbsp;Brake</div>
+<div class="list">•&nbsp;&nbsp;Air Conditioning</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;Please Restart Engine</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">รุ่นที่มีระบบ i-stop</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140g2008600.html">ไฟแสดงสถานะระบบ i-stop (สีเขียว) [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140g2008700.html">ไฟเตือนระบบ i-stop (สีเหลืองอำพัน) [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">6</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000094.png"></td>
+<td id="" align="left">
+<div class="tbody">Front Fog Light Indicator Light</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">รุ่นที่มีไฟตัดหมอกด้านหน้า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id091800013700.html">ไฟแสดงสถานะไฟตัดหมอกด้านหน้า</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">7</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000107.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟเตือนตรวจเช็คเครื่องยนต์</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Engine Inspection Required</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0102h4549100.html">ไฟเตือนตรวจเช็คเครื่องยนต์ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">8</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000135.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะหลักระบบควบคุมความเร็วอัตโนมัติ (สีเหลืองอำพัน)/ไฟแสดงสถานะการตั้งระบบควบคุมความเร็วอัตโนมัติ (สีเขียว)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">รุ่นที่มีระบบควบคุมความเร็วอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0120e7903600.html">ไฟแสดงสถานะหลักระบบควบคุมความเร็วอัตโนมัติ (สีเหลืองอำพัน) [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0120e7903500.html">ไฟแสดงสถานะการตั้งระบบควบคุมความเร็วอัตโนมัติ (สีเขียว) [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0120e5903600.html">ไฟแสดงสถานะหลักระบบควบคุมความเร็วอัตโนมัติ (สีเหลืองอำพัน) [SKYACTIV-D 2.2]</a></font>)</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0120e5903500.html">ไฟแสดงสถานะการตั้งระบบควบคุมความเร็วอัตโนมัติ (สีเขียว) [SKYACTIV-D 2.2]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">9</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000087.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะสัญญาณไฟเลี้ยว/ไฟเตือนฉุกเฉิน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id091800013500.html">ไฟแสดงสถานะสัญญาณไฟเลี้ยว/ไฟเตือนฉุกเฉิน</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">10</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000110.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟเตือนหลัก</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Battery Management System Inspection Required</div>
+<div class="list">•&nbsp;&nbsp;Brake Override System Inspection Required</div>
+<div class="list">•&nbsp;&nbsp;Vehicle System Inspection Required</div>
+<div class="list">•&nbsp;&nbsp;FSC Inspection Required</div>
+<div class="list">•&nbsp;&nbsp;SCBS Inspection Required</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200032400.html">ไฟเตือนหลัก</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">11</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000104.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟเตือนระดับน้ำมันเชื้อเพลิงต่ำ</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Refill Fuel Tank</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200023000.html">ไฟเตือนระดับน้ำมันเชื้อเพลิงต่ำ</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">12</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000098.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟเตือนระบบเบรก</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Brake Fluid Level Low</div>
+<div class="list">•&nbsp;&nbsp;Release Parking Brake</div>
+<div class="list">•&nbsp;&nbsp;Brake Inspection Required </div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id041500108800.html">ไฟเตือนระบบเบรก/ABS</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">13</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000099.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะระบบรักษาความปลอดภัย</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id091400603300.html">ไฟแสดงสถานะระบบรักษาความปลอดภัย</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">14</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000114.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะหัวเผา</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">SKYACTIV-D 2.2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140z7265300.html">ไฟแสดงสถานะหัวเผา [SKYACTIV-D 2.2]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">15</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000085.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะอุณหภูมิน้ำหล่อเย็นเครื่องยนต์ต่ำ (สีน้ำเงิน) / ไฟเตือนอุณหภูมิน้ำหล่อเย็นเครื่องยนต์สูง (สีแดง)</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Engine Coolant Temperature High</div>
+<div class="list">•&nbsp;&nbsp;Stop Vehicleat safe area</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200018300.html">ไฟแสดงสถานะอุณหภูมิน้ำหล่อเย็นเครื่องยนต์ต่ำ (สีน้ำเงิน) / ไฟเตือนอุณหภูมิน้ำหล่อเย็นเครื่องยนต์สูง (สีแดง)</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">16</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000106.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟเตือน ABS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id041500108800.html">ไฟเตือนระบบเบรก/ABS</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">17</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000111.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟเตือนระบบเตือนแรงดันลมยาง</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Check Tyre Pressure</div>
+<div class="list">•&nbsp;&nbsp;TPMS Inspection Required</div>
+<div class="list">•&nbsp;&nbsp;Tyre Pressure Monitor Initialized</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">รุ่นที่มี TPMS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id021200202000.html">ไฟเตือนระบบเตือนแรงดันลมยาง</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">18</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000102.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟเตือนเข็มขัดนิรภัย</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200022900.html">ไฟเตือนเข็มขัดนิรภัย</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">19</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000112.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะระบบเตือนออกนอกช่องทางเดินรถ (LDWS) (เขียว)/ไฟเตือนระบบเตือนออกนอกช่องทางเดินรถ (LDWS) (เหลืองอำพัน)</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;LDWS Inspection Required</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">รุ่นที่มี LDWS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200029700.html">ไฟแสดงสถานะ LDWS (สีเขียว)/ไฟเตือน LDWS (สีเหลืองอำพัน)</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">20</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000100.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟเตือนระบบถุงลมนิรภัย/ระบบดึงรั้งเข็มขัดนิรภัยด้านหน้า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id081000310100.html">ไฟเตือนระบบถุงลมนิรภัย</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">21</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000095.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะไฟตัดหมอกด้านหลัง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">รุ่นที่มีไฟตัดหมอกด้านหลัง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id091800013900.html">ไฟแสดงสถานะไฟตัดหมอกด้านหลัง</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">22</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000089.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะไฟสูงของไฟหน้า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id091800013600.html">ไฟแสดงสถานะไฟสูงของไฟหน้า</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">23</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000086.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะการเปิดไฟส่องสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Headlights On</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id091800013400.html">ไฟแสดงสถานะการเปิดไฟส่องสว่าง</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="2">
+<div class="tbody">24</div>
+</td>
+<td id="" align="center" rowspan="2"><img src="images/ac5jjn00000088.png"></td>
+<td id="" align="left">
+<div class="tbody">ตัวระบุตำแหน่งเกียร์ </div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ATX:</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0517h2361700.html">ไฟแสดงสถานะเตือนตำแหน่งเกียร์ [FW6A-EL, FW6AX-EL]</a></font>)</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0517h2361800.html">ไฟแสดงสถานะตำแหน่งเกียร์ [FW6A-EL, FW6AX-EL]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ตัวระบุตำแหน่งเกียร์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">MTX (รุ่นที่มีตัวระบุตำแหน่งเกียร์)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140g2559000.html">ไฟแสดงสถานะการเปลี่ยนเกียร์ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">25</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000137.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟเตือนระบบตรวจจับรถด้านหลัง (RVM) (เหลืองอำพัน)/ไฟแสดงสถานะระบบตรวจจับรถด้านหลัง (RVM) (เขียว)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(รุ่นที่มีระบบตรวจสอบรถคันหลัง (RVM))</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200034100.html">ไฟเตือน (สีเหลืองอำพัน)/ไฟแสดงสถานะ (สีเขียว) ของระบบตรวจจับรถด้านหลัง (RVM)</a></font>)</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p clear="all">
+<p class="table-title">VIN ที่ใช้ได้ (ที่ได้รับการยอมรับ): JMZ KE19760# 120305&mdash;, JMZ KE19780# 120238&mdash;, JMZ KE89780# 120238&mdash;, JMZ KEC9760# 120305&mdash;, JMZ KEF9160# 133075&mdash;, JMZ KEF9180# 133075&mdash;, JMZ KEK9760# 120305&mdash;, JMZ KEK9780# 120238&mdash;, JMZ KEN9160# 133075&mdash;, JMZ KEN9180# 133075&mdash;, JMZ KEN9260# 133075&mdash;, JMZ KEN9280# 133075&mdash;</p>
+<p>
+<div>&times;: สามารถทำได้</div>
+<div>&mdash;: ไม่มี</div>
+</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="left">
+<p class="thead">ไม่ใช่</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟเตือน/ไฟแสดงสถานะ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ชื่อ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ข้อความ<sup>*1</sup></p>
+</th>
+<th id="" align="center">
+<p class="thead">ข้อคิดเห็น</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟเตือน/ไฟแสดงสถานะที่ติดสว่างระหว่างการตรวจสอบครั้งแรก</p>
+</th>
+<th id="" align="center">
+<p class="thead">อ้างอิง</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000103.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะ TCS/DSC</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id041500108900.html">ไฟแสดงสถานะ TCS/DSC</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000113.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะระบบควบคุมไฟสูง (HBC) (สีเขียว)/ไฟเตือนระบบควบคุมไฟสูง (HBC) (สีเหลืองอำพัน)</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;HBC Inspection Required</div>
+</td>
+<td id="" align="left">
+<div class="tbody">รุ่นที่มีระบบ HBC</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id091800005200.html">ไฟแสดงสถานะ HBC (สีเขียว)/ไฟเตือน HBC (สีเหลืองอำพัน)</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">3</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000118.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะ AFS OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">รุ่นที่มี AFS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id091800014000.html">ไฟแสดงสถานะ AFS OFF</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">4</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000096.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะ TCS OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id041500108700.html">สวิตช์ TCS OFF, ไฟแสดงสถานะ TCS OFF</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">5</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000092.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟเตือน i-stop (เหลืองอำพัน)/ไฟแสดงสถานะ i-stop (เขียว)</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Ready Apply more Brake Pressure</div>
+<div class="list">•&nbsp;&nbsp;Can't be activated Turn Steering Wheel to Neutral</div>
+<div class="list">•&nbsp;&nbsp;Can't be activatedAir Conditioninghas Priority</div>
+<div class="list">•&nbsp;&nbsp;Can't be activated.</div>
+<dl>
+<dd class="list">
+<div class="list">•&nbsp;&nbsp;Steering wheel</div>
+<div class="list">•&nbsp;&nbsp;Brake</div>
+<div class="list">•&nbsp;&nbsp;Air Conditioning</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;Please Restart Engine</div>
+</td>
+<td id="" align="left">
+<div class="tbody">รุ่นที่มีระบบ i-stop</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140g2008600.html">ไฟแสดงสถานะระบบ i-stop (สีเขียว) [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140g2008700.html">ไฟเตือนระบบ i-stop (สีเหลืองอำพัน) [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">6</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000094.png"></td>
+<td id="" align="left">
+<div class="tbody">Front Fog Light Indicator Light</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">รุ่นที่มีไฟตัดหมอกด้านหน้า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id091800013700.html">ไฟแสดงสถานะไฟตัดหมอกด้านหน้า</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">7</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000107.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟเตือนตรวจเช็คเครื่องยนต์</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Engine Inspection Required</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody"></div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0102h4549100.html">ไฟเตือนตรวจเช็คเครื่องยนต์ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">8</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000135.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะหลักระบบควบคุมความเร็วอัตโนมัติ (สีเหลืองอำพัน)/ไฟแสดงสถานะการตั้งระบบควบคุมความเร็วอัตโนมัติ (สีเขียว)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">รุ่นที่มีระบบควบคุมความเร็วอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0120e7903600.html">ไฟแสดงสถานะหลักระบบควบคุมความเร็วอัตโนมัติ (สีเหลืองอำพัน) [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0120e7903500.html">ไฟแสดงสถานะการตั้งระบบควบคุมความเร็วอัตโนมัติ (สีเขียว) [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0120e5903600.html">ไฟแสดงสถานะหลักระบบควบคุมความเร็วอัตโนมัติ (สีเหลืองอำพัน) [SKYACTIV-D 2.2]</a></font>)</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0120e5903500.html">ไฟแสดงสถานะการตั้งระบบควบคุมความเร็วอัตโนมัติ (สีเขียว) [SKYACTIV-D 2.2]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">9</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000087.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะสัญญาณไฟเลี้ยว/ไฟเตือนฉุกเฉิน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id091800013500.html">ไฟแสดงสถานะสัญญาณไฟเลี้ยว/ไฟเตือนฉุกเฉิน</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">10</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000110.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟเตือนหลัก</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Battery Management System Inspection Required</div>
+<div class="list">•&nbsp;&nbsp;Brake Override System Inspection Required</div>
+<div class="list">•&nbsp;&nbsp;Vehicle System Inspection Required</div>
+<div class="list">•&nbsp;&nbsp;FSC Inspection Required</div>
+<div class="list">•&nbsp;&nbsp;SCBS Inspection Required</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200032400.html">ไฟเตือนหลัก</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">11</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000104.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟเตือนระดับน้ำมันเชื้อเพลิงต่ำ</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Refill Fuel Tank</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200023000.html">ไฟเตือนระดับน้ำมันเชื้อเพลิงต่ำ</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">12</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000098.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟเตือนระบบเบรก</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Brake Fluid Level Low</div>
+<div class="list">•&nbsp;&nbsp;Release Parking Brake</div>
+<div class="list">•&nbsp;&nbsp;Brake Inspection Required </div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id041500108800.html">ไฟเตือนระบบเบรก/ABS</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">13</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000099.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะระบบรักษาความปลอดภัย</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id091400603300.html">ไฟแสดงสถานะระบบรักษาความปลอดภัย</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">14</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000114.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะหัวเผา</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">SKYACTIV-D 2.2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140z7265300.html">ไฟแสดงสถานะหัวเผา [SKYACTIV-D 2.2]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">15</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000085.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะอุณหภูมิน้ำหล่อเย็นเครื่องยนต์ต่ำ (สีน้ำเงิน) / ไฟเตือนอุณหภูมิน้ำหล่อเย็นเครื่องยนต์สูง (สีแดง)</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Engine Coolant Temperature High</div>
+<div class="list">•&nbsp;&nbsp;Stop Vehicleat safe area</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200018300.html">ไฟแสดงสถานะอุณหภูมิน้ำหล่อเย็นเครื่องยนต์ต่ำ (สีน้ำเงิน) / ไฟเตือนอุณหภูมิน้ำหล่อเย็นเครื่องยนต์สูง (สีแดง)</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">16</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000106.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟเตือน ABS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id041500108800.html">ไฟเตือนระบบเบรก/ABS</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">17</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000111.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟเตือนระบบเตือนแรงดันลมยาง</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Check Tyre Pressure</div>
+<div class="list">•&nbsp;&nbsp;TPMS Inspection Required</div>
+<div class="list">•&nbsp;&nbsp;Tyre Pressure Monitor Initialized</div>
+</td>
+<td id="" align="left">
+<div class="tbody">รุ่นที่มี TPMS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id021200202000.html">ไฟเตือนระบบเตือนแรงดันลมยาง</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">18</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000102.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟเตือนเข็มขัดนิรภัย</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200022900.html">ไฟเตือนเข็มขัดนิรภัย</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">19</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000112.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะระบบเตือนออกนอกช่องทางเดินรถ (LDWS) (เขียว)/ไฟเตือนระบบเตือนออกนอกช่องทางเดินรถ (LDWS) (เหลืองอำพัน)</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;LDWS Inspection Required</div>
+</td>
+<td id="" align="left">
+<div class="tbody">รุ่นที่มี LDWS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200029700.html">ไฟแสดงสถานะ LDWS (สีเขียว)/ไฟเตือน LDWS (สีเหลืองอำพัน)</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">20</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000100.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟเตือนระบบถุงลมนิรภัย/ระบบดึงรั้งเข็มขัดนิรภัยด้านหน้า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id081000310100.html">ไฟเตือนระบบถุงลมนิรภัย</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">21</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000095.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะไฟตัดหมอกด้านหลัง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">รุ่นที่มีไฟตัดหมอกด้านหลัง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id091800013900.html">ไฟแสดงสถานะไฟตัดหมอกด้านหลัง</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">22</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000089.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะไฟสูงของไฟหน้า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id091800013600.html">ไฟแสดงสถานะไฟสูงของไฟหน้า</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">23</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000086.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะการเปิดไฟส่องสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Headlights On</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id091800013400.html">ไฟแสดงสถานะการเปิดไฟส่องสว่าง</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="2">
+<div class="tbody">24</div>
+</td>
+<td id="" align="center" rowspan="2"><img src="images/ac5jjn00000088.png"></td>
+<td id="" align="left">
+<div class="tbody">ตัวระบุตำแหน่งเกียร์ </div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ATX:</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0517h2361700.html">ไฟแสดงสถานะเตือนตำแหน่งเกียร์ [FW6A-EL, FW6AX-EL]</a></font>)</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0517h2361800.html">ไฟแสดงสถานะตำแหน่งเกียร์ [FW6A-EL, FW6AX-EL]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ตัวระบุตำแหน่งเกียร์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">MTX (รุ่นที่มีตัวระบุตำแหน่งเกียร์)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140g2559000.html">ไฟแสดงสถานะการเปลี่ยนเกียร์ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">25</div>
+</td>
+<td id="" align="center"><img src="images/ac5jjn00000137.png"></td>
+<td id="" align="left">
+<div class="tbody">ไฟเตือนระบบตรวจจับรถด้านหลัง (RVM) (เหลืองอำพัน)/ไฟแสดงสถานะระบบตรวจจับรถด้านหลัง (RVM) (เขียว)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(รุ่นที่มีระบบตรวจสอบรถคันหลัง (RVM))</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200034100.html">ไฟเตือน (สีเหลืองอำพัน)/ไฟแสดงสถานะ (สีเขียว) ของระบบตรวจจับรถด้านหลัง (RVM)</a></font>)</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;:สำหรับระบบที่ไม่มีไฟเตือน/ไฟแสดงสถานะ ให้ดูที่<font class="extxref-label"><a href="id092200103500.html">ข้อความในหน้าจอคริสตัลเหลว (LCD)</a></font></div>
+</p><br clear="all"><p><a name="id09220001850009"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นการทำงานของสัญญาณเตือน</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัดจะสั่งให้สัญญาณเตือนดังขึ้นโดยใช้เสียงเตือนที่อยู่ในแผงหน้าปัดเพื่อแจ้งให้ผู้ใช้ทราบเกี่ยวกับสภาวะของรถ</div>
+<div class="list">•&nbsp;&nbsp;ประเภทของสัญญาณเตือนมีดังนี้: ดูข้อมูลอ้างอิงสำหรับรายละเอียดเกี่ยวกับสัญญาณเตือนแต่ละประเภท</div>
+</dd>
+</dl>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ชื่อ</p>
+</th>
+<th id="" align="center">
+<p class="thead">อ้างอิง</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">สัญญาณเตือนของตัวเตือนการเปิดไฟส่องสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200019200.html">สัญญาณเตือนของตัวเตือนการเปิดไฟส่องสว่าง</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">สัญญาณเตือนเข็มขัดนิรภัย</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200019600.html">สัญญาณเตือนเข็มขัดนิรภัย</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">สัญญาณเตือนระบบถุงลมนิรภัย</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200019800.html">สัญญาณเตือนระบบถุงลมนิรภัย</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">เสียงเตือนกุญแจรีโมท</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200031400.html">เสียงเตือนกุญแจรีโมท</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">สัญญาณเตือนแรงดันลมยาง (รุ่นที่มี TPMS)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200033500.html">สัญญาณเตือนแรงดันลมยาง</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">สัญญาณเตือนอุณหภูมิภายนอก</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200020600.html">สัญญาณเตือนอุณหภูมิภายนอก</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">สัญญาณเตือนไฟแสดงสถานะระบบควบคุมไฟส่องสว่างแผงหน้าปัด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200020700.html">สัญญาณเตือนไฟแสดงสถานะระบบควบคุมไฟส่องสว่างแผงหน้าปัด</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">สัญญาณเตือนไฟเลี้ยวและไฟเตือนฉุกเฉิน</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200020800.html">สัญญาณเตือนไฟเลี้ยวและไฟเตือนฉุกเฉิน</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">สัญญาณเตือนความเร็วรถ (รุ่นที่มีสัญญาณเตือนความเร็วรถ)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200018000.html">ระบบคอมพิวเตอร์แสดงข้อมูลรอบการขับ</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">สัญญาณเตือนไฟแสดงสถานะระบบควบคุมไฟส่องสว่างแผงหน้าปัด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200020700.html">สัญญาณเตือนไฟแสดงสถานะระบบควบคุมไฟส่องสว่างแผงหน้าปัด</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">สัญญาณเตือนไฟเลี้ยวและไฟเตือนฉุกเฉิน</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200020800.html">สัญญาณเตือนไฟเลี้ยวและไฟเตือนฉุกเฉิน</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">สัญญาณเตือนระบบตรวจจับรถด้านหลัง (RVM) (รุ่นที่มีระบบตรวจจับรถด้านหลัง (RVM))</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200031300.html">สัญญาณเตือน RVM</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">สัญญาณเตือนระบบการตรวจสอบจุดบอด (BSM) (รุ่นที่มีระบบ BSM)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200028100.html">สัญญาณเตือนระบบตรวจสอบจุดบอด (BSM)</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">สัญญาณเตือนระบบ i-stop (รุ่นที่มีระบบ i-stop)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200022200.html">สัญญาณเตือนระบบ i-stop</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">สัญญาณเตือน LDWS (รุ่นที่มีระบบเตือนออกนอกช่องจราจร (LDWS))</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200029600.html">สัญญาณเตือน LDWS</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">สัญญาณเตือนเมื่อขับขี่ที่ความเร็ว 120 km/h (รุ่นที่มีสัญญาณเตือนเมื่อขับขี่ที่ความเร็ว 120 km/h)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200033900.html">สัญญาณเตือนเมื่อขับขี่ที่ความเร็ว 120 km/h)</a></font></div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;หากได้รับสัญญาณขอสัญญาณเตือนหลายๆ ชุดพร้อมกัน จะมีเสียงสัญญาณเตือนตามลำดับก่อน-หลังในตารางต่อไปนี้</div>
+</dd>
+</dl>
+<p clear="all">
+<p class="table-title">บิดสวิตช์สตาร์ท OFF (LOCK)</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ลำดับก่อน-หลัง</p>
+</th>
+<th id="" align="center">
+<p class="thead">ชื่อ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณเตือนกุญแจรีโมท (รูปแบบ A)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณเตือนของตัวเตือนการเปิดไฟส่องสว่าง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">3</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณเตือนกุญแจรีโมท (รูปแบบ B, C)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">4</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณเตือนไฟเลี้ยวและไฟเตือนฉุกเฉิน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">5</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณเตือนไฟแสดงสถานะระบบควบคุมไฟส่องสว่างแผงหน้าปัด</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p clear="all">
+<p class="table-title">สวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงาน หรือทำงาน)</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ลำดับก่อน-หลัง</p>
+</th>
+<th id="" align="center">
+<p class="thead">ชื่อ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณเตือนเมื่อขับขี่ที่ความเร็ว 120 km/h (รุ่นที่มีสัญญาณเตือนเมื่อขับขี่ที่ความเร็ว 120 km/h)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณเตือนระบบ i-stop (รุ่นที่มีระบบ i-stop)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">3</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณเตือนเข็มขัดนิรภัย (ด้านคนขับ/ด้านผู้โดยสาร)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">4</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณเตือนเข็มขัดนิรภัย (ด้านหลัง) (รุ่นที่มีสัญญาณเตือนเข็มขัดนิรภัยที่นั่งด้านหลัง)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">5</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณเตือนแรงดันลมยาง (การตั้งค่าเริ่มต้นระบบเตือนแรงดันลมยาง)  (รุ่นที่มี TPMS)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">6</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณเตือนแรงดันลมยาง (การตั้งค่าเริ่มต้นระบบเตือนแรงดันลมยาง)  (รุ่นที่มี TPMS)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">7</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณเตือนระบบตรวจจับรถด้านหลัง (RVM) (รุ่นที่มีระบบตรวจจับรถด้านหลัง (RVM))</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">สัญญาณเตือนระบบการตรวจสอบจุดบอด (BSM) (รุ่นที่มีระบบ BSM)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">8</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณเตือน LDWS (รุ่นที่มีระบบเตือนออกนอกช่องจราจร (LDWS))</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">9</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เสียงเตือนกุญแจรีโมท</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">10</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณเตือนระบบถุงลมนิรภัย</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">11</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณเตือนอุณหภูมิภายนอก</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">12</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณเตือนความเร็วรถ (รุ่นที่มีสัญญาณเตือนความเร็วรถ)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">13</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณเตือนไฟเลี้ยวและไฟเตือนฉุกเฉิน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">14</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณเตือนไฟแสดงสถานะระบบควบคุมไฟส่องสว่างแผงหน้าปัด</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</p><br clear="all"><p><a name="id09220001850010"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นควบคุมไฟส่องสว่างแผงหน้าปัด</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัดจะเปลี่ยนแปลงความสว่างของไฟส่องสว่างแผงหน้าปัดตามสวิตช์สตาร์ทที่อยู่ในสถานะ ON (เครื่องยนต์ทำงานหรือไม่ทำงาน) หรือ TNS ที่กำลังติดสว่าง สำหรับรายละเอียดเกี่ยวกับไฟส่องสว่างแผงหน้าปัด ให้ดูที่<font class="extxref-label"><a href="id092200033000.html">ไฟส่องสว่างแผงหน้าปัด</a></font></div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09220001850011"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นการส่งผ่านข้อมูลจำเพาะของรถ</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัดจะส่งข้อมูลจำเพาะของรถที่บันทึกระหว่างการกำหนดค่าไปยังโมดูลต่อไปนี้ผ่านการสื่อสารระบบ CAN โมดูลต่อไปนี้จะดำเนินการกำหนดค่าโดยอัตโนมัติโดยการอ่านข้อมูลจำเพาะของรถจากแผงหน้าปัด</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;DSC HU/CU</div>
+<div class="list">―&nbsp;&nbsp;โมดูลควบคุม EPS</div>
+<div class="list">―&nbsp;&nbsp;โมดูลควบคุม AFS (รุ่นที่มี AFS)</div>
+<div class="list">―&nbsp;&nbsp;เซ็นเซอร์เลเซอร์ (รุ่นที่มีระบบสมาร์ทซิตี้เบรก (SCBS))</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09220001850012"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นยับยั้งการคายประจุของแบตเตอรี่</p>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่นนี้สร้างขึ้นเพื่อยับยั้งการคายประจุของแบตเตอรี่ระหว่างการผลิตและการจัดส่งรถ อย่างไรก็ตาม หากถอดรูมฟิวส์ออกจากรถขณะที่ระยะการเคลื่อนที่โดยรวมอยู่ในระดับต่ำ ฟังก์ชั่นนี้อาจทำงานเมื่อรถจำเป็นต้องใช้งาน </div>
+</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;การยับยั้งการคายประจุของแบตเตอรี่เป็นฟังก์ชั่นที่แผงหน้าปัดส่งสัญญาณการยับยั้งการคายประจุของแบตเตอรี่ไปยังชุดอุปกรณ์ต่อไปนี้ตามสถานะของรูมฟิวส์และระยะการเคลื่อนที่โดยรวม และยับยั้งการคายประจุแบตเตอรี่โดยการจำกัดการใช้โหลดไฟฟ้าสำหรับชุดอุปกรณ์ต่อไปนี้</div>
+</dd>
+</dl>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">หน่วย</p>
+</th>
+<th id="" align="center">
+<p class="thead">คำอธิบายการควบคุม</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมตัวถังด้านหน้า (FBCM)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปิดใช้งานไฟส่องสว่างกลางวันหลังจากติดสว่าง 5 นาที (เมื่อดับเครื่องยนต์เท่านั้น)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงาน</div>
+</td>
+<td id="" align="left">
+<div class="tbody">บิดสวิตช์สตาร์ท OFF หลังจากบิดสวิตช์สตาร์ทไปที่ ACC หรือ ON 25 นาที (เครื่องยนต์ไม่ทำงาน) (สำหรับรถเกียร์อัตโนมัติ (ATX) เมื่อคันเกียร์อยู่ในตำแหน่ง P เท่านั้น)</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่นยับยั้งการคายประจุของแบตเตอรี่จะทำงานเมื่อระยะการเคลื่อนที่โดยรวมเท่ากับหรือน้อยกว่าเกณฑ์ และรูมฟิวส์ถูกถอดออกไป</div>
+<div class="list">•&nbsp;&nbsp;เมื่อฟังก์ชั่นยับยั้งการคายประจุของแบตเตอรี่ถูกเปิดใช้งาน แผงหน้าปัดจะแสดง F0-002, F0-HHH, F0-LLL ในมาตรบันทึกระยะทาง/มาตรวัดระยะทางของแผงหน้าปัดเพื่อแสดงว่าฟังก์ชั่นยับยั้งการคายประจุของแบตเตอรี่กำลังทำงาน</div>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่นยับยั้งการคายประจุของแบตเตอรี่จะหยุดทำงานภายใต้สภาวะต่างๆ ต่อไปนี้</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;มีการติดตั้งรูมฟิวส์</div>
+<div class="list">―&nbsp;&nbsp;สตาร์ทเครื่องยนต์</div>
+<div class="list">―&nbsp;&nbsp;ระยะเวลาในการเคลื่อนที่โดยรวมเกินกว่าค่าที่กำหนด</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</p><br clear="all"><a name="id09220001850013"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ภาพโครงสร้าง</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00000948.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00000948</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id09220001850014"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ผังวงจรระบบ</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00002056.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00002056</div>
+</td>
+</tr>
+</table>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00002057.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00002057</div>
+</td>
+</tr>
+</table>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00002058.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00002058</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id09220001850015"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>Fail-safe</p><br clear="all"><p><a name="id09220001850016"></a><p class="topic-title"><span class="topic-head"></span>มาตรวัดความเร็วรถ</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;หากไม่สามารถรับสัญญาณระบบ CAN ได้ตามปกติ แผงหน้าปัดจะแสดงเครื่องหมาย 0</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09220001850017"></a><p class="topic-title"><span class="topic-head"></span>มาตรวัดความเร็วรอบ</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;หากไม่สามารถรับสัญญาณระบบ CAN ได้ตามปกติ แผงหน้าปัดจะแสดงเครื่องหมาย 0</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09220001850018"></a><p class="topic-title"><span class="topic-head"></span>เกจวัดระดับน้ำมันเชื้อเพลิง</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;หากไม่สามารถรับสัญญาณระบบ CAN ได้ตามปกติ แผงหน้าปัดจะปิดหนึ่งส่วนที่รอบเวลาปกติเมื่อส่วนต่างๆ ที่คำนวณตามสัญญาณที่ได้รับครั้งล่าสุดแสดงขึ้น</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09220001850019"></a><p class="topic-title"><span class="topic-head"></span>มาตรบันทึกระยะทาง/มาตรวัดระยะทาง </p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;หากแผงหน้าปัดตรวจพบความบกพร่องของ CPU ภายใน แผงหน้าปัดจะแสดง  &ldquo;&mdash;&mdash;&ldquo;</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09220001850020"></a><p class="topic-title"><span class="topic-head"></span>ไฟเตือน</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;หากไม่สามารถรับสัญญาณระบบ CAN ได้ตามปกติ แผงหน้าปัดจะเปิดไฟเตือน</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09220001850021"></a><p class="topic-title"><span class="topic-head"></span>ไฟแสดงสถานะ</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;หากไม่สามารถรับสัญญาณระบบ CAN ได้ตามปกติ แผงหน้าปัดจะปิดไฟแสดงสถานะ</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09220001850022"></a><p class="topic-title"><span class="topic-head"></span>ALARM</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;หากไม่สามารถรับสัญญาณระบบ CAN ได้ตามปกติ แผงหน้าปัดจะหยุดสัญญาณเตือน</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09220001850023"></a><p class="topic-title"><span class="topic-head"></span>ไฟส่องสว่างแผงหน้าปัด</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;หากไม่สามารถรับสัญญาณระบบ CAN ได้ตามปกติ แผงหน้าปัดจะเปิดไฟส่องสว่างแผงหน้าปัด</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09220001850024"></a><p class="topic-title"><span class="topic-head"></span>ระบบคอมพิวเตอร์แสดงข้อมูลรอบการขับ</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;หากแผงหน้าปัดตรวจพบความบกพร่องของ CPU ภายใน แผงหน้าปัดจะแสดง  &ldquo;&mdash;&mdash;&ldquo;</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09220001850025"></a><p class="topic-title"><span class="topic-head"></span>การแสดงผลอุณหภูมิภายนอก</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;หากไม่สามารถรับสัญญาณระบบ CAN ได้ตามปกติ แผงหน้าปัดจะแสดง &ldquo;&mdash;&mdash;&ldquo; และไม่แสดงเครื่องหมายน้ำแข็ง</div>
+</dd>
+</dl>
+</p>
+</body>
+</html>

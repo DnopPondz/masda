@@ -1,0 +1,975 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>การตัดสินตำแหน่งการลัดวงจรระหว่างวงจร (HS-CAN) [SKYACTIV-D 2.2 (R.H.D.)])</title>
+</head>
+<body><a name="id100206000800"></a><p class="servinfo-title"><span class="servinfo-head"></span>การตัดสินตำแหน่งการลัดวงจรระหว่างวงจร (HS-CAN) [SKYACTIV-D 2.2 (R.H.D.)])</p>
+<hr>
+<p class="servinfo-title-id" align="right">id100206000800</p>
+<dl>
+<dd>
+<div class="attention2-label">ข้อควรระวัง</div>
+</dd>
+<dd>
+<div class="attention2">
+<div class="list">•&nbsp;&nbsp;ทำการวิเคราะห์ปัญหาดังต่อไปนี้เฉพาะเมื่อวิเคราะห์ปัญหาที่มีการลัดวงจรระหว่างวงจรโดย<font class="extxref-label"><a href="id100206000100.html">ลำดับการวิเคราะห์ปัญหาระบบเครือข่ายควบคุมพื้นที่ (CAN) [SKYACTIV-D 2.2 (R.H.D.)]</a></font></div>
+</div>
+</dd>
+</dl><br clear="all"><a name="id10020600080001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ผังวงจรระบบ</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzw00000682.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzw00000682</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id10020600080002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ขั้นตอนการตัดสิน</p>
+<dl>
+<dd>
+<div class="attention2-label">ข้อควรระวัง</div>
+</dd>
+<dd>
+<div class="attention2">
+<div class="list">•&nbsp;&nbsp;เมื่อปลดขั้วต่อ ให้ตรวจสอบว่าไม่มีการหลุดหลวม เสียหาย เสียรูป การผุกร่อน หรือการต่อไม่แน่นของขั้วต่างๆ ของขั้วต่อ</div>
+<div class="list">•&nbsp;&nbsp;ขณะตรวจสอบ DLC-2 ให้สัมผัส DLC-2 ด้วยคลิปหนีบกระดาษหรือเข็มหมุดเรียวเล็กที่คล้ายกันโดยไม่ต้องเสียบเครื่องทดสอบเข้ากับขั้วโดยตรง</div>
+</div>
+</dd>
+</dl>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">การตรวจสอบ</p>
+</th>
+<th id="" align="center">
+<p class="thead">การปฏิบัติ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">1</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรระหว่างวงจรระหว่างโมดูลควบคุมตัวถังด้านหน้า (FBCM) กับแผงหน้าปัด</div>
+<div class="list">•&nbsp;&nbsp;ปลดสายขั้วลบแบตเตอรี่<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อ 2 ซึ่งมีขั้ว 2K และ 2I ของโมดูลควบคุมตัวถังด้านหน้า (FBCM)</div>
+<div class="list">•&nbsp;&nbsp;ต่อสายขั้วลบแบตเตอรี่<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;วัดแรงดันไฟฟ้าที่ขั้ว F และ E ของ DLC-2</div>
+<div class="list">•&nbsp;&nbsp;แรงดันไฟฟ้าที่ขั้ว F และ E ของ DLC-2 เท่ากันหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอน 6</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">2</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรระหว่างวงจรของโมดูลควบคุมตัวถังด้านหน้า (FBCM)</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF (LOCK)</div>
+<div class="list">•&nbsp;&nbsp;ปลดสายขั้วลบแบตเตอรี่<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต่อเนื่องระหว่างขั้ว 2K กับ 2I ของโมดูลควบคุมตัวถังด้านหน้า (FBCM)</div>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องหรือไม่?</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนโมดูลควบคุมตัวถังด้านหน้า (FBCM) เนื่องจากมีการลัดวงจรระหว่างวงจรในโมดูลควบคุมตัวถังด้านหน้า (FBCM)</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id094000001900.html">การถอด / การติดตั้งโมดูลควบคุมตัวถังด้านหน้า (FBCM)</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">3</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรระหว่างวงจรระหว่าง TCM หรือโมดูลควบคุม AFS กับโมดูลควบคุมตัวถังด้านหน้า (FBCM)</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต่อเนื่องระหว่างขั้ว E กับ F ของ TCM (ATX)</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต่อเนื่องระหว่างขั้ว A กับ B ของโมดูลควบคุม AFS (MTX)</div>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องหรือไม่?</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ไปที่ขั้นตอนถัดไป (ATX)</div>
+<div class="list">•&nbsp;&nbsp;ไปที่ขั้นตอน 5 (MTX)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ไปที่ขั้นตอน 30 (ATX)</div>
+<div class="list">•&nbsp;&nbsp;ไปที่ขั้นตอน 28 (MTX)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">4</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรระหว่างวงจรระหว่าง TCM กับขั้วต่อ C-01</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อ C-01</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต่อเนื่องระหว่างขั้ว E กับ F ของ TCM </div>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องหรือไม่?</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชุดสายไฟระหว่างโมดูลควบคุมตัวถังด้านหน้า (FBCM) กับขั้วต่อ C-01 เนื่องจากชุดสายไฟลัดวงจรระหว่างวงจร</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">5</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรระหว่างวงจรของ TCM หรือโมดูลควบคุม AFS</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อ TCM (ATX)</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อโมดูลควบคุม AFS (MTX)</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต่อเนื่องระหว่างขั้ว E กับ F ของ TCM (ด้านชุดสายไฟ) (ATX)</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต่อเนื่องระหว่างขั้ว A และ B ของโมดูลควบคุม AFS (ด้านชุดสายไฟ) (MTX)</div>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องหรือไม่?</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ซ่อมหรือเปลี่ยนชุดสายไฟระหว่าง TCM กับขั้วต่อ C-01 เนื่องจากชุดสายไฟลัดวงจรระหว่างวงจร (ATX)</div>
+<div class="list">•&nbsp;&nbsp;ซ่อมหรือเปลี่ยนชุดสายไฟระหว่างโมดูลควบคุม AFS กับโมดูลควบคุมตัวถังด้านหน้า (FBCM) เนื่องจากชุดสายไฟลัดวงจรระหว่างวงจร (MTX)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;เปลี่ยน TCM เนื่องจากมีการลัดวงจรระหว่างวงจรใน TCM (ATX)<div>(ดูที่ <font class="extxref-label"><a href="id0517h2118000.html">การถอด / การติดตั้งเรือนวาล์วควบคุม [FW6A-EL, FW6AX-EL]</a></font>)</div>
+<div>(ดูที่ <font class="extxref-label"><a href="id0517i2118000.html">การถอด / การติดตั้งเรือนวาล์วควบคุม [GW6A-EL, GW6AX-EL]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;เปลี่ยนโมดูลควบคุม AFS เนื่องจากมีการลัดวงจรระหว่างวงจรในโมดูลควบคุม AFS<div>(ดูที่ <font class="extxref-label"><a href="id091800112300.html">การถอด / การติดตั้งโมดูลควบคุมระบบปรับลำแสงไฟหน้า (AFS)</a></font>)</div>
+</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">6</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรระหว่างวงจรระหว่างขั้วต่อ C-04 กับแผงหน้าปัด</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF (LOCK)</div>
+<div class="list">•&nbsp;&nbsp;ปลดสายขั้วลบแบตเตอรี่<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อ C-04</div>
+<div class="list">•&nbsp;&nbsp;ต่อสายขั้วลบแบตเตอรี่<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;วัดแรงดันไฟฟ้าที่ขั้ว F และ E ของ DLC-2</div>
+<div class="list">•&nbsp;&nbsp;แรงดันไฟฟ้าที่ขั้ว F และ E ของ DLC-2 เท่ากันหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอน 8</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ไปที่ขั้นตอนถัดไป (ATX)</div>
+<div class="list">•&nbsp;&nbsp;ซ่อมหรือเปลี่ยนชุดสายไฟระหว่างโมดูลควบคุมตัวถังด้านหน้า (FBCM) กับขั้วต่อ C-04 เนื่องจากชุดสายไฟลัดวงจรระหว่างวงจร (MTX)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">7</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรระหว่างวงจรของโมดูลควบคุม AFS</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อโมดูลควบคุม AFS</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต่อเนื่องระหว่างขั้ว A และ B ของโมดูลควบคุม AFS (ด้านชุดสายไฟ)</div>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องหรือไม่?</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชุดสายไฟระหว่างโมดูลควบคุม AFS กับโมดูลควบคุมตัวถังด้านหน้า (FBCM) / ขั้วต่อ C-04 เนื่องจากชุดสายไฟลัดวงจรระหว่างวงจร</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนโมดูลควบคุม AFS เนื่องจากมีการลัดวงจรระหว่างวงจรในโมดูลควบคุม AFS</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id091800112300.html">การถอด / การติดตั้งโมดูลควบคุมระบบปรับลำแสงไฟหน้า (AFS)</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">8</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรระหว่างวงจรระหว่างขั้วต่อ C-49 และ C-50 กับแผงหน้าปัด</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF (LOCK)</div>
+<div class="list">•&nbsp;&nbsp;ปลดสายขั้วลบแบตเตอรี่<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อ C-49 และ C-50</div>
+<div class="list">•&nbsp;&nbsp;ต่อสายขั้วลบแบตเตอรี่<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;วัดแรงดันไฟฟ้าที่ขั้ว F และ E ของ DLC-2</div>
+<div class="list">•&nbsp;&nbsp;แรงดันไฟฟ้าที่ขั้ว F และ E ของ DLC-2 เท่ากันหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอน 9</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">9</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรระหว่างวงจรระหว่างโมดูลควบคุม 4WD กับขั้วต่อ C-49 และ C-50</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF (LOCK)</div>
+<div class="list">•&nbsp;&nbsp;ปลดสายขั้วลบแบตเตอรี่<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต่อเนื่องระหว่างขั้ว G กับ H ของโมดูลควบคุม 4WD</div>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องหรือไม่?</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชุดสายไฟระหว่างขั้วต่อ C-04 กับขั้วต่อ C-49 และ C-50 เนื่องจากชุดสายไฟลัดวงจรระหว่างวงจร</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">10</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรระหว่างวงจรของโมดูลควบคุม 4WD</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อโมดูลควบคุม 4WD</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต่อเนื่องระหว่างขั้ว G กับ H ของโมดูลควบคุม 4WD (ด้านชุดสายไฟ)</div>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องหรือไม่?</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชุดสายไฟระหว่างโมดูลควบคุม 4WD กับขั้วต่อ C-49 และ C-50 เนื่องจากชุดสายไฟลัดวงจรระหว่างวงจร</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนโมดูลควบคุม 4WD เนื่องจากมีการลัดวงจรระหว่างวงจรในโมดูลควบคุม 4WD</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id031800806000.html">การถอด / การติดตั้งโมดูลควบคุม 4WD</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">11</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรระหว่างวงจรระหว่างขั้วต่อ C-10 กับแผงหน้าปัด</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF (LOCK)</div>
+<div class="list">•&nbsp;&nbsp;ปลดสายขั้วลบแบตเตอรี่<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อ C-10</div>
+<div class="list">•&nbsp;&nbsp;ต่อสายขั้วลบแบตเตอรี่<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;วัดแรงดันไฟฟ้าที่ขั้ว F และ E ของ DLC-2</div>
+<div class="list">•&nbsp;&nbsp;แรงดันไฟฟ้าที่ขั้ว F และ E ของ DLC-2 เท่ากันหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชุดสายไฟระหว่างขั้วต่อ C-49 และ C-50 กับขั้วต่อ C-10 เนื่องจากชุดสายไฟลัดวงจรระหว่างวงจร</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">12</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรระหว่างวงจรระหว่างขั้วต่อ C-11 กับแผงหน้าปัด</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF (LOCK)</div>
+<div class="list">•&nbsp;&nbsp;ปลดสายขั้วลบแบตเตอรี่<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อ C-11</div>
+<div class="list">•&nbsp;&nbsp;ต่อสายขั้วลบแบตเตอรี่<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;วัดแรงดันไฟฟ้าที่ขั้ว F และ E ของ DLC-2</div>
+<div class="list">•&nbsp;&nbsp;แรงดันไฟฟ้าที่ขั้ว F และ E ของ DLC-2 เท่ากันหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอน 18</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">13</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรระหว่างวงจรระหว่างขั้วต่อ C-11 กับกล้องตรวจจับด้านหน้า/เซ็นเซอร์เลเซอร์</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF (LOCK)</div>
+<div class="list">•&nbsp;&nbsp;ปลดสายขั้วลบแบตเตอรี่<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต่อเนื่องระหว่างขั้ว E กับ C ของกล้องตรวจจับด้านหน้า (รุ่นที่มีระบบควบคุมไฟสูง (HBC))</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต่อเนื่องระหว่างขั้ว D กับ C ของเซ็นเซอร์เลเซอร์ (รุ่นที่มีระบบสมาร์ทซิตี้เบรก)</div>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องหรือไม่?</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชุดสายไฟระหว่างขั้วต่อ C-11 กับขั้วต่อ C-10 เนื่องจากชุดสายไฟลัดวงจรระหว่างวงจร</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">14</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรระหว่างวงจรระหว่างเซ็นเซอร์เลเซอร์กับขั้วต่อ C-42</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อ C-42</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต่อเนื่องระหว่างขั้ว D กับ C ของเซ็นเซอร์เลเซอร์</div>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องหรือไม่?</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอน 16</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">15</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรระหว่างวงจรของเซ็นเซอร์เลเซอร์</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อเซ็นเซอร์เลเซอร์</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต่อเนื่องระหว่างขั้ว D กับ C ของเซ็นเซอร์เลเซอร์ (ด้านชุดสายไฟ)</div>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องหรือไม่?</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชุดสายไฟระหว่างเซ็นเซอร์เลเซอร์กับขั้วต่อ C-42 เนื่องจากชุดสายไฟลัดวงจรระหว่างวงจร</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนเซ็นเซอร์เลเซอร์เนื่องจากมีการลัดวงจรระหว่างวงจรในเซ็นเซอร์เลเซอร์</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id041500802600.html">การถอด / การติดตั้งเซ็นเซอร์เลเซอร์</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">16</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรระหว่างวงจรระหว่างกล้องตรวจจับด้านหน้ากับขั้วต่อ C-42</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต่อเนื่องระหว่างขั้ว E กับ C ของกล้องตรวจจับด้านหน้า</div>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องหรือไม่?</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชุดสายไฟระหว่างขั้วต่อ C-11 กับขั้วต่อ C-42 เนื่องจากชุดสายไฟลัดวงจรระหว่างวงจร</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">17</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรระหว่างวงจรของกล้องจับด้านหน้า</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อกล้องตรวจจับด้านหน้า</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต่อเนื่องระหว่างขั้ว E กับ C ของกล้องตรวจจับด้านหน้า (ด้านชุดสายไฟ)</div>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องหรือไม่?</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชุดสายไฟระหว่างกล้องตรวจจับด้านหน้ากับขั้วต่อ C-42 เนื่องจากชุดสายไฟลัดวงจรระหว่างวงจร</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนกล้องตรวจจับด้านหน้าเนื่องจากมีการลัดวงจรระหว่างวงจรในกล้องตรวจจับด้านหน้า</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200028600.html">การถอด / การติดตั้งกล้องตรวจจับด้านหน้า (FSC)</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">18</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรระหว่างวงจรระหว่างขั้วต่อ C-51, C-52 กับแผงหน้าปัด</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF (LOCK)</div>
+<div class="list">•&nbsp;&nbsp;ปลดสายขั้วลบแบตเตอรี่<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อ C-51, C-52</div>
+<div class="list">•&nbsp;&nbsp;ต่อสายขั้วลบแบตเตอรี่<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;วัดแรงดันไฟฟ้าที่ขั้ว F และ E ของ DLC-2</div>
+<div class="list">•&nbsp;&nbsp;แรงดันไฟฟ้าที่ขั้ว F และ E ของ DLC-2 เท่ากันหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอน 21</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">19</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรระหว่างวงจรระหว่างโมดูลควบคุม SAS กับขั้วต่อ C-51, C-52</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF (LOCK)</div>
+<div class="list">•&nbsp;&nbsp;ปลดสายขั้วลบแบตเตอรี่<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต่อเนื่องระหว่างขั้ว 3K กับ 3L ของโมดูลควบคุม SAS</div>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องหรือไม่?</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชุดสายไฟระหว่างขั้วต่อ C-11 กับขั้วต่อ C-51, C-52 เนื่องจากชุดสายไฟลัดวงจรระหว่างวงจร</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">20</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรระหว่างวงจรของโมดูลควบคุม SAS</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อโมดูลควบคุม SAS</div>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องระหว่างขั้ว 3K กับ 3L ของโมดูลควบคุม SAS (ด้านชุดสายไฟ) หรือไม่</div>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องหรือไม่?</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชุดสายไฟระหว่างโมดูลควบคุม SAS กับขั้วต่อ C-51, C-52 เนื่องจากชุดสายไฟลัดวงจรระหว่างวงจร</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนโมดูลควบคุม SAS เนื่องจากมีการลัดวงจรระหว่างวงจรในโมดูลควบคุม SAS</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id081000801400.html">การถอด / การติดตั้งโมดูลควบคุม SAS</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">21</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรระหว่างวงจรระหว่าง DLC-2 กับขั้วต่อ C-34</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF (LOCK)</div>
+<div class="list">•&nbsp;&nbsp;ปลดสายขั้วลบแบตเตอรี่<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อ C-34</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต่อเนื่องระหว่างขั้ว F กับ E ของ DLC-2</div>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องหรือไม่?</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชุดสายไฟระหว่าง DLC-2 กับขั้วต่อ C-34 เนื่องจากชุดสายไฟลัดวงจรระหว่างวงจร</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">22</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรระหว่างวงจรระหว่างชุดเปิด/ปิดการทำงานกับขั้วต่อ C-34</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต่อเนื่องระหว่างขั้ว 2M กับ 2O ของชุดเปิด/ปิดการทำงาน</div>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องหรือไม่?</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอน 24</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">23</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรระหว่างวงจรของชุดเปิด/ปิดการทำงาน</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อชุดเปิด/ปิดการทำงาน</div>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องระหว่างขั้ว 2M กับ 2O ของชุดเปิด/ปิดการทำงาน (ด้านชุดสายไฟ) หรือไม่</div>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องหรือไม่?</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชุดสายไฟระหว่างชุดเปิด/ปิดการทำงานกับขั้วต่อ C-34 เนื่องจากชุดสายไฟลัดวงจรระหว่างวงจร</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนชุดเปิด/ปิดการทำงานเนื่องจากมีการลัดวงจรระหว่างวงจรในชุดเปิด/ปิดการทำงาน</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id091400110300.html">การถอด / การติดตั้งชุดเปิด/ปิดการทำงาน</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">24</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรระหว่างวงจรระหว่างโมดูลควบคุม EPS กับขั้วต่อ C-34</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต่อเนื่องระหว่างขั้ว 2A กับ 2D ของโมดูลควบคุม EPS</div>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องหรือไม่?</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอน 26</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">25</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรระหว่างวงจรของโมดูลควบคุม EPS</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อโมดูลควบคุม EPS</div>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องระหว่างขั้ว 2A กับ 2D ของโมดูลควบคุม EPS (ด้านชุดสายไฟ) หรือไม่</div>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องหรือไม่?</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชุดสายไฟระหว่างโมดูลควบคุม EPS กับขั้วต่อ C-34 เนื่องจากชุดสายไฟลัดวงจรระหว่างวงจร</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนโมดูลควบคุม EPS เนื่องจากมีการลัดวงจรระหว่างวงจรในโมดูลควบคุม EPS</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id061300801400.html">การถอด / การติดตั้งคอพวงมาลัยและพวงมาลัย</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">26</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรระหว่างวงจรระหว่างแผงหน้าปัดกับขั้วต่อ C-34</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต่อเนื่องระหว่างขั้ว B กับ D ของแผงหน้าปัด</div>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องหรือไม่?</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชุดสายไฟระหว่างขั้วต่อ C-51, C-52 กับขั้วต่อ C-34 เนื่องจากชุดสายไฟลัดวงจรระหว่างวงจร</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">27</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรระหว่างวงจรของแผงหน้าปัด</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อแผงหน้าปัด</div>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องระหว่างขั้ว B กับ D ของแผงหน้าปัด (ด้านชุดสายไฟ) หรือไม่</div>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องหรือไม่?</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชุดสายไฟระหว่างแผงหน้าปัดกับขั้วต่อ C-34 เนื่องจากชุดสายไฟลัดวงจรระหว่างวงจร</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนแผงหน้าปัดเนื่องจากมีการลัดวงจรระหว่างวงจรในแผงหน้าปัด</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200010300.html">การถอด / การติดตั้งแผงหน้าปัด</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">28</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรระหว่างวงจรระหว่างขั้วต่อ C-01 กับโมดูลควบคุมตัวถังด้านหน้า (FBCM)</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF (LOCK)</div>
+<div class="list">•&nbsp;&nbsp;ปลดสายขั้วลบแบตเตอรี่<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ต่อขั้วต่อ 2 ซึ่งมีขั้ว 2K และ 2I ของโมดูลควบคุมตัวถังด้านหน้า (FBCM)</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อ C-01</div>
+<div class="list">•&nbsp;&nbsp;ต่อสายขั้วลบแบตเตอรี่<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;วัดแรงดันไฟฟ้าที่ขั้ว F และ E ของ DLC-2</div>
+<div class="list">•&nbsp;&nbsp;แรงดันไฟฟ้าที่ขั้ว F และ E ของ DLC-2 เท่ากันหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชุดสายไฟระหว่างขั้วต่อ C-01 กับโมดูลควบคุมตัวถังด้านหน้า (FBCM) เนื่องจากชุดสายไฟลัดวงจรระหว่างวงจร</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">29</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรระหว่างวงจรระหว่างขั้วต่อ C-01 กับขั้วต่อ C-32</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF (LOCK)</div>
+<div class="list">•&nbsp;&nbsp;ปลดสายขั้วลบแบตเตอรี่<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ต่อขั้วต่อ C-01</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อ C-32</div>
+<div class="list">•&nbsp;&nbsp;ต่อสายขั้วลบแบตเตอรี่<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;วัดแรงดันไฟฟ้าที่ขั้ว F และ E ของ DLC-2</div>
+<div class="list">•&nbsp;&nbsp;แรงดันไฟฟ้าที่ขั้ว F และ E ของ DLC-2 เท่ากันหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชุดสายไฟระหว่างขั้วต่อ C-01 กับขั้วต่อ C-32 เนื่องจากชุดสายไฟลัดวงจรระหว่างวงจร</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอน 31</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">30</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรระหว่างวงจรระหว่างขั้วต่อ C-32 กับโมดูลควบคุมตัวถังด้านหน้า (FBCM)</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF (LOCK)</div>
+<div class="list">•&nbsp;&nbsp;ปลดสายขั้วลบแบตเตอรี่<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ต่อขั้วต่อ 2 ซึ่งมีขั้ว 2K และ 2I ของโมดูลควบคุมตัวถังด้านหน้า (FBCM)</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อ C-32</div>
+<div class="list">•&nbsp;&nbsp;ต่อสายขั้วลบแบตเตอรี่<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;วัดแรงดันไฟฟ้าที่ขั้ว F และ E ของ DLC-2</div>
+<div class="list">•&nbsp;&nbsp;แรงดันไฟฟ้าที่ขั้ว F และ E ของ DLC-2 เท่ากันหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชุดสายไฟระหว่างขั้วต่อ C-32 กับโมดูลควบคุมตัวถังด้านหน้า (FBCM) เนื่องจากชุดสายไฟลัดวงจรระหว่างวงจร</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">31</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรระหว่างวงจรระหว่าง DSC HU/CM กับขั้วต่อ C-32</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF (LOCK)</div>
+<div class="list">•&nbsp;&nbsp;ปลดสายขั้วลบแบตเตอรี่<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต่อเนื่องระหว่างขั้ว AF กับ AC ของ DSC HU/CM</div>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องหรือไม่?</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอน 33</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">32</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรระหว่างวงจรของ DSC HU/CM</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อ DSC HU/CM</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต่อเนื่องระหว่างขั้ว AF กับ AC ของ DSC HU/CM (ด้านชุดสายไฟ)</div>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องหรือไม่?</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชุดสายไฟระหว่าง DSC HU/CM กับขั้วต่อ C-32 เนื่องจากชุดสายไฟลัดวงจรระหว่างวงจร</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยน DSC HU/CM เนื่องจากมีการลัดวงจรระหว่างวงจรใน DSC HU/CM</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id041500801000.html">การถอด / การติดตั้ง DSC HU/CM</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">33</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรระหว่างวงจรของ PCM</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อ PCM</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต่อเนื่องระหว่างขั้ว 2AK กับ 2AL ของ PCM (ด้านชุดสายไฟ)</div>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องหรือไม่?</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชุดสายไฟระหว่าง PCM กับขั้วต่อ C-32 เนื่องจากชุดสายไฟลัดวงจรระหว่างวงจร</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยน PCM เนื่องจากมีการลัดวงจรระหว่างวงจรใน PCM</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140z7802400.html">การถอด / การติดตั้ง PCM [SKYACTIV-D 2.2]</a></font>)</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</body>
+</html>

@@ -1,0 +1,537 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>PCM [SKYACTIV-D 2.2]</title>
+</head>
+<body><a name="id0140z7008400"></a><p class="servinfo-title"><span class="servinfo-head"></span>PCM [SKYACTIV-D 2.2]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0140z7008400</p><br clear="all"><a name="id0140z700840001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>จุดประสงค์, การทำงาน</p>
+<div class="list">•&nbsp;&nbsp;สมรรถนะการขับขี่ในระดับสูงและการสิ้นเปลืองน้ำมันเชื้อเพลิงต่ำได้จากการควบคุมสภาวะเครื่องยนต์ที่เหมาะสม (การฉีดน้ำมันเชื้อเพลิง / จังหวะการจุดระเบิด) ตามสภาวะการทำงาน</div>
+<div class="list">•&nbsp;&nbsp;ควบคุมแต่ละชิ้นส่วนสัญญาณเอาท์พุทตามสัญญาณจากแต่ละชิ้นส่วนสัญญาณอินพุท</div>
+<div class="list">•&nbsp;&nbsp;คำอธิบายการควบคุมจะแสดงไว้ด้านล่าง</div>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">การทำงาน</p>
+</th>
+<th id="" align="center">
+<p class="thead">คำอธิบาย</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมรีเลย์หลัก</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;จ่ายกำลังไฟฟ้าไปยังแต่ละชิ้นส่วนโดยการเปิด/ปิดรีเลย์หลักด้วยจังหวะที่เหมาะสมที่สุดตามสภาวะของรถ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมความเร็วรอบเดินเบา</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;PCM จะควบคุมปริมาณการฉีดน้ำมันเชื้อเพลิงเพื่อให้ได้ความเร็วรอบเดินเบาเป้าหมายตามสภาวะการทำงานของเครื่องยนต์</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมเทอร์โบคู่</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;โดยการสับเปลี่ยนการอัดอากาศระหว่างเทอร์โบชาร์จเจอร์แบบใหญ่กับเทอร์โบชาร์จเจอร์แบบเล็ก จึงทำให้สมรรถนะการขับขี่ภายใต้ช่วงสภาวะต่างๆ และประสิทธิภาพการปล่อยมลพิษดียิ่งขึ้น</div>
+<div class="list">•&nbsp;&nbsp;โซลินอยด์วาล์ว 3 ตัวต่อไปนี้จะถูกควบคุมตามสภาวะการทำงานของเครื่องยนต์เพื่อสับเปลี่ยนการอัดอากาศระหว่างเทอร์โบชาร์จเจอร์แบบใหญ่กับเทอร์โบชาร์จเจอร์แบบเล็ก</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;โซลินอยด์วาล์วบายพาสคอมเพรสเซอร์</div>
+<dl>
+<dd class="list">
+<div class="list">•&nbsp;&nbsp;วาล์วบายพาสคอมเพรสเซอร์จะเปิด / ปิดตามสัญญาณ on/off จาก PCM</div>
+</dd>
+</dl>
+<div class="list">―&nbsp;&nbsp;โซลินอยด์วาล์วควบคุม</div>
+<dl>
+<dd class="list">
+<div class="list">•&nbsp;&nbsp;วาล์วควบคุมจะเปิด / ปิดตามสัญญาณ duty จาก PCM</div>
+</dd>
+</dl>
+<div class="list">―&nbsp;&nbsp;เวสเกตโซลินอยด์วาล์ว</div>
+<dl>
+<dd class="list">
+<div class="list">•&nbsp;&nbsp;เวสเกตวาล์วจะเปิด / ปิดตามสัญญาณ duty จาก PCM</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมจังหวะดูด EGR โดยใช้ระบบกระตุ้นวาล์วไอเสียคู่ (IDEVA)</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;วาล์วไอเสียจะเปิดในระหว่างจังหวะดูดตามสภาวะการทำงานของเครื่องยนต์</div>
+<div class="list">•&nbsp;&nbsp;PCM จะควบคุมการเปิด / ปิดวาล์วไอเสียในระหว่างจังหวะดูดโดยสั่งให้ OCV ทำงาน และสับเปลี่ยนช่องทางน้ำมันเครื่องตามสภาวะการทำงานของเครื่องยนต์</div>
+<div class="list">•&nbsp;&nbsp;โดยการเปิดวาล์วไอเสียในระหว่างการดูด ก๊าซไอเสียอุณหภูมิสูงจะไหลกลับ (EGR ภายใน) และอุณหภูมิของอากาศในกระบอกสูบจะสูงขึ้นเพื่อให้ได้การเผาไหม้ที่มีเสถียรภาพในระหว่างอุณหภูมิเย็น</div>
+<div class="list">•&nbsp;&nbsp;ในระหว่างการควบคุมการทำงานของ DPF (การควบคุมการทำงานของ DPF อัตโนมัติ) จำเป็นต้องให้ก๊าซไอเสียอุณหภูมิสูงไปที่ DPF, EGR ภายนอกจะถูกยับยั้งโดยการทำงานของวาล์ว EGR และวาล์วบายพาสชุดระบายความร้อน EGR และ NOx จะลดลงโดยการเพิ่ม EGR ภายใน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมปริมาณการฉีดน้ำมันเชื้อเพลิง</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ปริมาณการฉีดน้ำมันเชื้อเพลิงจะถูกควบคุมโดยการเปิดของหัวฉีดในหัวฉีดน้ำมันเชื้อเพลิงตามสัญญาณจาก PCM</div>
+<div class="list">•&nbsp;&nbsp;PCM จะจดจำและปรับแก้การผันผวนของปริมาณการฉีดน้ำมันเชื้อเพลิงของแต่ละสูบ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมการฉีดน้ำมันเชื้อเพลิงหลายรูปแบบ</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;การควบคุมการฉีดน้ำมันเชื้อเพลิงหลายรูปแบบได้ถูกนำมาใช้ซึ่งจำนวนของการฉีดน้ำมันเชื้อเพลิงจะถูกแบ่งออกเป็นหลายครั้งเพื่อจุดประสงค์ในการลดเสียงรบกวนและ NOx</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;สำหรับการฉีดครั้งเดียว น้ำมันเชื้อเพลิงปริมาณมากจะถูกใช้เพื่อฉีดปริมาณน้ำมันเชื้อเพลิงที่จำเป็นในหนึ่งครั้ง ด้วยเหตุนี้ น้ำมันเชื้อเพลิงจะถูกเผาไหม้อย่างรวดเร็วที่อุณหภูมิสูงและแรงดันสูง ส่งผลให้เกิดเสียงรบกวนและ NOx เพิ่มขึ้น</div>
+<div class="list">―&nbsp;&nbsp;ในการฉีดหลายรูปแบบ การเผาไหม้จะช้ากว่าปกติเพื่อแบ่งปริมาณน้ำมันเชื้อเพลิงที่จำเป็นออกเป็นหลายๆ ครั้ง ด้วยเหตุนี้จึงเป็นการควบคุมเสียงรบกวนและการเกิดขึ้นของ NOx</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;PCM จะฉีดน้ำมันเชื้อเพลิงหลายๆ ครั้งก่อนการฉีดหลักตามสภาวะการทำงานของรถ (การฉีดนำร่อง)</div>
+<div class="list">•&nbsp;&nbsp;ในระหว่างการควบคุมการเพิ่มการเดินเบารอบสูงและการทำงานของ DPF น้ำมันเชื้อเพลิงจะถูกฉีดหลังจากการฉีดหลักเพื่อเพิ่มอุณหภูมิ (การฉีดตาม, การฉีดหลัง)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมจังหวะการฉีดน้ำมันเชื้อเพลิง</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;PCM จะกำหนดและควบคุมจังหวะการฉีดน้ำมันเชื้อเพลิงที่เหมาะสมที่สุดตามสภาวะการทำงานของเครื่องยนต์ขึ้นอยู่กับสัญญาณจากเซ็นเซอร์อินพุทแต่ละตัว</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมแรงดันน้ำมันเชื้อเพลิง</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;PCM จะทำการควบคุมการป้อนกลับของแรงดันน้ำมันเชื้อเพลิงในท่อคอมมอนเรลเพื่อให้ได้แรงดันการฉีดน้ำมันเชื้อเพลิงที่เหมาะสมที่สุดตามสภาวะการทำงานของเครื่องยนต์</div>
+<div class="list">•&nbsp;&nbsp;เนื่องจากสามารถควบคุมแรงดันน้ำมันเชื้อเพลิงได้โดยไม่ต้องคำนึงถึงสภาวะการทำงานของเครื่องยนต์ การฉีดน้ำมันเชื้อเพลิงแรงดันสูงจึงสามารถทำได้แม้ที่ความเร็วรอบเครื่องยนต์ต่ำก็ตาม ด้วยเหตุนี้ จึงสามารถลดการเกิดขึ้นของ NOx และ PM</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมลิ้นตัดอากาศ</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;PCM จะควบคุมลิ้นตัดอากาศเมื่อทำการควบคุมดังต่อไปนี้</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;การควบคุม EGR: เนื่องจากการการควบคุมของแรงอัดอากาศแบบสองสถานะจึงยากในการหมุนเวียนก๊าซไอเสีย ด้วยเหตุนี้ ลิ้นตัดอากาศจะปิดในระหว่างการควบคุม EGR เพื่อทำการดูดก๊าซไอเสียที่หมุนเวียนในระบบได้ง่ายขึ้น</div>
+<div class="list">―&nbsp;&nbsp;การควบคุมการทำงานของ DPF: อากาศเข้าจะลดลงในระหว่างการควบคุมการทำงานของ DPF เพื่อทำให้อุณหภูมิำก๊าซไอเสียเพิ่มขึ้นได้ง่ายกว่าปกติ</div>
+<div class="list">―&nbsp;&nbsp;ในระหว่างการลดความเร็ว: อากาศเข้าจะลดลงเพื่อให้อุณหภูมิอุปกรณ์แปรสภาพก๊าซไอเสียไม่ลดต่ำลงโดยอากาศภายนอกที่เข้ามา</div>
+</dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมหัวเผา</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;การให้ความร้อนของหัวเผาจะถูกควบคุมโดย PCM ผ่านโมดูลควบคุมหัวเผาเพื่อให้ได้ประสิทธิภาพการสตาร์ทเครื่องยนต์และประสิทธิภาพการทำงานของ DPF ที่ดียิ่งขึ้น</div>
+<div class="list">•&nbsp;&nbsp;ระยะเวลาการจ่ายกำลังไฟฟ้าให้กับหัวเผาจะถูกกำหนดตามอุณหภูมิน้ำหล่อเย็นเครื่องยนต์และสภาวะการสตาร์ทเครื่องยนต์</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุม EGR</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;การหมุนเวียนปริมาณก๊าซไอเสียไปยังห้องเผาไหม้ที่เหมาะสมที่สุดตามสภาวะการทำงานของเครื่องยนต์ PCM จะทำการควบคุม duty ของวาล์ว EGR (มอเตอร์ไฟฟ้ากระแสตรง) เพื่อเปิดและปิดวาล์ว</div>
+<div class="list">•&nbsp;&nbsp;อุณหภูมิไอดีจะเพิ่มขึ้นหรือลดลงอย่างรวดเร็วตามอุณหภูมิก๊าซไอเสีย และส่งผลต่ออุณหภูิมิการเผาไหม้ การเปิดและการปิดของวาล์ว EGR และวาล์วบายพาสชุดระบายความร้อน EGR จะถูกควบคุมตามอุณหภูมิน้ำหล่อเย็นเครื่องยนต์เพื่อให้ได้อุณหภูมิของก๊าซไอเสียที่หมุนเวียนในระบบเหมาะสมที่สุด</div>
+<div class="list">•&nbsp;&nbsp;ในระหว่างการควบคุมการเพิ่มการเดินเบารอบสูงและการทำงานของ DPF วาล์ว EGR จะถูกควบคุมเพื่อไม่ให้ทำงานเพื่อป้องกันไม่ให้น้ำมันเชื้อเพลิงที่ฉีดหลังหมุนวนเข้าไปทางด้านไอดี (หยุดการควบคุม EGR)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมฮีทเตอร์ A/F เซ็นเซอร์</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;โดยการกระตุ้นเซ็นเซอร์ A/F ให้ทำงานโดยใช้ฮีทเตอร์ A/F เซ็นเซอร์การตรวจจับความเข้มของออกซิเจนที่มีเสถียรภาพจึงสามารถทำได้แม้ว่าอุณหภูมิก๊าซไอเสียจะต่ำก็ตาม</div>
+<div class="list">•&nbsp;&nbsp;เมื่ออุัณหภูมิก๊าซไอเสียสูง การจ่ายกำลังไฟฟ้าให้กับฮีทเตอร์ A/F เซ็นเซอร์จะหยุดลงเพื่อป้องกันไม่ให้อุณหภูมิของเซ็นเซอร์ A/F สูงขึ้น</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมการทำงานของกรองเขม่าดีเซล</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;เมื่อปริมาณเขม่า (PM) ที่สะสมใน DPF เกินค่ากำหนด PCM จะควบคุมเพื่อทำการเผาไหม้และกำจัด PM</div>
+<div class="list">•&nbsp;&nbsp;มีสองวิธีเพื่อทำการเผาไหม้และกำจัด PM วิธีแรก คือ การควบคุมการทำงานของ DPF อัตโนมัติซึ่งจะทำโดย PCM โดยอัตโนมัติ และอีกวิธี คือ การบังคับการควบคุม DPF ให้ทำงานซึ่งสามารถบังคับให้ทำงานได้จากภายนอก</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมตัดการทำงานของระบบปรับอากาศ</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ควบคุมการทำงานของระบบปรับอากาศโดยการเปิด/ปิดรีเลย์ A/C ด้วยระยะเวลาที่เหมาะสมที่สุดตามสภาวะการทำงานของเครื่องยนต์ สมรรถนะการเร่งความเร็วและความทนทานของเครื่องยนต์ได้รับการปรับให้ดีิยิ่งขึ้นโดยการควบคุมการทำงานของระบบปรับอากาศ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมพัดลมไฟฟ้า</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ความทนทานของเครื่องยนต์และประสิทธิภาพการระบายความร้อนได้รับการปรับปรุงให้ดียิ่งขึ้นผ่านการระบายความร้อนของหม้อน้ำและคอนเด็นเซอร์โดยการทำงานของพัดลมระบายความร้อนตามสภาวะของรถ</div>
+<div class="list">•&nbsp;&nbsp;PCM จะกำหนดสภาวะการทำงานของเครื่องยนต์ตามสัญญาณจากเซ็นเซอร์แต่ละตัวและทำการควบคุม duty ของโมดูลควบคุมพัดลมเพื่อควบคุมความเร็วรอบของมอเตอร์พัดลมระบายความร้อน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมตัดการทำงานของมอเตอร์สตาร์ท</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;PCM จะควบคุมการให้กำลังไฟฟ้ากับรีเลย์มอเตอร์สตาร์ทตามสัญญาณขอของระบบยับยั้งการทำงานของเครื่องยนต์เพื่อทำให้ระบบรักษาความปลอดภัยดียิ่งขึ้น</div>
+<div class="list">•&nbsp;&nbsp;ในขณะที่คันเกียร์ไม่อยู่ในตำแหน่ง P หรือ N การจ่ายกำลังไฟฟ้าให้กับรีเลย์มอเตอร์สตาร์ทโดยการใช้งานปุ่มกดสตาร์ทจะถูกยับยั้ง (ATX)</div>
+<div class="list">•&nbsp;&nbsp;เมื่อไม่เหยียบแป้นคลัตช์ การจ่ายกำลังไฟฟ้าให้กับรีเลย์มอเตอร์สตาร์ทโดยการใช้งานปุ่มกดสตาร์ทจะถูกยับยั้ง (MTX)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมเจนเนอร์เรเตอร์</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;เสถียรภาพขณะเดินเบาได้รับการปรับให้ดียิ่งขึ้นโดยการควบคุมแรงดันไฟฟ้าเจนเนอร์เรเตอร์ที่เหมาะสมที่สุดตามสภาวะการทำงานของเครื่องยนต์และุโหลดไฟฟ้า</div>
+<div class="list">•&nbsp;&nbsp;PCM จะตัดสินสภาวะการทำงานของเครื่องยนต์และโหลดไฟฟ้าตามสัญญาณอินพุทจากแต่ละส่วนควบคุมเพื่อควบคุมระยะเวลาการให้กำลังไฟฟ้าของฟีลคอล์ยเจนเนอร์เรเตอร์</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมการป้องกันน้ำมันเชื้อเพลิงหมดถัง (RDP)</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;การป้องกันไม่ให้อากาศเข้าไปในท่อทางน้ำมันเชื้อเพลิงเมื่อน้ำมันเชื้อเพลิงในถังน้ำมันเชื้อเพลิงลดลง สัญญาณเอาท์พุทจะถูกควบคุมเพื่อเตือนให้ผู้ใช้ทราบถึงน้ำมันเชื้อเพลิงที่มีอยู่</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมฮีทเตอร์ก๊าซแรงดันภายใน</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;สั่งให้ฮีทเตอร์ก๊าซแรงดันภายในทำงานขณะอุณหภูมิต่ำมากเพื่อป้องกันการแข็งตัวของความชื้นในก๊าซแรงดันภายในที่ท่อระบายไอน้ำมันเครื่องและอุดช่องทาง</div>
+<div class="list">•&nbsp;&nbsp;PCM จะสั่งให้ฮีทเตอร์ก๊าซแรงดันภายในทำงานโดยการเปิด / ปิดรีเลย์ฮีทเตอร์ก๊าซแรงดันภายใน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมระบบ i-stop</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;เมื่อหยุดรถ เช่น ที่ไฟแดง การควบคุมระบบ i-stop จะดับ/สตาร์ทเครื่องยนต์โดยอัตโนมัติเพื่อให้การประหยัดน้ำมันเชื้อเพลิงที่ดียิ่งขึ้นและลดก๊าซไอเสียและเสียงรบกวนขณะเดินเบา</div>
+<div class="list">•&nbsp;&nbsp;PCM จะตัดสินว่าให้อนุญาต/ยับยั้งการควบคุมระบบ i-stop ตามสัญญาณจากแต่ละชิ้นส่วนสัญญาณอินพุทและการสื่อสารแบบ CAN</div>
+<div class="list">•&nbsp;&nbsp;การควบคุมระบบ i-stop ประกอบด้วยการควบคุมการดับเครื่องยนต์ การควบคุมการสตาร์ทเครื่องยนต์อีกครั้ง การควบคุมชุดควบคุมปั้มน้ำมันเกียร์ AT ไฟฟ้า และฟังก์ชั่นช่วยออกตัวบนทางลาดชัน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุม DC-DC คอนเวอเตอร์</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;กำลังไฟฟ้าที่จ่ายไปยังห้องโดยสารจะมีค่าคงที่โดยการป้องกันการลดลงของแหล่งจ่ายไฟเนื่องจากแรงดันไฟฟ้าแบตเตอรี่จะลดลงในขณะที่สตาร์ทเครื่องยนต์โดยการควบคุมระบบ i-stop</div>
+<div class="list">•&nbsp;&nbsp;เมื่อสตาร์ทเครื่องยนต์โดยการควบคุมระบบ i-stop PCM จะส่งสัญญาณขอบูสต์เพิ่มแรงดันไฟฟ้าแบตเตอรี่ (แรงดันไฟฟ้าปลายทางของ DC-DC คอนเวอเตอร์) ไปที่ DC-DC คอนเวอเตอร์</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมน้ำมันเครื่อง</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;PCM จะลดภาระปั๊มน้ำมันเครื่องที่จ่ายไปที่เครื่องยนต์โดยการควบคุมแรงดันไฮดรอลิกเครื่องยนต์ที่เหมาุะสมตามสภาวะการทำงานของเครื่องยนต์</div>
+<div class="list">•&nbsp;&nbsp;แรงดันไฮดรอลิกเครื่องยนต์เป็นสองระดับ เมื่อไม่จำเป็นต้องใช้แรงดันไฮดรอลิก ปริมาณการจ่ายของปั๊มน้ำมันเครื่องจะลดลงโดยการทำงานของโซลินอยด์วาล์วน้ำมันเครื่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ระบบยับยั้งการทำงานของเครื่องยนต์</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ระบบยับยั้งการทำงานของเครื่องยนต์เป็นอุปกรณ์ป้องกันการขโมยรถซึ่งจะอนุญาตให้รีโมทที่ได้รับการลงโปรแกรมไว้กับรถก่อนหน้านี้เท่านั้นที่สามารถสตาร์ทเครื่องยนต์ได้</div>
+<div class="list">•&nbsp;&nbsp;ชุดเปิด/ปิดการทำงานจะทำงานตามการป้องกันความบกพร่องของระบบยับยั้งการทำงานของเครื่องยนต์</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p><br clear="all"><a name="id0140z700840002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>โครงสร้าง</p>
+<div class="list">•&nbsp;&nbsp;PCM จะติดตั้งอยู่ที่ห้องเครื่องยนต์<table class="figure-flame">
+<tr>
+<td width="10mm"></td>
+<td>
+<table class="figure-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00002464.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00002464</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อแบบ 200 ขั้ว (สองตอน) ได้ถูกนำมาใช้<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5jjn00001399.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5jjn00001399</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="list">•&nbsp;&nbsp;เซ็นเซอร์ BARO ถูกรวมเข้าด้วยกัน</div><br clear="all"><a name="id0140z700840003"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<div class="list">•&nbsp;&nbsp;สำหรับรายละเอียดการทำงาน ให้ดูที่ข้อมูลอ้างอิงต่อไปนี้:</div>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">การทำงาน</p>
+</th>
+<th id="" align="center">
+<p class="thead">หน้า</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมรีเลย์หลัก</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140z7168700.html">การควบคุมรีเลย์หลัก [SKYACTIV-D 2.2]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมความเร็วรอบเดินเบา</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140z7952300.html">การควบคุมความเร็วรอบเดินเบา [SKYACTIV-D 2.2]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมเทอร์โบคู่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140z7987800.html">การควบคุมเทอร์โบคู่ [SKYACTIV-D 2.2]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมจังหวะดูด EGR โดยใช้ระบบกระตุ้นวาล์วไอเสียคู่ (IDEVA)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140z7998600.html">การควบคุมจังหวะดูด EGR โดยใช้ระบบกระตุ้นวาล์วไอเสียคู่ (IDEVA) [SKYACTIV-D 2.2]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมปริมาณการฉีดน้ำมันเชื้อเพลิง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140z7987900.html">การควบคุมปริมาณการฉีดน้ำมันเชื้อเพลิง [SKYACTIV-D 2.2]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมการฉีดน้ำมันเชื้อเพลิงหลายรูปแบบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140z7988100.html">การควบคุมการฉีดน้ำมันเชื้อเพลิงหลายรูปแบบ [SKYACTIV-D 2.2]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมจังหวะการฉีดน้ำมันเชื้อเพลิง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140z7988000.html">การควบคุมจังหวะการฉีดน้ำมันเชื้อเพลิง [SKYACTIV-D 2.2]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมแรงดันน้ำมันเชื้อเพลิง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140z7988200.html">การควบคุมแรงดันน้ำมันเชื้อเพลิง [SKYACTIV-D 2.2]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมลิ้นตัดอากาศ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140z7988300.html">การควบคุมลิ้นตัดอากาศ [SKYACTIV-D 2.2]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมหัวเผา</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140z7987700.html">การควบคุมหัวเผา [SKYACTIV-D 2.2]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุม EGR</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140z7161400.html">การควบคุม EGR [SKYACTIV-D 2.2]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมฮีทเตอร์ A/F เซ็นเซอร์</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140z7785500.html">การควบคุมฮีทเตอร์เซ็นเซอร์อัตราส่วนผสมอากาศกับน้ำมันเชื้อเพลิง (A/F) [SKYACTIV-D 2.2]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมการทำงานของกรองเขม่าดีเซล</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140z7988400.html">การควบคุมการทำงานของกรองเขม่าดีเซล [SKYACTIV-D 2.2]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมตัดการทำงานของระบบปรับอากาศ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140z7206200.html">การควบคุมตัดการทำงานของระบบปรับอากาศ [SKYACTIV-D 2.2]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมพัดลมไฟฟ้า</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140z7205000.html">การควบคุมพัดลมไฟฟ้า [SKYACTIV-D 2.2]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมตัดการทำงานของมอเตอร์สตาร์ท</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140z7204700.html">การควบคุมตัดการทำงานของมอเตอร์สตาร์ท [SKYACTIV-D 2.2]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมเจนเนอร์เรเตอร์</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140z7208900.html">การควบคุมเจนเนอร์เรเตอร์ [SKYACTIV-D 2.2]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมการป้องกันน้ำมันเชื้อเพลิงหมดถัง (RDP)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140z7018400.html">การควบคุมการป้องกันน้ำมันเชื้อเพลิงหมดถัง (RDP) [SKYACTIV-D 2.2]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมฮีทเตอร์ก๊าซแรงดันภายใน</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140z7028400.html">การควบคุมฮีทเตอร์ก๊าซแรงดันภายใน [SKYACTIV-D 2.2]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมระบบ i-stop</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140z7008900.html">การควบคุมระบบ i-stop [SKYACTIV-D 2.2]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุม DC-DC คอนเวอเตอร์</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140z7004300.html">การควบคุม DC-DC คอนเวอเตอร์ [SKYACTIV-D 2.2]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมน้ำมันเครื่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140z7004200.html">การควบคุมน้ำมันเครื่อง [SKYACTIV-D 2.2]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ระบบยับยั้งการทำงานของเครื่องยนต์</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id091400107700.html">ระบบยับยั้งการทำงานของเครื่องยนต์</a></font>)</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p><br clear="all"><a name="id0140z700840004"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>Fail-safe</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา</p>
+</th>
+<th id="" align="center">
+<p class="thead">ฟังก์ชั่น Fail-safe</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">P0601:00</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ยับยั้งการดับเครื่องยนต์โดยการใช้งานฟังก์ชั่น i-stop</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P0606:00</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;PCM จะจำกัดแรงบิดเครื่องยนต์</div>
+<div class="list">•&nbsp;&nbsp;ยับยั้งการควบคุม EGR</div>
+<div class="list">•&nbsp;&nbsp;ยับยั้งการควบคุมการทำงานของกรองเขม่าดีเซล</div>
+<div class="list">•&nbsp;&nbsp;ยับยั้งการดับเครื่องยนต์โดยการใช้งานฟังก์ชั่น i-stop</div>
+<div class="list">•&nbsp;&nbsp;PCM จำกัดการควบคุมการทำงานร่วมกันของเครื่องยนต์-เกียร์</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</body>
+</html>

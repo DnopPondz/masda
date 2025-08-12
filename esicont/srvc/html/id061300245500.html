@@ -1,0 +1,381 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>โมดูลควบคุมพวงมาลัยเพาเวอร์ไฟฟ้า (EPS)</title>
+</head>
+<body><a name="id061300245500"></a><p class="servinfo-title"><span class="servinfo-head"></span>โมดูลควบคุมพวงมาลัยเพาเวอร์ไฟฟ้า (EPS)</p>
+<hr>
+<p class="servinfo-title-id" align="right">id061300245500</p><br clear="all"><a name="id06130024550001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>จุดประสงค์, การทำงาน</p>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุม (CM) EPS คำนวณกระแสไฟช่วยที่เหมาะสมตามสัญญาณแรงบิดของพวงมาลัยจากเซ็นเซอร์แรงบิดที่ติดตั้งเข้ากับคอพวงมาลัยและสัญญาณความเร็วรถที่ส่งผ่านทางการส่งผ่านระบบ CAN จาก PCM</div>
+<div class="list">•&nbsp;&nbsp;สัญญาณมุมการบังคับเลี้ยวจะถูกส่งผ่านทางการสื่อสารระบบ CAN</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;สัญญาณมุมการบังคับเลี้ยว (มุมเชิงสัมพันธ์)</div>
+<dl>
+<dd class="list">
+<div class="list">•&nbsp;&nbsp;ปรับตำแหน่งพวงมาลัยที่ 0 องศาเมื่อบิดสวิตช์สตาร์ทไปที่ ON (เครื่องยนต์ไม่ทำงานหรือทำงาน) เพื่อส่งค่ามุมการบังคับเลี้ยวเมื่อบังคับเลี้ยวจากตำแหน่งนั้น</div>
+</dd>
+</dl>
+<div class="list">―&nbsp;&nbsp;สัญญาณมุมการบังคับเลี้ยว (มุมสัมบูรณ์โดยประมาณ)</div>
+<dl>
+<dd class="list">
+<div class="list">•&nbsp;&nbsp;EPS CM จะกำหนดตำแหน่งกลางของมุมพวงมาลัยโดยใช้ฟังก์ชันการตั้งค่าตำแหน่งกลางมุมพวงมาลัยตามสัญญาณความเร็วล้อ สัญญาณแรง G ด้านข้าง และสัญญาณอัตราโคลงขณะขับรถ</div>
+<div class="list">•&nbsp;&nbsp;ปรับมุมที่ 0 องศาระหว่างการกำหนดตำแหน่งกลางของมุมพวงมาลัย และ EPS CM จะคำนวณมุมการบังคับเลี้ยวและส่งข้อมูลออกไป</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;EPS CM จะควบคุมฟังก์ชันต่อไปนี้:</div>
+<p clear="all">
+<p class="table-title">ตารางฟังก์ชั่นการทำงาน</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="left">
+<p class="thead">รายการการควบคุม</p>
+</th>
+<th id="" align="left">
+<p class="thead">การทำงาน</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมกระแสไฟของมอเตอร์ EPS</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;การควบคุมแบบปกติ</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;คำนวณกระแสไฟช่วยที่เหมาะสมตามแรงบิดของพวงมาลัย ความเร็วรถและความเร็วรอบเครื่องยนต์ และส่งกระแสไฟเป้าหมายไปยังมอเตอร์ EPS</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;การควบคุมการป้องกันความร้อนสูงเกินของระบบ</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ตรวจสอบอุณหภูมิของเมนบอร์ดใน EPS CM และค่อยๆ ควบคุมแรงดันไฟฟ้าของมอเตอร์เพื่อป้องกันระบบจากความร้อนเกิน</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;การควบคุมสำรอง</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ถึงแม้จะเกิดความบกพร่องเฟส 1 ในมอเตอร์ EPS ขาดวงจร กระแสไฟเอาท์พุทไปยังมอเตอร์ EPS จะถูกควบคุมเพื่อช่วยรักษาการช่วยผ่อนแรงของพวงมาลัย</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;การควบคุมระบบ i-stop ของ EPS</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;กระแสไฟควบคุมไปยังมอเตอร์ EPS จะถูกเพิ่มหรือลดตามสถานะการทำงานของระบบ i-stop</div>
+</dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ฟังก์ชันการวิเคราะห์ปัญหาบนรถ</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ส่วนหลักของการควบคุมระบบจะประกอบด้วยฟังก์ชันการวิเคราะห์ด้วยตนเอง ในกรณีเกิดความบกพร่อง ไฟเตือนพวงมาลัยเพาเวอร์ไฟฟ้า/ไฟเตือนหลักจะติดสว่างเพื่อแจ้งเตือนคนขับ และเก็บรหัสวิเคราะห์ปัญหาไว้ใน EPS CM ในเวลาเดียวกัน</div>
+<div class="list">•&nbsp;&nbsp;เมื่อมีการระบุความบกพร่อง การควบคุมของระบบจะถูกระงับหรือจำกัดเพื่อให้มั่นใจถึงความปลอดภัยในขณะขับขี่ เนื่องจากการวิเคราะห์ปัญหาบนรถ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ฟังก์ชันการสื่อสารระบบ CAN</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ส่งสัญญาณสถานะ EPS และการขอเปิดไฟแสดงความบกพร่องของพวงมาลัยเพาเวอร์ผ่านทางสาย CAN</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ฟังก์ชันการกำหนดค่าแบบอัตโนมัติ</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;EPS CM จะอ่านข้อมูลจากแผงหน้าปัดผ่านทางการสื่อสารระบบ CAN เพื่อทำการกำหนดค่าอัตโนมัติ เมื่อสวิตช์สตาร์ทอยู่ที่ ON หรือเครื่องยนต์ไม่ได้สตาร์ทหลังจากมีการเปลี่ยน EPS CM</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ฟังก์ชันการตั้งค่าอัตโนมัติตำแหน่งกลางของมุมพวงมาลัย</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ตำแหน่งกลางของมุมพวงมาลัยจะถูกตรวจจับโดยอัตโนมัติตามสัญญาณจากเซ็นเซอร์แรงบิด เมื่อสวิตช์สตาร์ทเปลี่ยนจาก OFF เป็น ON และมีการขับรถตามปกติ</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;ก่อนการตั้งค่าอัตโนมัติตำแหน่งกลางของมุมพวงมาลัยจะเสร็จสมบูรณ์ EPS CM จะได้รับสัญญาณมุมพวงมาลัย (มุมสัมบูรณ์) จากเซ็นเซอร์มุมพวงมาลัยผ่านทางชุดเปิด/ปิดการทำงานและส่งสัญญาณไปยังโมดูลอื่นผ่านทางการสื่อสารระบบ CAN (ระบบปรับลำแสงไฟหน้า (AFS), ระบบสมาร์ทซิตี้เบรก (SCBS), หรือระบบช่วยจอด)</div>
+<div class="list">•&nbsp;&nbsp;ตำแหน่งกลางของมุมพวงมาลัยจะถูกลบเมื่อผ่านไป <span>1 นาทีหรือมากกว่า</span>หลังจากสวิตช์สตาร์ทอยู่ที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;หลังจากการตั้งค่าอัตโนมัติตำแหน่งกลางมุมการบังคับเลี้ยวเสร็จสมบูรณ์ EPS CM จะส่งสัญญาณสถานะ EPS ซึ่งคำนวณโดย EPS CM ผ่านทางการสื่อสารระบบ CAN (รุ่นที่ไม่มีระบบปรับลำแสงไฟหน้า (AFS), ระบบสมาร์ทซิตี้เบรก (SCBS) และ/หรือระบบช่วยจอด)</div>
+</div>
+</dd>
+</dl>
+<p class="figure-title">แผนผังแบบบล็อก</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00002311.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00002311</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id06130024550002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>โครงสร้าง</p>
+<div class="list">•&nbsp;&nbsp;EPS CM จะถูกติดตั้งเข้ากับคอพวงมาลัยและรวมเข้ากับมอเตอร์ EPS</div><br clear="all"><a name="id06130024550003"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<div class="list">•&nbsp;&nbsp;EPS CM (โมดูลควบคุม) คำนวณกระแสไฟช่วยที่เหมาะสมตามสัญญาณแรงบิดพวงมาลัยจากเซ็นเซอร์แรงบิดที่ติดตั้งเข้ากับคอพวงมาลัยและสัญญาณความเร็วรถที่ส่งผ่านทางการส่งผ่านระบบ CAN จาก PCM</div>
+<div class="list">•&nbsp;&nbsp;การควบคุมระบบ EPS จะใช้สัญญาณมุมการบังคับเลี้ยว (มุมเชิงสัมพันธ์)</div><br clear="all"><p><a name="id06130024550004"></a><p class="topic-title"><span class="topic-head"></span>การควบคุมกระแสไฟของมอเตอร์ EPS</p>
+<dl>
+<dd>
+<div class="list-title">การควบคุมปกติ</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;กระแสไฟช่วยผ่อนแรงที่เหมาะสมจะถูกคำนวณตามสัญญาณแรงบังคับเลี้ยวจากเซ็นเซอร์แรงบิดและสัญญาณความเร็วรถและความเร็วรอบเครื่องยนต์จาก PCM จากนั้นกระแสไฟควบคุมจะถูกส่งไปยังมอเตอร์ EPS</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">การควบคุมการป้องกันความร้อนสูงเกินของระบบ</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;การควบคุมการป้องกันความร้อนสูงเกินของระบบจะลดระดับเอาท์พุทของกระแสไฟไปยังมอเตอร์ EPS หากกลไกระบบพวงมาลัยหมุนจากซ้ายสุดไปยังขวาสุดอย่างต่อเนื่องหรือเฟืองสะพานของพวงมาลัยหมุนจนสุดช้ำๆ กัน<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;ระหว่างการควบคุมการป้องกันความร้อนเกินของระบบ แรงช่วยจะอ่อนลงเนื่องจากกระแสไฟควบคุมลดลง ลักษณะดังกล่าวเป็นเรื่องปกติสำหรับ EPS CM เพื่อป้องกันมอเตอร์ EPS จากการเผาไหม้หรือติดขัด และไม่ถือเป็นการแสดงถึงความบกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;แม้ว่าแรงช่วยจะอ่อนลงระหว่างช่วงเวลานี้ แต่ยังคงสามารถบังคับควบคุมพวงมาลัยได้</div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="list">•&nbsp;&nbsp;การควบคุมการป้องกันความร้อนเกินของระบบมีขั้นตอนระดับกลางและระดับสมบูรณ์ และสามารถตรวจสอบสภาพกระแสไฟและประวัติโดยใช้ฟังก์ชัน PID/DATA MONITOR และข้อมูล Snapshot</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;การควบคุมการป้องกันความร้อนสูงเกินของระบบ (ระดับกลาง): เอาท์พุทมอเตอร์ 40 % หรือน้อยกว่า (ค่าอ้างอิง)</div>
+<div class="list">―&nbsp;&nbsp;การควบคุมการป้องกันความร้อนสูงเกินของระบบ (ระดับสมบูรณ์): เอาท์พุทมอเตอร์ 20 % หรือน้อยกว่า (ค่าอ้างอิง)</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;เอาท์พุทกระแสไฟจะคืนกลับเป็นปกติหากอุณหภูมิในระบบลดลงเป็นอุณหภูมิการทำงานปกติ<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00000268.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00000268</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">การควบคุมสำรอง</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;แม้ว่าจะมีความบกพร่องการขาดวงจรที่ 1 ใน 3 เฟสในสายไฟของมอเตอร์ EPS การควบคุมสำรองจะยังคงทำงานเพื่อรักษาการช่วยผ่อนแรงของพวงมาลัย</div>
+<div class="list">•&nbsp;&nbsp;EPS CM จะควบคุมกระแสไฟเอาท์พุทไปยังมอเตอร์ EPS โดยใช้วิธีการคำนวณที่แตกต่างจากระหว่างการควบคุม EPS CM ปกติ หาก EPS CM ตรวจพบเฟส 1 มีความบกพร่องจากการขาดวงจรในมอเตอร์ EPS ดังนั้น แม้ว่าเฟส 1 จะมีความบกพร่องการขาดของวงจร แต่การช่วยผ่อนแรงพวงมาลัยยังคงสามารถทำงานได้อยู่<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;EPS CM จะเก็บรหัสวิเคราะห์ปัญหา U2011:72 และทำให้ไฟเตือนพวงมาลัยเพาเวอร์ไฟฟ้า/ไฟเตือนหลักติดสว่าง หากตรวจพบเฟส 1 มีความบกพร่องจากการขาดของวงจรในมอเตอร์ EPS</div>
+<div class="list">•&nbsp;&nbsp;หากพวงมาลัยทำงานระหว่างการควบคุมสำรอง การทำงานของพวงมาลัยอาจหนักขึ้น (แรงต้าน)</div>
+</div>
+</dd>
+</dl>
+</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">การควบคุมระบบ i-stop ของ EPS</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบว่าเครื่องยนต์หยุดทำงานจากการควบคุมระบบ i-stop ตามสัญญาณสภาวะระบบ i-stop จาก PCM กระแสไฟควบคุมของมอเตอร์ EPS จะถูกหยุด</div>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบว่ามีการสตาร์ทเครื่องยนต์ใหม่ด้วยการควบคุมระบบ i-stop กระแสไฟควบคุมของมอเตอร์ EPS จะเพิ่มขึ้นและระบบจะคืนกลับเป็นการควบคุมแบบปกติ</div>
+<div class="list">•&nbsp;&nbsp;หากพวงมาลัยทำงานระหว่างการควบคุม i-stop ของ EPS การช่วยผ่อนแรง (การควบคุมแบบปกติ) จะดำเนินการตามการบังคับเลี้ยวนั้น</div>
+<div class="list">•&nbsp;&nbsp;การควบคุม i-stop ของ EPS จะไม่ทำงานและมีการควบคุมแบบปกติ หากตรวจพบความบกพร่องในสัญญาณสภาวะระบบ i-stop จาก PCM</div>
+<div class="list">•&nbsp;&nbsp;ดูที่ระบบ i-stop สำหรับคำอธิบายอย่างละเอียดของระบบ i-stop (ดูที่ <font class="extxref-label"><a href="id0140g2008900.html">การควบคุมระบบ i-stop [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>) (ดูที่ <font class="extxref-label"><a href="id0140z7008900.html">การควบคุมระบบ i-stop [SKYACTIV-D 2.2]</a></font>)<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00000269.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00000269</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+</p><br clear="all"><a name="id06130024550005"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>Fail-safe</p>
+<p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา</p>
+</th>
+<th id="" align="center">
+<p class="thead">ฟังก์ชั่น Fail-safe</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2300:54</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;เปิดการควบคุม</div>
+<div class="list">•&nbsp;&nbsp;ไฟแสดงความบกพร่องของพวงมาลัยเพาเวอร์: ไม่ติดสว่าง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2300:55</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;เปิดการควบคุม</div>
+<div class="list">•&nbsp;&nbsp;ไฟแสดงความบกพร่องของพวงมาลัยเพาเวอร์: ติดสว่าง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2300:56</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;เปิดการควบคุม</div>
+<div class="list">•&nbsp;&nbsp;ไฟแสดงความบกพร่องของพวงมาลัยเพาเวอร์: ไม่ติดสว่าง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:16</div>
+</td>
+<td id="" align="left" rowspan="4">
+<div class="list">•&nbsp;&nbsp;ปิดการควบคุม</div>
+<div class="list">•&nbsp;&nbsp;ไฟแสดงความบกพร่องของพวงมาลัยเพาเวอร์: ติดสว่าง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:1C</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:28</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:41</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:46</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;รักษาการควบคุมในโหมดระบบขัดข้อง</div>
+<div class="list">•&nbsp;&nbsp;ไฟแสดงความบกพร่องของพวงมาลัยเพาเวอร์: ไม่ติดสว่าง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:47</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="list">•&nbsp;&nbsp;ปิดการควบคุม</div>
+<div class="list">•&nbsp;&nbsp;ไฟแสดงความบกพร่องของพวงมาลัยเพาเวอร์: ติดสว่าง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:49</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:4B</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;รักษาการควบคุมในโหมดระบบขัดข้อง</div>
+<div class="list">•&nbsp;&nbsp;ไฟแสดงความบกพร่องของพวงมาลัยเพาเวอร์: ไม่ติดสว่าง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:61</div>
+</td>
+<td id="" align="left" rowspan="3">
+<div class="list">•&nbsp;&nbsp;ปิดการควบคุม</div>
+<div class="list">•&nbsp;&nbsp;ไฟแสดงความบกพร่องของพวงมาลัยเพาเวอร์: ติดสว่าง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:73</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:96</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3003:16</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;รักษาการควบคุมไว้โดยค่อยๆ ลดกระแสไฟควบคุมมอเตอร์</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;อย่างไรก็ตาม การควบคุมจะถูกยับยั้งหากแรงดันไฟฟ้าของแหล่งจ่ายไฟมีค่าน้อยกว่าค่าที่ระบุ</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ไฟแสดงความบกพร่องของพวงมาลัยเพาเวอร์: ติดสว่าง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3003:17</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ปิดการควบคุม</div>
+<div class="list">•&nbsp;&nbsp;ไฟแสดงความบกพร่องของพวงมาลัยเพาเวอร์: ติดสว่าง</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</body>
+</html>

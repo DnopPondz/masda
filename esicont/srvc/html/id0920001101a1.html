@@ -1,0 +1,1698 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>การวิเคราะห์ปัญหาบนรถ [ระบบเครื่องเสียง]</title>
+</head>
+<body><a name="id0920001101a1"></a><p class="servinfo-title"><span class="servinfo-head"></span>การวิเคราะห์ปัญหาบนรถ [ระบบเครื่องเสียง]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0920001101a1</p>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;&ldquo;iPod&rdquo; เป็นเครื่องหมายการค้าจดทะเบียนของ Apple Inc. ในประเทศสหรัฐอเมริกาและประเทศอื่นๆ</div>
+</div>
+</dd>
+</dl><br clear="all"><a name="id0920001101a101"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รายละเอียด</p>
+<div class="list">•&nbsp;&nbsp;ระบบเครื่องเสียงมีฟังก์ชั่นการวิเคราะห์ปัญหาบนรถและฟังก์ชั่นช่วยวิเคราะห์เพื่อช่วยให้การวิเคราะห์ระบบเครื่องเสียงง่ายขึ้น</div><br clear="all"><a name="id0920001101a102"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่นการวิเคราะห์ปัญหาบนรถจะประกอบด้วยฟังก์ชั่นต่อไปนี้: ฟังก์ชั่นตรวจจับความบกพร่องซึ่งจะตรวจจับความบกพร่องทั้งหมดในชิ้นส่วนที่เกี่ยวข้องกับระบบเครื่องเสียง ฟังก์ชั่นหน่วยความจำซึ่งจะบันทึกรหัสวิเคราะห์ปัญหาที่ตรวจพบ และฟังก์ชั่นการแสดงผลซึ่งจะบ่งชี้ความบกพร่องของระบบผ่านจอแสดงผลรหัสวิเคราะห์ปัญหา</div>
+<div class="list">•&nbsp;&nbsp;วิธีการแสดงและการลบรหัสวิเคราะห์ปัญหามีสองวิธีคือ โดยการใช้ Mazda Modular Diagnostic System (M-MDS) และโดยวิธีที่ไม่ใช้ระบบดังกล่าว เนื่องจากรหัสวิเคราะห์ปัญหาจะแตกต่างกันไปโดยขึ้นอยู่กับว่าต้องใช้ระบบ M-MDS หรือไม่ ดังนั้นจึงจำเป็นต้องใช้ทั้งสองวิธี (รุ่นที่มีหน้าจอ LCD แบบสี)</div>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่นช่วยวิเคราะห์เป็นฟังก์ชั่นที่บังคับให้ชิ้นส่วนที่เกี่ยวข้องกับระบบเครื่องเสียงทำงานเพื่อตรวจสอบสภาวะการเชื่อมต่อและสถานะการทำงาน นอกจากนี้ ค่าที่กำหนดสำหรับชิ้นส่วนที่เกี่ยวข้องกับระบบเครื่องเสียงยังจะปรากฏขึ้นในระบบเครื่องเสียงเพื่อทำให้สามารถตรวจสอบได้อีกด้วย</div><br clear="all"><a name="id0920001101a103"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ฟังก์ชันการวิเคราะห์ปัญหาบนรถ</p><br clear="all"><p><a name="id0920001101a104"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นการตรวจจับความบกพร่อง</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความบกพร่องในระบบเครื่องเสียง</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id0920001101a105"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นหน่วยความจำ</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;หากชุดเครื่องเสียงตรวจพบความบกพร่องในระบบเครื่องเสียง รหัสวิเคราะห์ปัญหาสูงสุด 3 รายการจะบันทึกไว้ในชุดเครื่องเสียง หากชุดเครื่องเสียงบันทึกรหัสวิเคราะห์ปัญหาครบ 3 รายการแล้ว (รุ่นที่ไม่มีหน้าจอ LCD แบบสี)/20 รายการ (รุ่นที่มีหน้าจอ LCD แบบสี) และตรวจพบความบกพร่องอื่น อุปกรณ์จะลบรหัสวิเคราะห์ปัญหาที่เก่าที่สุดออกและบันทึกรหัสวิเคราะห์ปัญหาใหม่</div>
+<div class="list">•&nbsp;&nbsp;รหัสวิเคราะห์ปัญหาที่บันทึกไว้ในชุดเครื่องเสียงจะถูกลบหากปลดสายแบตเตอรี่ขั้วลบ (หากมีการรบกวนแหล่งจ่ายไฟฟ้าสำรอง)</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id0920001101a106"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นการแสดงผล</p>
+<dl>
+<dd>
+<div class="list-title">ไม่ใช้ Mazda Modular Diagnostic System (M-MDS)</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ในการแสดงรหัสวิเคราะห์ปัญหาในจอแสดงผลชุดเครื่องเสียงที่มีการบันทึกไว้ในฟังก์ชั่นหน่วยความจำ ให้เปิดใช้งานฟังก์ชั่นการวิเคราะห์ปัญหาบนรถโดยการสั่งงานชุดเครื่องเสียง ดูที่คู่มือซ่อมสำหรับขั้นตอนการเปิดใช้งานฟังก์ชั่นการวิเคราะห์ปัญหาบนรถ</div>
+<dl>
+<div class="list-title">รหัสวิเคราะห์ปัญหาประกอบด้วยส่วนต่อไปนี้:</div>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;รหัสซัพพลายเออร์ (ชื่อซัพพลายเออร์)<table class="figure-flame">
+<tr>
+<td width="10mm"></td>
+<td>
+<table class="figure-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzw00000735.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzw00000735</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="list">―&nbsp;&nbsp;รหัสอุปกรณ์ (ตำแหน่งความบกพร่อง)</div>
+<div class="list">―&nbsp;&nbsp;รหัสข้อผิดพลาด (รายละเอียดความบกพร่อง)</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสซัพพลายเออร์</p>
+</th>
+<th id="" align="center">
+<p class="thead">ชื่อซัพพลายเออร์</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">01</div>
+</td>
+<td id="" align="left">
+<div class="tbody">SANYO Automedia</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">02</div>
+</td>
+<td id="" align="left">
+<div class="tbody">Panasonic</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">03</div>
+</td>
+<td id="" align="left">
+<div class="tbody">Clarion</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">04</div>
+</td>
+<td id="" align="left">
+<div class="tbody">Pioneer</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">05</div>
+</td>
+<td id="" align="left">
+<div class="tbody">VISTEON </div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสอุปกรณ์</p>
+</th>
+<th id="" align="center">
+<p class="thead">ชื่ออุปกรณ์</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">09</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเครื่องเสียง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">10</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วิทยุ AM/FM/เครื่องเล่นซีดีที่ใช้ได้กับ MP3/ WMA (Windows Media Audio)/ AAC (Advanced Audio Coding) </div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">16</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระบบ CAN</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">26</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุด Bluetooth</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">28</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ช่องเสียบอุปกรณ์เสริม/USB</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">29</div>
+</td>
+<td id="" align="left">
+<div class="tbody">iPod</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสข้อผิดพลาด</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายละเอียดความบกพร่อง</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">01</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระบบกลไกบกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">02</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เซอร์โวบกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">07</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ข้อมูลที่อ่านได้คุณภาพต่ำ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">10</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สายบัส (สายการสื่อสาร) ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">11</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สาย CAN (สายการสื่อสาร) ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">12</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สาย CAN (สายการสื่อสาร) ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">20</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กำลังไฟจ่ายไม่เพียงพอ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">21</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรที่เกี่ยวข้องกับแอมปลิฟายเออร์</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">22</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อุปกรณ์ปรับผิดพลาด</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<dl>
+<dd>
+<div class="list-title">เมื่อใช้ Mazda Modular Diagnostic System (M-MDS)</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เมื่อดำเนินการตรวจสอบรหัสวิเคราะห์ปัญหาโดยใช้ Mazda Modular Diagnostic System (M-MDS) ระบบวิเคราะห์ความบกพร่องของระบบเครื่องเสียงและระบบ Bluetooth (ระบบโทรศัพท์แฮนด์ฟรี (HF/TEL) ) ถูกเริ่มต้นใช้งาน รหัสวิเคราะห์ปัญหาสูงสุด 20 รายการที่ตรวจพบโดยระบบวิเคราะห์ความบกพร่องจะแสดงขึ้น ดูที่คู่มือซ่อมสำหรับขั้นตอนการตรวจสอบรหัสวิเคราะห์ปัญหา</div>
+</dd>
+</dl>
+<div class="deflist">&times;&nbsp;&nbsp;:มี</div>
+<div class="deflist">&mdash;&nbsp;&nbsp;:ไม่มี</div>
+</p><br clear="all"><p><a name="id0920001101a107"></a><p class="topic-title"><span class="topic-head"></span>ตารางรหัสวิเคราะห์ปัญหา</p>
+<p clear="all">
+<p class="table-title">รุ่นที่มีจอ LCD แบบสี (ก่อน IPM)</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center" colspan="2">
+<p class="thead">รหัสวิเคราะห์ปัญหา</p>
+</th>
+<th id="" align="center" rowspan="2">
+<p class="thead">ไฟแสดงสถานะระบบรักษาความปลอดภัย</p>
+</th>
+<th id="" align="center" rowspan="2">
+<p class="thead">คำอธิบาย</p>
+</th>
+<th id="" align="center" rowspan="2">
+<p class="thead">Fail-safe</p>
+</th>
+<th id="" align="center" rowspan="2">
+<p class="thead">รอบการขับ</p>
+</th>
+<th id="" align="center" rowspan="2">
+<p class="thead">ประเภทการทดสอบด้วยตนเอง<sup>*1</sup></p>
+</th>
+<th id="" align="center" rowspan="2">
+<p class="thead">ฟังก์ชั่นหน่วยความจำ</p>
+</th>
+</tr>
+<tr>
+<th id="" align="center">
+<p class="thead">หน้าจอแสดงผล Mazda Modular Diagnostic System (M-MDS)</p>
+</th>
+<th id="" align="center">
+<p class="thead">การแสดงผลข้อมูล</p>
+<p class="thead">(โหมดทดสอบระบบการวิเคราะห์ปัญหาบนรถ)</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">B116A:13</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;<sup>*2</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรไมโครโฟนขาดวงจร</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1188:64</div>
+</td>
+<td id="" align="center">
+<div class="tbody">10:Er07</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในชุดเครื่องเสียงบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1D19:71</div>
+</td>
+<td id="" align="center">
+<div class="tbody">10:Er02</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในชุดเครื่องเสียงบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1D19:79</div>
+</td>
+<td id="" align="center">
+<div class="tbody">10:Er01</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในชุดเครื่องเสียงบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1D19:96</div>
+</td>
+<td id="" align="center">
+<div class="tbody">10:Er10</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในชุดเครื่องเสียงบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0010:88</div>
+</td>
+<td id="" align="center">
+<div class="tbody">16:Er12</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารระบบ CAN ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0142:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;<sup>*2</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารโมดูลควบคุมตัวถังด้านหลัง (RBCM) ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;<sup>*2</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารแผงหน้าปัดผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0197:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;<sup>*2</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารข้อมูลกับชุด Bluetooth ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2300:54</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;<sup>*2</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การกำหนดค่าผิดพลาด (ไม่ได้รับข้อมูล)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2300:55</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;<sup>*2</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การตั้งค่าผิดพลาด (ไม่ได้ตั้งค่า)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2300:56</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;<sup>*2</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การกำหนดค่าผิดพลาด (การอ่านข้อมูลไม่มีประสิทธิภาพ/ไม่สามารถสับเปลี่ยนได้)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:04</div>
+</td>
+<td id="" align="center">
+<div class="tbody">09:Er22<sup></sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในชุดเครื่องเสียงบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:09</div>
+</td>
+<td id="" align="center">
+<div class="tbody">09:Er21</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในชุดเครื่องเสียงบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3003:16</div>
+</td>
+<td id="" align="center">
+<div class="tbody">09:Er20</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันไฟฟ้าที่อินพุทจากแบตเตอรี่ลดลง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">28:Er01</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การเชื่อมต่อกับชุดอุปกรณ์อินพุทจากภายนอกไม่แน่น หรืออ่านผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">29:Er01</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในชุดเครื่องเสียงบกพร่อง หรือ iPod บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่มีการบันทึกรหัสวิเคราะห์ปัญหา</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;:C: การทดสอบ CMDTC ด้วยตนเอง, D: การทดสอบ ODDTC ด้วยตนเอง</div>
+<div class="deflist">*2&nbsp;&nbsp;:ไม่ปรากฏในจอแสดงผลเครื่องเสียงเนื่องจากไม่มีโหมดทดสอบการวิเคราะห์ปัญหาบนรถ</div>
+<p clear="all">
+<p class="table-title">รุ่นที่มีจอ LCD แบบสี (หลัง IPM)</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center" colspan="2">
+<p class="thead">รหัสวิเคราะห์ปัญหา</p>
+</th>
+<th id="" align="center" rowspan="2">
+<p class="thead">ไฟแสดงสถานะระบบรักษาความปลอดภัย</p>
+</th>
+<th id="" align="center" rowspan="2">
+<p class="thead">คำอธิบาย</p>
+</th>
+<th id="" align="center" rowspan="2">
+<p class="thead">Fail-safe</p>
+</th>
+<th id="" align="center" rowspan="2">
+<p class="thead">รอบการขับ</p>
+</th>
+<th id="" align="center" rowspan="2">
+<p class="thead">ประเภทการทดสอบด้วยตนเอง<sup>*1</sup></p>
+</th>
+<th id="" align="center" rowspan="2">
+<p class="thead">ฟังก์ชั่นหน่วยความจำ</p>
+</th>
+</tr>
+<tr>
+<th id="" align="center">
+<p class="thead">หน้าจอแสดงผล Mazda Modular Diagnostic System (M-MDS)</p>
+</th>
+<th id="" align="center">
+<p class="thead">การแสดงผลข้อมูล</p>
+<p class="thead">(โหมดทดสอบระบบการวิเคราะห์ปัญหาบนรถ)</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">B116A:13</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;<sup>*2</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรไมโครโฟนขาดวงจร</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1188:64</div>
+</td>
+<td id="" align="center">
+<div class="tbody">10:Er07</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในชุดเครื่องเสียงบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1D19:71</div>
+</td>
+<td id="" align="center">
+<div class="tbody">10:Er02</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในชุดเครื่องเสียงบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1D19:79</div>
+</td>
+<td id="" align="center">
+<div class="tbody">10:Er01</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในชุดเครื่องเสียงบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1D19:96</div>
+</td>
+<td id="" align="center">
+<div class="tbody">10:Er10</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในชุดเครื่องเสียงบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0010:88</div>
+</td>
+<td id="" align="center">
+<div class="tbody">16:Er12</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารระบบ CAN ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0142:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;<sup>*2</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารโมดูลควบคุมตัวถังด้านหลัง (RBCM) ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">17:Er11</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารแผงหน้าปัดผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0197:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;<sup>*2</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารข้อมูลกับชุด Bluetooth ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2300:54</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;<sup>*2</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การกำหนดค่าผิดพลาด (ไม่ได้รับข้อมูล)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2300:55</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;<sup>*2</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การตั้งค่าผิดพลาด (ไม่ได้ตั้งค่า)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2300:56</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;<sup>*2</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การกำหนดค่าผิดพลาด (การอ่านข้อมูลไม่มีประสิทธิภาพ/ไม่สามารถสับเปลี่ยนได้)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:04</div>
+</td>
+<td id="" align="center">
+<div class="tbody">09:Er22<sup></sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในชุดเครื่องเสียงบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:09</div>
+</td>
+<td id="" align="center">
+<div class="tbody">09:Er21</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในชุดเครื่องเสียงบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3003:16</div>
+</td>
+<td id="" align="center">
+<div class="tbody">09:Er20</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันไฟฟ้าที่อินพุทจากแบตเตอรี่ลดลง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่มีการบันทึกรหัสวิเคราะห์ปัญหา</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;:C: การทดสอบ CMDTC ด้วยตนเอง, D: การทดสอบ ODDTC ด้วยตนเอง</div>
+<div class="deflist">*2&nbsp;&nbsp;:ไม่ปรากฏในจอแสดงผลเครื่องเสียงเนื่องจากไม่มีโหมดทดสอบการวิเคราะห์ปัญหาบนรถ</div>
+<p clear="all">
+<p class="table-title">รุ่นที่ไม่มีหน้าจอ LCD แบบสี</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟแสดงสถานะระบบรักษาความปลอดภัย</p>
+</th>
+<th id="" align="center">
+<p class="thead">คำอธิบาย</p>
+</th>
+<th id="" align="center">
+<p class="thead">Fail-safe</p>
+</th>
+<th id="" align="center">
+<p class="thead">รอบการขับ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ฟังก์ชั่นหน่วยความจำ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">09:Er20</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันไฟฟ้าที่อินพุทจากแบตเตอรี่ลดลง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">09:Er21</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในชุดเครื่องเสียงบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">09:Er22</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในชุดเครื่องเสียงบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">10:Er01</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในชุดเครื่องเสียงบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">10:Er02</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในชุดเครื่องเสียงบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">10:Er07</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในชุดเครื่องเสียงบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">10:Er10</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในชุดเครื่องเสียงบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">28:Er01</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การเชื่อมต่อกับชุดอุปกรณ์อินพุทจากภายนอกไม่แน่น หรืออ่านผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">29:Er01</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในชุดเครื่องเสียงบกพร่อง หรือ iPod บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No Err</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่มีการบันทึกรหัสวิเคราะห์ปัญหา</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</p><br clear="all"><p><a name="id0920001101a108"></a><p class="topic-title"><span class="topic-head"></span>คำอธิบายรหัส 7 หลักของรหัสวิเคราะห์ปัญหา</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เมื่อระบบหรือส่วนประกอบที่เกี่ยวข้องทำงานผิดพลาดของกล่องควบคุม จะจัดเก็บรหัสวิเคราะห์ปัญหาของส่วนที่ทำงานบกพร่องไว้ในหน่วยความจำของกล่องควบคุม และสามารถเรียกดูข้อมูลที่จัดเก็บโดยใช้เครื่องมือสแกนได้เมื่อจำเป็น รหัสวิเคราะห์ปัญหาได้รับการกำหนดโดยใช้ตัวเลข 7 หลัก ซึ่งตัวเลขแต่ละหลักมีความหมายดังต่อไปนี้<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00002491.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00002491</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id0920001101a109"></a><p class="topic-title"><span class="topic-head"></span>ไบต์แสดงสถานะของรหัสวิเคราะห์ปัญหา</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ไบต์แสดงสถานะคือรหัสสองหลัก (สองหลักหลังเครื่องหมายขีด (-)) หลังรหัสวิเคราะห์ปัญหา 7 หลัก<table class="figure-flame">
+<tr>
+<td width="10mm"></td>
+<td>
+<table class="figure-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001327.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001327</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="list">•&nbsp;&nbsp;ไบต์แสดงสถานะคือรหัสที่แสดงรหัสที่ค้างอยู่, สถานะความบกพร่องปัจจุบัน/ในอดีต หรือสถานะไฟเตือน</div>
+<div class="list">•&nbsp;&nbsp;ไบต์แสดงสถานะสามารถอ่านได้ด้วยการทดสอบ CMDTC ด้วยตนเองโดยใช้ Mazda Modular Diagnostic System (M-MDS)</div>
+<div class="list">•&nbsp;&nbsp;สำหรับรายละเอียดเกี่ยวกับไบต์แสดงสถานะ ให้ดูที่คำอธิบายใน Mazda Modular Diagnostic System (M-MDS) เมื่ออ่านรหัสวิเคราะห์ปัญหา</div>
+</dd>
+</dl>
+</p><br clear="all"><a name="id0920001101a110"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ฟังก์ชั่นช่วยวิเคราะห์</p>
+<div class="list">•&nbsp;&nbsp;ชิ้นส่วนที่เกี่ยวข้องกับระบบเครื่องเสียงถูกบังคับให้ทำงานเพื่อตรวจสอบสภาวะการเชื่อมต่อและสถานะการทำงานของชิ้นส่วนที่เกี่ยวข้องกับระบบเครื่องเสียง นอกจากนี้ ค่าที่กำหนดสำหรับชิ้นส่วนที่เกี่ยวข้องกับระบบเครื่องเสียงยังจะปรากฏขึ้นในจอแสดงผลเพื่อทำให้สามารถตรวจสอบได้อีกด้วย ดูที่คู่มือซ่อมสำหรับขั้นตอนการเปิดใช้งานฟังก์ชั่นช่วยวิเคราะห์</div><br clear="all"><p><a name="id0920001101a111"></a><p class="topic-title"><span class="topic-head"></span>การตรวจสอบจอแสดงผล</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ทุกตัวอักษรจะปรากฏขึ้นในจอแสดงผลชุดเครื่องเสียงเพื่อทำให้สามารถตรวจสอบการแสดงผลได้ (รุ่นที่ไม่มีหน้าจอ LCD แบบสี)</div>
+</dd>
+</dl>
+<table class="figure-flame">
+<tr>
+<td width="10mm"></td>
+<td>
+<table class="figure-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5jjn00001051.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5jjn00001051</div>
+</td>
+</tr>
+</table>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เมื่อแตะที่จอแสดงผลของชุดเครื่องเสียง สีของจอแสดงผลอาจเปลี่ยนไปเพื่อใช้ในการตรวจสอบตามสีและการตรวจสอบการแสดงผล (รุ่นที่มีหน้าจอ LCD แบบสี)</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id0920001101a112"></a><p class="topic-title"><span class="topic-head"></span>การตรวจสอบปุ่ม</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;สั่งให้เสียงเตือนดังขึ้นเมื่อมีการใช้งานสวิตช์และตรวจสอบสวิตช์แต่ละตัว</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id0920001101a113"></a><p class="topic-title"><span class="topic-head"></span>การตรวจสอบลำโพง</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบว่าลำโพงเอาท์พุทเสียงตามลำดับต่อไปนี้หรือไม่และทำการตรวจสอบลำโพงแต่ละข้างหรือชุดสายไฟระหว่างชุดเครื่องเสียงกับลำโพงแต่ละข้าง</div>
+<dl>
+<div class="list-title">รุ่นที่ไม่มี Bose<sup>&reg;</sup>:</div>
+<dd class="list">
+<div class="list">1.&nbsp;&nbsp;ลำโพงประตูหน้า (ซ้าย) และทวีตเตอร์ (ซ้าย) (แบบ 6 ลำโพง)</div>
+<div class="list">2.&nbsp;&nbsp;ลำโพงประตูหน้า (ขวา) และทวีตเตอร์ (ขวา) (แบบ 6 ลำโพง)</div>
+<div class="list">3.&nbsp;&nbsp;ลำโพงประตูหลัง (ขวา)</div>
+<div class="list">4.&nbsp;&nbsp;ลำโพงประตูหลัง (ซ้าย)</div>
+</dd>
+</dl>
+<dl>
+<div class="list-title">รุ่นที่มี Bose <sup>&reg;</sup>:</div>
+<dd class="list">
+<div class="list">1.&nbsp;&nbsp;ลำโพงประตูหน้า (ซ้าย) และทวีตเตอร์ (ซ้าย) และลำโพงหน้าตัวกลาง (ซ้าย)</div>
+<div class="list">2.&nbsp;&nbsp;ลำโพงประตูหน้า (ขวา) และทวีตเตอร์ (ขวา) และลำโพงหน้าตัวกลาง (ขวา)</div>
+<div class="list">3.&nbsp;&nbsp;ลำโพงประตูหลัง (ขวา) และลำโพงที่เสากระจกประตูท้าย (ขวา)</div>
+<div class="list">4.&nbsp;&nbsp;ลำโพงประตูหลัง (ซ้าย) และลำโพงที่เสากระจกประตูท้าย (ซ้าย)</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id0920001101a114"></a><p class="topic-title"><span class="topic-head"></span>การตรวจสอบสภาพการรับสัญญาณวิทยุ</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;แสดงสถานะการรับสัญญาณวิทยุบนจอแสดงผลชุดเครื่องเสียงและตรวจสอบเสาอากาศบนหลังคาตรงกลาง, สายรับ-ส่งสัญญาณ และชุดเครื่องเสียง (ตัวปรับ) (ตัวอย่างการแสดงผลเมื่อได้รับสัญญาณ AM 522kHz)<table class="figure-flame">
+<tr>
+<td width="10mm"></td>
+<td>
+<table class="figure-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/am5ezn00001773.png"></td>
+</tr>
+</table>
+<div class="figure-caption">am5ezn00001773</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id0920001101a115"></a><p class="topic-title"><span class="topic-head"></span>การตรวจสอบการควบคุมเสาอากาศ</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;แสดงสถานะเอาท์พุทของแหล่งจ่ายไฟไปยังเสาอากาศบนหลังคาตรงกลางไปที่จอแสดงผลชุดเครื่องเสียงเพื่อทำการตรวจสอบเสาอากาศบนหลังคาตรงกลาง ชุดเครื่องเสียง และชุดสายไฟ (ระหว่างชุดเครื่องเสียงกับเสาอากาศบนหลังคาตรงกลาง)<table class="figure-flame">
+<tr>
+<td width="10mm"></td>
+<td>
+<table class="figure-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/am5ezn00001775.png"></td>
+</tr>
+</table>
+<div class="figure-caption">am5ezn00001775</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id0920001101a116"></a><p class="topic-title"><span class="topic-head"></span>การตรวจสอบไดอัล</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;แสดงทิศทางการหมุนของไดอัลสวิตช์ที่ใช้งานในจอแสดงผลชุดเครื่องเสียงเพื่อตรวจสอบสวิตช์แต่ละตัว<table class="figure-flame">
+<tr>
+<td width="10mm"></td>
+<td>
+<table class="figure-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/am3uun00000958.png"></td>
+</tr>
+</table>
+<div class="figure-caption">am3uun00000958</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id0920001101a117"></a><p class="topic-title"><span class="topic-head"></span>การยืนยันค่าที่กำหนดของแอมปลิฟายเออร์เครื่องเสียง</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;แสดงค่าที่กำหนดของแอมปลิฟายเออร์เครื่องเสียงบนจอแสดงผลชุดเครื่องเสียงเพื่อตรวจสอบค่าที่กำหนด</div>
+</dd>
+</dl>
+<table class="figure-flame">
+<tr>
+<td width="10mm"></td>
+<td>
+<table class="figure-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00002018.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00002018</div>
+</td>
+</tr>
+</table>
+</p><br clear="all"><p><a name="id0920001101a118"></a><p class="topic-title"><span class="topic-head"></span>การตรวจสอบ AUTO-M (รุ่นที่มีหน้าจอ LCD แบบสีเท่านั้น)</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เปิดใช้งาน AUTO-M และแสดงสภาวะการการรับสัญญาณวิทยุบนจอแสดงผลชุดเครื่องเสียงเพื่อตรวจสอบชุดวิทยุ</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id0920001101a119"></a><p class="topic-title"><span class="topic-head"></span>การตรวจสอบซีดี (รุ่นที่ไม่มีหน้าจอ LCD แบบสีเท่านั้น)</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;แสดงผลการตรวจสอบในชุดเครื่องเสียงและตรวจสอบว่าความบกพร่องเกี่ยวข้องกับชุดเครื่องเสียงหรือซีดี</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id0920001101a120"></a><p class="topic-title"><span class="topic-head"></span>การตรวจสอบสัญญาณรถ/NAVI (รุ่นที่มีหน้าจอ LCD แบบสีเท่านั้น)</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;แสดงสภาวะของสัญญาณต่อไปนี้ ความเร็วรถ สภาวะการเชื่อมต่อบนจอแสดงผลชุดเครื่องเสียง และตรวจสอบสัญญาณรถและ NAVI</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;สัญญาณ TNS</div>
+<div class="list">―&nbsp;&nbsp;สัญญาณถอยหลัง</div>
+<div class="list">―&nbsp;&nbsp;สัญญาณเบรกมือ</div>
+<div class="list">―&nbsp;&nbsp;ความเร็วรถ</div>
+<div class="list">―&nbsp;&nbsp;สภาวะการเชื่อมต่อสวิตช์ที่พวงมาลัย</div>
+<div class="list">―&nbsp;&nbsp;สภาวะการเชื่อมต่อสวิตช์คำสั่ง</div>
+<div class="list">―&nbsp;&nbsp;สภาวะการเชื่อมต่อของไมโครโฟนที่ใช้ระบบจดจำคำสั่งเสียง</div>
+<div class="list">―&nbsp;&nbsp;สภาวะการเชื่อมต่อชุดระบบนำทางของรถ</div>
+<div class="list">―&nbsp;&nbsp;สภาวะการเชื่อมต่อเสาอากาศ GPS</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id0920001101a121"></a><p class="topic-title"><span class="topic-head"></span>การลบข้อมูลการเชื่อมต่ออุปกรณ์ภายนอก (รุ่นที่มีหน้าจอ LCD แบบสีเท่านั้น)</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;สามารถลบข้อมูลการเชื่อมต่อชุดระบบนำทางของรถ ชุด Bluetooth และกล้องจับภาพด้านหลังที่บันทึกไว้ในชุดเครื่องเสียงได้</div>
+</dd>
+</dl>
+</p>
+</body>
+</html>

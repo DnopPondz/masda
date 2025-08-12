@@ -1,0 +1,151 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>ฟังก์ชั่นเปิด/ปิดแบบอัตโนมัติบนกระจกไฟฟ้าด้านคนขับไม่ทำงาน [ระบบกระจกไฟฟ้า (รุ่นที่มีฟังก์ชั่นเปิด/ปิดแบบอัตโนมัติด้านคนขับ)] [ระบบกระจกไฟฟ้า (ฟังก์ชั่นเปิด/ปิดแบบอัตโนมัติ)]</title>
+</head>
+<body><a name="id090360931000"></a><p class="servinfo-title"><span class="servinfo-head"></span>ฟังก์ชั่นเปิด/ปิดแบบอัตโนมัติบนกระจกไฟฟ้าด้านคนขับไม่ทำงาน [ระบบกระจกไฟฟ้า (รุ่นที่มีฟังก์ชั่นเปิด/ปิดแบบอัตโนมัติด้านคนขับ)] [ระบบกระจกไฟฟ้า (ฟังก์ชั่นเปิด/ปิดแบบอัตโนมัติ)]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id090360931000</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>1</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody"><span>ฟังก์ชั่นเปิด/ปิดอัตโนมัติบนกระจกไฟฟ้าด้านคนขับไม่ทำงาน</span></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สาเหตุที่เป็นไปได้</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ระบบกระจกไฟฟ้าอยู่ในฟังก์ชั่น Fail-safe (วงจรป้องกันความร้อนของมอเตอร์กระจกไฟฟ้าทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;ไม่มีการจ่ายไฟฟ้าไปยังสวิตช์หลักของกระจกไฟฟ้า</div>
+<div class="list">•&nbsp;&nbsp;สวิตช์หลักของกระจกไฟฟ้าบกพร่อง (ชุดควบคุมกระจกไฟฟ้าบกพร่อง, สวิตช์อัตโนมัติบกพร่อง)</div>
+<div class="list">•&nbsp;&nbsp;มอเตอร์กระจกไฟฟ้าบกพร่อง (เซ็นเซอร์ภายในมอเตอร์บกพร่อง)</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระหว่างมอเตอร์กระจกไฟฟ้า (เซ็นเซอร์) และสวิตช์หลักของกระจกไฟฟ้าบกพร่อง</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p clear="all">
+<p class="table-title">ขั้นตอนการวิเคราะห์ปัญหา</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">การตรวจสอบ</p>
+</th>
+<th id="" align="center">
+<p class="thead">การปฏิบัติ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">1</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF (LOCK) เป็นเวลา 3 นาที</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;ตั้งค่าเริ่มต้นระบบกระจกไฟฟ้า</div>
+<div class="list">•&nbsp;&nbsp;สั่งการฟังก์ชั่นเปิด/ปิดแบบอัตโนมัติ</div>
+<div class="list">•&nbsp;&nbsp;กระจกไฟฟ้าทำงานอย่างถูกต้องหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระบบปกติ</div>
+<div class="tbody">ฟังก์ชั่นเปิด/ปิดอัตโนมัติของระบบกระจกไฟฟ้าไม่ทำงานชั่วคราวด้วยสาเหตุดังต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;สั่งงานสวิตช์กระจกไฟฟ้าขณะวงจรป้องกันของมอเตอร์กระจกไฟฟ้า (ซึ่งรวมอยู่ในมอเตอร์กระจกไฟฟ้า) ทำงาน</div>
+<div class="list">•&nbsp;&nbsp;แหล่งจ่ายไฟของสวิตช์หลักของกระจกไฟฟ้าถูกตัดการทำงานจากการปลดสายขั้วลบแบตเตอรี่หรือการถอดฟิวส์ออก</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">2</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="list">•&nbsp;&nbsp;เซ็นเซอร์ที่อยู่ภายในมอเตอร์กระจกไฟฟ้าส่งสัญญาณพัลส์ขณะมอเตอร์กระจกไฟฟ้าทำงานหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบแรงดันไฟฟ้าที่ขั้วของมอเตอร์กระจกไฟฟ้าต่อไปนี้:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;B (สัญญาณเซ็นเซอร์ 1)</div>
+<div class="list">―&nbsp;&nbsp;A (สัญญาณเซ็นเซอร์ 2)</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;แรงดันไฟฟ้าอยู่ที่<span>ประมาณ</span><span>6 V</span> หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนมอเตอร์กระจกไฟฟ้า</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id091200001400.html">การถอด / การติดตั้งมอเตอร์กระจกไฟฟ้า</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">3</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="list">•&nbsp;&nbsp;เซ็นเซอร์ที่อยู่ภายในมอเตอร์กระจกไฟฟ้าส่งสัญญาณพัลส์ขณะมอเตอร์กระจกไฟฟ้าทำงานหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบแรงดันไฟฟ้าที่ขั้วสวิตช์หลักของกระจกไฟฟ้าต่อไปนี้ (ขั้วต่อ 14 สลัก):</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;2D (สัญญาณเซ็นเซอร์ 1)</div>
+<div class="list">―&nbsp;&nbsp;2F (สัญญาณเซ็นเซอร์ 2)</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;แรงดันไฟฟ้าอยู่ที่<span>ประมาณ</span><span>6 V</span> หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนสวิตช์หลักของกระจกไฟฟ้า</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id091200002000.html">การถอด / การติดตั้งสวิตช์หลักของกระจกไฟฟ้า</a></font>) </div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจสอบการขาดวงจรหรือการลัดวงจรในชุดสายไฟระหว่างมอเตอร์กระจกไฟฟ้า (เซ็นเซอร์) และสวิตช์หลักของกระจกไฟฟ้า</div>
+<div class="tbody">ตรวจสอบการเชื่อมต่อของขั้วต่อมอเตอร์กระจกไฟฟ้าและสวิตช์หลักของกระจกไฟฟ้า</div>
+<div class="tbody">(ขั้วเสียหาย/หลุดออก, การเป็นสนิม)</div>
+<div class="tbody">ซ่อมแซมหรือเปลี่ยนตามความจำเป็น</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</body>
+</html>

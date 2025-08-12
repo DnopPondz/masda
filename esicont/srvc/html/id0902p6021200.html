@@ -1,0 +1,249 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>รหัสวิเคราะห์ปัญหา C0040:24 [ชุดเปิด/ปิดการทำงาน]</title>
+</head>
+<body><a name="id0902p6021200"></a><p class="servinfo-title"><span class="servinfo-head"></span>รหัสวิเคราะห์ปัญหา C0040:24 [ชุดเปิด/ปิดการทำงาน]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0902p6021200</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead"><span>ตำแหน่งความบกพร่องของระบบ</span></p>
+</th>
+<th id="" align="left">
+<p class="thead">วงจรสวิตช์ไฟเบรก (สัญญาณ No.1) บกพร่อง</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สภาวะการตรวจพบ</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ขณะสวิตช์สตาร์ทอยู่ที่ ON (เครื่องยนต์ไม่ทำงานหรือทำงาน) ชุดเปิด/ปิดการทำงานตรวจพบว่าสัญญาณสวิตช์ไฟเบรก No.1 อยู่ในสภาพเปิดเป็นเวลา <span>3 วินาทีหรือมากกว่า</span>ติดต่อกัน <span>5 ครั้ง</span>แม้เมื่อสัญญาณสวิตช์ไฟเบรก No.2 เปลี่ยนไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>Fail-safe</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ทำการควบคุมสวิตช์ไฟเบรก (สัญญาณ No.1) ตามสัญญาณระบบ CAN</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สาเหตุที่เป็นไปได้</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ขั้วต่อหรือขั้วของสวิตช์ไฟเบรกบกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;สวิตช์ไฟเบรก (สัญญาณ No.1) บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อหรือขั้วชุดเปิด/ปิดการทำงานบกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระหว่างขั้ว D ของสวิตช์ไฟเบรกกับขั้ว 1C ของชุดเปิด/ปิดการทำงานลัดวงจรกับแหล่งจ่ายไฟ</div>
+<div class="list">•&nbsp;&nbsp;ชุดเปิด/ปิดการทำงานบกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2"><img src="images/ac5wzw00003366.png"></td>
+</tr>
+</tbody>
+</table>
+</p>
+<p clear="all">
+<p class="table-title">ขั้นตอนการวิเคราะห์ปัญหา</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">การตรวจสอบ</p>
+</th>
+<th id="" align="center">
+<p class="thead">การปฏิบัติ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">1</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบสภาพขั้วต่อสวิตช์ไฟเบรก</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;ปลดสายขั้วลบแบตเตอรี่<div>(ดูที่ <font class="extxref-label"><a href="id0117i0800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div>(ดูที่ <font class="extxref-label"><a href="id0117i08008i1.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (รุ่นที่ไม่มีระบบ i-stop)]</a></font>)</div>
+<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อสวิตช์ไฟเบรก</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบการเชื่อมต่อของขั้วต่อและสภาพการเชื่อมต่อ และทำการตรวจสอบความเสียหาย การผิดรูป การผุกร่อน หรือการหลุดออกของขั้ว</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อเป็นปกติหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนขั้วต่อ แล้วไปที่ขั้นตอน 5</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">2</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบสวิตช์ไฟเบรก (สัญญาณ NO.1)</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบสวิตช์ไฟเบรก (สัญญาณ No.1)<div>(ดูที่ <font class="extxref-label"><a href="id041100801900.html">การตรวจสอบสวิตช์ไฟเบรก</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;สวิตช์ไฟเบรก (สัญญาณ No.1) ทำงานปกติหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนสวิตช์ไฟเบรก แล้วไปที่ขั้นตอน 5</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id041100801250.html">การถอด / การติดตั้งแป้นเบรก [L.H.D.]</a></font>)</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id041100801252.html">การถอด / การติดตั้งแป้นเบรก [R.H.D.]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">3</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบสภาพขั้วต่อชุดเปิด/ปิดการทำงาน</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อชุดเปิด/ปิดการทำงาน</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบการเชื่อมต่อของขั้วต่อและสภาพการเชื่อมต่อ และทำการตรวจสอบความเสียหาย การผิดรูป การผุกร่อน หรือการหลุดออกของขั้ว</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อเป็นปกติหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนขั้วต่อ แล้วไปที่ขั้นตอน 5</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">4</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรกับแหล่งจ่ายไฟของวงจรสวิตช์ไฟเบรก (สัญญาณ NO.1)</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบว่าขั้วต่อของสวิตช์ไฟเบรกและชุดเปิด/ปิดการทำงานถูกปลดออกหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;ต่อสายขั้วลบแบตเตอรี่<div>(ดูที่ <font class="extxref-label"><a href="id0117i0800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div>(ดูที่ <font class="extxref-label"><a href="id0117i08008i1.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (รุ่นที่ไม่มีระบบ i-stop)]</a></font>)</div>
+<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;วัดแรงดันไฟฟ้าที่ขั้ว D ของสวิตช์ไฟเบรก (ด้านชุดสายไฟของรถ) เมื่อสวิตช์สตาร์ทอยู่ที่ OFF (LOCK) และ ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;แรงดันไฟฟ้าอยู่ที่ <span>0 V</span> หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชุดสายไฟที่ลัดวงจรกับแหล่งจ่ายไฟ แล้วไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">5</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ยืนยันว่าการซ่อมเสร็จสมบูรณ์แล้ว</div>
+<div class="list">•&nbsp;&nbsp;ต่อขั้วต่อที่ปลดออกทั้งหมดกลับเข้าที่</div>
+<div class="list">•&nbsp;&nbsp;ต่อสายขั้วลบแบตเตอรี่ที่ปลดออกกลับเข้าที่<div>(ดูที่ <font class="extxref-label"><a href="id0117i0800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div>(ดูที่ <font class="extxref-label"><a href="id0117i08008i1.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (รุ่นที่ไม่มีระบบ i-stop)]</a></font>)</div>
+<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ลบรหัสวิเคราะห์ปัญหาของชุดเปิด/ปิดการทำงานโดยใช้ M-MDS<div>(ดูที่ <font class="extxref-label"><a href="id0902p6018900.html">การลบรหัสวิเคราะห์ปัญหา [ชุดเปิด/ปิดการทำงาน]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ขณะสวิตช์สตาร์ทอยู่ที่ ON (เครื่องยนต์ไม่ทำงานหรือทำงาน) ให้เหยียบแป้นเบรกเป็นเวลา <span>3 วินาทีหรือมากกว่า</span> แล้วปล่อยออกจำนวน <span>5 ครั้งหรือมากกว่า</span></div>
+<div class="list">•&nbsp;&nbsp;ทำการตรวจสอบรหัสวิเคราะห์ปัญหาของชุดเปิด/ปิดการทำงานโดยใช้ M-MDS<div>(ดูที่ <font class="extxref-label"><a href="id0902p6018800.html">การตรวจสอบรหัสวิเคราะห์ปัญหา [ชุดเปิด/ปิดการทำงาน]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;รหัสวิเคราะห์ปัญหา C0040:24 ปรากฏขึ้นหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ทำซ้ำการตรวจสอบตั้งแต่ขั้นตอน 1</div>
+<div class="list">•&nbsp;&nbsp;หากความบกพร่องเกิดขึ้นอีกครั้ง ให้เปลี่ยนชุดเปิด/ปิดการทำงาน แล้วไปที่ขั้นตอนถัดไป<div>(ดูที่ <font class="extxref-label"><a href="id091400110300.html">การถอด / การติดตั้งชุดเปิด/ปิดการทำงาน</a></font>)</div>
+</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">6</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบว่ามีรหัสวิเคราะห์ปัญหาอื่นๆ ปรากฏขึ้นหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;มีรหัสวิเคราะห์ปัญหาอื่นๆ ปรากฏขึ้นหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมชิ้นส่วนที่บกพร่องตามการค้นหาสาเหตุปัญหาของรหัสวิเคราะห์ปัญหานั้นๆ</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0902p6019000.html">ตารางรหัสวิเคราะห์ปัญหา [ชุดเปิด/ปิดการทำงาน]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การค้นหาสาเหตุปัญหาของรหัสวิเคราะห์ปัญหาเสร็จสมบูรณ์</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</body>
+</html>

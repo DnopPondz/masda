@@ -1,0 +1,1328 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>การวิเคราะห์ปัญหาบนรถ [กล้องตรวจจับด้านหน้า (FSC)]</title>
+</head>
+<body><a name="id092200021852"></a><p class="servinfo-title"><span class="servinfo-head"></span>การวิเคราะห์ปัญหาบนรถ [กล้องตรวจจับด้านหน้า (FSC)]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id092200021852</p><br clear="all"><a name="id09220002185201"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รายละเอียด</p>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่นการวิเคราะห์ปัญหาบนรถจะประกอบด้วยฟังก์ชั่นต่อไปนี้: ฟังก์ชั่นตรวจจับความบกพร่องซึ่งจะตรวจจับความบกพร่องทั้งหมดในชิ้นส่วนที่เกี่ยวข้องกับกล้องตรวจจับด้านหน้า (FSC) ฟังก์ชั่นหน่วยความจำซึ่งจะบันทึกรหัสวิเคราะห์ปัญหาที่ตรวจพบ ฟังก์ชั่นการแสดงผลซึ่งจะบ่งชี้ตำแหน่งและสถานะความบกพร่องผ่านรหัสวิเคราะห์ปัญหาที่เอาท์พุท และฟังก์ชั่นการตรวจสอบ PID/DATA ซึ่งจะอ่านสัญญาณอินพุท/เอาท์พุทจำเพาะและตรวจสอบสภาวะอินพุท/เอาท์พุทดังกล่าว</div>
+<div class="list">•&nbsp;&nbsp;เมื่อใช้ Mazda Modular Diagnostic System (M-MDS) สามารถอ่านและลบรหัสวิเคราะห์ปัญหา และสามารถเปิดใช้งานฟังก์ชั่นการตรวจสอบ PID/DATA ได้</div><br clear="all"><a name="id09220002185202"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ฟังก์ชั่นการตรวจจับความบกพร่อง</p>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความบกพร่องในสัญญาณอินพุทและเอาท์พุท</div>
+<div class="list">•&nbsp;&nbsp;หากมีความบกพร่องเกิดขึ้น FSC จะบันทึกความบกพร่องดังกล่าวเป็นรหัสวิเคราะห์ปัญหา สามารถอ่านรหัสวิเคราะห์ปัญหาที่บันทึกไว้โดย Mazda Modular Diagnostic System (M-MDS)</div>
+<p clear="all">
+<p>
+<div>&times;: สามารถทำได้</div>
+<div>&mdash;: ไม่มี</div>
+</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟเตือนระบบควบคุมไฟสูง (HBC) (สีเหลือง)/ไฟเตือนระบบเตือนออกนอกช่องทางเดินรถ (LDWS) (สีเหลือง)</p>
+</th>
+<th id="" align="center">
+<p class="thead">คำอธิบาย</p>
+</th>
+<th id="" align="center">
+<p class="thead">ฟังก์ชั่น Fail-safe</p>
+</th>
+<th id="" align="center">
+<p class="thead">รอบการขับ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ประเภทการทดสอบด้วยตนเอง<sup>*1</sup></p>
+</th>
+<th id="" align="center">
+<p class="thead">ฟังก์ชั่นหน่วยความจำ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">B115E:54</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การปรับกล้องตรวจจับด้านหน้า (FSC) ไม่สมบูรณ์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B13A6:11</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ LDWS บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C1001:92</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การทำงานของกล้องตรวจจับด้านหน้า (FSC) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C1001:97</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความสามารถในการมองเห็นของกล้องตรวจจับด้านหน้า (FSC) มีคุณภาพต่ำ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0001:88</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารโมดูลผิดพลาด (HS-CAN)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0100:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ PCM ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0121:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ DSC HU/CM ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0131:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุม EPS ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0140:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุมตัวถังด้านหน้า (FBCM) ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับแผงหน้าปัดผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0214:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับชุดเปิด/ปิดการทำงานผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0401:68</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณที่ได้รับจาก PCM ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0415:68</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณที่ได้รับจาก DSC HU/CM ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0420:68</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ได้รับสัญญาณข้อผิดพลาดจากโมดูลควบคุม EPS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0423:68</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ได้รับสัญญาณข้อผิดพลาดจากแผงหน้าปัด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0515:68</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณที่ได้รับจากชุดเปิด/ปิดการทำงานผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2005:86</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณที่ได้รับจาก PCM ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2100:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การกำหนดค่ากล้องตรวจจับด้านหน้า (FSC) ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2101:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การกำหนดค่ากล้องตรวจจับด้านหน้า (FSC) ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:04</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กล้องตรวจจับด้านหน้า (FSC) บกพร่องภายใน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:09</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กล้องตรวจจับด้านหน้า (FSC) บกพร่องภายใน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:42</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กล้องตรวจจับด้านหน้า (FSC) บกพร่องภายใน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:49</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กล้องตรวจจับด้านหน้า (FSC) บกพร่องภายใน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3003:16</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อินพุทแรงดันไฟของแหล่งจ่ายไฟกล้องตรวจจับด้านหน้า (FSC) ต่ำ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3003:17</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อินพุทแรงดันไฟของแหล่งจ่ายไฟกล้องตรวจจับด้านหน้า (FSC) สูง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;:C: การทดสอบ CMDTC ด้วยตนเอง, D: การทดสอบ ODDTC ด้วยตนเอง</div><br clear="all"><p><a name="id09220002185203"></a><p class="topic-title"><span class="topic-head"></span>คำอธิบายรหัส 7 หลักของรหัสวิเคราะห์ปัญหา</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เมื่อระบบหรือส่วนประกอบที่เกี่ยวข้องทำงานผิดพลาดของกล่องควบคุม จะจัดเก็บรหัสวิเคราะห์ปัญหาของส่วนที่ทำงานบกพร่องไว้ในหน่วยความจำของกล่องควบคุม และสามารถเรียกดูข้อมูลที่จัดเก็บโดยใช้เครื่องมือสแกนได้เมื่อจำเป็น รหัสวิเคราะห์ปัญหาได้รับการกำหนดโดยใช้ตัวเลข 7 หลัก ซึ่งตัวเลขแต่ละหลักมีความหมายดังต่อไปนี้<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001569.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001569</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09220002185204"></a><p class="topic-title"><span class="topic-head"></span>ไบต์แสดงสถานะของรหัสวิเคราะห์ปัญหา</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ไบต์แสดงสถานะคือรหัสสองหลัก (สองหลักหลังเครื่องหมายขีด (-)) หลังรหัสวิเคราะห์ปัญหา 7 หลัก<table class="figure-flame">
+<tr>
+<td width="10mm"></td>
+<td>
+<table class="figure-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00002011.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00002011</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="list">•&nbsp;&nbsp;ไบต์แสดงสถานะคือรหัสที่แสดงรหัสที่ค้างอยู่, สถานะความบกพร่องปัจจุบัน/ในอดีต หรือสถานะไฟเตือน</div>
+<div class="list">•&nbsp;&nbsp;ไบต์แสดงสถานะสามารถอ่านได้ด้วยการทดสอบ CMDTC ด้วยตนเองโดยใช้ Mazda Modular Diagnostic System (M-MDS)</div>
+<div class="list">•&nbsp;&nbsp;สำหรับรายละเอียดเกี่ยวกับไบต์แสดงสถานะ ให้ดูที่คำอธิบายใน Mazda Modular Diagnostic System (M-MDS) เมื่ออ่านรหัสวิเคราะห์ปัญหา</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09220002185205"></a><p class="topic-title"><span class="topic-head"></span>สภาวะการตรวจพบสำหรับรหัสวิเคราะห์ปัญหานั้นๆ</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา</p>
+</th>
+<th id="" align="center">
+<p class="thead">ตำแหน่งความบกพร่องของระบบ</p>
+</th>
+<th id="" align="center">
+<p class="thead">สภาวะการตรวจพบ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">B115E:54</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การปรับกล้องตรวจจับด้านหน้า (FSC) ไม่สมบูรณ์</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบการปรับกล้องตรวจจับด้านหน้า (FSC) ไม่เสร็จสมบูรณ์</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B13A6:11</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ LDWS บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กล้องตรวจจับด้านหน้า (FSC) ตรวจพบว่าสวิตช์ LDWS ถูกกดค้างเป็นเวลา 10 วินาที หรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C1001:92</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การทำงานของกล้องตรวจจับด้านหน้า (FSC) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ขณะเปิดใช้งานสวิตช์ LDWS หรือขณะที่ระบบควบคุมไฟสูง (HBC) กำลังทำงาน มีการตรวจพบว่าบริเวณรอบๆ กล้องตรวจจับด้านหน้า (FSC) สว่างมากเกินไป และระบบไม่ทำงานเป็นเวลา 10 นาที</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C1001:97</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความสามารถในการมองเห็นของกล้องตรวจจับด้านหน้า (FSC) มีคุณภาพต่ำ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ขณะเปิดใช้งานสวิตช์ LDWS หรือขณะที่ระบบควบคุมไฟสูง (HBC) กำลังทำงาน มีการตรวจพบว่าระยะการมองเห็นของกล้องตรวจจับด้านหน้า (FSC) มีสิ่งกีดขวางเป็นเวลา 10 นาที</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0001:88</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารโมดูลผิดพลาด (HS-CAN)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กล้องตรวจจับด้านหน้า (FSC) ตรวจพบความบกพร่องในสายบัสการสื่อสารระบบ CAN (HS-CAN) ต่อเนื่องกัน 10 ครั้ง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0100:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ PCM ผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กล้องตรวจจับด้านหน้า (FSC) ไม่ได้รับสัญญาณระบบ CAN จาก PCM เป็นเวลา 1 วินาที หรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0121:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ DSC HU/CM ผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กล้องตรวจจับด้านหน้า (FSC) ไม่ได้รับสัญญาณระบบ CAN จาก DSC HU/CM เป็นเวลา 1 วินาที หรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0131:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุม EPS ผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กล้องตรวจจับด้านหน้า (FSC) ไม่ได้รับสัญญาณระบบ CAN จากโมดูลควบคุม EPS เป็นเวลา 1 วินาที หรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0140:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุมตัวถังด้านหน้า (FBCM) ผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กล้องตรวจจับด้านหน้า (FSC) ไม่ได้รับสัญญาณระบบ CAN จากโมดูลควบคุมตัวถังด้านหน้า (FBCM) เป็นเวลา 5 วินาที หรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับแผงหน้าปัดผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กล้องตรวจจับด้านหน้า (FSC) ไม่ได้รับสัญญาณระบบ CAN จากแผงหน้าปัดเป็นเวลา 5 วินาที หรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0214:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับชุดเปิด/ปิดการทำงานผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กล้องตรวจจับด้านหน้า (FSC) ไม่ได้รับสัญญาณระบบ CAN จากชุดเปิด/ปิดการทำงานเป็นเวลา 1 วินาที หรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0401:68</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณที่ได้รับจาก PCM ผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กล้องตรวจจับด้านหน้า (FSC) ได้รับสัญญาณความผิดพลาดจาก PCM เป็นเวลา 1 วินาที หรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0415:68</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณที่ได้รับจาก DSC HU/CM ผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กล้องตรวจจับด้านหน้า (FSC) ได้รับสัญญาณความผิดพลาดจาก DSC HU/CM เป็นเวลา 1 วินาที หรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0420:68</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ได้รับสัญญาณข้อผิดพลาดจากโมดูลควบคุม EPS</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กล้องตรวจจับด้านหน้า (FSC) ได้รับสัญญาณความผิดพลาดจากโมดูลควบคุม EPS เป็นเวลา 1 วินาที หรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0423:68</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ได้รับสัญญาณข้อผิดพลาดจากแผงหน้าปัด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กล้องตรวจจับด้านหน้า (FSC) ได้รับสัญญาณความผิดพลาดจากแผงหน้าปัดเป็นเวลา 5 วินาที หรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0515:68</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณที่ได้รับจากชุดเปิด/ปิดการทำงานผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กล้องตรวจจับด้านหน้า (FSC) ได้รับสัญญาณความผิดพลาดจากชุดเปิด/ปิดการทำงานเป็นเวลา 1 วินาที หรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2005:86</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณที่ได้รับจาก PCM ผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กล้องตรวจจับด้านหน้า (FSC) ได้รับความผิดพลาดของสัญญาณความเร็วรถจาก PCM เป็นเวลา 1 วินาที หรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2100:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การกำหนดค่ากล้องตรวจจับด้านหน้า (FSC) ผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบการกำหนดค่ากล้องตรวจจับด้านหน้า (FSC) ไม่เสร็จสมบูรณ์</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2101:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การกำหนดค่ากล้องตรวจจับด้านหน้า (FSC) ผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบว่ากล้องตรวจจับด้านหน้า (FSC) มีข้อมูลการตั้งค่าที่ไม่ได้รับการสนับสนุน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:04</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กล้องตรวจจับด้านหน้า (FSC) บกพร่องภายใน</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมตัวถังด้านหน้า (FBCM) ตรวจพบความผิดพลาดของวงจรที่เกี่ยวข้องกับภาพในกล้องตรวจจับด้านหน้า (FSC) ขณะบิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:09</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กล้องตรวจจับด้านหน้า (FSC) บกพร่องภายใน</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมตัวถังด้านหน้า (FBCM) ตรวจพบความบกพร่องของเซ็นเซอร์อุณหภูมิภายในที่กล้องตรวจจับด้านหน้า (FSC) ขณะบิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:42</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กล้องตรวจจับด้านหน้า (FSC) บกพร่องภายใน</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมตัวถังด้านหน้า (FBCM) ตรวจพบ NVRAM ผิดพลาดในกล้องตรวจจับด้านหน้า (FSC) ขณะบิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:49</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กล้องตรวจจับด้านหน้า (FSC) บกพร่องภายใน</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมตัวถังด้านหน้า (FBCM) ตรวจพบความบกพร่องของกล้องตรวจจับด้านหน้า (FSC) ขณะบิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3003:16</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อินพุทแรงดันไฟของแหล่งจ่ายไฟกล้องตรวจจับด้านหน้า (FSC) ต่ำ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบแรงดันไฟฟ้าของวงจรแหล่งจ่ายไฟกล้องตรวจจับด้านหน้า (FSC) ระดับ 8.2 V หรือน้อยกว่า เป็นเวลาตั้งแต่ 5 วินาทีขึ้นไปขณะที่บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3003:17</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อินพุทแหล่งจ่ายไฟกล้องตรวจจับด้านหน้า (FSC) สูง</div>
+</td>
+<td id="" align="left">
+<div class="tbody"> ตรวจพบแรงดันไฟฟ้าของวงจรแหล่งจ่ายไฟกล้องตรวจจับด้านหน้า (FSC) ระดับ 16.8 V หรือมากกว่า เป็นเวลาตั้งแต่ 5 วินาทีขึ้นไปขณะที่บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</p><br clear="all"><p><a name="id09220002185206"></a><p class="topic-title"><span class="topic-head"></span>ข้อมูล Snapshot</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ข้อมูลของรหัสวิเคราะห์ปัญหาทั้งหมดที่ตรวจพบในปัจจุบันจะถูกเก็บบันทึก</div>
+</dd>
+</dl>
+<p clear="all">
+<p>
+<div>&mdash;: ไม่มี</div>
+</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รายการข้อมูล Snapshot</p>
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">หน่วย</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายละเอียดข้อมูล</p>
+</th>
+<th id="" align="center">
+<p class="thead">วิธีการอ่าน/ใช้ข้อมูล</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายการตรวจสอบข้อมูลที่เกี่ยวข้อง</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">ECU_IN_TMP</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;F</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิภายในของ ECU</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">IG-ON_TIMER</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">hh:mm:ss<sup>*1</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ช่วงเวลาที่ผ่านไปตั้งแต่บิดสวิตช์สตาร์ทไปที่ ON</div>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัดจะบันทึกข้อมูลช่วงเวลาที่ผ่านไปนับตั้งแต่บิดสวิตช์สตาร์ทไปที่ ON</div>
+</div>
+</dd>
+</dl>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;กล้องตรวจจับด้านหน้า (FSC) จะได้รับเวลาที่ผ่านไป ตั้งแต่สวิตช์สตาร์ทอยู่ในตำแหน่ง ON ที่ส่งผ่านสัญญาณระบบ CAN จากแผงหน้าปัดอย่างต่อเนื่อง</div>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบรหัสวิเคราะห์ปัญหา กล้องตรวจจับด้านหน้า (FSC) จะบันทึกเวลาที่ผ่านไป ตั้งแต่สวิตช์สตาร์ทอยู่ในตำแหน่ง ON เมื่อรหัสวิเคราะห์ปัญหาถูกตรวจพบ และมีการแสดงใน M-MDS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">OPE_MODE</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">Normal/CALIBRATION/EMERGENCY</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โหมดการทำงาน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">VSPD</div>
+</td>
+<td id="" align="center">
+<div class="tbody">KPH</div>
+</td>
+<td id="" align="center">
+<div class="tbody">MPH</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความเร็วรถ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;:หน่วยวินาที (s) อาจแสดงอยู่หลังจุดทศนิยม</div>
+</p><br clear="all"><a name="id09220002185207"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ฟังก์ชั่นการตรวจสอบข้อมูล</p>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่นการตรวจสอบข้อมูล/PID ทำการอ่านค่ารายการตรวจสอบสัญญาณอินพุท/เอาท์พุทที่อาจเลือกไว้ซึ่งได้ตั้งค่าไว้ใน FSC แบบเรียลไทม์</div>
+<p clear="all">
+<p class="table-title">ตารางการตรวจสอบข้อมูล / PID</p>
+<p>
+<div>&mdash;: ไม่มี</div>
+</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">PID</p>
+</th>
+<th id="" align="center">
+<p class="thead">หน่วย/การทำงาน</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายละเอียดข้อมูล</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายการการตรวจสอบ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">A_ANG_PITCH</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg; (deg)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แสดงมุมการปรับ (กำหนดระดับ) กล้องตรวจจับด้านหน้า (FSC)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กล้องตรวจจับด้านหน้า (FSC)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">A_ANG_ROLL</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg; (deg)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แสดงมุมการปรับ (การหมุน) กล้องตรวจจับด้านหน้า (FSC)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กล้องตรวจจับด้านหน้า (FSC)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">A_ANG_YAW</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg; (deg)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แสดงมุมการปรับ (การบิด) กล้องตรวจจับด้านหน้า (FSC)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กล้องตรวจจับด้านหน้า (FSC)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">BRAKE_SW</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์ไฟเบรก (No. 2) ปิดใช้งาน (เหยียบแป้นเบรก)</div>
+<div class="list">•&nbsp;&nbsp;On: สวิตช์ไฟเบรก (No.2) เปิดใช้งาน (ไม่เหยียบแป้นเบรก)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ไฟเบรก</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">DSP_LANE_ST</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/Dash_Lane/Solid_Lane</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: ช่องจราจรของรถไม่แสดงในหน้าจอ TFT LCD</div>
+<div class="list">•&nbsp;&nbsp;Dash_Lane: แสดงเส้นประในหน้าจอ TFT LCD</div>
+<div class="list">•&nbsp;&nbsp;Solid_Lane: แสดงช่องจราจรจริงในหน้าจอ TFT LCD</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หน้าจอ TFT LCD (แผงหน้าปัด)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">DSP_WRN_ST</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/LDWS_Left/LDWS_Right/LDWS_Fail/HBC_Fail/Camera_BLK/FSC_Fail/Camera_DRDT</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: คำเตือนไม่ถูกแสดงในหน้าจอ TFT LCD</div>
+<div class="list">•&nbsp;&nbsp;LDWS_Left: คำเตือนที่เกี่ยวกับการออกนอกช่องจราจรทางด้านซ้ายของรถจะแสดงในหน้าจอ TFT LCD</div>
+<div class="list">•&nbsp;&nbsp;LDWS_Right: คำเตือนที่เกี่ยวกับการออกนอกช่องจราจรทางด้านขวาของรถจะแสดงในหน้าจอ TFT LCD</div>
+<div class="list">•&nbsp;&nbsp;LDWS_Fail: คำเตือนที่เกี่ยวข้องกับข้อบกพร่องในระบบเตือนออกนอกช่องจราจร (LDWS) จะแสดงในหน้าจอ TFT LCD</div>
+<div class="list">•&nbsp;&nbsp;HBC_Fail: คำเตือนที่เกี่ยวข้องกับข้อบกพร่องในระบบควบคุมไฟสูง (HBC) จะแสดงในหน้าจอ TFT LCD</div>
+<div class="list">•&nbsp;&nbsp;Camera_BLK:  คำเตือนที่เกี่ยวข้องกับสิ่งสกปกรกของกล้องตรวจจับด้านหน้า (FSC) จะแสดงในหน้าจอ TFT LCD</div>
+<div class="list">•&nbsp;&nbsp;FSC_Fail: คำเตือนที่เกี่ยวข้องกับข้อบกพร่องในกล้องตรวจจับด้านหน้า (FSC) จะแสดงในหน้าจอ TFT LCD</div>
+<div class="list">•&nbsp;&nbsp;Camera_DRDT: คำเตือนที่เกี่ยวข้องกับการเกิดฝ้าที่กล้องตรวจจับด้านหน้า (FSC) จะแสดงในหน้าจอ TFT LCD</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หน้าจอ TFT LCD (แผงหน้าปัด)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">HBC_H/L_CS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Hi_Request/Low_Request/Invalid</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Hi_Request: ได้รับสัญญาณสวิตช์ไฟสูง</div>
+<div class="list">•&nbsp;&nbsp;Low_Request: ได้รับสัญญาณสวิตช์ไฟต่ำ</div>
+<div class="list">•&nbsp;&nbsp;Invalid: ความผิดพลาดในสัญญาณการร้องขอสวิตช์ไฟสูง/ต่ำ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กล้องตรวจจับด้านหน้า (FSC)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">IL_ST_HBC</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/Green_On/Green_Flash/Amber_On/Amber_Flash</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: ไฟแสดงสถานะ HBC ดับ</div>
+<div class="list">•&nbsp;&nbsp;Green_On: ไฟแสดงสถานะ HBC (สีเขียว) ติดสว่าง</div>
+<div class="list">•&nbsp;&nbsp;Green_Flash: ไฟแสดงสถานะ HBC (สีเขียว) กะพริบ</div>
+<div class="list">•&nbsp;&nbsp;Amber_On: ไฟแสดงสถานะ HBC (สีเหลือง) ติดสว่าง</div>
+<div class="list">•&nbsp;&nbsp;Amber_Flash: ไฟแสดงสถานะ HBC (สีเหลือง) กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะ HBC (แผงหน้าปัด)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">IL_ST_LDWS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/Green_On/Green_Flash/Amber_On/Amber_Flash</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: ไฟแสดงสถานะ LDWS ดับ</div>
+<div class="list">•&nbsp;&nbsp;Green_On: ไฟแสดงสถานะ LDWS (สีเขียว) ติดสว่าง</div>
+<div class="list">•&nbsp;&nbsp;Green_Flash: ไฟแสดงสถานะ LDWS (สีเขียว) กะพริบ</div>
+<div class="list">•&nbsp;&nbsp;Amber_On: ไฟแสดงสถานะ LDWS (สีเหลือง) ติดสว่าง</div>
+<div class="list">•&nbsp;&nbsp;Amber_Flash: ไฟแสดงสถานะ LDWS (สีเหลือง) กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะ LDWS (แผงหน้าปัด)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">LDWS_BUZZER</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สัญญาณเตือน LDWS ไม่ดัง</div>
+<div class="list">•&nbsp;&nbsp;On: สัญญาณเตือน LDWS ดัง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณเตือน LDWS (แผงหน้าปัด)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">LDWS_SW</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: ปิดใช้งานสวิตช์ LDWS</div>
+<div class="list">•&nbsp;&nbsp;On: เปิดใช้งานสวิตช์ LDWS</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ LDWS</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">RS_SOUND_CS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/Left/Right</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: ไม่ได้ยินเสียงแถบยางบนผิวถนน</div>
+<div class="list">•&nbsp;&nbsp;Left: ได้ยินเสียงแถบยางบนผิวถนนด้านซ้าย</div>
+<div class="list">•&nbsp;&nbsp;Right: ได้ยินเสียงแถบยางบนผิวถนนด้านขวา</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเครื่องเสียง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">VPWR_IG1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แสดงแรงดันไฟของแหล่งจ่ายไฟกล้องตรวจจับด้านหน้า (FSC)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กล้องตรวจจับด้านหน้า (FSC)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">VSPD</div>
+</td>
+<td id="" align="center">
+<div class="tbody">KPH, MPH</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความเร็วรถปรากฏขึ้น</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</body>
+</html>

@@ -1,0 +1,544 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>รหัสวิเคราะห์ปัญหา P0A94:00 [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</title>
+</head>
+<body><a name="id0102h4004400"></a><p class="servinfo-title"><span class="servinfo-head"></span>รหัสวิเคราะห์ปัญหา P0A94:00 [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0102h4004400</p><br clear="all"><a name="id0102h400440001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รายละเอียดเกี่ยวกับรหัสวิเคราะห์ปัญหา</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">คำอธิบาย</p>
+</th>
+<th id="" align="left" colspan="2">
+<p class="thead">DC-DC คอนเวอเตอร์: สัญญาณวงจรควบคุมผิดพลาด</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center" rowspan="5">
+<div class="tbody"><span>สภาวะการตรวจพบ</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody">สภาพการกำหนด</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ได้รับสัญญาณความบกพร่องภายในจาก DC-DC คอนเวอเตอร์ผ่านโมดูลควบคุมตัวถังด้านหน้า (FBCM) (การสื่อสาร CAN/LIN)</div>
+<div class="list">•&nbsp;&nbsp;สัญญาณอินพุทจาก DC-DC คอนเวอเตอร์จำกัดระยะเวลาการเพิ่มแรงดัน</div>
+<div class="list">•&nbsp;&nbsp;สัญญาณอินพุทจาก DC-DC คอนเวอเตอร์ไม่ทำให้แรงดันเพิ่มขึ้นหลังจากมีการสั่งเพิ่มแรงดันไปที่ DC-DC คอนเวอเตอร์</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">สภาพก่อนหน้า</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ใช้ไม่ได้</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">รอบการขับ</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;1</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ประเภทการทดสอบด้วยตนเอง</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;การทดสอบ CMDTC ด้วยตนเอง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">เซ็นเซอร์ที่ใช้</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ใช้ไม่ได้</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>ฟังก์ชั่น FAIL-SAFE</span></div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="list">•&nbsp;&nbsp;ยับยั้งการดับเครื่องยนต์โดยการใช้งานฟังก์ชั่น i-stop</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สถานะของรถเมื่อแสดงค่ารหัสวิเคราะห์ปัญหา</span></div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="list">•&nbsp;&nbsp;ไฟเตือน i-stop (เหลืองอำพัน) กะพริบ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สาเหตุที่เป็นไปได้</span></div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="list">•&nbsp;&nbsp;ขั้วต่อหรือขั้วของชิ้นส่วนต่อไปนี้บกพร่อง:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;PCM</div>
+<div class="list">―&nbsp;&nbsp;แบตเตอรี่</div>
+<div class="list">―&nbsp;&nbsp;DC-DC คอนเวอเตอร์</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระหว่างขั้วต่างๆ ต่อไปนี้ลัดวงจรลงกราวด์:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ขั้ว L ของ DC-DC คอนเวอเตอร์ &mdash; ฟิวส์ DCDC 50 A</div>
+<div class="list">―&nbsp;&nbsp;ฟิวส์ DCDC 50 A</div>
+<div class="list">―&nbsp;&nbsp;ขั้วบวกแบตเตอรี่ &mdash; ฟิวส์ DCDC 50 A</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระหว่างขั้วต่างๆ ต่อไปนี้ขาดวงจร:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ขั้ว L ของ DC-DC คอนเวอเตอร์ &mdash; ฟิวส์ DCDC 50 A</div>
+<div class="list">―&nbsp;&nbsp;ฟิวส์ DCDC 50 A</div>
+<div class="list">―&nbsp;&nbsp;ขั้วบวกแบตเตอรี่ &mdash; ฟิวส์ DCDC 50 A</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;แบตเตอรี่บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;DC-DC คอนเวอเตอร์บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมตัวถังด้านหน้า (FBCM) บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;PCM บกพร่อง</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p><br clear="all"><a name="id0102h400440002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ผังวงจรไฟฟ้าระบบ</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzw00006523.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzw00006523</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id0102h400440003"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>คำอธิบายฟังก์ชั่น (รายละเอียดการตรวจพบรหัสวิเคราะห์ปัญหา)</p>
+<div class="list">•&nbsp;&nbsp;DC-DC คอนเวอเตอร์เป็นอุปกรณ์ที่มีฟังก์ชั่นบูสท์ซึ่งช่วยทำให้การจ่ายไฟให้กับอุปกรณ์ไฟฟ้าของรถมีความเสถียร เมื่อสตาร์ทเครื่องยนต์ด้วยระบบ i-stop ถ้า DC-DC คอนเวอเตอร์ไม่ทำงาน แรงดันไฟฟ้าที่จ่ายเข้าอุปกรณ์ไฟฟ้าของรถจะลดลง ในการวิเคราะห์ปัญหานี้ จะไม่พบสภาวะการตอบสนองของ DC-DC คอนเวอเตอร์ต่อคำสั่งบูสท์จาก PCM หรือการบูสท์ด้วยฟังก์ชั่นการวิเคราะห์ปัญหาบนรถของ DC-DC คอนเวอเตอร์และจะดำเนินการตรวจสอบความบกพร่อง/การรับรองความปลอดภัยของรถ</div><br clear="all"><a name="id0102h400440004"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ขั้นตอนการตรวจสอบการปรากฏซ้ำได้</p>
+<div class="list">1.&nbsp;&nbsp;ลบรหัสวิเคราะห์ปัญหาออกจากหน่วยความจำ PCM โดยใช้ M-MDS (ดูที่ <font class="extxref-label"><a href="id0102h4801100.html">ขั้นตอนหลังจากงานซ่อม [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div class="list">2.&nbsp; สตาร์ทเครื่องยนต์</div>
+<div class="list">3.&nbsp;&nbsp;ดับเครื่องยนต์โดยการใช้งานฟังก์ชั่น i-stop</div><br clear="all"><a name="id0102h400440005"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รายการ PID/รายการการจำลองที่ใช้ในการวิเคราะห์ปัญหา</p>
+<div class="list">•&nbsp;&nbsp;ใช้ไม่ได้</div><br clear="all"><a name="id0102h400440006"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การตรวจสอบฟังก์ชั่นโดยใช้ M-MDS</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center">
+<p class="thead">การตรวจสอบ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ผลลัพธ์</p>
+</th>
+<th id="" align="center">
+<p class="thead">การดำเนินการ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">1</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">จุดประสงค์: ตรวจสอบว่ามีข้อมูลการบริการที่เกี่ยวข้อง</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบว่ามีข้อมูลการบริการที่เกี่ยวข้องหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;มีข้อมูลการบริการที่เกี่ยวข้องอื่นๆ หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ให้ทำการซ่อมหรือวิเคราะห์ปัญหาตามข้อมูลการบริการที่มี</div>
+<div class="list">•&nbsp;&nbsp;ถ้าแก้ไขปัญหาไม่ได้ ให้ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">2</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">จุดประสงค์: ตรวจสอบว่ารหัสวิเคราะห์ปัญหาที่เกี่ยวกับการสื่อสาร CAN หรือ LIN จดจำแรงดันไฟฟ้าแบตเตอรี่ได้ถูกต้องหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;ปฏิบัติตามการตรวจสอบรหัสวิเคราะห์ปัญหาของ PCM และโมดูลควบคุมตัวถังด้านหน้า (FBCM) โดยใช้ M-MDS<div>(ดูที่ <font class="extxref-label"><a href="id0102h4801000.html">การทดสอบการวิเคราะห์ปัญหาบนรถ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div>(ดูที่ <font class="extxref-label"><a href="id0902p2006100.html">การตรวจสอบรหัสวิเคราะห์ปัญหา [โมดูลควบคุมตัวถังด้านหน้า (FBCM)]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;บันทึกรหัสวิเคราะห์ปัญหาที่เกี่ยวกับการสื่อสาร CAN หรือ LIN แล้วหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชิ้นส่วนที่บกพร่องตามการค้นหาสาเหตุปัญหาของรหัสวิเคราะห์ปัญหานั้นๆ</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0102h4801500.html">ตารางรหัสวิเคราะห์ปัญหา [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0902p2006300.html">ตารางรหัสวิเคราะห์ปัญหา [โมดูลควบคุมตัวถังด้านหน้า (FBCM)]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนการค้นหาสาเหตุปัญหาเพื่อดำเนินการตามขั้นตอนตั้งแต่ขั้นตอน 1</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">3</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">จุดประสงค์: ตรวจสอบว่าเซ็นเซอร์กระแสไฟฟ้าบ่งชี้ความบกพร่องเนื่องจาก FBCM ได้ถูกต้องหรือไม่่</div>
+<div class="list">•&nbsp;&nbsp;ปฏิบัติตามการตรวจสอบรหัสวิเคราะห์ปัญหาของโมดูลควบคุมตัวถังด้านหน้า (FBCM) โดยใช้ M-MDS<div>(ดูที่ <font class="extxref-label"><a href="id0902p2006100.html">การตรวจสอบรหัสวิเคราะห์ปัญหา [โมดูลควบคุมตัวถังด้านหน้า (FBCM)]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;รหัสที่ค้างอยู่ของรหัสวิเคราะห์ปัญหานี้ปรากฏขึ้นหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชิ้นส่วนที่บกพร่องตามการค้นหาสาเหตุปัญหาของรหัสวิเคราะห์ปัญหานั้นๆ</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0902p2006300.html">ตารางรหัสวิเคราะห์ปัญหา [โมดูลควบคุมตัวถังด้านหน้า (FBCM)]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนการค้นหาสาเหตุปัญหาเพื่อดำเนินการตามขั้นตอนตั้งแต่ขั้นตอน 1</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p><br clear="all"><a name="id0102h400440007"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ขั้นตอนการวิเคราะห์แก้ไขปัญหา</p>
+<div class="list-title">จุดประสงค์ของขั้นตอนการค้นหาสาเหตุปัญหา</div>
+<div class="list">•&nbsp;&nbsp;ขั้นตอน 1</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ตรวจสอบชุดแบตเตอรี่</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ขั้นตอน 2&mdash;8</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ตรวจสอบว่ามีความบกพร่องเกิดขึ้นจากความบกพร่องในการรับส่งสัญญาณแต่ละครั้งและสายคำสั่งบูสท์หรือไม่</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ขั้นตอน 9&mdash;10</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ตรวจสอบว่าความบกพร่องหลักได้รับการแก้ไขเรียบร้อยแล้ว และไม่มีความบกพร่องอื่นๆ</div>
+</dd>
+</dl>
+<p clear="all">
+<p class="table-title">ขั้นตอนการวิเคราะห์ปัญหา</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">การตรวจสอบ</p>
+</th>
+<th id="" align="center">
+<p class="thead">การดำเนินการ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">1</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบแบตเตอรี่</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบแบตเตอรี่<div>(ดูที่ <font class="extxref-label"><a href="id0117i0800600.html">การตรวจสอบแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีความบกพร่องใดๆ หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชาร์จไฟหรือเปลี่ยนแบตเตอรี่ แล้วไปที่ขั้นตอน 8</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0117i0800700.html">การชาร์จไฟแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0117i0800500.html">การถอด / การติดตั้งแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">2</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบสภาพขั้วต่อ DC-DC คอนเวอเตอร์</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อ DC-DC คอนเวอเตอร์</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบการเชื่อมต่อที่ไม่สมบูรณ์ (เช่น ขั้วไฟฟ้าเสียหาย / หลุดออก การผุกร่อน)</div>
+<div class="list">•&nbsp;&nbsp;มีความบกพร่องใดๆ หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนขั้วต่อและ/หรือขั้วไฟฟ้า แล้วไปที่ขั้นตอน 8</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">3</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรลงกราวด์หรือการขาดวงจรของวงจรแหล่งจ่ายไฟ DC-DC คอนเวอเตอร์</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบว่าขั้วต่อ DC-DC คอนเวอเตอร์ถูกปลดออกหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;วัดแรงดันไฟฟ้าที่ขั้ว L ของ DC-DC คอนเวอเตอร์ (ด้านชุดสายไฟ)</div>
+<div class="list">•&nbsp;&nbsp;มีแรงดันไฟฟ้าเท่ากับ <span>B+</span> หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจสอบฟิวส์ DCDC 50 A</div>
+<div class="list">•&nbsp;&nbsp;ถ้าฟิวส์ขาด:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ซ่อมหรือเปลี่ยนชุดสายไฟที่เกิดการลัดวงจรลงกราวด์</div>
+<div class="list">―&nbsp;&nbsp;เปลี่ยนฟิวส์</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ถ้าฟิวส์เสื่อมสภาพ:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;เปลี่ยนฟิวส์</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ถ้าฟิวส์ปกติ:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ซ่อมหรือเปลี่ยนชุดสายไฟที่เกิดการขาดวงจร</div>
+</dd>
+</dl>
+<div class="tbody">ไปที่ขั้นตอน 8</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">4</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรลงกราวด์ของวงจรสัญญาณ DC-DC คอนเวอเตอร์</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบว่าขั้วต่อ DC-DC คอนเวอเตอร์ถูกปลดออกหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต่อเนื่องระหว่างขั้ว F ของ DC-DC คอนเวอเตอร์ (ด้านชุดสายไฟ) กับกราวด์ตัวถัง</div>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ถ้าสามารถตรวจจับการลัดวงจรลงกราวด์ในชุดสายไฟได้:</div>
+<div class="list">•&nbsp;&nbsp;ซ่อมหรือเปลี่ยนชุดสายไฟที่เกิดการลัดวงจรลงกราวด์</div>
+<div class="tbody">ถ้าไม่สามารถตรวจจับการลัดวงจรลงกราวด์ในชุดสายไฟได้:</div>
+<div class="list">•&nbsp;&nbsp;เปลี่ยน PCM (การลัดวงจรลงกราวด์ของวงจรภายใน PCM)<div>(ดูที่ <font class="extxref-label"><a href="id0140g2802400.html">การถอด / การติดตั้ง PCM [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</div>
+<div class="tbody">ไปที่ขั้นตอน 8</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">5</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบสภาพขั้วต่อ PCM</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อ PCM</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบการเชื่อมต่อที่ไม่สมบูรณ์ (เช่น ขั้วไฟฟ้าเสียหาย / หลุดออก การผุกร่อน)</div>
+<div class="list">•&nbsp;&nbsp;มีความบกพร่องใดๆ หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนขั้วต่อและ/หรือขั้วไฟฟ้า แล้วไปที่ขั้นตอน 8</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">6</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรกับแหล่งจ่ายไฟของวงจรสัญญาณ DC-DC คอนเวอเตอร์</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบว่าขั้วต่อ DC-DC คอนเวอเตอร์และขั้วต่อ PCM ถูกปลดออกหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;วัดแรงดันไฟฟ้าที่ขั้ว F ของ DC-DC คอนเวอเตอร์ (ด้านชุดสายไฟ)</div>
+<div class="list">•&nbsp;&nbsp;แรงดันไฟฟ้าอยู่ที่ <span>0 V</span> หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชุดสายไฟที่เกิดการลัดวงจรกับแหล่งจ่ายไฟ แล้วไปที่ขั้นตอน 8</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">7</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการขาดวงจรของวงจรสัญญาณ DC-DC คอนเวอเตอร์</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบว่าขั้วต่อ DC-DC คอนเวอเตอร์และขั้วต่อ PCM ถูกปลดออกหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต่อเนื่องระหว่างขั้ว F ของ DC-DC คอนเวอเตอร์ (ด้านชุดสายไฟ) กับขั้ว 2P ของ PCM (ด้านชุดสายไฟ)</div>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชุดสายไฟที่เกิดการขาดวงจร แล้วไปที่ขั้นตอน 8</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">8</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบว่าการค้นหาสาเหตุปัญหาของรหัสวิเคราะห์ปัญหาเสร็จสมบูรณ์แล้ว</div>
+<div class="list">•&nbsp;&nbsp;ต่อขั้วต่อที่ปลดออกทั้งหมดกลับเข้าที่ทุกครั้ง</div>
+<div class="list">•&nbsp;&nbsp;ลบรหัสวิเคราะห์ปัญหาออกจากหน่วยความจำ PCM โดยใช้ M-MDS<div>(ดูที่ <font class="extxref-label"><a href="id0102h4801100.html">ขั้นตอนหลังจากงานซ่อม [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ทำการทดสอบตัวเองแบบ KOEO<div>(ดูที่ <font class="extxref-label"><a href="id0102h4801200.html">การทดสอบตัวเองแบบ KOEO/KOER [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีรหัสวิเคราะห์ปัญหาเดียวกันปรากฏขึ้นหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยน DC-DC คอนเวอเตอร์แล้วไปที่ขั้นตอน 8 อีกครั้ง</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0117i0004600.html">การถอด / การติดตั้ง DC-DC คอนเวอเตอร์ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div class="list">•&nbsp;&nbsp;ถ้าความบกพร่องเกิดขึ้นอีกครั้ง ให้เปลี่ยน PCM<div>(ดูที่ <font class="extxref-label"><a href="id0140g2802400.html">การถอด / การติดตั้ง PCM [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</div>
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">9</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบขั้นตอนหลังจากงานซ่อม</div>
+<div class="list">•&nbsp;&nbsp;ปฏิบัติตาม &ldquo;ขั้นตอนหลังจากงานซ่อม&rdquo;<div>(ดูที่ <font class="extxref-label"><a href="id0102h4801100.html">ขั้นตอนหลังจากงานซ่อม [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีรหัสวิเคราะห์ปัญหาปรากฏขึ้นหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่การตรวจสอบรหัสวิเคราะห์ปัญหานั้นๆ</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0102h4801500.html">ตารางรหัสวิเคราะห์ปัญหา [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การค้นหาสาเหตุปัญหาของรหัสวิเคราะห์ปัญหาเสร็จสมบูรณ์</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</body>
+</html>

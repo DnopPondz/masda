@@ -1,0 +1,357 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>การตั้งค่าเริ่มต้นสภาวะแบตเตอรี่ (การตั้งค่าระบบ i-stop) [SKYACTIV-D 2.2]</title>
+</head>
+<body><a name="id0117h6801000"></a><p class="servinfo-title"><span class="servinfo-head"></span>การตั้งค่าเริ่มต้นสภาวะแบตเตอรี่ (การตั้งค่าระบบ i-stop) [SKYACTIV-D 2.2]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0117h6801000</p><br clear="all"><a name="id0117h680100001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ขั้นตอนการตั้งค่าเริ่มต้นสภาวะแบตเตอรี่ (การตั้งค่าระบบ i-stop)</p>
+<dl>
+<dd>
+<div class="attention2-label">ข้อควรระวัง</div>
+</dd>
+<dd>
+<div class="attention2">
+<div class="list">•&nbsp;&nbsp;ถ้าสตาร์ทเครื่องยนต์ขณะที่ฝากระโปรงหน้าเปิด ฟังก์ชั่น i-stop จะไม่ทำงานจนกว่าจะสตาร์ทเครื่องยนต์อีกครั้งขณะที่ฝากระโปรงหน้าปิดอยู่ (ไม่ใช่ความบกพร่องของระบบ) ถ้าสตาร์ทเครื่องยนต์ขณะที่ฝากระโปรงหน้าเปิด ให้ปิดฝากระโปรงหน้าและสตาร์ทเครื่องยนต์อีกครั้งหลังจากบิดสวิตช์สตาร์ท OFF</div>
+<div class="list">•&nbsp;&nbsp;ถ้ารถอยู่ในสภาวะที่ระบบ i-stop ไม่ทำงาน ความบกพร่องจะไม่ได้รับการแก้ไขโดยง่ายจากการทำการตั้งค่าเริ่มสภาวะแบตเตอรี่ (การตั้งค่าระบบ i-stop) ตรวจสอบค่า PID &ldquo;BATT_SOC&rdquo; และถ้าค่าน้อยกว่า 75% ให้ชาร์จไฟแบตเตอรี่ (ดูที่ <font class="extxref-label"><a href="id0117h6800700.html">การชาร์จไฟแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+<div class="list">•&nbsp;&nbsp;ถ้าค่า &ldquo;BATT_SOC&rdquo; ไม่ได้รับการตรวจสอบก่อนการปลดสายขั้วลบแบตเตอรี่ ให้ทำการตั้งค่าเริ่มต้นสภาวะแบตเตอรี่ (การตั้งค่าระบบ i-stop) หลังจากทำการตรวจสอบแบตเตอรี่</div>
+<div class="list">•&nbsp;&nbsp;ค่า &ldquo;BATT_SOC&rdquo; จะแสดง &ldquo;0%&rdquo; เนื่องจากสภาวะไฟชาร์จแบตเตอรี่จะไม่คงที่หลังจากต่อสายขั้วลบแบตเตอรี่ (จำเป็นต้องปล่อยแบตเตอรี่ทิ้งไว้เป็นเวลาประมาณ 6 ถึง 48 ชั่วโมงเพื่อให้สภาวะไฟชาร์จแบตเตอรี่คงที่)</div>
+</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ถ้าปลดสายขั้วลบแบตเตอรี่ ข้อมูลจำเพาะที่เก็บบันทึกไว้ใน PCM จะถูกลบออก ดังนั้น ให้ปฏิบัติตามขั้นตอนดังต่อไปนี้หลังจากต่อกลับเข้าที่</div>
+<p class="figure-title">แผนผังขั้นตอนการตั้งค่าเริ่มต้นสภาวะแบตเตอรี่ (การตั้งค่าระบบ i-stop)</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzw00005182.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzw00005182</div>
+</td>
+</tr>
+</table>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">จุดประสงค์</p>
+</th>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center">
+<p class="thead">ข้อควรระวัง / หมายเหตุ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center" rowspan="3">
+<div class="tbody">การตรวจสอบสภาวะ PCM และแบตเตอรี่เบื้องต้น</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจสอบค่า (BATT_SOC) ที่วัดได้ก่อนปลดสายขั้วลบแบตเตอรี่</div>
+<div class="list-title">เมื่อ BATT_SOC อยู่ที่ 75% หรือมากกว่า</div>
+<div class="list">•&nbsp;&nbsp;ไปที่ขั้นตอนถัดไป</div>
+<div class="list-title">เมื่อค่า BATT_SOC ไม่ได้รับการตรวจสอบหรือค่าน้อยกว่า 75%</div>
+<div class="list">•&nbsp;&nbsp;ทำการตรวจสอบแบตเตอรี่ (ดูที่ <font class="extxref-label"><a href="id0117h6800600.html">การตรวจสอบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจสอบว่าเวลาผ่านไป 5 นาที หรือมากกว่าตั้งแต่ปลดสายแบตเตอรี่ขั้วลบ</div>
+</td>
+<td id="" align="left">
+<dl>
+<dd>
+<div class="attention2-label">ข้อควรระวัง</div>
+</dd>
+<dd>
+<div class="attention2">
+<div class="list">•&nbsp;&nbsp;จำเป็นต้องปล่อยแบตเตอรี่ทิ้งไว้เป็นเวลา 5 นาที หรือมากกว่า เนื่องจากแรงดันไฟฟ้าไม่คงที่ ทั้งนี้ขึ้นอยู่กับสภาวะการใช้งานแบตเตอรี่ และ PCM ไม่สามารถตัดสินค่า &ldquo;BATT_SOC&rdquo; ได้อย่างถูกต้อง</div>
+</div>
+</dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">3</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปลดขั้วต่อเซ็นเซอร์กระแสไฟฟ้า ถ้าปลดขั้วต่อเซ็นเซอร์กระแสไฟฟ้าออกแล้ว ให้ไปที่ขั้นตอนถัดไป</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="5">
+<div class="tbody">การตรวจสอบความสมบูรณ์ / การตรวจสอบสภาวะแบตเตอรี่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">4</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ต่อสายขั้วลบแบตเตอรี่และรอเป็นเวลา 10 วินาที หรือมากกว่า</div>
+</td>
+<td id="" align="left">
+<dl>
+<dd>
+<div class="attention2-label">ข้อควรระวัง</div>
+</dd>
+<dd>
+<div class="attention2">
+<div class="list">•&nbsp;&nbsp;ค่าแรงขันสายขั้วลบแบตเตอรี่: 4.0&mdash;6.0 N&middot;m {41&mdash;61 kgf&middot;cm, 36&mdash;53 in&middot;lbf}</div>
+</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;ต่อสายขั้วลบแบตเตอรี่ก่อนต่อขั้วต่อเซ็นเซอร์กระแสไฟฟ้า ถ้าต่อขั้วต่อเซ็นเซอร์กระแสไฟฟ้าก่อน PCM อาจจดจำสัญญาณผิดพลาดจากเซ็นเซอร์กระแสไฟฟ้าและบันทึกสภาวะแบตเตอรี่อย่างไม่ถูกต้อง</div>
+</div>
+</dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">5</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ต่อขั้วต่อเซ็นเซอร์กระแสไฟฟ้า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">6</div>
+</td>
+<td id="" align="left">
+<div class="tbody">บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงาน) และรอเป็นเวลา 15 วินาที หรือมากกว่า (ภายใน 1 นาที)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">7</div>
+</td>
+<td id="" align="left">
+<div class="entry-title">ตรวจสอบสภาวะการกะพริบของไฟแสดงสถานะระบบ i-stop (สีเขียว) และไฟเตือนระบบ i-stop (สีเหลืองอำพัน)</div>
+<div class="list">•&nbsp;&nbsp;กดสวิตช์ i-stop OFF เป็นเวลา 10 วินาที และตรวจสอบสภาวะการกะพริบของไฟแสดงสถานะระบบ i-stop (สีเขียว) และไฟเตือนระบบ i-stop (สีเหลืองอำพัน)</div>
+<dl>
+<div class="list-title">เมื่อไฟแสดงสถานะระบบ i-stop (สีเขียว) กะพริบ</div>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ไปที่ขั้นตอนถัดไป</div>
+</dd>
+</dl>
+<dl>
+<div class="list-title">เมื่อไฟเตือนระบบ i-stop (สีเหลืองอำพัน) กะพริบ</div>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ทำการตรวจสอบแบตเตอรี่ (ดูที่ <font class="extxref-label"><a href="id0117h6800600.html">การตรวจสอบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</dd>
+</dl>
+<dl>
+<div class="list-title">เมื่อไฟเตือนระบบ i-stop (สีเหลืองอำพัน) ติดสว่าง</div>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ปฏิบัติตามขั้นตอนไม่ถูกต้อง บิดสวิตช์สตาร์ท OFF และปฏิบัติซ้ำขั้นตอนตั้งแต่ขั้นตอน 1 (การตรวจสอบสภาวะ PCM และแบตเตอรี่เบื้องต้น)</div>
+</dd>
+</dl>
+</td>
+<td id="" align="left">
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;เมื่อกดสวิตช์ i-stop OFF สภาวะการติดสว่างของไฟเตือนระบบ i-stop (สีเหลืองอำพัน) จะเปลี่ยนไปเป็นการกะพริบของไฟแสดงสถานะระบบ i-stop (สีเขียว) หรือไฟเตือนระบบ i-stop (สีเหลืองอำพัน)</div>
+</div>
+</dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">8</div>
+</td>
+<td id="" align="left">
+<div class="tbody">บิดสวิตช์สตาร์ท OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="4">
+<div class="tbody">การตั้งค่าเริ่มต้นเซ็นเซอร์มุมพวงมาลัย</div>
+</td>
+<td id="" align="center">
+<div class="tbody">9</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปิดฝากระโปรงหน้า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">10</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สตาร์ทเครื่องยนต์</div>
+</td>
+<td id="" align="left" rowspan="3">
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;ปฏิบัติตามการตั้งค่าเริ่มต้นของเซ็นเซอร์มุมพวงมาลัยเนื่องจากค่าเริ่มต้นที่เก็บบันทึกไว้ในโมดูลควบคุม EPS จะถูกรีเซ็ท</div>
+</div>
+</dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">11</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หมุนพวงมาลัยไปทางซ้าย-ขวาสุด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">12</div>
+</td>
+<td id="" align="left">
+<div class="tbody">บิดสวิตช์สตาร์ท OFF</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="3">
+<div class="tbody">การตรวจสอบการตั้งค่า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">13</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปฏิบัติตามขั้นตอนดังต่อไปนี้ภายใน 25 วินาที</div>
+<div class="list">1.&nbsp;&nbsp;บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงาน) และภายใน 5 วินาที ให้กดสวิตช์ i-stop OFF ค้างไว้เป็นเวลา 3 วินาที หรือมากกว่า (ไฟเตือนระบบ i-stop (สีเหลืองอำพัน) ติดสว่าง)</div>
+<div class="list">2.&nbsp;&nbsp;สตาร์ทเครื่องยนต์</div>
+<div class="list">3.&nbsp;&nbsp;กดสวิตช์ i-stop OFF ค้างไว้หนึ่งครั้ง</div>
+<div class="list">4.&nbsp;&nbsp;ตรวจสอบว่าไฟเตือนระบบ i-stop (สีเหลืองอำพัน) ดับลง และไฟแสดงสถานะระบบ i-stop (สีเขียว) เริ่มกะพริบ</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ถ้าไฟสีเหลืองอำพันติดสว่างต่อเนื่อง แสดงว่าปฏิบัติตามขั้นตอนไม่ถูกต้อง ด้วยเหตุนี้ ให้ปฏิบัติซ้ำขั้นตอนตั้งแต่ขั้นตอน 1 (การตรวจสอบสภาวะ PCM และแบตเตอรี่เบื้องต้น)</div>
+</dd>
+</dl>
+</td>
+<td id="" align="left">
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;แม้ว่าไฟแสดงสถานะระบบ i-stop (สีเขียว) อาจจะกะพริบสองสามครั้งทันทีหลังจากสตาร์ทเครื่องยนต์ จากนั้น ไฟเตือนระบบ i-stop (สีเหลืองอำพัน) จะเริ่มติดสว่าง</div>
+</div>
+</dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">14</div>
+</td>
+<td id="" align="left">
+<div class="tbody">รักษาสถานะเดินเบา (ไม่มีภาระทางไฟฟ้า) จนกว่าไฟแสดงสถานะระบบ i-stop (สีเขียว) จะดับลง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">15</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หลังจากไฟแสดงสถานะระบบ i-stop (สีเขียว) ดับลง ให้บิดสวิตช์สตาร์ท OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="3">
+<div class="tbody">การตรวจสอบการทำงานของการควบคุมระบบ i-stop</div>
+</td>
+<td id="" align="center">
+<div class="tbody">16</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สตาร์ทเครื่องยนต์และตรวจสอบว่าไฟแสดงสถานะระบบ i-stop (สีเขียว) ดับลง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">17</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจสอบการทำงานของการควบคุมระบบ i-stop โดยใช้ขั้นตอนดังต่อไปนี้</div>
+<div class="list">1.&nbsp;&nbsp;ขับรถด้วยความเร็ว 4 km/h หรือสูงกว่า (สเปค EC / รัสเซีย)</div>
+<div class="list">1.&nbsp;&nbsp;ขณะขับรถด้วยความเร็ว 4 km/h หรือสูงกว่า ให้ตรวจสอบว่าไฟแสดงสถานะระบบ i-stop (สีเขียว) ติดสว่าง (ยกเว้นสเปค EC / รัสเซีย)</div>
+<div class="list">2.&nbsp;&nbsp;หยุดรถและตรวจสองว่าเครื่องยนต์ดับผ่านการควบคุมระบบ i-stop แล้วสตาร์ทอีกครั้ง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">18</div>
+</td>
+<td id="" align="left">
+<div class="tbody">บิดสวิตช์สตาร์ท OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</body>
+</html>

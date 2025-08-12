@@ -1,0 +1,888 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>การวิเคราะห์ปัญหาบนรถ [เซ็นเซอร์เลเซอร์]</title>
+</head>
+<body><a name="id0402c4800200"></a><p class="servinfo-title"><span class="servinfo-head"></span>การวิเคราะห์ปัญหาบนรถ [เซ็นเซอร์เลเซอร์]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0402c4800200</p><br clear="all"><a name="id0402c480020001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>คำอธิบายการทดสอบการวิเคราะห์ปัญหาบนรถ (OBD)</p>
+<div class="list">•&nbsp;&nbsp;การทดสอบ OBD จะตรวจสอบความสมบูรณ์และฟังก์ชันของเซ็นเซอร์เลเซอร์และส่งผลลัพธ์เมื่อมีการร้องขอจากการทดสอบเฉพาะ</div>
+<div class="list">•&nbsp;&nbsp;การทดสอบการวิเคราะห์ปัญหาบนรถยังรวมถึง:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ดำเนินการตรวจสอบแบบด่วนของเซ็นเซอร์เลเซอร์ที่มักดำเนินการเมื่อเริ่มต้นขั้นตอนการวิเคราะห์แต่ละขั้นตอน</div>
+<div class="list">―&nbsp;&nbsp;ทำการตรวจสอบความถูกต้องหลังการซ่อมแซมเพื่อให้แน่ใจว่าไม่มีความผิดพลาดอื่นๆ เกิดขึ้นระหว่างการซ่อม</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;การทดสอบ OBD แบ่งออกเป็น 3 การทดสอบ:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;อ่าน/ลบผลการวิเคราะห์ปัญหา, ตรวจสอบและบันทึก PID และโหมดคำสั่งการทำงาน</div>
+</dd>
+</dl><br clear="all"><p><a name="id0402c480020002"></a><p class="topic-title"><span class="topic-head"></span>อ่าน/ลบผลการวิเคราะห์ปัญหา</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชันนี้ทำให้คุณสามารถอ่านและลบรหัสวิเคราะห์ปัญหาในหน่วยความจำของเซ็นเซอร์เลเซอร์ได้</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id0402c480020003"></a><p class="topic-title"><span class="topic-head"></span>ตรวจสอบและบันทึก PID/Data</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชันนี้ทำให้คุณสามารถเข้าถึงค่าของข้อมูลค่าใดค่าหนึ่ง, สัญญาณอินพุท, ค่าที่คำนวณ และข้อมูลสถานะระบบ</div>
+</dd>
+</dl>
+</p><br clear="all"><a name="id0402c480020004"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ขั้นตอนการอ่านรหัสวิเคราะห์ปัญหา</p><br clear="all"><p><a name="id0402c480020005"></a><p class="topic-title"><span class="topic-head"></span>การทดสอบ CMDTC ด้วยตนเอง</p>
+<p class="list">1.&nbsp;&nbsp;ต่อ M-MDS (IDS) เข้ากับ DLC-2</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;หลังจากรถได้รับการระบุแล้ว ให้เลือกรายการต่อไปนี้จากหน้าจอการตั้งค่าเริ่มต้นของ IDS</p>
+<p class="list">
+<dl class="list">
+<dd>(1)&nbsp;&nbsp;เลือก &ldquo;Self Test&rdquo;</dd>
+<dd>
+</dd>
+</dl>
+<dl class="list">
+<dd>(2)&nbsp;เลือก &ldquo;All CMDTCs&rdquo;</dd>
+<dd>
+</dd>
+</dl>
+</p>
+<p class="list">3.&nbsp;&nbsp;ทำการตรวจสอบรหัสวิเคราะห์ปัญหาตามคำแนะนำบนหน้าจอ</p>
+<p class="list">
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;หากมีรหัสวิเคราะห์ปัญหาปรากฏขึ้น ให้ดำเนินการแก้ไขปัญหาตามการตรวจสอบรหัสวิเคราะห์ปัญหานั้นๆ</div>
+</dd>
+</dl>
+</p>
+<p class="list">4.&nbsp;&nbsp;หลังจากการซ่อมเสร็จสมบูรณ์ ให้ลบรหัสวิเคราะห์ปัญหาทั้งหมดที่เก็บอยู่ในเซ็นเซอร์เลเซอร์ (ดูที่ <font class="intxref-label"><a href="#id0402c480020006">ขั้นตอนการลบรหัสวิเคราะห์ปัญหา</a></font>)</p>
+<p class="list">
+</p>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;ข้อมูล Snapshot จะปรากฏขึ้นที่ด้านบนของหน้าจอช่วยเหลือ เมื่อเลือกรหัสวิเคราะห์ปัญหาที่ปรากฏ</div>
+<div class="list">•&nbsp;&nbsp;ข้อมูลของรหัสวิเคราะห์ปัญหาทั้งหมดที่ตรวจพบในปัจจุบันจะถูกเก็บบันทึก</div>
+</div>
+</dd>
+</dl>
+</p><br clear="all"><a name="id0402c480020006"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ขั้นตอนการลบรหัสวิเคราะห์ปัญหา</p><br clear="all"><p><a name="id0402c480020007"></a><p class="topic-title"><span class="topic-head"></span>ขั้นตอนการลบรหัสวิเคราะห์ปัญหา CMDTC</p>
+<p class="list">1.&nbsp;&nbsp;ต่อ M-MDS (IDS) เข้ากับ DLC-2</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;หลังจากรถได้รับการระบุแล้ว ให้เลือกรายการต่อไปนี้จากหน้าจอการตั้งค่าเริ่มต้นของ IDS</p>
+<p class="list">
+<dl class="list">
+<dd>(1)&nbsp;&nbsp;เลือก &ldquo;Self Test&rdquo;</dd>
+<dd>
+</dd>
+</dl>
+<dl class="list">
+<dd>(2)&nbsp;เลือก &ldquo;All CMDTCs&rdquo;</dd>
+<dd>
+</dd>
+</dl>
+</p>
+<p class="list">3.&nbsp;&nbsp;ทำการตรวจสอบรหัสวิเคราะห์ปัญหาตามคำแนะนำบนหน้าจอ</p>
+<p class="list">
+</p>
+<p class="list">4.&nbsp;&nbsp;กดปุ่ม Clear บนหน้าจอรหัสวิเคราะห์ปัญหาเพื่อลบรหัสวิเคราะห์ปัญหา</p>
+<p class="list">
+</p>
+<p class="list">5.&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF</p>
+<p class="list">
+</p>
+<p class="list">6.&nbsp;&nbsp;บิดสวิตช์สตาร์ท ON และรอเป็นเวลา <span>5 s หรือมากกว่า</span></p>
+<p class="list">
+</p>
+<p class="list">7.&nbsp;&nbsp;ทำการตรวจสอบรหัสวิเคราะห์ปัญหา (ดูที่ <font class="intxref-label"><a href="#id0402c480020004">ขั้นตอนการอ่านรหัสวิเคราะห์ปัญหา</a></font>)</p>
+<p class="list">
+</p>
+<p class="list">8.&nbsp;&nbsp;ตรวจสอบว่าไม่มีรหัสวิเคราะห์ปัญหาปรากฏขึ้น</p>
+<p class="list">
+</p>
+</p><br clear="all"><a name="id0402c480020008"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ขั้นตอนการตรวจสอบและบันทึก PID/Data</p>
+<p class="list">1.&nbsp;&nbsp;ต่อ M-MDS (IDS) เข้ากับ DLC-2</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;หลังจากรถได้รับการระบุแล้ว ให้เลือกรายการต่อไปนี้จากหน้าจอการตั้งค่าเริ่มต้นของ IDS</p>
+<p class="list">
+<dl class="list">
+<dd>(1)&nbsp;&nbsp;เลือก &ldquo;DataLogger&rdquo;</dd>
+<dd>
+</dd>
+</dl>
+<dl class="list">
+<dd>(2)&nbsp;&nbsp;เลือก &ldquo;Modules&rdquo;</dd>
+<dd>
+</dd>
+</dl>
+<dl class="list">
+<dd>(3)&nbsp;เลือก &ldquo;SCBS&rdquo;</dd>
+<dd>
+</dd>
+</dl>
+</p>
+<p class="list">3.&nbsp;&nbsp;เลือก PID ที่ใช้ได้จากตาราง PID</p>
+<p class="list">
+</p>
+<p class="list">4.&nbsp;&nbsp;ตรวจสอบข้อมูล PID ตามคำแนะนำบนหน้าจอ</p>
+<p class="list">
+</p>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่นบนหน้าจอข้อมูล PID มีไว้เพื่อตรวจสอบค่าที่คำนวณได้ของสัญญาณอินพุท/เอาท์พุทในโมดูล ดังนั้น ถ้าค่าที่ตรวจสอบของส่วนที่ส่งสัญญาณเอาท์พุทไม่อยู่ในค่าที่กำหนด คุณจำเป็นต้องตรวจสอบค่าที่ตรวจสอบของส่วนที่รับสัญญาณอินพุทที่เกี่ยวข้องกับการควบคุมส่วนที่ส่งสัญญาณเอาท์พุทที่ใช้ได้ นอกจากนั้น คุณจำเป็นต้องตรวจสอบส่วนที่ส่งสัญญาณเอาท์พุทแต่ละส่วนด้วย เนื่องจากระบบไม่ได้แสดงความผิดพลาดในการทำงานของส่วนที่ส่งสัญญาณเอาท์พุทว่าเป็นความผิดปกติในค่าที่ตรวจสอบ</div>
+</div>
+</dd>
+</dl><br clear="all"><a name="id0402c480020009"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ขั้นตอนการเข้าถึงข้อมูล Snapshot</p>
+<p class="list">1.&nbsp;&nbsp;ต่อ M-MDS (IDS) เข้ากับ DLC-2</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;หลังจากรถได้รับการระบุแล้ว ให้เลือกรายการต่อไปนี้จากหน้าจอการตั้งค่าเริ่มต้นของ IDS</p>
+<p class="list">
+<dl class="list">
+<dd>(1)&nbsp;&nbsp;เลือก &ldquo;Self Test&rdquo;</dd>
+<dd>
+</dd>
+</dl>
+<dl class="list">
+<dd>(2)&nbsp;&nbsp;เลือก &ldquo;Modules&rdquo;</dd>
+<dd>
+</dd>
+</dl>
+<dl class="list">
+<dd>(3)&nbsp;เลือก &ldquo;SCBS&rdquo;</dd>
+<dd>
+</dd>
+</dl>
+</p>
+<p class="list">3.&nbsp;&nbsp;จากนั้น เลือก &ldquo;Retrieve CMDTCs&rdquo; และปฏิบัติตามขั้นตอนที่แนะนำบนหน้าจอ IDS</p>
+<p class="list">
+</p>
+<p class="list">4.&nbsp;&nbsp;เรียกดูข้อมูล Snapshot ตามคำแนะนำบนหน้าจอ IDS</p>
+<p class="list">
+</p>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;ข้อมูล Snapshot จะปรากฏขึ้นที่ด้านบนของหน้าจอช่วยเหลือ เมื่อเลือกรหัสวิเคราะห์ปัญหาที่ปรากฏ</div>
+<div class="list">•&nbsp;&nbsp;ข้อมูล Snapshot จะจัดเก็บข้อมูลรหัสวิเคราะห์ปัญหาที่ตรวจพบในปัจจุบัน</div>
+</div>
+</dd>
+</dl><br clear="all"><a name="id0402c480020010"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ตารางรหัสวิเคราะห์ปัญหา</p>
+<div class="ptxt">&times;: สามารถทำได้</div>
+<div class="ptxt">-: ไม่มี</div>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟเตือนหลัก</p>
+</th>
+<th id="" align="center">
+<p class="thead">ข้อความในจอ TFT LCD</p>
+</th>
+<th id="" align="center">
+<p class="thead">ตำแหน่งความบกพร่อง</p>
+</th>
+<th id="" align="center">
+<p class="thead">Fail-safe</p>
+</th>
+<th id="" align="center">
+<p class="thead">รอบการขับ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ประเภทการทดสอบด้วยตนเอง<sup>* 1</sup></p>
+</th>
+<th id="" align="center">
+<p class="thead">ฟังก์ชั่นหน่วยความจำ</p>
+</th>
+<th id="" align="center">
+<p class="thead">หน้า</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0001:00</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">SCBS</div>
+<div class="tbody"> การตรวจสอบ</div>
+<div class="tbody"> จำเป็น</div>
+</td>
+<td id="" align="left" rowspan="5">
+<div class="tbody">สาย CAN</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left" rowspan="5">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0402c4894900.html">รหัสวิเคราะห์ปัญหา U0001:00/U0100:00/U0121:00/U0131:00/U0155:00 [เซ็นเซอร์เลเซอร์]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0100:00</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0121:00</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0131:00</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0155:00</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0401:68</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">SCBS</div>
+<div class="tbody"> การตรวจสอบ</div>
+<div class="tbody"> จำเป็น</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ข้อความผิดปกติจาก PCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0402c4895000.html">รหัสวิเคราะห์ปัญหา U0401:68 [เซ็นเซอร์เลเซอร์]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0415:68</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">SCBS</div>
+<div class="tbody"> การตรวจสอบ</div>
+<div class="tbody"> จำเป็น</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ข้อความผิดปกติจาก DSC HU/CM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0402c4895100.html">รหัสวิเคราะห์ปัญหา U0415:68 [เซ็นเซอร์เลเซอร์]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0420:68</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">SCBS</div>
+<div class="tbody"> การตรวจสอบ</div>
+<div class="tbody"> จำเป็น</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ข้อความผิดปกติจาก EPS CM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0402c4895200.html">รหัสวิเคราะห์ปัญหา U0420:68 [เซ็นเซอร์เลเซอร์]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0423:68</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">SCBS</div>
+<div class="tbody"> การตรวจสอบ</div>
+<div class="tbody"> จำเป็น</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ข้อความผิดปกติจากแผงหน้าปัด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0402c4895300.html">รหัสวิเคราะห์ปัญหา U0423:68 [เซ็นเซอร์เลเซอร์]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U1A14:49</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">SCBS</div>
+<div class="tbody"> การตรวจสอบ</div>
+<div class="tbody"> จำเป็น</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เซ็นเซอร์เลเซอร์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0402c4894700.html">รหัสวิเคราะห์ปัญหา U1A14:49 [เซ็นเซอร์เลเซอร์]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2300:55</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">SCBS</div>
+<div class="tbody"> การตรวจสอบ</div>
+<div class="tbody"> จำเป็น</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="tbody">ไม่ได้บันทึกข้อมูลการกำหนดค่าหรือข้อมูลผิดพลาด</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0402c4894800.html">รหัสวิเคราะห์ปัญหา U2300:55/U2300:56 [เซ็นเซอร์เลเซอร์]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2300:56</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:00</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">SCBS</div>
+<div class="tbody"> การตรวจสอบ</div>
+<div class="tbody"> จำเป็น</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="tbody">เซ็นเซอร์เลเซอร์บกพร่อง (ความบกพร่องภายใน)</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0402c4894600.html">รหัสวิเคราะห์ปัญหา U3000:00/U3000:64 [เซ็นเซอร์เลเซอร์]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:64</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:66</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">SCBS</div>
+<div class="tbody"> การตรวจสอบ</div>
+<div class="tbody"> จำเป็น</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เซ็นเซอร์เลเซอร์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0402c4895400.html">รหัสวิเคราะห์ปัญหา U3000:66 [เซ็นเซอร์เลเซอร์]</a></font>)</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;:C: การทดสอบ CMDTC ด้วยตนเอง</div><br clear="all"><a name="id0402c480020011"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ตารางการตรวจสอบข้อมูล / PID</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ชื่อ PID (ความหมาย)</p>
+</th>
+<th id="" align="center">
+<p class="thead">หน่วย / สภาวะ</p>
+</th>
+<th id="" align="center">
+<p class="thead">สภาวะการทำงาน (ค่าอ้างอิง)</p>
+</th>
+<th id="" align="center">
+<p class="thead">การปฏิบัติ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">DIST_BMP_TGT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">m</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนแปลงตามระยะทางตั้งแต่กันชนจนถึงเป้าหมายที่เซ็นเซอร์เลเซอร์ตรวจจับได้</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ทำการตรวจสอบรหัสวิเคราะห์ปัญหาสำหรับเซ็นเซอร์เลเซอร์</div>
+<div class="tbody">(ดูที่ <font class="intxref-label"><a href="#id0402c480020004">ขั้นตอนการอ่านรหัสวิเคราะห์ปัญหา</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">VPWR_IG1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันไฟฟ้าของโมดูล (IG1)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจสอบแบตเตอรี่</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0117i0800600.html">การตรวจสอบแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0117i08006i1.html">การตรวจสอบแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (รุ่นที่ไม่มีระบบ i-stop)]</a></font>)</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0117h6800600.html">การตรวจสอบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+<div class="tbody">ตรวจสอบปุ่มกดสตาร์ท</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092100802300.html">การตรวจสอบปุ่มกดสตาร์ท</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">VSPD</div>
+</td>
+<td id="" align="center">
+<div class="tbody">KPH, MPH</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความเร็วรถ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจสอบ DSC HU/CM</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id041500801100.html">การตรวจสอบ DSC HU/CM</a></font>)</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p><br clear="all"><a name="id0402c480020012"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ตารางข้อมูล Snapshot</p>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;เซ็นเซอร์เลเซอร์จะเก็บข้อมูลสองประเภทต่อไปนี้ เมื่อตรวจพบรหัสวิเคราะห์ปัญหาและจะแสดงข้อมูล Snapshot ใน M-MDS</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;เซ็นเซอร์เลเซอร์ตรวจพบข้อมูลของรถ</div>
+<div class="list">―&nbsp;&nbsp;ข้อมูลรถที่ตรวจพบโดยแผงหน้าปัด และได้รับจากชุดเปิด/ปิดการทำงานผ่านสัญญาณ CAN</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ดูที่ตารางการตรวจสอบ PID เพื่อยืนยันสถานะการทำงานของเซ็นเซอร์เลเซอร์ เมื่อเซ็นเซอร์เลเซอร์ไม่จัดเก็บรหัสวิเคราะห์ปัญหา (ดูที่ <font class="intxref-label"><a href="#id0402c480020011">ตารางการตรวจสอบ PID/DATA</a></font>)</div>
+<div class="list">•&nbsp;&nbsp;รายการข้อมูล Snapshot ไม่ปรากฏขึ้นตามรหัสวิเคราะห์ปัญหาที่ตรวจพบ</div>
+</div>
+</dd>
+</dl>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รายการข้อมูล Snapshot</p>
+</th>
+<th id="" align="center">
+<p class="thead">หน่วย</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายละเอียดข้อมูล</p>
+</th>
+<th id="" align="center">
+<p class="thead">วิธีการอ่าน/ใช้ข้อมูล</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายการตรวจสอบข้อมูลที่เกี่ยวข้อง</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">DSC_R_BRK</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OK/Error</div>
+</td>
+<td id="" align="left">
+<div class="tbody">DSC ตอบสนองต่อสัญญาณขอเบรกจากโมดูล SCBS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มี</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มี</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">DSC_R_BRK_C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OK/Error</div>
+</td>
+<td id="" align="left">
+<div class="tbody">DSC ตอบสนองต่อการเปลี่ยนแปลงเกณฑ์การช่วยเบรกจากโมดูล SCBS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มี</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มี</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">DSC_R_NOREQ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OK/Error</div>
+</td>
+<td id="" align="left">
+<div class="tbody">DSC ตอบสนองขณะไม่มีสัญญาณขอจากโมดูล SCBS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มี</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มี</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">DSC_R_PRECH</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OK/Error</div>
+</td>
+<td id="" align="left">
+<div class="tbody">DSC ตอบสนองต่อสัญญาณขอชาร์จล่วงหน้าจากโมดูล SCBS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มี</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มี</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">DSC_SYSTEM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OK/Error</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สภาวะระบบ DSC</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มี</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มี</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ECU_IN_TEMP</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิภายในของ EPS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มี</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มี</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">PCM_R_NOREQ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OK/Error</div>
+</td>
+<td id="" align="left">
+<div class="tbody">PCM ตอบสนองขณะไม่มีสัญญาณขอจากโมดูล SCBS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มี</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มี</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">PCM_R_REQ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OK/Error</div>
+</td>
+<td id="" align="left">
+<div class="tbody">PCM ตอบสนองต่อสัญญาณขอจากโมดูล SCBS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มี</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มี</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">PCM_SYSTEM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OK/Error</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สภาวะระบบ PCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มี</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มี</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">TOTAL_DIST</div>
+</td>
+<td id="" align="center">
+<div class="tbody">km/miles</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระยะทางรวมสะสมตั้งแต่รถเสร็จสมบูรณ์จนเมื่อเซ็นเซอร์เลเซอร์ตรวจพบรหัสวิเคราะห์ปัญหา (ค่าของมาตรบันทึกระยะทางในแผงหน้าปัด)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระยะทางเมื่อเซ็นเซอร์เลเซอร์ตรวจพบรหัสวิเคราะห์ปัญหาสามารถคำนวณได้ด้วยขั้นตอนต่อไปนี้</div>
+<div class="list">1.&nbsp;&nbsp;ตรวจสอบค่าจากมาตรบันทึกระยะทางในแผงหน้าปัด</div>
+<div class="list">2.&nbsp;&nbsp;ตรวจสอบรายการข้อมูล Snapshot TOTAL_DIST</div>
+<div class="list">3.&nbsp;&nbsp;ลบ 2 ออกจาก 1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มี</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">TOTAL_TIME</div>
+</td>
+<td id="" align="center">
+<div class="tbody">hh:mm:ss*<sup>1</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">เวลาที่ผ่านไปสะสมตั้งแต่รถเสร็จสมบูรณ์จนเมื่อเซ็นเซอร์เลเซอร์ตรวจพบรหัสวิเคราะห์ปัญหา</div>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;เมื่อถอดฟิวส์ ROOM และบิดสวิตช์สตาร์ทไปที่ OFF เวลาจะไม่ถูกนำไปรวมกับช่วงเวลาที่ผ่านไป</div>
+</div>
+</dd>
+</dl>
+</td>
+<td id="" align="left">
+<div class="tbody">ช่วงเวลาที่ผ่านไปเมื่อเซ็นเซอร์เลเซอร์ตรวจพบรหัสวิเคราะห์ปัญหาสามารถคำนวณได้ด้วยขั้นตอนต่อไปนี้</div>
+<div class="list">1.&nbsp;&nbsp;ตรวจสอบรายการ PID TOTAL_TIME บนแผงหน้าปัด</div>
+<div class="list">2.&nbsp;&nbsp;ตรวจสอบรายการข้อมูล Snapshot TOTAL_TIME</div>
+<div class="list">3.&nbsp;&nbsp;ลบ 2 ออกจาก 1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">TOTAL_TIME<sup>*2</sup></div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">VPWR</div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แหล่งจ่ายไฟ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มี</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มี</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">VSPD</div>
+</td>
+<td id="" align="center">
+<div class="tbody">KPH, MPH</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความเร็วรถ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มี</div>
+</td>
+<td id="" align="center">
+<div class="tbody">VSPD</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;:หน่วยวินาที (s) อาจแสดงอยู่หลังจุดทศนิยม</div>
+<div class="deflist">*2&nbsp;&nbsp;:PID แผงหน้าปัด (ดูที่ <font class="extxref-label"><a href="id0902e8960700.html">ตารางการตรวจสอบ PID/DATA [แผงหน้าปัด]</a></font>)</div>
+</body>
+</html>

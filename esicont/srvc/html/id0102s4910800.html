@@ -1,0 +1,517 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>รหัสวิเคราะห์ปัญหา U0073:00, U0101:00, U0121:00, U0131:00, U0140:00, U0151:00, U0155:00, U0214:00, U0235:00 [SKYACTIV-D 2.2]</title>
+</head>
+<body><a name="id0102s4910800"></a><p class="servinfo-title"><span class="servinfo-head"></span>รหัสวิเคราะห์ปัญหา U0073:00, U0101:00, U0121:00, U0131:00, U0140:00, U0151:00, U0155:00, U0214:00, U0235:00 [SKYACTIV-D 2.2]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0102s4910800</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา U0073:00</p>
+</th>
+<th id="" align="left">
+<p class="thead">การสื่อสารระบบ CAN ผิดพลาด (HS CAN)</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สภาวะการตรวจพบ</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ความบกพร่องในสายบัสการสื่อสารระบบ CAN</div>
+<div class="list-title">ข้อมูลสนับสนุนการวิเคราะห์ปัญหา</div>
+<div class="list">•&nbsp;&nbsp;กรณีนี้คือ การตรวจสอบต่อเนื่อง (อื่นๆ)</div>
+<div class="list">•&nbsp;&nbsp;ไฟเตือนตรวจเช็คเครื่องยนต์ไม่ติดสว่าง</div>
+<div class="list">•&nbsp;&nbsp;ไม่มีข้อมูลสภาพรถยนต์ (FREEZE FRAME DATA) (โหมด 2) / ข้อมูล Snapshot</div>
+<div class="list">•&nbsp;&nbsp;รหัสวิเคราะห์ปัญหาถูกเก็บไว้ในหน่วยความจำ PCM</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>ฟังก์ชั่น FAIL-SAFE</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ไม่ได้</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สาเหตุที่เป็นไปได้</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;สายบัสการสื่อสารระบบ CAN บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;PCM บกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>ผังวงจรไฟฟ้าระบบ</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ไม่ได้</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา U0101:00</p>
+</th>
+<th id="" align="left">
+<p class="thead">การสื่อสาร CAN: การสื่อสารกับ TCM ผิดพลาด</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สภาวะการตรวจพบ</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;การสื่อสารระหว่าง PCM และ TCM บกพร่องต่อเนื่องเป็นเวลา <span>5 วินาทีหรือมากกว่า</span></div>
+<div class="list-title">ข้อมูลสนับสนุนการวิเคราะห์ปัญหา</div>
+<div class="list">•&nbsp;&nbsp;กรณีนี้คือ การตรวจสอบต่อเนื่อง (CCM)</div>
+<div class="list">•&nbsp;&nbsp;ไฟเตือนตรวจเช็คเครื่องยนต์จะติดสว่างถ้า PCM ตรวจพบสภาวะความบกพร่องดังกล่าวด้านบนในระหว่างรอบการขับขี่แรก</div>
+<div class="list">•&nbsp;&nbsp;มีข้อมูลสภาพรถยนต์ (FREEZE FRAME DATA) (โหมด 2) / ข้อมูล Snapshot</div>
+<div class="list">•&nbsp;&nbsp;รหัสวิเคราะห์ปัญหาถูกเก็บไว้ในหน่วยความจำ PCM</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>ฟังก์ชั่น FAIL-SAFE</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;การปรับแก้รอบเดินเบาให้สูงขึ้นสำหรับการควบคุมความเร็วรอบเดินเบาถูกยับยั้ง</div>
+<div class="list">•&nbsp;&nbsp;ยับยั้งการดับเครื่องยนต์โดยการใช้งานฟังก์ชั่น i-stop</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สาเหตุที่เป็นไปได้</span></div>
+</td>
+<td id="" align="left">
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;ระหว่างการวิเคราะห์ความบกพร่อง ให้ตรวจสอบการตรวจจับความบกพร่องของรหัสวิเคราะห์ปัญหา U0074:00 หรือ U0115:00 ของ TCM ก่อน</div>
+</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;สายการสื่อสารระบบ CAN ระหว่าง PCM กับ TCM บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;TCM บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;PCM บกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>ผังวงจรไฟฟ้าระบบ</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ไม่ได้</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา U0121:00</p>
+</th>
+<th id="" align="left">
+<p class="thead">การสื่อสาร CAN: การสื่อสารกับ DSC HU/CM ผิดพลาด</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สภาวะการตรวจพบ</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;การสื่อสารระหว่าง PCM และ DSC HU/CM บกพร่องต่อเนื่องเป็นเวลา <span>5 วินาทีหรือมากกว่า</span></div>
+<div class="list-title">ข้อมูลสนับสนุนการวิเคราะห์ปัญหา</div>
+<div class="list">•&nbsp;&nbsp;กรณีนี้คือ การตรวจสอบต่อเนื่อง (CCM)</div>
+<div class="list">•&nbsp;&nbsp;ไฟเตือนตรวจเช็คเครื่องยนต์จะติดสว่างถ้า PCM ตรวจพบสภาวะความบกพร่องดังกล่าวด้านบนในระหว่างรอบการขับขี่แรก</div>
+<div class="list">•&nbsp;&nbsp;มีข้อมูลสภาพรถยนต์ (FREEZE FRAME DATA) (โหมด 2) / ข้อมูล Snapshot</div>
+<div class="list">•&nbsp;&nbsp;รหัสวิเคราะห์ปัญหาถูกเก็บไว้ในหน่วยความจำ PCM</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>ฟังก์ชั่น FAIL-SAFE</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ยับยั้งการดับเครื่องยนต์โดยการใช้งานฟังก์ชั่น i-stop</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สาเหตุที่เป็นไปได้</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;สายการสื่อสารระบบ CAN ระหว่าง PCM กับ DSC HU/CM บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;DSC HU/CM บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;PCM บกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>ผังวงจรไฟฟ้าระบบ</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ไม่ได้</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา U0131:00</p>
+</th>
+<th id="" align="left">
+<p class="thead">การสื่อสาร CAN: การสื่อสารกับโมดูลควบคุม EPS ผิดพลาด</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สภาวะการตรวจพบ</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;การสื่อสารระหว่าง PCM และโมดูลควบคุม EPS บกพร่องต่อเนื่องเป็นเวลา <span>5 วินาทีหรือมากกว่า</span></div>
+<div class="list-title">ข้อมูลสนับสนุนการวิเคราะห์ปัญหา</div>
+<div class="list">•&nbsp;&nbsp;กรณีนี้คือ การตรวจสอบต่อเนื่อง (อื่นๆ)</div>
+<div class="list">•&nbsp;&nbsp;ไฟเตือนตรวจเช็คเครื่องยนต์จะติดสว่างถ้า PCM ตรวจพบสภาวะความบกพร่องดังกล่าวด้านบนในระหว่างรอบการขับขี่แรก</div>
+<div class="list">•&nbsp;&nbsp;มีข้อมูลสภาพรถยนต์ (FREEZE FRAME DATA) (โหมด 2) / ข้อมูล Snapshot</div>
+<div class="list">•&nbsp;&nbsp;รหัสวิเคราะห์ปัญหาถูกเก็บไว้ในหน่วยความจำ PCM</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>ฟังก์ชั่น FAIL-SAFE</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ไม่ได้</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สาเหตุที่เป็นไปได้</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;สายการสื่อสารระบบ CAN ระหว่าง PCM กับโมดูลควบคุม EPS บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุม EPS บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;PCM บกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>ผังวงจรไฟฟ้าระบบ</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ไม่ได้</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา U0140:00</p>
+</th>
+<th id="" align="left">
+<p class="thead">การสื่อสาร CAN: การสื่อสารกับโมดูลควบคุมตัวถังด้านหน้า (FBCM) ผิดพลาด</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สภาวะการตรวจพบ</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;การสื่อสารระหว่าง PCM และโมดูลควบคุมตัวถังด้านหน้า (FBCM) บกพร่องต่อเนื่องเป็นเวลา <span>5 วินาทีหรือมากกว่า</span></div>
+<div class="list-title">ข้อมูลสนับสนุนการวิเคราะห์ปัญหา</div>
+<div class="list">•&nbsp;&nbsp;กรณีนี้คือ การตรวจสอบต่อเนื่อง (อื่นๆ)</div>
+<div class="list">•&nbsp;&nbsp;ไฟเตือนตรวจเช็คเครื่องยนต์จะติดสว่างถ้า PCM ตรวจพบสภาวะความบกพร่องดังกล่าวด้านบนในระหว่างรอบการขับขี่แรก</div>
+<div class="list">•&nbsp;&nbsp;มีข้อมูลสภาพรถยนต์ (FREEZE FRAME DATA) (โหมด 2) / ข้อมูล Snapshot</div>
+<div class="list">•&nbsp;&nbsp;รหัสวิเคราะห์ปัญหาถูกเก็บไว้ในหน่วยความจำ PCM</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>ฟังก์ชั่น FAIL-SAFE</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ไม่ได้</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สาเหตุที่เป็นไปได้</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;สายการสื่อสารระบบ CAN ระหว่าง PCM กับโมดูลควบคุมตัวถังด้านหน้า (FBCM) บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมตัวถังด้านหน้า (FBCM) บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;PCM บกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>ผังวงจรไฟฟ้าระบบ</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ไม่ได้</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา U0151:00</p>
+</th>
+<th id="" align="left">
+<p class="thead">การสื่อสาร CAN: การสื่อสารกับโมดูลควบคุม SAS ผิดพลาด</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สภาวะการตรวจพบ</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;การสื่อสารระหว่าง PCM และโมดูลควบคุม SAS บกพร่องต่อเนื่องเป็นเวลา <span>5 วินาทีหรือมากกว่า</span></div>
+<div class="list-title">ข้อมูลสนับสนุนการวิเคราะห์ปัญหา</div>
+<div class="list">•&nbsp;&nbsp;กรณีนี้คือ การตรวจสอบต่อเนื่อง (อื่นๆ)</div>
+<div class="list">•&nbsp;&nbsp;ไฟเตือนตรวจเช็คเครื่องยนต์ไม่ติดสว่าง</div>
+<div class="list">•&nbsp;&nbsp;ไม่มีข้อมูลสภาพรถยนต์ (FREEZE FRAME DATA) (โหมด 2) / ข้อมูล Snapshot</div>
+<div class="list">•&nbsp;&nbsp;รหัสวิเคราะห์ปัญหาถูกเก็บไว้ในหน่วยความจำ PCM</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>ฟังก์ชั่น FAIL-SAFE</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ไม่ได้</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สาเหตุที่เป็นไปได้</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;สายการสื่อสารระบบ CAN ระหว่าง PCM กับโมดูลควบคุม SAS บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุม SAS บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;PCM บกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>ผังวงจรไฟฟ้าระบบ</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ไม่ได้</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา U0155:00</p>
+</th>
+<th id="" align="left">
+<p class="thead">การสื่อสาร CAN: การสื่อสารกับแผงหน้าปัดผิดพลาด</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สภาวะการตรวจพบ</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;การสื่อสารระหว่าง PCM และแผงหน้าปัดบกพร่องต่อเนื่องเป็นเวลา <span>5 วินาทีหรือมากกว่า</span></div>
+<div class="list-title">ข้อมูลสนับสนุนการวิเคราะห์ปัญหา</div>
+<div class="list">•&nbsp;&nbsp;กรณีนี้คือ การตรวจสอบต่อเนื่อง (CCM)</div>
+<div class="list">•&nbsp;&nbsp;ไฟเตือนตรวจเช็คเครื่องยนต์จะติดสว่างถ้า PCM ตรวจพบสภาวะความบกพร่องดังกล่าวด้านบนในระหว่างรอบการขับขี่แรก</div>
+<div class="list">•&nbsp;&nbsp;มีข้อมูลสภาพรถยนต์ (FREEZE FRAME DATA) (โหมด 2) / ข้อมูล Snapshot</div>
+<div class="list">•&nbsp;&nbsp;รหัสวิเคราะห์ปัญหาถูกเก็บไว้ในหน่วยความจำ PCM</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>ฟังก์ชั่น FAIL-SAFE</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ยับยั้งการดับเครื่องยนต์โดยการใช้งานฟังก์ชั่น i-stop</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สาเหตุที่เป็นไปได้</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;สายการสื่อสารระบบ CAN บกพร่องระหว่าง PCM กับแผงหน้าปัด</div>
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัดบกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;PCM บกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>ผังวงจรไฟฟ้าระบบ</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ไม่ได้</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา U0214:00</p>
+</th>
+<th id="" align="left">
+<p class="thead">การสื่อสาร CAN: การสื่อสารกับชุดเปิด/ปิดการทำงานผิดพลาด</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สภาวะการตรวจพบ</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;การสื่อสารระหว่าง PCM และชุดเปิด/ปิดการทำงานบกพร่องต่อเนื่องเป็นเวลา <span>5 วินาทีหรือมากกว่า</span></div>
+<div class="list-title">ข้อมูลสนับสนุนการวิเคราะห์ปัญหา</div>
+<div class="list">•&nbsp;&nbsp;กรณีนี้คือ การตรวจสอบต่อเนื่อง (อื่นๆ)</div>
+<div class="list">•&nbsp;&nbsp;ไฟเตือนตรวจเช็คเครื่องยนต์ไม่ติดสว่าง</div>
+<div class="list">•&nbsp;&nbsp;ไม่มีข้อมูลสภาพรถยนต์ (FREEZE FRAME DATA) (โหมด 2) / ข้อมูล Snapshot</div>
+<div class="list">•&nbsp;&nbsp;รหัสวิเคราะห์ปัญหาถูกเก็บไว้ในหน่วยความจำ PCM</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>ฟังก์ชั่น FAIL-SAFE</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ไม่ได้</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สาเหตุที่เป็นไปได้</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;สายการสื่อสารระบบ CAN บกพร่องระหว่าง PCM กับชุดเปิด/ปิดการทำงาน</div>
+<div class="list">•&nbsp;&nbsp;ชุดเปิด/ปิดการทำงานบกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;PCM บกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>ผังวงจรไฟฟ้าระบบ</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ไม่ได้</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา U0235:00</p>
+</th>
+<th id="" align="left">
+<p class="thead">การสื่อสาร CAN: การสื่อสารกับเซ็นเซอร์เลเซอร์ผิดพลาด</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สภาวะการตรวจพบ</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;การสื่อสารระหว่าง PCM และเซ็นเซอร์เลเซอร์บกพร่องต่อเนื่องเป็นเวลา <span>5 วินาทีหรือมากกว่า</span></div>
+<div class="list-title">ข้อมูลสนับสนุนการวิเคราะห์ปัญหา</div>
+<div class="list">•&nbsp;&nbsp;กรณีนี้คือ การตรวจสอบต่อเนื่อง (อื่นๆ)</div>
+<div class="list">•&nbsp;&nbsp;ไฟเตือนตรวจเช็คเครื่องยนต์ไม่ติดสว่าง</div>
+<div class="list">•&nbsp;&nbsp;ไม่มีข้อมูลสภาพรถยนต์ (FREEZE FRAME DATA) (โหมด 2) / ข้อมูล Snapshot</div>
+<div class="list">•&nbsp;&nbsp;รหัสวิเคราะห์ปัญหาถูกเก็บไว้ในหน่วยความจำ PCM</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>ฟังก์ชั่น FAIL-SAFE</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ไม่ได้</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สาเหตุที่เป็นไปได้</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;สายการสื่อสารระบบ CAN ระหว่าง PCM กับเซ็นเซอร์เลเซอร์บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;เซ็นเซอร์เลเซอร์บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;PCM บกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>ผังวงจรไฟฟ้าระบบ</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ไม่ได้</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p><br clear="all"><a name="id0102s491080001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ขั้นตอนการวิเคราะห์ปัญหา</p>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบตามขั้นตอนการวิเคราะห์ปัญหาในการวิเคราะห์ปัญหาบนรถ [ระบบการสื่อสารแบบมัลติเพล็กซ์] (ดูที่ <font class="extxref-label"><a href="id100205000000.html">คำนำ [SKYACTIV-D 2.2 (พวงมาลัยซ้าย)]</a></font>) (ดูที่ <font class="extxref-label"><a href="id100206000000.html">คำนำ [SKYACTIV-D 2.2 (พวงมาลัยขวา)]</a></font>)</div>
+</body>
+</html>

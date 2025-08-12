@@ -1,0 +1,577 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>ระบบป้องกันการโจรกรรม</title>
+</head>
+<body><a name="id091400003700"></a><p class="servinfo-title"><span class="servinfo-head"></span>ระบบป้องกันการโจรกรรม</p>
+<hr>
+<p class="servinfo-title-id" align="right">id091400003700</p><br clear="all"><a name="id09140000370001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รายละเอียด</p>
+<div class="list">•&nbsp;&nbsp;ระบบป้องกันการโจรกรรมจะสั่งการไซเรน หรือแตรรถของระบบป้องกันการโจรกรรม และไฟเตือนฉุกเฉินให้ทำงานหากประตู, ประตูท้าย หรือฝากระโปรงหน้าถูกเปิดอย่างไม่ถูกต้อง</div>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่นการส่งสัญญาณบอกตำแหน่งของตัวรถด้วยไฟกะพริบและเสียงจะมีการนำมาใช้ซึ่งช่วยให้สามารถมองเห็นการทำงานของระบบป้องกันการโจรกรรม</div>
+<div class="list">•&nbsp;&nbsp;สัญญาณอินพุท/เอาท์พุทของระบบป้องกันการโจรกรรมจะถูกควบคุมโดยโมดูลควบคุมตัวถังด้านหลัง (RBCM)</div>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมตัวถังด้านหลัง (RBCM) จะสั่งงานโหมด Fail-Safe ของระบบป้องกันการโจรกรรม (ดูที่ <font class="extxref-label"><a href="id094000002600.html">โหมดควบคุมตัวถังด้านหลัง (RBCM)</a></font>)</div><br clear="all"><a name="id09140000370002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ภาพโครงสร้าง</p><br clear="all"><p><a name="id09140000370003"></a><p class="topic-title"><span class="topic-head"></span>รุ่นที่มีเซ็นเซอร์ตรวจจับผู้บุกรุก</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001520.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001520</div>
+</td>
+</tr>
+</table>
+</p><br clear="all"><p><a name="id09140000370004"></a><p class="topic-title"><span class="topic-head"></span>รุ่นที่ไม่มีเซ็นเซอร์ตรวจจับผู้บุกรุก</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001521.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001521</div>
+</td>
+</tr>
+</table>
+</p><br clear="all"><a name="id09140000370005"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ผังวงจรระบบ</p><br clear="all"><p><a name="id09140000370006"></a><p class="topic-title"><span class="topic-head"></span>รุ่นที่มีเซ็นเซอร์ตรวจจับผู้บุกรุก</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001204.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001204</div>
+</td>
+</tr>
+</table>
+</p><br clear="all"><p><a name="id09140000370007"></a><p class="topic-title"><span class="topic-head"></span>รุ่นที่ไม่มีเซ็นเซอร์ตรวจจับผู้บุกรุก</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001474.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001474</div>
+</td>
+</tr>
+</table>
+</p><br clear="all"><a name="id09140000370008"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p><br clear="all"><p><a name="id09140000370009"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นการส่งสัญญาณบอกตำแหน่งของตัวรถด้วยไฟกะพริบและเสียง</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เมื่อล็อครถโดยใช้กุญแจรีโมท ตัวส่งสัญญาณรีโมทจะอยู่ในโหมดเตรียมสแตนด์บาย โหมดสแตนบายด์ ไฟเตือนฉุกเฉินจะกะพริบหนึ่งครั้ง</div>
+<div class="list">•&nbsp;&nbsp;เมื่อปลดล็อครถโดยใช้กุญแจรีโมท ตัวส่งสัญญาณรีโมทจะอยู่ในโหมดเริ่มต้น ไฟเตือนฉุกเฉินจะกะพริบสองครั้ง</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09140000370010"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นยกเลิกการทำงานของเซ็นเซอร์ตรวจจับผู้บุกรุก</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ปุ่มยกเลิกการทำงานของเซ็นเซอร์ตรวจจับผู้บุกรุกจะติดตั้งบนตัวส่งสัญญาณรีโมทของกุญแจรีโมท หากปุ่มยกเลิกการทำงานของเซ็นเซอร์ตรวจจับผู้บุกรุกอยู่ที่ On ขณะเปิดใช้ระบบป้องกันการโจรกรรมไว้ก่อน การส่งคลื่นอัลตร้าโซนิกของเซ็นเซอร์ตรวจจับผู้บุกรุกจะถูกตัด การตรวจจับการเคลื่อนไหวจะหยุดทำงาน</div>
+</dd>
+</dl>
+</p><br clear="all"><a name="id09140000370011"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน (รุ่นที่ไม่มีเซ็นเซอร์ตรวจจับผู้บุกรุก)</p><br clear="all"><p><a name="id09140000370012"></a><p class="topic-title"><span class="topic-head"></span>การเปลี่ยนโหมด</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมตัวถังด้านหลัง (RBCM) จะสับเปลี่ยนโหมดระบบป้องกันการโจรกรรมตามสวิตช์สตาร์ทและสภาวะของประตู<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5jjn00000719.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5jjn00000719</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09140000370013"></a><p class="topic-title"><span class="topic-head"></span>โหมดหยุดการทำงาน</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ในโหมดนี้ การทำงานของระบบป้องกันการโจรกรรมทั้งหมดจะหยุดทำงาน</div>
+<div class="list">•&nbsp;&nbsp;ระบบจะเปลี่ยนเป็นโหมดหยุดการทำงานเมื่อตรวจพบสภาวะใดๆ ดังต่อไปนี้</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;สตาร์ทอยู่ที่ ACC หรือ ON (เครื่องยนต์ไม่ทำงาน)</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09140000370014"></a><p class="topic-title"><span class="topic-head"></span>โหมดเริ่มต้น</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;โหมดนี้เป็นโหมดเตรียมพร้อมก่อนจะเปลี่ยนเป็นโหมดสแตนด์บาย ระบบไม่ได้เปลี่ยนเป็นโหมดการแจ้งเตือนโดยตรงจากโหมดนี้</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">สภาวะการเปลี่ยนเป็นโหมดเริ่มต้น</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ระบบจะเปลี่ยนจากโหมดหยุดการทำงานเป็นโหมดเริ่มต้นหากตรวจพบสภาวะใดๆ ดังต่อไปนี้</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;สวิตช์สตาร์ทอยู่ที่ OFF (LOCK)</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ระบบเปลี่ยนจากโหมดเตรียมการสแตนด์บาย,โหมดสแตนด์บาย, โหมดการแจ้งเตือน และโหมดเตรียมการแจ้งเตือนเป็นโหมดเริ่มต้นหากตรวจพบสภาวะการยกเลิกในแต่ละโหมด</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">เปลี่ยนสภาวะเป็นโหมดเตรียมการสแตนด์บาย</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ระบบจะเปลี่ยนเป็นโหมดเตรียมการสแตนด์บายหากตรวจพบสภาวะใดๆ ดังต่อไปนี้</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ทำการล็อครถโดยใช้กุญแจหรือปุ่มล็อคของตัวส่งสัญญาณรีโมทขณะที่ประตูทุกบาน ประตูท้าย และฝากระโปรงหน้าปิดอยู่</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09140000370015"></a><p class="topic-title"><span class="topic-head"></span>โหมดเตรียมการสแตนด์บาย</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;โหมดนี้เป็นโหมดก่อนเข้าสู่โหมดสแตนด์บาย</div>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบสภาวะยกเลิกการทำงาน ระบบจะเปลี่ยนเป็นโหมดเริ่มต้น</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">สภาวะการเปลี่ยนเป็นโหมดสแตนด์บาย</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;หากอยู่ในโหมดเตรียมการสแตนด์บายเป็นเวลาประมาณ 20 วินาที ระบบจะเปลี่ยนเป็นโหมดสแตนด์บาย</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">สภาวะการยกเลิก</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบสภาวะต่อไปนี้ โหมดเตรียมการแสตนด์บายจะถูกยกเลิก และระบบจะเปลี่ยนเป็นโหมดเริ่มต้น</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;สวิตช์ล็อคประตูหน้าอยู่ที่ On (ประตูเปิด), หรือสวิตช์ล็อคประตูหลังอยู่ที่ On (ประตูหลังเปิด) หรือสวิตช์ล็อคประตูท้ายอยู่ที่ On (ประตูท้ายเปิด) หรือสวิตช์ล็อคฝากระโปรงหน้าอยู่ที่ Off (ฝากระโปรงหน้าเปิด)</div>
+<div class="list">―&nbsp;&nbsp;สวิตช์เชื่อมโยงล็อคประตูอยู่ในตำแหน่ง UNLOCK</div>
+<div class="list">―&nbsp;&nbsp;สวิตช์สตาร์ทอยู่ที่ตำแหน่ง ACC หรือ ON (เครื่องยนต์ไม่ทำงาน)</div>
+<div class="list">―&nbsp;&nbsp;ปลดล็อคประตูโดยใช้ตัวส่งสัญญาณรีโมท</div>
+<div class="list">―&nbsp;&nbsp;เบ้าเสียบกุญแจประตูด้านคนขับถูกปลดล็อค</div>
+<div class="list">―&nbsp;&nbsp;เปิดประตูท้ายโดยใช้สวิตช์เปิดประตูท้าย (รุ่นที่มีระบบกุญแจรีโมทอัจฉริยะ)</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09140000370016"></a><p class="topic-title"><span class="topic-head"></span>โหมดสแตนด์บาย</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ระบบจะเริ่มต้นการตรวจสอบประมาณ 20 วินาทีหลังจากประตูถูกล็อคสำหรับการเปิด/การปิดประตูที่ไม่ได้รับอนุญาต หากตรวจพบการดำเนินการที่ไม่ได้รับอนุญาต ระบบจะเปลี่ยนเป็นโหมดแจ้งเตือน</div>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบสภาวะยกเลิกการทำงาน ระบบจะเปลี่ยนเป็นโหมดเริ่มต้น</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">สภาวะการเปลี่ยนเป็นโหมดแจ้งเตือน</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบสภาวะต่อไปนี้ ระบบจะเปลี่ยนเป็นโหมดการแจ้งเตือน</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;สวิตช์สตาร์ทอยู่ที่ ON (เครื่องยนต์ไม่ทำงาน)</div>
+<div class="list">―&nbsp;&nbsp;สวิตช์ล็อคประตูอยู่ที่ On (ประตูเปิด)</div>
+<div class="list">―&nbsp;&nbsp;สวิตช์ล็อคประตูอยู่ที่ On (ประตูท้ายเปิด)</div>
+<div class="list">―&nbsp;&nbsp;สวิตช์ล็อคฝากระโปรงหน้าอยู่ที่ Off (ฝากระโปรงหน้าเปิด)</div>
+<div class="list">―&nbsp;&nbsp;สวิตช์เชื่อมโยงล็อคประตูอยู่ในตำแหน่ง UNLOCK</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">สภาวะการยกเลิก</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบสภาวะต่อไปนี้ โหมดแสตนด์บายจะถูกยกเลิก และระบบจะเปลี่ยนเป็นโหมดเริ่มต้น</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ปลดล็อคประตูโดยใช้ตัวส่งสัญญาณรีโมท</div>
+<div class="list">―&nbsp;&nbsp;สตาร์ทอยู่ที่ ACC หรือ ON (เครื่องยนต์ไม่ทำงาน)</div>
+<div class="list">―&nbsp;&nbsp;เบ้าเสียบกุญแจประตูด้านคนขับถูกปลดล็อค</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09140000370017"></a><p class="topic-title"><span class="topic-head"></span>โหมดแจ้งเตือน</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;ในโหมดนี้ แตรรถของระบบป้องกันการโจรกรรมและไฟเตือนฉุกเฉินจะทำงานเพื่อแจ้งเตือนพื้นที่โดยรอบ</div>
+<div class="list">•&nbsp;&nbsp;เมื่อช่วงเวลาการแจ้งเตือน (ประมาณ 30 วินาที) ผ่านไป ระบบจะเปลี่ยนเป็นโหมดเตรียมการแจ้งเตือน </div>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบสภาวะยกเลิกการทำงาน ระบบจะเปลี่ยนเป็นโหมดเริ่มต้น<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001473.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001473</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">สภาวะการเปลี่ยนเป็นโหมดเตรียมการแจ้งเตือน</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เมื่อช่วงเวลาการแจ้งเตือน (ประมาณ 30 วินาที) ผ่านไป ระบบจะเปลี่ยนเป็นโหมดเตรียมการแจ้งเตือน</div>
+<div class="list">•&nbsp;&nbsp;ช่วงเวลาการแจ้งเตือนจะไม่เพิ่มขึ้น แม้ว่าจะตรวจพบสภาวะการเปลี่ยนเป็นโหมดแจ้งเตือนอีกครั้งระหว่างระยะเวลาการแจ้งเตือน</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">สภาวะการยกเลิก</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบสภาวะต่อไปนี้ โหมดแจ้งเตือนจะถูกยกเลิก และระบบจะเปลี่ยนเป็นโหมดเริ่มต้น</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ปลดล็อคประตูโดยใช้ตัวส่งสัญญาณรีโมท</div>
+<div class="list">•&nbsp;&nbsp;สวิตช์สตาร์ทอยู่ที่ ON (เครื่องยนต์ไม่ทำงาน) และสตาร์ทเครื่องยนต์</div>
+<div class="list">―&nbsp;&nbsp;เบ้าเสียบกุญแจประตูด้านคนขับถูกปลดล็อค</div>
+<div class="list">―&nbsp;&nbsp;เปิดประตูท้ายโดยใช้สวิตช์เปิดประตูท้าย (รุ่นที่มีระบบกุญแจรีโมทอัจฉริยะ)</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09140000370018"></a><p class="topic-title"><span class="topic-head"></span>โหมดเตรียมการแจ้งเตือน</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ในโหมดเตรียมการแจ้งเตือน แตรรถระบบป้องกันการโจรกรรม และไฟเตือนฉุกเฉินจะไม่ทำงาน อย่างไรก็ตาม เสียงเตือนจะทำงานทันทีหากมีการเปลี่ยนแปลงสภาวะ</div>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบสภาวะยกเลิกการทำงาน ระบบจะเปลี่ยนเป็นโหมดเริ่มต้น</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">สภาวะการเปลี่ยนเป็นโหมดแจ้งเตือน</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ระบบจะเปลี่ยนเป็นโหมดแจ้งเตือนหากตรวจพบสภาวะต่อไปนี้</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;สวิตช์สตาร์ทจาก ON เป็น Off หรือจาก Off เป็น ON</div>
+<div class="list">―&nbsp;&nbsp;สวิตช์ล็อคประตูถูกหมุนจาก On (ประตูเปิด) เป็น Off (ประตูปิด) หรือจาก Off (ประตูปิด) เป็น On (ประตูเปิด)</div>
+<div class="list">―&nbsp;&nbsp;สวิตช์ล็อคประตูท้ายถูกหมุนจาก On (ประตูท้ายเปิด) เป็น Off (ประตูท้ายปิด) หรือจาก Off (ประตูท้ายปิด) เป็น On (ประตูท้ายเปิด)</div>
+<div class="list">―&nbsp;&nbsp;สวิตช์ล็อคฝากระโปรงหน้าถูกหมุนจาก On (ฝากระโปรงหน้าเปิด) เป็น Off (ฝาประโปรงหน้าปิด) หรือจาก Off (ฝากระโปรงหน้าปิด) เป็น On (ฝากระโปรงหน้าเปิด)</div>
+<div class="list">―&nbsp;&nbsp;สวิตช์เชื่อมโยงล็อคประตูถูกล็อคจากตำแหน่ง Unlock หรือถูกปลดล็อคจากตำแหน่ง Lock</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">สภาวะการยกเลิก</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบสภาวะต่อไปนี้ โหมดเตรียมการแจ้งเตือนจะถูกยกเลิก และระบบจะเปลี่ยนเป็นโหมดเริ่มต้น</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ปลดล็อคประตูโดยใช้ตัวส่งสัญญาณรีโมท</div>
+<div class="list">•&nbsp;&nbsp;สวิตช์สตาร์ทอยู่ที่ ON และสตาร์ทเครื่องยนต์</div>
+<div class="list">―&nbsp;&nbsp;ปลดล็อคโดยใช้เบ้าเสียบกุญแจประตูหน้า</div>
+<div class="list">―&nbsp;&nbsp;เปิดประตูท้ายโดยใช้สวิตช์เปิดประตูท้าย (รุ่นที่มีระบบกุญแจรีโมทอัจฉริยะ)</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</p><br clear="all"><a name="id09140000370019"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน (รุ่นที่มีเซ็นเซอร์ตรวจจับผู้บุกรุก)</p><br clear="all"><p><a name="id09140000370020"></a><p class="topic-title"><span class="topic-head"></span>การเปลี่ยนโหมด</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมตัวถังด้านหลัง (RBCM) จะสับเปลี่ยนโหมดระบบป้องกันการโจรกรรมตามสวิตช์สตาร์ทและสภาวะของประตู<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5jjn00000720.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5jjn00000720</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09140000370021"></a><p class="topic-title"><span class="topic-head"></span>โหมดหยุดการทำงาน</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ในโหมดนี้ การทำงานของระบบป้องกันการโจรกรรมทั้งหมดจะหยุดทำงาน</div>
+<div class="list">•&nbsp;&nbsp;ระบบจะเปลี่ยนเป็นโหมดหยุดการทำงานเมื่อตรวจพบสภาวะใดๆ ดังต่อไปนี้</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;สตาร์ทอยู่ที่ ACC หรือ ON (เครื่องยนต์ไม่ทำงาน)</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09140000370022"></a><p class="topic-title"><span class="topic-head"></span>โหมดเริ่มต้น</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;โหมดนี้เป็นโหมดเตรียมพร้อมก่อนจะเปลี่ยนเป็นโหมดสแตนด์บาย ระบบไม่ได้เปลี่ยนเป็นโหมดการแจ้งเตือนโดยตรงจากโหมดนี้</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">สภาวะการเปลี่ยนเป็นโหมดเริ่มต้น</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ระบบจะเปลี่ยนจากโหมดหยุดการทำงานเป็นโหมดเริ่มต้นหากตรวจพบสภาวะใดๆ ดังต่อไปนี้</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF (LOCK)</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ระบบเปลี่ยนจากโหมดเตรียมการสแตนด์บาย,โหมดสแตนด์บาย, โหมดการแจ้งเตือน และโหมดเตรียมการแจ้งเตือนเป็นโหมดเริ่มต้นหากตรวจพบสภาวะการยกเลิกในแต่ละโหมด</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">เปลี่ยนสภาวะเป็นโหมดเตรียมการสแตนด์บาย</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ระบบจะเปลี่ยนเป็นโหมดเตรียมการสแตนด์บายหากตรวจพบสภาวะใดๆ ดังต่อไปนี้</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ทำการล็อครถโดยใช้ปุ่มล็อคของตัวส่งสัญญาณรีโมทขณะที่ประตูทุกบาน ประตูท้าย และฝากระโปรงหน้าปิดอยู่</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09140000370023"></a><p class="topic-title"><span class="topic-head"></span>โหมดเตรียมการสแตนด์บาย</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;โหมดนี้เป็นโหมดก่อนเข้าสู่โหมดสแตนด์บาย</div>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบสภาวะยกเลิกการทำงาน ระบบจะเปลี่ยนเป็นโหมดเริ่มต้น</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">สภาวะการเปลี่ยนเป็นโหมดสแตนด์บาย</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;หากอยู่ในโหมดเตรียมการสแตนด์บายเป็นเวลาประมาณ 20 วินาที ระบบจะเปลี่ยนเป็นโหมดสแตนด์บาย</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">สภาวะการยกเลิก</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบสภาวะต่อไปนี้ โหมดเตรียมการแสตนด์บายจะถูกยกเลิก และระบบจะเปลี่ยนเป็นโหมดเริ่มต้น</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;สวิตช์ล็อคประตูใดๆ อยู่ที่ On (ประตูเปิด) หรือสวิตช์ล็อคประตูท้ายอยู่ที่ On (ประตูท้ายเปิด) หรือสวิตช์ล็อคฝากระโปรงหน้าอยู่ที่ Off (ฝากระโปรงหน้าเปิด)</div>
+<div class="list">―&nbsp;&nbsp;สวิตช์เชื่อมโยงล็อคประตูอยู่ในตำแหน่ง UNLOCK</div>
+<div class="list">―&nbsp;&nbsp;สตาร์ทอยู่ที่ ACC หรือ ON (เครื่องยนต์ไม่ทำงาน)</div>
+<div class="list">―&nbsp;&nbsp;ปลดล็อคประตูโดยใช้ตัวส่งสัญญาณรีโมท</div>
+<div class="list">―&nbsp;&nbsp;เปิดประตูท้ายโดยใช้สวิตช์เปิดประตูท้าย (รุ่นที่มีระบบกุญแจรีโมทอัจฉริยะ)</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09140000370024"></a><p class="topic-title"><span class="topic-head"></span>โหมดสแตนด์บาย</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ระบบจะตรวจสอบการเปิด/ปิดประตูที่ไม่ได้รับอนุญาตประมาณ 20 วินาทีหลังจากประตูถูกล็อค หากตรวจพบการดำเนินการที่ไม่ได้รับอนุญาต ระบบจะเปลี่ยนเป็นโหมดแจ้งเตือน</div>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบสภาวะยกเลิกการทำงาน ระบบจะเปลี่ยนเป็นโหมดเริ่มต้น</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">สภาวะการเปลี่ยนเป็นโหมดแจ้งเตือน</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบสภาวะต่อไปนี้ ระบบจะเปลี่ยนเป็นโหมดการแจ้งเตือน</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;สวิตช์สตาร์ทอยู่ที่ ON (เครื่องยนต์ไม่ทำงาน)</div>
+<div class="list">―&nbsp;&nbsp;สวิตช์ล็อคประตูอยู่ที่ On (ประตูเปิด)</div>
+<div class="list">―&nbsp;&nbsp;สวิตช์ล็อคประตูอยู่ที่ On (ประตูท้ายเปิด)</div>
+<div class="list">―&nbsp;&nbsp;สวิตช์ล็อคฝากระโปรงหน้าอยู่ที่ Off (ฝากระโปรงหน้าเปิด)</div>
+<div class="list">―&nbsp;&nbsp;สวิตช์เชื่อมโยงล็อคประตูอยู่ในตำแหน่ง UNLOCK</div>
+<div class="list">―&nbsp;&nbsp;เซ็นเซอร์การตรวจจับผู้บุกรุกตรวจพบผู้บุกรุกอยู่ภายในรถ</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">สภาวะการยกเลิก</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบสภาวะต่อไปนี้ โหมดแสตนด์บายจะถูกยกเลิก และระบบจะเปลี่ยนเป็นโหมดเริ่มต้น</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ปลดล็อคประตูโดยใช้ตัวส่งสัญญาณรีโมท</div>
+<div class="list">―&nbsp;&nbsp;สวิตช์สตาร์ทอยู่ที่ ON (เครื่องยนต์ไม่ทำงาน) และสตาร์ทเครื่องยนต์</div>
+<div class="list">―&nbsp;&nbsp;เปิดประตูท้ายโดยใช้สวิตช์เปิดประตูท้าย (รุ่นที่มีระบบกุญแจรีโมทอัจฉริยะ)</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09140000370025"></a><p class="topic-title"><span class="topic-head"></span>โหมดแจ้งเตือน</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;ในโหมดนี้ ไซเรนระบบป้องกันการโจรกรรมและไฟเตือนฉุกเฉินจะทำงานเพื่อแจ้งเตือนพื้นที่โดยรอบ</div>
+<div class="list">•&nbsp;&nbsp;เมื่อช่วงเวลาการแจ้งเตือน (ประมาณ 30 วินาที) ผ่านไป ระบบจะเปลี่ยนเป็นโหมดเตรียมการแจ้งเตือน</div>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบสภาวะยกเลิกการทำงาน ระบบจะเปลี่ยนเป็นโหมดเริ่มต้น<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001416.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001416</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">สภาวะการเปลี่ยนเป็นโหมดเตรียมการแจ้งเตือน</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เมื่อช่วงเวลาการแจ้งเตือน (ประมาณ 30 วินาที) ผ่านไป ระบบจะเปลี่ยนเป็นโหมดเตรียมการแจ้งเตือน</div>
+<div class="list">•&nbsp;&nbsp;ช่วงเวลาการแจ้งเตือนจะไม่เพิ่มขึ้น แม้ว่าจะตรวจพบสภาวะการเปลี่ยนเป็นโหมดแจ้งเตือนอีกครั้งระหว่างระยะเวลาการแจ้งเตือน</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">สภาวะการยกเลิก</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบสภาวะต่อไปนี้ โหมดแจ้งเตือนจะถูกยกเลิก และระบบจะเปลี่ยนเป็นโหมดเริ่มต้น</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ปลดล็อคประตูโดยใช้ตัวส่งสัญญาณรีโมท</div>
+<div class="list">―&nbsp;&nbsp;สวิตช์สตาร์ทอยู่ที่ ON (เครื่องยนต์ไม่ทำงาน) และสตาร์ทเครื่องยนต์</div>
+<div class="list">―&nbsp;&nbsp;เปิดประตูท้ายโดยใช้สวิตช์เปิดประตูท้าย (รุ่นที่มีระบบกุญแจรีโมทอัจฉริยะ)</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09140000370026"></a><p class="topic-title"><span class="topic-head"></span>โหมดเตรียมการแจ้งเตือน</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ในโหมดเตรียมการแจ้งเตือน ไซเรนระบบป้องกันการโจรกรรม และไฟเตือนฉุกเฉินจะไม่ทำงาน อย่างไรก็ตาม เสียงเตือนจะทำงานทันทีหากมีการเปลี่ยนแปลงสภาวะ</div>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบสภาวะยกเลิกการทำงาน ระบบจะเปลี่ยนเป็นโหมดเริ่มต้น</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">สภาวะการเปลี่ยนเป็นโหมดแจ้งเตือน</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ระบบจะเปลี่ยนเป็นโหมดแจ้งเตือนหากตรวจพบสภาวะต่อไปนี้</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;สวิตช์สตาร์ทอยู่ที่ ON (เครื่องยนต์ไม่ทำงาน)</div>
+<div class="list">―&nbsp;&nbsp;สวิตช์ล็อคประตูอยู่ที่ On (ประตูเปิด)</div>
+<div class="list">―&nbsp;&nbsp;สวิตช์ล็อคประตูอยู่ที่ On (ประตูท้ายเปิด)</div>
+<div class="list">―&nbsp;&nbsp;สวิตช์ล็อคฝากระโปรงหน้าอยู่ที่ Off (ฝากระโปรงหน้าเปิด)</div>
+<div class="list">―&nbsp;&nbsp;สวิตช์เชื่อมโยงล็อคประตูอยู่ในตำแหน่ง UNLOCK</div>
+<div class="list">―&nbsp;&nbsp;เซ็นเซอร์การตรวจจับผู้บุกรุกตรวจพบผู้บุกรุกอยู่ภายในรถ</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">สภาวะการเปลี่ยนเป็นโหมดสแตนด์บาย</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;หากไม่มีสภาวะการเปลี่ยนเป็นโหมดยกเลิกหรือการแจ้งเตือนเป็นเวลา 5 วินาทีหลังจากโหมดสแตนด์บาย ระบบจะเปลี่ยนเป็นโหมดสแตนด์บาย</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">สภาวะการยกเลิก</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบสภาวะต่อไปนี้ โหมดเตรียมการแจ้งเตือนจะถูกยกเลิก และระบบจะเปลี่ยนเป็นโหมดเริ่มต้น</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ปลดล็อคประตูโดยใช้ตัวส่งสัญญาณรีโมทของกุญแจรีโมท</div>
+<div class="list">•&nbsp;&nbsp;สวิตช์สตาร์ทอยู่ที่ ON (เครื่องยนต์ไม่ทำงาน) และสตาร์ทเครื่องยนต์</div>
+<div class="list">เปิดประตูท้ายโดยใช้สวิตช์เปิดประตูท้าย (รุ่นที่มีระบบกุญแจรีโมทอัจฉริยะ)</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</p>
+</body>
+</html>

@@ -1,0 +1,2 @@
+&txtLabel=PARKING SENSOR SYSTEM 2/2&
+&txtData=S0922_3b&

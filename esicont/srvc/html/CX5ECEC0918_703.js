@@ -1,0 +1,2 @@
+&txtLabel=BRAKE LIGHT / HIGH-MOUNT BRAKE LIGHT&
+&txtData=S0918_7&

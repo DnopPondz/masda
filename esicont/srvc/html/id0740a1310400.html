@@ -1,0 +1,389 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>การควบคุมปริมาณอากาศ [ระบบปรับอากาศแบบอัตโนมัติ]</title>
+</head>
+<body><a name="id0740a1310400"></a><p class="servinfo-title"><span class="servinfo-head"></span>การควบคุมปริมาณอากาศ [ระบบปรับอากาศแบบอัตโนมัติ]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0740a1310400</p><br clear="all"><a name="id0740a131040001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>จุดประสงค์:</p>
+<div class="list">•&nbsp;&nbsp;การควบคุมปริมาณอากาศจะเปลี่ยนแปลงปริมาณอากาศตามสภาพแวดล้อมของรถ</div><br clear="all"><a name="id0740a131040002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<div class="list">•&nbsp;&nbsp;การควบคุมปริมาณอากาศจะเปลี่ยนแปลงการทำงานของมอเตอร์โบล์วเวอร์ตามการทำงานของปุ่มควบคุมปริมาณอากาศหรือปุ่มควบคุมอุณหภูมิและสภาพแวดล้อมของรถเพื่อเปลี่ยนแปลงปริมาณอากาศ</div>
+<div class="list">•&nbsp;&nbsp;การควบคุมปริมาณอากาศมีการควบคุมแบบอัตโนมัติและแบบธรรมดา</div>
+<div class="list">•&nbsp;&nbsp;การควบคุมปริมาณอากาศโดยอัตโนมัติจะดำเนินการปรับแก้ต่อไปนี้:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;การปรับแก้อุณหภูมิน้ำหล่อเย็นเครื่องยนต์ (การปรับแก้การอุ่นเครื่องยนต์)</div>
+<div class="list">―&nbsp;&nbsp;การปรับแก้มายด์สตาร์ท</div>
+<div class="list">―&nbsp;&nbsp;การปรับแก้ MAX HOT และ MAX COLD</div>
+<div class="list">―&nbsp;&nbsp;การปรับแก้เพื่อป้องกันการเกิดฝ้าที่กระจกขณะสตาร์ท</div>
+<div class="list">―&nbsp;&nbsp;การปรับแก้การชดเชยขณะสตาร์ท</div>
+<div class="list">―&nbsp;&nbsp;การปรับแก้ระบบไล่ฝ้า</div>
+<div class="list">―&nbsp;&nbsp;ฟังก์ชันการป้องกันการเผาไหม้ขณะสตาร์ท</div>
+</dd>
+</dl><br clear="all"><p><a name="id0740a131040003"></a><p class="topic-title"><span class="topic-head"></span>การควบคุมปริมาณอากาศแบบอัตโนมัติ</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ชุดควบคุมอุณหภูมิจะคำนวณคุณลักษณะแรงดันไฟฟ้าที่จ่ายให้กับมอเตอร์โบล์วเวอร์ตามอุณหภูมิที่กำหนด อุณหภูมิภายนอก และระดับแสงอาทิตย์</div>
+<div class="list">•&nbsp;&nbsp;ชุดควบคุมอุณหภูมิจะเปรียบเทียบคุณลักษณะแรงดันไฟฟ้าที่จ่ายให้กับมอเตอร์โบล์วเวอร์กับอุณหภูมิเป้าหมาย (ค่าการควบคุมที่คำนวณได้ T3) จากนั้นจะกำหนดแรงดันไฟฟ้าที่จ่ายให้กับมอเตอร์โบล์วเวอร์ (แรงดันไฟ AUTO)</div>
+<div class="list">•&nbsp;&nbsp;ค่าการควบคุมที่คำนวณได้ T3 คือ อุณหภูมิห้องโดยสารเป้าหมายที่กำหนดโดยชุดควบคุมอุณหภูมิตามความแตกต่างระหว่างอุณหภูมิที่กำหนดและสัญญาณอินพุตของอุณหภูมิจากเซ็นเซอร์</div>
+<div class="list">•&nbsp;&nbsp;ค่าการควบคุมที่คำนวณได้ T3 เป็นการคำนวณอย่างต่อเนื่องตามการเปลี่ยนแปลงในอุณหภูมิที่กำหนดและสัญญาณอินพุตจากเซ็นเซอร์</div>
+</dd>
+</dl>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00000701.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00000701</div>
+</td>
+</tr>
+</table>
+</p><br clear="all"><p><a name="id0740a131040004"></a><p class="topic-title"><span class="topic-head"></span>การควบคุมปริมาณอากาศแบบธรรมดา</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ชุดควบคุมอุณหภูมิจะเปลี่ยนแปลงแรงดันไฟฟ้าที่จ่ายให้กับมอเตอร์โบล์วเวอร์ (ปริมาณอากาศ) ในเจ็ดระดับตามการทำงานของปุ่มควบคุมปริมาณอากาศ</div>
+</dd>
+</dl>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ปุ่มควบคุมปริมาณอากาศ</p>
+</th>
+<th id="" align="center">
+<p class="thead">แรงดันไฟฟ้าที่จ่ายให้กับมอเตอร์โบล์วเวอร์</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">1st</div>
+</td>
+<td id="" align="center">
+<div class="tbody">3.5 V</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ระดับ 2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">5.2 V</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ระดับ 3</div>
+</td>
+<td id="" align="center">
+<div class="tbody">6.9 V</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ระดับ 4</div>
+</td>
+<td id="" align="center">
+<div class="tbody">8.6 V</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ระดับ 5</div>
+</td>
+<td id="" align="center">
+<div class="tbody">10.0 V</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ระดับ 6</div>
+</td>
+<td id="" align="center">
+<div class="tbody">12.1 V</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">7th</div>
+</td>
+<td id="" align="center">
+<div class="tbody">14.6 V<sup>*1</sup>, 13.0V<sup>*2</sup></div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;:เมื่อโหมดทิศทางการไหลของอากาศไม่ใช่ HEAT</div>
+<div class="deflist">*2&nbsp;&nbsp;:เมื่อโหมดทิศทางการไหลของอากาศเป็น HEAT</div>
+</p><br clear="all"><p><a name="id0740a131040005"></a><p class="topic-title"><span class="topic-head"></span>การปรับแก้</p>
+<dl>
+<dd>
+<div class="list-title">การปรับแก้อุณหภูมิน้ำหล่อเย็นเครื่องยนต์ (การปรับแก้การอุ่นเครื่องยนต์)</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;การปรับแก้อุณหภูมิน้ำหล่อเย็นเครื่องยนต์ (การปรับแก้การอุ่นเครื่องยนต์) จะป้องกันไม่ให้มีปริมาณอากาศเย็นออกมาจากช่องลมมากเกินไปหลังจากสตาร์ทเครื่องยนต์ในฤดูหนาว</div>
+<div class="list">•&nbsp;&nbsp;การปรับแก้อุณหภูมิน้ำหล่อเย็นเครื่องยนต์ (การปรับแก้การอุ่นเครื่องยนต์) จะควบคุมแรงดันไฟฟ้าที่จ่ายให้กับมอเตอร์โบล์วเวอร์ตามการเพิ่มขึ้นของอุณหภูมิน้ำยาหล่อเย็นเครื่องยนต์</div>
+<div class="list">•&nbsp;&nbsp;การปรับแก้อุณหภูมิน้ำหล่อเย็นเครื่องยนต์จะไม่ถูกดำเนินการระหว่างการปรับแก้ระบบไล่ฝ้า หรือเมื่ออุณหภูมิห้องโดยสารเท่ากับ <span>20 &deg;C {68 &deg;F}</span> หรือมากกว่าและโหมดทิศทางการไหลของอากาศอยู่ในโหมด VENT<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/am3uun00000709.png"></td>
+</tr>
+</table>
+<div class="figure-caption">am3uun00000709</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">การปรับแก้มายด์สตาร์ท</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;การปรับแก้มายด์สตาร์ทจะป้องกันไม่ให้มีปริมาณอากาศอุ่นออกมาจากช่องลมมากเกินไปเมื่อสตาร์ทมอเตอร์โบล์วเวอร์ในฤดูร้อน</div>
+<div class="list">•&nbsp;&nbsp;การปรับแก้มายด์สตาร์ทจะจำกัดแรงดันไฟฟ้าที่จ่ายให้กับมอเตอร์โบล์วเวอร์เป็นเวลา <span>3 วินาที</span>หลังจากมอเตอร์โบล์วเวอร์เริ่มทำงาน</div>
+<div class="list">•&nbsp;&nbsp;การปรับแก้มายด์สตาร์ทจะไม่ดำเนินการเมื่ออุณหภูมิห้องโดยสารเท่ากับ <span>20 &deg;C {68 &deg;F}</span> หรือต่ำกว่าหรือทิศทางการไหลของอากาศอยู่ในโหมดอื่นที่ไม่ใช่โหมด VENT<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00000702.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00000702</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">การปรับแก้ MAX HOT และ MAX COLD</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;การปรับแก้ MAX HOT และ MAX COLD จะกำหนดแรงดันไฟฟ้าที่จ่ายให้กับมอเตอร์โบล์วเวอร์ตามที่ระบุไว้ในตาราง เมื่ออุณหภูมิถูกตั้งค่าเป็น MAX HOT หรือ MAX COLD</div>
+<div class="list">•&nbsp;&nbsp;การปรับแก้ MAX HOT จะไม่ถูกดำเนินการระหว่างการปรับแก้อุณหภูมิน้ำหล่อเย็นเครื่องยนต์</div>
+</dd>
+</dl>
+<p clear="all">
+<p class="table-title">สเปคยุโรป (ประเทศอังกฤษ L.H.D.)</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ชื่อการปรับแก้</p>
+</th>
+<th id="" align="center">
+<p class="thead">อุณหภูมิที่กำหนด</p>
+</th>
+<th id="" align="center">
+<p class="thead">แรงดันไฟฟ้าที่จ่ายให้กับมอเตอร์โบล์วเวอร์</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">การปรับแก้ MAX HOT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">29.0/84</div>
+</td>
+<td id="" align="center">
+<div class="tbody">12.1 (V): AUTO-HI</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">การปรับแก้ MAX COLD</div>
+</td>
+<td id="" align="center">
+<div class="tbody">15.0/60</div>
+</td>
+<td id="" align="center">
+<div class="tbody">14.6 (V): MAX-HI</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p clear="all">
+<p class="table-title">ยกเว้นสเปคยุโรป (ประเทศอังกฤษ L.H.D.)</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ชื่อการปรับแก้</p>
+</th>
+<th id="" align="center">
+<p class="thead">อุณหภูมิที่กำหนด</p>
+</th>
+<th id="" align="center">
+<p class="thead">แรงดันไฟฟ้าที่จ่ายให้กับมอเตอร์โบล์วเวอร์</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">การปรับแก้ MAX HOT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">32.0/90</div>
+</td>
+<td id="" align="center">
+<div class="tbody">12.1 (V): AUTO-HI</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">การปรับแก้ MAX COLD</div>
+</td>
+<td id="" align="center">
+<div class="tbody">18.0/64</div>
+</td>
+<td id="" align="center">
+<div class="tbody">14.6 (V): MAX-HI</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<dl>
+<dd>
+<div class="list-title">การปรับแก้เพื่อป้องกันการเกิดฝ้าที่กระจกขณะสตาร์ท</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;การปรับแก้เพื่อป้องกันการเกิดฝ้าที่กระจกขณะสตาร์ทจะป้องกันไม่ให้กระจกเกิดฝ้าได้ง่ายเมื่อตรวจพบสภาวะทั้งหมดต่อไปนี้</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;หลังจากสตาร์ทเครื่องยนต์ทันที</div>
+<div class="list">―&nbsp;&nbsp;ฮีทเตอร์ทำงานอยู่</div>
+<div class="list">―&nbsp;&nbsp;อากาศกำลังออกจากช่องลมสำหรับการไล่ฝ้า</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;การปรับแก้เพื่อป้องกันการเกิดฝ้าที่กระจกขณะสตาร์ทจะกำหนดแรงดันไฟฟ้าที่จ่ายให้กับมอเตอร์โบล์วเวอร์ที่ <span>0 V</span> เป็นเวลา <span>6 วินาที</span>หลังจากบิดสวิตช์สตาร์ทไปที่ตำแหน่ง ON</div>
+<div class="list">•&nbsp;&nbsp;การปรับแก้เพื่อป้องกันการเกิดฝ้าที่กระจกขณะสตาร์ทจะไม่ถูกดำเนินการเมื่อโหมดทิศทางการไหลของอากาศอยู่ในโหมดใดๆ นอกเหนือจากโหมด HEAT, DEF/HEAT และระบบไล่ฝ้า</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">การปรับแก้การชดเชยขณะสตาร์ท</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เมื่อมอเตอร์โบล์วเวอร์เริ่มต้นทำงานจากสถานะหยุดที่ความเร็วต่ำสุด (<span>3.2 V</span>) การปรับแก้การชดเชยขณะสตาร์ทจะกำหนดแรงดันไฟฟ้าที่จ่ายให้กับมอเตอร์โบล์วเวอร์ที่ <span>4.4 V</span> เป็นเวลา <span>2 วินาที</span>เพื่อให้การทำงานของมอเตอร์โบล์วเวอร์ขณะสตาร์ทมีความเสถียร</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">การปรับแก้ระบบไล่ฝ้า</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เมื่อเปิดสวิตช์ไล่ฝ้า การปรับแก้ระบบไล่ฝ้าจะเพิ่มการปรับแก้ (<span>+2 V</span>) ไปยังแรงดันไฟฟ้าที่จ่ายให้กับมอเตอร์โบล์วเวอร์เพื่อเพิ่มปริมาณอากาศ</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">ฟังก์ชันการป้องกันการเผาไหม้ขณะสตาร์ท</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชันการป้องกันการเผาไหม้ขณะสตาร์ทจะป้องกันไม่ให้มอเตอร์โบล์วเวอร์ไหม้เนื่องจากกระแสไฟมากเกินไป</div>
+<div class="list">•&nbsp;&nbsp;เมื่อมอเตอร์โบล์วเวอร์เริ่มทำงานจากสถานะหยุดด้วยแรงดันไฟฟ้าที่จ่ายให้กับมอเตอร์โบล์วเวอร์ <span>4.4 V</span> หรือมากกว่า แรงดันไฟฟ้าที่จ่ายให้กับมอเตอร์โบล์วเวอร์จะกำหนดไว้ที่ <span>4.4 V</span> เป็นเวลา <span>1 วินาที</span></div>
+</dd>
+</dl>
+</p><br clear="all"><a name="id0740a131040006"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>โครงสร้าง</p>
+<div class="list">•&nbsp;&nbsp;การควบคุมการปริมาณอากาศประกอบด้วยชิ้นส่วนต่างๆ ตามที่แสดงในตารางต่อไปนี้:</div>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">อุปกรณ์สัญญาณอินพุท</p>
+</th>
+<th id="" align="center">
+<p class="thead">ชิ้นส่วนการควบคุม</p>
+</th>
+<th id="" align="center">
+<p class="thead">อุปกรณ์สัญญาณเอาท์พุท</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ปุ่มควบคุมปริมาณอากาศ (ชุดควบคุมอุณหภูมิ)</div>
+<div class="list">•&nbsp;&nbsp;ปุ่มตั้งค่าอุณหภูมิ (ชุดควบคุมอุณหภูมิ)</div>
+<div class="list">•&nbsp;&nbsp;เซ็นเซอร์อุณหภูมิห้องโดยสาร</div>
+<div class="list">•&nbsp;&nbsp;โซล่าเรดิเอชั่นเซ็นเซอร์</div>
+<div class="list">•&nbsp;&nbsp;เซ็นเซอร์อุณหภูมิภายนอก</div>
+<div class="list">•&nbsp;&nbsp;เซ็นเซอร์อุณหภูมิน้ำหล่อเย็นเครื่องยนต์</div>
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์โหมดทิศทางการไหลของอากาศ</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ชุดควบคุมอุณหภูมิ</div>
+<div class="list">•&nbsp;&nbsp;PCM</div>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมตัวถังด้านหน้า (FBCM)</div>
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัด</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;เพาเวอร์มอสแฟต</div>
+<div class="list">•&nbsp;&nbsp;มอเตอร์โบล์วเวอร์</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p><br clear="all"><a name="id0740a131040007"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<p class="list">1.&nbsp;&nbsp;ชุดควบคุมอุณหภูมิจะส่งสัญญาณการทำงานของพัดลมไปยังโมดูลควบคุมตัวถังด้านหน้า (FBCM) ตามการเปิดใช้ปุ่มควบคุมปริมาณกระแสลม</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;เมื่อโมดูลควบคุมตัวถังด้านหน้า (FBCM) เปิดรีเลย์โบล์วเวอร์ตามสัญญาณการทำงานของพัดลม การหมุนของมอเตอร์โบล์วเวอร์</p>
+<p class="list">
+</p>
+<p class="list">3.&nbsp;&nbsp;การควบคุมอุณหภูมิจะกำหนดปริมาณการไหลของอากาศตามการทำงานของปุ่มควบคุมปริมาณการไหลของอากาศและปุ่มการตั้งค่าอุณหภูมิ, สภาวะโหมดการไหลของอากาศ และสัญญาณจากเซ็นเซอร์แต่ละตัว</p>
+<p class="list">
+</p>
+<p class="list">4.&nbsp;&nbsp;ชุดควบคุมอุณหภูมิจะควบคุมเพาเวอร์มอสเฟตและเปลี่ยนแปลงปริมาณการไหลของอากาศ (แรงดันไฟฟ้าที่จ่ายให้กับมอเตอร์โบล์วเวอร์) ขึ้นอยู่กับผลลัพธ์ของการปรับแก้และการกำหนดปริมาณอากาศ</p>
+<p class="list">
+</p>
+<p class="list">5.&nbsp;&nbsp;ความเร็วในการหมุนของมอเตอร์โบล์วเวอร์จะเปลี่ยนแปลงตามแรงดันไฟที่จ่ายจากเพาเวอร์มอสเฟต</p>
+<p class="list">
+</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00000703.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00000703</div>
+</td>
+</tr>
+</table>
+</body>
+</html>

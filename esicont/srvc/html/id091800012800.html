@@ -1,0 +1,247 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>ระบบ AFS (ระบบปรับลำแสงไฟหน้า)</title>
+</head>
+<body><a name="id091800012800"></a><p class="servinfo-title"><span class="servinfo-head"></span>ระบบ AFS (ระบบปรับลำแสงไฟหน้า)</p>
+<hr>
+<p class="servinfo-title-id" align="right">id091800012800</p><br clear="all"><a name="id09180001280001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รายละเอียด</p>
+<div class="list">•&nbsp;&nbsp;AFS เป็นระบบที่ช่วยเพิ่มประสิทธิภาพระดับความสามารถในการมองเห็นเมื่อเปิดใช้งานไฟหน้าโดยการควบคุมแนวแกนลำแสงของไฟหน้าให้ส่องไปในทิศทางที่รถกำลังเคลื่อนที่ไปข้างหน้าตามการทำงานของพวงมาลัย</div><br clear="all"><a name="id09180001280002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<div class="list">•&nbsp;&nbsp;ระบบ AFS ถูกควบคุมโดยโมดูลควบคุม AFS</div>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุม AFS จะควบคุมฟังก์ชั่นควบคุมระดับอัตโนมัติเพื่อปรับแกนลำแสงไฟหน้าขึ้นหรือลงโดยตอบสนองต่อการเปลี่ยนแปลงของสภาวะน้ำหนักรับและผู้โดยสาร (ดูที่ <font class="extxref-label"><a href="id091800010900.html">ระบบควบคุมระดับไฟหน้าอัตโนมัติ</a></font>)</div><br clear="all"><p><a name="id09180001280003"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นหมุนไฟหน้า</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุม AFS จะเปลี่ยนแนวแกนลำแสงไปยังทิศทางที่รถเคลื่อนที่ตามการทำงานของพวงมาลัยและความเร็วรถขณะเปิดใช้งานไฟหน้า</div>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุม AFS จะควบคุมฟังก์ชั่นหมุนไฟหน้าตามสัญญาณระบบ CAN ต่อไปนี้</div>
+</dd>
+</dl>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">โมดูลการส่งสัญญาณระบบ CAN</p>
+</th>
+<th id="" align="center">
+<p class="thead">ชื่อสัญญาณ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left" rowspan="2">
+<div class="tbody">โมดูลควบคุม EPS</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณมุมในการบังคับเลี้ยว (มุมสัมบูรณ์)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">สัญญาณมุมในการบังคับเลี้ยว (มุมสัมบูรณ์โดยประมาณ)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">PCM</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณความเร็วรถ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="3">
+<div class="tbody">แผงหน้าปัด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณสถานะสวิตช์สตาร์ท</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">สัญญาณขอการติดสว่างของไฟถอย</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">สัญญาณสถานะสวิตช์ AFS OFF</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมตัวถังด้านหน้า (FBCM)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณสถานะการติดสว่างของไฟหน้า</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</p><br clear="all"><p><a name="id09180001280004"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นการตั้งค่าความจำตำแหน่งเริ่มต้น</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เมื่อบิดสวิตช์สตาร์ท ON (เครื่องยนต์ทำงาน) ที่ความเร็ว 0 km/h {0 mph} โมดูลควบคุม AFS จะคำนวณตำแหน่งเริ่มต้นของแอ็คชิวเอเตอร์หมุนไฟหน้าสำหรับการทำงานด้านซ้าย/ด้านขวา และแกนลำแสงไฟหน้าจะหยุดที่ตำแหน่งด้านหน้า</div>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุม AFS จะควบคุมฟังก์ชั่นการตั้งค่าความจำตำแหน่งเริ่มต้นตามสัญญาณระบบ CAN ต่อไปนี้</div>
+</dd>
+</dl>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">โมดูลการส่งสัญญาณระบบ CAN</p>
+</th>
+<th id="" align="center">
+<p class="thead">ชื่อสัญญาณ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">PCM</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณความเร็วรถ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">แผงหน้าปัด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณสถานะสวิตช์สตาร์ท</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</p><br clear="all"><a name="id09180001280005"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ภาพโครงสร้าง</p>
+<div class="list">•&nbsp;&nbsp;AFS ประกอบด้วยชิ้นส่วนต่อไปนี้:<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001405.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001405</div>
+</td>
+</tr>
+</table>
+</div><br clear="all"><a name="id09180001280006"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ผังวงจรระบบ</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5uun00001103.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5uun00001103</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id09180001280007"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>โครงสร้าง</p>
+<div class="list">•&nbsp;&nbsp;Tแอ็คชิวเอเตอร์หมุนไฟหน้าสำหรับปรับแนวแกนลำแสงจะติดตั้งอยู่ภายในไฟหน้ารวมและเป็นโครงสร้างเดียวกับไฟหน้า</div>
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์หมุนไฟหน้ามีเซ็นเซอร์แบบฮอลล์ภายในและอินพุทตำแหน่งปัจจุบันของไฟหน้าไปยังโมดูลควบคุม AFS</div>
+<div class="list">•&nbsp;&nbsp;การเปลี่ยนแปลง (มุมการหมุน) ของแนวแกนลำแสงของไฟหน้าเท่ากับ 15 องศาสำหรับด้านขวาและด้านซ้าย</div>
+<div class="list">•&nbsp;&nbsp;การเปลี่ยนแปลงของแนวแกนลำแสงไฟหน้า (มุมการหมุน) ควบคุมได้อย่างอิสระ (ไม่มีระดับ) ตามความเร็วรถและมุมในการบังคับเลี้ยว และมุมการหมุนจะแตกต่างกันไปสำหรับแต่ละสภาวะ</div>
+<div class="list">•&nbsp;&nbsp;ขนาดของมุมพวงมาลัยจะเปลี่ยนแปลงตามความเร็วรถจนกระทั่งถึงค่าสูงสุดของมุมการหมุน (15 องศา)<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00000904.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00000904</div>
+</td>
+</tr>
+</table>
+</div><br clear="all"><a name="id09180001280008"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p><br clear="all"><p><a name="id09180001280009"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นหมุนไฟหน้า</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เมื่อบิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน) ชุดควบคุม AFS จะคำนวณปริมาณการควบคุมแอ็คชิวเอเตอร์หมุนไฟหน้าอย่างต่อเนื่องตามสัญญาณมุมบังคับเลี้ยวและสัญญาณความเร็วรถ</div>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบสภาวะการทำงานต่อไปนี้ โมดูลควบคุม AFS จะควบคุมแอ็คชิวเอเตอร์หมุนไฟหน้าตามปริมาณการควบคุมที่คำนวณไว้ และปรับแนวแกนลำแสงไฟหน้า</div>
+</dd>
+</dl>
+<p clear="all">
+<p class="table-title">สภาวะการทำงาน</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รายการ</p>
+</th>
+<th id="" align="center">
+<p class="thead">สภาวะ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">การตั้งค่าความจำตำแหน่งเริ่มต้น</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หลังดำเนินการเสร็จสมบูรณ์ตามปกติ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ไฟหน้า</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ON (การติดสว่าง)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">สวิตช์ AFS OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">OFF (สถานะการควบคุม)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">สัญญาณตำแหน่งเกียร์</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ยกเว้นตำแหน่งถอยหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ความเร็วรถ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เริ่มต้นการควบคุม: 2 km/h {1 mph} หรือมากกว่า</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์หมุนไฟหน้าจะขับมอเตอร์ตามสัญญาณจากโมดูลควบคุม AFS</div>
+<div class="list">•&nbsp;&nbsp;การเปลี่ยนแปลงมุมการหมุนของไฟหน้าจะถูกตรวจพบโดยเซ็นเซอร์แบบฮอลล์และอินพุทไปยังโมดูลควบคุม AFS</div>
+</dd>
+</dl>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00002310.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00002310</div>
+</td>
+</tr>
+</table>
+</p>
+</body>
+</html>

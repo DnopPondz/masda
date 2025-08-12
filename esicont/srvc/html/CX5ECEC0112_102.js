@@ -1,0 +1,2 @@
+&txtLabel=COOLING SYSTEM (SKYACTIV-G 2.0)&
+&txtData=S0112_1&

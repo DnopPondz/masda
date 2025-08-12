@@ -1,0 +1,226 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>การตรวจสอบการจำลองสภาพปัญหาของระบบการวิเคราะห์ปัญหาบนรถ [FW6A-EL, FW6AX-EL]</title>
+</head>
+<body><a name="id050227290400"></a><p class="servinfo-title"><span class="servinfo-head"></span>การตรวจสอบการจำลองสภาพปัญหาของระบบการวิเคราะห์ปัญหาบนรถ [FW6A-EL, FW6AX-EL]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id050227290400</p>
+<p class="list">1.&nbsp;&nbsp;ต่อ M-MDS เข้ากับ DLC-2</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;หลังจากรถได้รับการระบุแล้ว ให้เลือกรายการต่อไปนี้จากหน้าจอการตั้งค่าเริ่มต้นของ M-MDS</p>
+<p class="list">
+<dl class="list">
+<dd>(1)&nbsp;&nbsp;เลือก &ldquo;Data logger&rdquo;</dd>
+<dd>
+</dd>
+</dl>
+<dl class="list">
+<dd>(2)&nbsp;&nbsp;เลือก &ldquo;Modules&rdquo;</dd>
+<dd>
+</dd>
+</dl>
+<dl class="list">
+<dd>(3)&nbsp;&nbsp;เลือก &ldquo;TCM&rdquo;</dd>
+<dd>
+</dd>
+</dl>
+</p>
+<p class="list">3.&nbsp;&nbsp;เลือกรายการจำลองจากตาราง PID</p>
+<p class="list">
+</p>
+<p class="list">4.&nbsp;&nbsp;ปฏิบัติตามฟังก์ชั่นโหมดคำสั่งกระตุ้นการทำงาน ให้ตรวจสอบการทำงานสำหรับแต่ละชิ้นส่วน</p>
+<p class="list">
+<dl>
+<dd>
+<div class="list">•&nbsp; ถ้าไม่สามารถตรวจสอบการทำงานของส่วนที่ส่งเอาท์พุทหลังการตรวจสอบโหมดคำสั่งการทำงาน อาจมีความเป็นไปได้ว่าเกิดการขาดหรือลัดวงจร การติดขัด หรือความบกพร่องในการทำงานในส่วนที่ส่งสัญญาณเอาท์พุท</div>
+</dd>
+</dl>
+</p>
+<p clear="all">
+<p class="table-title">ตารางรายการการจำลองสภาพปัญหา</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รายการ</p>
+</th>
+<th id="" align="center">
+<p class="thead">คำอธิบาย</p>
+</th>
+<th id="" align="center">
+<p class="thead">หน่วย / สภาวะ</p>
+</th>
+<th id="" align="center">
+<p class="thead">สภาวะการทำงาน</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">EOP</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สภาวะปั๊มน้ำมันเกียร์ AT ไฟฟ้า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;หยุดรถ</div>
+<div class="list">•&nbsp;&nbsp;แป้นคันเร่งปิดสุด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">EOP_DUTY</div>
+</td>
+<td id="" align="left">
+<div class="tbody">Duty cycle ของปั๊มน้ำมันเกียร์ AT ไฟฟ้า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;หยุดรถ</div>
+<div class="list">•&nbsp;&nbsp;แป้นคันเร่งปิดสุด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">EOP_RLY</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สภาวะรีเลย์ปั๊มน้ำมันเกียร์ AT ไฟฟ้า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;หยุดรถ</div>
+<div class="list">•&nbsp;&nbsp;แป้นคันเร่งปิดสุด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">SS_ON-OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สภาวะโซลินอยด์ ON/OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;หยุดรถ</div>
+<div class="list">•&nbsp;&nbsp;เดินเบาที่ตำแหน่ง P หรือ N</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">SS1_C</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กระแสไฟฟ้าเป้าหมายของชิพโซลินอยด์ No.1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;หยุดรถ</div>
+<div class="list">•&nbsp;&nbsp;เดินเบาที่ตำแหน่ง P หรือ N</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">SS2_C</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กระแสไฟฟ้าเป้าหมายของชิพโซลินอยด์ No.2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;หยุดรถ</div>
+<div class="list">•&nbsp;&nbsp;เดินเบาที่ตำแหน่ง P หรือ N</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">SS3_C</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กระแสไฟฟ้าเป้าหมายของชิพโซลินอยด์ No.3</div>
+</td>
+<td id="" align="center">
+<div class="tbody">A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;หยุดรถ</div>
+<div class="list">•&nbsp;&nbsp;เดินเบาที่ตำแหน่ง P หรือ N</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">SS4_C</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กระแสไฟฟ้าเป้าหมายของชิพโซลินอยด์ No.4</div>
+</td>
+<td id="" align="center">
+<div class="tbody">A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;หยุดรถ</div>
+<div class="list">•&nbsp;&nbsp;เดินเบาที่ตำแหน่ง P หรือ N</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">SSLU_C</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กระแสไฟฟ้าเป้าหมายของโซลินอยด์ควบคุม TCC</div>
+</td>
+<td id="" align="center">
+<div class="tbody">A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;อุณหภูมิ ATF (PID: TFT) อยู่ที่ 20 &deg;C {68 &deg;F} หรือสูงกว่า</div>
+<div class="list">•&nbsp;&nbsp;ความเร็วเพลาส่งกำลัง (PID: OSS) อยู่ที่ 10 rpm หรือสูงกว่า</div>
+<div class="list">•&nbsp;&nbsp;ความเร็วเพลารับกำลัง / เทอร์ไบน์ (PID: TSS) อยู่ที่ 1,000 rpm หรือสูงกว่า</div>
+<div class="list">•&nbsp;&nbsp;ปล่อยแป้นเบรก</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">SSP_C</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กระแสไฟฟ้าเป้าหมายของโซลินอยด์ควบคุมแรงดัน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เดินเบาที่ตำแหน่ง P หรือ N</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</body>
+</html>

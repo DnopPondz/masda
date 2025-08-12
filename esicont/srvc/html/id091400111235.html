@@ -1,0 +1,4887 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>ระบบวิเคราะห์ปัญหาบนรถ [ชุดเปิด/ปิดการทำงาน]</title>
+</head>
+<body><a name="id091400111235"></a><p class="servinfo-title"><span class="servinfo-head"></span>ระบบวิเคราะห์ปัญหาบนรถ [ชุดเปิด/ปิดการทำงาน]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id091400111235</p><br clear="all"><a name="id09140011123501"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รายละเอียด</p>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่นการวิเคราะห์ปัญหาบนรถจะประกอบด้วยฟังก์ชั่นต่อไปนี้: ฟังก์ชั่นตรวจจับความบกพร่องซึ่งจะตรวจจับความบกพร่องทั้งหมดในชิ้นส่วนที่เกี่ยวข้องกับชุดเปิด/ปิดการทำงาน ฟังก์ชั่นหน่วยความจำซึ่งจะบันทึกรหัสวิเคราะห์ปัญหาที่ตรวจพบ ฟังก์ชั่นการแสดงผลซึ่งจะบ่งชี้ตำแหน่งและสถานะความบกพร่องผ่านรหัสวิเคราะห์ปัญหาที่แสดง และฟังก์ชั่นการตรวจสอบ PID/DATA ซึ่งจะอ่านสัญญาณอินพุท/เอาท์พุทจำเพาะและตรวจสอบสภาวะอินพุท/เอาท์พุทดังกล่าว</div>
+<div class="list">•&nbsp;&nbsp;เมื่อใช้ Mazda Modular Diagnostic System (M-MDS) สามารถอ่านและลบรหัสวิเคราะห์ปัญหา และสามารถเปิดใช้งานฟังก์ชั่นการตรวจสอบ PID/DATA ได้</div><br clear="all"><a name="id09140011123502"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ฟังก์ชั่นการตรวจจับความบกพร่อง</p>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความบกพร่องในสัญญาณอินพุทและเอาท์พุท</div>
+<div class="list">•&nbsp;&nbsp;หากมีความบกพร่องเกิดขึ้น ชุดเปิด/ปิดการทำงานจะบันทึกความบกพร่องดังกล่าวเป็นรหัสวิเคราะห์ปัญหา สามารถอ่านรหัสวิเคราะห์ปัญหาที่บันทึกไว้โดย Mazda Modular Diagnostic System (M-MDS)</div>
+<p clear="all">
+<p>
+<div>&times;: สามารถทำได้</div>
+<div>&mdash;: ไม่มี</div>
+</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟแสดงสถานะเตือนกุญแจ (แดง)</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟแสดงสถานะปุ่มกดสตาร์ท (สีเหลืองอำพัน)</p>
+</th>
+<th id="" align="center">
+<p class="thead">คำอธิบาย</p>
+</th>
+<th id="" align="center">
+<p class="thead">ฟังก์ชั่น Fail-safe</p>
+</th>
+<th id="" align="center">
+<p class="thead">รอบการขับ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ประเภทการทดสอบด้วยตนเอง<sup>*1</sup></p>
+</th>
+<th id="" align="center">
+<p class="thead">ฟังก์ชั่นหน่วยความจำ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1026:49<sup>*2</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ล็อคพวงมาลัยบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1026:96<sup>*2</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ล็อคพวงมาลัยบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B108B:23</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ปุ่มกดสตาร์ท No.1 บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B108B:24</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ปุ่มกดสตาร์ท No.1 บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B108C:23</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ปุ่มกดสตาร์ท No.2 บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B108C:24</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ปุ่มกดสตาร์ท No.2 บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10AC:13<sup>*3</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ควบคุมความเร็วอัตโนมัติบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10AC:23<sup>*3</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ควบคุมความเร็วอัตโนมัติบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10C6:1F<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสายอากาศกุญแจรีโมท (ภายนอก, ด้านหลัง) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10C7:1F<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสายอากาศกุญแจรีโมท (ภายใน, ด้านหลัง) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">B10C9:1F</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสายอากาศกุญแจรีโมท (ภายใน, ส่วนกลาง) บกพร่อง (รุ่นที่มีระบบกุญแจรีโมท)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสายอากาศกุญแจรีโมท (ภายใน, ด้านหน้า) บกพร่อง (รุ่นที่มีระบบกุญแจรีโมทอัจฉริยะ)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10D1:23<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ส่งคำขอ (ด้านหน้าซ้าย) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10D3:23<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ส่งคำขอ (ด้านหน้าขวา) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10D9:87</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับขดลวดเสาอากาศ (ติดตั้งภายในปุ่มกดสตาร์ท) ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10DA:51</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ PCM ผิดพลาด (การส่งข้อมูลล้มเหลว)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10DA:62</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ PCM ผิดพลาด (ข้อมูลไม่ตรงกัน)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10E7:11</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรรีเลย์ IG1 บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10E7:12</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรรีเลย์ IG1 บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10E7:16</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรรีเลย์ IG1 บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10E7:17</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรรีเลย์ IG1 บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B112A:11</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรรีเลย์ IG2 บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B112A:12</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรรีเลย์ IG2 บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1140:29<sup>*5</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ได้รับสัญญาณความผิดพลาดของการควบคุมระบบ i-stop</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B11C4:23<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ส่งคำขอ (ประตูท้าย) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B11FD:1F<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สายอากาศกุญแจรีโมท (ภายนอก, ด้านหน้าซ้าย) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1210:1F<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สายอากาศกุญแจรีโมท (ภายนอกรถ, ด้านหน้าขวา) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B124C:56</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ไฟเลี้ยวบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B13C3:04<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในชุดควบคุมด้านหน้าซ้ายบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B13C3:09<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดควบคุมด้านหน้าซ้ายบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B13C3:16<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อินพุทแรงดันแหล่งจ่ายไฟของชุดควบคุมด้านหน้าซ้าย (+B1) ต่ำ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B13C3:29<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับชุดควบคุมด้านหน้าซ้ายบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B13D3:05</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โปรแกรมหมายเลข ID ของกุญแจผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B13D3:16</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันไฟฟ้าของแบตเตอรี่รีโมทต่ำ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B13D3:4A</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดรีโมทบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B13D3:51</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่ได้โปรแกรมรหัสกุญแจ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B13D3:94</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับรีโมทผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B13D3:97</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">งานลงทะเบียนรีโมทไม่เสร็จสมบูรณ์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B13D4:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">จำนวนการโปรแกรมรหัสกุญแจไม่เพียงพอ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1C53:13</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ที่ปัดน้ำฝนกระจกบังลมหน้าบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0040:23<sup>*7</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ไฟเบรก (สัญญาณ No.1) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0040:24<sup>*7</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ไฟเบรก (สัญญาณ No.1) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0051:95<sup>*6</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเซ็นเซอร์มุมบังคับเลี้ยวบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0051:2F<sup>*6</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณเซ็นเซอร์มุมบังคับเลี้ยวบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0052:14<sup>*6</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสัญญาณ A ของเซ็นเซอร์มุมบังคับเลี้ยวบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0052:2F<sup>*6</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณ A ของเซ็นเซอร์มุมบังคับเลี้ยวบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0053:14<sup>*6</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสัญญาณ B ของเซ็นเซอร์มุมบังคับเลี้ยวบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0053:2F<sup>*6</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณ B ของเซ็นเซอร์มุมบังคับเลี้ยวบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C2003:13<sup>*6</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ที่พวงมาลัยขาดวงจร</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P0560:16<sup>*2</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อินพุทแรงดันแหล่งจ่ายไฟของชุดเปิด/ปิดการทำงาน (+B3) ต่ำ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P0615:11</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรรีเลย์มอเตอร์สตาร์ทบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P0615:12</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรรีเลย์มอเตอร์สตาร์ทบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P0615:13</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรรีเลย์มอเตอร์สตาร์ทบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P0615:16</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรรีเลย์มอเตอร์สตาร์ทบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P0616:23</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรบนด้านปลายทางของรีเลย์มอเตอร์สตาร์ทบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P0616:24</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรบนด้านปลายทางของรีเลย์มอเตอร์สตาร์ทบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P0616:29</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณรีเลย์มอเตอร์สตาร์ทบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P081C:23<sup>*7</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ตำแหน่งที่ไม่ใช่ P บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P081C:24<sup>*7</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ตำแหน่งที่ไม่ใช่ P บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P081D:29<sup>*8</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ได้รับสัญญาณความผิดพลาดของสวิตช์เกียร์ว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P081D:2F<sup>*8</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณสวิตช์เกียร์ว่างไม่ตรงกัน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P0830:23<sup>*8</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ CPP บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P0850:23<sup>*7</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจร TCM บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P0850:24<sup>*7</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจร TCM บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P0930:71<sup>*7</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรโซลินอยด์ชิฟท์ล็อคบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P1708:24<sup>*8</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์อินเตอร์ล็อคมอเตอร์สตาร์ทบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P1708:29<sup>*8</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์อินเตอร์ล็อคมอเตอร์สตาร์ทหรือวงจรสวิตช์ CPP บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P1794:16</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อินพุทแรงดันแหล่งจ่ายไฟของชุดเปิด/ปิดการทำงาน (+B2) ต่ำ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0001:88</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารโมดูลผิดพลาด (HS-CAN)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0028:87</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุมตัวถังด้านหลัง (RBCM) ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0100:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ PCM ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0100:87</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ PCM ผิดพลาด (ไม่มีการตอบสนอง)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0101:00<sup>*7</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ TCM ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0121:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ DSC HU/CM ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0121:87</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ DSC HU/CM ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0131:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุม EPS ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0140:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุมตัวถังด้านหน้า (FBCM) ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0146:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับแผงหน้าปัดผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0151:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุม SAS ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับแผงหน้าปัดผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0447:86</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ได้รับสัญญาณข้อผิดพลาดจากแผงหน้าปัด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U201F:11</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรรีซีพเวอร์กุญแจรีโมทบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U201F:12</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรรีซีพเวอร์กุญแจรีโมทบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2100:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การกำหนดค่าชุดเปิด/ปิดการทำงานไม่เสร็จสมบูรณ์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2300:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่ได้รับข้อมูลการกำหนดค่าจากแผงหน้าปัด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:01<sup>*6</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในชุดเปิด/ปิดการทำงานบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:49</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในชุดเปิด/ปิดการทำงานบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:96</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3003:16</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อินพุทแรงดันแหล่งจ่ายไฟของชุดเปิด/ปิดการทำงาน (+B1) ต่ำ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3004:11</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรรีเลย์ ACC บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3004:12</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรรีเลย์ ACC บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3004:16</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรรีเลย์ ACC บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3004:17</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรรีเลย์ ACC บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;:C: การทดสอบ CMDTC ด้วยตนเอง, D: การทดสอบ ODDTC ด้วยตนเอง</div>
+<div class="deflist">*2&nbsp;&nbsp;:รุ่นที่มีล็อคพวงมาลัย</div>
+<div class="deflist">*3&nbsp;&nbsp;:รุ่นที่มีระบบควบคุมความเร็วอัตโนมัติ</div>
+<div class="deflist">*4&nbsp;&nbsp;:รุ่นที่มีระบบกุญแจรีโมทอัจฉริยะ</div>
+<div class="deflist">*5&nbsp;&nbsp;:รุ่นที่มีระบบ i-stop</div>
+<div class="deflist">*6&nbsp;&nbsp;:รุ่นที่มี AFS (ระบบปรับลำแสงไฟหน้า), ระบบสมาร์ทซิตี้เบรก (SCBS) หรือระบบช่วยจอด</div>
+<div class="deflist">*7&nbsp;&nbsp;: ATX</div>
+<div class="deflist">*8&nbsp;&nbsp;:MTX</div><br clear="all"><a name="id09140011123503"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ข้อมูล Snapshot</p>
+<div class="list">•&nbsp;&nbsp;ข้อมูลของรหัสวิเคราะห์ปัญหาทั้งหมดที่ตรวจพบในปัจจุบันจะถูกเก็บบันทึก</div>
+<p clear="all">
+<p class="table-title">ตารางข้อมูล Snapshot</p>
+<p>
+<div>&mdash;: ไม่มี</div>
+</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รายการข้อมูล Snapshot</p>
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">หน่วย</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายละเอียดข้อมูล</p>
+</th>
+<th id="" align="center">
+<p class="thead">วิธีการอ่าน/ใช้ข้อมูล</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายการตรวจสอบข้อมูลที่เกี่ยวข้อง</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">AAT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;F</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิภายนอก</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">APP_STATUS</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">Accelerator Pedal Off/Under20%/Over20%/FAIL</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สถานะของตำแหน่งแป้นคันเร่ง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody"></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">CFG_STATUS</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">Config Complete/Not Configured/Config Error</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สถานะของการกำหนดค่าแผงหน้าปัด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ECT_STATUS</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">Under 0 degrees C/0-Under 80 degrees C/Over 80 degrees C/FAIL</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สถานะของอุณหภูมิน้ำหล่อเย็นเครื่องยนต์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">IC_VPWR</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันแหล่งจ่ายไฟแผงหน้าปัด</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ชุดเปิด/ปิดการทำงานจะได้รับค่าแรงดันไฟฟ้าแหล่งจ่ายไฟของแผงหน้าปัดที่ส่งผ่านสัญญาณระบบ CAN จากแผงหน้าปัดตลอดเวลา</div>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบรหัสวิเคราะห์ปัญหา ชุดเปิด/ปิดการทำงานจะบันทึกแรงดันไฟฟ้าแหล่งจ่ายไฟของแผงหน้าปัดเมื่อตรวจพบรหัสวิเคราะห์ปัญหานี้และแสดงใน M-MDS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">VPWR<sup>*1</sup></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">IG-ON_TIMER</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">hh:mm:ss<sup>*2</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระยะเวลาที่ผ่านไปตั้งแต่บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัดจะบันทึกข้อมูลช่วงเวลาที่ผ่านไปนับตั้งแต่บิดสวิตช์สตาร์ทไปที่ ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+</div>
+</dd>
+</dl>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ชุดเปิด/ปิดการทำงานจะได้รับระยะเวลาที่ผ่านไปตั้งแต่บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน) ที่ส่งผ่านสัญญาณระบบ CAN จากแผงหน้าปัดตลอดเวลา</div>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบรหัสวิเคราะห์ปัญหา ชุดเปิด/ปิดการทำงานจะบันทึกระยะเวลาที่ผ่านไปตั้งแต่บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน) เมื่อตรวจพบรหัสวิเคราะห์ปัญหานี้และแสดงใน M-MDS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">PWR_MODE_KEY</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">Key Out/Key Recently Out (Position 0)/Accessory (Position 1)/Post Ignition (Position 2)/Ignition On (Position 2)/Running (Position 2)/Running - Starting</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Key Out: บิดสวิตช์สตาร์ท OFF</div>
+<div class="list">•&nbsp;&nbsp;Key Recently Out (Position 0): ช่วงเวลาที่ผ่านไป<span>ภายใน 3 วินาที</span>นับตั้งแต่บิดสวิตช์สตาร์ท OFF</div>
+<div class="list">•&nbsp;&nbsp;Accessory (Position 1): บิดสวิตช์สตาร์ทไปที่ ACC</div>
+<div class="list">•&nbsp;&nbsp;Post Ignition (Position 2): ช่วงเวลาที่ผ่านไป<span>ภายใน 3 วินาที</span>นับตั้งแต่บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;Ignition On (Position 2): บิดสวิตช์สตาร์ทไปที่ ON (เครื่องยนต์ไม่ทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;Running (Position 2): บิดสวิตช์สตาร์ทไปที่ ON (เครื่องยนต์ทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;Running - Starting: สภาวะการสตาร์ท</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ชุดเปิด/ปิดการทำงานจะได้รับสถานะสวิตช์สตาร์ทผ่านสัญญาณระบบ CAN จากแผงหน้าปัดตลอดเวลา</div>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบรหัสวิเคราะห์ปัญหา ชุดเปิด/ปิดการทำงานจะบันทึกสถานะสวิตช์สตาร์ทเมื่อตรวจพบรหัสวิเคราะห์ปัญหานี้และแสดงใน M-MDS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">RPM_STATUS</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">Engine Stop/Under1500rpm/Over1500rpm/FAIL</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สถานะความเร็วรอบเครื่องยนต์</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ชุดเปิด/ปิดการทำงานจะได้รับความเร็วรอบเครื่องยนต์ที่ส่งผ่านสัญญาณระบบ CAN จากแผงหน้าปัดอย่างต่อเนื่อง</div>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบรหัสวิเคราะห์ปัญหา ชุดเปิด/ปิดการทำงานจะบันทึกความเร็วรอบเครื่องยนต์เมื่อตรวจพบรหัสวิเคราะห์ปัญหานี้และแสดงใน M-MDS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">TACHOMTR<sup>*1</sup></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">SHIFT_STATUS</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">P/N/D/R/FAIL</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สถานะตำแหน่งคันเกียร์</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ชุดเปิด/ปิดการทำงานจะได้รับตำแหน่งคันเกียร์ที่ส่งผ่านสัญญาณระบบ CAN จากแผงหน้าปัดอย่างต่อเนื่อง</div>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบรหัสวิเคราะห์ปัญหา ชุดเปิด/ปิดการทำงานจะบันทึกตำแหน่งคันเกียร์เมื่อตรวจพบรหัสวิเคราะห์ปัญหานี้และแสดงใน M-MDS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">TOTAL_DIST</div>
+</td>
+<td id="" align="center">
+<div class="tbody">km</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Miles</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระยะทางรวมสะสมตั้งแต่รถเสร็จสมบูรณ์จนเมื่อชุดเปิด/ปิดการทำงานตรวจพบรหัสวิเคราะห์ปัญหา (ค่าของมาตรบันทึกระยะทางในแผงหน้าปัด)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระยะทางรวมตั้งแต่ชุดเปิด/ปิดการทำงานตรวจพบรหัสวิเคราะห์ปัญหาจนถึงปัจจุบันสามารถคำนวณได้โดยการปฏิบัติตามขั้นตอนดังต่อไปนี้</div>
+<div class="list">1.&nbsp;&nbsp;ตรวจสอบค่าจากมาตรบันทึกระยะทางในแผงหน้าปัด</div>
+<div class="list">2.&nbsp;&nbsp;ตรวจสอบรายการข้อมูล Snapshot TOTAL_DIST</div>
+<div class="list">3.&nbsp;&nbsp;ลบ 2 ออกจาก 1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">TOTAL_TIME</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">hh:mm:ss<sup>*2</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระยะเวลาที่ผ่านไปโดยรวมสะสมจนกระทั่งชุดเปิด/ปิดการทำงานตรวจพบรหัสวิเคราะห์ปัญหา</div>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;เมื่อถอดฟิวส์ ROOM และบิดสวิตช์สตาร์ท OFF เวลาจะไม่ถูกนำไปรวมกับช่วงเวลาที่ผ่านไป</div>
+</div>
+</dd>
+</dl>
+</td>
+<td id="" align="left">
+<div class="tbody">ระยะเวลาที่ผ่านไปตั้งแต่ชุดเปิด/ปิดการทำงานตรวจพบรหัสวิเคราะห์ปัญหาจนถึงปัจจุบันสามารถคำนวณได้โดยการปฏิบัติตามขั้นตอนดังต่อไปนี้</div>
+<div class="list">1.&nbsp;&nbsp;ตรวจสอบรายการ PID TOTAL_TIME บนแผงหน้าปัด</div>
+<div class="list">2.&nbsp;&nbsp;ตรวจสอบรายการข้อมูล Snapshot TOTAL_TIME</div>
+<div class="list">3.&nbsp;&nbsp;ลบ 2 ออกจาก 1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">TOTAL_TIME<sup>*1</sup></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">TRNS_NUM_L</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">Initial/No.1/No.2/No.3/No.4/No.5/No.6</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หมายเลขการลงทะเบียนของรีโมท</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หากชุดเปิด/ปิดการทำงานตรวจพบรหัสวิเคราะห์ปัญหา B13D3:16 (แรงดันไฟฟ้าของแบตเตอรี่รีโมทต่ำ) ให้ตรวจสอบรีโมทที่มีความบกพร่องเกิดขึ้นโดยใช้ขั้นตอนต่อไปนี้ในการแสดงหมายเลขการลงทะเบียนของรีโมทที่ถูกใช้งาน</div>
+<div class="list">1.&nbsp;&nbsp;ตรวจสอบหมายเลขการลงทะเบียนของรีโมทในข้อมูล Snapshot</div>
+<div class="list">2.&nbsp;&nbsp;แสดงค่า PID รายการ RF_TRNS_NUM ของชุดเปิด/ปิดการทำงานและตรวจสอบแรงดันไฟฟ้าของแบตเตอรี่รีโมทที่มีหมายเลขการลงทะเบียนชุดเดียวกับหมายเลขการลงทะเบียนของรีโมทที่ได้บันทึกไว้</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">VPWR</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันแหล่งจ่ายไฟของชุดเปิด/ปิดการทำงาน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">VPWR_B2</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">VPWR_B1</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันแหล่งจ่ายไฟของชุดเปิด/ปิดการทำงาน (ฟิวส์ ROOM)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">VPWR_B1</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">VSPD_STATUS</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">Stop/0-10km/h/Over10km/h/FAIL</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สถานะความเร็วรถ</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ชุดเปิด/ปิดการทำงานจะได้รับความเร็วรถที่ส่งผ่านสัญญาณระบบ CAN จากแผงหน้าปัดอย่างต่อเนื่อง</div>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบรหัสวิเคราะห์ปัญหา ชุดเปิด/ปิดการทำงานจะบันทึกความเร็วรถเมื่อตรวจพบรหัสวิเคราะห์ปัญหานี้และแสดงใน M-MDS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">SPEEDOMTR<sup>*1</sup></div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;: PID แผงหน้าปัด (ดูที่ <font class="extxref-label"><a href="id092200021843.html">การวิเคราะห์ปัญหาบนรถ [แผงหน้าปัด]</a></font>)</div>
+<div class="deflist">*2&nbsp;&nbsp;:หน่วยวินาที (s) อาจแสดงอยู่หลังจุดทศนิยม</div><br clear="all"><a name="id09140011123504"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>คำอธิบายรหัส 7 หลักของรหัสวิเคราะห์ปัญหา</p>
+<div class="list">•&nbsp;&nbsp;เมื่อระบบหรือส่วนประกอบที่เกี่ยวข้องทำงานผิดพลาด CM จะจัดเก็บรหัสวิเคราะห์ปัญหาของส่วนที่ทำงานบกพร่องไว้ในหน่วยความจำของ CM และสามารถเรียกดูข้อมูลที่จัดเก็บโดยใช้เครื่องมือสแกนได้เมื่อจำเป็น รหัสวิเคราะห์ปัญหาได้รับการกำหนดโดยใช้ตัวเลข 7 หลัก ซึ่งตัวเลขแต่ละหลักมีความหมายดังต่อไปนี้<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5uun00001114.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5uun00001114</div>
+</td>
+</tr>
+</table>
+</div><br clear="all"><a name="id09140011123505"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ไบต์แสดงสถานะของรหัสวิเคราะห์ปัญหา</p>
+<div class="list">•&nbsp;&nbsp;ไบต์แสดงสถานะคือรหัสสองหลัก (สองหลักหลังเครื่องหมายขีด (-)) หลังรหัสวิเคราะห์ปัญหา 7 หลัก<table class="figure-flame">
+<tr>
+<td width="10mm"></td>
+<td>
+<table class="figure-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00002016.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00002016</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="list">•&nbsp;&nbsp;ไบต์แสดงสถานะคือรหัสที่แสดงรหัสที่ค้างอยู่, สถานะความบกพร่องปัจจุบัน/ในอดีต หรือสถานะไฟเตือน</div>
+<div class="list">•&nbsp;&nbsp;ไบต์แสดงสถานะสามารถอ่านได้ด้วยการทดสอบ CMDTC ด้วยตนเองโดยใช้ Mazda Modular Diagnostic System (M-MDS)</div>
+<div class="list">•&nbsp;&nbsp;สำหรับรายละเอียดเกี่ยวกับไบต์แสดงสถานะ ให้ดูที่คำอธิบายใน M-MDS เมื่ออ่านรหัสวิเคราะห์ปัญหา</div><br clear="all"><a name="id09140011123506"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>สภาวะการตรวจพบสำหรับรหัสวิเคราะห์ปัญหานั้นๆ</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา</p>
+</th>
+<th id="" align="center">
+<p class="thead">ตำแหน่งความบกพร่องของระบบ</p>
+</th>
+<th id="" align="center">
+<p class="thead">สภาวะการตรวจพบ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1026:49<sup>*5</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ล็อคพวงมาลัยบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานตรวจพบความบกพร่องที่รุนแรงในตัวล็อคพวงมาลัยของชุดเปิด/ปิดการทำงานภายใน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1026:96<sup>*5</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ล็อคพวงมาลัยบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานตรวจพบความบกพร่องในตัวล็อคพวงมาลัยของชุดเปิด/ปิดการทำงานภายใน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">B108B:23</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ 1 ของปุ่มกดสตาร์ทบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานตรวจพบสวิตช์ปุ่มกดสตาร์ท 1 ค้างอยู่ที่ ON เป็นเวลา 120 วินาทีหรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B108B:24</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ 1 ของปุ่มกดสตาร์ทบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานตรวจพบว่าสวิตช์ปุ่มกดสตาร์ท 1 อยู่ในสภาวะ Off 5 ครั้งหรือมากกว่าแม้ว่าสวิตช์ปุ่มกดสตาร์ท 2 จะอยู่ที่ On</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">B108C:23</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ 2 ของปุ่มกดสตาร์ทบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานตรวจพบสวิตช์ปุ่มกดสตาร์ท 2 ค้างอยู่ที่ ON เป็นเวลา 120 วินาทีหรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B108C:24</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ 2 ของปุ่มกดสตาร์ทบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานตรวจพบว่าสวิตช์ปุ่มกดสตาร์ท 2 อยู่ในสภาวะ Off 5 ครั้งหรือมากกว่าแม้ว่าสวิตช์ปุ่มกดสตาร์ท 1 จะอยู่ที่ On</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10AC:13<sup>*1</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ควบคุมความเร็วอัตโนมัติบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานตรวจพบการขาดวงจรในวงจรสวิตช์ควบคุมความเร็วอัตโนมัติเป็นเวลา 5 วินาที หรือมากกว่า ขณะบิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10AC:23<sup>*1</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ควบคุมความเร็วอัตโนมัติบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานตรวจพบสวิตช์ควบคุมความเร็วอัตโนมัติค้างอยู่ที่ On เป็นเวลา 2 วินาที หรือมากกว่า ขณะบิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10C9:1F</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรเสาอากาศกุญแจรีโมท (ภายใน, ตรงกลาง) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานตรวจพบวงจรขาดในเสาอากาศกุญแจรีโมท (ภายใน, ตรงกลาง) หรือลัดวงจรลงกราวด์ขณะสวิตช์สตาร์ทอยู่ที่ Off</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10E7:11</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรรีเลย์ IG1 บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์สตาร์ทอยู่ที่ ON (เครื่องยนต์ทำงานหรือไม่ทำงาน) และชุดเปิด/ปิดการทำงานตรวจพบแรงดันไฟฟ้าจากการตรวจสอบรีเลย์ IG1 ต่ำกว่า 2.5 V เป็นเวลา 0.5 วินาทีหรือมากกว่าขณะเครื่องยนต์ไม่ได้ทำงาน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10E7:12</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรรีเลย์ IG1 บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานตรวจพบแรงดันไฟฟ้าการตรวจสอบเอาท์พุทรีเลย์ IG1 เท่ากับ 2.5 V หรือมากกว่าเป็นเวลา 0.5 วินาทีหรือมากกว่าขณะที่สวิตช์สตาร์ทอยู่ที่ OFF หรือ ACC</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10E7:16</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรรีเลย์ IG1 บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์สตาร์ทอยู่ที่ ON (เครื่องยนต์ทำงานหรือไม่ทำงาน) และชุดเปิด/ปิดการทำงานตรวจพบแรงดันไฟฟ้าจากการตรวจสอบ IG1 ต่ำกว่า 2.5 V เป็นเวลา 1 วินาทีหรือมากกว่าขณะเครื่องยนต์ไม่ได้ทำงาน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10E7:17</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรรีเลย์ IG1 บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานตรวจพบแรงดันไฟฟ้าการตรวจสอบ IG1 เท่ากับ 2.5 V หรือมากกว่าเป็นเวลา 1 วินาทีหรือมากกว่าขณะที่สวิตช์สตาร์ทอยู่ที่ OFF หรือ ACC</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B112A:11</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรรีเลย์ IG2 บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ขณะสวิตช์สตาร์ทอยู่ที่ ON (เครื่องยนต์ทำงานหรือไม่ทำงาน) ชุดเปิด/ปิดการทำงานตรวจพบแรงดันไฟฟ้าวงจรรีเลย์ G2 เท่ากับ 2.5 V หรือต่ำกว่า เป็นเวลา 0.5 วินาทีหรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B112A:12</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรรีเลย์ IG2 บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ขณะสวิตช์สตาร์ทอยู่ที่ Off หรือ ACC ชุดเปิด/ปิดการทำงานตรวจพบแรงดันไฟฟ้าวงจรรีเลย์ IG2 เท่ากับ 2.5 V หรือมากกว่า เป็นเวลา 0.5 วินาทีหรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1140:29<sup>*6</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ได้รับสัญญาณความผิดพลาดของการควบคุมระบบ i-stop</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรกราวด์มอเตอร์สตาร์ทไม่เปิดใช้งานแม้ว่า PCM จะตรวจพบสัญญาณขอการสตาร์ทเครื่องยนต์ใหม่ขณะดับเครื่องยนต์ภายใต้การควบคุมของระบบ i-stop หรือตรวจพบสภาวะวงจรขาดติดต่อกันเป็นเวลา 12 วินาที หรือมากกว่ารวมทั้งหมด 5 ครั้งหรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B124C:56</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ไฟเลี้ยวบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานตรวจพบว่ามีการเปิดใช้งานสวิตช์ไฟเลี้ยวด้านซ้ายและขวาพร้อมกันเป็นเวลา 5 วินาทีหรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B13D3:16</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันไฟฟ้าของแบตเตอรี่รีโมทต่ำ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานตรวจพบแรงดันไฟแบตเตอรี่ตัวส่งสัญญาณรีโมทต่ำในตัวส่งสัญญาณที่โปรแกรมไว้ 3 ครั้งติดต่อกัน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B13D3:4A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดรีโมทบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานตรวจพบตัวส่งสัญญาณรีโมทอื่นที่แตกต่างกันถูกติดตั้งอยู่ในรถ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B13D3:97</div>
+</td>
+<td id="" align="left">
+<div class="tbody">งานลงทะเบียนรีโมทไม่เสร็จสมบูรณ์</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานตรวจพบว่าการลงทะเบียนของตัวส่งสัญญาณรีโมทไม่สมบูรณ์</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1C53:13</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ที่ปัดน้ำฝนกระจกบังลมหน้าบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานตรวจพบการขาดวงจร การลัดวงจรลงกราวด์ หรือลัดวงจรในแหล่งจ่ายไฟฟ้าในวงจรสวิตช์ที่ปัดน้ำฝนกระจกบังลมหน้าเป็นเวลา 5 วินาที หรือมากกว่า ขณะสวิตช์สตาร์ทอยู่ที่ ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0040:23<sup>*3</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ไฟเบรก (สัญญาณ No.1) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ขณะสวิตช์สตาร์ทอยู่ที่ ON (เครื่องยนต์ไม่ทำงานหรือทำงาน) ชุดเปิด/ปิดการทำงานตรวจพบว่าสัญญาณสวิตช์ไฟเบรก No.1 อยู่ในสภาวะ Off เป็นเวลา 3 วินาทีหรือมากกว่าติดต่อกัน 5 ครั้งแม้ว่าสัญญาณสวิตช์ไฟเบรก No.2 จะเปลี่ยนแปลง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0040:24<sup>*3</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ไฟเบรก (สัญญาณ No.1) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ขณะสวิตช์สตาร์ทอยู่ที่ ON (เครื่องยนต์ไม่ทำงานหรือทำงาน) ชุดเปิด/ปิดการทำงานตรวจพบว่าสัญญาณสวิตช์ไฟเบรก No.1 อยู่ในสภาวะ On เป็นเวลา 3 วินาทีหรือมากกว่าติดต่อกัน 5 ครั้งแม้ว่าสัญญาณสวิตช์ไฟเบรก No.2 จะเปลี่ยนแปลง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0051:2F<sup>*2</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณเซ็นเซอร์มุมบังคับเลี้ยวบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานตรวจพบข้อผิดพลาดของสัญญาณเซ็นเซอร์มุมบังคับเลี้ยวเป็นเวลา 5 วินาทีหรือมากกว่าขณะสวิตช์สตาร์ทอยู่ที่ ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0051:95<sup>*2</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเซ็นเซอร์มุมบังคับเลี้ยวบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ชุดเปิด/ปิดการทำงานได้รับสัญญาณต่อไปนี้ขณะสวิตช์สตาร์ทอยู่ที่ ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ชุดเซ็นเซอร์มุมบังคับเลี้ยวบกพร่องจากโมดูลควบคุม EPS เป็นเวลา 1 วินาทีหรือมากกว่า</div>
+<div class="list">―&nbsp;&nbsp;การประกอบที่ไม่ถูกต้องของเซ็นเซอร์มุมบังคับเลี้ยวที่ 360&deg;</div>
+<div class="list">―&nbsp;&nbsp;มุมบังคับเลี้ยวเท่ากับ 720 หรือมากกว่าเป็นเวลา 0.048 วินาทีหรือมากกว่า</div>
+</dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0052:14<sup>*2</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสัญญาณ A ของเซ็นเซอร์มุมบังคับเลี้ยวบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานตรวจพบการขาดวงจรหรือการลัดวงจรลงกราวด์ในวงจรสัญญาณ A ของเซ็นเซอร์มุมบังคับเลี้ยว</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0052:2F<sup>*2</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณ A ของเซ็นเซอร์มุมบังคับเลี้ยวบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ชุดเปิด/ปิดการทำงานตรวจพบการเปลี่ยนแปลงกะทันหันของสัญญาณ A ของเซ็นเซอร์มุมบังคับเลี้ยว</div>
+<div class="list">•&nbsp;&nbsp;ชุดเปิด/ปิดการทำงานตรวจพบว่าสัญญาณเซ็นเซอร์มุมบังคับเลี้ยวขัดข้อง ขณะสวิตช์สตาร์ทอยู่ที่ ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0053:14<sup>*2</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสัญญาณ B ของเซ็นเซอร์มุมบังคับเลี้ยวบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานตรวจพบการขาดวงจรหรือการลัดวงจรลงกราวด์ในวงจรสัญญาณ B ของเซ็นเซอร์มุมบังคับเลี้ยว</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0053:2F<sup>*2</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณ B ของเซ็นเซอร์มุมบังคับเลี้ยวบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ชุดเปิด/ปิดการทำงานตรวจพบการเปลี่ยนแปลงกะทันหันในสัญญาณ B ของเซ็นเซอร์มุมบังคับเลี้ยว</div>
+<div class="list">•&nbsp;&nbsp;ชุดเปิด/ปิดการทำงานตรวจพบว่าสัญญาณ B ของเซ็นเซอร์มุมบังคับเลี้ยวขัดข้อง ขณะสวิตช์สตาร์ทอยู่ที่ ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C2003:13<sup></sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ที่พวงมาลัยขาดวงจร</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานตรวจพบการขาดวงจรในวงจรสวิตช์ที่พวงมาลัยเป็นเวลา 5 วินาที หรือมากกว่า ขณะบิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P0560:16<sup></sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">อินพุทแรงดันแหล่งจ่ายไฟของชุดเปิด/ปิดการทำงาน (+B3) ต่ำ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบแรงดันไฟฟ้า (+B3) ของวงจรแหล่งจ่ายไฟชุดเปิด/ปิดการทำงานต่ำกว่า 8.5 V เป็นเวลานาน 5 วินาทีหรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P0615:11</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรรีเลย์มอเตอร์สตาร์ทบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานตรวจพบแรงดันไฟฟ้าวงจรการตรวจสอบรีเลย์มอเตอร์สตาร์ทต่ำกว่า 2.2 V เป็นเวลา 1 วินาทีหรือมากกว่าขณะสวิตช์สตาร์ทอยู่ที่ OFF</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P0615:12</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรรีเลย์มอเตอร์สตาร์ทบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานตรวจพบแรงดันไฟฟ้าวงจรรีเลย์มอเตอร์สตาร์ทอยู่ภายในค่าที่กำหนด หรือมากกว่าเป็นเวลา 1 วินาทีหรือมากกว่าขณะสวิตช์สตาร์ท OFF</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P0615:13</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรรีเลย์มอเตอร์สตาร์ทบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานตรวจพบการขาดวงจรในวงจรสวิตช์มอเตอร์สตาร์ทเป็นเวลา 1 วินาทีหรือมากกว่า ขณะสวิตช์สตาร์ทอยู่ที่ Off</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P0615:16</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรรีเลย์มอเตอร์สตาร์ทบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานตรวจพบแรงดันไฟฟ้าวงจรรีเลย์มอเตอร์สตาร์ทต่ำกว่าค่าที่กำหนดเป็นเวลา 1 วินาทีหรือมากกว่าระหว่างการสตาร์ทเครื่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P0616:23</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรบนด้านปลายทางของรีเลย์มอเตอร์สตาร์ทบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานตรวจพบการลัดวงจรลงกราวด์ในวงจรปลายทางของรีเลย์มอเตอร์สตาร์ทติดต่อกันเป็นเวลา 0.5 วินาทีหรือมากกว่า 5 ครั้งติดต่อกัน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P0616:24</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรบนด้านปลายทางของรีเลย์มอเตอร์สตาร์ทบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานตรวจพบการขาดวงจรในวงจรปลายทางของรีเลย์มอเตอร์สตาร์ทติดต่อกันเป็นเวลา 0.5 วินาทีหรือมากกว่า 5 ครั้งติดต่อกัน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P0616:29</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณรีเลย์มอเตอร์สตาร์ทบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;หากสัญญาณระบบ CAN ต่อไปนี้ไม่ตรงกันเป็นเวลา 0.5 วินาทีหรือมากกว่าติดต่อกัน และตรวจพบสภาวะดังกล่าวอย่างน้อย 5 ครั้งติดต่อกัน</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;สภาพของเซ็นเซอร์ช่วงตำแหน่งเกียร์ (ATX) หรือสวิตช์อินเตอร์ล็อคมอเตอร์สตาร์ท (MTX)</div>
+<div class="list">―&nbsp;&nbsp;สภาพของวงจรปลายทางของรีเลย์มอเตอร์สตาร์ท</div>
+<div class="list">―&nbsp;&nbsp;ผลการควบคุม PCM</div>
+<div class="list">―&nbsp;&nbsp;สภาพของสัญญาณระบบ CAN ที่ส่งมาจาก PCM</div>
+</dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P081C:23<sup>*3</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ตำแหน่งที่ไม่ใช่ P บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานตรวจพบสวิตช์ที่ไม่ใช่ตำแหน่ง P ค้างอยู่ที่ On เป็นเวลา 5 วินาทีหรือมากกว่า 5 ครั้งติดต่อกันขณะสวิตช์สตาร์ทอยู่ที่ ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P081C:24<sup>*3</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ตำแหน่งที่ไม่ใช่ P บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานตรวจพบสวิตช์ที่ไม่ใช่ตำแหน่ง P ค้างอยู่ที่ Off เป็นเวลา 5 วินาทีหรือมากกว่า 5 ครั้งติดต่อกันขณะสวิตช์สตาร์ทอยู่ที่ ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P081D:29<sup>*4</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ได้รับสัญญาณความผิดพลาดของสวิตช์เกียร์ว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานได้รับข้อผิดพลาดของสัญญาณสวิตช์เกียร์ว่างจาก PCM เป็นเวลา 1 นาที หรือมากกว่า ขณะสวิตช์สตาร์ทอยู่ที่ ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P081D:2F<sup>*4</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณสวิตช์เกียร์ว่างไม่ตรงกัน</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ขณะสวิตช์สตาร์ทอยู่ที่ ON (เครื่องยนต์ทำงานหรือไม่ทำงาน) ชุดเปิด/ปิดการทำงานตรวจพบว่าความเร็วรถเปลี่ยนแปลงจาก 0 km/h {0 mph} เป็น 10 km/h {6.2 mph} ติดต่อกัน 5 ครั้งหรือมากกว่าแม้ว่าจะได้รับสัญญาณเกียร์ว่างจาก PCM</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P0830:23<sup>*4</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ CPP บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานตรวจพบว่าสวิตช์คลัตช์ค้างอยู่ที่ On เป็นเวลา 10 วินาทีหรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P0850:23<sup>*3</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจร TCM บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ขณะสวิตช์สตาร์ทอยู่ที่ ON (เครื่องยนต์ทำงานหรือไม่ทำงาน) ตรวจพบว่าสัญญาณระบบ CAN ของเซ็นเซอร์ช่วงเกียร์อยู่ที่ตำแหน่ง P หรือ N ติดต่อกันเป็นเวลา 1 วินาทีหรือมากกว่า 5 ครั้งติดต่อกันหรือมากกว่าแม้ว่าสัญญาณ TCM CAN จะไม่ได้อยู่ที่ตำแหน่ง P และ N</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P0850:24<sup>*3</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจร TCM บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ขณะสวิตช์สตาร์ทอยู่ที่ ON (เครื่องยนต์ทำงานหรือไม่ทำงาน) ตรวจพบว่าสัญญาณระบบ CAN ของเซ็นเซอร์ช่วงเกียร์ไม่ได้อยู่ที่ตำแหน่ง P และ N ติดต่อกันเป็นเวลา 1 วินาทีหรือมากกว่า 5 ครั้งติดต่อกันหรือมากกว่า แม้ว่าสัญญาณ TCM CAN จะไม่ได้อยู่ที่ตำแหน่ง P หรือ N</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P0930:71<sup>*3</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรโซลินอยด์ชิฟท์ล็อคบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานตรวจพบว่าโซลินอยด์ชิฟท์ล็อคค้างอยู่ที่ On เป็นเวลา 30 วินาที หรือมากกว่า ขณะสวิตช์สตาร์ทอยู่ที่ ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P1708:24<sup>*4</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์อินเตอร์ล็อคมอเตอร์สตาร์ทบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานตรวจพบการขาดวงจรในวงจรสวิตช์อินเตอร์ล็อคมอเตอร์สตาร์ทเป็นเวลา 1 วินาทีหรือมากกว่าติดต่อกัน 5 ครั้งขณะสวิตช์สตาร์ทอยู่ที่ ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P1708:29<sup>*4</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์อินเตอร์ล็อคมอเตอร์สตาร์ทหรือวงจรสวิตช์ CPP บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานตรวจพบว่าวงจรสวิตช์อินเตอร์ล็อคมอเตอร์สตาร์ทค้างอยู่ที่ On เป็นเวลา 0.2 วินาทีหรือมากกว่า หรือวงจรสวิตช์ CPP ค้างอยู่ที่ Off เป็นเวลา 0.25 วินาทีหรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P1794:16</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อินพุทแรงดันแหล่งจ่ายไฟของชุดเปิด/ปิดการทำงาน (+B2) ต่ำ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบแรงดันไฟฟ้า (+B2) ของวงจรแหล่งจ่ายไฟชุดเปิด/ปิดการทำงานต่ำกว่า 6.5 V เป็นเวลานาน 5 วินาทีหรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0001:88</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารโมดูลผิดพลาด (HS-CAN)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานตรวจพบความบกพร่องในสายบัสการสื่อสารระบบ CAN (HS-CAN) ติดต่อกัน 10 ครั้ง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0028:87</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุมตัวถังด้านหลัง (RBCM) ผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานตรวจพบข้อผิดพลาดในการสื่อสารกับโมดูลควบคุมตัวถังด้านหลัง (RBCM) ติดต่อกัน 10 ครั้ง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0100:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ PCM ผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานไม่สามารถรับสัญญาณระบบ CAN จาก PCM เป็นเวลา 1 วินาที หรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0101:00<sup>*3</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ TCM ผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานไม่สามารถรับสัญญาณระบบ CAN จาก TCM เป็นเวลา 1 วินาที หรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0121:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ DSC HU/CM ผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานไม่สามารถรับสัญญาณระบบ CAN จาก DSC HU/CM เป็นเวลา 1 วินาที หรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0121:87</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ DSC HU/CM ผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานไม่สามารถรับสัญญาณระบบ CAN จาก DSC HU/CM เป็นเวลา 10 วินาที หรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0131:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุม EPS ผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานไม่สามารถรับสัญญาณระบบ CAN จากโมดูลควบคุม EPS เป็นเวลา 1.2 วินาที หรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0140:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุมตัวถังด้านหน้า (FBCM) ผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานไม่สามารถรับสัญญาณระบบ CAN จากโมดูลควบคุมตัวถังด้านหน้า (FBCM) เป็นเวลา 5 วินาที หรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0146:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับแผงหน้าปัดผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานไม่สามารถรับสัญญาณเกตเวย์จากแผงหน้าปัดเป็นเวลา 5 วินาที หรือมากกว่า ขณะสวิตช์สตาร์ทอยู่ที่ ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0151:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุม SAS ผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานไม่สามารถรับสัญญาณระบบ CAN จากโมดูลควบคุม SAS เป็นเวลา 1 วินาที หรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับแผงหน้าปัดผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานไม่สามารถรับสัญญาณระบบ CAN จากแผงหน้าปัดเป็นเวลา 5 วินาที หรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0447:86</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ได้รับสัญญาณข้อผิดพลาดจากแผงหน้าปัด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานได้รับสัญญาณข้อผิดพลาดจากแผงหน้าปัดเป็นเวลา 5 วินาที หรือมากกว่า ขณะสวิตช์สตาร์ทอยู่ที่ ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U201F:11</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรรีซีพเวอร์กุญแจรีโมทบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานตรวจพบแรงดันไฟฟ้าวงจรตัวรับสัญญาณกุญแจรีโมทต่ำกว่า 3.4 V เป็นเวลา 0.5 วินาทีหรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U201F:12</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรรีซีพเวอร์กุญแจรีโมทบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานตรวจพบแรงดันไฟฟ้าวงจรรับสัญญาณกุญแจรีโมทขนาด 6.2 V หรือมากกว่าเป็นเวลา 0.5 วินาทีหรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2100:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การกำหนดค่าชุดเปิด/ปิดการทำงานไม่เสร็จสมบูรณ์</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การกำหนดค่าชุดเปิด/ปิดการทำงานไม่สมบูรณ์</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2300:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่ได้รับข้อมูลการกำหนดค่าจากแผงหน้าปัด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานไม่สามารถรับข้อมูลการกำหนดค่าจากแผงหน้าปัดเป็นเวลา 1 วินาทีหรือมากกว่า ขณะสวิตช์สตาร์ทอยู่ที่ ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:01<sup>*2</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในชุดเปิด/ปิดการทำงานบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบความบกพร่องภายในชุดเปิด/ปิดการทำงาน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:49</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในชุดเปิด/ปิดการทำงานบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบความบกพร่องภายในชุดเปิด/ปิดการทำงาน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:96</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในชุดเปิด/ปิดการทำงานบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบความบกพร่องภายในชุดเปิด/ปิดการทำงาน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3003:16</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อินพุทแรงดันแหล่งจ่ายไฟของชุดเปิด/ปิดการทำงาน (+B1) ต่ำ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันไฟฟ้า (+B1) ของวงจรแหล่งจ่ายไฟชุดเปิด/ปิดการทำงานอยู่ที่ 5V หรือมากกว่า ตรวจพบแรงดันไฟต่ำกว่า 8.5 V เป็นเวลานาน 5 วินาทีหรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3004:11</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรรีเลย์ ACC บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ขณะสวิตช์สตาร์ทอยู่ที่ตำแหน่ง ACC หรือ ON (เครื่องยนต์ทำงานหรือไม่ทำงาน) ชุดเปิด/ปิดการทำงานตรวจพบแรงดันไฟฟ้าการตรวจสอบเอาท์พุทรีเลย์ ACC ต่ำกว่าค่ากำหนดเป็นเวลา 0.05 วินาทีหรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3004:12</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรรีเลย์ ACC บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานตรวจพบแรงดันไฟฟ้าการตรวจสอบเอาท์พุทรีเลย์ ACC เท่ากับ 2.5 V หรือมากกว่าเป็นเวลา 0.5 วินาทีหรือมากกว่าขณะสวิตช์สตาร์ทอยู่ที่ OFF</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3004:16</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรรีเลย์ ACC บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ขณะสวิตช์สตาร์ทอยู่ที่ตำแหน่ง ACC หรือ ON (เครื่องยนต์ทำงานหรือไม่ทำงาน) ชุดเปิด/ปิดการทำงานตรวจพบแรงดันไฟฟ้าการตรวจสอบ ACC ต่ำกว่า 2.5 V เป็นเวลา 1 วินาทีหรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3004:17</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรรีเลย์ ACC บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานตรวจพบแรงดันไฟฟ้าการตรวจสอบ ACC เท่ากับ 2.5 V หรือมากกว่าเป็นเวลา 5 วินาทีหรือมากกว่าขณะสวิตช์สตาร์ทอยู่ที่ OFF</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;:รุ่นที่มีระบบควบคุมความเร็วอัตโนมัติ</div>
+<div class="deflist">*2&nbsp;&nbsp;:รุ่นทีมี AFS (ระบบปรับลำแสงไฟหน้า), ระบบสมาร์ทซิตี้เบรก (SCBS) หรือระบบช่วยจอด</div>
+<div class="deflist">*3&nbsp;&nbsp;: ATX</div>
+<div class="deflist">*4&nbsp;&nbsp;:MTX</div>
+<div class="deflist">*5&nbsp;&nbsp;:รุ่นที่มีล็อคพวงมาลัย</div>
+<div class="deflist">*6&nbsp;&nbsp;:รุ่นที่มีระบบ i-stop</div><br clear="all"><a name="id09140011123507"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ฟังก์ชั่นการตรวจสอบข้อมูล</p>
+<div class="list">•&nbsp;&nbsp;เมื่อใช้ฟังก์ชั่นการตรวจสอบข้อมูล/PID สามารถเลือกและอ่านค่ารายการตรวจสอบสัญญาณอินพุท/เอาท์พุทที่กำหนดไว้ในชุดเปิด/ปิดการทำงานได้แบบเรียลไทม์</div>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">PID</p>
+</th>
+<th id="" align="center">
+<p class="thead">หน่วย/การทำงาน</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายละเอียดข้อมูล</p>
+</th>
+<th id="" align="center">
+<p class="thead">วิธีการอ่าน/ใช้ข้อมูล</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายการการตรวจสอบ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">BRAKE_SW1<sup>*1</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์ไฟเบรกอยู่ที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;On: สวิตช์ไฟเบรกอยู่ที่ On</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ไฟเบรก</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">CLUT_CUT_SW<sup>*2</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์อินเตอร์ล็อคมอเตอร์สตาร์ทอยู่ที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;On: สวิตช์อินเตอร์ล็อคมอเตอร์สตาร์ทอยู่ที่ On</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์อินเตอร์ล็อคมอเตอร์สตาร์ท</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">CLUTCH_SW<sup>*2</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์ CPP อยู่ที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;On: สวิตช์ CPP อยู่ที่ On</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ CPP</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">COMM_ST_TSP</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แสดงสภาวะการทำงานของฟังก์ชันการอ่านรหัสกุญแจระบบอิมโมบิไลเซอร์</div>
+<div class="list">•&nbsp;&nbsp;Off: ฟังก์ชันการอ่านรหัสกุญแจไม่ทำงาน</div>
+<div class="list">•&nbsp;&nbsp;On: ฟังก์ชันการอ่านรหัสทำงาน และขดลวดเสาอากาศจะอ่านรหัสกุญแจจากชุดรับส่งสัญญาณของตัวส่งสัญญาณรีโมท</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ฟังก์ชันการอ่านรหัสกุญแจของระบบอิมโมบิไลเซอร์จtทำงาน และเมื่อสัญญาณสวิตช์ไฟเบรก สวิตช์คลัตช์ หรือปุ่มกดสตาร์ทถูกป้อน ขดลวดเสาอากาศจะอ่านรหัสกุญแจจากชุดรับส่งสัญญาณของตัวส่งสัญญาณรีโมท และแสดง On ขณะรหัสกุญแจถูกส่งไปยังชุดเปิด/ปิดการทำงาน</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงาน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">CRU_CON_SW<sup>*3</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">Not_Pressed/On/Off/Cancel/Resume/Fault/Set (+)/Set (-)</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Not_Pressed: สวิตช์แต่ละตัวของสวิตช์ควบคุมความเร็วอัตโนมัติไม่ถูกกด</div>
+<div class="list">•&nbsp;&nbsp;On: สวิตช์ ON ระบบควบคุมความเร็วถูกกด</div>
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์ OFF ระบบควบคุมความเร็วถูกกด</div>
+<div class="list">•&nbsp;&nbsp;ยกเลิก: สวิตช์ CANCEL ถูกกด</div>
+<div class="list">•&nbsp;&nbsp;การกลับสู่การควบคุมความเร็วอัตโนมัติ: สวิตช์ RESUME ถูกกด</div>
+<div class="list">•&nbsp;&nbsp;Fault: สวิตช์ควบคุมความเร็วอัตโนมัติมีความบกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;Set (+): สวิตช์ SET (+) ถูกกด</div>
+<div class="list">•&nbsp;&nbsp;Set (-): สวิตช์ SET (-) ถูกกด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ควบคุมความเร็วอัตโนมัติ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ES_UL_SW</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Not_Unlock/Unlock</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Not_Unlock: สวิตช์ปลดล็อคของล็อคพวงมาลัยอยู่ที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;Unlock: สวิตช์ปลดล็อคของล็อคพวงมาลัยอยู่ที่ On</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงาน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ES_UL_SW_M</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Not_Unlock/Unlock</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Not_Unlock: ค่าหน่วยความจำของสวิตช์ปลดล็อคของล็อคพวงมาลัยไม่ถูกปลดล็อค</div>
+<div class="list">•&nbsp;&nbsp;Unlock: ค่าหน่วยความจำของสวิตช์ปลดล็อคของล็อคพวงมาลัยถูกปลดล็อค</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงาน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ES_ULL_SW</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Not_Unlock: สวิตช์ล็อค/ปลดล็อคของล็อคพวงมาลัยอยู่ที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;Unlock: สวิตช์ล็อค/ปลดล็อคของล็อคพวงมาลัยอยู่ที่ On</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงาน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ES_ULL_SW_M</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Not_Unlock: ค่าหน่วยความจำของสวิตช์ล็อค/ปลดล็อคของล็อคพวงมาลัยไม่ถูกปลดล็อค</div>
+<div class="list">•&nbsp;&nbsp;Unlock: ค่าหน่วยความจำของสวิตช์ล็อค/ปลดล็อคของล็อคพวงมาลัยถูกปลดล็อค</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงาน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">F_FOG_SW<sup></sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์ไฟตัดหมอกไม่อยู่ในตำแหน่ง F.FOG</div>
+<div class="list">•&nbsp;&nbsp;On: สวิตช์ไฟตัดหมอกอยู่ในตำแหน่ง F.FOG</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ไฟตัดหมอกด้านหน้า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">H/L_SW_HI</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์ไฟไม่อยู่ในตำแหน่ง HI</div>
+<div class="list">•&nbsp;&nbsp;On: สวิตช์ไฟส่องสว่างอยู่ที่ตำแหน่ง HI</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ไฟ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">H/L_SW_LOW</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แสดงตำแหน่งสวิตช์ไฟสูง-ต่ำของสวิตช์ไฟที่กำลังป้อนสัญญาณไปยังชุดเปิด/ปิดการทำงาน</div>
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์ไฟสูง-ต่ำของสวิตช์ไฟไม่อยู่ในตำแหน่ง LO</div>
+<div class="list">•&nbsp;&nbsp;On: สวิตช์ไฟสูง-ต่ำของสวิตช์ไฟอยู่ในตำแหน่ง LO</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจสอบว่าค่าการตรวจสอบเปลี่ยนแปลงหรือไม่เมื่อมีการสลับสวิตช์ไฟสูง-ต่ำจากสวิตช์ไฟส่องสว่างระหว่างตำแหน่ง LO กับ HI หากค่าการตรวจสอบและการทำงานของสวิตช์ไฟสูง-ต่ำทำงานไม่ตรงกัน ให้ตรวจสอบสวิตช์ไฟ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ไฟ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">H/L_SW_OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์ไฟไม่อยู่ในตำแหน่ง OFF</div>
+<div class="list">•&nbsp;&nbsp;On: สวิตช์ไฟอยู่ในตำแหน่ง OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ไฟ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">H/L_SW_PASS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์ไฟไม่อยู่ในตำแหน่งขอทาง</div>
+<div class="list">•&nbsp;&nbsp;On: สวิตช์ไฟอยู่ในตำแหน่งขอทาง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ไฟ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">H/L_SW_TNS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์ไฟไม่อยู่ในตำแหน่ง TNS</div>
+<div class="list">•&nbsp;&nbsp;On: สวิตช์ไฟอยู่ในตำแหน่ง TNS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ไฟ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">HAZARD_SW</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์ไฟเตือนฉุกเฉินอยู่ในตำแหน่ง OFF</div>
+<div class="list">•&nbsp;&nbsp;On: สวิตช์ไฟเตือนฉุกเฉินอยู่ในตำแหน่ง On</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ไฟเตือนฉุกเฉิน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">IG_POSITION</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF/ACC/ON/CRANK</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แสดงสถานะไฟฟ้าที่ควบคุมโดยชุดเปิด/ปิดการทำงาน</div>
+<div class="list">•&nbsp;&nbsp;Off: ชุดเปิด/ปิดการทำงานควบคุมสวิตช์สตาร์ท OFF</div>
+<div class="list">•&nbsp;&nbsp;ACC: ชุดเปิด/ปิดการทำงานควบคุมสวิตช์สตาร์ท ACC</div>
+<div class="list">•&nbsp;&nbsp;On: ชุดเปิด/ปิดการทำงานควบคุมสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;CRANK: ชุดเปิด/ปิดการทำงานควบคุมการสตาร์ทที่สวิตช์สตาร์ท ON</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;เมื่อปุ่มกดสตาร์ททำงาน ชุดเปิด/ปิดการทำงานจะดำเนินการสลับแหล่งจ่ายไฟและแสดงค่า PID ของตำแหน่งแหล่งจ่ายไฟที่ทำการควบคุม</div>
+<div class="list">•&nbsp;&nbsp;หากปุ่มกดสตาร์ททำงาน และค่า PID ไม่ตรงกัน และสถานะแหล่งจ่ายไฟของชุดเปิด/ปิดอื่นๆ แตกต่างจากค่า PID ให้ตรวจสอบแหล่งจ่ายไฟอินพุทของชุดเปิด/ปิดอื่นๆ เนื่องจากการควบคุมแหล่งจ่ายไฟของชุดการเปิด/ปิดการทำงานเป็นปกติ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์สตาร์ท</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">INFO_SW</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/SW1_On/SW2_On/SW3_On/Unknown/Invalid</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์ UP/DOWN/INFO ของสวิตช์บนพวงมาลัยไม่ถูกกด</div>
+<div class="list">•&nbsp;&nbsp;SW1_On: อัพสวิตช์ถูกกด</div>
+<div class="list">•&nbsp;&nbsp;SW2_On: ดาวน์สวิตช์ถูกกด</div>
+<div class="list">•&nbsp;&nbsp;SW3_On: สวิตช์ INFO ถูกกด</div>
+<div class="list">•&nbsp;&nbsp;Unknown: สวิตช์ UP/DOWN/INFO ของสวิตช์บนพวงมาลัยไม่ถูกกำหนด</div>
+<div class="list">•&nbsp;&nbsp;Invalid: ได้รับสัญญาณความบกพร่องของสวิตช์ที่พวงมาลัย</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แสดงตำแหน่งสวิตช์ INFO ของสวิตช์ที่พวงมาลัยซึ่งป้อนสัญญาณไปยังชุดเปิด/ปิดการทำงาน สัญญาณสวิตช์พวงมาลัยจะถูกส่งไปยังชุดเปิด/ปิดการทำงานผ่านคล็อคสปริง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ที่พวงมาลัย</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">INHIBIT_SW<sup>*1</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: คันเกียร์ไม่อยู่ในตำแหน่ง P และ N</div>
+<div class="list">•&nbsp;&nbsp;On: คันเกียร์อยู่ในตำแหน่ง P หรือ N</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เซ็นเซอร์ช่วงตำแหน่งเกียร์</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">LG/T_LK_SW<sup>*5</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์ขอการทำงาน (ประตูท้าย) อยู่ที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;On: สวิตช์ขอการทำงาน (ประตูท้าย) อยู่ที่ On</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ขอการทำงาน (ประตูท้าย)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">LG/T_UNL_SW</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์เปิดประตูท้ายอยู่ที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;On: สวิตช์เปิดประตูท้ายอยู่ที่ On</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ตัวเปิดประตูท้าย</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">LL_SW_D_LK</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์เชื่อมโยงล็อคประตูหน้า (ด้านคนขับ) อยู่ในสถานะปลดล็อค</div>
+<div class="list">•&nbsp;&nbsp;On: สวิตช์เชื่อมโยงล็อคประตูหน้า (ด้านคนขับ) อยู่ในสถานะล็อค</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์เชื่อมโยงล็อคประตูหน้า (ด้านคนขับ)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">NUM_TRNSMIT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แสดงจำนวนของรีโมทที่ได้รับการโปรแกรมลงในชุดเปิด/ปิดการทำงาน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงาน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P_RANGE_SW<sup>*1</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์ตำแหน่งที่ไม่ใช่ P อยู่ที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;On: สวิตช์ตำแหน่งที่ไม่ใช่ P อยู่ที่ On</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ตำแหน่งที่ไม่ใช่ P</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">R_FOG_SW<sup></sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์ไฟตัดหมอกไม่อยู่ในตำแหน่ง R.FOG</div>
+<div class="list">•&nbsp;&nbsp;On: สวิตช์ไฟตัดหมอกอยู่ในตำแหน่ง R.FOG</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ไฟตัดหมอกด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">RELAY_ACC</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: ตัวขับรีเลย์ ACC อยู่ที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;On: ตัวขับรีเลย์ ACC อยู่ที่ On</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">รีเลย์ ACC</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">RELAY_IG1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: ตัวขับรีเลย์ IG1 อยู่ที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;On: ตัวขับรีเลย์ IG1 อยู่ที่ On</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">รีเลย์ IG1</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">RELAY_IG2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: ตัวขับรีเลย์ IG2 อยู่ที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;On: ตัวขับรีเลย์ IG2 อยู่ที่ On</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมตัวถังด้านหน้า (FBCM)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">RF_RECEP_ST</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Initial/Transmitter/RF_Response</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แสดงสถานะการรับสัญญาณวิทยุจากตัวส่งสัญญาณรีโมท</div>
+<div class="list">•&nbsp;&nbsp;Initial: ชุดเปิด/ปิดการทำงานจะไม่ได้รับสัญญาณจากตัวส่งสัญญาณรีโมท</div>
+<div class="list">•&nbsp;&nbsp;Transmitter: ชุดเปิด/ปิดการทำงานจะไม่ได้รับสัญญาณจากการทำงานของปุ่มบนตัวส่งสัญญาณรีโมท</div>
+<div class="list">•&nbsp;&nbsp;RF_Response: ระหว่างการอนุญาตตัวส่งสัญญาณรีโมท สัญญาณการตอบกลับจากตัวส่งสัญญาณรีโมทจะได้รับโดยชุดเปิด/ปิดการทำงาน</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เมื่อตรวจสอบค่า PID ขณะใช้งานปุ่มตัวส่งสัญญาณรีโมท หาก &ldquo;Transmitter&rdquo; ปรากฏขึ้นจะสามารถระบุได้ว่าการส่งระหว่างตัวส่งสัญญาณรีโมท ตัวรับสัญญาณกุญแจรีโมท และชุดเปิด/ปิดการทำงานเป็นปกติ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตัวรับสัญญาณกุญแจรีโมท</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">RF_TRNS_NUM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Initia/No.1/No.2/No.3/No.4/No.5/No.6</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เมื่อกดปุ่มปลดล็อคของตัวส่งสัญญาณรีโมท หมายเลขการลงทะเบียนของตัวส่งสัญญาณรีโมทที่ส่งคลื่นวิทยุไปยังชุดเปิด/ปิดการทำงานจะปรากฏขึ้น</div>
+<div class="list">•&nbsp;&nbsp;Initial: ไม่สามารถรับหมายเลขการลงทะเบียนของตัวส่งสัญญาณรีโมท</div>
+<div class="list">•&nbsp;&nbsp;No.1: ได้รับหมายเลขการลงทะเบียนของตัวส่งสัญญาณรีโมท No.1</div>
+<div class="list">•&nbsp;&nbsp;No.2: ได้รับหมายเลขการลงทะเบียนของตัวส่งสัญญาณรีโมท No.2</div>
+<div class="list">•&nbsp;&nbsp;No.3: ได้รับหมายเลขการลงทะเบียนของตัวส่งสัญญาณรีโมท No.3</div>
+<div class="list">•&nbsp;&nbsp;No.4: ได้รับหมายเลขการลงทะเบียนของตัวส่งสัญญาณรีโมท No.4</div>
+<div class="list">•&nbsp;&nbsp;No.5: ได้รับหมายเลขการลงทะเบียนของตัวส่งสัญญาณรีโมท No.5</div>
+<div class="list">•&nbsp;&nbsp;No.6: ได้รับหมายเลขการลงทะเบียนของตัวส่งสัญญาณรีโมท No.6</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เมื่อตรวจพบรหัสวิเคราะห์ปัญหา B13D3:16 (แรงดันไฟฟ้าแบตเตอรี่ของตัวส่งสัญญาณรีโมทต่ำ) หมายเลขการลงทะเบียนของตัวส่งสัญญาณรีโมทที่มีแรงดันไฟฟ้าแบตเตอรี่ต่ำจะปรากฏขึ้นในรายการข้อมูล Snapshot TRNS_NUM_L แสดงหมายเลขการลงทะเบียนของตัวส่งสัญญาณรีโมทโดยใช้ PID ตรวจสอบตัวส่งสัญญาณรีโมทที่มีแรงดันไฟฟ้าแบตเตอรี่ต่ำ และตรวจสอบสภาวะของแบตเตอรี่ของตัวส่งสัญญาณรีโมทปลายทาง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตัวรับสัญญาณกุญแจรีโมท</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">RQ_SW_LF<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์ขอการทำงาน (ด้านหน้าซ้าย) อยู่ที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;On: สวิตช์ขอการทำงาน (ด้านหน้าซ้าย) อยู่ที่ On</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ขอการทำงาน (ด้านหน้าซ้าย)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">RQ_SW_RF<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์ขอการทำงาน (ด้านหน้าขวา) อยู่ที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;On: สวิตช์ขอการทำงาน (ด้านหน้าขวา) อยู่ที่ On</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ขอการทำงาน (ด้านหน้าขวา)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">SECURITY_I</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: ไฟแสดงสถานะระบบรักษาความปลอดภัยดับลง</div>
+<div class="list">•&nbsp;&nbsp;On: แสดงสถานะระบบรักษาความปลอดภัยติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แผงหน้าปัด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">SFT_LK_SOL<sup>*1</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off (ล็อค)/On (ปลดล็อค)</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off (Lock): ชิฟท์ล็อคทำงานอยู่</div>
+<div class="list">•&nbsp;&nbsp;On (Unlock): ชิฟท์ล็อคถูกปลด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ส่วนประกอบคันเกียร์</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">SSB_1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์ 1 ปุ่มกดสตาร์ทอยู่ที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;On: สวิตช์ 1 ปุ่มกดสตาร์ทอยู่ที่ On</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปุ่มกดสตาร์ท</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">SSB_2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์ 2 ปุ่มกดสตาร์ทอยู่ที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;On: สวิตช์ 2 ปุ่มกดสตาร์ทอยู่ที่ On</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปุ่มกดสตาร์ท</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">SSB_AMBER</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: ไฟแสดงสถานะปุ่มกดสตาร์ท (สีเหลือง) ดับ</div>
+<div class="list">•&nbsp;&nbsp;On: ไฟแสดงสถานะปุ่มกดสตาร์ท (สีเหลือง) ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปุ่มกดสตาร์ท</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">SSB_GREEN</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: ไฟแสดงสถานะปุ่มกดสตาร์ท (สีเขียว) ดับ</div>
+<div class="list">•&nbsp;&nbsp;On: ไฟแสดงสถานะปุ่มกดสตาร์ท (สีเขียว) ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปุ่มกดสตาร์ท</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">SSB_ILLMI</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: ไฟแสดงสถานะ START/STOP/ENGINE ดับ</div>
+<div class="list">•&nbsp;&nbsp;On: ไฟแสดงสถานะ START/STOP/ENGINE ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปุ่มกดสตาร์ท</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">START_RLY_1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันไฟahkที่ขั้ว 2V ของชุดเปิด/ปิดการทำงานปรากฏขึ้น</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">รีเลย์มอเตอร์สตาร์ท</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">START_RLY_2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันไฟฟ้าที่ขั้ว 1D ของชุดเปิด/ปิดการทำงานปรากฏขึ้น</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">รีเลย์มอเตอร์สตาร์ท</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">STR_A_ANG_A<sup>*5</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg; (deg)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">มุมการปรับสัญญาณ A ของเซ็นเซอร์มุมบังคับเลี้ยวจะปรากฏขึ้น</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เซ็นเซอร์มุมบังคับเลี้ยว</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">STR_A_ANG_B<sup>*5</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg; (deg)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">มุมการปรับสัญญาณ B ของเซ็นเซอร์มุมบังคับเลี้ยวปรากฏขึ้น</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เซ็นเซอร์มุมบังคับเลี้ยว</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">STR_AB_ANG<sup>*5</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg; (deg)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แสดงสัญญาณมุมบังคับเลี้ยว (มุมสัมบูรณ์)</div>
+<div class="list">•&nbsp;&nbsp;พวงมาลัยอยู่ในตำแหน่งกลาง: ใกล้ <span>0 องศา</span></div>
+<div class="list">•&nbsp;&nbsp;พวงมาลัยหมุนไปทางซ้าย: เปลี่ยนจาก <span>0 องศา</span>เป็นค่าบวก</div>
+<div class="list">•&nbsp;&nbsp;พวงมาลัยหมุนไปทางขวา: เปลี่ยนจาก <span>0 องศา</span>เป็นค่าลบ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เซ็นเซอร์มุมบังคับเลี้ยว</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">STR_ANG_S<sup>*5</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มี/มี</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Without: ไม่มีการติดตั้งเซ็นเซอร์มุมบังคับเลี้ยว</div>
+<div class="list">•&nbsp;&nbsp;With: มีการติดตั้งเซ็นเซอร์มุมบังคับเลี้ยว</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เซ็นเซอร์มุมบังคับเลี้ยว</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">STR_ANG_S_A<sup>*5</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันไฟฟ้าที่สัญญาณ A ของเซ็นเซอร์มุมบังคับเลี้ยวปรากฏขึ้น</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เซ็นเซอร์มุมบังคับเลี้ยว</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">STR_ANG_S_B<sup>*5</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันไฟฟ้าที่สัญญาณ B ของเซ็นเซอร์มุมบังคับเลี้ยวปรากฏขึ้น</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เซ็นเซอร์มุมบังคับเลี้ยว</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">STR_ANG_S_V<sup>*5</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันไฟฟ้าของแหล่งจ่ายไฟเซ็นเซอร์มุมบังคับเลี้ยวปรากฏขึ้น</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เซ็นเซอร์มุมบังคับเลี้ยว</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">TURN_SW_L</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์ไฟเลี้ยวอยู่ในตำแหน่งอื่นที่ไม่ใช่ LH (ซ้าย)</div>
+<div class="list">•&nbsp;&nbsp;On: สวิตช์ไฟเลี้ยวอยู่ในตำแหน่ง LH</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ไฟเลี้ยว</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">TURN_SW_R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์ไฟเลี้ยวอยู่ในตำแหน่งอื่นที่ไม่ใช่ RH (ด้านขวา)</div>
+<div class="list">•&nbsp;&nbsp;On: สวิตช์ไฟเลี้ยวอยู่ในตำแหน่ง RH (ด้านขวา)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ไฟเลี้ยว</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">VPWR_ACC</div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แสดงแรงดันไฟฟ้าของแหล่งจ่ายไฟ ACC ที่จ่ายไปยังชุดเปิด/ปิดการทำงาน</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หากมีความบกพร่องในแรงดันไฟฟ้าของแหล่งจ่ายไฟ ACC ที่จ่ายไปยังชุดเปิด/ปิดการทำงาน ระบบกุญแจรีโมทอัจฉริยะ และระบบปุ่มกดสตาร์ททำงานผิดปกติเนื่องจากรายการ PID VPWR_ACC ถูกใช้สำหรับการกำหนดการเปิด/ปิดระบบไฟฟ้า ACC</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ชุดเปิด/ปิดการทำงาน</div>
+<div class="list">•&nbsp;&nbsp;รีเลย์ ACC</div>
+<div class="list">•&nbsp;&nbsp;แบตเตอรี่</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">VPWR_B1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แสดงแรงดันไฟฟ้าของแหล่งจ่ายไฟ B+ (ฟิวส์ ROOM) ที่จ่ายไปยังชุดเปิด/ปิดการทำงาน</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หากมีความบกพร่องในแรงดันไฟฟ้าของแหล่งจ่ายไฟ B+ (ฟิวส์ ROOM) ที่จ่ายไปยังชุดเปิด/ปิดการทำงาน ระบบกุญแจรีโมทอัจฉริยะจะทำงานผิดปกติเนื่องจากรายการ PID VPWR_B1 ถูกใช้สำหรับการระบุว่ามีการใส่ฟิวส์ ROOM ไว้หรือไม่</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ชุดเปิด/ปิดการทำงาน</div>
+<div class="list">•&nbsp;&nbsp;แบตเตอรี่</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">VPWR_B2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แสดงแรงดันไฟฟ้าของแหล่งจ่ายไฟ B+ (ฟิวส์ AT) ที่จ่ายไปยังชุดเปิด/ปิดการทำงาน</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เมื่อฟิวส์ ROOM ถูกถอดออก แหล่งจ่ายไฟ B+ (ฟิวส์ AT) คือแหล่งจ่ายไฟของชุดเปิด/ปิดการทำงาน หากมีความบกพร่องในแรงดันไฟฟ้าของแหล่งจ่ายไฟ B+ (ฟิวส์ AT) ที่จ่ายไปยังชุดเปิด/ปิดการทำงานเมื่อฟิวส์ ROOM ถูกถอดออก ระบบปุ่มกดสตาร์ทจะทำงานผิดปกติ</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ชุดเปิด/ปิดการทำงาน</div>
+<div class="list">•&nbsp;&nbsp;แบตเตอรี่</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">VPWR_B3</div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันไฟที่ขั้ว 2X ของชุดเปิด/ปิดการทำงาน (แหล่งจ่ายไฟ +B3) จะปรากฏขึ้น</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ชุดเปิด/ปิดการทำงาน</div>
+<div class="list">•&nbsp;&nbsp;แบตเตอรี่</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">VPWR_IG1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แสดงแรงดันไฟฟ้าของแหล่งจ่ายไฟ IG1 ที่จ่ายไปยังชุดเปิด/ปิดการทำงาน</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หากมีความบกพร่องในแรงดันไฟฟ้าของแหล่งจ่ายไฟ IG1 ที่จ่ายไปยังชุดเปิด/ปิดการทำงาน ระบบกุญแจรีโมทอัจฉริยะ และระบบปุ่มกดสตาร์ทจะทำงานผิดปกติเนื่องจากรายการ PID VPWR_IG1 ถูกใช้สำหรับการกำหนดการเปิด/ปิดระบบไฟฟ้า IG1</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ชุดเปิด/ปิดการทำงาน</div>
+<div class="list">•&nbsp;&nbsp;รีเลย์ IG1</div>
+<div class="list">•&nbsp;&nbsp;แบตเตอรี่</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">WASHER_F</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์ที่ฉีดล้างกระจกบังลมหน้าอยู่ในตำแหน่ง OFF</div>
+<div class="list">•&nbsp;&nbsp;On: สวิตช์ที่ฉีดล้างกระจกบังลมหน้าอยู่ในตำแหน่ง On</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ที่ฉีดล้างกระจกบังลมหน้า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">WASHER_R<sup></sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์ที่ฉีดล้างกระจกหลังไม่อยู่ในตำแหน่ง ON</div>
+<div class="list">•&nbsp;&nbsp;On: สวิตช์ที่ฉีดล้างกระจกหลังอยู่ในตำแหน่ง ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ที่ฉีดล้างกระจกหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">WIP_F_INT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์ที่ปัดน้ำฝนกระจกบังลมหน้าอยู่ในตำแหน่ง INT และ AUTO</div>
+<div class="list">•&nbsp;&nbsp;On: สวิตช์ที่ปัดน้ำฝนกระจกบังลมหน้าอยู่ในตำแหน่ง INT หรือ AUTO</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ที่ปัดน้ำฝนกระจกบังลมหน้า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">WIP_F_LOW</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์ที่ปัดน้ำฝนกระจกบังลมหน้าไม่ได้อยู่ในตำแหน่ง LO</div>
+<div class="list">•&nbsp;&nbsp;On: สวิตช์ที่ปัดน้ำฝนกระจกบังลมหน้าอยู่ในตำแหน่ง LO</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ที่ปัดน้ำฝนกระจกบังลมหน้า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">WIP_INT_E_A</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Low/High</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Low: ค่า A ของเอ็นโค้ดเดอร์ INT ของสวิตช์ที่ปัดน้ำฝนกระจกบังลมหน้า INT มีค่าต่ำ</div>
+<div class="list">•&nbsp;&nbsp;High: ค่า A ของเอ็นโค้ดเดอร์ INT ของสวิตช์ที่ปัดน้ำฝนกระจกบังลมหน้า INT มีค่าสูง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ที่ปัดน้ำฝนและฉีดน้ำล้างกระจกบังลมหน้า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">WIP_INT_E_B</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Low/High</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Low: ค่า B ของเอ็นโค้ดเดอร์ INT ของสวิตช์ที่ปัดน้ำฝนกระจกบังลมหน้า INT มีค่าต่ำ</div>
+<div class="list">•&nbsp;&nbsp;High: ค่า B ของเอ็นโค้ดเดอร์ INT ของสวิตช์ที่ปัดน้ำฝนกระจกบังลมหน้า INT มีค่าสูง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ที่ปัดน้ำฝนและฉีดน้ำล้างกระจกบังลมหน้า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">WIP_INT_E_C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Low/High</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Low: ค่า C ของเอ็นโค้ดเดอร์ INT ของสวิตช์ที่ปัดน้ำฝนกระจกบังลมหน้า INT มีค่าต่ำ</div>
+<div class="list">•&nbsp;&nbsp;High: ค่า C ของเอ็นโค้ดเดอร์ INT ของสวิตช์ที่ปัดน้ำฝนกระจกบังลมหน้า INT มีค่าสูง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ที่ปัดน้ำฝนและฉีดน้ำล้างกระจกบังลมหน้า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">WIP_R_INT<sup></sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์ที่ปัดน้ำฝนกระจกหลังไม่อยู่ในตำแหน่ง INT</div>
+<div class="list">•&nbsp;&nbsp;On: สวิตช์ที่ปัดน้ำฝนกระจกหลังอยู่ในตำแหน่ง INT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ที่ปัดน้ำฝนกระจกหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">WIP_R_ON<sup></sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์ที่ปัดน้ำฝนกระจกหลังไม่อยู่ในตำแหน่ง ON</div>
+<div class="list">•&nbsp;&nbsp;On: สวิตช์ที่ปัดน้ำฝนกระจกหลังอยู่ในตำแหน่ง ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ที่ปัดน้ำฝนกระจกหลัง</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;: ATX</div>
+<div class="deflist">*2&nbsp;&nbsp;:MTX</div>
+<div class="deflist">*3&nbsp;&nbsp;:รุ่นที่มีระบบควบคุมความเร็วอัตโนมัติ</div>
+<div class="deflist">*4&nbsp;&nbsp;:รุ่นที่มีระบบกุญแจรีโมทอัจฉริยะ</div>
+<div class="deflist">*5&nbsp;&nbsp;:รุ่นที่มี AFS (ระบบปรับลำแสงไฟหน้า), ระบบสมาร์ทซิตี้เบรก (SCBS) หรือระบบช่วยจอด</div>
+</body>
+</html>

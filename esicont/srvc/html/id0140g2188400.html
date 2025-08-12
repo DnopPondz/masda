@@ -1,0 +1,489 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>การควบคุมลิ้นเร่งแบบไม่ใช้สายคันเร่ง (DRIVE-BY-WIRE) [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</title>
+</head>
+<body><a name="id0140g2188400"></a><p class="servinfo-title"><span class="servinfo-head"></span>การควบคุมลิ้นเร่งแบบไม่ใช้สายคันเร่ง (DRIVE-BY-WIRE) [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0140g2188400</p><br clear="all"><a name="id0140g218840001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รายละเอียด</p>
+<div class="list">•&nbsp;&nbsp;คำนวณมุมเปิดลิ้นเร่งเป้าหมายที่เหมาะสมที่สุดในทุกช่วงความเร็วรอบเครื่องยนต์และควบคุมแอ็คชิวเอเตอร์ลิ้นเร่ง</div>
+<div class="list">•&nbsp;&nbsp;การควบคุมแบบไม่ใช้สายคันเร่ง (Drive-by-wire) ประกอบด้วยการควบคุมอากาศรอบเดินเบา การควบคุมคันเร่ง การควบคุมการลื่นไถล การควบคุมความเร็วรอบเครื่องยนต์เกิน การควบคุมความเร็วเกิน การควบคุมการทำงานร่วมกับไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า ระบบยับยั้งแรงขับเคลื่อน และการควบคุมอุณหภูมิน้ำมันเครื่อง</div>
+<p clear="all">
+<p class="table-title">ตารางการควบคุม</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ชื่อการควบคุม</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายละเอียดการควบคุม</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมอากาศรอบเดินเบา</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ในขณะเดินเบา การเปิดลิ้นเร่งจะถูกควบคุมเพื่อให้ความเร็วรอบเดินเบาอยู่ที่ความเร็วรอบเดินเบาเป้าหมาย</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมคันเร่ง</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;มุมการเปิดลิ้นเร่งจะถูกควบคุมตามปริมาณการเหยียบแป้นคันเร่ง นอกจากนี้ ยังมีฟังก์ชั่นการตั้งค่าความจำปิดสุดสำหรับการตั้งค่าความจำการเสื่อมสภาพตามกาลเวลาและการปรับแก้ค่าคงที่ของมุมการเปิดลิ้นเร่งที่เหมาะสมที่สุด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมการลื่นไถล</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;มุมการเปิดลิ้นเร่งจะถูกควบคุมโดยสัญญาณขอลดแรงบิดจาก DSC HU/CM และ TCM</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมความเร็วรอบเครื่องยนต์เกิน</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ถ้าเครื่องยนต์เร่งรอบถึงความเร็วรอบเครื่องยนต์สูง มุมการเปิดลิ้นเร่งจะถูกควบคุมเพื่อปกป้องเครื่องยนต์</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมความเร็วเกิน</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ถ้าความเร็วรถถึงความเร็วสูง ลิ้นเร่งจะถูกปิดเพื่อรักษาความเร็วรถให้ต่ำกว่าขีดจำกัดความเร็ว</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมการทำงานร่วมกับไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;การสูญเสียกำลังจะลดลงโดยการควบคุมมุมเปิดลิ้นเร่งตามเฟสของจังหวะการเปิด/ปิดวาล์วไอดี</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมความเร็วอัตโนมัติ</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ตั้งความเร็วรถโดยการใช้งานสวิตช์ควบคุมความเร็วอัตโนมัติ และควบคุมมุมเปิดลิ้นเร่งเพื่อให้ได้ความเร็วใกล้เคียงกับความเร็วรถที่ตั้งไว้</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ระบบยับยั้งแรงขับเคลื่อน (Brake override system)</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ถ้าเหยียบแป้นเบรกพร้อมกับเหยียบแป้นคันเร่ง สามารถหยุดรถได้อย่างปลอดภัยโดยการปิดลิ้นเร่ง ด้วยเหตุนี้ การทำงานของเบรกจะควบคุมการทำงานของแป้นคันเร่งก่อนเป็นอันดับแรก</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมอุณหภูมิน้ำมันเครื่อง</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ถ้า PCM ตัดสินว่าอุณหภูมิน้ำมันเครื่องสูงเกินไป มุมการเปิดลิ้นเร่งจะลดลงและความเร็วรอบเครื่องยนต์จะลดลง</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p><br clear="all"><a name="id0140g218840002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>แผนผังแบบบล็อก</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001576.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001576</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id0140g218840003"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p><br clear="all"><p><a name="id0140g218840004"></a><p class="topic-title"><span class="topic-head"></span>การควบคุมอากาศรอบเดินเบา</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;การควบคุมความเร็วรอบเดินเบาจะควบคุมมุมเปิดลิ้นเร่งตามแรงบิดเครื่องยนต์เพื่อให้ได้ความเร็วรอบเดินเบาเป้าหมาย</div>
+<div class="list">•&nbsp;&nbsp;PCM จะควบคุมแอ็คชิวเอเตอร์ลิ้นเร่งเพื่อให้ความเร็วรอบเดินเบาจริงใกล้เคียงกับความเร็วรอบเดินเบาเป้าหมาย</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">การคำนวณความเร็วรอบเดินเบาเป้าหมาย</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;คำนวณความเร็วรอบเดินเบาเป้าหมายตามจุดประสงค์ของการใช้งาน เช่น ความเร็วรอบเดินเบาพื้นฐานและเดินเบารอบสูง<sup>*</sup></div>
+<dl>
+<dd class="list">
+<div class="list">*: อุปกรณ์แปรสภาพก๊าซไอเสียจะถูกกระตุ้นให้ทำงานอย่างรวดเร็วหลังจากสตาร์ทเครื่องยนต์ขณะเย็น</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">การคำนวณแรงบิดเครื่องยนต์ให้ได้ความเร็วรอบเดินเบาเป้าหมาย</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;แรงบิดเครื่องยนต์จะถูกควบคุมโดยการคำนึงถึงปัจจัยต่างๆ ต่อไปนี้เพื่อให้ได้ความเร็วรอบเดินเบาเป้าหมาย</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;การป้อนกลับ: ความแตกต่างของแรงบิดจะถูกรวมเข้าไปเพื่อให้ความเร็วรอบเดินเบาจริงใกล้เคียงกับความเร็วรอบเดินเบาเป้าหมาย</div>
+<div class="list">―&nbsp;&nbsp;แรงต้านกลไกเครื่องยนต์: เปลี่ยนแปลงตามอุณหภูมิน้ำหล่อเย็นเครื่องยนต์</div>
+<div class="list">―&nbsp;&nbsp;การสูญเสียกำลัง: เปลี่ยนแปลงตามจังหวะการเปิด/ปิดวาล์วและแรงดันอากาศเข้า</div>
+<div class="list">―&nbsp;&nbsp;โหลดไฟฟ้าภายนอก: เปลี่ยนแปลงตามการเปิด/ปิด A/C ปริมาณการให้กำเนิดกำลังไฟฟ้าของเจนเนอร์เรเตอร์</div>
+<div class="list">―&nbsp;&nbsp;แรงบิดตำแหน่ง D: รวมแรงบิดภาระจากทอร์คคอนเวอร์เตอร์ (ATX)</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id0140g218840005"></a><p class="topic-title"><span class="topic-head"></span>การควบคุมคันเร่ง</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;การควบคุมคันเร่งจะควบคุมมุมเปิดลิ้นเร่งตามปริมาณการเหยียบแป้นคันเร่ง</div>
+<div class="list">•&nbsp;&nbsp;PCM จะควบคุมแอ็คชิวเอเตอร์ลิ้นเร่งเพื่อให้มุมเปิดลิ้นเร่งจริงใกล้เคียงกับมุมเปิดลิ้นเร่งเป้าหมาย</div>
+<div class="list">•&nbsp;&nbsp;มุมเปิดลิ้นเร่งเป้าหมายจะถูกกำหนดโดยตำแหน่งเกียร์ ปริมาณการเหยียบแป้นคันเร่ง และความเร็วรถ</div>
+<div class="list">•&nbsp;&nbsp;เนื่องจากการเบี่ยงเบนของมุมเปิดลิ้นเร่งเนื่องจากการเสื่อมสภาพตามกาลเวลาจะถูกปรับแก้เมื่อปิดสวิตช์สตาร์ท PCM จะสั่งให้ฟังก์ชั่นการตั้งค่าความจำปิดสุดทำงาน ฟังก์ชั่นการตั้งค่าความจำปิดสุดเป็นฟังก์ชั่นสำหรับการตั้งค่าตำแหน่งลิ้นเร่งปิดสุด</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id0140g218840006"></a><p class="topic-title"><span class="topic-head"></span>การควบคุมการลื่นไถล</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;PCM จะคำนวณมุมเปิดลิ้นเร่งเป้าหมายตามสัญญาณขอลด / เพิ่มแรงบิด และความเร็วรอบเครื่องยนต์จาก DSC HU/CM และ TCM</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id0140g218840007"></a><p class="topic-title"><span class="topic-head"></span>การควบคุมความเร็วรอบเครื่องยนต์เกิน</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ถ้ารอบเครื่องยนต์ถึงความเร็วรอบเครื่องยนต์สูง ความเร็วรอบเครื่องยนต์จะรักษาระดับที่ความเร็วรอบต่ำกว่าช่วงความเร็วรอบเกินเพื่อปกป้องเครื่องยนต์</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id0140g218840008"></a><p class="topic-title"><span class="topic-head"></span>การควบคุมความเร็วเกิน</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ถ้าความเร็วรถถึงความเร็วสูง ลิ้นเร่งจะถูกปิดเพื่อรักษาความเร็วรถให้ต่ำกว่าขีดจำกัดความเร็ว</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id0140g218840009"></a><p class="topic-title"><span class="topic-head"></span>การควบคุมการทำงานร่วมกับไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;PCM จะคำนวณมุมเปิดลิ้นเร่งเป้าหมายตามการเปลี่ยนแปลงในเฟสของจังหวะการเปิด/ปิดวาล์วไอดีเนื่องจากการควบคุมไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id0140g218840010"></a><p class="topic-title"><span class="topic-head"></span>การควบคุมความเร็วอัตโนมัติ</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;คำนวณมุมเปิดลิ้นเร่งตามการเบี่ยงเบนของความเร็วรถจริงจากความเร็วรถที่ตั้งไว้ซึ่งถูกตั้งด้วยสวิตช์ควบคุมความเร็วอัตโนมัติ และแอ็คชิวเอเตอร์ลิ้นเร่ง</div>
+<div class="list">•&nbsp;&nbsp;PCM จะควบคุมความเร็วรถจริงเพื่อให้ใกล้เคียงกับความเร็วรถที่ตั้งไว้</div>
+<div class="list">•&nbsp;&nbsp;การควบคุมความเร็วอัตโนมัติประกอบด้วยสภาวะการทำงานในการควบคุมความเร็วอัตโนมัติและสภาวะการหยุดควบคุมความเร็วอัตโนมัติ</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">สภาวะการทำงานในการควบคุมความเร็วอัตโนมัติ</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เมื่อพบสภาวะทั้งหมดต่อไปนี้ ระบบควบคุมความเร็วอัตโนมัติจะสามารถทำงานได้ (สถานะพร้อมทำงานในการควบคุมความเร็วอัตโนมัติ)</div>
+<dl>
+<dd class="list">
+<div class="list">•&nbsp;&nbsp;สวิตช์ ON: ON</div>
+<div class="list">•&nbsp;&nbsp;ความเร็วรถ: เกิน 25 km/h {16 mph}</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">สภาวะหยุดการทำงานในการควบคุมความเร็วอัตโนมัติ</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เมื่อพบสภาวะใดสภาวะหนึ่งดังต่อไปนี้แม้ขณะอยู่ในการควบคุมความเร็วอัตโนมัติ PCM จะหยุดการควบคุมความเร็วอัตโนมัติ และลบความเร็วรถที่ตั้งไว้</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;การจุดระเบิด: OFF</div>
+<div class="list">―&nbsp;&nbsp;สวิตช์ ON: OFF</div>
+<div class="list">―&nbsp;&nbsp;ตรวจพบรหัสวิเคราะห์ปัญหาที่เกี่ยวข้องกับการควบคุมความเร็วอัตโนมัติ (P0571:00)</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;เมื่อพบสภาวะใดสภาวะหนึ่งดังต่อไปนี้แม้ขณะอยู่ในการควบคุมความเร็วอัตโนมัติ PCM จะหยุดการควบคุมความเร็วอัตโนมัติในขณะที่เก็บบันทึกความเร็วรถที่ตั้งไว้</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;สวิตช์ CANCEL: ON</div>
+<div class="list">―&nbsp;&nbsp;เซ็นเซอร์ช่วงตำแหน่งเกียร์: ตำแหน่ง P/N (ATX)</div>
+<div class="list">―&nbsp;&nbsp;สวิตช์ CPP: ON (เหยียบแป้นคลัตช์) (MTX)</div>
+<div class="list">―&nbsp;&nbsp;สวิตช์เกียร์ว่าง: ON (ตำแหน่งเกียร์ว่าง) (MTX)</div>
+<div class="list">―&nbsp;&nbsp;ความเร็วรถ: ต่ำกว่า 20.5 km/h {12.7 mph}</div>
+<div class="list">―&nbsp;&nbsp;สวิตช์ไฟเบรก: ON (เหยียบแป้นเบรก)</div>
+<div class="list">―&nbsp;&nbsp;ความเร็วรถจริงอยู่ที่ 15 km/h {9.3 mph} หรือต่ำกว่าความเร็วรถที่ตั้งไว้ในระหว่างการควบคุมความเร็วอัตโนมัติ (การขับขึ้นทางลาดชัน)</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">ฟังก์ชั่นการควบคุมความเร็วอัตโนมัติ</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;การควบคุมความเร็วอัตโนมัติประกอบด้วยฟังก์ชั่นการเร่งความเร็ว การลดความเร็ว การกลับสู่การควบคุมความเร็วอัตโนมัติ การลดความเร็วโดยการกดสวิตช์ลง การเพิ่มความเร็วโดยการกดสวิตช์ขึ้น และการเปลี่ยนเกียร์ลง</div>
+</dd>
+</dl>
+<p clear="all">
+<p class="table-title">รายการฟังก์ชั่น</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">การทำงาน</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายละเอียด</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">การเร่งความเร็ว</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;เมื่อพบสภาวะใดสภาวะหนึ่งดังต่อไปนี้ในขณะขับขี่ด้วยการควบคุมความเร็วอัตโนมัติ และเมื่อกดสวิตช์ SET+ อย่างต่อเนื่อง PCM จะค่อยๆ เพิ่มความเร็วรถที่ตั้งไว้</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;เปิดสวิตช์ SET+ หนึ่งครั้งหรือมากกว่าในระหว่างการกลับสู่การควบคุมความเร็วอัตโนมัติ</div>
+</dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การลดความเร็ว</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;เมื่อกดสวิตช์ SET− อย่างต่อเนื่อง PCM จะค่อยๆ ลดความเร็วรถที่ตั้งไว้</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">Resume</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;เมื่อสัญญาณสวิตช์ RESUME ถูกป้อนเข้าไปยัง PCM ในระหว่างการขับขี่ปกติ (หยุดการควบคุมความเร็วอัตโนมัติ) และความเร็วรถที่ตั้งไว้ก่อนหน้านี้จะถูกเก็บบันทึกไว้ใน PCM, PCM จะตั้งความเร็วรถที่ตั้งไว้ไปที่ความเร็วรถที่ตั้งไว้ก่อนหน้านี้ และเริ่มการควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การลดความเร็วโดยการกดสวิตช์ลง</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;เมื่อพบสภาวะทั้งหมดต่อไปนี้ขณะขับขี่อยู่ในการควบคุมความเร็วอัตโนมัติ PCM จะลดความเร็วรถที่ตั้งไว้ทีละ 1.6 km/h {0.99 mph}</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;สวิตช์ SET+ off</div>
+<div class="list">―&nbsp;&nbsp;สวิตช์ SET− เปลี่ยนจาก off ไปที่ on</div>
+<div class="list">―&nbsp;&nbsp;เมื่อความเร็วรถจริงต่ำกว่า (ความเร็วรถที่ตั้งไว้ +2 km/h {+1 mph})</div>
+</dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การเพิ่มความเร็วโดยการกดสวิตช์ขึ้น</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;เมื่อพบสภาวะทั้งหมดต่อไปนี้ PCM จะเพิ่มความเร็วรถที่ตั้งไว้ทีละ 1.6 km/h {0.99 mph}</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ในระหว่างการควบคุมความเร็วอัตโนมัติ</div>
+<div class="list">―&nbsp;&nbsp;สวิตช์ SET+ เปลี่ยนจาก off ไปที่ on</div>
+<div class="list">―&nbsp;&nbsp;เมื่อความเร็วรถจริงต่ำกว่า (ความเร็วรถที่ตั้งไว้ +2 km/h {+1 mph})</div>
+</dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การเปลี่ยนเกียร์ลง</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;เมื่อพบสภาวะต่อไปนี้ สัญญาณการเปลี่ยนเกียร์ลงจะถูกส่งไปที่ TCM (ATX) ผ่าน CAN</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;สวิตช์ SET+ on</div>
+<div class="list">―&nbsp;&nbsp;การเร่งความเร็วรถไม่ถึงความเร็วเป้าหมาย</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ถ้าการเพิ่มขึ้นของความเร็วรถบนทางลงลาดชันสูง PCM จะส่งสัญญาณการเปลี่ยนเกียร์ลงไปที่ TCM (ATX)</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</p><br clear="all"><p><a name="id0140g218840011"></a><p class="topic-title"><span class="topic-head"></span>การควบคุมอุณหภูมิน้ำมันเครื่อง</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ถ้าเวลาผ่านไป 6 นาทีขณะที่พบสภาวะต่อไปนี้ ความเร็วรอบเครื่องยนต์จะลดลงโดยการลดมุมเปิดลิ้นเร่งเพื่อปกป้องเครื่องยนต์ (การตัดสินอุณหภูมิน้ำมันเครื่องสูง) รหัสวิเคราะห์ปัญหา P117A:00 จะถูกบันทึกในเวลาเดียวกัน</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;เกียร์อยู่ที่เกียร์ 4 หรือเกียร์ต่ำกว่า</div>
+<div class="list">―&nbsp;&nbsp;ความเร็วรอบเครื่องยนต์: 6,100 rpm หรือสูงกว่า (SKYACTIV-G 2.0)</div>
+<div class="list">―&nbsp;&nbsp;ความเร็วรอบเครื่องยนต์: 5,800 rpm หรือมากกว่า (SKYACTIV-G 2.5)</div>
+<div class="list">―&nbsp;&nbsp;ECT: 88.5 &deg;C {191 &deg;F} หรือสูงกว่า</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id0140g218840012"></a><p class="topic-title"><span class="topic-head"></span>ระบบยับยั้งแรงขับเคลื่อน (Brake override system)</p>
+<dl>
+<dd>
+<div class="list-title">สภาวะการทำงานของระบบยับยั้งแรงขับเคลื่อน (Brake override system)</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ให้ความสำคัญกับการทำงานของเบรกก่อนเป็นอันดับแรกถ้าความบกพร่องเกิดขึ้นกับแป้นคันเร่ง เช่น ถ้าเหยียบแป้นคันเร่งและไม่คืนกลับ ลิ้นเร่งจะปิดถ้าเหยียบแป้นเบรกในขณะที่เหยียบแป้นคันเร่งไว้จนกว่ารถจะลดความเร็วลงและหยุดสนิทอย่างปลอดภัย</div>
+</dd>
+</dl>
+<p clear="all">
+<table class="table-flame" border="1">
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">สภาวะเริ่มการทำงาน</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ถ้าพบสภาวะใดสภาวะหนึ่งต่อไปนี้ขณะเหยียบแป้นเบรกเป็นระยะเวลาที่กำหนด<sup>*1</sup> หรือมากกว่าในขณะเหยียบแป้นคันเร่ง PCM จะปรับมุมเปิดลิ้นเร่งเพื่อให้ความเร็วรอบเครื่องยนต์อยู่ที่ค่ากำหนด<sup>*2</sup></div>
+<dl>
+<div class="list-title">ในขณะขับรถ</div>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;มุมเปิดแป้นคันเร่ง: 5% หรือมากกว่าจากการปิดสุด</div>
+<div class="list">―&nbsp;&nbsp;ความเร็วรถ: 10 km/h {6.2 mph} หรือสูงกว่า</div>
+<div class="list">―&nbsp;&nbsp;ความเร็วรอบเครื่องยนต์: 875 rpm หรือสูงกว่า</div>
+</dd>
+</dl>
+<dl>
+<div class="list-title">ในขณะหยุดรถ</div>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;มุมเปิดแป้นคันเร่ง: 5% หรือมากกว่าจากการปิดสุด</div>
+<div class="list">―&nbsp;&nbsp;ตำแหน่งเกียร์: เกียร์ว่าง (MTX)</div>
+<div class="list">―&nbsp;&nbsp;ตำแหน่งคันเกียร์: ตำแหน่ง N (ATX)</div>
+<div class="list">―&nbsp;&nbsp;ความเร็วรอบเครื่องยนต์: 875 rpm หรือสูงกว่า</div>
+</dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">สภาวะสิ้นสุดการทำงาน</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ถ้าพบสภาวะต่อไปนี้ในขณะที่ระบบยับยั้งแรงขับเคลื่อนทำงาน PCM จะหยุดการทำงานของระบบยับยั้งแรงขับเคลื่อน และควบคุมมุมเปิดลิ้นเร่งตามมุมเปิดแป้นคันเร่ง</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ไม่เหยียบแป้นคันเร่ง</div>
+<div class="list">―&nbsp; ไม่เหยียบแป้นเบรก</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;การทำงานของระบบยับยั้งแรงขับเคลื่อนจะหยุดลงโดยการปิดสวิตช์สตาร์ท</div>
+</div>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;: ระยะเวลาที่กำหนดอยู่ที่ 0.6 ถึง 10 วินาทีตามแรงเบรกที่คำนวณได้ใน PCM</div>
+<div class="deflist">*2&nbsp;&nbsp;: ค่ากำหนดอยู่ที่ 1,200 rpm ในขณะหยุดรถ และ 1,100 rpm ในขณะขับรถ</div>
+<dl>
+<dd>
+<div class="list-title">การป้องกันการทำงานที่ไม่จำเป็นของระบบยับยั้งแรงขับเคลื่อน</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ถ้าขั้นตอนการซ่อมบำรุงที่จำเป็นต้องเหยียบแป้นเบรกและแป้นคันเร่งพร้อมกัน สามารถป้องกันการทำงานที่ไม่จำเป็นของระบบยับยั้งแรงขับเคลื่อนได้ ถ้าจำเป็น</div>
+<div class="list">•&nbsp;&nbsp;ถ้าพบสภาวะการยกเลิกสำหรับการป้องกันการทำงานที่ไม่จำเป็นของระบบยับยั้งแรงขับเคลื่อน PCM จะส่งสัญญาณการยกเลิกการทำงานของระบบยับยั้งแรงขับเคลื่อนไปที่แผงหน้าปัด </div>
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัดจะสั่งให้ไฟเตือนหลักกะพริบตามสัญญาณจาก PCM</div>
+</dd>
+</dl>
+<p clear="all">
+<table class="table-flame" border="1">
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">สภาวะการยกเลิก</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ถ้าปฏิบัติขั้นตอนปลดการทำงานขณะที่ตรวจพบสภาวะต่อไปนี้ภายใน 30 วินาทีหลังจากบิดสวิตช์สตาร์ท ON (KOEO) ระบบยับยั้งแรงขับเคลื่อนจะไม่ทำงานจนกว่าจะพบสภาวะกลับสู่การทำงาน</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ตำแหน่งเกียร์: เกียร์ว่าง (MTX)</div>
+<div class="list">―&nbsp;&nbsp;ตำแหน่งคันเกียร์: ตำแหน่ง N (ATX)</div>
+<div class="list">―&nbsp;&nbsp;ความเร็วรถ: 0 km/h {0 mph}</div>
+<dl>
+<div class="list-title">ขั้นตอนปลดการทำงาน</div>
+<dd class="list">
+<div class="list">1.&nbsp;&nbsp;เหยียบแป้นเบรกเป็นเวลา 10 วินาทีขณะปล่อยแป้นคันเร่ง</div>
+<div class="list">2.&nbsp;&nbsp;เหยียบและปล่อยแป้นคันเร่งสุดสามครั้งขณะที่เหยียบแป้นเบรกไว้</div>
+<div class="list">3.&nbsp;&nbsp;ปล่อยแป้นเบรก</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">สภาวะกลับสู่การทำงาน</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;สภาวะยกเลิกการทำงานจะถูกรีเซ็ทเมื่อปิดสวิตช์สตาร์ทในขณะระบบยับยั้งแรงขับเคลื่อนถูกยกเลิก ด้วยเหตุนี้ ระบบยับยั้งแรงขับเคลื่อนจะสามารถทำงานได้</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<dl>
+<dd>
+<div class="list-title">สัญญาณขอการติดสว่างของไฟเตือนหลัก</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ถ้าพบสภาวะใดสภาวะหนึ่งต่อไปนี้ PCM จะส่งสัญญาณขอการติดสว่างของไฟเตือนหลักไปที่แผงหน้าปัด ไฟเตือนหลักจะติดสว่างเพื่อเตือนให้คนขับทราบว่ามีความบกพร่องในระบบเบรก</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;สวิตช์เบรก (สัญญาณ No.1) มีความบกพร่อง</div>
+<div class="list">―&nbsp;&nbsp;สวิตช์เบรก (สัญญาณ No.2) มีความบกพร่อง</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</p>
+</body>
+</html>

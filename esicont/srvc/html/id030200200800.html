@@ -1,0 +1,121 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>รหัสวิเคราะห์ปัญหา U0001:88/U0100:00/U0101:00/U0121:00</title>
+</head>
+<body><a name="id030200200800"></a><p class="servinfo-title"><span class="servinfo-head"></span>รหัสวิเคราะห์ปัญหา U0001:88/U0100:00/U0101:00/U0121:00</p>
+<hr>
+<p class="servinfo-title-id" align="right">id030200200800</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<tbody>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody"><span>รหัสวิเคราะห์ปัญหา U0001:88</span></div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody"><span>การสื่อสารระบบ CAN ผิดพลาด </span></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody"><span>รหัสวิเคราะห์ปัญหา U0100:00</span></div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody"><span>การสื่อสารกับ PCM ผิดพลาด </span></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody"><span>รหัสวิเคราะห์ปัญหา U0101:00</span></div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody"><span>การสื่อสารกับ TCM ผิดพลาด </span></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody"><span>รหัสวิเคราะห์ปัญหา U0121:00</span></div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody"><span>การสื่อสารกับ DSC HU/CM ผิดพลาด </span></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody"><span>สภาวะการตรวจพบ</span></div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="list">•&nbsp;&nbsp;U0001:88</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ตรวจพบการขาดหรือลัดวงจรในชุดสายไฟระบบ CAN</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;U0100:00</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ตรวจพบสื่อสารกับ PCM ผิดพลาดในการสื่อสารระบบ CAN</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;U0101:00</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ตรวจพบสื่อสารกับ TCM ผิดพลาดในการสื่อสารระบบ CAN</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;U0121:00</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ตรวจพบการสื่อสารกับ DSC HU/CM ผิดพลาดในการสื่อสาร CAN</div>
+</dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody"><span>ฟังก์ชั่น Fail-safe</span></div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="list">•&nbsp;&nbsp;U0001:88, U0121:00</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ยกเลิกการควบคุม</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;U0100:00</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;สัญญาณตำแหน่งเกียร์สูญหาย (MTX): 4WD ทำงานโดยข้อมูลที่กำหนด</div>
+<div class="list">―&nbsp;&nbsp;ยกเว้นที่กล่าวไว้ด้านบน: ยกเลิกการควบคุม</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;U0101:00</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;สัญญาณตำแหน่งเกียร์สูญหาย (ATX): 4WD ทำงานโดยข้อมูลที่กำหนด</div>
+<div class="list">―&nbsp;&nbsp;ยกเว้นที่กล่าวไว้ด้านบน: ยกเลิกการควบคุม</div>
+</dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody"><span>สาเหตุที่เป็นไปได้</span></div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="list">•&nbsp;ชุดสายไฟระบบ CAN ขาดหรือลัดวงจร</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระบบ CAN ขาดหรือลัดวงจรกับ PCM</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระบบ CAN ขาดหรือลัดวงจรกับ TCM</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระบบ CAN ขาดหรือลัดวงจรกับ DSC HU/CM</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระบบ CAN ขาดหรือลัดวงจรกับแผงหน้าปัด</div>
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัดบกพร่อง</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p><br clear="all"><a name="id03020020080001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ขั้นตอนการวิเคราะห์ปัญหา</p>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบตามขั้นตอนการวิเคราะห์ในตัวถังและอุปกรณ์เสริม </div>
+</body>
+</html>

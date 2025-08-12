@@ -1,0 +1,2489 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>การวิเคราะห์ปัญหาบนรถ</title>
+</head>
+<body><a name="id070200126600"></a><p class="servinfo-title"><span class="servinfo-head"></span>การวิเคราะห์ปัญหาบนรถ</p>
+<hr>
+<p class="servinfo-title-id" align="right">id070200126600</p><br clear="all"><a name="id07020012660001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ายละเอียด</p>
+<div class="list">•&nbsp;&nbsp;ระบบการวิเคราะห์ปัญหาบนรถประกอบด้วย การวิเคราะห์ปัญหาบนรถ, PID/DATA MONITOR และฟังก์ชันตรวจสอบการทำงานของ A/C</div>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชันการวิเคราะห์ปัญหาบนรถมีฟังก์ชันต่อไปนี้:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ฟังก์ชั่นการตรวจจับความบกพร่อง</div>
+<dl>
+<dd class="list">
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความผิดพลาดในสัญญาณอินพุทและเอาท์พุท</div>
+</dd>
+</dl>
+<div class="list">―&nbsp;&nbsp;ฟังก์ชันหน่วยความจำ</div>
+<dl>
+<dd class="list">
+<div class="list">•&nbsp;&nbsp;จัดเก็บความบกพร่องที่ตรวจพบ</div>
+</dd>
+</dl>
+<div class="list">―&nbsp;&nbsp;ฟังก์ชั่นการระบุความบกพร่อง</div>
+<dl>
+<dd class="list">
+<div class="list">•&nbsp;&nbsp;แสดงความบกพร่องที่ตรวจพบ</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชันแสดงความบกพร่อง, PID/DATA MONITOR และฟังก์ชันตรวจสอบการทำงานของ A/C สามารถดำเนินการโดยการเชื่อมต่อ Mazda Modular Diagnostic System (M-MDS) เข้ากับ DLC-2</div><br clear="all"><a name="id07020012660002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>แผนผังแบบบล็อก</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00000837.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00000837</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id07020012660003"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p><br clear="all"><p><a name="id07020012660004"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นการตรวจจับความบกพร่อง</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชันการตรวจจับความบกพร่องตรวจพบความผิดพลาดในสัญญาณอินพุทและเอาท์พุท (สวิตช์สตาร์ทอยู่ที่ ON หรือเครื่องยนต์กำลังทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบความบกพร่อง รหัสวิเคราะห์ปัญหาจะถูกส่งไปยัง DLC-2 ผ่านทางฟังก์ชันการแสดงความบกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;ขณะเดียวกัน ผลการตรวจพบความบกพร่องจะถูกส่งไปยังฟังก์ชัน Fail-safe และหน่วยความจำ</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id07020012660005"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นหน่วยความจำ</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชันหน่วยความจำจะจัดเก็บระบบที่มีสัญญาณบกพร่องซึ่งจะถูกตรวจพบว่ามีความบกพร่องโดยฟังก์ชันการตรวจจับความบกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;ข้อมูลความบกพร่องที่เก็บจะไม่ถูกลบออกแม้เมื่อสวิตช์สตาร์ทอยู่ที่ OFF (LOCK) หรือมีการแก้ไขความบกพร่องแล้วก็ตาม</div>
+<div class="list">•&nbsp;&nbsp;ข้อมูลความบกพร่องที่เก็บไว้สามารถลบออกโดยการเชื่อมต่อ Mazda Modular Diagnostic System (M-MDS) เข้ากับ DLC-2 และใช้งาน</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id07020012660006"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชันการแสดงความบกพร่อง</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชันการแสดงความบกพร่องจะส่งความบกพร่องในปัจจุบันหรืออดีตไปยัง DLC-2 เป็นรหัสวิเคราะห์ปัญหา</div>
+<div class="list">•&nbsp;&nbsp;รหัสวิเคราะห์ปัญหาสามารถอ่านโดยการเชื่อมต่อ Mazda Modular Diagnostic System (M-MDS) เข้ากับ DLC-2 และใช้งาน</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">โหมดแสดงความบกพร่อง</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ชุดควบคุมอุณหภูมิตรวจพบความบกพร่องในปัจจุบันและอดีตในวงจรระบบควบคุม (การขาด/ลัดวงจร) แสดงรหัสวิเคราะห์ปัญหาที่แสดงในตารางบน Mazda Modular Diagnostic System (M-MDS)</div>
+<div class="list">•&nbsp;&nbsp;ลบความบกพร่องในอดีตหลังจากซ่อมเสร็จเรียบร้อยแล้ว เนื่องจากหากเก็บความบกพร่องในอดีตไว้ ความบกพร่องจะยังคงอยู่แม้หลังจากที่มีการแก้ไขความบกพร่องเรียบร้อยแล้ว</div>
+<div class="list">•&nbsp;&nbsp;ความบกพร่องในอดีตที่เก็บไว้สามารถลบออกโดยการเชื่อมต่อ Mazda Modular Diagnostic System (M-MDS) เข้ากับ DLC-2 และใช้งาน</div>
+</dd>
+</dl>
+<p clear="all">
+<p>
+<div>x: สามารถทำได้</div>
+<div>−: ไม่มี</div>
+</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟเตือน</p>
+</th>
+<th id="" align="center">
+<p class="thead">ตำแหน่งความบกพร่อง</p>
+</th>
+<th id="" align="center">
+<p class="thead">สภาพที่ตรวจพบ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ระบบ Fail safe</p>
+</th>
+<th id="" align="center">
+<p class="thead">รอบการขับ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ประเภทการทดสอบด้วยตนเอง<sup>*1</sup></p>
+</th>
+<th id="" align="center">
+<p class="thead">ฟังก์ชั่นหน่วยความจำ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">B1081:71</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์ส่วนผสมอากาศด้านคนขับ (L.H.D.)</div>
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์ส่วนผสมอากาศด้านผู้โดยสาร (R.H.D.)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">มอเตอร์ล็อก</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">B1082:71</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์ส่วนผสมอากาศด้านผู้โดยสาร (L.H.D.)</div>
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์ส่วนผสมอากาศด้านคนขับ (R.H.D.)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">มอเตอร์ล็อก</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">B1086:71</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แอ็คชิวเอเตอร์โหมดทิศทางการไหลของอากาศ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">มอเตอร์ล็อก</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">B1A61:11</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="tbody">เซ็นเซอร์อุณหภูมิห้องโดยสาร</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ลัดวงจรลงกราวด์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">B1A61:13</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การขาดของวงจร</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">B1A63:12</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="tbody">โซล่าเรดิเอชั่นเซ็นเซอร์ (ขวา)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ลัดวงจรกับแหล่งจ่ายไฟ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">B1A63:13</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การขาดของวงจร</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">B1A64:12</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="tbody">โซล่าเรดิเอชั่นเซ็นเซอร์ (ซ้าย)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ลัดวงจรกับแหล่งจ่ายไฟ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">B1A64:13</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การขาดของวงจร</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">B1B71:11</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="tbody">เซ็นเซอร์อุณหภูมิอีวาปอเรเตอร์</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ลัดวงจรลงกราวด์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">B1B71:13</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การขาดของวงจร</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">B1C1A:12</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์ส่วนผสมอากาศด้านคนขับ (โพเทนชิโอมิเตอร์) (L.H.D.)</div>
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์ส่วนผสมอากาศด้านผู้โดยสาร (โพเทนชิโอมิเตอร์) (&gt;R.H.D.)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ลัดวงจรกับแหล่งจ่ายไฟ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">B1C1A:13</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การขาดของวงจร</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">B1C1B:12</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์ส่วนผสมอากาศด้านผู้โดยสาร (โพเทนชิโอมิเตอร์) (L.H.D.)</div>
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์ส่วนผสมอากาศด้านคนขับ (โพเทนชิโอมิเตอร์) (R.H.D.)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ลัดวงจรกับแหล่งจ่ายไฟ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">B1C1B:13</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การขาดของวงจร</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">B1C1C:12</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="tbody">แอ็คชิวเอเตอร์โหมดทิศทางการไหลของอากาศ (โพเทนชิโอมิเตอร์)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ลัดวงจรกับแหล่งจ่ายไฟ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">B1C1C:13</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การขาดของวงจร</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">B1D22:11</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="tbody">เซ็นเซอร์อุณหภูมิรังผึ้งฮีทเตอร์</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ลัดวงจรลงกราวด์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">B1D22:13</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การขาดของวงจร</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U0010:88</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระบบการสื่อสาร CAN</div>
+</td>
+<td id="" align="left">
+<div class="tbody">บัสปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับแผงหน้าปัดขาดหายไป</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่มีข้อมูลชนิดย่อย</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U0423:68</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วันที่ที่ได้รับจากแผงหน้าปัดไม่ถูกต้อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ข้อมูลเหตุการณ์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U200D:11</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันไฟฟ้าวงจรชุดควบคุมอุณหภูมิ (+5V)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ลัดวงจรลงกราวด์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U2300:54</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left" rowspan="4">
+<div class="tbody">การกำหนดค่าผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่ได้รับข้อมูล</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U2300:55</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่ได้กำหนดค่า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U2300:56</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การอ่านข้อมูลไม่มีประสิทธิภาพ/ไม่สามารถสับเปลี่ยนได้</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U2300:64</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การอ่านค่าผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U3003:16</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันไฟฟ้าแหล่งจ่ายไฟชุดควบคุมอุณหภูมิ (B+, IG1)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันไฟฟ้าแหล่งจ่ายไฟลดลง (<span>10 V หรือน้อยกว่า</span>)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U3003:17</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันไฟฟ้าแหล่งจ่ายไฟชุดควบคุมอุณหภูมิ (B+, IG1)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันไฟฟ้าแหล่งจ่ายไฟเพิ่มขึ้น (<span>17.3 V หรือมากกว่า</span> (B+, IG1))</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;:C: การทดสอบ CMDTC ด้วยตนเอง, D: การทดสอบ ODDTC ด้วยตนเอง</div>
+<dl>
+<dd>
+<div class="list-title">คำอธิบายรหัส 7 หลักของรหัสวิเคราะห์ปัญหา</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เมื่อระบบหรือส่วนประกอบที่เกี่ยวข้องทำงานผิดพลาด CM จะจัดเก็บรหัสวิเคราะห์ปัญหาของส่วนที่ทำงานบกพร่องไว้ในหน่วยความจำของ CM และสามารถเรียกดูข้อมูลที่จัดเก็บโดยใช้เครื่องมือสแกนได้เมื่อจำเป็น รหัสวิเคราะห์ปัญหาได้รับการกำหนดโดยใช้ตัวเลข 7 หลัก ซึ่งตัวเลขแต่ละหลักมีความหมายดังต่อไปนี้<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001320.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001320</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">ไบต์แสดงสถานะของรหัสวิเคราะห์ปัญหา</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ไบต์แสดงสถานะคือรหัสสองหลัก (หลังเครื่องหมายขีด (-)) หลังรหัสวิเคราะห์ปัญหา 7 หลัก<table class="figure-flame">
+<tr>
+<td width="10mm"></td>
+<td>
+<table class="figure-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001326.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001326</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="list">•&nbsp;&nbsp;ไบต์แสดงสถานะคือรหัสที่แสดงรหัสที่ค้างอยู่, สถานะความบกพร่องปัจจุบัน/ในอดีต หรือสถานะไฟเตือน</div>
+<div class="list">•&nbsp;&nbsp;ไบต์แสดงสถานะสามารถอ่านได้ด้วยการทดสอบ CMDTC ด้วยตนเองโดยใช้ Mazda Modular Diagnostic System (M-MDS)</div>
+<div class="list">•&nbsp;&nbsp;สำหรับรายละเอียดเกี่ยวกับไบต์แสดงสถานะ ให้ดูที่คำอธิบายใน Mazda Modular Diagnostic System (M-MDS) เมื่ออ่านรหัสวิเคราะห์ปัญหา</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id07020012660007"></a><p class="topic-title"><span class="topic-head"></span>PID/DATA MONITOR</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชัน PID/DATA MONITOR เป็นทางเลือกในการเลือกรายการตรวจสอบสัญญาณอินพุทที่ตั้งไว้ก่อนหน้าในชุดควบคุมอุณหภูมิ/ชุดฮีทเตอร์น้ำ และแสดงผลแบบในเวลาจริง</div>
+</dd>
+</dl>
+<p clear="all">
+<p class="table-title">ตารางการตรวจสอบข้อมูล / PID</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ชื่อ PID (ความหมาย)</p>
+</th>
+<th id="" align="center">
+<p class="thead">หน่วย / สภาวะ</p>
+</th>
+<th id="" align="center">
+<p class="thead">สถานะการทำงาน (ค่าอ้างอิง)</p>
+</th>
+<th id="" align="center">
+<p class="thead">ชิ้นส่วนอินพุท</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">A/C_SW</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;สวิตช์ A/C OFF: OFF</div>
+<div class="list">•&nbsp;&nbsp;สวิตช์ A/C ON: ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ชุดควบคุมอุณหภูมิ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">AUTO_SW</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;สวิตช์ AUTO อยู่ที่ OFF: OFF</div>
+<div class="list">•&nbsp;&nbsp;สวิตช์ AUTO อยู่ที่ ON: ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ชุดควบคุมอุณหภูมิ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">B_MT_RLY_CS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ปิดรีเลย์โบล์วเวอร์: OFF</div>
+<div class="list">•&nbsp;&nbsp;เปิดรีเลย์โบล์วเวอร์: ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ชุดควบคุมอุณหภูมิ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">DEF_SW</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp; สวิตช์ DEFROSTER อยู่ที่ OFF: OFF</div>
+<div class="list">•&nbsp;&nbsp; สวิตช์ DEFROSTER อยู่ที่ ON: ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ชุดควบคุมอุณหภูมิ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">DUAL_SW</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;สวิตช์ DUAL อยู่ที่ OFF: OFF</div>
+<div class="list">•&nbsp;&nbsp;สวิตช์ DUAL อยู่ที่ ON: ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ชุดควบคุมอุณหภูมิ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ELE_W/P</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ปิดปั๊มน้ำ: OFF</div>
+<div class="list">•&nbsp;&nbsp;เปิดปั๊มน้ำ: ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ปั๊มน้ำ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ENG_C_TMP</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C,&deg;F</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แสดงอุณหภูมิน้ำหล่อเย็นเครื่องยนต์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เซ็นเซอร์อุณหภูมิน้ำหล่อเย็นเครื่องยนต์</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">EVA_TMP_SEN</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C,&deg;F</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แสดงอุณหภูมิอีวาปอเรเตอร์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เซ็นเซอร์อุณหภูมิอีวาปอเรเตอร์</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">F_REC_CS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;บังคับปิดการควบคุมการหมุนเวียน: OFF</div>
+<div class="list">•&nbsp;&nbsp;บังคับเปิดการควบคุมการหมุนเวียน: ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ชุดควบคุมอุณหภูมิ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">FRE_SW</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;สวิตช์ FRESH อยู่ที่ OFF: OFF</div>
+<div class="list">•&nbsp;&nbsp;สวิตช์ FRESH อยู่ที่ ON: ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ชุดควบคุมอุณหภูมิ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">HC_TMP_SEN</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C,&deg;F</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แสดงเซ็นเซอร์อุณหภูมิรังผึ้งฮีทเตอร์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เซ็นเซอร์อุณหภูมิรังผึ้งฮีทเตอร์</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">INC_TMP_SEN</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C,&deg;F</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แสดงอุณหภูมิห้องโดยสาร</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เซ็นเซอร์อุณหภูมิห้องโดยสาร</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">M_DOWN_SW</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;สวิตช์ MODE (DOWN) อยู่ที่ OFF: OFF</div>
+<div class="list">•&nbsp;&nbsp;สวิตช์ MODE (DOWN) อยู่ที่ ON: ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ชุดควบคุมอุณหภูมิ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">M_UP_SW</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;สวิตช์ MODE (UP) อยู่ที่ OFF: OFF</div>
+<div class="list">•&nbsp;&nbsp;สวิตช์โหมด MODE (UP) อยู่ที่ ON: ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ชุดควบคุมอุณหภูมิ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">OFF_SW</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;สวิตช์ OFF อยู่ที่ OFF: OFF</div>
+<div class="list">•&nbsp;&nbsp;สวิตช์ OFF อยู่ที่ ON: ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ชุดควบคุมอุณหภูมิ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">OUT_CAR_TMP</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C,&deg;F</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แสดงอุณหภูมิภายนอก</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เซ็นเซอร์อุณหภูมิภายนอก</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">R/DEF_CS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ปิดไล่ฝ้าหลัง: OFF</div>
+<div class="list">•&nbsp;&nbsp;เปิดไล่ฝ้าหลัง: ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ชุดควบคุมอุณหภูมิ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">R/DEF_SW</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;สวิตช์ไล่ฝ้ากระจกหลังอยู่ที่ OFF: OFF</div>
+<div class="list">•&nbsp;&nbsp;สวิตช์ไล่ฝ้ากระจกหลังอยู่ที่ ON: ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ชุดควบคุมอุณหภูมิ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">REC_SW</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;สวิตช์ RECIRCULATE อยู่ที่ OFF: OFF</div>
+<div class="list">•&nbsp;&nbsp;สวิตช์ RECIRCULATE อยู่ที่ ON: ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ชุดควบคุมอุณหภูมิ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">S_HT_CUT_CS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">No_Request/Cut</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ปิดการควบคุมการตัดสัญญาณอุ่นเบาะนั่ง: No_Request</div>
+<div class="list">•&nbsp;&nbsp;เปิดการควบคุมการตัดสัญญาณอุ่นเบาะนั่ง: Cut</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ชุดควบคุมอุณหภูมิ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">SLR_R_SEN_L</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">W</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="tbody">แสดงระดับแสงอาทิตย์</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">โซล่าเรดิเอชั่นเซ็นเซอร์</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">SLR_R_SEN_R</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">STOP_ST</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Available/</div>
+<div class="tbody">Not Available/</div>
+<div class="tbody">Error</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;สภาวะการอนุญาตระบบ i-stop: มีอยู่</div>
+<div class="list">•&nbsp;&nbsp;สภาวะการยับยั้งระบบ i-stop: ไม่มีอยู่</div>
+<div class="list">•&nbsp;&nbsp;สัญญาณระบบ i-stop ขัดข้อง: Error</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ชุดควบคุมอุณหภูมิ</div>
+<div class="list">•&nbsp;&nbsp;PCM</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">UNIT_TMP</div>
+</td>
+<td id="" align="center">
+<div class="tbody">deg_C/deg_F</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;เซนติเกรด: deg_C</div>
+<div class="list">•&nbsp;&nbsp;ฟาเรนไฮต์: deg_F</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ชุดควบคุมอุณหภูมิ</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</p><br clear="all"><p><a name="id07020012660008"></a><p class="topic-title"><span class="topic-head"></span>โหมดตรวจสอบการทำงานของ A/C</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;โหมดตรวจสอบการทำงานของ A/C จะบังคับให้อุปกรณ์เอาท์พุททำงานตามที่แสดงในตารางการตรวจสอบการทำงาน ไม่ว่าจะมีการส่งสัญญาณอินพุทไปยังชุดควบคุมอุณหภูมิหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;ระหว่างการทำงานของโหมดตรวจสอบการทำงานของ A/C จะมีการแสดงข้อมูลบนหน้าจอและมีการติดสว่างของไฟแสดงสถานะบนสวิตช์ที่มีการควบคุมแบบอัตโนมัติ</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบชิ้นส่วนที่บกพร่องโดยการตรวจดู ฟังเสียงการทำงาน การวางมือที่ช่องลม หรือการตรวจสอบการเปลี่ยนแปลงตามที่ระบุในตารางตรวจสอบการทำงาน</div>
+</dd>
+</dl>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">หน้าจอแสดงผล Mazda Modular Diagnostic System (M-MDS)</p>
+</th>
+<th id="" align="center">
+<p class="thead">ชิ้นส่วนเป้าหมาย</p>
+</th>
+<th id="" align="center">
+<p class="thead">อ้างอิง</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">แอ็คชิวเอเตอร์ส่วนผสมอากาศ</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์ส่วนผสมอากาศ</div>
+<div class="list">•&nbsp;&nbsp;ตัวปรับปริมาณส่วนผสมอากาศ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="intxref-label"><a href="#id07020012660009">แอ็คชิวเอเตอร์ส่วนผสมอากาศ</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">คอมเพรสเซอร์ระบบปรับอากาศ</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;คอมเพรสเซอร์ A/C</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="intxref-label"><a href="#id07020012660010">คอมเพรสเซอร์ A/C</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">แอ็คชิวเอเตอร์อากาศเข้า</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์อากาศเข้า</div>
+<div class="list">•&nbsp;&nbsp;ตัวปรับปริมาณอากาศเข้า</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="intxref-label"><a href="#id07020012660011">ตัวปรับปริมาณอากาศเข้า</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ความเร็วมอเตอร์โบล์วเวอร์</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;มอเตอร์โบล์วเวอร์</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="intxref-label"><a href="#id07020012660012">มอเตอร์โบล์วเวอร์</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">แอ็คชิวเอเตอร์โหมดทิศทางการไหลของอากาศ</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์โหมดทิศทางการไหลของอากาศ</div>
+<div class="list">•&nbsp;&nbsp;ตัวปรับปริมาณโหมดทิศทางการไหลของอากาศ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="intxref-label"><a href="#id07020012660013">แอ็คชิวเอเตอร์โหมดทิศทางการไหลของอากาศ</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การติดสว่างของไฟแสดงสถานะทั้งหมด</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ชุดควบคุมอุณหภูมิ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="intxref-label"><a href="#id07020012660014">ไฟแสดงสถานะ</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ปั๊มน้ำไฟฟ้า</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ปั๊มน้ำ<sup>*</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="intxref-label"><a href="#id07020012660015">ปั๊มน้ำ</a></font>)</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*&nbsp;&nbsp;:รุ่นที่มีปั๊มน้ำ</div>
+</p><br clear="all"><p><a name="id07020012660009"></a><p class="topic-title"><span class="topic-head"></span>แอ็คชิวเอเตอร์ส่วนผสมอากาศ</p>
+<p clear="all">
+<p class="table-title">การทำงาน</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center">
+<p class="thead">แอ็คชิวเอเตอร์ส่วนผสมอากาศ</p>
+</th>
+<th id="" align="center">
+<p class="thead">แอ็คชิวเอเตอร์โหมดทิศทางการไหลของอากาศ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ความเร็วโบล์วเวอร์</p>
+</th>
+<th id="" align="center">
+<p class="thead">คลัตช์แม่เหล็ก</p>
+</th>
+<th id="" align="center">
+<p class="thead">แอ็คชิวเอเตอร์อากาศเข้า</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">0 %</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">VENT</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ระดับ 5</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">FRESH</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">100 %</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p clear="all">
+<p class="table-title">การแสดงผล</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center">
+<p class="thead">อุณหภูมิ (&deg;C {&deg;F})</p>
+</th>
+<th id="" align="center">
+<p class="thead">โหมดทิศทางการไหลของอากาศ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ระดับของโบล์วเวอร์</p>
+</th>
+<th id="" align="center">
+<p class="thead">A/C</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟแสดงสถานะสวิตช์หมุนเวียนอากาศ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟแสดงสถานะสวิตช์อากาศภายนอก</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">20.0 {68}</div>
+</td>
+<td id="" align="center" rowspan="2"><img src="images/ac5wzw00002099.png"></td>
+<td id="" align="center" rowspan="2"><img src="images/ac5wzw00002100.png"></td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">แสดงขึ้น</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody"> ไม่ติดสว่าง</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ติดสว่าง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">21.0 {70}</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;หลังจากประมาณ 22 วินาที ขั้นตอนการทำงานจะเปลี่ยนไปยังขั้นตอนถัดไป</div>
+<div class="list">•&nbsp;&nbsp;เมื่อขั้นตอนสุดท้ายเสร็จสมบูรณ์ การดำเนินการจะทำซ้ำตั้งแต่ขั้นตอน 1</div>
+<div class="list">•&nbsp;&nbsp;เพื่อป้องกันการทำความเย็นจัด คลัตช์แม่เหล็กจะปิดแทนการเข้าควบคุมการทำงานของ A/C</div>
+</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id07020012660010"></a><p class="topic-title"><span class="topic-head"></span>คอมเพรสเซอร์ A/C</p>
+<p clear="all">
+<p class="table-title">การทำงาน</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center">
+<p class="thead">แอ็คชิวเอเตอร์ส่วนผสมอากาศ</p>
+</th>
+<th id="" align="center">
+<p class="thead">แอ็คชิวเอเตอร์โหมดทิศทางการไหลของอากาศ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ความเร็วโบล์วเวอร์</p>
+</th>
+<th id="" align="center">
+<p class="thead">คลัตช์แม่เหล็ก</p>
+</th>
+<th id="" align="center">
+<p class="thead">แอ็คชิวเอเตอร์อากาศเข้า</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">0 %</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">VENT</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ระดับ 5</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">FRESH</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF)</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p clear="all">
+<p class="table-title">การแสดงผล</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center">
+<p class="thead">อุณหภูมิ (&deg;C {&deg;F})</p>
+</th>
+<th id="" align="center">
+<p class="thead">โหมดทิศทางการไหลของอากาศ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ระดับของโบล์วเวอร์</p>
+</th>
+<th id="" align="center">
+<p class="thead">A/C</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟแสดงสถานะสวิตช์หมุนเวียนอากาศ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟแสดงสถานะสวิตช์อากาศภายนอก</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">4 {39}</div>
+</td>
+<td id="" align="center" rowspan="2"><img src="images/ac5wzw00002099.png"></td>
+<td id="" align="center" rowspan="2"><img src="images/ac5wzw00002100.png"></td>
+<td id="" align="center">
+<div class="tbody">แสดงขึ้น</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody"> ไม่ติดสว่าง</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ติดสว่าง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่แสดงขึ้น</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;หลังจากเวลาต่อไปนี้ผ่านไป ขั้นตอนการทำงานจะเปลี่ยนไปยังขั้นตอนถัดไป</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ขั้นตอน 1: ประมาณ 5 วินาที</div>
+<div class="list">―&nbsp;&nbsp;ขั้นตอน 2: ประมาณ 25 วินาที</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;เมื่อขั้นตอนสุดท้ายเสร็จสมบูรณ์ การดำเนินการจะทำซ้ำตั้งแต่ขั้นตอน 1</div>
+</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id07020012660011"></a><p class="topic-title"><span class="topic-head"></span>แอ็คชิวเอเตอร์อากาศเข้า</p>
+<p clear="all">
+<p class="table-title">การทำงาน</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center">
+<p class="thead">แอ็คชิวเอเตอร์ส่วนผสมอากาศ</p>
+</th>
+<th id="" align="center">
+<p class="thead">แอ็คชิวเอเตอร์โหมดทิศทางการไหลของอากาศ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ความเร็วโบล์วเวอร์</p>
+</th>
+<th id="" align="center">
+<p class="thead">คลัตช์แม่เหล็ก</p>
+</th>
+<th id="" align="center">
+<p class="thead">แอ็คชิวเอเตอร์อากาศเข้า</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center" rowspan="4">
+<div class="tbody">0 %</div>
+</td>
+<td id="" align="center" rowspan="4">
+<div class="tbody">VENT</div>
+</td>
+<td id="" align="center" rowspan="4">
+<div class="tbody">ระดับ 5</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">FRESH</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">RECIRCULATE</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">3</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">OFF)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">FRESH</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">4</div>
+</td>
+<td id="" align="center">
+<div class="tbody">RECIRCULATE</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p clear="all">
+<p class="table-title">การแสดงผล</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center">
+<p class="thead">อุณหภูมิ (&deg;C {&deg;F})</p>
+</th>
+<th id="" align="center">
+<p class="thead">โหมดทิศทางการไหลของอากาศ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ระดับของโบล์วเวอร์</p>
+</th>
+<th id="" align="center">
+<p class="thead">A/C</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟแสดงสถานะสวิตช์หมุนเวียนอากาศ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟแสดงสถานะสวิตช์อากาศภายนอก</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center" rowspan="4">
+<div class="tbody">4 {39}</div>
+</td>
+<td id="" align="center" rowspan="4"><img src="images/ac5wzw00002099.png"></td>
+<td id="" align="center" rowspan="4"><img src="images/ac5wzw00002100.png"></td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">แสดงขึ้น</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ติดสว่าง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">3</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ไม่แสดงขึ้น</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">4</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ติดสว่าง</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;หลังจากประมาณ 11 วินาที ขั้นตอนการทำงานจะเปลี่ยนไปยังขั้นตอนถัดไป</div>
+<div class="list">•&nbsp;&nbsp;เมื่อขั้นตอนสุดท้ายเสร็จสมบูรณ์ การดำเนินการจะทำซ้ำตั้งแต่ขั้นตอน 1</div>
+<div class="list">•&nbsp;&nbsp;เพื่อป้องกันการทำความเย็นจัด คลัตช์แม่เหล็กจะปิดแทนการเข้าควบคุมการทำงานของ A/C</div>
+</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id07020012660012"></a><p class="topic-title"><span class="topic-head"></span>มอเตอร์โบล์วเวอร์</p>
+<p clear="all">
+<p class="table-title">การทำงาน</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center">
+<p class="thead">แอ็คชิวเอเตอร์ส่วนผสมอากาศ</p>
+</th>
+<th id="" align="center">
+<p class="thead">แอ็คชิวเอเตอร์โหมดทิศทางการไหลของอากาศ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ความเร็วโบล์วเวอร์</p>
+</th>
+<th id="" align="center">
+<p class="thead">คลัตช์แม่เหล็ก</p>
+</th>
+<th id="" align="center">
+<p class="thead">แอ็คชิวเอเตอร์อากาศเข้า</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">50 %</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">VENT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF)</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">FRESH</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1st</div>
+</td>
+<td id="" align="center" rowspan="4">
+<div class="tbody">ON</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">3</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ระดับ 3</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">4</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ระดับ 5</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">5</div>
+</td>
+<td id="" align="center">
+<div class="tbody">7th</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p clear="all">
+<p class="table-title">การแสดงผล</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center">
+<p class="thead">อุณหภูมิ (&deg;C {&deg;F})</p>
+</th>
+<th id="" align="center">
+<p class="thead">โหมดทิศทางการไหลของอากาศ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ระดับของโบล์วเวอร์</p>
+</th>
+<th id="" align="center">
+<p class="thead">A/C</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟแสดงสถานะสวิตช์หมุนเวียนอากาศ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟแสดงสถานะสวิตช์อากาศภายนอก</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">1 {34}</div>
+</td>
+<td id="" align="center" rowspan="5"><img src="images/ac5wzw00002099.png"></td>
+<td id="" align="center">
+<div class="tbody">ไม่แสดงขึ้น</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่แสดงขึ้น</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">ไม่ติดสว่าง</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">ติดสว่าง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center"><img src="images/ac5wzw00002101.png"></td>
+<td id="" align="center" rowspan="4">
+<div class="tbody">แสดงขึ้น</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">3</div>
+</td>
+<td id="" align="center"><img src="images/ac5wzw00002102.png"></td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">4</div>
+</td>
+<td id="" align="center"><img src="images/ac5wzw00002100.png"></td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">5</div>
+</td>
+<td id="" align="center"><img src="images/ac5wzw00002103.png"></td>
+</tr>
+</tbody>
+</table>
+</p>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;หลังจากประมาณ 4 วินาที ขั้นตอนการทำงานจะเปลี่ยนไปยังขั้นตอนถัดไป</div>
+<div class="list">•&nbsp;&nbsp;เมื่อขั้นตอนสุดท้ายเสร็จสมบูรณ์ การดำเนินการจะทำซ้ำตั้งแต่ขั้นตอน 1</div>
+<div class="list">•&nbsp;&nbsp;เพื่อป้องกันการทำความเย็นจัด คลัตช์แม่เหล็กจะปิดแทนการเข้าควบคุมการทำงานของ A/C</div>
+</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id07020012660013"></a><p class="topic-title"><span class="topic-head"></span>แอ็คชิวเอเตอร์โหมดทิศทางการไหลของอากาศ</p>
+<p clear="all">
+<p class="table-title">การทำงาน</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center">
+<p class="thead">แอ็คชิวเอเตอร์ส่วนผสมอากาศ</p>
+</th>
+<th id="" align="center">
+<p class="thead">แอ็คชิวเอเตอร์โหมดทิศทางการไหลของอากาศ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ความเร็วโบล์วเวอร์</p>
+</th>
+<th id="" align="center">
+<p class="thead">คลัตช์แม่เหล็ก</p>
+</th>
+<th id="" align="center">
+<p class="thead">แอ็คชิวเอเตอร์อากาศเข้า</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">50 %</div>
+</td>
+<td id="" align="center">
+<div class="tbody">VENT</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">ระดับ 5</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">FRESH</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">BI-LEVEL</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">3</div>
+</td>
+<td id="" align="center">
+<div class="tbody">HEAT</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">4</div>
+</td>
+<td id="" align="center">
+<div class="tbody">DEF/HEAT</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">5</div>
+</td>
+<td id="" align="center">
+<div class="tbody">DEFROSTER</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p clear="all">
+<p class="table-title">การแสดงผล</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center">
+<p class="thead">อุณหภูมิ (&deg;C {&deg;F})</p>
+</th>
+<th id="" align="center">
+<p class="thead">โหมดทิศทางการไหลของอากาศ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ระดับของโบล์วเวอร์</p>
+</th>
+<th id="" align="center">
+<p class="thead">A/C</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟแสดงสถานะสวิตช์หมุนเวียนอากาศ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟแสดงสถานะสวิตช์อากาศภายนอก</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">3 {37}</div>
+</td>
+<td id="" align="center"><img src="images/ac5wzw00002099.png"></td>
+<td id="" align="center" rowspan="5"><img src="images/ac5wzw00002100.png"></td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">แสดงขึ้น</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">ไม่ติดสว่าง</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">ติดสว่าง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center"><img src="images/ac5wzw00002104.png"></td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">3</div>
+</td>
+<td id="" align="center"><img src="images/ac5wzw00002105.png"></td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">4</div>
+</td>
+<td id="" align="center"><img src="images/ac5wzw00002106.png"></td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">5</div>
+</td>
+<td id="" align="center"><img src="images/ac5wzw00002107.png"></td>
+</tr>
+</tbody>
+</table>
+</p>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;หลังจากประมาณ 11 วินาที ขั้นตอนการทำงานจะเปลี่ยนไปยังขั้นตอนถัดไป</div>
+<div class="list">•&nbsp;&nbsp;เมื่อขั้นตอนสุดท้ายเสร็จสมบูรณ์ การดำเนินการจะทำซ้ำตั้งแต่ขั้นตอน 1</div>
+<div class="list">•&nbsp;&nbsp;เพื่อป้องกันการทำความเย็นจัด คลัตช์แม่เหล็กจะปิดแทนการเข้าควบคุมการทำงานของ A/C</div>
+</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id07020012660014"></a><p class="topic-title"><span class="topic-head"></span>ไฟแสดงสถานะ</p>
+<p clear="all">
+<p class="table-title">การทำงาน</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center">
+<p class="thead">แอ็คชิวเอเตอร์ส่วนผสมอากาศ</p>
+</th>
+<th id="" align="center">
+<p class="thead">แอ็คชิวเอเตอร์โหมดทิศทางการไหลของอากาศ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ความเร็วโบล์วเวอร์</p>
+</th>
+<th id="" align="center">
+<p class="thead">คลัตช์แม่เหล็ก</p>
+</th>
+<th id="" align="center">
+<p class="thead">แอ็คชิวเอเตอร์อากาศเข้า</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">50 %</div>
+</td>
+<td id="" align="center">
+<div class="tbody">VENT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">FRESH</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p clear="all">
+<p class="table-title">การแสดงผล</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center">
+<p class="thead">อุณหภูมิ (&deg;C {&deg;F})</p>
+</th>
+<th id="" align="center">
+<p class="thead">โหมดทิศทางการไหลของอากาศ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ระดับของโบล์วเวอร์</p>
+</th>
+<th id="" align="center">
+<p class="thead">A/C</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟแสดงสถานะสวิตช์หมุนเวียนอากาศ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟแสดงสถานะสวิตช์อากาศภายนอก</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center" colspan="4">
+<div class="tbody">ไฟแสดงสถานะทั้งหมดที่แสดง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</p><br clear="all"><p><a name="id07020012660015"></a><p class="topic-title"><span class="topic-head"></span>ปั๊มน้ำ</p>
+<p clear="all">
+<p class="table-title">การทำงาน</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center">
+<p class="thead">ปั๊มน้ำ</p>
+</th>
+<th id="" align="center">
+<p class="thead">แอ็คชิวเอเตอร์ส่วนผสมอากาศ</p>
+</th>
+<th id="" align="center">
+<p class="thead">แอ็คชิวเอเตอร์โหมดทิศทางการไหลของอากาศ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ความเร็วโบล์วเวอร์</p>
+</th>
+<th id="" align="center">
+<p class="thead">คลัตช์แม่เหล็ก</p>
+</th>
+<th id="" align="center">
+<p class="thead">แอ็คชิวเอเตอร์อากาศเข้า</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">50 %</div>
+</td>
+<td id="" align="center">
+<div class="tbody">VENT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">FRESH</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p clear="all">
+<p class="table-title">การแสดงผล</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center">
+<p class="thead">อุณหภูมิ (&deg;C {&deg;F})</p>
+</th>
+<th id="" align="center">
+<p class="thead">โหมดทิศทางการไหลของอากาศ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ระดับของโบล์วเวอร์</p>
+</th>
+<th id="" align="center">
+<p class="thead">A/C</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟแสดงสถานะสวิตช์หมุนเวียนอากาศ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟแสดงสถานะสวิตช์อากาศภายนอก</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">10 {50}</div>
+</td>
+<td id="" align="center"><img src="images/ac5wzw00002099.png"></td>
+<td id="" align="center">
+<div class="tbody">ไม่แสดงขึ้น</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่แสดงขึ้น</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</p><br clear="all"><p><a name="id07020012660016"></a><p class="topic-title"><span class="topic-head"></span>การหยุดตรวจสอบการทำงานของ A/C</p>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;หากมีการเลือก &quot;Stop&quot; ขณะกำลังตรวจสอบการทำงานของ A/C ระบบ A/C จะหยุดลงในสภาวะตามที่แสดงในตาราง</div>
+</div>
+</dd>
+</dl>
+<p clear="all">
+<p class="table-title">การทำงาน</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center">
+<p class="thead">ปั๊มน้ำ (รุ่นที่มีปั๊มน้ำ)</p>
+</th>
+<th id="" align="center">
+<p class="thead">แอ็คชิวเอเตอร์ส่วนผสมอากาศ</p>
+</th>
+<th id="" align="center">
+<p class="thead">แอ็คชิวเอเตอร์โหมดทิศทางการไหลของอากาศ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ความเร็วโบล์วเวอร์</p>
+</th>
+<th id="" align="center">
+<p class="thead">คลัตช์แม่เหล็ก</p>
+</th>
+<th id="" align="center">
+<p class="thead">แอ็คชิวเอเตอร์อากาศเข้า</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">50 %</div>
+</td>
+<td id="" align="center">
+<div class="tbody">VENT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">FRESH</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p clear="all">
+<p class="table-title">การแสดงผล</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center">
+<p class="thead">อุณหภูมิ (&deg;C {&deg;F})</p>
+</th>
+<th id="" align="center">
+<p class="thead">โหมดทิศทางการไหลของอากาศ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ระดับของโบล์วเวอร์</p>
+</th>
+<th id="" align="center">
+<p class="thead">A/C</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟแสดงสถานะสวิตช์หมุนเวียนอากาศ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟแสดงสถานะสวิตช์อากาศภายนอก</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">0 {32}</div>
+</td>
+<td id="" align="center"><img src="images/ac5wzw00002099.png"></td>
+<td id="" align="center">
+<div class="tbody">ไม่แสดงขึ้น</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่แสดงขึ้น</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</p>
+</body>
+</html>

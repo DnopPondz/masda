@@ -1,0 +1,2 @@
+&txtLabel=HEADLIGHT (DISCHARGE TYPE) 1/2&
+&txtData=S0918_2a&

@@ -1,0 +1,424 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>ระบบล็อคประตูด้วยไฟฟ้า</title>
+</head>
+<body><a name="id091400108200"></a><p class="servinfo-title"><span class="servinfo-head"></span>ระบบล็อคประตูด้วยไฟฟ้า</p>
+<hr>
+<p class="servinfo-title-id" align="right">id091400108200</p><br clear="all"><a name="id09140010820001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รายละเอียด</p>
+<div class="list">•&nbsp;&nbsp;เมื่อสวิตช์ล็อคประตูหรือเบ้าเสียบกุญแจประตูหน้าถูกสั่งการเพื่อล็อค/ปลดล็อค ประตูทุกบานจะถูกล็อค/ปลดล็อค</div>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมตัวถังด้านหลัง (RBCM) จะสั่งงานโหมด Fail-Safe ของระบบล็อคประตูด้วยไฟฟ้า (ดูที่ <font class="extxref-label"><a href="id094000002600.html">โหมดควบคุมตัวถังด้านหลัง (RBCM)</a></font>)</div><br clear="all"><a name="id09140010820002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p><br clear="all"><p><a name="id09140010820003"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นอินเตอร์ล็อคสวิตช์เชื่อมโยงล็อคประตู (รุ่นที่ไม่มีการปลดล็อค 2 ขั้นตอน)</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เมื่อปุ่มล็อคด้านคนขับถูกล็อค/ปลดล็อค ประตูทุกบานจะถูกล็อค/ปลดล็อค</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09140010820004"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นอินเตอร์ล็อคสวิตช์ล็อคประตู (รุ่นที่มีการปลดล็อค 2 ขั้นตอน)</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เมื่อสวิตช์ล็อคประตูถูกสั่งการเพื่อล็อค/ปลดล็อค ประตูทุกบานจะถูกล็อค/ปลดล็อค</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09140010820005"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นอินเตอร์ล็อคกุญแจประตู</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เมื่อเบ้าเสียบกุญแจประตูด้านหน้าถูกสั่งการเพื่อล็อค/ปลดล็อค ประตูทุกบานจะถูกล็อค/ปลดล็อค</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09140010820006"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นการล็อคสองชั้น (รุ่นที่มีการล็อคสองชั้น)</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เมื่อประตูทุกบานและประตูท้ายปิดถูกปิด และถูกล็อคสองครั้งติดต่อกัน การปลดล็อคสำหรับปุ่มล็อคประตูทุกบานจะถูกปิดใช้งาน</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09140010820007"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นการปลดล็อค 2 ขั้นตอน (รุ่นที่มีการปลดล็อค 2 ขั้นตอน)</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เมื่อทำการปลดล็อคโดยใช้เบ้าเสียบกุญแจประตู หรือตัวส่งสัญญาณรีโมทของกุญแจ จะมีการปลดล็อคเฉพาะการล็อคประตูในด้านคนขับเท่านั้น นอกจากนี้ เมื่อทำการปลดล็อคจะปลดล็อคประตูทุกบานที่ล็อคอยู่</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09140010820008"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นการปลดล็อคเมื่อตรวจพบการชนกัน (รุ่นที่มีการปลดล็อค 2 ขั้นตอน)</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่นนี้จะปลดล็อคประตูในกรณีที่มีการชนกันเพื่อให้ความช่วยเหลือจากด้านนอกรถทำได้ง่ายมากขึ้น</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09140010820009"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นการล็อคประตูอัตโนมัติ (รุ่นที่มีการปลดล็อค 2 ขั้นตอน)</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ประตูทุกบานจะถูกล็อค/ปลดล็อคโดยอัตโนมัติร่วมกับความเร็วรถ และการทำงานของคันเกียร์ (ATX) และสวิตช์สตาร์ท</div>
+</dd>
+</dl>
+</p><br clear="all"><a name="id09140010820010"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ภาพโครงสร้าง</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00000951.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00000951</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id09140010820011"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ผังวงจรระบบ</p>
+<p class="figure-title">รุ่นที่ไม่มีการล็อคสองชั้น / การปลดล็อค 2 ขั้นตอน</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00000952.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00000952</div>
+</td>
+</tr>
+</table>
+<p class="figure-title">รุ่นที่มีการล็อคสองชั้น</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00000953.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00000953</div>
+</td>
+</tr>
+</table>
+<p class="figure-title">รุ่นที่มีการปลดล็อค 2 ขั้นตอน</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001834.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001834</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id09140010820012"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<div class="list">•&nbsp;&nbsp;ระบบล็อคประตูด้วยไฟฟ้าจะล็อค/ปลดล็อคของแอ็คชิวเอเตอร์ล็อคประตูทุกบานร่วมกับตำแหน่งของสวิตช์เบ้าเสียบกุญแจประตูหน้า หรือสวิตช์เชื่อมโยงล็อคประตูในแอ็คชิวเอเตร์ล็อคประตูด้านคนขับ</div><br clear="all"><p><a name="id09140010820013"></a><p class="topic-title"><span class="topic-head"></span>การปลดล็อคโดยใช้เบ้าเสียบกุญแจประตูหน้า</p>
+<p class="list">1.&nbsp;&nbsp;เมื่อเสียบกุญแจในเบ้าเสียบกุญแจประตูหน้า และทำการล็อค สวิตช์เบ้าเสียบกุญแจประตูหน้าจะเปลี่ยนไปที่ด้านล็อค</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;เมื่อโมดูลควบคุมตัวถังด้านหลัง (RBCM) ตรวจพบสัญญาณล็อคของสวิตช์เบ้าเสียบกุญแจประตูหน้า (1) ระบบจะเปิดทรานซิสเตอร์ (2) และเปิดรีเลย์ล็อคประตู (ด้านล็อค)</p>
+<p class="list">
+</p>
+<p class="list">3.&nbsp;&nbsp;เมื่อรีเลย์ล็อคประตู (ด้านล็อค) เปิด (3) มอเตอร์แอ็คชิวเอเตอร์ล็อคประตูหน้าและหลังจะทำการล็อค (4) และประตูหน้าและหลังจะถูกล็อค</p>
+<p class="list">
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00000954.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00000954</div>
+</td>
+</tr>
+</table>
+</p>
+</p><br clear="all"><p><a name="id09140010820014"></a><p class="topic-title"><span class="topic-head"></span>การล็อคโดยใช้ปุ่มล็อคประตูด้านคนขับ (รุ่นที่ไม่มีการปลดล็อค 2 ขั้นตอน)</p>
+<p class="list">1.&nbsp;&nbsp;เมื่อปุ่มล็อคประตูด้านคนขับถูกล็อค สวิตช์เชื่อมโยงล็อคประตูจะเปลี่ยนไปที่ด้านล็อค</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;เมื่อโมดูลควบคุมตัวถังด้านหลัง (RBCM) ตรวจพบสัญญาณล็อของสวิตช์เชื่อมโยงล็อคประตู (1) ระบบจะเปิดทรานซิสเตอร์ (2) และเปิดรีเลย์ล็อคประตู (ด้านล็อค)</p>
+<p class="list">
+</p>
+<p class="list">3.&nbsp;&nbsp;เมื่อรีเลย์ล็อคประตู (ด้านล็อค) เปิด (3) มอเตอร์แอ็คชิวเอเตอร์ล็อคประตูหน้าและหลังจะทำการล็อค (4) และประตูหน้าและหลังจะถูกล็อค</p>
+<p class="list">
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00000955.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00000955</div>
+</td>
+</tr>
+</table>
+</p>
+</p><br clear="all"><p><a name="id09140010820015"></a><p class="topic-title"><span class="topic-head"></span>การปลดล็อคโดยใช้เบ้าเสียบกุญแจประตูหน้า (รุ่นที่ไม่มีการปลดล็อค 2 ขั้นตอน)</p>
+<p class="list">1.&nbsp;&nbsp;เมื่อเสียบกุญแจในเบ้าเสียบกุญแจประตูหน้า และทำการปลดล็อค สวิตช์เบ้าเสียบกุญแจประตูหน้าจะเปลี่ยนไปที่ด้านปลดล็อค</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;เมื่อโมดูลควบคุมตัวถังด้านหลัง (RBCM) ตรวจพบสัญญาณปลดล็อคของสวิตช์เบ้าเสียบกุญแจประตูหน้า (1) ระบบจะเปิดทรานซิสเตอร์ (2) และเปิดรีเลย์ล็อคประตู (ด้านปลดล็อค)</p>
+<p class="list">
+</p>
+<p class="list">3.&nbsp;&nbsp;เมื่อรีเลย์ล็อคประตู (ด้านปลดล็อค) เปิด (3) มอเตอร์แอ็คชิวเอเตอร์ล็อคประตูหน้าและหลังจะทำการปลดล็อค (4) และประตูหน้าและหลังจะถูกปลดล็อค</p>
+<p class="list">
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00000956.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00000956</div>
+</td>
+</tr>
+</table>
+</p>
+</p><br clear="all"><p><a name="id09140010820016"></a><p class="topic-title"><span class="topic-head"></span>การปลดล็อคโดยใช้ปุ่มล็อคประตูด้านคนขับ (รุ่นที่ไม่มีการปลดล็อค 2 ขั้นตอน)</p>
+<p class="list">1.&nbsp;&nbsp;เมื่อปุ่มล็อคประตูด้านคนขับถูกปลดล็อค สวิตช์เชื่อมโยงล็อคประตูจะเปลี่ยนไปที่ด้านปลดล็อค</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;เมื่อโมดูลควบคุมตัวถังด้านหลัง (RBCM) ตรวจพบสัญญาณปลดล็อคของสวิตช์เชื่อมโยงล็อคประตู (1) ระบบจะเปิดทรานซิสเตอร์ (2) และเปิดรีเลย์ล็อคประตู (ด้านปลดล็อค)</p>
+<p class="list">
+</p>
+<p class="list">3.&nbsp;&nbsp;เมื่อรีเลย์ล็อคประตู (ด้านปลดล็อค) เปิด (3) มอเตอร์แอ็คชิวเอเตอร์ล็อคประตูหน้าและหลังจะทำการปลดล็อค (4) และประตูหน้าและหลังจะถูกปลดล็อค</p>
+<p class="list">
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00000957.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00000957</div>
+</td>
+</tr>
+</table>
+</p>
+</p><br clear="all"><p><a name="id09140010820017"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นการล็อคสองชั้น (รุ่นที่มีการล็อคสองชั้น)</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เมื่อประตูทุกบานและประตูท้ายปิดถูกปิด และถูกล็อคสองครั้งติดต่อกัน การปลดล็อคสำหรับปุ่มล็อคประตูทุกบานจะถูกปิดใช้งาน</div>
+</dd>
+</dl>
+<p class="list">1.&nbsp;&nbsp;เมื่อเสียบกุญแจในเบ้าเสียบกุญแจประตูหน้า และทำการล็อค สวิตช์เบ้าเสียบกุญแจประตูหน้าจะเปลี่ยนไปที่ด้านล็อค</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;เมื่อโมดูลควบคุมตัวถังด้านหลัง (RBCM) ตรวจพบสัญญาณล็อคของสวิตช์เบ้าเสียบกุญแจประตูหน้า (1) ระบบจะเปิดทรานซิสเตอร์ (2) และเปิดรีเลย์ล็อคประตู</p>
+<p class="list">
+</p>
+<p class="list">3.&nbsp;&nbsp;เมื่อรีเลย์ล็อคประตูเปิด (3) มอเตอร์แอ็คชิวเอเตอร์ล็อคประตูหน้าและหลังจะทำการล็อค (4) และประตูหน้าและหลังจะถูกล็อค</p>
+<p class="list">
+</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00000959.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00000959</div>
+</td>
+</tr>
+</table>
+<p class="list">4.&nbsp;&nbsp;เมื่อการล็อคถูกดำเนินการซ้ำอีกครั้งภายในเวลา<span>ประมาณ 3 วินาที</span>หลังจากทำการล็อคแล้ว สวิตช์เบ้าเสียบกุญแจประตูหน้าจะเปลี่ยนไปที่ด้านล็อค</p>
+<p class="list">
+</p>
+<p class="list">5.&nbsp;&nbsp;เมื่อโมดูลควบคุมตัวถังด้านหลัง (RBCM) ตรวจพบสัญญาณล็อคของสวิตช์เบ้าเสียบกุญแจประตูหน้า (5) ระบบจะเปิดทรานซิสเตอร์ (6) และเปิดรีเลย์การล็อคสองชั้น</p>
+<p class="list">
+</p>
+<p class="list">6.&nbsp;&nbsp;เมื่อรีเลย์การล็อคสองชั้นเปิด (7) มอเตอร์แอ็คชิวเอเตอร์ล็อคประตูหน้าและหลังจะทำการล็อค (8) และการเชื่อมต่อของปุ่มประตูหน้าและหลังจะถูกตัดการเชื่อมต่อ ดังนั้นจะไม่สามารถทำการล็อค/ปลดล็อคโดยใช้ปุ่มล็อคประตูหน้าและหลังได้</p>
+<p class="list">
+</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00000960.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00000960</div>
+</td>
+</tr>
+</table>
+</p><br clear="all"><p><a name="id09140010820018"></a><p class="topic-title"><span class="topic-head"></span>การล็อคโดยใช้สวิตช์ล็อคประตู (รุ่นที่มีการปลดล็อค 2 ขั้นตอน)</p>
+<p class="list">1.&nbsp;&nbsp;เมื่อสวิตช์ล็อคประตูถูกสั่งการเพื่อล็อค สวิตช์ล็อคประตูจะเปลี่ยนไปที่ด้านล็อค</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;เมื่อโมดูลควบคุมตัวถังด้านหลัง (RBCM) ตรวจพบสัญญาณล็อคของสวิตช์ล็อคประตู (1) ระบบจะเปิดทรานซิสเตอร์ (2) และเปิดรีเลย์ล็อคประตู (ด้านล็อค)</p>
+<p class="list">
+</p>
+<p class="list">3.&nbsp;&nbsp;เมื่อรีเลย์ล็อคประตู (ด้านล็อค) เปิด (3) มอเตอร์แอ็คชิวเอเตอร์ล็อคประตูหน้าและหลังจะทำการล็อค (4) และประตูหน้าและหลังจะถูกล็อค</p>
+<p class="list">
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001835.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001835</div>
+</td>
+</tr>
+</table>
+</p>
+</p><br clear="all"><p><a name="id09140010820019"></a><p class="topic-title"><span class="topic-head"></span>การปลดล็อคโดยใช้สวิตช์ล็อคประตู (รุ่นที่มีการปลดล็อค 2 ขั้นตอน)</p>
+<p class="list">1.&nbsp;&nbsp;เมื่อสวิตช์ล็อคประตูถูกสั่งการเพื่อปลดล็อค สวิตช์ล็อคประตูจะเปลี่ยนไปที่ด้านปลดล็อค</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;เมื่อโมดูลควบคุมตัวถังด้านหลัง (RBCM) ตรวจพบสัญญาณปลดล็อคของสวิตช์ล็อคประตู (1) ระบบจะเปิดทรานซิสเตอร์ (2) และเปิดรีเลย์ล็อคประตู (ด้านปลดล็อค)</p>
+<p class="list">
+</p>
+<p class="list">3.&nbsp;&nbsp;เมื่อรีเลย์ล็อคประตู (ด้านปลดล็อค) เปิด (3) มอเตอร์แอ็คชิวเอเตอร์ล็อคประตูหน้าและหลังจะทำการปลดล็อค (4) และประตูหน้าและหลังจะถูกปลดล็อค</p>
+<p class="list">
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001836.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001836</div>
+</td>
+</tr>
+</table>
+</p>
+</p><br clear="all"><a name="id09140010820020"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงานของฟังก์ชั่นการปลดล็อค 2 ขั้นตอนโดยใช้เบ้าเสียบกุญแจประตู (รุ่นที่มีการปลดล็อค 2 ขั้นตอน)</p><br clear="all"><p><a name="id09140010820021"></a><p class="topic-title"><span class="topic-head"></span>ตารางช่วงเวลาของการทำงานของฟังก์ชั่นการปลดล็อค 2 ขั้นตอนโดยใช้เบ้าเสียบกุญแจประตู</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;หากสวิตช์เบ้าเสียบกุญแจประตูด้านคนขับค้างอยู่ในตำแหน่างปลดล็อคเป็นเวลา<span>ประมาณ 2 วินาที</span>ขณะที่ประตูทุกบานถูกล็อคอยู่ ฟังก์ชั่นการปลดล็อค 2 ขั้นตอนจะทำงาน</div>
+</dd>
+</dl>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001837.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001837</div>
+</td>
+</tr>
+</table>
+<p class="list">1.&nbsp;&nbsp;เมื่อสวิตช์เบ้าเสียบกุญแจด้านคนขับถูกปลดล็อค (1) โมดูลควบคุมตัวถังด้านหลัง (RBCM) จะเปิดทรานซิสเตอร์ (2)</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;เมื่อเปิดทรานซิสเตอร์ รีเลย์ล็อคประตูจะเปิด (3) และประตูหน้าด้านคนขับจะถูกปลดล็อค (4)</p>
+<p class="list">
+</p>
+<p class="list">3.&nbsp;&nbsp;เมื่อโมดูลควบคุมตัวถังด้านหลัง (RBCM) ได้รับสัญญาณปลดล็อค<span>ประมาณ 2 วินาที</span> ระบบจะเปิดทรานซิสเตอร์ (5)</p>
+<p class="list">
+</p>
+<p class="list">4.&nbsp;&nbsp;เมื่อทรานซิสเตอร์เปิด รีเลย์การปลดล็อค 2 ขั้นตอนจะเปิด (6) จากนั้นประตูทุกบานจะถูกปลดล็อค (7)</p>
+<p class="list">
+</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001838.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001838</div>
+</td>
+</tr>
+</table>
+</p><br clear="all"><a name="id09140010820022"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงานของฟังก์ชั่นการปลดล็อค 2 ขั้นตอนโดยใช้ตัวส่งสัญญาณรีโมทของกุญแจรีโมท (รุ่นที่มีการปลดล็อค 2 ขั้นตอน)</p><br clear="all"><p><a name="id09140010820023"></a><p class="topic-title"><span class="topic-head"></span>ตารางช่วงเวลาของการทำงานของฟังก์ชั่นการปลดล็อค 2 ขั้นตอนโดยใช้ตัวส่งสัญญาณรีโมทของกุญแจรีโมท</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบสภาวะต่อไปนี้ขณะประตูทุกบานถูกล็อค ฟังก์ชั่นการปลดล็อค 2 ขั้นตอนจะทำงาน</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;โมดูลควบคุมตัวถังด้านหลัง (RBCM) ได้รับสัญญาณการปลดล็อค และได้รับสัญญาณปลดล็อคอื่นๆ <span>ภายใน 3 วินาที</span></div>
+</dd>
+</dl>
+</dd>
+</dl>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001839.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001839</div>
+</td>
+</tr>
+</table>
+</p>
+<p class="list">1.&nbsp;&nbsp;เมื่อปุ่ม UNLOCK บนตัวส่งสัญญาณรีโมทของกุญแจรีโมทถูกสั่งการ ตัวส่งสัญญาณรีโมทของกุญแจรีโมทจะส่งข้อมูล ID และรหัสแบบสุ่มไปยังตัวรับสัญญาณกุญแจรีโมท (1)</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;ตัวรับสัญญาณกุญแจรีโมทจะส่งสัญญาณปลดล็อคไปยังโมดูลควบคุมตัวถังด้านหลัง (RBCM) (2)</p>
+<p class="list">
+</p>
+<p class="list">3.&nbsp;&nbsp;เมื่อโมดูลควบคุมตัวถังด้านหลัง (RBCM) ได้รับสัญญาณปลดล็อค ระบบจะเปิดทรานซิสเตอร์ (3)</p>
+<p class="list">
+</p>
+<p class="list">4.&nbsp;&nbsp;เมื่อเปิดทรานซิสเตอร์ รีเลย์ล็อคประตูจะเปิด (4) และประตูหน้าด้านคนขับจะถูกปลดล็อค (5)</p>
+<p class="list">
+</p>
+<p class="list">5.&nbsp;&nbsp;หากโมดูลควบคุมตัวถังด้านหลัง (RBCM) ได้รับสัญญาณปลดล็อคอีกสัญญาณ<span>ภายใน 5 วินาที</span>หลังจากได้รับสัญญาณปลดล็อคแรก ระบบจะเปิดทรานซิสเตอร์ (6)</p>
+<p class="list">
+</p>
+<p class="list">6.&nbsp;&nbsp;เมื่อทรานซิสเตอร์เปิด รีเลย์การปลดล็อค 2 ขั้นตอนจะเปิด (7) จากนั้นประตูทุกบานจะถูกปลดล็อค (8)</p>
+<p class="list">
+</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001840.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001840</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id09140010820024"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงานของฟังก์ชั่นการปลดล็อคเมื่อตรวจพบการชนกัน (รุ่นที่มีการปลดล็อค 2 ขั้นตอน)</p>
+<p class="list">1.&nbsp;&nbsp;เมื่อถุงนิรภัยทำงาน โมดูลควบคุม SAS จะส่งสัญญาณการพองตัวของถุงลมนิรภัยไปยังแผงหน้าปัดเป็นสัญญาณระบบ CAN</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;แผงหน้าปัดจะส่งสัญญาณการพองตัวของถุงลมนิรภัยไปยังโมดูลควบคุมตัวถังด้านหลัง (RBCM) เป็นสัญญาณระบบ CAN</p>
+<p class="list">
+</p>
+<p class="list">3.&nbsp;&nbsp;โมดูลควบคุมตัวถังด้านหลัง (RBCM) ได้รับสัญญาณการพองตัวของถุงลมนิรภัย และหลังจากประมาณ 6 วินาที จะสั่งการมอเตอร์แอ็คชิวเอเตอร์ล็อคประตูหน้าและหลัง และประตูหน้าและหลังจะถูกปลดล็อค</p>
+<p class="list">
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001841.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001841</div>
+</td>
+</tr>
+</table>
+</p><br clear="all"><a name="id09140010820025"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การล็อคประตูอัตโนมัติ (รุ่นที่มีการปลดล็อค 2 ขั้นตอน)</p>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่นระบบล็อคประตูอัตโนมัติจะล็อคและปลดล็อคประตูทุกบาน และประตูท้ายโดยอัตโนมัติ</div>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่นการล็อคอัตโนมัติจะล็อคประตูทุกบานและประตูท้ายโดยอัตโนมัติตามความเร็วรถหรือตำแหน่งการทำงานของเกียร์</div>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่นการปลดล็อคอัตโนมัติจะปลดล็อคประตูทุกบานและประตูท้ายตามตำแหน่งคันเกียร์หรือการทำงานของสวิตช์สตาร์ท</div>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;สามารถเปลี่ยนแปลงการตั้งค่าการล็อคประตูอัตโนมัติโดยใช้ฟังก์ชั่นการกำหนดส่วนบุคคล (ดูที่ <font class="extxref-label"><a href="id091400111100.html">การกำหนดส่วนบุคคลสำหรับระบบรักษาความปลอดภัยและล็อค</a></font>)</div>
+</div>
+</dd>
+</dl>
+<div class="list-title">การล็อคประตูอัตโนมัติตามความเร็วรถ</div>
+<div class="list">•&nbsp;&nbsp;เมื่อความเร็วรถอยู่ที่ประมาณ 20 km/h {12 mph} โมดูลควบคุมตัวถังด้านหลัง (RBCM) จะเปิดรีเลย์ล็อคประตูอัตโนมัติตามสัญญาณความเร็วรถจาก PCM (สัญญาณระบบ CAN) และล็อคประตูทุกบานและประตูท้าย</div>
+<div class="list-title">การล็อคประตูอัตโนมัติตามตำแหน่งเกียร์</div>
+<div class="list">•&nbsp;&nbsp;เมื่อเลื่อนคันเกียร์จากตำแหน่งจอด (P) ไปยังตำแหน่งอื่น โมดูลควบคุมตัวถังด้านหลัง (RBCM) จะเปิดรีเลย์ล็อคประตูตามสัญญาณอินพุทคันเกียร์จาก TCM (สัญญาณระบบ CAN) และจะล็อคประตูทุกบานและประตูท้าย</div><br clear="all"><a name="id09140010820026"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การปลดล็อคประตูอัตโนมัติ (รุ่นที่มีการปลดล็อค 2 ขั้นตอน)</p>
+<div class="list-title">การปลดล็อคประตูอัตโนมัติตามตำแหน่งเกียร์</div>
+<div class="list">•&nbsp;&nbsp;เมื่อเลื่อนคันเกียร์จากตำแหน่งตำแหน่งใดๆ ยกเว้นตำแหน่งจอด (P) ไปยังตำแหน่งจอด (P) โมดูลควบคุมตัวถังด้านหลัง (RBCM) จะเปิดรีเลย์ปลดล็อคประตูด้านคนขับ และรีเลย์ปลดล็อคประตูตามสัญญาณอินพุทคันเกียร์จาก TCM (สัญญาณระบบ CAN) และจะปลดล็อคประตูทุกบานและประตูท้าย</div>
+<div class="list-title">การปลดล็อคประตูอัตโนมัติตามตำแหน่งสวิตช์สตาร์ท</div>
+<div class="list">•&nbsp;&nbsp;หากเครื่องยนต์กำลังถูกสตาร์ท หรือบิดสวิตช์สตาร์ทจากตำแหน่ง ON เป็น Off โมดูลควบคุมตัวถังด้านหลัง (RBCM) จะเปิดรีเลย์ปลดล็อคประตูด้านคนขับและรีเลย์ปลดล็อคประตู และจะปลดล็อคประตูทุกบาน</div>
+</body>
+</html>

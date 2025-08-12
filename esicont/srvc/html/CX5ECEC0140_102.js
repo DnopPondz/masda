@@ -1,0 +1,2 @@
+&txtLabel=CONTROL SYSTEM (SKYACTIV-G 2.0) 1/6&
+&txtData=S0140_1a&

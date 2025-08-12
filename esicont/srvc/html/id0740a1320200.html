@@ -1,0 +1,1086 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>ระบบปรับอากาศแบบอัตโนมัติ [ระบบปรับอากาศแบบอัตโนมัติ]</title>
+</head>
+<body><a name="id0740a1320200"></a><p class="servinfo-title"><span class="servinfo-head"></span>ระบบปรับอากาศแบบอัตโนมัติ [ระบบปรับอากาศแบบอัตโนมัติ]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0740a1320200</p><br clear="all"><a name="id0740a132020001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รายละเอียด</p>
+<div class="list">•&nbsp;&nbsp;ชุดควบคุมอุณหภูมิจะดำเนินการควบคุมต่อไปนี้ตามสัญญาณจากสวิตช์/ปุ่มและเซ็นเซอร์แต่ละตัว</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;การควบคุมอุณหภูมิอากาศ</div>
+<div class="list">―&nbsp;&nbsp;การควบคุมปริมาณอากาศ</div>
+<div class="list">―&nbsp;&nbsp;การควบคุมโหมดทิศทางการไหลของอากาศ</div>
+<div class="list">―&nbsp;&nbsp;การควบคุมอากาศเข้า</div>
+<div class="list">―&nbsp;&nbsp;การควบคุมคอมเพรสเซอร์ A/C</div>
+</dd>
+</dl><br clear="all"><p><a name="id0740a132020002"></a><p class="topic-title"><span class="topic-head"></span>การควบคุมตัดการทำงานของระบบปรับอากาศ</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ควบคุมการทำงานของระบบปรับอากาศโดยการเปิด/ปิดรีเลย์ A/C ด้วยระยะเวลาที่เหมาะสมที่สุดตามสภาวะการทำงานของเครื่องยนต์ (ดูที่ <font class="extxref-label"><a href="id0140g2206200.html">การควบคุมตัดการทำงานของระบบปรับอากาศ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</dd>
+</dl>
+</p><br clear="all"><a name="id0740a132020003"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>บบบล็อก</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00000708.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00000708</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id0740a132020004"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ตารางการควบคุม</p>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชันของระบบปรับอากาศแบบอัตโนมัติจะขึ้นอยู่กับการควบคุมพื้นฐานห้าแบบและฟังก์ชันเสริมสามรายการ</div>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">การควบคุมพื้นฐาน</p>
+</th>
+<th id="" align="center">
+<p class="thead">คำอธิบายการควบคุม</p>
+</th>
+<th id="" align="center">
+<p class="thead">การควบคุมการปรับแก้</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">การควบคุมอุณหภูมิอากาศ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การควบคุมอุณหภูมิอากาศแบบอัตโนมัติ</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;การปรับแก้ MAX HOT และ MAX COLD</div>
+<div class="list">•&nbsp;&nbsp;การปรับแก้อุณหภูมิน้ำหล่อเย็นเครื่องยนต์</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">การควบคุมปริมาณอากาศ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การควบคุมปริมาณอากาศแบบอัตโนมัติ</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;การปรับแก้อุณหภูมิน้ำหล่อเย็นเครื่องยนต์ (การปรับแก้การอุ่นเครื่องยนต์)</div>
+<div class="list">•&nbsp;&nbsp;การปรับแก้การสตาร์ทเบา</div>
+<div class="list">•&nbsp;&nbsp;การปรับแก้ MAX HOT และ MAX COLD</div>
+<div class="list">•&nbsp;&nbsp;การปรับแก้ระบบไล่ฝ้า</div>
+<div class="list">•&nbsp;&nbsp;การปรับแก้เพื่อป้องกันการเกิดฝ้าที่กระจกขณะสตาร์ท</div>
+<div class="list">•&nbsp;&nbsp;การปรับแก้การชดเชยขณะสตาร์ท</div>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชันการป้องกันการเผาไหม้ขณะสตาร์ท</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมปริมาณอากาศแบบธรรมดา</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;การปรับแก้ระบบไล่ฝ้า</div>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชันการป้องกันการเผาไหม้ขณะสตาร์ท</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">การควบคุมโหมดทิศทางการไหลของอากาศ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การควบคุมโหมดทิศทางการไหลของอากาศแบบอัตโนมัติ</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;การปรับแก้อุณหภูมิน้ำหล่อเย็นเครื่องยนต์ (การปรับแก้การอุ่นเครื่องยนต์)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมโหมดทิศทางการไหลของอากาศแบบธรรมดา</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">การควบคุมอากาศเข้า</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การควบคุมอากาศเข้าแบบอัตโนมัติ</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;การปรับแก้ระบบไล่ฝ้า</div>
+<div class="list">•&nbsp;&nbsp;การปรับแก้อุณหภูมิภายนอก</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมอากาศเข้าแบบธรรมดา</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;การปรับแก้ระบบไล่ฝ้า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">การควบคุมคอมเพรสเซอร์ A/C</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การควบคุมคอมเพรสเซอร์ A/C แบบอัตโนมัติ</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="list">•&nbsp;&nbsp;การปรับแก้ระบบไล่ฝ้า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การควบคุมคอมเพรสเซอร์ A/C แบบธรรมดา</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ฟังก์ชันเสริม</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">ฟังก์ชั่น Fail-safe</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ฟังก์ชันหน่วงสัญญาณเซ็นเซอร์</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ฟังก์ชันการวิเคราะห์ปัญหาบนรถ</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p><br clear="all"><a name="id0740a132020005"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การเปลี่ยนชนิดของการควบคุมโดยการทำงานของสวิตช์</p>
+<p clear="all">
+<p class="table-title">การควบคุมอุณหภูมิอากาศ, การควบคุมปริมาณอากาศ</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center" colspan="2" rowspan="4">
+<p class="thead">สวิตช์การทำงาน</p>
+</th>
+<th id="" align="center">
+<p class="thead">การควบคุมอุณหภูมิอากาศ</p>
+</th>
+<th id="" align="center" colspan="10">
+<p class="thead">การควบคุมปริมาณอากาศ</p>
+</th>
+</tr>
+<tr>
+<th id="" align="center">
+<p class="thead">การควบคุมก่อนที่จะสลับการทำงาน</p>
+</th>
+<th id="" align="center" colspan="10">
+<p class="thead">การควบคุมก่อนที่จะสลับการทำงาน</p>
+</th>
+</tr>
+<tr>
+<th id="" align="center" rowspan="2">
+<p class="thead">การควบคุมแบบอัตโนมัติ</p>
+</th>
+<th id="" align="center" rowspan="2">
+<p class="thead">การควบคุมแบบอัตโนมัติ</p>
+</th>
+<th id="" align="center" rowspan="2">
+<p class="thead">การปรับแก้ระบบไล่ฝ้า</p>
+</th>
+<th id="" align="center" colspan="8">
+<p class="thead">การควบคุมแบบธรรมดา</p>
+</th>
+</tr>
+<tr>
+<th id="" align="center">
+<p class="thead">OFF)</p>
+</th>
+<th id="" align="center">
+<p class="thead">1</p>
+</th>
+<th id="" align="center">
+<p class="thead">2</p>
+</th>
+<th id="" align="center">
+<p class="thead">3</p>
+</th>
+<th id="" align="center">
+<p class="thead">4</p>
+</th>
+<th id="" align="center">
+<p class="thead">5</p>
+</th>
+<th id="" align="center">
+<p class="thead">6</p>
+</th>
+<th id="" align="center">
+<p class="thead">7</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody">สวิตช์ OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF)</div>
+</td>
+<td id="" align="center" colspan="8">
+<div class="tbody">OFF)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody">สวิตช์ AUTO</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center" colspan="8">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ปุ่มควบคุมปริมาณอากาศ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">HI</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบธรรมดา<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบธรรมดา<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">3</div>
+</td>
+<td id="" align="center">
+<div class="tbody">4</div>
+</td>
+<td id="" align="center">
+<div class="tbody">5</div>
+</td>
+<td id="" align="center">
+<div class="tbody">6</div>
+</td>
+<td id="" align="center">
+<div class="tbody">7</div>
+</td>
+<td id="" align="center">
+<div class="tbody">7</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">LO</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบธรรมดา<sup>*5</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบธรรมดา<sup>*5</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">3</div>
+</td>
+<td id="" align="center">
+<div class="tbody">4</div>
+</td>
+<td id="" align="center">
+<div class="tbody">5</div>
+</td>
+<td id="" align="center">
+<div class="tbody">6</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody">สวิตช์ Mode</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ<sup>*6</sup></div>
+</td>
+<td id="" align="center" colspan="8">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody">สวิตช์ไล่ฝ้า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การปรับแก้ระบบไล่ฝ้า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ<sup>*6</sup></div>
+</td>
+<td id="" align="center" colspan="8">
+<div class="tbody">การปรับแก้ระบบไล่ฝ้า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody">สวิตช์ A/C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+<td id="" align="center">
+<div class="tbody"><sup>*7</sup></div>
+</td>
+<td id="" align="center" colspan="7">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody">สวิตช์ RECIRCULATE</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+<td id="" align="center" colspan="8">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody">สวิตช์ FRESH</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+<td id="" align="center" colspan="8">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="3">
+<div class="tbody">ปุ่มการตั้งค่าอุณหภูมิด้านคนขับ<sup>*1</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">15.0/60<sup>*2</sup></div>
+<div class="tbody">18.0/64<sup>*3</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">MAX COLD</div>
+</td>
+<td id="" align="center">
+<div class="tbody">MAX HI</div>
+</td>
+<td id="" align="center">
+<div class="tbody">MAX HI</div>
+</td>
+<td id="" align="center" colspan="8">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">15.5&mdash;28.5/61&mdash;83<sup>*2</sup></div>
+<div class="tbody">18.5&mdash;31.5/65&mdash;89<sup>*3</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+<td id="" align="center" colspan="8">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">29.0/84<sup>*2</sup></div>
+<div class="tbody">32.0/90<sup>*3</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">MAX HOT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">AUTO HI<sup></sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">AUTO HI<sup></sup></div>
+</td>
+<td id="" align="center" colspan="8">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="3">
+<div class="tbody">ปุ่มการตั้งค่าอุณหภูมิด้านผู้โดยสาร<sup></sup><sup>*1</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">15.0/60<sup>*2</sup></div>
+<div class="tbody">18.0/64<sup>*3</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">MAX COLD</div>
+</td>
+<td id="" align="center">
+<div class="tbody">MAX HI</div>
+</td>
+<td id="" align="center">
+<div class="tbody">MAX HI</div>
+</td>
+<td id="" align="center" colspan="8">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">15.5&mdash;28.5/61&mdash;83<sup>*2</sup></div>
+<div class="tbody">18.5&mdash;31.5/65&mdash;89<sup>*3</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+<td id="" align="center" colspan="8">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">29.0/84<sup>*2</sup></div>
+<div class="tbody">32.0/90<sup>*3</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">MAX HOT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">AUTO HI<sup></sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">AUTO HI<sup></sup></div>
+</td>
+<td id="" align="center" colspan="8">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody">สวิตช์ Dual</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+<td id="" align="center" colspan="8">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;:ปรับขึ้นหรือลงครั้งละ 0.5 ที่ช่วง 15.0&mdash;29.0 หรือครั้งละ 1 ที่ช่วงของ 60&mdash;84</div>
+<div class="deflist">*2&nbsp;&nbsp;:สเปคยุโรป (ประเทศอังกฤษ L.H.D.)</div>
+<div class="deflist">*3&nbsp;&nbsp;:ยกเว้นสเปคยุโรป (ประเทศอังกฤษ L.H.D.)</div>
+<div class="deflist">*4&nbsp;&nbsp;:เพิ่มแรงดันไฟฟ้าด้วยตนเองให้ใกล้เคียงกับแรงดันไฟฟ้าการปรับแก้ระบบไล่ฝ้าหรือแรงดันไฟฟ้าแบบอัตโนมัติ</div>
+<div class="deflist">*5&nbsp;&nbsp;:ลดแรงดันไฟฟ้าด้วยตนเองให้ใกล้เคียงกับแรงดันไฟฟ้าการปรับแก้ระบบไล่ฝ้าหรือแรงดันไฟฟ้าแบบอัตโนมัติ</div>
+<div class="deflist">*6&nbsp;&nbsp;:คืนกลับไปที่สภาวะก่อนที่ระบบไล่ฝ้าจะทำงาน อย่างไรก็ตาม หากถูกปิดก่อนที่ระบบไล่ฝ้าจะทำงาน ระบบจะสลับไปที่การควบคุมแบบอัตโนมัติ</div>
+<div class="deflist">*7&nbsp;&nbsp;:คืนกลับไปที่สภาวะของพัดลมก่อนที่พัดลมจะถูกปิด อย่างไรก็ตาม หากมีการปรับแก้ ระบบไล่ฝ้า (การควบคุมแบบธรรมดา ) จะคืนกลับสู่สภาวะดังต่อไปนี้</div>
+<div class="list">1.&nbsp;&nbsp;สภาวะก่อนที่พัดลมจะถูกปิดจากการปรับแก้ระบบไล่ฝ้า สภาวะของพัดลมจะกลับสู่สภาวะก่อนที่จะปรับแก้ระบบไล่ฝ้า</div>
+<div class="list">2.&nbsp;&nbsp;สภาวะก่อนที่พัดลมจะถูกปิดจากการปรับแก้ระบบไล่ฝ้า และหากสภาวะก่อนการปรับแก้ระบบไล่ฝ้าคือพัดลมถูกปิด สภาวะของพัดลมจะเปลี่ยนเป็นการควบคุมแบบอัตโนมัติ (มีลำดับความสำคัญสูงกว่า 1)</div>
+<div class="list">3.&nbsp;&nbsp;สภาวะก่อนที่พัดลมจะถูกปิดจากการปรับแก้ระบบไล่ฝ้า และพัดลมถูกสั่งงานแบบธรรมดาระหว่างที่ปรับแก้ระบบไล่ฝ้า และสภาวะของพัดลมจะกลับสู่สภาวะการทำงานแบบธรรมดา (มีลำดับความสำคัญสูงกว่า 1 และ 2)</div>
+<div class="ptxt">&nbsp;</div>
+<p clear="all">
+<p class="table-title">การควบคุมโหมดทิศทางการไหลของอากาศ, การควบคุมอากาศเข้า, การควบคุมคอมเพรสเซอร์ A/C</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center" colspan="2" rowspan="3">
+<p class="thead">สวิตช์การทำงาน</p>
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">การควบคุมโหมดทิศทางการไหลของอากาศ</p>
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">การควบคุมอากาศเข้า</p>
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">การควบคุมคอมเพรสเซอร์ A/C</p>
+</th>
+</tr>
+<tr>
+<th id="" align="center" colspan="2">
+<p class="thead">การควบคุมก่อนที่จะสลับการทำงาน</p>
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">การควบคุมก่อนที่จะสลับการทำงาน</p>
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">การควบคุมก่อนที่จะสลับการทำงาน</p>
+</th>
+</tr>
+<tr>
+<th id="" align="center">
+<p class="thead">การควบคุมแบบอัตโนมัติ</p>
+</th>
+<th id="" align="center">
+<p class="thead">การควบคุมแบบธรรมดา</p>
+</th>
+<th id="" align="center">
+<p class="thead">การควบคุมแบบอัตโนมัติ</p>
+</th>
+<th id="" align="center">
+<p class="thead">การควบคุมแบบธรรมดา</p>
+</th>
+<th id="" align="center">
+<p class="thead">การควบคุมแบบอัตโนมัติ</p>
+</th>
+<th id="" align="center">
+<p class="thead">การควบคุมแบบธรรมดา</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody">สวิตช์ OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กำหนดอยู่ที่โหมดก่อนที่จะถูกปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กำหนดอยู่ที่โหมดก่อนที่จะถูกปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody">สวิตช์ AUTO</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ปุ่มควบคุมปริมาณอากาศ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">HI</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">LO</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">สวิตช์ Mode</div>
+</td>
+<td id="" align="center"><img src="images/ac5wzn00000709.png"></td>
+<td id="" align="left">
+<div class="tbody">VENT → BI-LEVEL</div>
+<div class="tbody">BI-LEVEL → HEAT</div>
+<div class="tbody">HEAT → DEF/HEAT</div>
+<div class="tbody">DEF/HEAT → VENT</div>
+</td>
+<td id="" align="left">
+<div class="tbody">VENT → BI-LEVEL</div>
+<div class="tbody">BI-LEVEL → HEAT</div>
+<div class="tbody">HEAT → DEF/HEAT</div>
+<div class="tbody">DEF/HEAT → VENT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center"><img src="images/ac5wzn00000710.png"></td>
+<td id="" align="left">
+<div class="tbody">VENT → DEF/HEAT</div>
+<div class="tbody">DEF/HEAT → HEAT</div>
+<div class="tbody">HEAT → BI-LEVEL</div>
+<div class="tbody">BI-LEVEL → VENT</div>
+<div class="tbody">DEFROSTER (อุ่นเครื่อง) → HEAT</div>
+</td>
+<td id="" align="left">
+<div class="tbody">VENT → DEF/HEAT</div>
+<div class="tbody">DEF/HEAT → HEAT</div>
+<div class="tbody">HEAT → BI-LEVEL</div>
+<div class="tbody">BI-LEVEL → VENT</div>
+<div class="tbody">DEFROSTER (อุ่นเครื่อง) → HEAT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody">สวิตช์ไล่ฝ้า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">DEFROSTER<sup></sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">DEFROSTER</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การปรับแก้ระบบไล่ฝ้า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การปรับแก้ระบบไล่ฝ้า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การปรับแก้ระบบไล่ฝ้า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การปรับแก้ระบบไล่ฝ้า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody">สวิตช์ A/C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">A/C→OFF</div>
+<div class="tbody">OFF→A/C<sup></sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">A/C→OFF</div>
+<div class="tbody">OFF→A/C<sup></sup></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody">สวิตช์ RECIRCULATE</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">FRESH→REC</div>
+</td>
+<td id="" align="center">
+<div class="tbody">FRESH→REC</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody">สวิตช์ FRESH</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">REC→FRESH</div>
+</td>
+<td id="" align="center">
+<div class="tbody">REC→FRESH</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="3">
+<div class="tbody">ปุ่มการตั้งค่าอุณหภูมิด้านคนขับ<sup>*1</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">15.0/60<sup>*2</sup></div>
+<div class="tbody">18.0/64<sup>*3</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">15.5&mdash;28.5/61&mdash;83<sup>*2</sup></div>
+<div class="tbody">18.5&mdash;31.5/65&mdash;89<sup>*3</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">29.0/84<sup>*2</sup></div>
+<div class="tbody">32.0/90<sup>*3</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="3">
+<div class="tbody">ปุ่มการตั้งค่าอุณหภูมิด้านผู้โดยสาร<sup></sup><sup>*1</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">15.0/60<sup>*2</sup></div>
+<div class="tbody">18.0/64<sup>*3</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">15.5&mdash;28.5/61&mdash;83<sup>*2</sup></div>
+<div class="tbody">18.5&mdash;31.5/65&mdash;89<sup>*3</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">29.0/84<sup>*2</sup></div>
+<div class="tbody">32.0/90<sup>*3</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody">สวิตช์ Dual</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การควบคุมแบบอัตโนมัติ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการเปลี่ยนแปลง</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;:ปรับขึ้นหรือลงครั้งละ 0.5 ที่ช่วง 15.0&mdash;29.0 หรือครั้งละ 1 ที่ช่วงของ 60&mdash;84</div>
+<div class="deflist">*2&nbsp;&nbsp;:สเปคยุโรป (ประเทศอังกฤษ L.H.D.)</div>
+<div class="deflist">*3&nbsp;&nbsp;:ยกเว้นสเปคยุโรป (ประเทศอังกฤษ L.H.D.)</div><br clear="all"><a name="id0740a132020006"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>Sฟังก์ชันหน่วงสัญญาณเซ็นเซอร์ </p>
+<div class="list">•&nbsp;&nbsp;ปริมาณของแสงอาทิตย์ และอุณหภูมิของห้องโดยสารและอุณหภูมิภายนอกอาจเปลี่ยนแปลงเนื่องจากปัจจัยต่างๆ เช่น แสงแดดที่ส่องโดยตรงหรือส่องเป็นระยะ (การเดินทางผ่านเมืองหรืออุโมงค์ทางหลวง) หรือการแผ่รังสีความร้อนจากพื้นด้านล่างขณะที่จอดรถอยู่ รวมถึงการเปิดและการปิดประตู</div>
+<div class="list">•&nbsp;&nbsp;หากการควบคุมถูกใช้ภายใต้ตัวแปรเหล่านี้ ฟังก์ชันระบบปรับอากาศจะได้รับผลกระทบเชิงลบ และทำให้การควบคุมไม่ราบลื่น</div>
+<div class="list">•&nbsp;&nbsp;เพื่อป้องกันเหตุการณ์นี้ ชุดควบคุมอุณหภูมิจะหน่วงการทำงานและทำให้สัญญาณอินพุตในการตรวจจับแสงอาทิตย์ และอุณหภูมิห้องโดยสารและอุณหภูมิภายนอกทำงานได้ราบรื่นตามที่แสดงไว้ในภาพต่อไปนี้ เพื่อให้การควบคุมมีเสถียรภาพ<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00000711.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00000711</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="list">•&nbsp;&nbsp;เมื่อสตาร์ทเครื่องยนต์ใหม่หลังจากดับเครื่องยนต์ชั่วคราว เซ็นเซอร์อุณหภูมิภายนอกอาจตรวจพบว่ามีอุณหภูมิสูงกว่าอุณหภูมิภายนอกแท้จริง</div>
+<div class="list">•&nbsp;&nbsp;เพื่อป้องกันเหตุการณ์นี้ หากอุณหภูมิน้ำหล่อเย็นเครื่องยนต์สูงกว่า <span>55 &deg;C {131 &deg;F}</span> การควบคุมแต่ละระบบจะถูกดำเนินการตามข้อมูลของอุณหภูมิภายนอกก่อนที่จะดับเครื่องยนต์ ซึ่งเก็บไว้ในชุดควบคุมอุณหภูมิ</div>
+</body>
+</html>

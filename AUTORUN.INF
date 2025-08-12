@@ -1,0 +1,3 @@
+[Autorun]
+open=rundll32.exe url.dll,FileProtocolHandler index.html
+icon=mazda.ico

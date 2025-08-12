@@ -1,0 +1,1908 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>ฟังก์ชันของระบบการวิเคราะห์ปัญหาบนรถ [พวงมาลัยเพาเวอร์ไฟฟ้า (EPS)]</title>
+</head>
+<body><a name="id0602001011a1"></a><p class="servinfo-title"><span class="servinfo-head"></span>ฟังก์ชันของระบบการวิเคราะห์ปัญหาบนรถ [พวงมาลัยเพาเวอร์ไฟฟ้า (EPS)]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0602001011a1</p><br clear="all"><a name="id0602001011a101"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ฟังก์ชั่นการตรวจจับความบกพร่อง</p>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชันการตรวจจับความบกพร่องจะตรวจจับความบกพร่องของระบบสัญญาณอินพุท/เอาท์พุทของโมดูลควบคุม EPS เมื่อสวิตช์สตาร์ทอยู่ในตำแหน่ง ON หรือขณะกำลังขับรถ</div><br clear="all"><a name="id0602001011a102"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ฟังก์ชันการแสดงความบกพร่อง</p>
+<div class="list">•&nbsp;&nbsp;เมื่อฟังก์ชันการตรวจจับความบกพร่องตรวจพบความบกพร่อง ไฟแสดงความบกพร่องของพวงมาลัยเพาเวอร์จะติดสว่างหรือกะพริบเพื่อแจ้งให้คนขับทราบ เมื่อใช้ฟังก์ชันการสื่อสารของเครื่องทดสอบภายนอก รหัสวิเคราะห์ปัญหาสามารถส่งออกไปยัง DLC-2 ผ่านสายระบบ CAN ในขณะเดียวกัน ผลการตรวจจับความบกพร่องจะถูกส่งไปยังฟังก์ชั่นหน่วยความจำและ fail-safe</div>
+<div class="list">•&nbsp;&nbsp;ไฟแสดงความบกพร่องของพวงมาลัยเพาเวอร์อาจไม่ติดสว่าง ทั้งนี้ขึ้นอยู่กับความบกพร่องที่ตรวจพบ</div><br clear="all"><a name="id0602001011a103"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ฟังก์ชั่นหน่วยความจำ</p>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่นหน่วยความจำทำหน้าที่จัดเก็บรหัสวิเคราะห์ปัญหาของความบกพร่องที่เกิดในระบบสัญญาณอินพุท/เอาท์พุท เมื่อใช้ฟังก์ชันนี้ รหัสวิเคราะห์ปัญหาที่เก็บอยู่จะไม่ถูกลบออกหลังจากบิดสวิตช์สตาร์ทไปที่ OFF แม้ว่าระบบสัญญาณที่บกพร่องจะคืนกลับมาเป็นปกติแล้ว</div>
+<div class="list">•&nbsp;&nbsp;เนื่องจากโมดูลควบคุม EPS มีหน่วยความจำถาวรภายใน รหัสวิเคราะห์ปัญหาจะไม่ถูกลบออกไปแม้ว่าจะถอดแบตเตอรี่ออกก็ตาม ดังนั้น คุณจำเป็นต้องลบหน่วยความจำหลังจากดำเนินการซ่อมแซมเรียบร้อยแล้ว ดูที่คู่มือซ่อมสำหรับขั้นตอนการลบรหัสวิเคราะห์ปัญหา</div><br clear="all"><p><a name="id0602001011a104"></a><p class="topic-title"><span class="topic-head"></span>ตารางรหัสวิเคราะห์ปัญหา</p>
+<div class="ptxt">&times;: สามารถทำได้</div>
+<div class="ptxt">&mdash;: ไม่มี</div>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา</p>
+</th>
+<th id="" align="center" rowspan="2">
+<p class="thead">สถานะการติดสว่างของไฟแสดงความบกพร่องของพวงมาลัยเพาเวอร์</p>
+</th>
+<th id="" align="center" rowspan="2">
+<p class="thead">ส่วนประกอบของระบบวิเคราะห์ปัญหา</p>
+</th>
+<th id="" align="center" rowspan="2">
+<p class="thead">Fail-safe</p>
+</th>
+<th id="" align="center" rowspan="2">
+<p class="thead">รอบการขับ</p>
+</th>
+<th id="" align="center" rowspan="2">
+<p class="thead">ประเภทการทดสอบด้วยตนเอง<sup>*1</sup></p>
+</th>
+<th id="" align="center" rowspan="2">
+<p class="thead">ฟังก์ชั่นหน่วยความจำ</p>
+</th>
+</tr>
+<tr>
+<th id="" align="center">
+<p class="thead">M-MDS</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">C200B:02</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เซ็นเซอร์แรงบิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C200B:16</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เซ็นเซอร์แรงบิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C200B:1C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เซ็นเซอร์แรงบิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C200B:62</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เซ็นเซอร์แรงบิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C200B:85</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เซ็นเซอร์แรงบิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C200C:1C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เซ็นเซอร์แรงบิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C200D:1C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เซ็นเซอร์ความเร็วรอบแบบรีโซลเวอร์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C200D:64</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เซ็นเซอร์ความเร็วรอบแบบรีโซลเวอร์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0001:88</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารระบบ CAN ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0100:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ PCM ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0121:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ DSC CM ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับแผงหน้าปัดผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0338:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณจากชุดเปิด/ปิดการทำงานผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="3">
+<div class="tbody">U0401:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณ (ความเร็วรถ) จาก PCM ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณ (ความเร็วรอบเครื่องยนต์) จาก PCM ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณ (สถานะระบบ i-stop) จาก PCM ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0415:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณจาก DSC CM ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0515:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณจากชุดเปิด/ปิดการทำงานผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2011:19</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">มอเตอร์ EPS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2011:1C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">มอเตอร์ EPS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2011:62</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">มอเตอร์ EPS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2011:72</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">มอเตอร์ EPS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2011:92</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">มอเตอร์ EPS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2300:54</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การกำหนดค่า EPS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2300:55</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การกำหนดค่า EPS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2300:56</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การกำหนดค่า EPS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:16</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">EPS CM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:1C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">EPS CM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:28</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">EPS CM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:41</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">EPS CM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:46</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">EPS CM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:47</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">EPS CM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:49</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">EPS CM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:4B</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">EPS CM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:61</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">EPS CM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:73</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">EPS CM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:96</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">EPS CM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3003:16</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แหล่งจ่ายไฟแบตเตอรี่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3003:17</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แหล่งจ่ายไฟแบตเตอรี่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;:C: การทดสอบ CMDTC ด้วยตนเอง, D: การทดสอบ ODDTC ด้วยตนเอง</div><br clear="all"><a name="id0602001011a105"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ไบต์แสดงสถานะของรหัสวิเคราะห์ปัญหา</p>
+<div class="list">•&nbsp;&nbsp;ไบต์แสดงสถานะคือรหัสสองหลัก (สองหลักหลังเครื่องหมายขีด (-)) หลังรหัสวิเคราะห์ปัญหา<table class="figure-flame">
+<tr>
+<td width="10mm"></td>
+<td>
+<table class="figure-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00002014.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00002014</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="list">•&nbsp;&nbsp;ไบต์แสดงสถานะคือรหัสที่แสดงรหัสที่ค้างอยู่, สถานะความบกพร่องปัจจุบัน/ในอดีต หรือสถานะไฟเตือน</div>
+<div class="list">•&nbsp;&nbsp;ไบต์แสดงสถานะสามารถอ่านได้ด้วยการทดสอบ CMDTC ด้วยตนเองโดยใช้ระบบวิเคราะห์ปัญหาตามเกณฑ์ของ Mazda (M-MDS)</div>
+<div class="list">•&nbsp;&nbsp;สำหรับรายละเอียดเกี่ยวกับไบต์แสดงสถานะ ให้ดูที่คำอธิบายใน M-MDS เมื่ออ่านรหัสวิเคราะห์ปัญหา</div><br clear="all"><a name="id0602001011a106"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>คำอธิบายรหัส 7 หลักของรหัสวิเคราะห์ปัญหา</p>
+<div class="list">•&nbsp;&nbsp;เมื่อระบบหรือส่วนประกอบที่เกี่ยวข้องทำงานผิดพลาด CM จะจัดเก็บรหัสวิเคราะห์ปัญหาของส่วนที่ทำงานบกพร่องไว้ในหน่วยความจำของ CM และสามารถเรียกดูข้อมูลที่จัดเก็บโดยใช้เครื่องมือสแกนได้เมื่อจำเป็น รหัสวิเคราะห์ปัญหาได้รับการกำหนดโดยใช้ตัวเลข 7 หลัก ซึ่งตัวเลขแต่ละหลักมีความหมายดังต่อไปนี้</div>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001341.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001341</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id0602001011a107"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ฟังก์ชั่น Fail-safe</p>
+<div class="list">•&nbsp;&nbsp;เมื่อฟังก์ชันการตรวจจับความบกพร่องระบุความบกพร่อง ไฟแสดงความบกพร่องของพวงมาลัยเพาเวอร์จะติดสว่างเพื่อแจ้งให้คนขับทราบ ในตอนนี้ ฟังก์ชัน Fail-safe จะปิดการควบคุมของระบบหรือค่อยๆ ลดกำลังในการช่วยผ่อนแรง</div><br clear="all"><a name="id0602001011a108"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ตารางฟังก์ชันระบบ Fail-safe</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา</p>
+</th>
+<th id="" align="center" rowspan="2">
+<p class="thead">สถานะการควบคุมระบบ Fail-safe</p>
+</th>
+</tr>
+<tr>
+<th id="" align="center">
+<p class="thead">M-MDS</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">C200B:02</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C200B:16</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C200B:1C</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C200B:62</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C200B:85</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C200C:1C</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C200D:1C</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C200D:64</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0001:88</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0100:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">รักษาการควบคุมโดยค่อยๆ เปลี่ยนความเร็วรถที่ควบคุมไว้และการตั้งค่าเป็น <span>120 km/h {74.6 mph}</span></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0121:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0338:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0401:00</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;สัญญาณความเร็วรถบกพร่อง</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;รักษาการควบคุมโดยค่อยๆ เปลี่ยนความเร็วรถที่ควบคุมและการตั้งค่าเป็น <span>120 km/h {74.6 mph}</span></div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;สัญญาณความเร็วรอบเครื่องยนต์บกพร่อง</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;เปิดการควบคุม</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;สัญญาณสถานะระบบ i-stop บกพร่อง</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;การควบคุมระบบ i-stop ของ EPS ไม่ทำงาน และรักษาการควบคุมแบบปกติไว้</div>
+</dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0415:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0515:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2011:19</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2011:1C</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2011:62</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2011:72</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ตรวจพบความบกพร่องเฟส 1 ในมอเตอร์ EPS ขาดวงจร</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;รักษาการควบคุมในการควบคุมสำรอง</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ตรวจพบความบกพร่องอื่นในวงจรภายในของมอเตอร์ EPS</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ปิดการควบคุม</div>
+</dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2011:92</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2300:54</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2300:55</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2300:56</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:16</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:1C</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:28</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:41</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:46</div>
+</td>
+<td id="" align="left">
+<div class="tbody">รักษาการควบคุมในโหมดระบบขัดข้อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:47</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:49</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:4B</div>
+</td>
+<td id="" align="left">
+<div class="tbody">รักษาการควบคุมในโหมดระบบขัดข้อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:61</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:73</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:96</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3003:16</div>
+</td>
+<td id="" align="left">
+<div class="tbody">รักษาการควบคุมโดยค่อยๆ ลดกระแสไฟควบคุมมอเตอร์</div>
+<div class="tbody">อย่างไรก็ตาม การควบคุมจะถูกยับยั้งหากแรงดันไฟฟ้าของแหล่งจ่ายไฟมีค่าน้อยกว่าค่าที่ระบุ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3003:17</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p><br clear="all"><a name="id0602001011a109"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ข้อมูล Snapshot</p>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;EPS CM จะเก็บข้อมูลสองประเภทต่อไปนี้ เมื่อตรวจพบรหัสวิเคราะห์ปัญหาและจะแสดงข้อมูล Snapshot ใน M-MDS</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;EPS CM ตรวจพบข้อมูลของรถ</div>
+<div class="list">―&nbsp;&nbsp;ข้อมูลรถที่ตรวจพบโดยแผงหน้าปัด และได้รับจากชุดเปิด/ปิดการทำงานผ่านสัญญาณ CAN</div>
+</dd>
+</dl>
+</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ข้อมูล Snapshot จะจัดเก็บข้อมูลรหัสวิเคราะห์ปัญหาที่ตรวจพบในปัจจุบัน</div>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รายการข้อมูล Snapshot</p>
+</th>
+<th id="" align="center">
+<p class="thead">หน่วย</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายละเอียดข้อมูล</p>
+</th>
+<th id="" align="center">
+<p class="thead">วิธีการอ่าน/ใช้ข้อมูล</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายการตรวจสอบข้อมูลที่เกี่ยวข้อง</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">AAT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C,&deg;F</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิอากาศภายนอก</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มี</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มี</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">APP_STATUS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Accelerator Pedal Off/</div>
+<div class="tbody">Under 20%/</div>
+<div class="tbody">Over 20%/</div>
+<div class="tbody">FAIL</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตำแหน่งแป้นคันเร่ง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มี</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มี</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">CEN_TRQ_S</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Nm</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ค่ากลางของเซ็นเซอร์แรงบิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CEN_TRQ_S</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CEN_TRQ_S</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">CFG_STATUS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Config Complete/</div>
+<div class="tbody">ไม่ได้กำหนดค่า</div>
+<div class="tbody">Config Error</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สถานะของการกำหนดค่าแผงหน้าปัด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มี</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มี</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ECT_STATUS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Under 0 degrees C/</div>
+<div class="tbody">0 - Under 80 degrees C/</div>
+<div class="tbody">Over 80 degrees C/</div>
+<div class="tbody">FAIL</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สถานะของอุณหภูมิน้ำหล่อเย็นเครื่องยนต์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มี</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มี</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ECU_IN_TMP</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C,&deg;F</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิภายในของ EPS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ECU_IN_TMP</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ECU_IN_TMP</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ENG_RPM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">RPM</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความเร็วรอบเครื่องยนต์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ENG_RPM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ENG_RPM</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">IC_VPWR</div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แหล่งจ่ายไฟแผงหน้าปัด</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;EPS CM จะได้รับค่าแรงดันไฟฟ้าแหล่งจ่ายไฟของแผงหน้าปัดที่ส่งผ่านสัญญาณระบบ CAN จากแผงหน้าปัดอย่างต่อเนื่อง</div>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบรหัสวิเคราะห์ปัญหา EPS CM จะบันทึกแรงดันไฟฟ้าแหล่งจ่ายไฟของแผงหน้าปัดเมื่อรหัสวิเคราะห์ปัญหาถูกตรวจพบ และมีการแสดงใน M-MDS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">VPWR*<sup>2</sup></div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">IG-ON_TIMER</div>
+</td>
+<td id="" align="center">
+<div class="tbody">hh:mm:ss*<sup>1</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ช่วงเวลาที่ผ่านไปตั้งแต่บิดสวิตช์สตาร์ทไปที่ ON</div>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัดจะบันทึกข้อมูลช่วงเวลาที่ผ่านไปนับตั้งแต่บิดสวิตช์สตาร์ทไปที่ ON</div>
+</div>
+</dd>
+</dl>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;EPS CM จะได้รับเวลาที่ผ่านไป ตั้งแต่สวิตช์สตาร์ทอยู่ในตำแหน่ง ON ที่ส่งผ่านสัญญาณระบบ CAN จากแผงหน้าปัดอย่างต่อเนื่อง</div>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบรหัสวิเคราะห์ปัญหา EPS CM จะบันทึกเวลาที่ผ่านไป ตั้งแต่สวิตช์สตาร์ทอยู่ในตำแหน่ง ON เมื่อรหัสวิเคราะห์ปัญหาถูกตรวจพบ และมีการแสดงใน M-MDS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มี</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">MT_CURRENT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กระแสไฟฟ้าของมอเตอร์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">MT_CURRENT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">MT_CURRENT</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">OH_CR_C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">No/Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การป้องกันกระแสไฟเกิดความร้อนเกินระดับสมบูรณ์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OH_CR_C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OH_CR_C</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">OH_CR_M</div>
+</td>
+<td id="" align="center">
+<div class="tbody">No/Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การป้องกันกระแสไฟเกิดความร้อนเกินระดับกลาง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OH_CR_M</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OH_CR_M</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">OH_HIST_C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">No/Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ประวัติของการป้องกันความร้อนเกินระดับสมบูรณ์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OH_HIST_C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OH_HIST_C</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">OH_HIST_M</div>
+</td>
+<td id="" align="center">
+<div class="tbody">No/Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ประวัติของการป้องกันความร้อนเกินระดับกลาง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OH_HIST_M</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OH_HIST_M</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">OH_IG_CNT_C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">จำนวน IG ON หลังจากการป้องกันความร้อนเกินระดับสมบูรณ์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OH_IG_CNT_C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OH_IG_CNT_C</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">OH_IG_CNT_M</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">จำนวน IG ON หลังจากการป้องกันความร้อนเกินระดับกลาง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OH_IG_CNT_M</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OH_IG_CNT_M</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">PWR_MODE_KEY</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Key Out/</div>
+<div class="tbody">Key Recently Out/</div>
+<div class="tbody">Key Approved(Position 0)/</div>
+<div class="tbody">Post Accessory (Position 0)/</div>
+<div class="tbody">Accessory (Position 1)/</div>
+<div class="tbody">Post Ignition (Position 1)/</div>
+<div class="tbody">Ignition On (Position 2)/</div>
+<div class="tbody">Running (Position 2)/</div>
+<div class="tbody">Running - Starting In Progress (Position 2)/</div>
+<div class="tbody">Crank (Position 3)</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Key Out: บิดสวิตช์สตาร์ทไปที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;Key Recently Out (Position 0): ช่วงเวลาที่ผ่านไป<span>ภายใน 3 s</span> นับตั้งแต่บิดสวิตช์สตาร์ทไปที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;Accessory (Position 1): บิดสวิตช์สตาร์ทไปที่ ACC</div>
+<div class="list">•&nbsp;&nbsp;Post Ignition (Position 2): ช่วงเวลาที่ผ่านไป<span>ภายใน 3 s</span> นับตั้งแต่บิดสวิตช์สตาร์ทไปที่ ON</div>
+<div class="list">•&nbsp;&nbsp;Ignition On (Position 2): บิดสวิตช์สตาร์ทไปที่ ON (เครื่องยนต์ไม่ทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;Running (Position 2): บิดสวิตช์สตาร์ทไปที่ ON (เครื่องยนต์ทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;Running - Starting: สภาวะการสตาร์ท</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;EPS CM จะได้รับสถานะของสวิตช์สตาร์ทที่ส่งผ่านสัญญาณระบบ CAN จากแผงหน้าปัดอย่างต่อเนื่อง</div>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบรหัสวิเคราะห์ปัญหา EPS CM จะบันทึกสถานะของสวิตช์สตาร์ทเมื่อรหัสวิเคราะห์ปัญหาถูกตรวจพบ และมีการแสดงใน M-MDS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มี</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">RPM_STATUS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Engine Stop/</div>
+<div class="tbody">Under 1500rpm/</div>
+<div class="tbody">Over 1500rpm/</div>
+<div class="tbody">FAIL</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สถานะความเร็ว RPM ของเครื่องยนต์</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;EPS CM จะได้รับสถานะของสวิตช์สตาร์ทที่ส่งผ่านสัญญาณระบบ CAN จากแผงหน้าปัดอย่างต่อเนื่อง</div>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบรหัสวิเคราะห์ปัญหา EPS CM จะบันทึกสถานะของสวิตช์สตาร์ทเมื่อรหัสวิเคราะห์ปัญหาถูกตรวจพบ และมีการแสดงใน M-MDS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">TACHOMTR<sup>*2</sup></div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">SHIFT_STATUS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">P/N</div>
+<div class="tbody">D/</div>
+<div class="tbody">R</div>
+<div class="tbody">FAIL</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สถานะของตำแหน่งเกียร์</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;EPS CM จะได้รับตำแหน่งคันเกียร์ที่ส่งผ่านสัญญาณระบบ CAN จากแผงหน้าปัดอย่างต่อเนื่อง</div>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบรหัสวิเคราะห์ปัญหา EPS CM จะบันทึกตำแหน่งคันเกียร์เมื่อรหัสวิเคราะห์ปัญหาถูกตรวจพบ และมีการแสดงใน M-MDS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มี</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">STR_ANG</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">มุมพวงมาลัย</div>
+</td>
+<td id="" align="center">
+<div class="tbody">STR_ANG</div>
+</td>
+<td id="" align="center">
+<div class="tbody">STR_ANG</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">STR_ROT_SPD</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;/s</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความเร็วการหมุนของพวงมาลัย</div>
+</td>
+<td id="" align="center">
+<div class="tbody">STR_ROT_SPD</div>
+</td>
+<td id="" align="center">
+<div class="tbody">STR_ROT_SPD</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">STR_TRQ_S_M</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Nm</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงบิดเพลาแกนพวงมาลัย (หลัก)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">STR_TRQ_S_M</div>
+</td>
+<td id="" align="center">
+<div class="tbody">STR_TRQ_S_M</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">STR_TRQ_S_S</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Nm</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงบิดเพลาแกนพวงมาลัย (รอง)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">STR_TRQ_S_S</div>
+</td>
+<td id="" align="center">
+<div class="tbody">STR_TRQ_S_S</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">TOTAL_DIST</div>
+</td>
+<td id="" align="center">
+<div class="tbody">km, ft, mi</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระยะทางรวมสะสมตั้งแต่รถเสร็จสมบูรณ์จนเมื่อ EPS CM ตรวจพบรหัสวิเคราะห์ปัญหา (ค่าของมาตรบันทึกระยะทางในแผงหน้าปัด)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระยะทางเมื่อ EPS CM ตรวจพบรหัสวิเคราะห์ปัญหาสามารถคำนวณโดยใช้ขั้นตอนต่อไปนี้</div>
+<div class="list">1.&nbsp;&nbsp;ตรวจสอบค่าจากมาตรบันทึกระยะทางในแผงหน้าปัด</div>
+<div class="list">2.&nbsp;&nbsp;ตรวจสอบรายการข้อมูล Snapshot TOTAL_DIST</div>
+<div class="list">3.&nbsp;&nbsp;ลบ 2 ออกจาก 1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มี</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">TOTAL_TIME</div>
+</td>
+<td id="" align="center">
+<div class="tbody">hh:mm:ss*<sup>1</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">เวลาที่ผ่านไปสะสมตั้งแต่รถเสร็จสมบูรณ์จนเมื่อ EPS CM ตรวจพบรหัสวิเคราะห์ปัญหา</div>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;เมื่อถอดฟิวส์ ROOM และบิดสวิตช์สตาร์ทไปที่ OFF เวลาจะไม่ถูกนำไปรวมกับช่วงเวลาที่ผ่านไป</div>
+</div>
+</dd>
+</dl>
+</td>
+<td id="" align="left">
+<div class="tbody">เวลาที่ผ่านไปเมื่อ EPS CM ตรวจพบรหัสวิเคราะห์ปัญหาสามารถคำนวณโดยใช้ขั้นตอนต่อไปนี้</div>
+<div class="list">1.&nbsp;&nbsp;ตรวจสอบรายการ PID TOTAL_TIME บนแผงหน้าปัด</div>
+<div class="list">2.&nbsp;&nbsp;ตรวจสอบรายการข้อมูล Snapshot TOTAL_TIME</div>
+<div class="list">3.&nbsp;&nbsp;ลบ 2 ออกจาก 1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">TOTAL_TIME<sup>*2</sup></div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">VPWR</div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แหล่งจ่ายไฟ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">VPWR</div>
+</td>
+<td id="" align="center">
+<div class="tbody">VPWR</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">VSPD</div>
+</td>
+<td id="" align="center">
+<div class="tbody">KPH, MPH</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความเร็วรถ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">VSPD</div>
+</td>
+<td id="" align="center">
+<div class="tbody">VSPD</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">VSPD_STATUS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">หยุด</div>
+<div class="tbody">0 - 10km/h/</div>
+<div class="tbody">Over 10km/h/</div>
+<div class="tbody">FAIL</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สถานะความเร็วรถ</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;EPS CM จะได้รับความเร็วรถที่ส่งผ่านสัญญาณระบบ CAN จากแผงหน้าปัดอย่างต่อเนื่อง</div>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบรหัสวิเคราะห์ปัญหา EPS CM จะบันทึกความเร็วรถเมื่อรหัสวิเคราะห์ปัญหาถูกตรวจพบ และมีการแสดงใน M-MDS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">SPEEDOMTR<sup>*2</sup></div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;:หน่วยวินาที (s) อาจแสดงอยู่หลังจุดทศนิยม</div>
+<div class="deflist">*2&nbsp;&nbsp;: PID แผงหน้าปัด (ดูที่ <font class="extxref-label"><a href="id092200021843.html">การวิเคราะห์ปัญหาบนรถ [แผงหน้าปัด]</a></font>)</div>
+</body>
+</html>

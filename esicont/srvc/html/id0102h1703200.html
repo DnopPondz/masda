@@ -1,0 +1,1123 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>รหัสวิเคราะห์ปัญหา P0300:00 [SKYACTIV-G 2.0]</title>
+</head>
+<body><a name="id0102h1703200"></a><p class="servinfo-title"><span class="servinfo-head"></span>รหัสวิเคราะห์ปัญหา P0300:00 [SKYACTIV-G 2.0]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0102h1703200</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา P0300:00</p>
+</th>
+<th id="" align="left">
+<p class="thead">ตรวจพบการไม่จุดระเบิดแบบสุ่ม</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สภาวะการตรวจพบ</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;PCM จะคอยตรวจสอบช่วงระยะเวลาสัญญาณอินพุทเซ็นเซอร์ CKP PCM จะคำนวณการเปลี่ยนแปลงของช่วงระยะเวลาสำหรับแต่ละสูบ ถ้าการเปลี่ยนแปลงของช่วงระยะเวลาเกินกว่าเกณฑ์ที่ลงโปรแกรมไว้ PCM จะตรวจจับการไม่จุดระเบิดของสูบนั้นๆ ในขณะที่เครื่องยนต์ทำงาน PCM จะนับจำนวนของการไม่จุดระเบิดที่เกิดขึ้นที่<span>การหมุนของเพลาข้อเหวี่ยง 200 รอบ</span>หรือ<span>การหมุนของเพลาข้อเหวี่ยง 1000 รอบ</span> และคำนวณอัตราการไม่จุดระเบิดสำหรับการหมุนของเพลาข้อเหวี่ยงแต่ละรอบ ถ้าอัตราเกินกว่าเกณฑ์ที่ลงโปรแกรมไว้ PCM จะตัดสินว่าเกิดการไม่จุดระเบิดขึ้น ซึ่งสามารถทำให้อุปกรณ์แปรสภาพก๊าซไอเสียเสียหายหรือมีผลต่อประสิทธิภาพการปล่อยมลพิษได้</div>
+<div class="list-title">ข้อมูลสนับสนุนการวิเคราะห์ปัญหา</div>
+<div class="list">•&nbsp;&nbsp;กรณีนี้คือ การตรวจสอบต่อเนื่อง (การไม่จุดระเบิด)</div>
+<div class="list">•&nbsp;&nbsp;ไฟเตือนตรวจเช็คเครื่องยนต์จะติดสว่างขึ้นถ้า PCM ตรวจพบสภาวะความบกพร่องดังกล่าวด้านบนในรอบการขับขี่ติดต่อกันสองรอบ หรือในหนึ่งรอบการขับขี่ในขณะที่รหัสวิเคราะห์ปัญหาของความบกพร่องเดียวกันได้ถูกเก็บบันทึกไว้ใน PCM</div>
+<div class="list">•&nbsp;&nbsp;ไฟเตือนตรวจเช็คเครื่องยนต์จะกะพริบ ถ้า PCM ตรวจพบการไม่จุดระเบิดซึ่งสามารถทำให้อุปกรณ์แปรสภาพก๊าซไอเสียเสียหายได้ในระหว่างรอบการขับขี่แรก</div>
+<div class="list">•&nbsp;&nbsp;รหัสที่ค้างอยู่จะแสดงถ้า PCM ตรวจพบสภาวะความบกพร่องดังกล่าวด้านบนในระหว่างรอบการขับขี่แรก</div>
+<div class="list">•&nbsp;&nbsp;มีข้อมูลสภาพรถยนต์ (FREEZE FRAME DATA) (โหมด 2) / ข้อมูล Snapshot</div>
+<div class="list">•&nbsp;&nbsp;รหัสวิเคราะห์ปัญหาถูกเก็บไว้ในหน่วยความจำ PCM</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>ฟังก์ชั่น FAIL-SAFE</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;จำกัดปริมาณไอดี</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สาเหตุที่เป็นไปได้</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;สัญญาณไปที่ PCM ผิดปกติ</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;สัญญาณเซ็นเซอร์ APP บกพร่อง</div>
+<div class="list">―&nbsp;&nbsp;สัญญาณเซ็นเซอร์ ECT บกพร่อง</div>
+<div class="list">―&nbsp;&nbsp;สัญญาณเซ็นเซอร์ IAT No.1 บกพร่อง</div>
+<div class="list">―&nbsp;&nbsp;สัญญาณเซ็นเซอร์ MAF บกพร่อง</div>
+<div class="list">―&nbsp;&nbsp;สัญญาณเซ็นเซอร์ CKP บกพร่อง</div>
+<div class="list">―&nbsp;&nbsp;สัญญาณเซ็นเซอร์ TP บกพร่อง</div>
+<div class="list">―&nbsp;&nbsp;สัญญาณ VSS บกพร่อง</div>
+<div class="list">―&nbsp;&nbsp;ขั้วต่อหรือขั้วที่เกี่ยวข้องบกพร่อง</div>
+<div class="list">―&nbsp;&nbsp;ชุดสายไฟที่เกี่ยวข้องบกพร่อง</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;การดูดอากาศมากเกินไปของระบบไอดี (ระหว่างเซ็นเซอร์ MAF กับท่อร่วมไอดี)</div>
+<div class="list">•&nbsp;&nbsp;เซ็นเซอร์ MAF บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;การทำงานที่ไม่ถูกต้องของระบบควบคุมไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ตัวขับไทม์มิ่งวาล์วแปรผันแบบไฟฟ้าบกพร่อง</div>
+<div class="list">―&nbsp;&nbsp;มอเตอร์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้าบกพร่อง</div>
+<div class="list">―&nbsp;&nbsp;แอ็คชิวเอเตอร์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้าบกพร่อง</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;การทำงานที่ไม่ถูกต้องของระบบควบคุมไทม์มิ่งวาล์วแปรผันแบบไฮดรอลิก</div>
+<div class="list">•&nbsp;&nbsp;การทำงานที่ไม่ถูกต้องของโซลินอยด์วาล์วควบคุมการดูดไอระเหยน้ำมันเชื้อเพลิง</div>
+<div class="list">•&nbsp;&nbsp;เซ็นเซอร์ CMP ไอเสียบกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;เซ็นเซอร์ CKP หลวม</div>
+<div class="list">•&nbsp;&nbsp;ระบบส่งน้ำมันเชื้อเพลิงด้านแรงดันสูงบกพร่อง</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;เซ็นเซอร์แรงดันน้ำมันเชื้อเพลิงบกพร่อง</div>
+<div class="list">―&nbsp;&nbsp;วงจรควบคุมโซลินอยด์วาล์วควบคุมวาล์วน้ำมันกลับบกพร่อง (ความเสียหายที่เกิดกับตัวขับใน PCM ที่มีสาเหตุมาจากการลัดวงจรกับระบบกราวด์)</div>
+<div class="list">―&nbsp;&nbsp;โซลินอยด์วาล์วควบคุมวาล์วน้ำมันกลับ (ติดตั้งอยู่ในปั๊มเชื้อเพลิงแรงดันสูง) บกพร่อง</div>
+<div class="list">―&nbsp;&nbsp;วาล์วระบาย (ติดตั้งอยู่ในปั๊มเชื้อเพลิงแรงดันสูง) บกพร่อง</div>
+<div class="list">―&nbsp;&nbsp;ปั๊มเชื้อเพลิงแรงดันสูงบกพร่อง</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ระบบส่งน้ำมันเชื้อเพลิงด้านแรงดันต่ำบกพร่อง</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;การรั่วของท่อทางน้ำมันเชื้อเพลิง</div>
+<div class="list">―&nbsp;&nbsp;ท่อทางน้ำมันเชื้อเพลิงตัน</div>
+<div class="list">―&nbsp;&nbsp;ไส้กรองน้ำมันเชื้อเพลิงตัน</div>
+<div class="list">―&nbsp;&nbsp;เร็กกูเลเตอร์แรงดันเชื้อเพลิง (ติดตั้งอยู่ในชุดปั๊มเชื้อเพลิง) บกพร่อง</div>
+<div class="list">―&nbsp;&nbsp;ชุดปั๊มเชื้อเพลิงบกพร่อง</div>
+<div class="list">―&nbsp;&nbsp;เชื้อเพลิงหมด</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ระบบจุดระเบิดบกพร่อง</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;หัวเทียนเปียกหรือมีเขม่า</div>
+<div class="list">―&nbsp;&nbsp;หัวเทียนบกพร่อง</div>
+<div class="list">―&nbsp;&nbsp;คอล์ยจุดระเบิดบกพร่อง</div>
+<div class="list">―&nbsp;&nbsp;คอล์ยจุดระเบิดที่เกี่ยวข้องกับชุดสายไฟบกพร่อง</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;เครื่องยนต์บกพร่อง</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;กำลังอัดเครื่องยนต์ไม่เพียงพอ</div>
+<div class="list">―&nbsp;&nbsp;การรั่วของน้ำหล่อเย็นเครื่องยนต์ไปที่ห้องเผาไหม้</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;วาล์ว PCV บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;น้ำมันเชื้อเพลิงคุณภาพต่ำ</div>
+<div class="list">•&nbsp;&nbsp;PCM บกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>ผังวงจรไฟฟ้าระบบ</span></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p clear="all">
+<p class="table-title">ขั้นตอนการวิเคราะห์ปัญหา</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">การตรวจสอบ</p>
+</th>
+<th id="" align="center">
+<p class="thead">การดำเนินการ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">1</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบว่าข้อมูลสภาพรถยนต์ (FREEZE FRAME DATA) (โหมด 2) / ข้อมูล SNAPSHOT และผลการทดสอบการตรวจสอบการวิเคราะห์ปัญหาได้รับการบันทึกแล้ว</div>
+<div class="list">•&nbsp;&nbsp;ข้อมูลสภาพรถยนต์ (FREEZE FRAME DATA) (โหมด 2) / ข้อมูล Snapshot และผลการทดสอบการตรวจสอบการวิเคราะห์ปัญหา (เกี่ยวข้องกับการไม่จุดระเบิด) ได้รับการบันทึกหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">บันทึกข้อมูลสภาพรถยนต์ (FREEZE FRAME DATA) (โหมด 2) / ข้อมูล Snapshot และผลการทดสอบการตรวจสอบการวิเคราะห์ปัญหาตามคำสั่งซ่อม แล้วไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">2</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบว่ามีข้อมูลการบริการที่เกี่ยวข้อง</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบว่ามีข้อมูลการบริการที่เกี่ยวข้องหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;มีข้อมูลการบริการที่เกี่ยวข้องอื่นๆ หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ให้ทำการซ่อมหรือวิเคราะห์ปัญหาตามข้อมูลการบริการที่มี</div>
+<div class="list">•&nbsp;&nbsp;ถ้าแก้ไขปัญหาไม่ได้ ให้ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">3</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบรหัสวิเคราะห์ปัญหาและ/หรือรหัสที่ค้างอยู่ที่เกี่ยวข้อง</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF แล้วบิดไปที่ ON (เครื่องยนต์ไม่ทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;ให้ปฏิบัติตามขั้นตอนการเข้าถึงรหัสปัญหาที่ค้างอยู่และขั้นตอนการอ่านรหัสวิเคราะห์ปัญหา<div>(ดูที่ <font class="extxref-label"><a href="id0102h1801000.html">ก ารทดสอบการวิเคราะห์ปัญหาบนรถ [SKYACTIV-G 2.0]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีรหัสที่ค้างอยู่และ/หรือรหัสวิเคราะห์ปัญหาปรากฏขึ้นหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่การตรวจสอบรหัสที่ค้างอยู่หรือรหัสวิเคราะห์ปัญหานั้นๆ</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0102h1801500.html">ตารางรหัสวิเคราะห์ปัญหา [SKYACTIV-G 2.0]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">4</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบสถานะสัญญาณอินพุทขณะนั้น (กุญแจไปที่ ON / เดินเบา)</div>
+<div class="list">•&nbsp;&nbsp;เข้า PID ต่อไปนี้โดยใช้ M-MDS:<div>(ดูที่ <font class="extxref-label"><a href="id0102h1801000.html">การทดสอบการวิเคราะห์ปัญหาบนรถ [SKYACTIV-G 2.0]</a></font>)</div>
+</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;APP1</div>
+<div class="list">―&nbsp;&nbsp;APP2</div>
+<div class="list">―&nbsp;&nbsp;ECT</div>
+<div class="list">―&nbsp;&nbsp;IAT</div>
+<div class="list">―&nbsp;&nbsp;MAF</div>
+<div class="list">―&nbsp;&nbsp;RPM</div>
+<div class="list">―&nbsp;&nbsp;TP REL</div>
+<div class="list">―&nbsp;&nbsp;VSS</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;มีสัญญาณใดๆ ออกนอกค่ากำหนดเมื่อบิดสวิตช์สตาร์ทไปที่ ON และเครื่องยนต์เดินเบาหรือไม่<div>(ดูที่ <font class="extxref-label"><a href="id0140f4802500.html">การตรวจสอบ PCM [SKYACTIV-G 2.0]</a></font>)</div>
+</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจสอบเซ็นเซอร์ที่เกิดปัญหาดังกล่าวและชุดสายไฟที่เกี่ยวข้อง</div>
+<div class="tbody">ซ่อมหรือเปลี่ยนชิ้นส่วนที่บกพร่องตามผลที่ได้จากการตรวจสอบ แล้วไปที่ขั้นตอน 30</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">5</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบสถานะสัญญาณอินพุทขณะนั้นภายใต้สภาวะข้อมูลสภาพรถยนต์ (โหมด 2)</div>
+<dl>
+<dd>
+<div class="attention2-label">ข้อควรระวัง</div>
+</dd>
+<dd>
+<div class="attention2">
+<div class="list">•&nbsp;&nbsp;ในขณะที่ปฏิบัติขั้นตอนนี้ ให้ใช้งานรถในที่ที่ปลอดภัยและถูกต้องตามกฎหมายทุกครั้ง</div>
+<div class="list">•&nbsp;&nbsp;เมื่อใช้ M-MDS เพื่อดูสถานะระบบตรวจสอบในขณะขับขี่ ให้แน่ใจว่ามีช่างอีกคนพร้อมกับท่าน หรือบันทึกข้อมูลใน M-MDS โดยใช้ฟังก์ชั่นการจับข้อมูล PID/DATA MONITOR และ RECORD แล้วตรวจสอบภายหลัง</div>
+</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;เข้า PID เหมือนกับในขั้นตอน 4 ในขณะที่จำลองสภาพปัญหาภายใต้สภาวะข้อมูลสภาพรถยนต์ (โหมด 2)<div>(ดูที่ <font class="extxref-label"><a href="id0102h1801000.html">การทดสอบการวิเคราะห์ปัญหาบนรถ [SKYACTIV-G 2.0]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีสัญญาณใดๆ ซึ่งทำให้เกิดการเปลี่ยนแปลงรุนแรงหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจสอบเซ็นเซอร์ที่เกิดปัญหาดังกล่าวและชุดสายไฟที่เกี่ยวข้อง</div>
+<div class="tbody">ซ่อมหรือเปลี่ยนชิ้นส่วนที่บกพร่องตามผลที่ได้จากการตรวจสอบ แล้วไปที่ขั้นตอน 30</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">6</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบสถานะสัญญาณอินพุทขณะนั้นของเซ็นเซอร์ MAF</div>
+<div class="list">•&nbsp;&nbsp;สตาร์ทเครื่องยนต์</div>
+<div class="list">•&nbsp;&nbsp;เข้า MAF PID โดยใช้ M-MDS<div>(ดูที่ <font class="extxref-label"><a href="id0102h1801000.html">การทดสอบการวิเคราะห์ปัญหาบนรถ [SKYACTIV-G 2.0]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบว่าค่า MAF PID เปลี่ยนแปลงอย่างรวดเร็วในขณะเพิ่ม (เร่ง) ความเร็วรอบเครื่องยนต์หรือไม่</div>
+<div class="list">•&nbsp;&nbsp;การตอบสนองของ MAF PID ปกติหรือไม่<div>(ดูที่ <font class="extxref-label"><a href="id0140f4802500.html">การตรวจสอบ PCM [SKYACTIV-G 2.0]</a></font>)</div>
+</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอน 8</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">7</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการดูดอากาศของระบบไอดี</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบการรั่วของอากาศระหว่างชิ้นส่วนต่อไปนี้:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;เซ็นเซอร์ MAF และเรือนลิ้นเร่ง</div>
+<div class="list">―&nbsp;&nbsp;เรือนลิ้นเร่งและท่อร่วมไอดี</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;ความเร็วรอบเครื่องยนต์อาจเปลี่ยนแปลงเมื่อฉีดน้ำยากัดสนิมตรงบริเวณการดูดอากาศ</div>
+</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;มีความบกพร่องใดๆ หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชิ้นส่วนที่บกพร่องตามผลที่ได้จากการตรวจสอบ แล้วไปที่ขั้นตอน 30</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนเซ็นเซอร์ MAF / เซ็นเซอร์ IAT No.1 แล้วไปที่ขั้นตอน 30</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0113z5801900.html">การถอด / การติดตั้งระบบไอดี [SKYACTIV-G 2.0]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">8</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบตัวขับไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบตัวขับไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า<div>(ดูที่ <font class="extxref-label"><a href="id0110h2828100.html">การตรวจสอบมอเตอร์ / ตัวขับไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า [SKYACTIV-G 2.0]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีความบกพร่องใดๆ หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนมอเตอร์ / ตัวขับไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า แล้วไปที่ขั้นตอน 30</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0110h2808100.html">การถอด / การติดตั้งมอเตอร์ / ตัวขับไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า [SKYACTIV-G 2.0]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">9</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบมอเตอร์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบมอเตอร์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า<div>(ดูที่ <font class="extxref-label"><a href="id0110h2828100.html">การตรวจสอบมอเตอร์ / ตัวขับไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า [SKYACTIV-G 2.0]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีความบกพร่องใดๆ หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนมอเตอร์ / ตัวขับไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า แล้วไปที่ขั้นตอน 30</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0110h2808100.html">การถอด / การติดตั้งมอเตอร์ / ตัวขับไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า [SKYACTIV-G 2.0]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">10</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบแอ็คชิวเอเตอร์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบแอ็คชิวเอเตอร์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า<div>(ดูที่ <font class="extxref-label"><a href="id0110h2555500.html">การตรวจสอบแอ็คชิวเอเตอร์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า [SKYACTIV-G 2.0]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีความบกพร่องใดๆ หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนแอ็คชิวเอเตอร์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า แล้วไปที่ขั้นตอน 30</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0110h2126900.html">การถอด / การติดตั้งแอ็คชิวเอเตอร์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า, แอ็คชิวเอเตอร์ไทม์มิ่งวาล์วแปรผันแบบไฮดรอลิก [SKYACTIV-G 2.0]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">11</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการทำงานของระบบควบคุมไทม์มิ่งวาล์วแปรผันแบบไฮดรอลิก</div>
+<div class="list">•&nbsp;&nbsp;ปฏิบัติตามการตรวจสอบการทำงานของระบบควบคุมไทม์มิ่งวาล์วแปรผันแบบไฮดรอลิก<div>(ดูที่ <font class="extxref-label"><a href="id0103e6803700.html">การตรวจสอบการทำงานของระบบควบคุมเครื่องยนต์ [SKYACTIV-G 2.0]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีความบกพร่องใดๆ หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชิ้นส่วนที่บกพร่องตามผลที่ได้จากการตรวจสอบ แล้วไปที่ขั้นตอน 30</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">12</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการทำงานของโซลินอยด์วาล์วควบคุมการดูดไอระเหยน้ำมันเชื้อเพลิง</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;ต่อปั๊มสุญญากาศเข้ากับโซลินอยด์วาล์วควบคุมการดูดไอระเหยน้ำมันเชื้อเพลิงและสร้างสุญญากาศให้กับโซลินอยด์</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบว่าโซลินอยด์ยังรักษาสุญญากาศไว้หรือไม่</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;เข้า EVAPCP PID ของรายการการจำลองสภาพปัญหาโดยใช้ M-MDS<div>(ดูที่ <font class="extxref-label"><a href="id0102h1801000.html">การทดสอบการวิเคราะห์ปัญหาบนรถ [SKYACTIV-G 2.0]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ตั้งค่าโซลินอยด์ควบคุมการดูดไอระเหยน้ำมันเชื้อเพลิงไปที่ <span>100 %</span> สำหรับ EVAPCP PID</div>
+<div class="list">•&nbsp;&nbsp;สร้างสุญญากาศในขณะที่เปิดโซลินอยด์จาก OFF ไปที่ ON และจำลอง EVAPCP PID ด้วยค่า Duty <span>100 %</span></div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบว่าค่าโซลินอยด์ควบคุมการดูดไอระเหยน้ำมันเชื้อเพลิงปล่อยสุญญากาศออกมาในขณะที่โซลินอยด์ทำงานหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;โซลินอยด์วาล์วควบคุมการดูดไอระเหยน้ำมันเชื้อเพลิงทำงานปกติหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนโซลินอยด์วาล์วควบคุมการดูดไอระเหยน้ำมันเชื้อเพลิง แล้วไปที่ขั้นตอน 30</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0116z8804300.html">การถอด / การติดตั้งโซลินอยด์วาล์วควบคุมการดูดไอระเหยน้ำมันเชื้อเพลิง [SKYACTIV-G 2.0]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">13</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบเซ็นเซอร์ CMP ไอเสีย</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบเซ็นเซอร์ CMP ไอเสีย<div>(ดูที่ <font class="extxref-label"><a href="id0140f4801400.html">การตรวจสอบเซ็นเซอร์ตำแหน่งเพลาลูกเบี้ยว (CMP) [SKYACTIV-G 2.0]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีความบกพร่องใดๆ หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจสอบสภาพการติดตั้งเพื่อหาความเสียหายที่เกิดกับโซ่ไทม์มิ่งและเฟือง</div>
+<div class="list">•&nbsp;&nbsp;ถ้ามีความบกพร่องใดๆ :</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ซ่อมหรือเปลี่ยนชิ้นส่วนที่บกพร่องตามผลการตรวจสอบ</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ถ้าไม่มีความบกพร่อง:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;เปลี่ยนเซ็นเซอร์ CMP ไอเสีย<div>(ดูที่ <font class="extxref-label"><a href="id0140f4801500.html">การถอด / การติดตั้งเซ็นเซอร์ตำแหน่งเพลาลูกเบี้ยว (CMP) [SKYACTIV-G 2.0]</a></font>)</div>
+</div>
+</dd>
+</dl>
+<div class="tbody">ไปที่ขั้นตอน 30</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">14</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการติดตั้งเซ็นเซอร์ CKP</div>
+<div class="list">•&nbsp; ตรวจสอบการติดตั้งเซ็นเซอร์ CKP</div>
+<div class="list">•&nbsp;&nbsp;เซ็นเซอร์ CKP ได้รับการติดตั้งอย่างแน่นหนาหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ขันเซ็นเซอร์ CKP ให้แน่น แล้วไปที่ขั้นตอน 30</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140f4800600.html">การถอด / การติดตั้งเซ็นเซอร์ตำแหน่งเพลาข้อเหวี่ยง (CKP) [SKYACTIV-G 2.0]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">15</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบแรงดันท่อทางเชื้อเพลิง (ด้านแรงดันต่ำ)</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบแรงดันท่อทางเชื้อเพลิง<div>(ดูที่ <font class="extxref-label"><a href="id0114z5800500.html">การตรวจสอบแรงดันท่อทางเชื้อเพลิง [SKYACTIV-G 2.0]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีความบกพร่องใดๆ หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ถ้าแรงดันท่อทางเชื้อเพลิงต่ำเกินไป:</div>
+<div class="list">•&nbsp;&nbsp;ไปที่ขั้นตอนถัดไป</div>
+<div class="tbody">ถ้าแรงดันท่อทางเชื้อเพลิงสูงเกินไป:</div>
+<div class="list">•&nbsp;&nbsp;เปลี่ยนชุดปั๊มเชื้อเพลิง แล้วไปที่ขั้นตอน 30<div>(ดูที่ <font class="extxref-label"><a href="id0114z5800900.html">การถอด / การติดตั้งชุดปั๊มเชื้อเพลิง [SKYACTIV-G 2.0]</a></font>)</div>
+</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอน 18</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">16</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการรั่วของท่อทางเชื้อเพลิง</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบดูการรั่วจากท่อทางเชื้อเพลิงระหว่างชุดจ่ายเชื้อเพลิงกับปั๊มเชื้อเพลิง</div>
+<div class="list">•&nbsp;&nbsp;มีการรั่วหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชิ้นส่วนที่บกพร่องตามผลที่ได้จากการตรวจสอบ แล้วไปที่ขั้นตอน 30</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">17</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบไส้กรองน้ำมันเชื้อเพลิง</div>
+<div class="list">•&nbsp;&nbsp;ตรวจดูสิ่งแปลกปลอมหรือรอยเปื้อนภายในไส้กรองน้ำมันเชื้อเพลิง (ด้านแรงดันต่ำ)</div>
+<div class="list">•&nbsp;&nbsp;มีสิ่งแปลกปลอมหรือรอยเปื้อยหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ทำความสะอาดไส้กรองและถังน้ำมันเชื้อเพลิง (ด้านแรงดันต่ำ) แล้วไปที่ขั้นตอน 30</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนชุดปั๊มเชื้อเพลิง แล้วไปที่ขั้นตอน 30</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0114z5800900.html">การถอด / การติดตั้งชุดปั๊มเชื้อเพลิง [SKYACTIV-G 2.0]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">18</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบแรงดันเชื้อเพลิง (ด้านแรงดันสูง)</div>
+<div class="list">•&nbsp;&nbsp;สตาร์ทเครื่องยนต์ และอุ่นเครื่องจนถึงอุณหภูมิการทำงาน</div>
+<div class="list">•&nbsp;&nbsp;เข้า FUEL_PRES PID โดยใช้ M-MDS ขณะเดินเบา<div>(ดูที่ <font class="extxref-label"><a href="id0102h1801000.html">การทดสอบการวิเคราะห์ปัญหาบนรถ [SKYACTIV-G 2.0]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ค่า FUEL_PRES PID อยู่ที่<span>ประมาณ 3 MPa {31 kgf/cm<sup>2</sup>, 435 psi}</span> หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอน 22</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ต่ำกว่า <span>3 MPa {31 kgf/cm2, 435 psi}</span>:</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบรายการต่อไปนี้:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;การรั่วของเชื้อเพลิงที่ท่อทางเชื้อเพลิงและหัวฉีดน้ำมันเชื้อเพลิง</div>
+<div class="list">―&nbsp;&nbsp;ปั๊มเชื้อเพลิง</div>
+<dl>
+<dd class="list">
+<div class="list">•&nbsp;&nbsp;ทำการตรวจสอบการทำงานของปั๊มเชื้อเพลิง (ด้านแรงดันต่ำ)<div>(ดูที่ <font class="extxref-label"><a href="id0103e6803700.html">การตรวจสอบการทำงานของระบบควบคุมเครื่องยนต์ [SKYACTIV-G 2.0]</a></font>)</div>
+</div>
+</dd>
+</dl>
+<div class="list">―&nbsp;&nbsp;เซ็นเซอร์แรงดันน้ำมันเชื้อเพลิง<div>(ดูที่ <font class="extxref-label"><a href="id0140f4801300.html">การตรวจสอบเซ็นเซอร์แรงดันน้ำมันเชื้อเพลิง [SKYACTIV-G 2.0]</a></font>)</div>
+</div>
+<div class="list">―&nbsp;&nbsp;ปั๊มเชื้อเพลิงแรงดันสูง<div>(ดูที่ <font class="extxref-label"><a href="id0114z5801500.html">การตรวจสอบปั๊มเชื้อเพลิงแรงดันสูง [SKYACTIV-G 2.0]</a></font>)</div>
+</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ถ้ามีความบกพร่องใดๆ :</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ซ่อมหรือเปลี่ยนชิ้นส่วนที่บกพร่องตามผลที่ได้จากการตรวจสอบ แล้วไปที่ขั้นตอน 30</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ถ้าไม่มีความบกพร่อง:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ไปที่ขั้นตอน 21</div>
+</dd>
+</dl>
+<div class="tbody">สูงกว่า <span>3 MPa {31 kgf/cm2, 435 psi}</span>:</div>
+<div class="list">•&nbsp;&nbsp;ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">19</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ระบุสาเหตุโดยเซ็นเซอร์แรงดันน้ำมันเชื้อเพลิงหรือปั๊มเชื้อเพลิงแรงดันสูง</div>
+<div class="list">•&nbsp;&nbsp;สมรรถนะอัตราการเร่งความเร็วรถปกติหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอน 21</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">20</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบเซ็นเซอร์แรงดันน้ำมันเชื้อเพลิง</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบเซ็นเซอร์แรงดันน้ำมันเชื้อเพลิง<div>(ดูที่ <font class="extxref-label"><a href="id0140f4801300.html">การตรวจสอบเซ็นเซอร์แรงดันน้ำมันเชื้อเพลิง [SKYACTIV-G 2.0]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีความบกพร่องใดๆ หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนชุดจ่ายเชื้อเพลิง แล้วไปที่ขั้นตอน 30</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0114z5800600.html">การถอด / การติดตั้งหัวฉีดน้ำมันเชื้อเพลิง [SKYACTIV-G 2.0]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอน 22</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">21</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรลงกราวด์ของวงจรควบคุมโซลินอยด์วาล์วควบคุมวาล์วน้ำมันกลับ</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อปั๊มเชื้อเพลิงแรงดันสูง และขั้วต่อ PCM</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต่อเนื่องระหว่างขั้ว A ของปั๊มเชื้อเพลิงแรงดันสูง (ด้านชุดสายไฟ) กับกราวด์ตัวถัง</div>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชุดสายไฟที่เกิดการลัดวงจรลงกราวด์ แล้วไปที่ขั้นตอน 30</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนปั๊มเชื้อเพลิงแรงดันสูง แล้วไปที่ขั้นตอน 30</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0114z5801400.html">การถอด / การติดตั้งปั๊มเชื้อเพลิงแรงดันสูง [SKYACTIV-G 2.0]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">22</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบแรงดันเชื้อเพลิง (ด้านแรงดันต่ำ)</div>
+<div class="list">•&nbsp;&nbsp;ต่อเกจวัดแรงดันน้ำมันเชื้อเพลิงระหว่างปั๊มเชื้อเพลิงและปั๊มเชื้อเพลิงแรงดันสูง</div>
+<div class="list">•&nbsp;&nbsp;วัดแรงดันน้ำมันเชื้อเพลิงด้านแรงดันต่ำ<div>(ดูที่ <font class="extxref-label"><a href="id0114z5800500.html">การตรวจสอบแรงดันท่อทางเชื้อเพลิง [SKYACTIV-G 2.0]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;แรงดันน้ำมันเชื้อเพลิงด้านแรงดันต่ำอยู่ภายในค่ากำหนดหรือไม่</div>
+<div class="list-title">ค่ากำหนด:</div>
+<div class="list">•&nbsp;&nbsp;<span>405&mdash;485 kPa {4.13&mdash;4.94 kgf/cm<sup>2</sup>, 58.8&mdash;70.3 psi}</span></div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจสอบรายการต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;การจำกัดท่อทางเชื้อเพลิง</div>
+<div class="list">•&nbsp;&nbsp;ไส้กรองน้ำมันเชื้อเพลิงอุดตัน</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ถ้ามีความบกพร่องใดๆ :</div>
+<dl>
+<dd class="list">
+<div class="list">•&nbsp;&nbsp;ซ่อมหรือเปลี่ยนชิ้นส่วนที่บกพร่องตามผลการตรวจสอบ</div>
+</dd>
+</dl>
+<div class="list">―&nbsp;&nbsp;ถ้าไม่มีความบกพร่อง:</div>
+<dl>
+<dd class="list">
+<div class="list">•&nbsp;&nbsp;เปลี่ยนชุดปั๊มเชื้อเพลิง<div>(ดูที่ <font class="extxref-label"><a href="id0114z5800900.html">การถอด / การติดตั้งชุดปั๊มเชื้อเพลิง [SKYACTIV-G 2.0]</a></font>)</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="tbody">ไปที่ขั้นตอน 30</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">23</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการทำงานของระบบจุดระเบิด</div>
+<div class="list">•&nbsp;&nbsp;ทำการทดสอบประกายไฟ<div>(ดูที่ <font class="extxref-label"><a href="id0103e6803700.html">การตรวจสอบการทำงานของระบบควบคุมเครื่องยนต์ [SKYACTIV-G 2.0]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;สามารถมองเห็นประกายไฟสีน้ำเงินเข้มของแต่ละสูบได้ชัดเจนหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอน 26</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">24</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบหัวเทียน</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบหัวเทียนของทุกสูบ<div>(ดูที่ <font class="extxref-label"><a href="id0118h6800500.html">การตรวจสอบหัวเทียน [SKYACTIV-G 2.0]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีความบกพร่องใดๆ หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนหัวเทียนที่เกิดปัญหาดังกล่าว แล้วไปที่ขั้นตอน 30</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0118h6800400.html">การถอด / การติดตั้งหัวเทียน [SKYACTIV-G 2.0]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">25</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบคอล์ยจุดระเบิด</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบคอล์ยจุดระเบิดของทุกสูบ<div>(ดูที่ <font class="extxref-label"><a href="id0118h6800300.html">การตรวจสอบคอล์ยจุดระเบิด [SKYACTIV-G 2.0]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีความบกพร่องใดๆ หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนคอล์ยจุดระเบิดที่เกิดปัญหาดังกล่าว แล้วไปที่ขั้นตอน 30</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0118h6811200.html">การถอด / การติดตั้งคอยล์จุดระเบิด / เซ็นเซอร์ ION [SKYACTIV-G 2.0]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจสอบสภาพชุดสายไฟที่เกี่ยวข้องกับคอล์ยจุดระเบิด (การลัดวงจรหรือการขาดหายเป็นช่วงๆ) ของทุกสูบ</div>
+<div class="tbody">ซ่อมหรือเปลี่ยนชุดสายไฟที่เกิดปัญหาดังกล่าว แล้วไปที่ขั้นตอน 30</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">26</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบว่าการค้นหาสาเหตุปัญหาของรหัสวิเคราะห์ปัญหาเสร็จสมบูรณ์แล้ว</div>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;เนื่องจากความบกพร่องอาจได้รับการแก้ไขโดยการขจัดคราบเขม่าที่ติดกับหัวเทียนออกในระหว่างการตรวจสอบประกายไฟของหัวเทียน ตรวจสอบว่าการซ่อมเสร็จสมบูรณ์แล้ว</div>
+</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ให้แน่ใจว่าได้ต่อขั้วต่อที่ปลดออกทั้งหมดกลับเข้าที่ื</div>
+<div class="list">•&nbsp;&nbsp;ลบรหัสวิเคราะห์ปัญหาออกจากหน่วยความจำ PCM โดยใช้ M-MDS<div>(ดูที่ <font class="extxref-label"><a href="id0102h1801100.html">ขั้นตอนหลังจากงานซ่อม [SKYACTIV-G 2.0]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ปฏิบัติตามขั้นตอนการเข้ารหัสปัญหาที่ค้างอยู่<div>(ดูที่ <font class="extxref-label"><a href="id0102h1801000.html">การทดสอบการวิเคราะห์ปัญหาบนรถ [SKYACTIV-G 2.0]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;รหัสที่ค้างอยู่ของรหัสวิเคราะห์ปัญหานี้ปรากฏขึ้นหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอน 31</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">27</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบกำลังอัดเครื่องยนต์</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบกำลังอัดเครื่องยนต์<div>(ดูที่ <font class="extxref-label"><a href="id0110h2800300.html">การตรวจสอบกำลังอัด [SKYACTIV-G 2.0]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;กำลังอัดอยู่ภายในค่ากำหนดหรือไม่</div>
+<div class="list-title">ค่ากำหนด:</div>
+<div class="list">•&nbsp;&nbsp;กำลังอัด [สเปคยุโรป (ประเทศอังกฤษ พวงมาลัยซ้าย)]</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ค่ามาตรฐาน: <span>978 kPa {9.97 kgf/cm<sup>2</sup>, 142 psi} (300 rpm)</span></div>
+<div class="list">―&nbsp;&nbsp;ค่าต่ำสุด: <span>783 kPa {7.98 kgf/cm<sup>2</sup>, 114 psi} (300 rpm)</span></div>
+<div class="list">―&nbsp;&nbsp;ความแตกต่างสูงสุดระหว่างสูบ: <span>166 kPa {1.69 kgf/cm<sup>2</sup>, 24.1 psi}</span></div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;กำลังอัด [ยกเว้นสเปคยุโรป (ประเทศอังกฤษ พวงมาลัยซ้าย)]</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ค่ามาตรฐาน: <span>885 kPa {9.02 kgf/cm<sup>2</sup>, 128 psi} (300 rpm)</span></div>
+<div class="list">―&nbsp;&nbsp;ค่าต่ำสุด: <span>708 kPa {7.22 kgf/cm<sup>2</sup>, 103 psi} (300 rpm)</span></div>
+<div class="list">―&nbsp;&nbsp;ความแตกต่างสูงสุดระหว่างสูบ: <span>150 kPa {1.53 kgf/cm<sup>2</sup>, 21.8 psi}</span></div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;เนื่องจาก SKYACTIV-G 2.0 จะหน่วงจังหวะการปิดวาล์วไอดี กำลังอัดจึงต่ำ</div>
+</div>
+</dd>
+</dl>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชิ้นส่วนที่บกพร่องตามผลที่ได้จากการตรวจสอบ แล้วไปที่ขั้นตอน 30</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">28</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการซีลของช่องทางผ่านน้ำหล่อเย็นเครื่องยนต์</div>
+<div class="list">•&nbsp;&nbsp;ปฏิบัติตาม &ldquo;การตรวจสอบการรั่วของน้ำหล่อเย็นเครื่องยนต์&rdquo;<div>(ดูที่ <font class="extxref-label"><a href="id0112h4800500.html">การตรวจสอบการรั่วของน้ำหล่อเย็นเครื่องยนต์ [SKYACTIV-G 2.0]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;เข็มวัดของเครื่องมือทดสอบฝาหม้อน้ำตกลง แม้ว่าไม่มีการรั่วของน้ำหล่อเย็นเครื่องยนต์จากหม้อน้ำหรือท่อยางใช่หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อาจเกิดการรั่วของน้ำหล่อเย็นเครื่องยนต์จากเครื่องยนต์ (ระหว่างห้องเผาไหม้กับช่องทางผ่านน้ำหล่อเย็นเครื่องยนต์)</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบสภาพของปะเก็นและฝาสูบ</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ถ้ามีความบกพร่องใดๆ :</div>
+<dl>
+<dd class="list">
+<div class="list">•&nbsp;&nbsp;ซ่อมหรือเปลี่ยนชิ้นส่วนที่บกพร่องตามผลที่ได้จากการตรวจสอบ แล้วไปที่ขั้นตอน 30</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">29</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการทำงานของวาล์ว PCV</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;ถอดวาล์ว PCV<div>(ดูที่ <font class="extxref-label"><a href="id0116z8819800.html">การถอด / การติดตั้งวาล์วระบายไอน้ำมันเครื่องเสื้อห้องข้อเหวี่ยง (PCV) [SKYACTIV-G 2.0]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบวาล์ว PCV<div>(ดูที่ <font class="extxref-label"><a href="id0116z8800400.html">การตรวจสอบวาล์วระบายไอน้ำมันเครื่องเสื้อห้องข้อเหวี่ยง (PCV) [SKYACTIV-G 2.0]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีความบกพร่องใดๆ หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนวาล์ว PCV แล้วไปที่ขั้นตอนถัดไป</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0116z8819800.html">การถอด / การติดตั้งวาล์วระบายไอน้ำมันเครื่องเสื้อห้องข้อเหวี่ยง (PCV) [SKYACTIV-G 2.0]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้น้ำมันเชื้อเพลิงคุณภาพต่ำ</div>
+<div class="list">•&nbsp;&nbsp;เปลี่ยนถ่ายน้ำมันเชื้อเพลิงใหม่ แล้วไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">30</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบว่าการค้นหาสาเหตุปัญหาของรหัสวิเคราะห์ปัญหาเสร็จสมบูรณ์แล้ว</div>
+<div class="list">•&nbsp;&nbsp;ให้แน่ใจว่าได้ต่อขั้วต่อที่ปลดออกทั้งหมดกลับเข้าที่ื</div>
+<div class="list">•&nbsp;&nbsp;ลบรหัสวิเคราะห์ปัญหาออกจากหน่วยความจำ PCM โดยใช้ M-MDS<div>(ดูที่ <font class="extxref-label"><a href="id0102h1801100.html">ขั้นตอนหลังจากงานซ่อม [SKYACTIV-G 2.0]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ปฏิบัติตามขั้นตอนการเข้ารหัสปัญหาที่ค้างอยู่<div>(ดูที่ <font class="extxref-label"><a href="id0102h1801000.html">การทดสอบการวิเคราะห์ปัญหาบนรถ [SKYACTIV-G 2.0]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;รหัสที่ค้างอยู่ของรหัสวิเคราะห์ปัญหานี้ปรากฏขึ้นหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ทำซ้ำการตรวจสอบตั้งแต่ขั้นตอน 1</div>
+<div class="list">•&nbsp;&nbsp;ถ้าความบกพร่องเกิดขึ้นอีกครั้ง ให้เปลี่ยน PCM<div>(ดูที่ <font class="extxref-label"><a href="id0140f4802400.html">การถอด / การติดตั้ง PCM [SKYACTIV-G 2.0]</a></font>)</div>
+</div>
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">31</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบขั้นตอนหลังจากงานซ่อม</div>
+<div class="list">•&nbsp;&nbsp;ปฏิบัติตาม &ldquo;ขั้นตอนหลังจากงานซ่อม&rdquo;<div>(ดูที่ <font class="extxref-label"><a href="id0102h1801100.html">ขั้นตอนหลังจากงานซ่อม [SKYACTIV-G 2.0]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีรหัสวิเคราะห์ปัญหาปรากฏขึ้นหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่การตรวจสอบรหัสวิเคราะห์ปัญหานั้นๆ</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0102h1801500.html">ตารางรหัสวิเคราะห์ปัญหา [SKYACTIV-G 2.0]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การค้นหาสาเหตุปัญหาของรหัสวิเคราะห์ปัญหาเสร็จสมบูรณ์</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</body>
+</html>

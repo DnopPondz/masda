@@ -1,0 +1,297 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>ระบบกุญแจรีโมท</title>
+</head>
+<body><a name="id091400109400"></a><p class="servinfo-title"><span class="servinfo-head"></span>ระบบกุญแจรีโมท</p>
+<hr>
+<p class="servinfo-title-id" align="right">id091400109400</p><br clear="all"><a name="id09140010940001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รายละเอียด</p>
+<div class="list">•&nbsp;&nbsp;ระบบกุญแจรีโมทมีการนำมาใช้เพื่อทำการล็อค/ปลดล็อคโดยการทำงานของปุ่มตัวส่งสัญญาณรีโมท แม้ว่าจะอยู่ในตำแหน่งที่ห่างจากด้านหน้ารถ</div>
+<div class="list">•&nbsp;&nbsp;ชุดเปิด/ปิดการทำงานจะสั่งงานโหมด Fail-safe ของระบบกุญแจรีโมท (ดูที่ <font class="extxref-label"><a href="id091400111500.html">ชุดเปิด/ปิดการทำงาน</a></font>)</div><br clear="all"><a name="id09140010940002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<div class="list">•&nbsp;&nbsp;เมื่อดำเนินการทำงานต่อไปนี้ ชุดเปิด/ปิดการทำงานจะตรวจสอบข้อมูล ID ของตัวส่งสัญญาณรีโมท</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;การล็อค/ปลดล็อคโดยใช้ตัวส่งสัญญาณรีโมท</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ระบบกุญแจรีโมทจะมีฟังก์ชั่นต่อไปนี้ในกรณีที่ผู้ใช้สั่งการระบบไม่ถูกต้อง หรือเพื่อป้องกันไม่ให้ผู้ใช้ออกจากรถโดยไม่ได้ล็อครถ</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ฟังก์ชั่นการล็อคซ้ำอัตโนมัติ: หลังจากการปลดล็อค หากประตูบานใดบานหนึ่งหรือประตูท้ายไม่ถูกเปิด และผ่านระยะเวลาตามที่ตั้งค่าไว้ ประตูทุกบานจะถูกล็อคโดยอัตโนมัติ</div>
+<div class="list">―&nbsp;&nbsp;ฟังก์ชั่นหยุดการทำงานตัวส่งสัญญาณรีโมท: ฟังก์ชั่นทั้งหมดของตัวส่งสัญญาณรีโมทยกเว้นตัวส่งสัญญาณรีโมทที่ใช้สำหรับล็อคประตูจะถูกหยุดชั่วคราว</div>
+<div class="list">―&nbsp;&nbsp;ฟังก์ชั่นการแจ้งเตือน: หากระบบทำงานไม่ถูกต้องซึ่งอาจทำให้เกิดปัญหาขึ้น ระบบจะเตือนผู้ใช้โดยการใช้ไฟแสดงสถานะ ไฟเตือน หน้าจอ LCD และเสียงเตือนในแผงหน้าปัด</div>
+</dd>
+</dl><br clear="all"><p><a name="id09140010940003"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นแสดงสถานะแรงดันไฟแบตเตอรี่ตัวส่งสัญญาณรีโมทต่ำ</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่นนี้จะแจ้งกับผู้ใช้ว่าแรงดันไฟแบตเตอรี่ของตัวส่งสัญญาณรีโมทต่ำ</div>
+</dd>
+</dl>
+</p><br clear="all"><a name="id09140010940004"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ภาพโครงสร้าง</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00000896.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00000896</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id09140010940005"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ผังวงจรระบบ</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001210.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001210</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id09140010940006"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p><br clear="all"><p><a name="id09140010940007"></a><p class="topic-title"><span class="topic-head"></span>ล็อค/ปลดล็อคโดยใช้ตัวส่งสัญญาณรีโมท</p>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;หากปุ่มล็อคของตัวส่งสัญญาณรีโมทถูกใช้งานเมื่อตรวจพบสภาวะต่อไปนี้ทั้งหมด ประตูทุกบานและประตูท้ายจะถูกล็อค</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;สวิตช์สตาร์ทอยู่ที่ OFF (LOCK)</div>
+<div class="list">―&nbsp;&nbsp;ประตูรถทุกบานปิดอยู่</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;หากปุ่มปลดล็อคของตัวส่งสัญญาณรีโมทถูกใช้งานเมื่อตรวจพบสภาวะต่อไปนี้ทั้งหมด ประตูทุกบานและประตูท้ายจะถูกปลดล็อค</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;สวิตช์สตาร์ทอยู่ที่ OFF (LOCK)</div>
+</dd>
+</dl>
+</div>
+</dd>
+</dl>
+<p class="list">1.&nbsp;&nbsp;เมื่อปุ่มล็อคหรือปลดล็อคของตัวส่งสัญญาณถูกกด ตัวส่งสัญญาณรีโมทจะส่งข้อมูล ID</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;เมื่อตัวรับญญาณกุญแจรีโมทได้รับข้อมูล ID และส่งข้อมูลไปยังชุดเปิด/ปิดการทำงาน</p>
+<p class="list">
+</p>
+<p class="list">3.&nbsp;&nbsp;ชุดเปิด/ปิดการทำงานจะตรวจสอบข้อมูล ID และหากข้อมูล ID ตรงกัน จะส่งสัญญาณขอการล็อค/ปลดล็อคไปยังโมดูลควบคุมตัวถังด้านหลัง (RBCM)</p>
+<p class="list">
+</p>
+<p class="list">4.&nbsp;&nbsp;โมดูลควบคุมตัวถังด้านหลัง (RBCM) จะสั่งการมอเตอร์แอ็คชิวเอเตอร์ล็อคประตูหน้า/หลังเพื่อล็อค/ปลดล็อคประตูหน้า/หลัง</p>
+<p class="list">
+</p>
+<p class="list">5.&nbsp;&nbsp;ในช่วงเวลาเดียวกับการล็อค/ปลดล็อคประตู จะส่งสัญญาณขอการกะพริบไฟฉุกเฉินไปยังแผงหน้าปัดเป็นสัญญาณระบบ CAN</p>
+<p class="list">
+</p>
+<p class="list">6.&nbsp;&nbsp;แผงหน้าปัดจะส่งสัญญาณขอการกะพริบไฟฉุกเฉินไปยังโมดูลควบคุมตัวถังด้านหน้า (FBCM) เป็นสัญญาณระบบ CAN</p>
+<p class="list">
+</p>
+<p class="list">7.&nbsp;&nbsp;โมดูลควบคุมตัวถังด้านหน้า (FBCM) จะควบคุมการกะพริบของไฟฉุกเฉินให้มีจำนวนครั้งดังต่อไปนี้เพื่อแจ้งว่าการล็อค/ปลดล็อคเสร็จสมบูรณ์</p>
+<p class="list">
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;Lock: กะพริบหนึ่งครั้ง</div>
+<div class="list">•&nbsp;&nbsp;Unlock: กะพริบสองครั้ง</div>
+</dd>
+</dl>
+</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001308.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001308</div>
+</td>
+</tr>
+</table>
+</p><br clear="all"><p><a name="id09140010940008"></a><p class="topic-title"><span class="topic-head"></span>การทำงานของฟังก์ชั่นการล็อคซ้ำอัตโนมัติ</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;หลังจากชุดเปิด/ปิดการทำงานส่งสัญญาณขอปลดล็อคไปยังโมดูลควบคุมตัวถังด้านหลัง (RBCM) หากการสั่งการต่อไปนี้ไม่ถูกดำเนินการภายใน <span>30 วินาที</span><sup>*1</sup> ระบบจะส่งสัญญาณขอการล็อคไปยังโมดูลควบคุมตัวถังด้านหลัง (RBCM) เพื่อล็อคประตูหน้า/หลัง</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ประตูหรือประตูท้ายถูกเปิด</div>
+<div class="list">―&nbsp;&nbsp;การล็อค/ปลดล็อคถูกดำเนินการโดยใช้เบ้าเสียบกุญแจประตูหน้าด้านคนขับ</div>
+<div class="list">―&nbsp;&nbsp;การล็อค/ปลดล็อคถูกดำเนินการโดยใช้ปุ่มล็อคประตูหน้าด้านคนขับ</div>
+<div class="list">―&nbsp;&nbsp;การล็อค/ปลดล็อคถูกดำเนินการโดยใช้ตัวส่งสัญญาณรีโมท</div>
+<div class="list">―&nbsp;&nbsp;สวิตช์สตาร์ทอยู่ที่ ACC หรือ ON (เครื่องยนต์ไม่ทำงาน)</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="deflist">*1&nbsp;&nbsp;:การกำหนดการตั้งค่าเวลาเอง</div>
+</p><br clear="all"><p><a name="id09140010940009"></a><p class="topic-title"><span class="topic-head"></span>การทำงานของฟังก์ชั่นหยุดการทำงานตัวส่งสัญญาณรีโมทชั่วคราว</p>
+<dl>
+<dd>
+<div class="list-title">เมื่อดำเนินการล็อคประตู</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;หากประตูถูกล็อคโดยการใช้ตัวส่งสัญญาณรีโมทเมื่อตรวจพบสภาวะทั้งหมดต่อไปนี้ ฟังก์ชั่นทั้งหมดของตัวส่งสัญญาณรีโมทยกเว้นตัวส่งสัญญาณรีโมทที่ใช้สำหรับการล็อคประตูจะถูกหยุดชั่วคราว</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ประตูรถทุกบานและประตูท้ายถูกปิด</div>
+<div class="list">―&nbsp;&nbsp;สวิตช์สตาร์ทอยู่ที่ OFF (LOCK)</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">การยกเลิกการหยุดทำงานตัวส่งสัญญาณรีโมทชั่วคราว</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่นของตัวส่งสัญญาณรีโมทที่ถูกหยุดการทำงานชั่วคราวจะกลับมาทำงานเมื่อตรวจพบสภาวะต่อไปนี้:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ตัวส่งสัญญาณรีโมทที่สามารถสตาร์ทเครื่องยนต์ถูกนำไปไว้ด้านในรถ</div>
+<div class="list">―&nbsp;&nbsp;ปุ่มล็อค/ปลดล็อคบนตัวส่งสัญญาณรีโมทที่ถูกหยุดการทำงานชั่วคราวถูกกด</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09140010940010"></a><p class="topic-title"><span class="topic-head"></span>การทำงานของฟังก์ชั่นการแจ้งเตือน</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ในสภาวะต่อไปนี้ ชุดเปิด/ปิดการทำงานจะส่งสัญญาณขอการแจ้งเตือนไปยังแผงหน้าปัดผ่านระบบ CAN เพื่อให้ไฟแสดงสถานะปุ่มกดสตาร์ท (สีเหลือง) ติดสว่าง</div>
+<div class="list">•&nbsp;&nbsp;เมื่อแผงหน้าปัดได้รับสัญญาณขอการแจ้งเตือน ระบบจะแสดงสถานะการเตือนในหน้าจอ TFT LCD (รุ่นที่มีหน้าจอ TFT LCD) หรือจะกะพริบไฟเตือนกุญแจ (รุ่นที่ไม่มีหน้าจอ TFT LCD)</div>
+</dd>
+</dl>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center" rowspan="2">
+<p class="thead">สภาวะ</p>
+</th>
+<th id="" align="center" colspan="3">
+<p class="thead">แผงหน้าปัด</p>
+</th>
+<th id="" align="center">
+<p class="thead">ปุ่มกดสตาร์ท</p>
+</th>
+</tr>
+<tr>
+<th id="" align="center">
+<p class="thead">เสียงเตือนกุญแจรีโมท</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟเตือนกุญแจ (สีแดง)</p>
+</th>
+<th id="" align="center">
+<p class="thead">หน้าจอ TFT LCD</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟแสดงสถานะ (สีเหลือง)</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">ระบบกุญแจรีโมทบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">―</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="center"><img src="images/ac5wzn00000938.png"></td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ประตูด้านคนขับถูกเปิดขณะสวิตช์สตาร์ทอยู่ที่ตำแหน่ง ACC</div>
+</td>
+<td id="" align="center">
+<div class="list-title">สเปคยุโรป (ประเทศอังกฤษ L.H.D.)</div>
+<div class="list">•&nbsp;&nbsp; รูปแบบ A<sup>*1</sup>&times;6 ครั้ง</div>
+<div class="list-title">รุ่นที่ไม่ใช่สเปคยุโรป (ประเทศอังกฤษ L.H.D.)</div>
+<div class="list">•&nbsp;&nbsp; รูปแบบ A<sup>*1</sup>&times;ต่อเนื่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">―</div>
+</td>
+<td id="" align="center"><img src="images/ac5wzn00000939.png"></td>
+<td id="" align="center">
+<div class="tbody">―</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ตรวจไม่พบตัวส่งสัญญาณรีโมทภายในรถเมื่อประตูทุกบานถูกปิดขณะสวิตช์สตาร์ทไม่อยู่ที่ Off (LOCK)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">รูปแบบ B<sup>*1</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="center"><img src="images/ac5wzn00000940.png"></td>
+<td id="" align="center">
+<div class="tbody">―</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;:สำหรับรูปแบบเสียงของเสียงเตือนกุญแจรีโมท โปรดดูที่เสียงเตือนกุญแจรีโมท (ดูที่ <font class="extxref-label"><a href="id092200031400.html">เสียงเตือนกุญแจรีโมท</a></font>)</div>
+</p><br clear="all"><p><a name="id09140010940011"></a><p class="topic-title"><span class="topic-head"></span>การทำงานของฟังก์ชั่นแสดงสถานะแรงดันไฟแบตเตอรี่ตัวส่งสัญญาณรีโมทต่ำ</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เมื่อบิดสวิตช์สตาร์ทจากตำแหน่ง ON (เครื่องยนต์ทำงานหรือไม่ทำงาน) ไปที่ Off (LOCK) ในสภาวะที่แสดงไว้ในตาราง ชุดเปิด/ปิดการทำงานจะส่งสัญญาณขอไฟแสดงสถานะแรงดันไฟแบตเตอรี่ต่ำในแผงหน้าปัดเป็นสัญญาณระบบ CAN</div>
+<div class="list">•&nbsp;&nbsp;เมื่อแผงหน้าปัดได้รับสัญญาณขอการทำงานเพื่อแสดงการไม่มีแรงดันไฟแบตเตอรี่ ระบบจะแสดงแรงดันไฟแบตเตอรี่ตัวส่งสัญญาณรีโมทต่ำในหน้าจอ TFT LCD (รุ่นที่มีหน้าจอ TFT LCD) หรือจะกะพริบไฟแสดงสถานะกุญแจ (รุ่นที่ไม่มีหน้าจอ TFT LCD)</div>
+</dd>
+</dl>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center" rowspan="2">
+<p class="thead">สภาวะ</p>
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">แผงหน้าปัด</p>
+</th>
+</tr>
+<tr>
+<th id="" align="center">
+<p class="thead">ไฟแสดงสถานะกุญแจ (สีเขียว)</p>
+</th>
+<th id="" align="left">
+<p class="thead">การแสดงสถานะบน LCD</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานจะได้รับรหัสสำหรับแรงดันไฟแบตเตอรี่ตัวส่งสัญญาณรีโมทต่ำ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ (เป็นเวลาประมาณ 30 วินาทีหลังจากสวิตช์สตาร์ทอยู่ที่ Off)</div>
+</td>
+<td id="" align="center"><img src="images/ac5wzn00000941.png"></td>
+</tr>
+</tbody>
+</table>
+</p>
+</p>
+</body>
+</html>

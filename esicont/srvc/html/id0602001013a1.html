@@ -1,0 +1,112 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>ฟังก์ชันการสื่อสารของเครื่องทดสอบภายนอกของระบบการวิเคราะห์ปัญหาบนรถ [พวงมาลัยเพาเวอร์ไฟฟ้า (EPS)]</title>
+</head>
+<body><a name="id0602001013a1"></a><p class="servinfo-title"><span class="servinfo-head"></span>ฟังก์ชันการสื่อสารของเครื่องทดสอบภายนอกของระบบการวิเคราะห์ปัญหาบนรถ [พวงมาลัยเพาเวอร์ไฟฟ้า (EPS)]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0602001013a1</p><br clear="all"><a name="id0602001013a101"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รายละเอียด</p>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชันการสื่อสารของเครื่องทดสอบภายนอกจะเปิดการสื่อสารข้อมูลการวิเคราะห์ปัญหา (การแสดงผลรหัสวิเคราะห์ปัญหา, การแสดงผลสัญญาณอินพุท/เอาท์พุท) ระหว่างโมดูลควบคุม (CM) EPS กับเครื่องทดสอบภายนอก</div><br clear="all"><p><a name="id0602001013a102"></a><p class="topic-title"><span class="topic-head"></span>ข้อมูลการเชื่อมต่อ/การสื่อสาร</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center" rowspan="3">
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">เครื่องมือทดสอบภายนอก</p>
+</th>
+</tr>
+<tr>
+<th id="" align="center" colspan="2">
+<p class="thead">Mazda modular diagnostic system (M-MDS)</p>
+</th>
+</tr>
+<tr>
+<th id="" align="center">
+<p class="thead">การเชื่อมต่อ</p>
+</th>
+<th id="" align="center">
+<p class="thead">วิธีการสื่อสาร</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">ฟังก์ชั่นการวิเคราะห์ปัญหาบนรถ (การตรวจจับความบกพร่อง)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อินพุท/เอาท์พุท: CAN_H (HS), CAN_L (HS)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การสื่อสารแบบอนุกรม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ฟังก์ชั่นการตรวจสอบข้อมูล / PID</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อินพุท/เอาท์พุท: CAN_H (HS), CAN_L (HS)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การสื่อสารแบบอนุกรม</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</p><br clear="all"><p><a name="id0602001013a103"></a><p class="topic-title"><span class="topic-head"></span>การสื่อสารแบบอนุกรม</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;การสื่อสารแบบอนุกรม (การสื่อสารแบบสองทาง) ช่วยให้การรับและส่งข้อมูลจำนวนมากสามารถทำได้พร้อมกันในสายการสื่อสารเดียวกัน</div>
+<div class="list">•&nbsp;&nbsp;การเชื่อมต่อ Mazda Modular Diagnostic System (M-MDS) กับ DLC-2 จะสามารถส่งและรับข้อมูลการวิเคราะห์ระหว่าง Mazda Modular Diagnostic System (M-MDS) กับ EPS CM ผ่านทางสายระบบ CAN</div>
+<div class="list">•&nbsp;&nbsp;EPS CM จะรับสัญญาณคำสั่งของฟังก์ชันการตรวจจับความบกพร่องและฟังก์ชัน PID/DATA MONITOR จาก Mazda Modular Diagnostic System (M-MDS) และส่งรหัสวิเคราะห์ปัญหาและข้อมูลเกี่ยวกับสถานะการทำงานของชิ้นส่วนอินพุท/เอาท์พุทแต่ละรายการไปยัง Mazda Modular Diagnostic System (M-MDS)</div>
+</dd>
+</dl>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ชื่อฟังก์ชั่นการวิเคราะห์ปัญหา</p>
+</th>
+<th id="" align="center">
+<p class="thead">สัญญาณที่ได้รับ</p>
+</th>
+<th id="" align="center">
+<p class="thead">สัญญาณที่ส่ง</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">ฟังก์ชั่นการตรวจจับความบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณการตรวจสอบรหัสวิเคราะห์ปัญหา</div>
+</td>
+<td id="" align="left">
+<div class="tbody">รหัสวิเคราะห์ปัญหา</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ฟังก์ชั่นการตรวจสอบข้อมูล / PID</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณคำสั่งที่ใช้อ่านรายการตรวจสอบที่เลือก</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ข้อมูลที่ตรวจสอบสำหรับรายการตรวจสอบที่ขอ</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</p>
+</body>
+</html>

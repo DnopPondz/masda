@@ -1,0 +1,618 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>การควบคุมการล่วงหน้าจังหวะการจุดระเบิดด้วยอิเล็กทรอนิกส์ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</title>
+</head>
+<body><a name="id0140g2188200"></a><p class="servinfo-title"><span class="servinfo-head"></span>การควบคุมการล่วงหน้าจังหวะการจุดระเบิดด้วยอิเล็กทรอนิกส์ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0140g2188200</p>
+<dl>
+<dd>
+<div class="attention2-label">ข้อควรระวัง</div>
+</dd>
+<dd>
+<div class="attention2">
+<div class="list">•&nbsp;&nbsp;ข้อมูลจำเพาะของรถจะแตกต่างกันตามหมายเลขประจำรถ (VIN)</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;VIN แบบ A:</div>
+<dl>
+<dd class="list">
+<div class="list">JM0 KE****** 100001−</div>
+<div class="list">JM6 KE****** 100001−</div>
+<div class="list">JM7 KE****** 100001−</div>
+<div class="list">JM8 KE****** 100001−</div>
+<div class="list">JMZ KE****** 100001</div>
+<div class="list">KE10** 100001−</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;VIN แบบ B:</div>
+<dl>
+<dd class="list">
+<div class="list">JM0 KE****** 200001−</div>
+<div class="list">JM6 KE****** 200001−</div>
+<div class="list">JM8 KE****** 200001−</div>
+<div class="list">JMZ KE****** 200001−</div>
+<div class="list">KE10** 200001−</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</dd>
+</dl><br clear="all"><a name="id0140g218820001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รายละเอียด</p>
+<div class="list">•&nbsp;&nbsp;ควบคุมการจุดระเบิดไปที่จังหวะที่เหมาะสมที่สุดตามสภาวะการทำงานของเครื่องยนต์</div>
+<div class="list">•&nbsp;&nbsp;การซ่อมบำรุงง่ายยิ่งขึ้นโดยไม่ต้องทำการปรับจังหวะการจุดระเบิด</div>
+<div class="list">•&nbsp;&nbsp;PCM จะกำหนดสภาวะการทำงานของเครื่องยนต์ตามสัญญาณอินพุทจากเซ็นเซอร์แต่ละตัวและหยุดกระแสไฟฟ้าที่ไปยังคอล์ยจุดระเบิดด้วยจังหวะการจุดระเบิดที่คำนวณได้ ซึ่งทำให้หัวเทียนปล่อยกระแสไฟฟ้า (จุดระเบิด) โดยผลของการเหนี่ยวนำแม่เหล็กไฟฟ้าซึ่งกันและกัน</div><br clear="all"><a name="id0140g218820002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>แผนผังแบบบล็อก</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00002284.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00002284</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id0140g218820003"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p><br clear="all"><p><a name="id0140g218820004"></a><p class="topic-title"><span class="topic-head"></span>วิธีการจุดระเบิด</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;PCM จะให้กำลังไฟฟ้าขดลวดจุดระเบิดตามจังหวะการจุดระเบิดที่คำนวณได้จากสภาวะการทำงานของเครื่องยนต์และระยะเวลาการให้กำลังไฟฟ้าตัวช่วยจุดระเบิด</div>
+<div class="list">•&nbsp;&nbsp;ระยะเวลาการให้กำลังไฟฟ้าตัวช่วยจุดระเบิด (ระยะเวลาการให้กำลังไฟฟ้าขดลวดจุดระเบิด) จะถูกกำหนดตามแรงดันไฟฟ้าแบตเตอรี่และความเร็วรอบเครื่องยนต์</div>
+</dd>
+</dl>
+<p class="figure-title">ตารางจังหวะ</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00002285.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00002285</div>
+</td>
+</tr>
+</table>
+</p><br clear="all"><p><a name="id0140g218820005"></a><p class="topic-title"><span class="topic-head"></span>การกำหนดจังหวะจุดระเบิด (VIN แบบ A)</p>
+<dl>
+<dd>
+<div class="list-title">การแบ่งโซนการควบคุม</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เพื่อทำการควบคุมจังหวะการจุดระเบิดที่เหมาะสมที่สุดภายใต้ทุกสภาวะการทำงานของเครื่องยนต์ PCM:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;แบ่งการทำงานในการควบคุมเครื่องยนต์ออกเป็นโซนควบคุมแต่ละโซนตามความเร็วรอบเครื่องยนต์และมุมเปิดแป้นคันเร่ง</div>
+<div class="list">―&nbsp;&nbsp;กำหนดจังหวะจุดระเบิดสำหรับแต่ละโซนควบคุม</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<table class="figure-flame">
+<tr>
+<td width="10mm"></td>
+<td>
+<table class="figure-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/am3uun00001983.png"></td>
+</tr>
+</table>
+<div class="figure-caption">am3uun00001983</div>
+</td>
+</tr>
+</table>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">โซนควบคุม</p>
+</th>
+<th id="" align="center">
+<p class="thead">สภาวะการควบคุม</p>
+</th>
+<th id="" align="center">
+<p class="thead">วิธีการจุดระเบิด</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">การสตาร์ทเครื่องยนต์</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความเร็วรอบเครื่องยนต์ต่ำกว่า 500 rpm</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสตาร์ทเครื่องยนต์</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">โซนเดินเบา</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่เหยียบแป้นคันเร่ง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(การจุดระเบิดโดยประมาณของรอบการทำงาน) (กำหนดจังหวะการจุดระเบิดโดยเพิ่มแต่ละการปรับแก้กับการล่วงหน้าจังหวะจุดระเบิดรอบเดินเบา)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">โซนปกติ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การทำงานของเครื่องยนต์ยกเว้นโซนการสตาร์ทเครื่องยนต์และโซนเดินเบา</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(การจุดระเบิดโดยประมาณของรอบการทำงาน) (กำหนดจังหวะการจุดระเบิดโดยเพิ่มแต่ละการปรับแก้กับการล่วงหน้าจังหวะจุดระเบิดพื้นฐาน)</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p clear="all">
+<p class="table-title">ตารางวิธีการคำนวณจังหวะจุดระเบิด</p>
+<p>
+<div>A จังหวะการจุดระเบิดพื้นฐาน, B: การปรับแก้สำหรับจังหวะการจุดระเบิด</div>
+</p>
+<table class="table-flame" border="1">
+<tbody>
+<tr>
+<td id="" align="center" colspan="2" rowspan="2">
+<div class="tbody"><span>รายละเอียด</span></div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody"><span>วิธีการคำนวณหรือวิธีการกำหนดสำหรับจังหวะจุดระเบิด การล่วงหน้าจังหวะจุดระเบิด และการปรับแก้</span></div>
+</td>
+<td id="" align="center" colspan="3">
+<div class="tbody">โซนควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left"><img src="images/am3zzn00003455.png"></td>
+<td id="" align="left"><img src="images/am3zzn00003456.png"></td>
+<td id="" align="left"><img src="images/am3zzn00003457.png"></td>
+</tr>
+<tr>
+<td id="" align="left" colspan="2">
+<div class="tbody">การจุดระเบิดในการสตาร์ท</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กำหนดตามอุณหภูมิน้ำหล่อเย็นเครื่องยนต์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">A</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="2">
+<div class="tbody"><span>การจุดระเบิดโดยประมาณของรอบการทำงาน</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody"><span>การล่วงหน้าจังหวะจุดระเบิดรอบเดินเบา</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody"><span>กำหนดค่าตามความเร็วเป้าหมายและประสิทธิภาพการอัดอากาศ<sup>*</sup></span></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">A</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody"><span>การล่วงหน้าจังหวะจุดระเบิดพื้นฐาน</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody"><span>กำหนดค่าตามความเร็วรอบเครื่องยนต์และประสิทธิภาพการอัดอากาศ<sup>*</sup></span></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="8">
+<div class="tbody">การปรับแก้</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การปรับแก้การล่วงหน้าจังหวะจุดเบิดตามอุณหภูมิน้ำหล่อเย็นเครื่องยนต์</div>
+</td>
+<td id="" align="left">
+<div class="tbody">จุดประสงค์: ทำให้การเผาไหม้มีเสภียรภาพเมื่ออุณหภูมิน้ำหล่อเย็นเครื่องยนต์ต่ำ</div>
+<div class="list-title">ตามอุณหภูมิน้ำหล่อเย็นเครื่องยนต์</div>
+<div class="list">•&nbsp;&nbsp;ประสิทธิภาพการอัดอากาศสูง<sup>*</sup>, อุณหภูมิน้ำหล่อเย็นเครื่องยนต์ต่ำ→การปรับแก้มาก</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">B</div>
+</td>
+<td id="" align="center">
+<div class="tbody">B</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การปรับแก้อุณหภูมิไอดี</div>
+</td>
+<td id="" align="left">
+<div class="tbody">จุดประสงค์: ยับยั้งการน็อคเมื่ออุณหภูมิไอดีของเครื่องยนต์สูง</div>
+<div class="list-title">ตามอุณหภูมิไอดีของเครื่องยนต์และอุณหภูมิน้ำหล่อเย็นเครื่องยนต์</div>
+<div class="list">•&nbsp;&nbsp;อุณหภูมิไอดีของเครื่องยนต์สูง, อุณหภูมิไอดีของเครื่องยนต์สูง→การปรับแก้มาก</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">B</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การปรับแก้การหน่วงจังหวะการจุดระเบิดในการเพิ่มประสิทธิภาพการอุ่น</div>
+</td>
+<td id="" align="left">
+<div class="tbody">จุดประสงค์: กระตุ้นอุปกรณ์แปรสภาพก๊าซไอเสียให้ทำงานเร็วขึ้น</div>
+<div class="list-title">สูงสุด 50 วินาทีหลังจากเครื่องยนต์สตาร์ทติด</div>
+<div class="list">•&nbsp;&nbsp;ตามอุณหภูมิน้ำหล่อเย็นเครื่องยนต์→การปรับแก้</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">B</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การปรับแก้การป้อนกลับความเร็วรอบเดินเบา</div>
+</td>
+<td id="" align="left">
+<div class="tbody">จุดประสงค์: ทำให้รอบเดินเบาสม่ำเสมอ</div>
+<div class="list-title">ขณะเดินเบา (ยับยั้งในระหว่างโหมดทดสอบ)</div>
+<div class="list">•&nbsp;&nbsp;ความแตกต่างมากระหว่างความเร็วรอบเครื่องยนต์จริงกับความเร็วรอบเครื่องยนต์เป้าหมาย→การปรับแก้มาก</div>
+<div class="list">•&nbsp;&nbsp;ความแตกต่างน้อยระหว่างความเร็วรอบเครื่องยนต์จริงกับความเร็วรอบเครื่องยนต์เป้าหมาย→การปรับแก้น้อย</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">B</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การปรับแก้การลดแรงบิด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">จุดประสงค์: เช่น การลดการกระตุกขณะเปลี่ยนเกียร์ การควบคุมการลื่นไถล หรือการยับยั้งการสั่นของรถ</div>
+<div class="list-title">ตามสัญญาณขอการลดแรงบิดจาก PCM, TCM หรือ DSC</div>
+<div class="list">•&nbsp;&nbsp;การขอการลดแรงบิดมาก→การปรับแก้มาก</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">B</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การปรับแก้การหน่วงการกลับมาทำงานจากการตัดน้ำมันเชื้อเพลิงขณะลดความเร็ว</div>
+</td>
+<td id="" align="left">
+<div class="tbody">จุดประสงค์: ลดการกระตุกในระหว่างการกลับมาทำงานจากการตัดน้ำมันเชื้อเพลิงขณะลดความเร็ว </div>
+<div class="list-title">การกลับมาทำงานจากการตัดน้ำมันเชื้อเพลิงขณะลดความเร็ว</div>
+<div class="list">•&nbsp;&nbsp;การปรับแก้ตามระยะเวลาตั้งแต่การกลับมาทำงานจากการตัดน้ำมันเชื้อเพลิง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">B</div>
+</td>
+<td id="" align="center">
+<div class="tbody">B</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การปรับแก้การหน่วงจังหวะจุดระเบิดจากการน็อค</div>
+</td>
+<td id="" align="left">
+<div class="tbody">จุดประสงค์: การยับยั้งการน็อค</div>
+<div class="list-title">การเร่งความเร็วเมื่อการเพิ่มขึ้นของปริมาณประสิทธิภาพการอัดอากาศ<sup>*</sup> (ปริมาณการเร่งความเร็ว) อยู่ที่ค่าที่กำหนด หรือมากกว่า</div>
+<div class="list">•&nbsp;&nbsp;ปริมาณการเร่งความเร็วมาก→การปรับแก้มาก</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">B</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การปรับแก้จังหวะการเปิด/ปิดวาล์ว</div>
+</td>
+<td id="" align="left">
+<div class="tbody">จุดประสงค์: ทำให้การเผาไหม้มีเสถียรภาพ</div>
+<div class="list-title">เมื่อความแตกต่างของเฟสเปลี่ยนแปลงเนื่องจากการควบคุมไทม์มิ่งวาล์วแปรผันแบบไฟฟ้าและการควบคุมไทม์มิ่งวาล์วแปรผัน</div>
+<div class="list">•&nbsp;&nbsp;การปรับแก้ตามการเปลี่ยนแปลงในความแตกต่างของเฟส</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">B</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*&nbsp;&nbsp;: ประสิทธิภาพการอัดอากาศ คือ อัตราปริมาณจริงของอากาศเข้าต่อปริมาณการอัดอากาศสูงสุด (ปริมาณมวลอากาศ) ของกระบอกสูบ ค่านี้จะเพิ่มขึ้นเป็นสัดส่วนกับการเพิ่มขึ้นของภาระเครื่องยนต์</div>
+</p><br clear="all"><p><a name="id0140g218820006"></a><p class="topic-title"><span class="topic-head"></span>การกำหนดจังหวะจุดระเบิด (VIN แบบ B)</p>
+<dl>
+<dd>
+<div class="list-title">การแบ่งโซนการควบคุม</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;PCM จะทำการควบคุมการจุดระเบิดที่แตกต่างกันสำหรับการสตาร์ทเครื่องยนต์และนอกเหนือจากการสตาร์ทเครื่องยนต์เพื่อให้การสตาร์ทเครื่องยนต์มีเสถียรภาพ</div>
+</dd>
+</dl>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">โซนควบคุม</p>
+</th>
+<th id="" align="center">
+<p class="thead">สภาวะการควบคุม</p>
+</th>
+<th id="" align="center">
+<p class="thead">วิธีการจุดระเบิด</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">โซนการสตาร์ทเครื่องยนต์</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความเร็วรอบเครื่องยนต์ต่ำกว่า 500 rpm</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสตาร์ทเครื่องยนต์</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">โซนปกติ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การทำงานของเครื่องยนต์ยกเว้นโซนการสตาร์ทเครื่องยนต์</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(การจุดระเบิดโดยประมาณของรอบการทำงาน) (กำหนดจังหวะการจุดระเบิดโดยเพิ่มแต่ละการปรับแก้กับการล่วงหน้าจังหวะจุดระเบิดพื้นฐาน)</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p clear="all">
+<p class="table-title">ตารางวิธีการคำนวณจังหวะจุดระเบิด</p>
+<p>
+<div>A จังหวะการจุดระเบิดพื้นฐาน, B: การปรับแก้สำหรับจังหวะการจุดระเบิด</div>
+</p>
+<table class="table-flame" border="1">
+<tbody>
+<tr>
+<td id="" align="center" colspan="2" rowspan="2">
+<div class="tbody"><span>รายละเอียด</span></div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody"><span>วิธีการคำนวณหรือวิธีการกำหนดสำหรับจังหวะจุดระเบิด การล่วงหน้าจังหวะจุดระเบิด และการปรับแก้</span></div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">โซนควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center"><img src="images/am6xun00001375.png"></td>
+<td id="" align="center"><img src="images/am6xun00001376.png"></td>
+</tr>
+<tr>
+<td id="" align="left" colspan="2">
+<div class="tbody">การจุดระเบิดในการสตาร์ท</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กำหนดตามอุณหภูมิน้ำหล่อเย็นเครื่องยนต์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">A</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody"><span>การจุดระเบิดโดยประมาณของรอบการทำงาน</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody"><span>การล่วงหน้าจังหวะจุดระเบิดพื้นฐาน</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody"><span>กำหนดค่าตามความเร็วรอบเครื่องยนต์และประสิทธิภาพการอัดอากาศ<sup>*</sup></span></div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="6">
+<div class="tbody">การปรับแก้</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การปรับแก้การล่วงหน้าจังหวะจุดเบิดตามอุณหภูมิน้ำหล่อเย็นเครื่องยนต์</div>
+</td>
+<td id="" align="left">
+<div class="tbody">จุดประสงค์: ทำให้การเผาไหม้มีเสภียรภาพเมื่ออุณหภูมิน้ำหล่อเย็นเครื่องยนต์ต่ำ</div>
+<div class="list-title">ตามอุณหภูมิน้ำหล่อเย็นเครื่องยนต์</div>
+<div class="list">•&nbsp;&nbsp;ประสิทธิภาพการอัดอากาศสูง<sup>*</sup>, อุณหภูมิน้ำหล่อเย็นเครื่องยนต์ต่ำ→การปรับแก้มาก</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">B</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การปรับแก้อุณหภูมิไอดี</div>
+</td>
+<td id="" align="left">
+<div class="tbody">จุดประสงค์: ยับยั้งการน็อคเมื่ออุณหภูมิไอดีของเครื่องยนต์สูง</div>
+<div class="list-title">ตามอุณหภูมิไอดีของเครื่องยนต์และอุณหภูมิน้ำหล่อเย็นเครื่องยนต์</div>
+<div class="list">•&nbsp;&nbsp;อุณหภูมิไอดีของเครื่องยนต์สูง, อุณหภูมิไอดีของเครื่องยนต์สูง→การปรับแก้มาก</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">B</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การปรับแก้การหน่วงจังหวะการจุดระเบิดในการเพิ่มประสิทธิภาพการอุ่น</div>
+</td>
+<td id="" align="left">
+<div class="tbody">จุดประสงค์: กระตุ้นอุปกรณ์แปรสภาพก๊าซไอเสียให้ทำงานเร็วขึ้น</div>
+<div class="list-title">สูงสุด 50 วินาทีหลังจากเครื่องยนต์สตาร์ทติด</div>
+<div class="list">•&nbsp;&nbsp;ตามอุณหภูมิน้ำหล่อเย็นเครื่องยนต์→การปรับแก้</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">B</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การปรับแก้การลดแรงบิด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">จุดประสงค์: เช่น การลดการกระตุกขณะเปลี่ยนเกียร์ การควบคุมการลื่นไถล หรือการยับยั้งการสั่นของรถ</div>
+<div class="list-title">ตามสัญญาณขอการลดแรงบิดจาก TCM หรือ DSC</div>
+<div class="list">•&nbsp;&nbsp;การขอการลดแรงบิดมาก→การปรับแก้มาก</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">B</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การปรับแก้การหน่วงจังหวะจุดระเบิดจากการน็อค</div>
+</td>
+<td id="" align="left">
+<div class="tbody">จุดประสงค์: การยับยั้งการน็อค</div>
+<div class="list-title">การเร่งความเร็วเมื่อการเพิ่มขึ้นของปริมาณประสิทธิภาพการอัดอากาศ<sup>*</sup> (ปริมาณการเร่งความเร็ว) อยู่ที่ค่าที่กำหนด หรือมากกว่า</div>
+<div class="list">•&nbsp;&nbsp;ปริมาณการเร่งความเร็วมาก→การปรับแก้มาก</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">B</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การปรับแก้จังหวะการเปิด/ปิดวาล์ว</div>
+</td>
+<td id="" align="left">
+<div class="tbody">จุดประสงค์: ทำให้การเผาไหม้มีเสถียรภาพ</div>
+<div class="list-title">เมื่อความแตกต่างของเฟสเปลี่ยนแปลงเนื่องจากการควบคุมไทม์มิ่งวาล์วแปรผันแบบไฟฟ้าและการควบคุมไทม์มิ่งวาล์วแปรผัน</div>
+<div class="list">•&nbsp;&nbsp;การปรับแก้ตามการเปลี่ยนแปลงในความแตกต่างของเฟส</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&nbsp;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">B</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*&nbsp;&nbsp;: ประสิทธิภาพการอัดอากาศ คือ อัตราปริมาณจริงของอากาศเข้าต่อปริมาณการอัดอากาศสูงสุด (ปริมาณมวลอากาศ) ของกระบอกสูบ ค่านี้จะเพิ่มขึ้นเป็นสัดส่วนกับการเพิ่มขึ้นของภาระเครื่องยนต์</div>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ถ้าได้รับข้อมูลที่เกี่ยวข้องกับระบบยับยั้งการทำงานของเครื่องยนต์ (ยับยั้งการสตาร์ทเครื่องยนต์) จากชุดเปิด/ปิดการทำงาน PCM จะหยุดการจุดระเบิด</div>
+<div class="list">•&nbsp;&nbsp;เมื่อได้รับสัญญาณการชนปะทะจากโหมดควบคุม SAS, PCM จะหยุดการจุดระเบิด</div>
+</dd>
+</dl>
+</p>
+</body>
+</html>

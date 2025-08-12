@@ -1,0 +1,171 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>TCM [GW6A-EL, GW6AX-EL]</title>
+</head>
+<body><a name="id0517i2362000"></a><p class="servinfo-title"><span class="servinfo-head"></span>TCM [GW6A-EL, GW6AX-EL]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0517i2362000</p><br clear="all"><a name="id0517i236200001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>จุดประสงค์, การทำงาน</p>
+<div class="list">•&nbsp;&nbsp;TCM จะตรวจจับสภาวะรถ และทำการคำนวณและประมวลผลตามข้อมูลสัญญาณอินพุทจากเซ็นเซอร์และสวิตช์แต่ละแบบ</div>
+<div class="list">•&nbsp;&nbsp;ส่งสัญญาณควบคุมไปที่โซลินอยด์วาล์วแต่ละตัวเพื่อให้การควบคุมแต่ละประเภททำงานอย่างเหมาะสมที่สุดตามสภาวะรถ</div><br clear="all"><p><a name="id0517i236200002"></a><p class="topic-title"><span class="topic-head"></span>ตารางฟังก์ชั่นการทำงาน</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center" colspan="4">
+<p class="thead">รายการการควบคุม</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายละเอียดการควบคุมหลัก</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left" rowspan="4">
+<div class="tbody">การควบคุมจุดเปลี่ยนเกียร์</div>
+</td>
+<td id="" align="left" rowspan="3">
+<div class="tbody">การควบคุมการเปลี่ยนเกียร์อัตโนมัติ</div>
+<div class="tbody">(ตำแหน่ง D)</div>
+</td>
+<td id="" align="left" rowspan="3">
+<div class="tbody">โหมดการขับขี่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โหมดปกติ</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;การเลือกโหมดในระหว่างการขับขี่ปกติ</div>
+<div class="list">•&nbsp;&nbsp;ทำการเปลี่ยนเกียร์อัตโนมัติสอดคล้องกับความเร็วรถและปริมาณการเหยียบแป้นคันเร่ง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">โหมดการเปลี่ยนเกียร์ที่ปรับให้เหมาะสม (AAS)</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;การเปลี่ยนเกียร์ขึ้นโดยไม่จำเป็นจะถูกยับยั้งเป็นเวลาหลายวินาทีโดยการรักษาเกียร์ให้สอดคล้องกับความเร็วในการทำงานเมื่อปล่อยแป้นคันเร่ง</div>
+<div class="list">•&nbsp;&nbsp;เกียร์ที่เหมาะสมที่สุดทางด้านความเร็วรถต่ำจะถูกเลือก และทำการเปลี่ยนเกียร์ลงให้สอดคล้องกับแรงการทำงานเมื่อเหยียบแป้นเบรก</div>
+<div class="list">•&nbsp;&nbsp;ในระหว่างการเข้าโค้ง การเปลี่ยนเกียร์ขึ้นจะถูกยับยั้งในการเตรียมการสำหรับการเร่ิงความเร็วหลังจากการเข้าโค้ง</div>
+<div class="list">•&nbsp;&nbsp;ในพื้นที่สูง เกียร์ที่เหมาะสมที่สุดจะถูกเลือกให้สอดคล้องกับสภาพแวดล้อม</div>
+<div class="list">•&nbsp;&nbsp;ความลาดชันจะถูกคำนวณใน TCM เพื่อเลือกเกียร์ที่เหมาะสมสำหรับทางชันและทางลาดลง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">โหมดอุณหภูมิ ATF สูง</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ควบคุมแรงบิดเครื่องยนต์เมื่ออุณหภูมิ ATF สูง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" colspan="3">
+<div class="tbody">การควบคุมการเปลี่ยนเกียร์แบบเกียร์ธรรมดา</div>
+<div class="tbody">(ตำแหน่ง M)</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;เมื่อเลือกตำแหน่ง M การเปลี่ยนเกียร์แบบเกียร์ธรรมดาจะถูกจัดลำดับตามการเปลี่ยนเกียร์ขึ้น / ลงของคนขับ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="3">
+<div class="tbody">การควบคุมแรงดันการเปลี่ยนเกียร์</div>
+</td>
+<td id="" align="left" colspan="3">
+<div class="tbody">การควบคุมแรงดันท่อทาง</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ควบคุมแรงดันท่อทางด้วยการควบคุมที่ละเอียดและแม่นยำสูงสอดคล้องกับสภาวะของภาระเครื่องยนต์และสภาวะการขับรถ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" colspan="3">
+<div class="tbody">การควบคุมการเปลี่ยนเกียร์ด้วยไฟฟ้าโดยตรง</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ทำการควบคุมแรงดันการจับคลัตช์ด้วยอิเล็กทรอนิกส์โดยตรงให้เหมาะสมกับสภาวะของภาระเครื่องยนต์และสภาวะการขับขี่รถ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" colspan="3">
+<div class="tbody">การควบคุมการตั้งค่าความจำ</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;จดจำการเปลี่ยนแปลงของสมรรถนะเครื่องยนต์และระยะเวลาการเสื่อมสภาพของเกียร์เพื่อปรับแก้แรงดันการจับคลัตช์ให้เหมาะสมที่สุด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" colspan="4">
+<div class="tbody">การควบคุมคลัตช์ทอร์คคอนเวอร์เตอร์ (TCC)</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;กระตุ้นการควบคุม TCC โดยตรงหลังจากการเร่งความเร็วจากจุดหยุดนิ่งด้วยการนำเอาการควบคุม TCC ประสิทธิภาพสูงมาใช้</div>
+<div class="list">•&nbsp;&nbsp;โดยการค่อยๆ จับ / ปล่อยลูกสูบ TCC การกระตุกในระหว่างการทำงานจึงลดลง</div>
+<div class="list">•&nbsp;&nbsp;เสริมการควบคุม TCC เมื่อปล่อยแป้นคันเร่งสุดเพื่อการประหยัดน้ำมันเชื้อเพลิงและประสิทธิภาพการปล่อยมลพิษที่ดียิ่งขึ้น</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" colspan="4">
+<div class="tbody">การควบคุมการทำงานร่วมกันของเครื่องยนต์-เกียร์</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ควบคุมแรงบิดเครื่องยนต์ขณะเปลี่ยนเกียร์ให้เหมาะสมที่สุด</div>
+<div class="list">•&nbsp;&nbsp;คำนวณแรงดันการจับคลัตช์ที่เหมาะสมที่สุดตามแรงบิดเครื่องยนต์</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" colspan="4">
+<div class="tbody">ระบบวิเคราะห์ปัญหาบนรถ</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ส่วนหลักของการควบคุมเกียร์รวมถึงฟังก์ชั่นการวิเคราะห์ตนเอง ในกรณีที่มีความบกพร่อง ไฟเตือนเกียร์อัตโนมัติจะติดสว่างเพื่อเตือนให้คนขับทราบ และรหัสวิเคราะห์ปัญหาจะถูกเก็บบันทึกไว้ใน TCM</div>
+<div class="list">•&nbsp;&nbsp;เมื่อตรวจพบความบกพร่องของเกียร์โดยผลที่ได้จากการทดสอบการวิเคราะห์ปัญหาบนรถ การควบคุมระบบจะถูกเปลี่ยนเพื่อป้องกันสถานการณ์ที่ไม่ปลอดภัยในขณะขับขี่</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</p><br clear="all"><a name="id0517i236200003"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>โครงสร้าง</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001719.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001719</div>
+</td>
+</tr>
+</table>
+<p class="figure-title">แผนผังแบบบล็อก</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00002317.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00002317</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id0517i236200004"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<p class="figure-title">ความสัมพันธ์ระหว่างการควบคุมกับส่วนสัญญาณอินพุท / เอาท์พุท</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00002318.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00002318</div>
+</td>
+</tr>
+</table>
+</body>
+</html>

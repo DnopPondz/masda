@@ -1,0 +1,491 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>การควบคุมจุดเปลี่ยนเกียร์ (การควบคุมการเปลี่ยนเกียร์แบบเกียร์ธรรมดา) [GW6A-EL, GW6AX-EL]</title>
+</head>
+<body><a name="id0517i2362200"></a><p class="servinfo-title"><span class="servinfo-head"></span>การควบคุมจุดเปลี่ยนเกียร์ (การควบคุมการเปลี่ยนเกียร์แบบเกียร์ธรรมดา) [GW6A-EL, GW6AX-EL]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0517i2362200</p>
+<dl>
+<dd>
+<div class="attention2-label">ข้อควรระวัง</div>
+</dd>
+<dd>
+<div class="attention2">
+<div class="list">•&nbsp;&nbsp;ข้อมูลจำเพาะของรถจะแตกต่างกันตามหมายเลขประจำรถ (VIN)</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;VIN แบบ A:<div>JM0 KE****** 100001&mdash;</div>
+<div>JM6 KE****** 100001&mdash;</div>
+<div>JM8 KE****** 100001&mdash;</div>
+<div>JMZ KE****** 100001&mdash;</div>
+</div>
+<div class="list">―&nbsp;&nbsp;VIN แบบ B:<div>JM0 KE****** 200001&mdash;</div>
+<div>JM6 KE****** 200001&mdash;</div>
+<div>JM8 KE****** 200001&mdash;</div>
+<div>JMZ KE****** 200001&mdash;</div>
+</div>
+</dd>
+</dl>
+</div>
+</dd>
+</dl><br clear="all"><a name="id0517i236220001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รายละเอียด</p>
+<div class="list">•&nbsp;&nbsp;TCM จะสั่งให้การควบคุมการเปลี่ยนเกียร์แบบเกียร์ธรรมดาทำงานเมื่อเลือกตำแหน่ง M</div>
+<div class="list">•&nbsp;&nbsp;ถ้าเลือกตำแหน่ง M การเปลี่ยนเกียร์แบบเกียร์ธรรมดาจะถูกจัดลำดับตามการเปลี่ยนเกียร์ขึ้น / ลงของคนขับ อย่างไรก็ตาม เพื่อความปลอดภัยในการขับขี่และป้องกัน ATX การเปลี่ยนเกียร์อัตโนมัติต่ำสุดอาจเกิดขึ้น</div><br clear="all"><a name="id0517i236220002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>โครงสร้าง</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00000916.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00000916</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id0517i236220003"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<div class="ptxt">VIN แบบ A</div>
+<div class="list">•&nbsp;&nbsp;สามารถเลือกเกียร์ได้โดยการเลื่อนคันเกียร์ไปข้างหน้าและถอยหลังในขณะขับขี่ในตำแหน่ง M</div>
+<div class="list">•&nbsp;&nbsp;ขณะเลื่อนคันเกียร์จากตำแหน่ง D ไปที่ M ในขณะขับขี่ เกียร์ที่ใช้อยู่ในขณะขับขี่ในตำแหน่ง D จะถูกรักษาไว้ สำหรับการขับขี่ในตำแหน่ง D เกียร์ 6 อย่างไรก็ตาม ขณะเลื่อนคันเกียร์ออกจากตำแหน่ง D ไปที่ M โดยที่ไม่เหยียบแป้นคันเร่ง เกียร์จะเปลี่ยนจากเกียร์ 6 ไปที่เกียร์ 5 สำหรับการขับขี่ในเกียร์ 5 ขณะเลื่อนคันเกียร์ออกจากตำแหน่ง D ไปที่ M โดยที่ไม่เหยียบแป้นคันเร่ง เกียร์จะเปลี่ยนจากเกียร์ 5 ไปที่เกียร์ 4</div>
+<div class="list">•&nbsp;&nbsp;เมื่อทำการเปลี่ยนเกียร์ลงโดยใช้คันเกียร์ขณะที่ไม่เหยียบแป้นคันเร่ง และคันเกียร์อยู่ในตำแหน่ง M การควบคุมการกระตุก (การปรับให้เข้ากับความเร็วรอบเครื่องยนต์) จะทำงาน</div>
+<div class="list">•&nbsp;&nbsp;ถ้าอุณหภูมิ ATF เกินกว่าอุณหภูมิที่กำหนดในขณะอยู่ในโหมดแมนน่วล TCM จะเปลี่ยนการควบคุมไปที่การควบคุมเกียร์อัตโนมัติ และปิดตัวแสดงสถานะตำแหน่งเกียร์เพื่อลดภาระเกียร์ เมื่ออุณหภูมิ ATF ลดลงไปที่อุณหภูมิที่เหมาะสม TCM จะทำให้สามารถขับขี่ในโหมดแมนน่วลได้ และทำให้ตัวแสดงสถานะตำแหน่งเกียร์ติดขึ้นอีกครั้ง</div>
+<div class="list">•&nbsp;&nbsp;ในระหว่างการควบคุมการเปลี่ยนเกียร์แบบแมนน่วล ในทุกความเร็วเกียร์ แรงเบรกด้วยเครื่องยนต์สามารถทำได้สอดคล้องกับอัตราทดเกียร์ นอกจากนี้ ถ้าความเร็วรถถึงความเร็วหนึ่งหรือต่ำกว่า การเปลี่ยนเกียร์ลงจะทำโดยอัตโนมัติ</div>
+<p clear="all">
+<p class="table-title">การเปลี่ยนเกียร์และเกียร์แมนน่วล</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center" colspan="2">
+<p class="thead">การเปลี่ยนเกียร์</p>
+</th>
+<th id="" align="center">
+<p class="thead">เกียร์</p>
+</th>
+<th id="" align="center">
+<p class="thead">การเปลี่ยนเกียร์ทำได้ / ทำไม่ได้</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left" rowspan="14">
+<div class="tbody">การเปลี่ยนเกียร์ขึ้น</div>
+</td>
+<td id="" align="left" rowspan="5">
+<div class="tbody">ใช้งานหนึ่งครั้ง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เกียร์ 1 ไปที่เกียร์ 2</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สามารถทำได้ทั้งขณะขับขี่และหยุดรถ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">เกียร์ 2 ไปที่เกียร์ 3</div>
+</td>
+<td id="" align="left" rowspan="13">
+<div class="tbody">สามารถทำได้ขณะขับขี่ด้วยความเร็วที่กำหนดหรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">เกียร์ 3 ไปที่เกียร์ 4</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">เกียร์ 4 ไปที่เกียร์ 5</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">เกียร์ 5 ไปที่เกียร์ 6</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="4">
+<div class="tbody">ใช้งาน 2 ครั้งติดต่อกัน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เกียร์ 1 ไปที่เกียร์ 3</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">เกียร์ 2 ไปที่เกียร์ 4</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">เกียร์ 3 ไปที่เกียร์ 5</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">เกียร์ 4 ไปที่เกียร์ 6</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="3">
+<div class="tbody">ใช้งาน 3 ครั้งติดต่อกัน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เกียร์ 1 ไปที่เกียร์ 4</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">เกียร์ 2 ไปที่เกียร์ 5</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">เกียร์ 3 ไปที่เกียร์ 6</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="2">
+<div class="tbody">ใช้งาน 4 ครั้งติดต่อกัน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เกียร์ 1 ไปที่เกียร์ 5</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">เกียร์ 2 ไปที่เกียร์ 6</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="14">
+<div class="tbody">การเปลี่ยนเกียร์ลง</div>
+</td>
+<td id="" align="left" rowspan="5">
+<div class="tbody">ใช้งานหนึ่งครั้ง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เกียร์ 6 ไปที่เกียร์ 5</div>
+</td>
+<td id="" align="left" rowspan="14">
+<div class="tbody">สามารถทำได้ขณะขับขี่ด้วยความเร็วที่กำหนดหรือน้อยกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">เกียร์ 5 ไปที่เกียร์ 4</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">เกียร์ 4 ไปที่เกียร์ 3</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">เกียร์ 3 ไปที่เกียร์ 2</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">เกียร์ 2 ไปที่เกียร์ 1</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="4">
+<div class="tbody">ใช้งาน 2 ครั้งติดต่อกัน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เกียร์ 6 ไปที่เกียร์ 4</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">เกียร์ 5 ไปที่เกียร์ 3</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">เกียร์ 4 ไปที่เกียร์ 2</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">เกียร์ 3 ไปที่เกียร์ 1</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="3">
+<div class="tbody">ใช้งาน 3 ครั้งติดต่อกัน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เกียร์ 6 ไปที่เกียร์ 3</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">เกียร์ 5 ไปที่เกียร์ 2</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">เกียร์ 4 ไปที่เกียร์ 1</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="2">
+<div class="tbody">ใช้งาน 4 ครั้งติดต่อกัน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เกียร์ 6 ไปที่เกียร์ 2</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">เกียร์ 5 ไปที่เกียร์ 1</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="list">•&nbsp;&nbsp;การเปลี่ยนเกียร์อาจยกเลิกขึ้นอยู่กับความเร็วรถ ถ้าการเปลี่ยนเกียร์ลงถูกยกเลิก ตัวแสดงสถานะตำแหน่งเกียร์จะติดขึ้นเพื่อเตือนให้คนคับทราบ</div>
+<div class="list">•&nbsp;&nbsp;ถ้าเครื่องยนต์เร่งรอบถึงความเร็วรอบเครื่องยนต์สูง การควบคุมต่อไปนี้จะทำเพื่อป้องกันเครื่องยนต์:</div>
+<dl>
+<dd class="list">
+<div class="list">1.&nbsp;&nbsp;ลิ้นเร่งจะถูกบังคับเพื่อไม่ให้ความเร็วรอบเครื่องยนต์เกินช่วงความเร็วเกินและความเร็วรอบเครื่องยนต์จะสม่ำเสมอที่ความเร็วต่ำกว่าช่วงความเร็วเกิน</div>
+<div class="list">2.&nbsp;&nbsp;ถ้าสภาวะความเร็วรอบเครื่องยนต์สูงเกิดต่อเนื่อง ความเร็วรอบเครื่องยนต์จะลดลงโดยการบังคับเปลี่ยนเกียร์ขึ้น</div>
+</dd>
+</dl><br clear="all"><p><a name="id0517i236220004"></a><p class="topic-title"><span class="topic-head"></span>โหมดล็อกเกียร์ 2</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เมื่อหยุดรถหรือความเร็วรถต่ำเกินไป เลื่อนคันเกียร์ไปทางด้าน + และเกียร์จะอยู่ที่เกียร์ 2</div>
+<div class="list">•&nbsp;&nbsp;บนพื้นผิวที่ลื่น เช่น ถนนที่มีหิมะ การเร่ิงความเร็วไปข้างหน้าและการขับขี่จะง่ายขึ้น ขณะที่อยู่ในโหมดล็อกเกียร์ 2 และเลื่อนคันเกียร์ไปที่เกียร์อื่นนอกเหนือจากเกียร์ 2 โหมดล็อกเกียร์ 2 จะถูกยกเลิก</div>
+</dd>
+</dl>
+</p><br clear="all"><a name="id0517i236220005"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<div class="ptxt">VIN แบบ B</div>
+<div class="list">•&nbsp;&nbsp;สามารถเลือกเกียร์ได้โดยการเลื่อนคันเกียร์ไปข้างหน้าและถอยหลังในขณะขับขี่ในตำแหน่ง M</div>
+<div class="list">•&nbsp;&nbsp;ขณะเลื่อนคันเกียร์จากตำแหน่ง D ไปที่ M ในขณะขับขี่ เกียร์ที่ใช้อยู่ในขณะขับขี่ในตำแหน่ง D จะถูกรักษาไว้ สำหรับการขับขี่ในตำแหน่ง D เกียร์ 6 อย่างไรก็ตาม ขณะเลื่อนคันเกียร์ออกจากตำแหน่ง D ไปที่ M โดยที่ไม่เหยียบแป้นคันเร่ง เกียร์จะเปลี่ยนจากเกียร์ 6 ไปที่เกียร์ 5 สำหรับการขับขี่ในเกียร์ 5 ขณะเลื่อนคันเกียร์ออกจากตำแหน่ง D ไปที่ M โดยที่ไม่เหยียบแป้นคันเร่ง เกียร์จะเปลี่ยนจากเกียร์ 5 ไปที่เกียร์ 4</div>
+<div class="list">•&nbsp;&nbsp;เมื่อทำการเปลี่ยนเกียร์ลงโดยใช้คันเกียร์ขณะที่ไม่เหยียบแป้นคันเร่ง และคันเกียร์อยู่ในตำแหน่ง M การควบคุมการกระตุก (การปรับให้เข้ากับความเร็วรอบเครื่องยนต์) จะทำงาน</div>
+<div class="list">•&nbsp;&nbsp;เมื่อเหยียบแป้นคันเร่งสุดในขณะขับขี่ในตำแหน่ง M การคลิกดาวน์จะทำงาน</div>
+<div class="list">•&nbsp;&nbsp;ถ้าอุณหภูมิ ATF เกินกว่าอุณหภูมิที่กำหนดในขณะอยู่ในโหมดแมนน่วล TCM จะเปลี่ยนการควบคุมไปที่การควบคุมเกียร์อัตโนมัติ และปิดตัวแสดงสถานะตำแหน่งเกียร์เพื่อลดภาระเกียร์ เมื่ออุณหภูมิ ATF ลดลงไปที่อุณหภูมิที่เหมาะสม TCM จะทำให้สามารถขับขี่ในโหมดแมนน่วลได้ และทำให้ตัวแสดงสถานะตำแหน่งเกียร์ติดขึ้นอีกครั้ง</div>
+<div class="list">•&nbsp;&nbsp;ในระหว่างการควบคุมการเปลี่ยนเกียร์แบบแมนน่วล ในทุกความเร็วเกียร์ แรงเบรกด้วยเครื่องยนต์สามารถทำได้สอดคล้องกับอัตราทดเกียร์ นอกจากนี้ ถ้าความเร็วรถถึงความเร็วหนึ่งหรือต่ำกว่า การเปลี่ยนเกียร์ลงจะทำโดยอัตโนมัติ</div>
+<p clear="all">
+<p class="table-title">การเปลี่ยนเกียร์และเกียร์แมนน่วล</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center" colspan="2">
+<p class="thead">การเปลี่ยนเกียร์</p>
+</th>
+<th id="" align="center">
+<p class="thead">เกียร์</p>
+</th>
+<th id="" align="center">
+<p class="thead">การเปลี่ยนเกียร์ทำได้ / ทำไม่ได้</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left" rowspan="14">
+<div class="tbody">การเปลี่ยนเกียร์ขึ้น</div>
+</td>
+<td id="" align="left" rowspan="5">
+<div class="tbody">ใช้งานหนึ่งครั้ง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เกียร์ 1 ไปที่เกียร์ 2</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สามารถทำได้ทั้งขณะขับขี่และหยุดรถ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">เกียร์ 2 ไปที่เกียร์ 3</div>
+</td>
+<td id="" align="left" rowspan="13">
+<div class="tbody">สามารถทำได้ขณะขับขี่ด้วยความเร็วที่กำหนดหรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">เกียร์ 3 ไปที่เกียร์ 4</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">เกียร์ 4 ไปที่เกียร์ 5</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">เกียร์ 5 ไปที่เกียร์ 6</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="4">
+<div class="tbody">ใช้งาน 2 ครั้งติดต่อกัน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เกียร์ 1 ไปที่เกียร์ 3</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">เกียร์ 2 ไปที่เกียร์ 4</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">เกียร์ 3 ไปที่เกียร์ 5</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">เกียร์ 4 ไปที่เกียร์ 6</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="3">
+<div class="tbody">ใช้งาน 3 ครั้งติดต่อกัน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เกียร์ 1 ไปที่เกียร์ 4</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">เกียร์ 2 ไปที่เกียร์ 5</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">เกียร์ 3 ไปที่เกียร์ 6</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="2">
+<div class="tbody">ใช้งาน 4 ครั้งติดต่อกัน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เกียร์ 1 ไปที่เกียร์ 5</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">เกียร์ 2 ไปที่เกียร์ 6</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="14">
+<div class="tbody">การเปลี่ยนเกียร์ลง</div>
+</td>
+<td id="" align="left" rowspan="5">
+<div class="tbody">ใช้งานหนึ่งครั้ง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เกียร์ 6 ไปที่เกียร์ 5</div>
+</td>
+<td id="" align="left" rowspan="14">
+<div class="tbody">สามารถทำได้ขณะขับขี่ด้วยความเร็วที่กำหนดหรือน้อยกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">เกียร์ 5 ไปที่เกียร์ 4</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">เกียร์ 4 ไปที่เกียร์ 3</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">เกียร์ 3 ไปที่เกียร์ 2</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">เกียร์ 2 ไปที่เกียร์ 1</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="4">
+<div class="tbody">ใช้งาน 2 ครั้งติดต่อกัน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เกียร์ 6 ไปที่เกียร์ 4</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">เกียร์ 5 ไปที่เกียร์ 3</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">เกียร์ 4 ไปที่เกียร์ 2</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">เกียร์ 3 ไปที่เกียร์ 1</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="3">
+<div class="tbody">ใช้งาน 3 ครั้งติดต่อกัน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เกียร์ 6 ไปที่เกียร์ 3</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">เกียร์ 5 ไปที่เกียร์ 2</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">เกียร์ 4 ไปที่เกียร์ 1</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="2">
+<div class="tbody">ใช้งาน 4 ครั้งติดต่อกัน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เกียร์ 6 ไปที่เกียร์ 2</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">เกียร์ 5 ไปที่เกียร์ 1</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="list">•&nbsp;&nbsp;การเปลี่ยนเกียร์อาจยกเลิกขึ้นอยู่กับความเร็วรถ ถ้าการเปลี่ยนเกียร์ลงถูกยกเลิก ตัวแสดงสถานะตำแหน่งเกียร์จะติดขึ้นเพื่อเตือนให้คนคับทราบ</div>
+<div class="list">•&nbsp;&nbsp;ถ้าเครื่องยนต์เร่งรอบถึงความเร็วรอบเครื่องยนต์สูง การควบคุมต่อไปนี้จะทำเพื่อป้องกันเครื่องยนต์:</div>
+<dl>
+<dd class="list">
+<div class="list">1.&nbsp;&nbsp;ลิ้นเร่งจะถูกบังคับเพื่อไม่ให้ความเร็วรอบเครื่องยนต์เกินช่วงความเร็วเกินและความเร็วรอบเครื่องยนต์จะสม่ำเสมอที่ความเร็วต่ำกว่าช่วงความเร็วเกิน</div>
+<div class="list">2.&nbsp;&nbsp;ถ้าสภาวะความเร็วรอบเครื่องยนต์สูงเกิดต่อเนื่อง ความเร็วรอบเครื่องยนต์จะลดลงโดยการบังคับเปลี่ยนเกียร์ขึ้น</div>
+</dd>
+</dl><br clear="all"><p><a name="id0517i236220006"></a><p class="topic-title"><span class="topic-head"></span>โหมดล็อกเกียร์ 2</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เมื่อหยุดรถหรือความเร็วรถต่ำเกินไป เลื่อนคันเกียร์ไปทางด้าน + และเกียร์จะอยู่ที่เกียร์ 2</div>
+<div class="list">•&nbsp;&nbsp;บนพื้นผิวที่ลื่น เช่น ถนนที่มีหิมะ การเร่ิงความเร็วไปข้างหน้าและการขับขี่จะง่ายขึ้น ขณะที่อยู่ในโหมดล็อกเกียร์ 2 และเลื่อนคันเกียร์ไปที่เกียร์อื่นนอกเหนือจากเกียร์ 2 โหมดล็อกเกียร์ 2 จะถูกยกเลิก</div>
+<div class="list">•&nbsp;&nbsp;ถ้าเหยียบแป้นคันเร่งสุดในโหมดล็อกเกียร์ 2 การคลิกดาวน์จะทำงาน และโหมดล็อกเกียร์ 2 จะถูกยกเลิก</div>
+</dd>
+</dl>
+</p>
+</body>
+</html>

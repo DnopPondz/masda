@@ -1,0 +1,143 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>การควบคุม EGR [SKYACTIV-D 2.2]</title>
+</head>
+<body><a name="id0140z7161400"></a><p class="servinfo-title"><span class="servinfo-head"></span>การควบคุม EGR [SKYACTIV-D 2.2]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0140z7161400</p><br clear="all"><a name="id0140z716140001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รายละเอียด</p>
+<div class="list">•&nbsp;&nbsp;การหมุนเวียนปริมาณก๊าซไอเสียไปยังห้องเผาไหม้ที่เหมาะสมที่สุดตามสภาวะการทำงานของเครื่องยนต์ PCM จะทำการควบคุม duty ของวาล์ว EGR (มอเตอร์ไฟฟ้ากระแสตรง) เพื่อเปิดและปิดวาล์ว</div>
+<div class="list">•&nbsp;&nbsp;อุณหภูมิไอดีจะเพิ่มขึ้นหรือลดลงอย่างรวดเร็วตามอุณหภูมิก๊าซไอเสีย และส่งผลต่ออุณหภูิมิการเผาไหม้ การเปิดและการปิดของวาล์ว EGR และวาล์วบายพาสชุดระบายความร้อน EGR จะถูกควบคุมตามอุณหภูมิน้ำหล่อเย็นเครื่องยนต์เพื่อให้ได้อุณหภูมิของก๊าซไอเสียที่หมุนเวียนในระบบเหมาะสมที่สุด</div>
+<div class="list">•&nbsp;&nbsp;ในระหว่างการควบคุมการเพิ่มการเดินเบารอบสูงและการทำงานของ DPF วาล์ว EGR จะถูกควบคุมเพื่อไม่ให้ทำงานเพื่อป้องกันไม่ให้น้ำมันเชื้อเพลิงที่ฉีดหลังหมุนวนเข้าไปทางด้านไอดี (หยุดการควบคุม EGR)</div><br clear="all"><a name="id0140z716140002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>แผนผังแบบบล็อก</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00002130.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00002130</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id0140z716140003"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<div class="list">•&nbsp;&nbsp;PCM จะคำนวณความเข้มออกซิเจนของอากาศเข้าที่ต้องการและปริมาณ EGR ที่จำเป็นเพื่อให้ได้ความเข้มของออกซิเจนตามสัญญาณอินพุท</div>
+<div class="list">•&nbsp;&nbsp;วาล์ว EGR จะถูกควบคุม duty ในการเปิด/ปิดเพื่อให้ปริมาณ EGR เป็นไปตามปริมาณเป้าหมาย</div>
+<dl>
+<div class="list-title">ความเข้มออกซิเจนเป้าหมาย</div>
+<dd class="list">
+<div class="list">•&nbsp;&nbsp;ความเข้มออกซิเจนเป้าหมายจะคำนวณได้จากเพิ่มการปรับแก้กับความเข้มออกซิเจนเป้าหมายพื้นฐานซึ่งคำนวณได้ตามปริมาณการฉีดน้ำมันเชื้อเพลิง</div>
+</dd>
+</dl>
+<dl>
+<div class="list-title">ปริมาณ EGR เป้าหมาย</div>
+<dd class="list">
+<div class="list">•&nbsp;&nbsp;ปริมาณ EGR เป้าหมายจะคำนวณได้จากความเข้มออกซิเจนอากาศเข้าเป้าหมาย ความเข้มออกซิเจนก๊าซไอเสีย และประสิทธิภาพการอัดอากาศ</div>
+</dd>
+</dl>
+<dl>
+<div class="list-title">ปริมาณ EGR จริง</div>
+<dd class="list">
+<div class="list">•&nbsp;&nbsp;ปริมาณ EGR จริงจะคำนวณได้จากเซ็นเซอร์ปริมาณอากาศ เซ็นเซอร์อุณหภูมิไอดี No.2 และเซ็นเซอร์อุณหภูมิอากาศที่บูสต์</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;PCM จะควบคุมสภาวะการเปิด/ปิดของวาล์ว EGR และวาล์วบายพาสชุดระบายความร้อน EGR ตามอุณหภูมิน้ำหล่อเย็นเครื่องยนต์</div><br clear="all"><p><a name="id0140z716140004"></a><p class="topic-title"><span class="topic-head"></span>เมื่ออุณหภูมิน้ำหล่อเย็นเครื่องยนต์ต่ำกว่า 55 &deg;C {131 &deg;F}</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;อุณหภูมิน้ำหล่อเย็นเครื่องยนต์ต่ำและจำเป็นต้องทำการอุ่นอากาศเข้า ด้วยเหตุนี้ ก๊าซไอเสียจะถูกหมุนวนโดยไม่ผ่านชุดระบายความร้อน EGR</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;วาล์ว EGR: ปิด</div>
+<div class="list">―&nbsp;&nbsp;วาล์วบายพาสชุดระบายความร้อน EGR: เปิด (ควบคุมปริมาณการไหล)</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00002143.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00002143</div>
+</td>
+</tr>
+</table>
+</p><br clear="all"><p><a name="id0140z716140005"></a><p class="topic-title"><span class="topic-head"></span>เมื่ออุณหภูมิน้ำหล่อเย็นเครื่องยนต์อยู่<span class="entry-title">ระหว่าง 55 &deg;C {131 &deg;F} กับ 70 &deg;C {158 &deg;F}</span></p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;วาล์ว EGR จะเปิดตามการเพิ่มขึ้นของอุณหภูมิน้ำหล่อเย็นเครื่องยนต์ อุณหภูมิของก๊าซไอเสียที่หมุนวนจะถูกปรับโดยชุดระบายความร้อน EGR</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;วาล์ว EGR: เปิดหรือปิดตามอุณหภูมิน้ำหล่อเย็นเครื่องยนต์</div>
+<div class="list">―&nbsp;&nbsp;วาล์วบายพาสชุดระบายความร้อน EGR: เปิด (ควบคุมปริมาณการไหล)</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00002144.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00002144</div>
+</td>
+</tr>
+</table>
+</p><br clear="all"><p><a name="id0140z716140006"></a><p class="topic-title"><span class="topic-head"></span>เมื่ออุณหภูมิน้ำหล่อเย็นเครื่องยนต์อยู่ที่ <span class="entry-title">70 &deg;C {158 &deg;F} หรือสูงกว่า</span></p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;หลังจากเครื่องยนต์อุ่น ก๊าซไอเสียจะถูกระบายความร้อนโดยชุดระบายความร้อน EGR วาล์วบายพาสชุดระบายความร้อน EGR จะเปิด/ปิดเพื่อปรับอุณหภูมิก๊าซไอเสีย</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;วาล์ว EGR: เปิด (ควบคุมปริมาณการไหล)</div>
+<div class="list">―&nbsp;&nbsp;วาล์วบายพาสชุดระบายความร้อน EGR: เปิดหรือปิดตามอุณหภูมิน้ำหล่อเย็นเครื่องยนต์</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00002145.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00002145</div>
+</td>
+</tr>
+</table>
+</p><br clear="all"><p><a name="id0140z716140007"></a><p class="topic-title"><span class="topic-head"></span>เมื่อการทำงานของวาล์วบายพาสชุดระบายความร้อน EGR ถูกยับยั้ง (อุณหภูมิก๊าซไอเสียอยู่ที่ <span class="entry-title">440 &deg;C {824 &deg;F} หรือสูงกว่า</span>)</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ถ้าอุณหภูมิก๊าซไอเสียสูงเกินไป วาล์ว EGR จะเปิดเพื่อป้องกันความเสียหายต่อวาล์วบายพาสชุดระบายความร้อน EGR</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;วาล์ว EGR: เปิด (ควบคุมปริมาณการไหล)</div>
+<div class="list">―&nbsp;&nbsp;วาล์วบายพาสชุดระบายความร้อน EGR: ปิด</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00002146.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00002146</div>
+</td>
+</tr>
+</table>
+</p>
+</body>
+</html>

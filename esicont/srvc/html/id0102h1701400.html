@@ -1,0 +1,324 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>รหัสวิเคราะห์ปัญหา P0112:00 [SKYACTIV-G 2.0]</title>
+</head>
+<body><a name="id0102h1701400"></a><p class="servinfo-title"><span class="servinfo-head"></span>รหัสวิเคราะห์ปัญหา P0112:00 [SKYACTIV-G 2.0]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0102h1701400</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา P0112:00</p>
+</th>
+<th id="" align="left">
+<p class="thead">สัญญาณอินพุทวงจรเซ็นเซอร์ IAT No.1 ต่ำกว่าที่กำหนด</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สภาวะการตรวจพบ</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;PCM จะคอยตรวจสอบสัญญาณเซ็นเซอร์ IAT No.1 ถ้า PCM ตรวจพบว่าแรงดันไฟฟ้าเซ็นเซอร์ IAT No.1 ที่ขั้ว 2U ของ PCM <span>ต่ำกว่า 0.19 V</span> เป็นเวลา <span>5 วินาที</span> PCM จะตัดสินว่าวงจรเซ็นเซอร์ IAT No.1 มีความบกพร่อง</div>
+<div class="list-title">ข้อมูลสนับสนุนการวิเคราะห์ปัญหา</div>
+<div class="list">•&nbsp;&nbsp;กรณีนี้คือ การตรวจสอบต่อเนื่อง (CCM)</div>
+<div class="list">•&nbsp;&nbsp;ไฟเตือนตรวจเช็คเครื่องยนต์จะติดสว่างถ้า PCM ตรวจพบสภาวะความบกพร่องดังกล่าวด้านบนในระหว่างรอบการขับขี่แรก</div>
+<div class="list">•&nbsp;&nbsp;มีข้อมูลสภาพรถยนต์ (FREEZE FRAME DATA) (โหมด 2) / ข้อมูล Snapshot</div>
+<div class="list">•&nbsp;&nbsp;รหัสวิเคราะห์ปัญหาถูกเก็บไว้ในหน่วยความจำ PCM</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>ฟังก์ชั่น FAIL-SAFE</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;สั่งให้ไฟเตือนระบบไฟชาร์จติดสว่าง</div>
+<div class="list">•&nbsp;&nbsp;กำหนดอุณหภูมิไอดี (สำหรับการควบคุมเครื่องยนต์) ที่ <span>20 &deg;C {68 &deg;F}</span></div>
+<div class="list">•&nbsp;&nbsp;ยับยั้งการควบคุมการตัดน้ำมันเชื้อเพลิงในระหว่างการเปลี่ยนเกียร์</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สาเหตุที่เป็นไปได้</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ขั้วต่อหรือขั้วของเซ็นเซอร์ MAF / เซ็นเซอร์ IAT No.1 บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;เซ็นเซอร์ IAT No.1 บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระหว่างขั้ว A ของเซ็นเซอร์ MAF / เซ็นเซอร์ IAT No.1 กับขั้ว 2U ของ PCM ลัดวงจรลงกราวด์</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อหรือขั้วของ PCM บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;วงจรสัญญาณเซ็นเซอร์ IAT No.1 กับวงจรกราวด์ลัดวงจรกัน</div>
+<div class="list">•&nbsp;&nbsp;PCM บกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2"><img src="images/ac5wzw00000564.png"></td>
+</tr>
+</tbody>
+</table>
+</p>
+<p clear="all">
+<p class="table-title">ขั้นตอนการวิเคราะห์ปัญหา</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">การตรวจสอบ</p>
+</th>
+<th id="" align="center">
+<p class="thead">การดำเนินการ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">1</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบว่าข้อมูลสภาพรถยนต์ (FREEZE FRAME DATA) (โหมด 2) / ข้อมูล SNAPSHOT ได้รับการบันทึกแล้ว</div>
+<div class="list">•&nbsp;&nbsp;ข้อมูลสภาพรถยนต์ (FREEZE FRAME DATA) (โหมด 2) / ข้อมูล SNAPSHOT ได้รับการบันทึกแล้วหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">บันทึกข้อมูลสภาพรถยนต์ (FREEZE FRAME DATA) (โหมด 2) / ข้อมูล SNAPSHOT ตามคำสั่งซ่อม แล้วไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">2</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบว่ามีข้อมูลการบริการที่เกี่ยวข้อง</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบว่ามีข้อมูลการบริการที่เกี่ยวข้องหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;มีข้อมูลการบริการที่เกี่ยวข้องอื่นๆ หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ให้ทำการซ่อมหรือวิเคราะห์ปัญหาตามข้อมูลการบริการที่มี</div>
+<div class="list">•&nbsp;&nbsp;ถ้าแก้ไขปัญหาไม่ได้ ให้ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">3</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบสภาพขั้วต่อเซ็นเซอร์ MAF / เซ็นเซอร์ IAT NO.1</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อเซ็นเซอร์ MAF / เซ็นเซอร์ IAT No.1</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบการเชื่อมต่อที่ไม่สมบูรณ์ (เช่น ขั้วไฟฟ้าเสียหาย / หลุดออก การผุกร่อน)</div>
+<div class="list">•&nbsp;&nbsp;มีความบกพร่องใดๆ หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนขั้วต่อและ/หรือขั้วไฟฟ้า แล้วไปที่ขั้นตอน 8</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">4</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบเซ็นเซอร์ IAT NO.1</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบเซ็นเซอร์ IAT No.1<div>(ดูที่ <font class="extxref-label"><a href="id0140f4802200.html">การตรวจสอบเซ็นเซอร์อุณหภูมิไอดี (IAT) [SKYACTIV-G 2.0]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีความบกพร่องใดๆ หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนเซ็นเซอร์ MAF / เซ็นเซอร์ IAT No.1 แล้วไปที่ขั้นตอน 8</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0113z5801900.html">การถอด / การติดตั้งระบบไอดี [SKYACTIV-G 2.0]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">5</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรลงกราวด์ของวงจรสัญญาณเซ็นเซอร์ IAT NO.1</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบว่าขั้วต่อเซ็นเซอร์ MAF / เซ็นเซอร์ IAT No.1 ถูกปลดออกหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต่อเนื่องระหว่างขั้ว A ของเซ็นเซอร์ MAF / เซ็นเซอร์ IAT No.1 (ด้านชุดสายไฟ) กับกราวด์ตัวถัง</div>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ถ้าสามารถตรวจจับการลัดวงจรลงกราวด์ในชุดสายไฟได้:</div>
+<div class="list">•&nbsp;&nbsp;ซ่อมหรือเปลี่ยนชุดสายไฟที่เกิดการลัดวงจรลงกราวด์</div>
+<div class="tbody">ถ้าไม่สามารถตรวจจับการลัดวงจรลงกราวด์ในชุดสายไฟได้:</div>
+<div class="list">•&nbsp;&nbsp;เปลี่ยน PCM (การลัดวงจรลงกราวด์ของวงจรภายใน PCM)<div>(ดูที่ <font class="extxref-label"><a href="id0140f4802400.html">การถอด / การติดตั้ง PCM [SKYACTIV-G 2.0]</a></font>)</div>
+</div>
+<div class="tbody">ไปที่ขั้นตอน 8</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">6</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบสภาพขั้วต่อ PCM</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อ PCM</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบการเชื่อมต่อที่ไม่สมบูรณ์ (เช่น ขั้วไฟฟ้าเสียหาย / หลุดออก การผุกร่อน)</div>
+<div class="list">•&nbsp;&nbsp;มีความบกพร่องใดๆ หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนขั้วต่อและ/หรือขั้วไฟฟ้า แล้วไปที่ขั้นตอน 8</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">7</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรกันของวงจรสัญญาณเซ็นเซอร์ IAT NO.1 กับวงจรกราวด์</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบว่าขั้วต่อเซ็นเซอร์ MAF / เซ็นเซอร์ IAT No.1 และขั้วต่อ PCM ถูกปลดออกหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต่อเนื่องระหว่างขั้ว A และ B ของเซ็นเซอร์ MAF / เซ็นเซอร์ IAT No.1 (ด้านชุดสายไฟ)</div>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชุดสายไฟที่เกิดการลัดวงจรกัน แล้วไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">8</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบว่าการค้นหาสาเหตุปัญหาของรหัสวิเคราะห์ปัญหาเสร็จสมบูรณ์แล้ว</div>
+<div class="list">•&nbsp;&nbsp;ให้แน่ใจว่าได้ต่อขั้วต่อที่ปลดออกทั้งหมดกลับเข้าที่ื</div>
+<div class="list">•&nbsp;&nbsp;ลบรหัสวิเคราะห์ปัญหาออกจากหน่วยความจำ PCM โดยใช้ M-MDS<div>(ดูที่ <font class="extxref-label"><a href="id0102h1801100.html">ขั้นตอนหลังจากงานซ่อม [SKYACTIV-G 2.0]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;สตาร์ทเครื่องยนต์ และอุ่นเครื่องจนถึงอุณหภูมิการทำงาน</div>
+<div class="list">•&nbsp;&nbsp;ทำการทดสอบตัวเองแบบ KOEO หรือ KOER<div>(ดูที่ <font class="extxref-label"><a href="id0102h1801200.html">การทดสอบ KOEO/KOER ด้วยตนเอง [SKYACTIV-G 2.0]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีรหัสวิเคราะห์ปัญหาเดียวกันปรากฏขึ้นหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ทำซ้ำการตรวจสอบตั้งแต่ขั้นตอน 1</div>
+<div class="list">•&nbsp;&nbsp;ถ้าความบกพร่องเกิดขึ้นอีกครั้ง ให้เปลี่ยน PCM<div>(ดูที่ <font class="extxref-label"><a href="id0140f4802400.html">การถอด / การติดตั้ง PCM [SKYACTIV-G 2.0]</a></font>)</div>
+</div>
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">9</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบขั้นตอนหลังจากงานซ่อม</div>
+<div class="list">•&nbsp;&nbsp;ปฏิบัติตาม &ldquo;ขั้นตอนหลังจากงานซ่อม&rdquo;<div>(ดูที่ <font class="extxref-label"><a href="id0102h1801100.html">ขั้นตอนหลังจากงานซ่อม [SKYACTIV-G 2.0]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีรหัสวิเคราะห์ปัญหาปรากฏขึ้นหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่การตรวจสอบรหัสวิเคราะห์ปัญหานั้นๆ</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0102h1801500.html">ตารางรหัสวิเคราะห์ปัญหา [SKYACTIV-G 2.0]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การค้นหาสาเหตุปัญหาของรหัสวิเคราะห์ปัญหาเสร็จสมบูรณ์</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</body>
+</html>

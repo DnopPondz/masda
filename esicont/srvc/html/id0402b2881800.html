@@ -1,0 +1,167 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>รหัสวิเคราะห์ปัญหา U0402:00 [ระบบควบคุมการทรงตัวของรถ (DSC)])</title>
+</head>
+<body><a name="id0402b2881800"></a><p class="servinfo-title"><span class="servinfo-head"></span>รหัสวิเคราะห์ปัญหา U0402:00 [ระบบควบคุมการทรงตัวของรถ (DSC)])</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0402b2881800</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>รหัสวิเคราะห์ปัญหา</span></div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody"><span>U0402:00</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody"><span>ข้อความผิดปกติจากชุดส่งกำลัง/เกียร์</span></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody"><span>สภาวะการตรวจพบ</span></div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="list">•&nbsp;&nbsp;DSC HU/CM ได้รับสัญญาณความผิดพลาดจากชุดส่งกำลัง/เกียร์เป็นเวลา <span>1 s หรือมากกว่า</span>นั้นโดยที่บิดสวิตช์สตาร์ท ON (เครื่องยนต์ทำงานหรือไม่ทำงาน)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody"><span>ฟังก์ชั่น Fail-safe</span></div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="list">•&nbsp;&nbsp;ไฟแสดงสถานะ TCS/DSC และไฟเตือนหลัก<sup>*1</sup> ติดสว่าง</div>
+<div class="list">•&nbsp;&nbsp;ไฟเตือนระบบเตือนแรงดันลมยางติดสว่างหลังจากกะพริบ</div>
+<div class="list">•&nbsp;&nbsp;ยับยั้งการควบคุมระบบ TCS, DSC, ระบบป้องกันการพลิกคว่ำ (ROM), ฟังก์ชั่นการป้องกันรถยนต์พลิกคว่ำ<sup>*2</sup>, ระบบช่วยออกตัวบนทางชัน (HLA), TPMS, ระบบสมาร์ทซิตี้เบรก (SCBS)<sup>*1</sup> และการลดการชนปะทะระดับสอง (SCR)</div>
+<div class="list"><sup>*1</sup>&nbsp;&nbsp;:รุ่นที่มีระบบสมาร์ทซิตี้เบรก (SCBS)</div>
+<div class="list"><sup>*2</sup>&nbsp;&nbsp;:ATX เท่านั้น</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody"><span>สาเหตุที่เป็นไปได้</span></div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="list">•&nbsp;&nbsp;ชุดส่งกำลัง/เกียร์ไม่สามารถส่งสัญญาณปกติได้ชั่วคราว (รหัสวิเคราะห์ปัญหาถูกจัดเก็บใน TCM)</div>
+<div class="list">•&nbsp;&nbsp;ชุดส่งกำลัง/เกียร์บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;DSC HU/CM บกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody"><span>ผังวงจรระบบ</span></div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p clear="all">
+<p class="table-title">ขั้นตอนการวิเคราะห์ปัญหา</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">การตรวจสอบ</p>
+</th>
+<th id="" align="center">
+<p class="thead">การปฏิบัติ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">1</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบรหัสวิเคราะห์ปัญหาสำหรับ TCM</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;ทำการตรวจสอบรหัสวิเคราะห์ปัญหาสำหรับ TCM โดยใช้ M-MDS<div>(ดูที่ <font class="extxref-label"><a href="id050227290100.html">การตรวจสอบรหัสวิเคราะห์ปัญหาของระบบการวิเคราะห์ปัญหาบนรถ [FW6A-EL, FW6AX-EL]</a></font>)</div>
+<div>(ดูที่ <font class="extxref-label"><a href="id050230290100.html">การตรวจสอบรหัสวิเคราะห์ปัญหาของระบบการวิเคราะห์ปัญหาบนรถ [GW6A-EL, GW6AX-EL]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีรหัสวิเคราะห์ปัญหาปรากฏขึ้นหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมชิ้นส่วนที่บกพร่องตามการค้นหาสาเหตุปัญหาของรหัสวิเคราะห์ปัญหานั้นๆ</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id050227290200.html">ตารางรหัสวิเคราะห์ปัญหาของระบบการวิเคราะห์ปัญหาบนรถ [FW6A-EL, FW6AX-EL]</a></font>)</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id050230290200.html">ตารางรหัสวิเคราะห์ปัญหาของระบบการวิเคราะห์ปัญหาบนรถ [GW6A-EL, GW6AX-EL]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">2</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบว่าไม่มีรหัสวิเคราะห์ปัญหาเดียวกันปรากฏขึ้น</div>
+<div class="list">•&nbsp;&nbsp;ลบรหัสวิเคราะห์ปัญหาของ DSC HU/CM โดยใช้ M-MDS<div>(ดูที่ <font class="extxref-label"><a href="id0402b2800200.html">การวิเคราะห์ปัญหาบนรถ [ระบบควบคุมการทรงตัวของรถ (DSC)]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีรหัสวิเคราะห์ปัญหาเดียวกันปรากฏขึ้นหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ทำซ้ำการตรวจสอบตั้งแต่ขั้นตอน 1</div>
+<div class="tbody">ถ้าความบกพร่องเกิดขึ้นอีกครั้ง ให้เปลี่ยน TCM แล้วไปที่ขั้นตอนถัดไป</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0517h2118000.html">การถอด / การติดตั้งเรือนวาล์วควบคุม [FW6A-EL, FW6AX-EL]</a></font>)</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0517i2118000.html">การถอด / การติดตั้งเรือนวาล์วควบคุม [GW6A-EL, GW6AX-EL]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">3</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบว่ามีรหัสวิเคราะห์ปัญหาอื่นๆ ปรากฏขึ้นหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;มีรหัสวิเคราะห์ปัญหาอื่นๆ ปรากฏขึ้นหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมชิ้นส่วนที่บกพร่องตามการค้นหาสาเหตุปัญหาของรหัสวิเคราะห์ปัญหานั้นๆ</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0402b2800200.html">การวิเคราะห์ปัญหาบนรถ [ระบบควบคุมการทรงตัวของรถ (DSC)]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การค้นหาสาเหตุปัญหาของรหัสวิเคราะห์ปัญหาเสร็จสมบูรณ์</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</body>
+</html>

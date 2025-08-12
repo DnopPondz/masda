@@ -1,0 +1,2 @@
+&txtLabel=Bluetooth SYSTEM (HANDS-FREE TELEPHONE (HF/TEL) SYSTEM)&
+&txtData=S0920_6&

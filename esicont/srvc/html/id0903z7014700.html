@@ -1,0 +1,147 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>ระดับความสว่างของไฟแสดงสถานะการเตือน RVM สูงหรือต่ำเกินไป [ระบบตรวจจับรถด้านหลัง]</title>
+</head>
+<body><a name="id0903z7014700"></a><p class="servinfo-title"><span class="servinfo-head"></span>ระดับความสว่างของไฟแสดงสถานะการเตือน RVM สูงหรือต่ำเกินไป [ระบบตรวจจับรถด้านหลัง]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0903z7014700</p>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;หากมีปัญหาใดๆ เกี่ยวกับความบกพร่องของรถที่ลูกค้าระบุ ให้ดำเนินการวิเคราะห์ความบกพร่องใน<font class="extxref-label"><a href="id0903z7378400.html">คำนำ [ระบบตรวจจับรถด้านหลัง]</a></font> ตามขั้นตอนการค้นหาสาเหตุปัญหา</div>
+</div>
+</dd>
+</dl><br clear="all"><a name="id0903z701470001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>คำอธิบาย</p>
+<div class="list">•&nbsp;&nbsp;ระดับความสว่างของไฟแสดงสถานะการเตือน RVM ต่ำในช่วงกลางวัน (ปิดไฟหน้า) (แก้ไขระดับไฟในช่วงกลางคืน)</div>
+<div class="list">•&nbsp;&nbsp;ระดับความสว่างของไฟแสดงสถานะการเตือน RVM สูงในช่วงกลางคืน (เปิดไฟหน้า) (แก้ไขระดับไฟในช่วงกลางวัน)</div><br clear="all"><a name="id0903z701470002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ความบกพร่องที่เป็นไปได้</p>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา) ไม่สามารถรับสัญญาณสวิตช์ TNS</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;สวิตช์ TNS (สวิตช์ไฟ) บกพร่อง (ค้าง)</div>
+<div class="list">―&nbsp;&nbsp;แผงหน้าปัดบกพร่อง</div>
+<div class="list">―&nbsp;&nbsp;โมดูลควบคุมระบบตรวจจับรถด้านหลังบกพร่อง</div>
+</dd>
+</dl><br clear="all"><a name="id0903z701470003"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ขั้นตอนการวิเคราะห์ปัญหา</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">การตรวจสอบ</p>
+</th>
+<th id="" align="center">
+<p class="thead">การปฏิบัติ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">1</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="list-title">ตัดสินว่าสาเหตุของความบกพร่องอยู่ที่วงจรการส่องสว่างของไฟแสดงสถานะการเตือน RVM หรือไม่</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบ PID ของระบบตรวจจับรถด้านหลังต่อไปนี้โดยใช้ M-MDS:<div>(ดูที่ <font class="extxref-label"><a href="id0902z2960600.html">การตรวจสอบ PID/DATA [ระบบตรวจจับรถด้านหลัง]</a></font>)</div>
+</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;OP_BRT_R</div>
+<div class="list">―&nbsp;&nbsp;OP_BRT_L</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;เปิด/ปิดสวิตช์ไฟหน้า (สวิตช์ TNS)<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;ขณะเปิดไฟหน้า ค่าการตรวจสอบ PID จะเพิ่มขึ้น (สว่างขึ้น)</div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="list">•&nbsp;&nbsp;ค่าการแสดง PID เปลี่ยนแปลงไปตามการทำงานของสวิตช์ไฟหน้าหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนโมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย)</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200014600.html">การถอด / การติดตั้งโมดูลควบคุมระบบตรวจจับรถด้านหลัง</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">2</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="list-title">ตรวจสอบสวิตช์ไฟส่องสว่าง</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบสวิตช์ไฟส่องสว่าง<div>(ดูที่ <font class="extxref-label"><a href="id091800802900.html">การตรวจสอบสวิตช์ไฟส่องสว่าง</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;สวิตช์ไฟส่องสว่างเป็นปกติหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนสวิตช์ไฟ</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id091800802800.html">การถอด / การติดตั้งสวิตช์ไฟส่องสว่าง</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">3</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="list-title">ตัดสินว่าสาเหตุของความบกพร่องอยู่ที่แผงหน้าปัด หรือโมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา)</div>
+<div class="list">•&nbsp;&nbsp;แสดงรายการ PID I_ILLUMI_M ของแผงหน้าปัดโดยใช้ M-MDS<div>(ดูที่ <font class="extxref-label"><a href="id0902e8960600.html">การตรวจสอบ PID/DATA MONITOR [แผงหน้าปัด]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;เปิด/ปิดสวิตช์ไฟหน้า (สวิตช์ TNS)</div>
+<div class="list">•&nbsp;&nbsp;สวิตช์แสดงการตรวจสอบ PID/ข้อมูลเป็นปกติหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนโมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย)</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200014600.html">การถอด / การติดตั้งโมดูลควบคุมระบบตรวจจับรถด้านหลัง</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนแผงหน้าปัด</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200010300.html">การถอด / การติดตั้งแผงหน้าปัด</a></font>)</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</body>
+</html>

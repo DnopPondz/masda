@@ -1,0 +1,266 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>รหัสวิเคราะห์ปัญหา C0061:28/C0061:64/C0062:28/C0062:64/C0063:28/C0063:64 [ระบบควบคุมการทรงตัวของรถ (DSC)]</title>
+</head>
+<body><a name="id0402b2180800"></a><p class="servinfo-title"><span class="servinfo-head"></span>รหัสวิเคราะห์ปัญหา C0061:28/C0061:64/C0062:28/C0062:64/C0063:28/C0063:64 [ระบบควบคุมการทรงตัวของรถ (DSC)]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0402b2180800</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>รหัสวิเคราะห์ปัญหา</span></div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody"><span>C0061:28, C0061:64, C0062:28, C0062:64, C0063:28, C0063:64</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody"><span>ระบบโมดูลควบคุม SAS</span></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody"><span>สภาวะการตรวจพบ</span></div>
+</td>
+<td id="" align="left" colspan="2">
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;เซ็นเซอร์ G ต่ำและเซ็นเซอร์อัตราโคลงถูกติดตั้งอยู่ในโมดูลควบคุม SAS</div>
+</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;C0061:28, C0061:64</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ตรวจพบการปรับสัญญาณที่อยู่นอกค่ากำหนดหรือค่าแรง G ด้านข้างจากเซ็นเซอร์ G ต่ำ</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;C0062:28, C0062:64</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ตรวจพบการปรับสัญญาณที่อยู่นอกค่ากำหนดหรือค่า G ตามยาวจากเซ็นเซอร์ G ต่ำ</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;C0063:28, C0063:64</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ตรวจพบการปรับสัญญาณที่อยู่นอกค่ากำหนดหรือค่าอัตราโคลงจากเซ็นเซอร์อัตราโคลง</div>
+</dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody"><span>ฟังก์ชั่น Fail-safe</span></div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="list">•&nbsp;&nbsp;C0061:28, C0061:64, C0063:28, C0063:64</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ไฟแสดงสถานะ TCS/DSC และไฟเตือนหลัก<sup>*1</sup> ติดสว่าง</div>
+<div class="list">―&nbsp;&nbsp;ไฟเตือนระบบเตือนแรงดันลมยางติดสว่างหลังจากกะพริบ</div>
+<div class="list">―&nbsp;&nbsp;ยับยั้งการควบคุมระบบ TCS, DSC, ระบบป้องกันการพลิกคว่ำ (ROM), TPMS, ระบบสมาร์ทซิตี้เบรก (SCBS)<sup>*1</sup> และการลดการชนปะทะระดับสอง (SCR)</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;C0062:28, C0062:64</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ไฟเตือนระบบ ABS<sup>*2</sup>, ไฟแสดงสถานะ TCS/DSC และไฟเตือนหลัก<sup>*1*2</sup> ติดสว่าง</div>
+<div class="list">―&nbsp;&nbsp;ยับยั้งการควบคุมระบบ ABS<sup>*3</sup>, TCS<sup>*3</sup>, DSC<sup>*3</sup>, ระบบป้องกันการพลิกคว่ำ (ROM)<sup>*3</sup>, ระบบควบคุมการช่วยเบรก<sup>*3</sup>, ฟังก์ชั่นการป้องกันรถยนต์พลิกคว่ำ<sup>*4</sup>, ระบบช่วยออกตัวบนทางชัน (HLA), ระบบสมาร์ทซิตี้เบรก (SCBS)<sup>*1*3</sup> และการลดการชนปะทะระดับสอง (SCR)<sup>*3</sup></div>
+</dd>
+</dl>
+<div class="list"><sup>*1</sup>&nbsp;&nbsp;:รุ่นที่มีระบบสมาร์ทซิตี้เบรก (SCBS)</div>
+<div class="list"><sup>*2</sup>: ไม่ติดสว่าง ขึ้นอยู่กับข้อมูลความบกพร่อง</div>
+<div class="list"><sup>*3</sup>&nbsp;&nbsp;:ใช้ตามรายละเอียดความบกพร่อง</div>
+<div class="list"><sup>*4</sup>&nbsp;&nbsp;:ATX เท่านั้น</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody"><span>สาเหตุที่เป็นไปได้</span></div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุม SAS บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;วงจรชุดสายไฟ CAN2_H ระหว่างขั้ว S ของ DSC HU/CM และขั้ว 3H ของโมดูลควบคุม SAS ขาดหรือลัดวงจร</div>
+<div class="list">•&nbsp;&nbsp;วงจรชุดสายไฟ CAN2_L ระหว่างขั้ว P ของ DSC HU/CM และขั้ว 3I ของโมดูลควบคุม SAS ขาดหรือลัดวงจร</div>
+<div class="list">•&nbsp;&nbsp;DSC HU/CM บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;การต่อขั้วต่อไม่ดี (หัวเสียบตัวเมีย)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="4"><img src="images/ac5wzw00004508.png"></td>
+</tr>
+</tbody>
+</table>
+</p>
+<p clear="all">
+<p class="table-title">ขั้นตอนการวิเคราะห์ปัญหา</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">การตรวจสอบ</p>
+</th>
+<th id="" align="center">
+<p class="thead">การปฏิบัติ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">1</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบความบกพร่องของโมดูลควบคุม SAS</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;ใช้ M-MDS ทำการตรวจสอบรหัสวิเคราะห์ปัญหาของโมดูลควบคุม SAS<div>(ดูที่ <font class="extxref-label"><a href="id080200080500.html">การตรวจสอบรหัสวิเคราะห์ปัญหา</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ตรวจพบรหัสวิเคราะห์ปัญหาหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่การตรวจสอบรหัสวิเคราะห์ปัญหานั้นๆ</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id080200080700.html">ตารางรหัสวิเคราะห์ปัญหา</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">2</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการขาดวงจรของสัญญาณโมดูลควบคุม SAS (สาย CAN2)</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อ DSC HU/CM</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อโมดูลควบคุม SAS</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต่อเนื่องระหว่างขั้วของขั้วต่อ DSC HU/CM ต่อไปนี้ (ด้านชุดสายไฟ) กับขั้วของขั้วต่อโมดูลควบคุม SAS (ด้านชุดสายไฟ):</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ขั้ว S ของ DSC HU/CM &mdash; ขั้ว 3H ของโมดูลควบคุม SAS</div>
+<div class="list">―&nbsp;&nbsp;ขั้ว P ของ DSC HU/CM &mdash; ขั้ว 3I ของโมดูลควบคุม SAS</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องหรือไม่?</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชุดสายไฟใหม่ แล้วไปที่ขั้นตอน 4</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">3</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรของสัญญาณโมดูลควบคุม SAS (สาย CAN2)</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต่อเนื่องระหว่างขั้วของขั้วต่อ DSC HU/CM ต่อไปนี้ (ด้านชุดสายไฟ) กับกราวด์ตัวถัง:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ขั้ว S ของ DSC HU/CM &mdash; กราวด์ตัวถัง</div>
+<div class="list">―&nbsp;&nbsp;ขั้ว P ของ DSC HU/CM &mdash; กราวด์ตัวถัง</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องหรือไม่?</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชุดสายไฟ แล้วไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">4</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบว่าไม่มีรหัสวิเคราะห์ปัญหาเดียวกันปรากฏขึ้น</div>
+<div class="list">•&nbsp;&nbsp;ต่อขั้วต่อที่ปลดออกทั้งหมดกลับเข้าที่</div>
+<div class="list">•&nbsp;&nbsp;ลบรหัสวิเคราะห์ปัญหาออกจากหน่วยความจำ<div>(ดูที่ <font class="extxref-label"><a href="id0402b2800200.html">การวิเคราะห์ปัญหาบนรถ [ระบบควบคุมการทรงตัวของรถ (DSC)]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;สตาร์ทเครื่องยนต์และขับรถด้วยความเร็ว <span>10km/h {6.2 mph}หรือมาก</span>กว่านั้น</div>
+<div class="list">•&nbsp;&nbsp;มีรหัสวิเคราะห์ปัญหาเดียวกันปรากฏขึ้นหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ทำซ้ำการตรวจสอบตั้งแต่ขั้นตอน 1</div>
+<div class="tbody">ถ้าความบกพร่องเกิดขึ้นอีกครั้ง ให้เปลี่ยน DSC HU/CM แล้วไปที่ขั้นตอนถัดไป</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id041500801000.html">การถอด / การติดตั้ง DSC HU/CM</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">5</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบว่าไม่มีรหัสวิเคราะห์ปัญหาอื่นปรากฏขึ้น</div>
+<div class="list">•&nbsp;&nbsp;มีรหัสวิเคราะห์ปัญหาอื่นๆ ปรากฏขึ้นหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่การตรวจสอบรหัสวิเคราะห์ปัญหานั้นๆ</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0402b2800200.html">การวิเคราะห์ปัญหาบนรถ [ระบบควบคุมการทรงตัวของรถ (DSC)]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การค้นหาสาเหตุปัญหาของรหัสวิเคราะห์ปัญหาเสร็จสมบูรณ์</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</body>
+</html>

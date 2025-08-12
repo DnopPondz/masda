@@ -1,0 +1,2 @@
+&txtLabel=AUTO DIMMING MIRROR&
+&txtData=S0912_4&

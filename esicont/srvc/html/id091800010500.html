@@ -1,0 +1,140 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>ระบบไฟส่องสว่างอัตโนมัติ</title>
+</head>
+<body><a name="id091800010500"></a><p class="servinfo-title"><span class="servinfo-head"></span>ระบบไฟส่องสว่างอัตโนมัติ</p>
+<hr>
+<p class="servinfo-title-id" align="right">id091800010500</p><br clear="all"><a name="id09180001050001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รายละเอียด</p>
+<div class="list">•&nbsp;&nbsp;ระบบไฟส่องสว่างอัตโนมัติจะเปิด/ปิด TNS และไฟหน้าอัตโนมัติตามระดับการส่องสว่างด้านบนและด้านหน้ารถ</div>
+<div class="list">•&nbsp;&nbsp;ระบบไฟส่องสว่างอัตโนมัติถูกควบคุมโดยโมดูลควบคุมตัวถังด้านหน้า (FBCM)</div>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมตัวถังด้านหน้า (FBCM) จะสั่งงานโหมด Fail-safe ของระบบไฟส่องสว่างอัตโนมัติ (ดูที่ <font class="extxref-label"><a href="id094000002500.html">โมดูลควบคุมตัวถังด้านหน้า (FBCM)</a></font>)</div><br clear="all"><a name="id09180001050002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ภาพโครงสร้าง</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5uun00000546.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5uun00000546</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id09180001050003"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ผังวงจรระบบ</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001347.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001347</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id09180001050004"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<div class="list">•&nbsp;&nbsp;ระบบไฟส่องสว่างอัตโนมัติจะรับสัญญาณขอการติดสว่าง/การปิดไฟหน้าจากเซ็นเซอร์ไฟส่องสว่างอัตโนมัติ และโมดูลควบคุมตัวถังด้านหน้า (FBCM) จะทำการเปิด/ปิดไฟหน้า</div>
+<div class="list">•&nbsp;&nbsp;หากเซ็นเซอร์การติดสว่างด้านบนและด้านหน้าตรวจพบระดับการส่องสว่างที่ควรเปิด/ปิดไฟหน้า เซ็นเซอร์ไฟส่องสว่างอัตโนมัติจะส่งสัญญาณขอการติดสว่าง/การปิดไฟหน้า</div>
+<div class="list">•&nbsp;&nbsp;หากเซ็นเซอร์ไฟส่องสว่างอัตโนมัติตรวจพบว่ารถกำลังขับขี่ในตอนกลางคืนหลังจากที่ส่งสัญญาณขอการติดสว่างไฟหน้า เซ็นเซอร์จะสลับเป็นโหมดกลางคืนและเปลี่ยนสภาวะการปิดใช้งานไฟหน้าเพื่อไม่ให้ไฟหน้าปิดและเปิดซ้ำๆ กันเนื่องจากแสงสว่างชั่วคราวจากไฟถนนและไฟจากร้านค้า ซึ่งทำให้ปิดใช้งานไฟหน้าได้ยาก</div><br clear="all"><p><a name="id09180001050005"></a><p class="topic-title"><span class="topic-head"></span>โหมดกลางคืน</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เมื่อเซ็นเซอร์ระดับการส่องสว่างด้านบนและด้านหน้าตรวจพบระดับการส่องสว่างประมาณ 2,000 lux หรือน้อยกว่า เป็นเวลาประมาณ 10 นาทีหลังจากที่ส่งสัญญาณขอการติดสว่างไฟหน้า เซ็นเซอร์ไฟส่องสว่างอัตโนมัติจะตัดสินว่ารถกำลังขับขี่ในตอนกลางคืนและระบบไฟส่องสว่างอัตโนมัติจะสลับเป็นโหมดกลางคืน</div>
+<div class="list">•&nbsp;&nbsp;เซ็นเซอร์ไฟส่องสว่างอัตโนมัติจะตัดสินสภาวะการปิดใช้งานไฟหน้าตามระดับการส่องสว่างโดยเฉลี่ยที่ตรวจพบโดยเซ็นเซอร์ระดับการส่องสว่างด้านบนและด้านหน้าขณะอยู่ในโหมดกลางคืนเมื่อผ่านไป 3 นาที</div>
+<div class="list">•&nbsp;&nbsp;หากระดับการส่องสว่างโดยเฉลี่ยที่คำนวณได้หลังจากผ่านไป 3 นาทีอยู่ที่ประมาณ 4,000 lux หรือมากกว่า เซ็นเซอร์ไฟส่องสว่างอัตโนมัติจะยกเลิกโหมดกลางคืนและส่งสัญญาณขอการปิดไฟหน้า</div>
+<div class="list">•&nbsp;&nbsp;เมื่อได้รับสัญญาณ OFF ของสวิตช์ไฟหน้าขณะที่อยู่ในโหมดกลางคืน เซ็นเซอร์ไฟส่องสว่างอัตโนมัติจะยกเลิกโหมดกลางคืน<dl>
+<dd>
+<div class="attention2-label">ข้อควรระวัง</div>
+</dd>
+<dd>
+<div class="attention2">
+<div class="list">•&nbsp;&nbsp;หากขับขี่รถในอุโมงค์เป็นระยะทางยาว สภาพจราจรภายในอุโมงติดขัด หรือสภาพแวดล้อม (อุณหภูมิ อาคาร เงาต้นไม้) รอบๆ ตัวรถมืดเป็นเวลาประมาณ 10 นาทีแม้ว่าบริเวณโดยรอบจะสว่างในช่วงเวลากลางวัน แต่ถือว่าตรงตามสภาวะการขับขี่ในเวลากลางคืน เซ็นเซอร์ไฟส่องสว่างอัตโนมัติอาจสลับเป็นโหมดกลางคืน</div>
+<div class="list">•&nbsp;&nbsp;เนื่องจากการปิดไฟหน้าถูกตัดสินตามระดับการส่องสว่างโดยเฉลี่ยเมื่อผ่านไป 3 นาทีหลังจากที่มีการสลับเป็นโหมดกลางคืนในช่วงเวลากลางวันขณะที่บริเวณโดยรอบสว่าง หากขับขี่ในสภาพแวดล้อม (อุณหภูมิ อาคาร เงาต้นไม้) รอบๆ ตัวรถมืด ระดับการส่องสว่างโดยเฉลี่ยอาจไม่เพียงพอและอาจไม่ตรงตามสภาวะการปิดไฟหน้า ด้วยเหตุนี้ จึงอาจไม่สามารถยกเลิกโหมดกลางคืนได้ (ไฟหน้าติดสว่างต่อไป)</div>
+</div>
+</dd>
+</dl>
+</div>
+</dd>
+</dl>
+</p><br clear="all"><a name="id09180001050006"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<div class="list">•&nbsp;&nbsp;ระบบไฟส่องสว่างอัตโนมัติจะทำงานเมื่อบิดสวิตช์สตาร์ท ON และสวิตช์ไฟอยู่ในตำแหน่ง AUTO</div><br clear="all"><p><a name="id09180001050007"></a><p class="topic-title"><span class="topic-head"></span>การทำงานของระบบส่องสว่าง</p>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;ระดับการส่องสว่างต่อไปนี้เป็นค่าอ้างอิงเนื่องจากอาจมีการเปลี่ยนแปลงตามสภาวะแวดล้อมโดยรอบ (อากาศ อาคารที่มีการสะท้อนกลับ)</div>
+<div class="list">•&nbsp;&nbsp;ความไวของระดับการส่องสว่างของเซ็นเซอร์ไฟส่องสว่างอัตโนมัติอาจมีการเปลี่ยนแปลง ระดับการส่องสว่างที่แสดงไว้ทางด้านล่างเป็นค่า &ldquo;กลาง&rdquo; ที่กำหนดขึ้น (ดูที่ <font class="extxref-label"><a href="id091800013300.html">การตั้งค่าส่วนบุคคลของระบบไฟส่องสว่าง</a></font>)</div>
+</div>
+</dd>
+</dl>
+<p class="list">1.&nbsp;&nbsp;เมื่อเปิดใช้งานสวิตช์ไฟไปที่ตำแหน่ง AUTO ขณะบิดสวิตช์สตาร์ท ON (เครื่องยนต์ทำงานหรือไม่ทำงาน) สัญญาณ AUTO ของสวิตช์ไฟจะอินพุทไปยังชุดเปิด/ปิดการทำงาน </p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;ชุดเปิด/ปิดการทำงานจะส่งสัญญาณ AUTO ของสวิตช์ไฟไปยังโมดูลควบคุมตัวถังด้านหน้า (FBCM) ในรูปสัญญาณระบบ CAN </p>
+<p class="list">
+</p>
+<p class="list">3.&nbsp;&nbsp;เซ็นเซอร์ไฟส่องสว่างอัตโนมัติจะตรวจจับระดับการส่องสว่างด้านบนและด้านหน้ารถ </p>
+<p class="list">
+</p>
+<p class="list">4.&nbsp;&nbsp;เมื่อเซ็นเซอร์ไฟส่องสว่างอัตโนมัติตรวจพบระดับการส่องสว่างประมาณ 2,000 lux หรือน้อยกว่า เซ็นเซอร์จะส่งสัญญาณเปิดใช้งาน TNS และไฟหน้าไปยังโมดูลควบคุมตัวถังด้านหน้า (FBCM) ในรูปสัญญาณระบบ LIN</p>
+<p class="list">
+</p>
+<p class="list">5.&nbsp;&nbsp;เมื่อโมดูลควบคุมตัวถังด้านหน้า (FBCM) ได้รับสัญญาณเปิดไฟหน้า อุปกรณ์จะเปิดใช้งานรีเลย์ TNS และรีเลย์ LO ของไฟหน้า และทำให้ TNS, ไฟจอด และไฟหน้าติดสว่าง</p>
+<p class="list">
+</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5uun00000548.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5uun00000548</div>
+</td>
+</tr>
+</table>
+</p><br clear="all"><p><a name="id09180001050008"></a><p class="topic-title"><span class="topic-head"></span>การปิดไฟส่องสว่าง</p>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;ระดับการส่องสว่างต่อไปนี้เป็นค่าอ้างอิงเนื่องจากอาจมีการเปลี่ยนแปลงตามสภาวะแวดล้อมโดยรอบ (อากาศ อาคารที่มีการสะท้อนกลับ)</div>
+<div class="list">•&nbsp;&nbsp;ความไวของระดับการส่องสว่างของเซ็นเซอร์ไฟส่องสว่างอัตโนมัติอาจมีการเปลี่ยนแปลง ระดับการส่องสว่างที่แสดงไว้ทางด้านล่างเป็นค่า &ldquo;กลาง&rdquo; ที่กำหนดขึ้น (ดูที่ <font class="extxref-label"><a href="id091800013300.html">การตั้งค่าส่วนบุคคลของระบบไฟส่องสว่าง</a></font>)</div>
+</div>
+</dd>
+</dl>
+<p class="list">1.&nbsp;&nbsp;เมื่อเปิดใช้งานสวิตช์ไฟไปที่ตำแหน่ง AUTO ขณะบิดสวิตช์สตาร์ท ON (เครื่องยนต์ทำงานหรือไม่ทำงาน) สัญญาณ AUTO ของสวิตช์ไฟจะอินพุทไปยังชุดเปิด/ปิดการทำงาน </p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;ชุดเปิด/ปิดการทำงานจะส่งสัญญาณ AUTO ของสวิตช์ไฟไปยังโมดูลควบคุมตัวถังด้านหน้า (FBCM) ในรูปสัญญาณระบบ CAN </p>
+<p class="list">
+</p>
+<p class="list">3.&nbsp;&nbsp;เซ็นเซอร์ไฟส่องสว่างอัตโนมัติจะตรวจจับระดับการส่องสว่างด้านบนและด้านหน้ารถ </p>
+<p class="list">
+</p>
+<p class="list">4.&nbsp;&nbsp;เมื่อเซ็นเซอร์ไฟส่องสว่างอัตโนมัติตรวจพบระดับการส่องสว่างประมาณ 4,000 lux หรือมากกว่า เป็นเวลา 1.5&mdash;2.5 วินาที เซ็นเซอร์จะส่งสัญญาณปิดไฟหน้าไปยังโมดูลควบคุมตัวถังด้านหน้า (FBCM) ในรูปสัญญาณระบบ LIN</p>
+<p class="list">
+</p>
+<p class="list">5.&nbsp;&nbsp;เมื่อโมดูลควบคุมตัวถังด้านหน้า (FBCM) ได้รับสัญญาณปิดไฟหน้า อุปกรณ์จะปิดใช้งานรีเลย์ TNS และรีเลย์ LO ของไฟหน้า และปิดใช้งาน TNS, ไฟจอด และไฟหน้า</p>
+<p class="list">
+</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001348.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001348</div>
+</td>
+</tr>
+</table>
+</p>
+</body>
+</html>

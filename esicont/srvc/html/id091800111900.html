@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>ระบบไฟเลี้ยว</title>
+</head>
+<body><a name="id091800111900"></a><p class="servinfo-title"><span class="servinfo-head"></span>ระบบไฟเลี้ยว</p>
+<hr>
+<p class="servinfo-title-id" align="right">id091800111900</p><br clear="all"><a name="id09180011190001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>จุดประสงค์:</p>
+<div class="list">•&nbsp;&nbsp;ระบบไฟเลี้ยวจะสั่งให้ไฟเลี้ยวกะพริบสามครั้งโดยอัตโนมัติตามการทำงานของสวิตช์ไฟเลี้ยว</div>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมตัวถังด้านหน้า (FBCM) จะสั่งงานโหมด Fail-safe ของระบบไฟเลี้ยว (ดูที่ <font class="extxref-label"><a href="id094000002500.html">โมดูลควบคุมตัวถังด้านหน้า (FBCM)</a></font>)</div><br clear="all"><a name="id09180011190002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมตัวถังด้านหน้า (FBCM) จะทำการควบคุมตามสัญญาณของสวิตช์ไฟเลี้ยว (ขวาหรือซ้าย) ที่ส่งจากชุดเปิด/ปิดการทำงานผ่านสัญญาณระบบ CAN ดังต่อไปนี้:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;เวลาในการรับสัญญาณ On ของสวิตช์ไฟเลี้ยวน้อยกว่า 0.7 วินาที: เปิดใช้งานระบบไฟเลี้ยว</div>
+<div class="list">―&nbsp;&nbsp;เวลาในการรับสัญญาณ On ของสวิตช์ไฟเลี้ยวเท่ากับ 0.7 วินาที หรือมากกว่า: สั่งให้สัญญาณไฟเลี้ยวกะพริบตามเวลาในการรับ</div>
+</dd>
+</dl><br clear="all"><a name="id09180011190003"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ภาพโครงสร้าง</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001367.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001367</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id09180011190004"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ผังวงจรระบบ</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001368.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001368</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id09180011190005"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<div class="list">•&nbsp;&nbsp;หากโมดูลควบคุมตัวถังด้านหน้า (FBCM) ได้รับสัญญาณเปิดใช้งานสวิตช์ไฟเลี้ยวจากชุดเปิด/ปิดการทำงานน้อยกว่า 0.7 วินาที เมื่อบิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน) อุปกรณ์จะสั่งให้ไฟเลี้ยวกะพริบสามครั้ง</div>
+<div class="list">•&nbsp;&nbsp;หากโมดูลควบคุมตัวถังด้านหน้า (FBCM) ได้รับสัญญาณเปิดใช้งานสวิตช์ไฟเลี้ยวจากด้านตรงข้ามก่อนหน้านี้ระหว่างการทำงานของระบบไฟเลี้ยว อุปกรณ์จะหยุดการทำงานของระบบไฟเลี้ยว นอกจากนี้ หากสัญญาณเปิดใช้งานสวิตช์ไฟเลี้ยวด้านตรงข้ามน้อยกว่า 0.7 วินาที ระบบไฟเลี้ยวจะไม่ทำงานเช่นกัน</div>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5uun00000640.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5uun00000640</div>
+</td>
+</tr>
+</table>
+</body>
+</html>

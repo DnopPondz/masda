@@ -1,0 +1,228 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>ชุดควบคุมอุณหภูมิ [ระบบปรับอากาศแบบอัตโนมัติ]</title>
+</head>
+<body><a name="id0740a1320100"></a><p class="servinfo-title"><span class="servinfo-head"></span>ชุดควบคุมอุณหภูมิ [ระบบปรับอากาศแบบอัตโนมัติ]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0740a1320100</p><br clear="all"><a name="id0740a132010001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>จุดประสงค์:</p>
+<div class="list">•&nbsp;&nbsp;ชุดควบคุมอุณหภูมิจะดำเนินการระบบปรับอากาศตามการทำงานโดยผู้ใช้และสภาวะการขับขี่รถ</div><br clear="all"><a name="id0740a132010002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<div class="list">•&nbsp;&nbsp;ชุดควบคุมอุณหภูมิจะกำหนดอุณหภูมิระบบปรับอากาศที่เหมาะสมตามสัญญาณอินพุตจากเซ็นเซอร์แต่ละตัวและโมดูลควบคุมและสัญญาณการทำงานจากแผงควบคุม และการควบคุมแอ็คชิวเอเตอร์แต่ละตัว, คอมเพรสเซอร์ A/C และมอเตอร์โบล์วเวอร์ (ดูที่ <font class="extxref-label"><a href="id0740a1320200.html">ระบบปรับอากาศแบบอัตโนมัติ [ระบบปรับอากาศแบบอัตโนมัติ]</a></font>)</div><br clear="all"><p><a name="id0740a132010003"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชันการสลับการแสดงผลอุณหภูมิที่กำหนด</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เมื่อการแสดงอุณหภูมิภายนอกบนแผงหน้าปัดถูกสลับระหว่างเซนติเกรดและฟาเรนไฮต์ การแสดงผลอุณหภูมิที่กำหนดในชุดควบคุมอุณหภูมิจะสลับระหว่างเซนติเกรดและฟาเรนไฮต์ (ดูที่ <font class="extxref-label"><a href="id092200018500.html">แผงหน้าปัด</a></font>)<table class="figure-flame">
+<tr>
+<td width="10mm"></td>
+<td>
+<table class="figure-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5uun00001167.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5uun00001167</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id0740a132010004"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชันการกำหนดค่าแบบอัตโนมัติ</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เมื่อบิดสวิตช์สตาร์ทไปที่ ON หลังจากเปลี่ยนชุดควบคุมอุณหภูมิ ชุดควบคุมอุณหภูมิจะอ่านข้อมูลจำเพาะของรถผ่านทางการส่งข้อมูลระบบ CAN จากแผงหน้าปัดโดยใช้ฟังก์ชันการกำหนดค่าแบบอัตโนมัติและจัดเก็บข้อมูล</div>
+</dd>
+</dl>
+</p><br clear="all"><a name="id0740a132010005"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>โครงสร้าง</p>
+<div class="list">•&nbsp;&nbsp;มีการใช้ชุดควบคุมอุณหภูมิแบบลอจิก</div>
+<div class="list">•&nbsp;&nbsp;ชุดควบคุมอุณหภูมิประกอบด้วยแผงควบคุม จอแสดงผล และชุดควบคุม</div>
+<div class="list">•&nbsp;&nbsp;สวิตช์และปุ่มที่แสดงในรูปภาพจะอยู่บนแผงควบคุม</div>
+<div class="list">•&nbsp;&nbsp;จอแสดงผลจะแสดงสิ่งต่อไปนี้:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;จอแสดงผลระบบปรับอากาศ</div>
+<div class="list">―&nbsp;&nbsp;จอแสดงสถานะการเตือนระบบเข็มขัดนิรภัย, การปิดใช้งานถุงลมนิรภัยด้านผู้โดยสาร (PAD)</div>
+<div class="list">―&nbsp;&nbsp;จอแสดงนาฬิกา</div>
+</dd>
+</dl>
+<p class="figure-title">L.H.D.</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00002304.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00002304</div>
+</td>
+</tr>
+</table>
+<p class="figure-title">R.H.D.</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00002305.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00002305</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id0740a132010006"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>Fail-safe</p>
+<div class="list">•&nbsp;&nbsp;หากฟังก์ชันการตรวจจับความบกพร่องตรวจพบการทำงานบกพร่อง ฟังก์ชันระบบ Fail-safe จะดำเนินการควบคุมต่อไปนี้เพื่อป้องกันความบกพร่องในการทำงานของระบบปรับอากาศแบบอัตโนมัติ และความบกพร่องของอุปกรณ์เอาต์พุต</div>
+<p clear="all">
+<p class="table-title">ตารางฟังก์ชันระบบ Fail-safe</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ชิ้นส่วนที่ระบุว่ามีความบกพร่อง</p>
+</th>
+<th id="" align="center">
+<p class="thead">ความบกพร่องถูกกำหนดเมื่อ IG SW อยู่ที่ ON</p>
+</th>
+<th id="" align="center">
+<p class="thead">มีความบกพร่องอยู่แล้วเมื่อบิด IG SW ไปที่ ON</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">เซ็นเซอร์อุณหภูมิภายนอก</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ค่าอินพุทของเซ็นเซอร์อุณหภูมิภายนอกถูกกำหนดไว้ที่ค่าก่อนเกิดความบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ค่าอินพุทของเซ็นเซอร์อุณหภูมิภายนอกถูกกำหนดอยู่ที่ <span>15 &deg;C {59 &deg;F}</span></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">เซ็นเซอร์อุณหภูมิห้องโดยสาร</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ค่าอินพุทของเซ็นเซอร์อุณหภูมิห้องโดยสารถูกกำหนดไว้ที่ค่าก่อนเกิดความบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ค่าอินพุทของเซ็นเซอร์อุณหภูมิห้องโดยสารถูกกำหนดอยู่ที่ <span>25 &deg;C {77 &deg;F}</span></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">เซ็นเซอร์อุณหภูมิอีวาปอเรเตอร์</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เอาท์พุท A/C OFF ถูกควบคุมเมื่อค่าอินพุทเซ็นเซอร์อุณหภูมิอีวาปอเรเตอร์อยู่ที่ <span>0 &deg;C {32 &deg;F}</span></div>
+</td>
+<td id="" align="center">
+<div class="tbody">←</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">เซ็นเซอร์อุณหภูมิรังผึ้งฮีทเตอร์</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ค่าอินพุทเซ็นเซอร์อุณหภูมิรังผึ้งฮีทเตอร์ถูกกำหนดไว้ที่ <span>50 &deg;C {122 &deg;F}</span></div>
+</td>
+<td id="" align="center">
+<div class="tbody">←</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">โซล่าเรดิเอชั่นเซ็นเซอร์</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ค่าอินพุทโซล่าเรดิเอชั่นเซ็นเซอร์ถูกกำหนดไว้ที่ค่าก่อนเกิดความบกพร่องเฉพาะเมื่อวาล์วอยู่ที่ <span>1,450 W/m<sup>2</sup> หรือมากกว่า</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ค่าโซล่าเรดิเอชั่นเซ็นเซอร์ถูกกำหนดไว้ที่ <span>0 W/m<sup>2</sup></span></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">เซ็นเซอร์อุณหภูมิน้ำหล่อเย็นเครื่องยนต์</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ค่าอินพุทของเซ็นเซอร์อุณหภูมิน้ำยาหล่อเย็นถูกกำหนดอยู่ที่ <span>85 &deg;C {185 &deg;F}</span></div>
+</td>
+<td id="" align="center">
+<div class="tbody">←</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">แอ็คชิวเอเตอร์ส่วนผสมอากาศ</div>
+<div class="tbody"> (โพเทนชิโอมิเตอร์)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณขับแอ็คชิวเอเตอร์ส่วนผสมอากาศหยุดลงทันทีเมื่อมีการกำหนดความบกพร่อง</div>
+<div class="tbody">อย่างไรก็ตาม การควบคุมจะถูกกำหนดอยู่ที่ MAX COLD เมื่ออุณหภูมิที่กำหนดเองอยู่ที่ <span>15&deg;C {60 &deg;F}</span> และถูกกำหนดไว้ที่ MAX HOT เมื่ออุณหภูมิที่กำหนดเองอยู่ที่ <span>29&deg;C {84 &deg;F}</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody">การควบคุมตามอุณหภูมิภายนอก</div>
+<div class="tbody">(ดูกราฟที่ 1)</div>
+<div class="tbody">อย่างไรก็ตาม การควบคุมจะถูกกำหนดอยู่ที่ MAX COLD เมื่ออุณหภูมิที่กำหนดเองอยู่ที่ <span>15&deg;C {60 &deg;F}</span> และถูกกำหนดไว้ที่ MAX HOT เมื่ออุณหภูมิที่กำหนดเองอยู่ที่ <span>29&deg;C {84 &deg;F}</span></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">แอ็คชิวเอเตอร์โหมดทิศทางการไหลของอากาศ</div>
+<div class="tbody"> (โพเทนชิโอมิเตอร์)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณขับแอ็คชิวเอเตอร์โหมดทิศทางการไหลของอากาศหยุดลงทันทีเมื่อมีการกำหนดความบกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;อย่างไรก็ตาม เมื่อเลือกการทำงานเป็น VENT หรือ DEF ด้วยตนเอง จะมีการเปลี่ยนโหมดการทำงานเป็น VENT หรือ DEF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การควบคุมตามอุณหภูมิภายนอก</div>
+<div class="tbody">(ดูกราฟที่ 2)</div>
+<div class="list">•&nbsp;&nbsp;อย่างไรก็ตาม เมื่อเลือกการทำงานเป็น VENT หรือ DEF ด้วยตนเอง จะมีการเปลี่ยนโหมดการทำงานเป็น VENT หรือ DEF</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">แอ็คชิวเอเตอร์ส่วนผสมอากาศ</div>
+<div class="tbody"> (มอเตอร์ล็อก)</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;สัญญาณขับแอ็คชิวเอเตอร์ส่วนผสมอากาศหยุดลงทันทีเมื่อมีการกำหนดความบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;สัญญาณขับแอ็คชิวเอเตอร์ส่วนผสมอากาศถูกส่งตามปกติอีกครั้งหลังจาก สวิตช์สตาร์ทอยู่ที่ ON ผ่านไปยี่สิบวินาที หลังจากนั้น เอาท์พุทของมอเตอร์จะหยุดลงระหว่างการกำหนดความบกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">แอ็คชิวเอเตอร์โหมดทิศทางการไหลของอากาศ</div>
+<div class="tbody"> (มอเตอร์ล็อก)</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;สัญญาณขับแอ็คชิวเอเตอร์โหมดทิศทางการไหลของอากาศหยุดลงทันทีเมื่อมีการกำหนดความบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;สัญญาณขับแอ็คชิวเอเตอร์โหมดทิศทางการไหลของอากาศถูกส่งตามปกติอีกครั้งหลังจากสวิตช์สตาร์ทอยู่ที่ ON ผ่านไปเก้าวินาที หลังจากนั้น เอาท์พุทของมอเตอร์จะหยุดลงระหว่างการกำหนดความบกพร่อง</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001108.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001108</div>
+</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,740 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>ฟังก์ชั่นตรวจสอบ PID/DATA ของระบบการวิเคราะห์ปัญหาบนรถ [GW6A-EL, GW6AX-EL]</title>
+</head>
+<body><a name="id050230280600"></a><p class="servinfo-title"><span class="servinfo-head"></span>ฟังก์ชั่นตรวจสอบ PID/DATA ของระบบการวิเคราะห์ปัญหาบนรถ [GW6A-EL, GW6AX-EL]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id050230280600</p><br clear="all"><a name="id05023028060001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>จุดประสงค์, การทำงาน</p>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่นตรวจสอบ PID/DATA สามารถตรวจสอบข้อมูลการควบคุม เช่น สัญญาณอินพุท / ค่าการคำนวณภายใน / สัญญาณเอาท์พุทได้โดยใช้ M-MDS</div>
+<div class="list">•&nbsp;&nbsp;สามารถตรวจสอบสภาวะการควบคุมโมดูลแบบเรียลไทม์ได้โดยฟังก์ชั่นตรวจสอบ PID/DATA</div><br clear="all"><a name="id05023028060002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>โครงสร้าง, การทำงาน</p>
+<p clear="all">
+<p class="table-title">ตารางรายการตรวจสอบ PID / DATA</p>
+<p>
+<div>&mdash;: ไม่มี</div>
+</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รายการ</p>
+</th>
+<th id="" align="center">
+<p class="thead">หน่วย / สภาวะ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ความหมาย</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">DGP_DIS_1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">km {mile}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระยะทางหลังจากการควบคุมป้องกันเฟืองท้ายทำงาน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">DGP_DIS_2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">km {mile}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระยะทางหลังจากอัพเดท DGP_MAX_DIF</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">DGP_MAX_DIF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">RPM</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความแตกต่างในการหมุนสูงสุดหลังจากการควบคุมป้องกันเฟืองท้ายทำงานเนื่องจากความแตกต่างในการหมุนมากเกินไประหว่างล้อขับซ้าย / ขวา</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">DGP_SPD</div>
+</td>
+<td id="" align="center">
+<div class="tbody">KPH {MPH}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความเร็วรถพร้อมล้อลากหลังจากการควบคุมป้องกันเฟืองท้ายทำงานเนื่องจากความแตกต่างในการหมุนมากเกินไประหว่างล้อขับซ้าย / ขวา</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ECT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C {&deg;F}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิน้ำหล่อเย็นเครื่องยนต์</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ECU_A</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C {&deg;F}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิภายใน ECU A</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ECU_B</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C {&deg;F}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิภายใน ECU B</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ECU_C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C {&deg;F}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิภายใน ECU C</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">EOP_DUTY</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+<td id="" align="left">
+<div class="tbody">Duty cycle ของปั๊มน้ำมันเกียร์ AT ไฟฟ้า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">EOP_RLY</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สภาวะรีเลย์ปั๊มน้ำมันเกียร์ AT ไฟฟ้า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">GEAR_RA</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Ratio</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อัตราทดเกียร์</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">GEAR_SEL</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1/2/3/4/5/6</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตำแหน่งการเปลี่ยนเกียร์</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">HI_TEMP</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปริมาณการกำหนดโหมดอุณหภูมิ ATF สูง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">HTM_CNT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตัวนับโหมดอุณหภูมิ ATF สูง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">HTM_DIS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">km {mile}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระยะทางตั้งแต่การตัดสินของโหมดอุณหภูมิ ATF สูง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">LINEDES</div>
+</td>
+<td id="" align="center">
+<div class="tbody">kPa {kgf/cm<sup>2</sup>, psi}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันโมดิฟายเออร์เป้าหมาย / แรงดันโซลินอยด์ควบคุมแรงดันเป้าหมาย</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">LN_C_CLUTCH</div>
+</td>
+<td id="" align="center">
+<div class="tbody">kPa {kgf/cm<sup>2</sup>, psi}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ค่าความจำควบคุมไฮดรอลิก (จับ)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">LN_O_CLUTCH</div>
+</td>
+<td id="" align="center">
+<div class="tbody">kPa {kgf/cm<sup>2</sup>, psi}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ค่าความจำควบคุมไฮดรอลิก (ปล่อย)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">LN_OV_SCOPE</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ค่าความจำควบคุมไฮดรอลิก (การตั้งค่าความจำผิดพลาด)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">LN_T_CLUTCH</div>
+</td>
+<td id="" align="center">
+<div class="tbody">kPa {kgf/cm<sup>2</sup>, psi}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ค่าความจำควบคุมไฮดรอลิก (ทอร์คคอนเวอร์เตอร์)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">LOCK_UP</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF/SLIP/ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ทอร์คคอนเวอร์เตอร์ (สภาวะ TCC)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">LONGI_ACCEL</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การเร่งความเร็วตามแนวยาว</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">OP_SW1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สภาวะสวิตช์แรงดันน้ำมัน No.1</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">OP_SW1_OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">kPa {kgf/cm<sup>2</sup>, psi}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หลังจากปฏิบัติโหมดทดสอบการวิเคราะห์ปัญหาบนรถ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">OP_SW1_ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">kPa {kgf/cm<sup>2</sup>, psi}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หลังจากปฏิบัติโหมดทดสอบการวิเคราะห์ปัญหาบนรถ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">OP_SW2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สภาวะสวิตช์แรงดันน้ำมัน No.2</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">OP_SW2_OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">kPa {kgf/cm<sup>2</sup>, psi}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หลังจากปฏิบัติโหมดทดสอบการวิเคราะห์ปัญหาบนรถ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">OP_SW2_ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">kPa {kgf/cm<sup>2</sup>, psi}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หลังจากปฏิบัติโหมดทดสอบการวิเคราะห์ปัญหาบนรถ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">OP_SW3</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สภาวะสวิตช์แรงดันน้ำมัน No.3</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">OP_SW3_OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">kPa {kgf/cm<sup>2</sup>, psi}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หลังจากปฏิบัติโหมดทดสอบการวิเคราะห์ปัญหาบนรถ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">OP_SW3_ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">kPa {kgf/cm<sup>2</sup>, psi}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หลังจากปฏิบัติโหมดทดสอบการวิเคราะห์ปัญหาบนรถ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">OP_SW4</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สภาวะสวิตช์แรงดันน้ำมัน No.4</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">OP_SW4_OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">kPa {kgf/cm<sup>2</sup>, psi}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หลังจากปฏิบัติโหมดทดสอบการวิเคราะห์ปัญหาบนรถ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">OP_SW4_ON</div>
+</td>
+<td id="" align="center">
+<div class="tbody">kPa {kgf/cm<sup>2</sup>, psi}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หลังจากปฏิบัติโหมดทดสอบการวิเคราะห์ปัญหาบนรถ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">OSS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">RPM</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความเร็วเพลาส่งกำลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">PUMP_SPEED</div>
+</td>
+<td id="" align="center">
+<div class="tbody">RPM</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความเร็วจริงของชุดมอเตอร์ปั๊ม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">RPM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">RPM</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความเร็วรอบเครื่องยนต์ / นาที</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">SC_STATE</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Not Active/Active</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สภาวะการทำงานในการควบคุมการเปลี่ยนเกียร์</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">SE_TYPE</div>
+</td>
+<td id="" align="center">
+<div class="tbody">No valid data/Bf_1st Af_2nd/Bf_1st Af_3rd/Bf_1st Af_4th/Bf_1st Af_5th/Bf_1st Af_6th/Bf_2nd Af_1st/Bf_2nd Af_3rd/Bf_2nd Af_4th/Bf_2nd Af_5th/Bf_2nd Af_6th/Bf_3rd Af_1st/Bf_3rd Af_2nd/Bf_3rd Af_4th/Bf_3rd Af_5th/Bf_3rd Af_6th/Bf_4th Af_1st/Bf_4th Af_2nd/Bf_4th Af_3rd/Bf_4th Af_5th/Bf_4th Af_6th/Bf_5th Af_1st/Bf_5th Af_2nd/Bf_5th Af_3rd/Bf_5th Af_4th/Bf_5th Af_6th/Bf_6th Af_1st/Bf_6th Af_2nd/Bf_6th Af_3rd/Bf_6th Af_4th/Bf_6th Af_5th</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตำแหน่งการเปลี่ยนเกียร์ก่อนเปลี่ยนเกียร์</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">SHIFT_CTRL</div>
+</td>
+<td id="" align="center">
+<div class="tbody">DEFAULT/MANUAL/C_CONTROL/HIGH_TEMP/D_MANUAL/FAIL_SAFE</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โหมดควบคุมการเปลี่ยนเกียร์</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">SS_ON-OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สภาวะโซลินอยด์ ON/OFF</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">SS1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กระแสไฟฟ้าจริงของชิพโซลินอยด์ No.1</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">SS1_C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กระแสไฟฟ้าเป้าหมายของชิพโซลินอยด์ No.1</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">SS2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กระแสไฟฟ้าจริงของชิพโซลินอยด์ No.2</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">SS2_C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กระแสไฟฟ้าเป้าหมายของชิพโซลินอยด์ No.2</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">SS3</div>
+</td>
+<td id="" align="center">
+<div class="tbody">A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กระแสไฟฟ้าจริงของชิพโซลินอยด์ No.3</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">SS3_C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กระแสไฟฟ้าเป้าหมายของชิพโซลินอยด์ No.3</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">SS4</div>
+</td>
+<td id="" align="center">
+<div class="tbody">A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กระแสไฟฟ้าจริงของชิพโซลินอยด์ No.4</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">SS4_C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กระแสไฟฟ้าเป้าหมายของชิพโซลินอยด์ No.4</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">SSLU</div>
+</td>
+<td id="" align="center">
+<div class="tbody">A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กระแสไฟฟ้าจริงของโซลินอยด์ควบคุม TCC</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">SSLU_C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กระแสไฟฟ้าเป้าหมายของโซลินอยด์ควบคุม TCC</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">SSLU_PRES</div>
+</td>
+<td id="" align="center">
+<div class="tbody">kPa {kgf/cm<sup>2</sup>, psi}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันเป้าหมายของโซลินอยด์ควบคุม TCC</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">SSP</div>
+</td>
+<td id="" align="center">
+<div class="tbody">A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กระแสไฟฟ้าจริงของโซลินอยด์ควบคุมแรงดัน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">SSP_C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กระแสไฟฟ้าเป้าหมายของโซลินอยด์ควบคุมแรงดัน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">SSP_PRES</div>
+</td>
+<td id="" align="center">
+<div class="tbody">kPa {kgf/cm<sup>2</sup>, psi}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันเป้าหมายของโซลินอยด์ควบคุมแรงดัน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">TFT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C {&deg;F}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิ ATF</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">THOP</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+<td id="" align="left">
+<div class="tbody">มุมเปิดลิ้นเร่ง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">TORQUE_ACT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Nm</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงบิดเครื่องยนต์จริง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">TORQUE_DES</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Nm</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงบิดเครื่องยนต์ที่ต้องการ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">TR</div>
+</td>
+<td id="" align="center">
+<div class="tbody">P/SHIFT_DOWN/SHIFT_UP/M/D/N/R</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตำแหน่งช่วงเกียร์</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">TSS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">RPM</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความเร็วเพลารับกำลัง / เทอร์ไบน์</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">UPSHIFT_REV</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="tbody">บันทึกการเปลี่ยนเกียร์ขึ้นเนื่องจากสัญญาณขอจากเครื่องยนต์</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">VPWR</div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันไฟฟ้าแหล่งจ่ายไฟ TCM</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">VSS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">KPH {MPH}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความเร็วรถ</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</body>
+</html>

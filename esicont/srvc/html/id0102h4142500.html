@@ -1,0 +1,8214 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>โหมดทดสอบระบบการวิเคราะห์ปัญหาบนรถ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</title>
+</head>
+<body><a name="id0102h4142500"></a><p class="servinfo-title"><span class="servinfo-head"></span>โหมดทดสอบระบบการวิเคราะห์ปัญหาบนรถ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0102h4142500</p>
+<dl>
+<dd>
+<div class="attention2-label">ข้อควรระวัง</div>
+</dd>
+<dd>
+<div class="attention2">
+<div class="list">•&nbsp;&nbsp;ข้อมูลจำเพาะของรถอาจแตกต่างกัน ทั้งนี้ขึ้นอยู่กับหมายเลขตัวถังรถ (VIN)</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;VIN ชนิด A:<div>JM0 KE****** 100001&mdash;</div>
+<div>JM6 KE****** 100001&mdash;</div>
+<div>JM7 KE****** 100001&mdash;</div>
+<div>JM8 KE****** 100001&mdash;</div>
+<div>JMZ KE****** 100001&mdash;</div>
+<div>KE10** 100001&mdash;</div>
+</div>
+</dd>
+</dl>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;VIN ชนิด B:<div>JM0 KE****** 200001&mdash;</div>
+<div>JM6 KE****** 200001&mdash;</div>
+<div>JM8 KE****** 200001&mdash;</div>
+<div>JMZ KE****** 200001&mdash;</div>
+<div>KE10** 200001&mdash;</div>
+</div>
+</dd>
+</dl>
+</div>
+</dd>
+</dl><br clear="all"><a name="id0102h414250001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>โหมดทดสอบการวิเคราะห์</p>
+<div class="list">•&nbsp;&nbsp;เพื่อให้เป็นไปตามข้อกำหนด OBD จึงสนับสนุนโหมดทดสอบการวิเคราะห์ปัญหาต่อไปนี้</div>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">โหมดทดสอบการวิเคราะห์</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายการ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">โหมด 01</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การส่งข้อมูลการวิเคราะห์ปัญหา (การตรวจสอบข้อมูล PID/การทดสอบความพร้อมของระบบบนรถ)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">โหมด 02</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การส่งข้อมูลสภาพรถยนต์</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">โหมด 03</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การส่งรหัสความบกพร่องที่เกี่ยวข้องกับการปล่อยมลพิษ (รหัสวิเคราะห์ปัญหา: รหัสวิเคราะห์ปัญหา)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">โหมด 04</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การลบ/การรีเซ็ตข้อมูลความบกพร่องที่เกี่ยวข้องกับการปล่อยมลพิษ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">โหมด 07</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การส่งผลการทดสอบระบบการตรวจสอบต่อเนื่อง (รหัสที่ค้างอยู่)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">โหมด 08</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การควบคุมอุปกรณ์บนรถ (การทดสอบการจำลอง, โหมดคำสั่งการทำงาน)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">โหมด 09</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ขอข้อมูลรถ</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p><br clear="all"><a name="id0102h414250002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การส่งข้อมูลการวิเคราะห์ปัญหา (โหมด 01)</p><br clear="all"><p><a name="id0102h414250003"></a><p class="topic-title"><span class="topic-head"></span>การตรวจสอบข้อมูล PID</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;รายการการตรวจสอบข้อมูล PID จะแสดงอยู่ด้านล่าง</div>
+</dd>
+</dl>
+<p clear="all">
+<p class="table-title">ตารางการตรวจสอบข้อมูล PID</p>
+<p>
+<div>&mdash;: ใช้ไม่ได้</div>
+</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ชื่อเต็ม</p>
+</th>
+<th id="" align="center">
+<p class="thead">หน่วย</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">ตรวจสอบสถานะตั้งแต่ลบรหัสวิเคราะห์ปัญหา</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีหน่วย</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">สถานะวงจรระบบเชื้อเพลิง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ดูที่รายการด้านล่าง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">โหลด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ECT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C &deg;F</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การปรับเชื้อเพลิงระยะสั้น</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การปรับเชื้อเพลิงระยะยาว</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">MAP</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กิโลปาสคาล</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ความเร็วรอบเครื่องยนต์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">rpm</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ความเร็วรถ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">km/h, mph</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">จุดระเบิดล่วงหน้า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">IAT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C &deg;F</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">MAF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กรัม/วินาที</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">TP สัมบูรณ์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ตำแหน่งเซ็นเซอร์ A/F และ HO2S</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีหน่วย</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">แรงดันไฟฟ้าอินพุทจาก HO2S</div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ข้อกำหนด OBD ตามการออกแบบรถ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีหน่วย</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">เวลานับจากสตาร์ทเครื่องยนต์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">s</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ระยะทางเมื่อเปิดใช้งานไฟเตือนตรวจเช็คเครื่องยนต์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">km, miles</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">แรงดันน้ำมันเชื้อเพลิง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กิโลปาสคาล</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">สัญญาณควบคุมโซลินอยด์วาล์วควบคุมการดูดไอระเหยน้ำมันเชื้อเพลิง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">จำนวนการอุ่นเครื่องตั้งแต่ลบรหัสวิเคราะห์ปัญหา</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีหน่วย</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ระยะทางตั้งแต่ลบรหัสวิเคราะห์ปัญหา</div>
+</td>
+<td id="" align="center">
+<div class="tbody">km, miles</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ความกดอากาศ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กิโลปาสคาล</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">กระแสไฟฟ้าเอาท์พุทเซ็นเซอร์ A/F</div>
+</td>
+<td id="" align="center">
+<div class="tbody">มิลลิแอมแปร์</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิโดยประมาณของอุปกรณ์แปรสภาพก๊าซไอเสีย</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C &deg;F</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">สถานะการตรวจสอบรอบการขับขี่นี้</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">แรงดันไฟฟ้า PCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ค่าโหลดจริง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">สัมประสิทธิ์อัตราส่วนผสมอากาศกับน้ำมันเชื้อเพลิงตามทฤษฏีที่ใช้คำนวณอัตราส่วนผสมอากาศกับน้ำมันเชื้อเพลิงเป้าหมาย</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีหน่วย</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">TP ที่สัมพันธ์กัน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">TP จากเซ็นเซอร์ TP No.2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">APP จากเซ็นเซอร์ APP No.1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">APP จากเซ็นเซอร์ APP No.2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">สัญญาณควบคุมแอ็คชิวเอเตอร์ลิ้นเร่ง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การปรับเชื้อเพลิงระยะสั้น (HO2S)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">การปรับเชื้อเพลิงระยะยาว (HO2S)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<dl>
+<dd>
+<div class="list-title">ความหมายของสถานะวงจรระบบเชื้อเพลิง</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ข้อมูลต่อไปนี้จะปรากฏบนเครื่องมือทดสอบ</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;หยุดการป้อนกลับข้อมูล: ECT ต่ำกว่าโซนการป้อนกลับข้อมูลที่กำหนด</div>
+<div class="list">―&nbsp;&nbsp;ใช้งานการป้อนกลับข้อมูล: การใช้เซ็นเซอร์ A/F, HO2S สำหรับการป้อนกลับข้อมูลปกติ</div>
+<div class="list">―&nbsp;&nbsp;หยุดการป้อนกลับข้อมูล: วงจรเปิดเนื่องจากสภาวะการขับขี่</div>
+<div class="list">―&nbsp;&nbsp;หยุดการป้อนกลับข้อมูล: วงจรเปิดเนื่องจากตรวจพบข้อผิดพลาดของระบบ</div>
+<div class="list">―&nbsp;&nbsp;ใช้งานการป้อนกลับข้อมูล: เกิดความบกพร่องในระบบ HO2S</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</p><br clear="all"><a name="id0102h414250004"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การส่งข้อมูลสภาพรถยนต์ (โหมด 02)</p>
+<div class="list-title">ข้อมูลสภาพรถยนต์</div>
+<div class="list">•&nbsp;&nbsp;ข้อมูลสภาพรถยนต์ประกอบด้วยข้อมูลสภาพรถยนต์และการทำงานของระบบควบคุมเครื่องยนต์ เมื่อตรวจพบการทำงานที่ผิดพลาดในระบบควบคุมเครื่องยนต์ และจะถูกจัดเก็บใน PCM</div>
+<div class="list">•&nbsp;&nbsp;ข้อมูลสภาพรถยนต์ได้รับการจัดเก็บไว้ทันทีที่ไฟเตือนตรวจเช็คเครื่องยนต์สว่างขึ้น และจะมีการจัดเก็บข้อมูลรหัสวิเคราะห์ปัญหาเพียงส่วนเดียวเท่านั้น</div>
+<div class="list">•&nbsp;&nbsp;สำหรับข้อมูลสภาพรถยนต์ หากมีการทำงานที่ผิดพลาดจำนวนมากในระบบควบคุมเครื่องยนต์ ระบบจะจัดเก็บข้อมูลสำหรับการทำงานผิดพลาดที่เกิดขึ้นก่อน ภายหลังจากนั้น หากเกิดการไม่จุดระเบิดหรือการทำงานผิดพลาดของการควบคุมการฉีดน้ำมันเชื้อเพลิง ระบบจะบันทึกข้อมูลจากการทำงานผิดพลาดดังกล่าวทับข้อมูลที่จัดเก็บก่อนหน้า อย่างไรก็ตาม หากข้อมูลสภาพรถยนต์ที่จัดเก็บก่อนหน้าคือ การไม่จุดระเบิดหรือการทำงานผิดพลาดของการควบคุมการฉีดน้ำมันเชื้อเพลิง จะไม่มีการบันทึกข้อมูลทับแต่อย่างใด</div>
+<div class="list-title">ข้อมูล Snapshot</div>
+<div class="list">•&nbsp;&nbsp;ข้อมูล Snapshot จะจัดเก็บข้อมูลรหัสวิเคราะห์ปัญหาที่ตรวจพบในปัจจุบัน</div>
+<div class="list">•&nbsp;&nbsp;ระยะเวลาการบันทึกข้อมูลสภาพรถยนต์/ข้อมูล Snapshot จะแตกต่างกัน ขึ้นอยู่กับหมายเลขรอบการขับขี่ของรหัสวิเคราะห์ปัญหา</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;สำหรับรหัสวิเคราะห์ปัญหาที่มีรอบการขับขี่หมายเลข 1 ระบบจะบันทึกเฉพาะข้อมูลการกำหนดการทำงานผิดพลาดเท่านั้น</div>
+<div class="list">―&nbsp;&nbsp;สำหรับรหัสวิเคราะห์ปัญหาที่มีรอบการขับขี่หมายเลข 2 ระบบจะบันทึกทั้งข้อมูลการกำหนดและข้อมูลที่ไม่ได้กำหนดของการทำงานผิดพลาด</div>
+</dd>
+</dl><br clear="all"><p><a name="id0102h414250005"></a><p class="topic-title"><span class="topic-head"></span>ตารางข้อมูลสภาพรถยนต์</p>
+<p clear="all">
+<p>
+<div>&mdash;: ใช้ไม่ได้</div>
+</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รายการข้อมูลสภาพรถยนต์</p>
+</th>
+<th id="" align="center">
+<p class="thead">หน่วย</p>
+</th>
+<th id="" align="center">
+<p class="thead">คำอธิบาย</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายการตรวจสอบข้อมูล PID ที่เกี่ยวข้อง</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">FUELSYS1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OL/CL/OL-Drive/OL-Fault/CL-Fault</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สถานะระบบเชื้อเพลิง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">FUELSYS</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">โหลด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โหลดเครื่องยนต์ที่คำนวณได้</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ECT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C &deg;F</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิน้ำหล่อเย็นเครื่องยนต์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ECT</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">SFT1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การปรับเชื้อเพลิงระยะสั้น</div>
+</td>
+<td id="" align="center">
+<div class="tbody">SHRTFT1</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">LFT1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การปรับเชื้อเพลิงระยะยาว</div>
+</td>
+<td id="" align="center">
+<div class="tbody">LONGFT1</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">MAP</div>
+</td>
+<td id="" align="center">
+<div class="tbody">KPa {MPa}, mBar {Bar}, psi, in H20</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันสัมบูรณ์ท่อร่วมไอดี</div>
+</td>
+<td id="" align="center">
+<div class="tbody">MAP</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">RPM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">RPM</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความเร็วรอบเครื่องยนต์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">RPM</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">VS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">KPH, MPH</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความเร็วรถ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">VSS</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">SPARKADV</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">จังหวะการจุดระเบิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">SPARKADV</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">IAT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C &deg;F</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิไอดี</div>
+</td>
+<td id="" align="center">
+<div class="tbody">IAT</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">MAF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">g/sec</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปริมาณอากาศ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">MAF</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">TP</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตำแหน่งลิ้นเร่งหมายเลข 1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">TP1</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">RUNTM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">hh:mm:ss</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เวลานับจากสตาร์ทเครื่องยนต์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">EVAPPCT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วาล์วที่ควบคุมด้วยโซลินอยด์วาล์วควบคุมการดูดไอระเหยน้ำมันเชื้อเพลิง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">EVAPCP</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">FLI</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระดับน้ำมันเชื้อเพลิงในถังน้ำมันเชื้อเพลิง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">FLI</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">WARMUPS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">จำนวนรอบการอุ่นเครื่องหลังการลบรหัสวิเคราะห์ปัญหา</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">CLRDIST</div>
+</td>
+<td id="" align="center">
+<div class="tbody">km, ft, {mi}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระยะไมล์หลังการลบรหัสวิเคราะห์ปัญหา</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">BARO</div>
+</td>
+<td id="" align="center">
+<div class="tbody">KPa {MPa}, mBar {Bar}, psi, in H20</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความกดอากาศ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">BARO</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">CATTEMP11</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C &deg;F</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิโดยประมาณของอุปกรณ์แปรสภาพก๊าซไอเสีย</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CATT11_DSD</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">VPWR</div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันไฟฟ้าของโมดูล</div>
+</td>
+<td id="" align="center">
+<div class="tbody">VPWR</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ALV</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โหลดเครื่องยนต์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">โหลด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">EQ_RAT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อัตราส่วนการเท่ากันของเป้าหมาย (lambda)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">EQ_RAT11_DSD</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">TP_REL</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตำแหน่งลิ้นเร่งที่สัมพันธ์กัน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">TP_REL</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">TP_B</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตำแหน่งลิ้นเร่งหมายเลข 2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">TP2</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">APP_D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตำแหน่งแป้นคันเร่งหมายเลข 1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">APP1</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">APP_E</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตำแหน่งแป้นคันเร่งหมายเลข 2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">APP2</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">TAC_PCT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตำแหน่งลิ้นเร่งเป้าหมาย</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ETC_DSD</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">FUEL_TYP</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชนิดของน้ำมันเชื้อเพลิงที่รถกำลังใช้งานอยู่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">STSO2FT1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การปรับเชื้อเพลิงระยะสั้น (HO2S)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">LGSO2FT1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การปรับเชื้อเพลิงระยะยาว (HO2S)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">FRP</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">KPa {MPa}, mBar {Bar}, psi, in H20</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันน้ำมันเชื้อเพลิง</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">FUEL_PRES</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">แรงดันเชื้อเพลิง (ค่าสัมบูรณ์)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">IAT11_SUP</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สนับสนุนอุณหภูมิไอดีหมายเลข 1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">IAT12_SUP</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สนับสนุนอุณหภูมิไอดีหมายเลข 2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">IAT11</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C &deg;F</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิไอดีหมายเลข 1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">IAT</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">IAT12</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C &deg;F</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิไอดีหมายเลข 2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">IAT2</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</p><br clear="all"><p><a name="id0102h414250006"></a><p class="topic-title"><span class="topic-head"></span>ตารางข้อมูล Snapshot</p>
+<p clear="all">
+<p>
+<div>&mdash;: ใช้ไม่ได้</div>
+</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รายการข้อมูล Snapshot</p>
+</th>
+<th id="" align="center">
+<p class="thead">หน่วย</p>
+</th>
+<th id="" align="center">
+<p class="thead">คำอธิบาย</p>
+</th>
+<th id="" align="center">
+<p class="thead">วิธีการอ่าน/ใช้ข้อมูล</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายการตรวจสอบข้อมูล PID ที่เกี่ยวข้อง</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">ALTT_V</div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันไฟฟ้าเอาท์พุทเจนเนอร์เรเตอร์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ALTT V</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">APP1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="tbody">ตำแหน่งแป้นคันเร่งหมายเลข 1</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">APP1</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">APP2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="tbody">ตำแหน่งแป้นคันเร่งหมายเลข 2</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">APP2</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">TP1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="tbody">ตำแหน่งลิ้นเร่งหมายเลข 1</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">TP1</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">TP2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="tbody">ตำแหน่งลิ้นเร่งหมายเลข 2</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">TP2</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ALT_CUR_DSD</div>
+</td>
+<td id="" align="center">
+<div class="tbody">A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กระแสไฟฟ้าของเจนเนอร์เรเตอร์ที่ต้องการ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">BATT_RES</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ohm (โอห์ม)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความต้านทานภายในของแบตเตอรี่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">TOTAL_TIME</div>
+</td>
+<td id="" align="center">
+<div class="tbody">hh:mm:ss</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เวลาโดยรวม</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ช่วงเวลาที่ผ่านไปเมื่อ PCM ตรวจพบรหัสวิเคราะห์ปัญหาสามารถคำนวณได้ด้วยขั้นตอนต่อไปนี้</div>
+<div class="list">1.&nbsp;&nbsp;ตรวจสอบรายการ PID บนแผงหน้าปัด TOTAL_TIME</div>
+<div class="list">2.&nbsp;&nbsp;ตรวจสอบรายการข้อมูล Snapshot TOTAL_TIME</div>
+<div class="list">3.&nbsp;&nbsp;ลบ 2 ออกจาก 1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">TOTAL_DIST</div>
+</td>
+<td id="" align="center">
+<div class="tbody">km, ft, {mi}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระยะทางทั้งหมด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระยะทางเมื่อ PCM ตรวจพบรหัสวิเคราะห์ปัญหาสามารถคำนวณได้ด้วยขั้นตอนต่อไปนี้</div>
+<div class="list">1.&nbsp;&nbsp;ตรวจสอบค่าจากมาตรบันทึกระยะทางในแผงหน้าปัด</div>
+<div class="list">2.&nbsp;&nbsp;ตรวจสอบรายการข้อมูล Snapshot TOTAL_DIST</div>
+<div class="list">3.&nbsp;&nbsp;ลบ 2 ออกจาก 1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">FUELSYS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OL/CL/OL-Drive/OL-Fault/CL-Fault</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สถานะระบบเชื้อเพลิง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">FUELSYS</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">LOAD_C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โหลดเครื่องยนต์ที่คำนวณได้</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ECT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C &deg;F</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิน้ำหล่อเย็นเครื่องยนต์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ECT</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">SHRTFT1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การปรับเชื้อเพลิงระยะสั้น</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">SHRTFT1</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">LONGFT1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การปรับเชื้อเพลิงระยะยาว</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">LONGFT1</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">MAP</div>
+</td>
+<td id="" align="center">
+<div class="tbody">KPa {MPa}, mBar {Bar}, psi, in H20</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันสัมบูรณ์ท่อร่วมไอดี</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">MAP</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">RPM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">RPM</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความเร็วรอบเครื่องยนต์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">RPM</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">VSS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">KPH, MPH</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความเร็วรถ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">VSS</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">SPARKADV</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">จังหวะการจุดระเบิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">SPARKADV</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">IAT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C &deg;F</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิไอดีหมายเลข 1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">IAT</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">MAF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">g/sec</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปริมาณอากาศ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">MAF</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">O2S12</div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">HO2S</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">O2S12</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">EG_RUN_TIME</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เวลานับจากสตาร์ทเครื่องยนต์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">FUEL_PRES</div>
+</td>
+<td id="" align="center">
+<div class="tbody">KPa {MPa}, mBar {Bar}, psi, in H20</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันน้ำมันเชื้อเพลิง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">FUEL_PRES</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">SEGRP_DSD</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตำแหน่งวาล์ว EGR เป้าหมาย</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">EVAPCP</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วาล์วที่ควบคุมด้วยโซลินอยด์วาล์วควบคุมการดูดไอระเหยน้ำมันเชื้อเพลิง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">EVAPCP</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">FLI</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระดับน้ำมันเชื้อเพลิงในถังน้ำมันเชื้อเพลิง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">FLI</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">CLR_CNT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">จำนวนรอบการอุ่นเครื่องหลังการลบรหัสวิเคราะห์ปัญหา</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">CLR_DIST</div>
+</td>
+<td id="" align="center">
+<div class="tbody">km, ft, {mi}</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระยะไมล์หลังการลบรหัสวิเคราะห์ปัญหา</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">FTP</div>
+</td>
+<td id="" align="center">
+<div class="tbody">KPa {MPa}, mBar {Bar}, psi, in H20</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันถังน้ำมันเชื้อเพลิง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">FTP</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">BARO</div>
+</td>
+<td id="" align="center">
+<div class="tbody">KPa {MPa}, mBar {Bar}, psi, in H20</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความกดอากาศ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">BARO</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">CATT11_DSD</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C &deg;F</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิโดยประมาณของอุปกรณ์แปรสภาพก๊าซไอเสีย</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CATT11_DSD</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">VPWR</div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันไฟฟ้าของโมดูล</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">VPWR</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">โหลด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โหลดเครื่องยนต์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">โหลด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">EQ_RAT11_DSD</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อัตราส่วนการเท่ากันของเป้าหมาย (lambda)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">EQ_RAT11_DSD</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">TP_REL</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตำแหน่งลิ้นเร่งที่สัมพันธ์กัน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">TP REL</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">AAT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C &deg;F</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิของอากาศภายนอก</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">AAT</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ETC_DSD</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตำแหน่งลิ้นเร่งเป้าหมาย</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ETC_DSD</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">SHRTFT12</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การปรับเชื้อเพลิงระยะสั้น (HO2S)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">LONGFT12</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การปรับเชื้อเพลิงระยะยาว (HO2S)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">FRP</div>
+</td>
+<td id="" align="center">
+<div class="tbody">KPa {MPa}, mBar {Bar}, psi, in H20</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันเชื้อเพลิง (ค่าสัมบูรณ์)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">FUEL_PRES</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ECT2_SUP</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ส่วนรองรับอุณหภูมิน้ำหล่อเย็นเครื่องยนต์หมายเลข 2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ECT2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C &deg;F</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิน้ำหล่อเย็นเครื่องยนต์หมายเลข 2</div>
+</td>
+<td id="" align="center">
+<div class="tbody"></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ECT2_V</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">IAT12</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C &deg;F</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิไอดีหมายเลข 2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">IAT2</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</p><br clear="all"><a name="id0102h414250007"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ไบต์แสดงสถานะของรหัสวิเคราะห์ปัญหา</p>
+<div class="list">•&nbsp;&nbsp;ไบต์แสดงสถานะคือรหัสสองหลัก (สองหลักหลังเครื่องหมายขีด (-)) หลังรหัสวิเคราะห์ปัญหา<table class="figure-flame">
+<tr>
+<td width="10mm"></td>
+<td>
+<table class="figure-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/am3uun00002230.png"></td>
+</tr>
+</table>
+<div class="figure-caption">am3uun00002230</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="list">•&nbsp;&nbsp;ไบต์แสดงสถานะคือรหัสที่แสดงรหัสที่ค้างอยู่, สถานะความบกพร่องปัจจุบัน/ในอดีต หรือสถานะไฟเตือน</div>
+<div class="list">•&nbsp;&nbsp;ไบต์แสดงสถานะสามารถอ่านได้ด้วยการทดสอบ CMDTC ด้วยตนเองโดยใช้ระบบวิเคราะห์ปัญหาตามเกณฑ์ของ Mazda (M-MDS)</div>
+<div class="list">•&nbsp;&nbsp;สำหรับรายละเอียดเกี่ยวกับไบต์แสดงสถานะ ให้ดูที่คำอธิบายใน M-MDS เมื่ออ่านรหัสวิเคราะห์ปัญหา</div><br clear="all"><a name="id0102h414250008"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การส่งรหัสความบกพร่องที่เกี่ยวข้องกับการปล่อยมลพิษ (รหัสวิเคราะห์ปัญหา) (โหมด 03)</p>
+<div class="list">•&nbsp;&nbsp;รหัสวิเคราะห์ปัญหาจะแสดงที่ด้านล่าง</div>
+<p clear="all">
+<p>
+<div>&times;: ใช้ได้</div>
+<div>&mdash;: ใช้ไม่ได้</div>
+</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">หมายเลขรหัสวิเคราะห์ปัญหา</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟเตือนตรวจเช็คเครื่องยนต์</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟเตือนหลัก</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟเตือน i-stop (เหลืองอำพัน)</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟเตือนระบบไฟชาร์จ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟเตือนน้ำมันเครื่อง</p>
+</th>
+<th id="" align="center">
+<p class="thead">สภาวะ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ฟังก์ชั่น FAIL-SAFE</p>
+</th>
+<th id="" align="center">
+<p class="thead">รอบการขับ</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายการตรวจสอบ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ประเภทการทดสอบด้วยตนเอง<sup>* 1</sup></p>
+</th>
+<th id="" align="center">
+<p class="thead">ฟังก์ชั่นหน่วยความจำ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0010:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปัญหาสมรรถนะ / ช่วงการทำงานของวงจรควบคุมไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0011:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระบบควบคุมไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า: ล่วงหน้ามากเกินไป</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0012:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระบบควบคุมไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า: หน่วงมากเกินไป</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0014:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระบบควบคุมไทม์มิ่งวาล์วแปรผันแบบไฮดรอลิก: ล่วงหน้ามากเกินไป</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0015:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระบบควบคุมไทม์มิ่งวาล์วแปรผันแบบไฮดรอลิก: หน่วงมากเกินไป</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0031:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทวงจรควบคุมฮีทเตอร์ A/F เซ็นเซอร์ต่ำกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ฮีทเตอร์ A/F เซ็นเซอร์, ฮีทเตอร์ HO2S</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0032:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทวงจรควบคุมฮีทเตอร์ A/F เซ็นเซอร์สูงกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ฮีทเตอร์ A/F เซ็นเซอร์, ฮีทเตอร์ HO2S</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0037:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทวงจรควบคุมฮีทเตอร์ HO2S ต่ำกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ฮีทเตอร์ A/F เซ็นเซอร์, ฮีทเตอร์ HO2S</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0038:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทวงจรควบคุมฮีทเตอร์ HO2S สูงกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ฮีทเตอร์ A/F เซ็นเซอร์, ฮีทเตอร์ HO2S</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0069:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปัญหาความสัมพันธ์กันของแรงดันสัมบูรณ์ท่อร่วมไอดี / แรงดันบรรยากาศ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0072:00<sup>*7</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทวงจรเซ็นเซอร์อุณหภูมิภายนอกต่ำกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0073:00<sup>*7</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทวงจรเซ็นเซอร์อุณหภูมิภายนอกสูงกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0089:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปัญหาสมรรถนะ / ช่วงการทำงานของวงจรควบคุมโซลินอยด์วาล์วควบคุมวาล์วน้ำมันกลับ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0091:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทวงจรควบคุมเร็กกูเลเตอร์แรงดันเชื้อเพลิงต่ำกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0092:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทวงจรควบคุมเร็กกูเลเตอร์แรงดันเชื้อเพลิงสูงกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0096:00<sup>*12</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปัญหาสมรรถนะ / ช่วงการทำงานของวงจรเซ็นเซอร์ IAT No.2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0097:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทวงจรเซ็นเซอร์ IAT No.2 ต่ำกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0098:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทวงจรเซ็นเซอร์ IAT No.2 สูงกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0101:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปัญหาสมรรถนะ / ช่วงการทำงานของวงจรเซ็นเซอร์ MAF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0102:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทวงจรเซ็นเซอร์ MAF ต่ำกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0103:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทวงจรเซ็นเซอร์ MAF สูงกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0107:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทวงจรเซ็นเซอร์ MAP ต่ำกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0108:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทวงจรเซ็นเซอร์ MAP สูงกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0112:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทวงจรเซ็นเซอร์ IAT No.1 ต่ำกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0113:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทวงจรเซ็นเซอร์ IAT No.1 สูงกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0116:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปัญหาสมรรถนะ / ช่วงการทำงานของวงจรเซ็นเซอร์ ECT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ระบบหล่อเย็นเครื่องยนต์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0117:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทวงจรเซ็นเซอร์ ECT ต่ำกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ระบบหล่อเย็นเครื่องยนต์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0118:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทวงจรเซ็นเซอร์ ECT สูงกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ระบบหล่อเย็นเครื่องยนต์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0122:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทวงจรเซ็นเซอร์ TP No.1 ต่ำกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0123:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทวงจรเซ็นเซอร์ TP No.1 สูงกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0130:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปัญหาแรงดันไฟฟ้าระหว่างขั้ว 1AB ของ PCM และขั้ว 1AG ของ PCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เซ็นเซอร์ A/F, HO2S</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0131:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทวงจรเซ็นเซอร์ A/F ต่ำกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เซ็นเซอร์ A/F, HO2S</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0132:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทวงจรเซ็นเซอร์ A/F สูงกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เซ็นเซอร์ A/F, HO2S</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0133:00<sup>*12</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรเซ็นเซอร์ A/F ตอบสนองช้า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เซ็นเซอร์ A/F, HO2S</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0134:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบวงจรเซ็นเซอร์ A/F ไม่ทำงาน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เซ็นเซอร์ A/F, HO2S</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0137:00<sup>*12</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทวงจร HO2S ต่ำกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เซ็นเซอร์ A/F, HO2S</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0138:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทวงจร HO2S สูงกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เซ็นเซอร์ A/F, HO2S</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P013A:00<sup>*12</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">HO2S การตอบสนองช้า (ระหว่างการเปลี่ยนจากส่วนผสมหนาเป็นบาง)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เซ็นเซอร์ A/F, HO2S</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P013B:00<sup>*12</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจร HO2S ตอบสนองช้า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เซ็นเซอร์ A/F, HO2S</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0140:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบวงจร HO2S ไม่ทำงาน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เซ็นเซอร์ A/F, HO2S</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0171:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระบบปรับเชื้อเพลิงบางเกินไป</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ระบบเชื้อเพลิง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0172:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระบบปรับเชื้อเพลิงหนาเกินไป</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ระบบเชื้อเพลิง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0191:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปัญหาสมรรถนะ / ช่วงการทำงานของวงจรเซ็นเซอร์แรงดันน้ำมันเชื้อเพลิง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0192:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทวงจรเซ็นเซอร์แรงดันน้ำมันเชื้อเพลิงต่ำกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0193:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทวงจรเซ็นเซอร์แรงดันน้ำมันเชื้อเพลิงสูงกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0201:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรหัวฉีดน้ำมันเชื้อเพลิงสูบที่ 1 / ขาดวงจร</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0202:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรหัวฉีดน้ำมันเชื้อเพลิงสูบที่ 2 / ขาดวงจร</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0203:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรหัวฉีดน้ำมันเชื้อเพลิงสูบที่ 3 / ขาดวงจร</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0204:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรหัวฉีดน้ำมันเชื้อเพลิงสูบที่ 4 / ขาดวงจร</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0222:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทวงจรเซ็นเซอร์ TP No.2 ต่ำกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0223:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทวงจรเซ็นเซอร์ TP No.2 สูงกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P025B:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปัญหาสมรรถนะ / ช่วงการทำงานของวงจรโมดูลควบคุมปั๊มเชื้อเพลิง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P025C:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON<sup>*14</sup>/OFF<sup>*13</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ผลที่ได้จากการทดสอบการวิเคราะห์ปัญหาบนรถของโมดูลควบคุมปั๊มเชื้อเพลิงมีสัญญาณอินพุทต่ำกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P025D:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON<sup>*14</sup>/OFF<sup>*13</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ผลที่ได้จากการทดสอบการวิเคราะห์ปัญหาบนรถของโมดูลควบคุมปั๊มเชื้อเพลิงมีสัญญาณอินพุทสูงกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0300:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ/เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบการไม่จุดระเบิดแบบสุ่ม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่จุดระเบิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0301:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ/เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบการไม่จุดระเบิดของสูบที่ 1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่จุดระเบิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0302:00:</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ/เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบการไม่จุดระเบิดของสูบที่ 2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่จุดระเบิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0303:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ/เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบการไม่จุดระเบิดของสูบที่ 3</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่จุดระเบิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0304:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ/เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบการไม่จุดระเบิดของสูบที่ 4</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่จุดระเบิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0327:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทวงจร KS ต่ำกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0328:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทวงจร KS สูงกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0335:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรเซ็นเซอร์ CKP บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0340:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรเซ็นเซอร์ CMP ไอดีบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0365:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรเซ็นเซอร์ CMP ไอเสียบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0421:00<sup>*12</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระบบอุปกรณ์แปรสภาพก๊าซไอเสีย</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ตัวแปรสภาพไอเสีย</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0443:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรโซลินอยด์วาล์วควบคุมการดูดไอระเหยน้ำมันเชื้อเพลิงบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0461:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON<sup>*14</sup>/OFF<sup>*13</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปัญหาสมรรถนะ / ช่วงการทำงานของวงจรชุดส่งสัญญาณเกจวัดระดับน้ำมันเชื้อเพลิง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0462:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON<sup>*14</sup>/OFF<sup>*13</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทวงจรชุดส่งสัญญาณเกจวัดระดับน้ำมันเชื้อเพลิงต่ำกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0463:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON<sup>*14</sup>/OFF<sup>*13</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทวงจรชุดส่งสัญญาณเกจวัดระดับน้ำมันเชื้อเพลิงสูงกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0480:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรควบคุมรีเลย์พัดลมระบายความร้อน No.1 บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0482:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรควบคุมรีเลย์พัดลมระบายความร้อน No.2 และ No.3 บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0500:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจร VSS บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0506:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความเร็วรอบของระบบ IAC ต่ำกว่าที่คาดไว้</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0507:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความเร็วรอบของระบบ IAC สูงกว่าที่คาดไว้</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0520:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์แรงดันน้ำมันเครื่องบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0524:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด<sup>*9</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันน้ำมันเครื่องต่ำเกินไป</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0532:00<sup>*7</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทวงจรเซ็นเซอร์แรงดันสารทำความเย็นต่ำกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0533:00<sup>*7</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทวงจรเซ็นเซอร์แรงดันสารทำความเย็นสูงกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0555:00<sup>*6</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปัญหาเกี่ยวกับวงจรเซ็นเซอร์สุญญากาศของหม้อลมเบรก</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0571:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ไฟเบรกบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P057F:00<sup>*6</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระบบไฟฟ้า: การเสื่อมสภาพของแบตเตอรี่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P058A:00<sup>*6</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด<sup>*10</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เซ็นเซอร์กระแสไฟฟ้า: ฟังก์ชั่นการทำงานบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0600:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การเชื่อมต่อสัญญาณสื่อสารแบบอนุกรม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0601:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ผลการตรวจเช็คหน่วยความจำ PCM ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0602:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การลงโปรแกรม PCM ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0604:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">PCM RAM ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0606:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หน่วยประมวลผล PCM ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0607:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปัญหาประสิทธิภาพของโมดูลควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0610:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การตั้งค่ารถของ PCM ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0615:00<sup>*6</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปริมาณการทำงานของมอเตอร์สตาร์ท/รีเลย์มอเตอร์สตาร์ท</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P061B:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปัญหาประสิทธิภาพการคำนวณแรงบิดของโมดูลควบคุมภายใน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P061D:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปัญหาประสิทธิภาพมวลอากาศเครื่องยนต์ของโมดูลควบคุมภายใน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P061F:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปัญหาประสิทธิภาพชุดควบคุมแอ็คชิวเอเตอร์ลิ้นเร่งของโมดูลควบคุมภายใน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0628:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON<sup>*14</sup>/OFF<sup>*13</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทวงจรโมดูลควบคุมปั๊มเชื้อเพลิงต่ำกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0629:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON<sup>*14</sup>/OFF<sup>*13</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทวงจรโมดูลควบคุมปั๊มเชื้อเพลิงสูงกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0638:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปัญหาสมรรถนะ / ช่วงการควบคุมแอ็คชิวเอเตอร์ลิ้นเร่ง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P064D:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปัญหาประสิทธิภาพหน่วยประมวลผลเซ็นเซอร์ A/F ของโมดูลควบคุมภายใน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เซ็นเซอร์ A/F, HO2S</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0685:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรควบคุมรีเลย์หลักขาดวงจร</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P06B8:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">RAM ถาวรของโมดูลควบคุมภายในผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P06DA:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรโซลินอยด์วาล์วน้ำมันเครื่องบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0703:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสัญญาณอินพุทสวิตช์ไฟเบรกบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0704:00<sup>*3</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสัญญาณอินพุทสวิตช์ CPP บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P07BE:00<sup>*8</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เกียร์ว่างบกพร่อง (เข้าเกียร์ว่างไม่ได้)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0850:00<sup>*3</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสัญญาณอินพุทสวิตช์เกียร์ว่าง No.1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0A0F:00<sup>*6</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สตาร์ทเครื่องยนต์ไม่ได้</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0A8D:00<sup>*6</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทวงจรระบบแหล่งจ่ายไฟต่ำกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0A8F:00<sup>*12</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระบบไฟฟ้า: อินพุทต่ำ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P0A94:00<sup>*6</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">DC-DC คอนเวอเตอร์: สัญญาณวงจรควบคุมผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P111A:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิน้ำหล่อเย็นเครื่องยนต์สูงกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P117A:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิน้ำมันเครื่องสูงกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P1260:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปัญหาระบบอิมโมบิไลเซอร์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P1380:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรควบคุมไทม์มิ่งวาล์วแปรผันแบบไฟฟ้าบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P151B:00<sup>*2</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปัญหาระบบ IAC</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P176E:00<sup>*8</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปัญหาความสัมพันธ์ของเซ็นเซอร์ระยะชักของคลัตช์/สวิตช์อินเตอร์ล็อคมอเตอร์สตาร์ท</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P2090:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทวงจร OCV ต่ำกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P2091:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทวงจร OCV สูงกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P2096:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระบบควบคุมการฉีดน้ำมันเชื้อเพลิง HO2S: ส่วนผสมอากาศกับน้ำมันเชื้อเพลิงบางเกินไป</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ระบบเชื้อเพลิง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P2097:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระบบควบคุมการฉีดน้ำมันเชื้อเพลิง HO2S: ส่วนผสมอากาศกับน้ำมันเชื้อเพลิงหนาเกินไป</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ระบบเชื้อเพลิง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P2101:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปัญหาสมรรถนะ / ช่วงการทำงานของวงจรมอเตอร์ควบคุมแอ็คชิวเอเตอร์ลิ้นเร่ง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P2107:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หน่วยประมวลผลโมดูลควบคุมแอ็คชิวเอเตอร์ลิ้นเร่งผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P2109:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปัญหาสมรรถนะ / ช่วงหยุดการทำงานต่ำสุดของเซ็นเซอร์ TP</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P2110:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระบบควบคุมแอ็คชิวเอเตอร์ลิ้นเร่งจำกัดความเร็วรอบเครื่องยนต์ที่ขีดกำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P2112:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปัญหาสมรรถนะ / ช่วงการทำงานขณะนั้นของมอเตอร์แอ็คชิวเอเตอร์ลิ้นเร่ง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P2119:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปัญหาสมรรถนะ / ช่วงการทำงานของเรือนลิ้นเร่งควบคุมแอ็คชิวเอเตอร์ลิ้นเร่ง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P2122:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทวงจรเซ็นเซอร์ APP No.1 ต่ำกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P2123:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทวงจรเซ็นเซอร์ APP No.1 สูงกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P2127:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทวงจรเซ็นเซอร์ APP No.2 ต่ำกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P2128:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทวงจรเซ็นเซอร์ APP No.2 สูงกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P2135:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปัญหาความสัมพันธ์ของแรงดันไฟฟ้าเซ็นเซอร์ TP No.1/No.2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P2138:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปัญหาความสัมพันธ์ของแรงดันไฟฟ้าเซ็นเซอร์ APP No.1/No.2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P2199:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ปัญหาสมรรถนะ / ช่วงการทำงานของวงจรเซ็นเซอร์ IAT No.2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P2228:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทวงจรเซ็นเซอร์ BARO ต่ำกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P2229:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทวงจรเซ็นเซอร์ BARO สูงกว่าที่กำหนด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P2237:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรขาดระหว่างขั้ว B ของเซ็นเซอร์ A/F กับขั้ว 1AG ของ PCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เซ็นเซอร์ A/F, HO2S</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P2243:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรแรงดันไฟฟ้าอ้างอิงเซ็นเซอร์ A/F ขาดวงจร</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เซ็นเซอร์ A/F, HO2S</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P2251:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรขาดระหว่างขั้ว D ของเซ็นเซอร์ A/F กับขั้ว 1AB ของ PCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เซ็นเซอร์ A/F, HO2S</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P2299:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แป้นคันเร่ง: การคืนกลับบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P2302:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรเซ็นเซอร์ Ion No.1 บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P2305:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรเซ็นเซอร์ Ion No.2 บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P2308:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรเซ็นเซอร์ Ion No.3 บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P2311:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรเซ็นเซอร์ Ion No.4 บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P2502:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด<sup>*10</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระบบเจนเนอร์เรเตอร์: ความบกพร่องในแรงดันไฟฟ้าที่เกิดจากเจนเนอร์เรเตอร์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P2503:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด<sup>*10</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระบบเจนเนอร์เรเตอร์: ค่าแรงดันไฟฟ้าที่เกิดจากเจนเนอร์เรเตอร์ต่ำ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P2504:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด<sup>*10</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระบบเจนเนอร์เรเตอร์: ค่าแรงดันไฟฟ้าที่เกิดจากเจนเนอร์เรเตอร์สูง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P2507:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณอินพุทแรงดันไฟฟ้าแบตเตอรี่ของ PCM ต่ำ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P2610:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="list-title">VIN ชนิด A</div>
+<div class="list">•&nbsp;&nbsp;ปัญหาประสิทธิภาพไทม์เมอร์ปิดการทำงานของเครื่องยนต์ภายในแผงหน้าปัด</div>
+<div class="list-title">VIN ชนิด B</div>
+<div class="list">  ความบกพร่องในแผงหน้าปัด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">CCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U0073:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารระบบ CAN ผิดพลาด (HS CAN)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U0074:00<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารระบบ CAN ผิดพลาด (ระบบ CAN ควบคุมเฉพาะพื้นที่ระหว่าง PCM กับ TCM)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U0101:00<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสาร CAN: การสื่อสารกับ TCM ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U0121:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสาร CAN: การสื่อสารกับ DSC HU/CM ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U0131:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสาร CAN: การสื่อสารกับโมดูลควบคุม EPS ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U0140:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสาร CAN: การสื่อสารกับโมดูลควบคุมตัวถังด้านหน้า (FBCM) ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U0151:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสาร CAN: การสื่อสารกับโมดูลควบคุม SAS ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสาร CAN: การสื่อสารกับแผงหน้าปัดผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U0214:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสาร CAN: การสื่อสารกับชุดเปิด/ปิดการทำงานผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U0235:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสาร CAN: การสื่อสารกับเซ็นเซอร์เลเซอร์ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U0298:00<sup>*6</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระบบการสื่อสาร CAN/LIN: การสื่อสารข้อมูล DC-DC คอนเวอเตอร์กับโมดูลควบคุมตัวถังด้านหน้า (FBCM) ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U0302:00<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หน่วยประมวลผล TCM ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U0315:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">DSC HU/CM ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U0320:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุม EPS ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U0323:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แผงหน้าปัดผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U0336:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุม SAS ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U0338:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U0433:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ข้อความผิดปกติจากโมดูลควบคุมตัวถังด้านหลัง (RBCM)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U1007:00<sup>*6</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด<sup>*10</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระบบการสื่อสาร CAN/LIN: การสื่อสารข้อมูลเซ็นเซอร์กระแสไฟฟ้ากับโมดูลควบคุมตัวถังด้านหน้า (FBCM) ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U2300:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">เปิด<sup>*11</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การกำหนดค่าหน่วยประมวลผลกลางผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U3000:41</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หน่วยประมวลผล PCM ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อื่นๆ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, O</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;:C: การทดสอบ CMDTC ด้วยตนเอง, O: การทดสอบตัวเองแบบ KOEO, R: การทดสอบตัวเองแบบ KOEO</div>
+<div class="deflist">*2&nbsp;&nbsp;:การทดสอบตัวเองแบบ KOEOเท่านั้น</div>
+<div class="deflist">*3&nbsp;&nbsp;:MTX</div>
+<div class="deflist">*4&nbsp;&nbsp;:ATX</div>
+<div class="deflist">*5&nbsp;&nbsp;:ทำการสดสอบด้วยตนเองหลังจาก i-stop เริ่มทำงาน</div>
+<div class="deflist">*6&nbsp;&nbsp;:รุ่นที่มีระบบ i-stop</div>
+<div class="deflist">*7&nbsp;&nbsp;:รุ่นที่มีระบบปรับอากาศ</div>
+<div class="deflist">*8&nbsp;&nbsp;:รถที่มีระบบ i-stop (MTX)</div>
+<div class="deflist">*9&nbsp;&nbsp;:ข้อความ &quot;Engine Oil Pressure Inspection Required&quot; ปรากฏขึ้นบ่อยครั้งใน TFT LCD (รุ่นที่มี TFT LCD)</div>
+<div class="deflist">*10&nbsp;&nbsp;:ข้อความ &quot;Charging System Inspection Required&quot; แสดงใน TFT LCD บ่อยครั้ง (รุ่นที่มี TFT LCD)</div>
+<div class="deflist">*11&nbsp;&nbsp;:ข้อความ &quot;Vehicle System Inspection Required&quot; แสดงใน TFT LCD บ่อยครั้ง (รุ่นที่มี TFT LCD)</div>
+<div class="deflist">*12&nbsp;&nbsp;:ถ้ามีติดตั้ง</div>
+<div class="deflist">*13&nbsp;&nbsp;:VIN ชนิด A</div>
+<div class="deflist">*14&nbsp;&nbsp;:VIN ชนิด B</div><br clear="all"><a name="id0102h414250009"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การส่งผลการทดสอบระบบการตรวจสอบต่อเนื่อง (รหัสที่ค้างอยู่) (โหมด 07)</p>
+<div class="list">•&nbsp;&nbsp;รายการเหล่านี้จะปรากฏขึ้นเมื่อตรวจพบปัญหาในระบบที่ตรวจสอบ</div><br clear="all"><p><a name="id0102h414250010"></a><p class="topic-title"><span class="topic-head"></span>ชนิด 1 รอบการขับขี่</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบปัญหาในรอบการขับขี่แรก รหัสที่ค้างอยู่จะถูกจัดเก็บในหน่วยความจำ PCM รวมถึงรหัสวิเคราะห์ปัญหาด้วย</div>
+<div class="list">•&nbsp;&nbsp;หลังจากจัดเก็บรหัสที่ค้างอยู่แล้ว หาก PCM ตัดสินว่าระบบปกติในรอบการขับขี่ต่อๆ ไป PCM จะลบรหัสที่ค้างอยู่ออก</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id0102h414250011"></a><p class="topic-title"><span class="topic-head"></span>ชนิด 2 รอบการขับขี่</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;รหัสสำหรับระบบที่ทำงานผิดพลาดจะเก็บบันทึกไว้ในหน่วยความจำ PCM ในรอบการขับขี่แรก ถ้า PCM ตัดสินว่าระบบต้องกลับสู่สภาพปกติหรือปัญหาดังกล่าวได้รับการตรวจพบโดยผิดพลาด จะมีการลบรหัสที่ค้างอยู่ออก ถ้ายังพบปัญหานี้อยู่ในรอบการขับขี่ที่สอง PCM จะตัดสินว่าระบบทำงานบกพร่อง และรหัสที่ค้างอยู่และรหัสวิเคราะห์ปัญหาจะได้รับการบันทึก</div>
+<div class="list">•&nbsp;&nbsp;หลังจากจัดเก็บรหัสที่ค้างอยู่แล้ว หาก PCM ตัดสินว่าระบบปกติในรอบการขับขี่ต่อๆ ไป PCM จะลบรหัสที่ค้างอยู่ออก</div>
+</dd>
+</dl>
+</p>
+</body>
+</html>

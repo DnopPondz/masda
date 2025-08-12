@@ -1,0 +1,141 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>ระบบไฟกะพริบเมื่อเบรกฉุกเฉิน (ESS)</title>
+</head>
+<body><a name="id091800014600"></a><p class="servinfo-title"><span class="servinfo-head"></span>ระบบไฟกะพริบเมื่อเบรกฉุกเฉิน (ESS)</p>
+<hr>
+<p class="servinfo-title-id" align="right">id091800014600</p><br clear="all"><a name="id09180001460001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รายละเอียด</p>
+<div class="list">•&nbsp;&nbsp;ระบบไฟกะพริบเมื่อเบรกฉุกเฉิน (ESS) ถูกออกแบบมาเพื่อเตือนให้ผู้ที่ขับขี่ตามหลังทราบว่ามีการเบรกฉุกเฉินโดยการกะพริบไฟเตือนฉุกเฉินอัตโนมัติอย่างรวดเร็วเมื่อรถยนต์รถความเร็วลงอย่างฉับพลัน</div>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมตัวถังด้านหน้า (FBCM) จะสั่งงานโหมด Fail-safe ของระบบ ESS (ดูที่ <font class="extxref-label"><a href="id094000002500.html">โมดูลควบคุมตัวถังด้านหน้า (FBCM)</a></font>)</div><br clear="all"><a name="id09180001460002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ภาพโครงสร้าง</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001241.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001241</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id09180001460003"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ผังวงจรระบบ</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001242.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001242</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id09180001460004"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมตัวถังด้านหน้า (FBCM) จะให้ความสำคัญกับการทำงานของระบบไฟกะพริบฉุกเฉิน (ESS) ก่อนเป็นอันดับแรกแม้ว่าจะมีการเปิดใช้งานสวิตช์ไฟเลี้ยวในระหว่างการทำงานของระบบไฟกะพริบฉุกเฉิน (ESS) ก็ตาม</div>
+<div class="list">•&nbsp;&nbsp;เมื่อเปิดใช้งานสวิตช์ไฟเตือนฉุกเฉินระหว่างการทำงานของระบบไฟกะพริบฉุกเฉิน (ESS) โมดูลควบคุมตัวถังด้านหน้า (FBCM) จะหยุดการทำงานของระบบไฟกะพริบฉุกเฉิน (ESS) และให้ความสำคัญกับการทำงานของการกะพริบไฟเตือนฉุกเฉินเป็นอันดับแรก</div>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมตัวถังด้านหน้า (FBCM) จะควบคุมระบบไฟกะพริบเมื่อเบรกฉุกเฉิน (ESS) ตามสัญญาณระบบ CAN ต่อไปนี้:</div>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">โมดูลการส่งสัญญาณระบบ CAN</p>
+</th>
+<th id="" align="center">
+<p class="thead">ชื่อสัญญาณ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left" rowspan="2">
+<div class="tbody">PCM</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สถานะสวิตช์เบรก</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">สัญญาณความเร็วรถ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="3">
+<div class="tbody">DSC HU/CM</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความเร็วล้อ (ด้านหน้าซ้าย, ด้านหน้าขวา, ด้านหลังซ้าย, ด้านหลังขวา)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">สภาวะการทำงานของ ABS</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">อัตราเร็วในการเร่งความเร็วรถ</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="list">•&nbsp;&nbsp;ระบบไฟกะพริบฉุกเฉิน (ESS) มีโหมดการเตือนสองแบบคือ โหมดเตือนฉุกเฉินเมื่อลดความเร็วอย่างฉับพลันซึ่งไฟเตือนฉุกเฉินจะกะพริบอย่างรวดเร็ว และโหมดเตือนฉุกเฉินเมื่อหยุดกะทันหันซึ่งไฟเตือนฉุกเฉินจะกะพริบตามปกติ</div><br clear="all"><p><a name="id09180001460005"></a><p class="topic-title"><span class="topic-head"></span>โหมดเตือนฉุกเฉินเมื่อลดความเร็วอย่างฉับพลัน</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;โหมดเตือนฉุกเฉินเมื่อลดความเร็วอย่างฉับพลันจะทำงานเมื่อมีการเหยียบแป้นเบรกขณะขับขี่ที่ความเร็ว 50 km/h {31 mph} หรือมากกว่า และการเบรกฉุกเฉินถูกตัดสินตามการลดความเร็วรถ</div>
+<div class="list">•&nbsp;&nbsp;เมื่อโหมดเตือนฉุกเฉินเมื่อลดความเร็วอย่างฉับพลันทำงาน ไฟเตือนฉุกเฉินจะกะพริบที่ 2.5&mdash;4.5 Hz</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09180001460006"></a><p class="topic-title"><span class="topic-head"></span>โหมดเตือนฉุกเฉินเมื่อหยุดกะทันหัน</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;โหมดจะเปลี่ยนจากโหมดเตือนฉุกเฉินเมื่อลดความเร็วอย่างฉับพลันเป็นโหมดเตือนฉุกเฉินเมื่อหยุดกะทันหันหลังจากที่ตรวจพบสภาวะบางอย่าง</div>
+<div class="list">•&nbsp;&nbsp;โหมดเตือนฉุกเฉินเมื่อหยุดกะทันหันจะทำงานเมื่อความเร็วรถอยู่ที่ 10 km/h {6.2 mph} หรือน้อยกว่า และมีการเหยียบแป้นเบรกหลังจากที่โหมดเตือนฉุกเฉินเมื่อลดความเร็วอย่างฉับพลันถูกยกเลิก</div>
+</dd>
+</dl>
+</p><br clear="all"><a name="id09180001460007"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<p class="list">1.&nbsp;&nbsp;หากมีการเหยียบแป้นเบรกและลดความเร็วลงขณะที่ความเร็วรถอยู่ที่ 50 km/h {31 mph} หรือมากกว่า โมดูลควบคุมตัวถังด้านหน้า (FBCM) จะคำนวณความเร็วในการลดความเร็วรถตามสัญญาณความเร็วล้อและสัญญาณอัตราเร็วในการเร่งความเร็วรถ</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;หากอัตราเร็วในการลดความเร็วที่คำนวณได้เป็นค่าที่กำหนดไว้ หรือมากกว่า สำหรับโหมดเตือนฉุกเฉินเมื่อลดความเร็วอย่างฉับพลัน โมดูลควบคุมตัวถังด้านหน้า (FBCM) จะควบคุมการกะพริบไฟเตือนฉุกเฉินที่ 2.5&mdash;4.5 Hz และส่งสัญญาณไฟแสดงทิศทางไปยังแผงหน้าปัดในเวลาเดียวกัน</p>
+<p class="list">
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001243.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001243</div>
+</td>
+</tr>
+</table>
+</p>
+<p class="list">3.&nbsp;&nbsp;หากอัตราเร็วในการลดความเร็วที่คำนวณได้เป็นค่าที่กำหนดไว้ หรือน้อยกว่า สำหรับโหมดเตือนฉุกเฉินเมื่อลดความเร็วอย่างฉับพลัน โมดูลควบคุมตัวถังด้านหน้า (FBCM) จะหยุดการทำงานของโหมดเตือนฉุกเฉินเมื่อลดความเร็วอย่างฉับพลัน</p>
+<p class="list">
+</p>
+<p class="list">4.&nbsp;&nbsp;หากความเร็วรถอยู่ที่ 10 km/h {6.2 mph} หรือน้อยกว่า และสัญญาณ ON ของสวิตช์เบรก (เหยียบแป้นเบรก) ถูกส่งหลังจากที่โหมดเตือนฉุกเฉินเมื่อลดความเร็วอย่างฉับพลันทำงาน โมดูลควบคุมตัวถังด้านหน้า (FBCM) จะควบคุมการกะพริบไฟเตือนฉุกเฉินที่ 1.5 Hz (แบบเดียวกับการกะพริบทั่วไป)</p>
+<p class="list">
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001244.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001244</div>
+</td>
+</tr>
+</table>
+</p>
+<p class="list">5.&nbsp;&nbsp;หากสัญญาณ OFF ของสวิตช์เบรก (ไม่เหยียนแป้นเบรก) ถูกส่งไป โมดูลควบคุมตัวถังด้านหน้า (FBCM) หยุดการทำงานของโหมดเตือนฉุกเฉินเมื่อหยุดกะทันหันและปิดไฟเตือนฉุกเฉิน</p>
+<p class="list">
+</p>
+</body>
+</html>

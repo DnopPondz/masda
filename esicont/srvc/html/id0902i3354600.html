@@ -1,0 +1,328 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>รหัสวิเคราะห์ปัญหา B118C:15 [ระบบตรวจสอบจุดบอด (BSM)]</title>
+</head>
+<body><a name="id0902i3354600"></a><p class="servinfo-title"><span class="servinfo-head"></span>รหัสวิเคราะห์ปัญหา B118C:15 [ระบบตรวจสอบจุดบอด (BSM)]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0902i3354600</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ตำแหน่งความบกพร่องของระบบ</p>
+</th>
+<th id="" align="left">
+<p class="thead">วงจรไฟแสดงสถานะ BSM (ด้านซ้าย) บกพร่อง</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สภาวะการตรวจพบ</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ขณะที่ไฟแสดงสถานะ BSM (ด้านซ้าย) กำลังทำงาน โมดูลควบคุม BSM (ด้านซ้าย) จะคอยตรวจสอบโหลดแรงดันไฟฟ้าของไฟแสดงสถานะ BSM (ด้านซ้าย) เมื่อมีการลดลงของโหลดแรงดันไฟฟ้าของไฟแสดงสถานะ BSM (ด้านซ้าย) จนเป็นค่าที่กำหนด หรือน้อยกว่า โมดูลควบคุม BSM (ด้านซ้าย) จะตัดสินว่ามีการลัดวงจรเข้ากับแหล่งจ่ายไฟหรือการขาดวงจรในวงจรไฟแสดงสถานะ BSM (ด้านซ้าย)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>Fail-safe</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;BSM หยุดทำงาน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สาเหตุที่เป็นไปได้</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ขั้วต่อหรือขั้วของกระจกมองข้างไฟฟ้า (ด้านซ้าย) บกพร่อง</div>
+<div class="list">•&nbsp; ชุดสายไฟระหว่างขั้ว G ของกระจกมองข้างไฟฟ้า (ด้านซ้าย) กับกราวด์ตัวถังขาดวงจร</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อหรือขั้วของโมดูลควบคุม BSM (ด้านซ้าย) บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระหว่างขั้ว D ของโมดูลควบคุม BSM (ด้านซ้าย) กับขั้ว D ของกระจกมองข้างไฟฟ้า (ด้านซ้าย) ลัดวงจรเข้ากับแหล่งจ่ายไฟ</div>
+<div class="list">•&nbsp;&nbsp;กระจกมองข้างไฟฟ้า (ด้านซ้าย) บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;ไฟแสดงสถานะ BSM (ด้านซ้าย) บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระหว่างขั้ว D ของโมดูลควบคุม BSM (ด้านซ้าย) กับขั้ว D ของกระจกมองข้างไฟฟ้า (ด้านซ้าย) ขาดวงจร</div>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุม BSM (ด้านซ้าย) บกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2"><img src="images/ac5wzw00002112.png"></td>
+</tr>
+</tbody>
+</table>
+</p>
+<p clear="all">
+<p class="table-title">ขั้นตอนการวิเคราะห์ปัญหา</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">การตรวจสอบ</p>
+</th>
+<th id="" align="center">
+<p class="thead">การปฏิบัติ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">1</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบสภาพขั้วต่อของกระจกมองข้างไฟฟ้า (ด้านซ้าย)</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;ปลดสายขั้วลบแบตเตอรี่<div>(ดูที่ <font class="extxref-label"><a href="id0117i0800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อของกระจกมองข้างไฟฟ้า (ด้านซ้าย)</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบการเชื่อมต่อของขั้วต่อและสภาพการเชื่อมต่อ และทำการตรวจสอบความเสียหาย การผิดรูป การผุกร่อน หรือการหลุดออกของขั้ว</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อเป็นปกติหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนขั้วต่อ แล้วไปที่ขั้นตอน 8</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">2</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการขาดวงจรของวงจรกราวด์ไฟแสดงสถานะ BSM (ด้านซ้าย)</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบว่าขั้วต่อของกระจกมองข้างไฟฟ้า (ด้านซ้าย) ถูกปลดออกหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต่อเนื่องระหว่างขั้ว G ของกระจกมองข้างไฟฟ้า (ด้านซ้าย) (ด้านชุดสายไฟรถ) กับกราวด์ตัวถัง</div>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องหรือไม่?</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชุดสายไฟที่ขาดวงจร แล้วไปที่ขั้นตอน 8</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">3</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบสภาพขั้วต่อของโมดูลควบคุม BSM (ด้านซ้าย)</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อของโมดูลควบคุม BSM (ด้านซ้าย)</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบการเชื่อมต่อของขั้วต่อและสภาพการเชื่อมต่อ และทำการตรวจสอบความเสียหาย การผิดรูป การผุกร่อน หรือการหลุดออกของขั้ว</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อเป็นปกติหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนขั้วต่อ แล้วไปที่ขั้นตอน 8</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">4</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรเข้ากับแหล่งจ่ายไฟของวงจรสัญญาณไฟแสดงสถานะ BSM (ด้านซ้าย)</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบว่าขั้วต่อของโมดูลควบคุม BSM (ด้านซ้าย) และของกระจกมองข้างไฟฟ้า (ด้านซ้าย) ถูกปลดออกแล้ว</div>
+<div class="list">•&nbsp;&nbsp;ต่อสายขั้วลบแบตเตอรี่<div>(ดูที่ <font class="extxref-label"><a href="id0117i0800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;วัดแรงดันไฟฟ้าที่ขั้ว D ของกระจกมองข้างไฟฟ้า (ด้านซ้าย) (ด้านชุดสายไฟรถ)</div>
+<div class="list">•&nbsp;&nbsp;แรงดันไฟฟ้าอยู่ที่ <span>0 V</span> หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชุดสายไฟที่ลัดวงจรกับแหล่งจ่ายไฟ แล้วไปที่ขั้นตอน 8</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">5</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบกระจกมองข้างไฟฟ้า (ด้านซ้าย)</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบกระจกมองข้างไฟฟ้า (ด้านซ้าย)<div>(ดูที่ <font class="extxref-label"><a href="id091200002700.html">การตรวจสอบกระจกมองข้างไฟฟ้า</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;กระจกมองข้างไฟฟ้า (ด้านซ้าย) เป็นปกติหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนกระจกมองข้างไฟฟ้า (ด้านซ้าย) ใหม่ แล้วไปที่ขั้นตอน 8</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id091200002400.html">การถอด / การติดตั้งกระจกมองข้างไฟฟ้า</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">6</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบไฟแสดงสถานะ BSM (ด้านซ้าย)</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบไฟแสดงสถานะ BSM (ด้านซ้าย)<div>(ดูที่ <font class="extxref-label"><a href="id091200010400.html">การตรวจสอบกระจกมองข้าง)</a></font></div>
+</div>
+<div class="list">•&nbsp;&nbsp;ไฟแสดงสถานะ BSM (ด้านซ้าย) เป็นปกติหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนกระจกมองข้าง (ด้านซ้าย) ใหม่ แล้วไปที่ขั้นตอน 8</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id091200002800.html">การถอดกระจกมองข้าง</a></font>)</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id091200002900.html">การติดตั้งกระจกมองข้าง</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">7</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการขาดวงจรของวงจรสัญญาณไฟแสดงสถานะ BSM (ด้านซ้าย)</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบว่าขั้วต่อของโมดูลควบคุม BSM (ด้านซ้าย) และของกระจกมองข้างไฟฟ้า (ด้านซ้าย) ถูกปลดออกแล้ว</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;ปลดสายขั้วลบแบตเตอรี่<div>(ดูที่ <font class="extxref-label"><a href="id0117i0800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต่อเนื่องระหว่างขั้ว D ของโมดูลควบคุม BSM (ด้านซ้าย) กับขั้ว D ของกระจกมองข้างไฟฟ้า (ด้านซ้าย) (ด้านชุดสายไฟรถ)</div>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องหรือไม่?</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชุดสายไฟที่ขาดวงจร แล้วไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">8</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ยืนยันว่าการซ่อมเสร็จสมบูรณ์แล้ว</div>
+<div class="list">•&nbsp;&nbsp;ต่อขั้วต่อที่ปลดออกทั้งหมดกลับเข้าที่</div>
+<div class="list">•&nbsp;&nbsp;ต่อสายขั้วลบแบตเตอรี่ที่ปลดออกกลับเข้าที่<div>(ดูที่ <font class="extxref-label"><a href="id0117i0800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ลบรหัสวิเคราะห์ปัญหาของโมดูลควบคุม BSM (ด้านซ้าย) โดยใช้ M-MDS<div>(ดูที่ <font class="extxref-label"><a href="id0902i3960400.html">การลบรหัสวิเคราะห์ปัญหา [ระบบตรวจสอบจุดบอด (BSM)]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ทำการตรวจสอบรหัสวิเคราะห์ปัญหาของโมดูลควบคุม BSM (ด้านซ้าย) โดยใช้ M-MDS<div>(ดูที่ <font class="extxref-label"><a href="id0902i3960300.html">การตรวจสอบรหัสวิเคราะห์ปัญหา [ระบบตรวจสอบจุดบอด (BSM)]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;รหัสวิเคราะห์ปัญหา B118C:15 ปรากฏขึ้นหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ทำซ้ำการตรวจสอบตั้งแต่ขั้นตอน 1</div>
+<div class="list">•&nbsp;&nbsp;หากความบกพร่องเกิดขึ้นอีกครั้ง ให้เปลี่ยนโมดูลควบคุม BSM (ด้านซ้าย) แล้วไปที่ขั้นตอนถัดไป<div>(ดูที่ <font class="extxref-label"><a href="id092200013600.html">การถอด / การติดตั้งโมดูลควบคุมระบบตรวจสอบจุดบอด (BSM)</a></font>)</div>
+</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">9</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบว่ามีรหัสวิเคราะห์ปัญหาอื่นๆ ปรากฏขึ้นหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;มีรหัสวิเคราะห์ปัญหาอื่นๆ ปรากฏขึ้นหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมชิ้นส่วนที่บกพร่องตามการค้นหาสาเหตุปัญหาของรหัสวิเคราะห์ปัญหานั้นๆ</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0902i3960500.html">ตารางรหัสวิเคราะห์ปัญหา [ระบบตรวจสอบจุดบอด (BSM)]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การค้นหาสาเหตุปัญหาของรหัสวิเคราะห์ปัญหาเสร็จสมบูรณ์</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</body>
+</html>

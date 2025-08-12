@@ -1,0 +1,152 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>ไฟแสดงสถานะ BSM OFF ไม่ติดสว่างขณะปิดระบบ BSM [การตรวจสอบจุดบอด (BSM)]</title>
+</head>
+<body><a name="id0903d9015100"></a><p class="servinfo-title"><span class="servinfo-head"></span>ไฟแสดงสถานะ BSM OFF ไม่ติดสว่างขณะปิดระบบ BSM [การตรวจสอบจุดบอด (BSM)]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0903d9015100</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<tbody>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody"><span>คำอธิบาย</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody"><span>ไฟแสดงสถานะ BSM OFF ไม่ติดสว่างขณะปิดระบบ BSM</span></div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ไฟแสดงสถานะ BSM ไม่ติดสว่างแม้ว่าสวิตช์ BSM OFF จะปิดระบบหลังจากสวิตช์สตาร์ทถูกบิดไปที่ตำแหน่ง ON</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สาเหตุที่เป็นไปได้</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ชิ้นส่วนที่เกี่ยวข้องกับสวิตช์ BSM OFF บกพร่อง</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;สวิตช์ BSM OFF บกพร่อง (ค้างอยู่ที่ OFF)</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัดไม่ทำให้ไฟแสดงสถานะ BSM OFF ติดสว่าง</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;โมดูลควบคุม BSM (ขวา) บกพร่อง</div>
+<div class="list">―&nbsp;&nbsp;แผงหน้าปัดบกพร่อง</div>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p clear="all">
+<p class="table-title">ขั้นตอนการวิเคราะห์ปัญหา</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center">
+<p class="thead">การตรวจสอบ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ผลที่ได้</p>
+</th>
+<th id="" align="center">
+<p class="thead">การปฏิบัติ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">1</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="list-title">ตรวจสอบดูว่าความบกพร่องอยู่ที่สวิตช์ BSM OFF หรือแผงหน้าปัด</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบ PID BSM_OFF_IL ของชุดโมดูลควบคุม BSM (ขวา) โดยใช้ M-MDS<div>(ดูที่ <font class="extxref-label"><a href="id0902i3960600.html">การตรวจสอบ PID/DATA MONITOR [ระบบตรวจสอบจุดบอด (BSM)]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;เปิดและปิดสวิตช์ BSM OFF</div>
+<div class="list">•&nbsp;&nbsp;ค่าการตรวจสอบ PID BSM_OFF_IL เปิดและปิดตามการทำงานของสวิตช์ BSM OFF หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอน 3</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">2<sup></sup></div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="list-title">ตรวจสอบสวิตช์ BSM OFF</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบสวิตช์ BSM OFF<div>(ดูที่ <font class="extxref-label"><a href="id092200014200.html">การตรวจสอบสวิตช์ OFF ของระบบตรวจสอบจุดบอด (BSM)</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;สวิตช์ BSM OFF ปกติหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนสวิตช์ BSM OFF</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200014100.html">การถอด/การติดตั้งสวิตช์ปิดระบบตรวจสอบจุดบอด (BSM)</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">3<sup></sup></div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="list-title">ตรวจสอบดูว่าความบกพร่องอยู่ที่แผงหน้าปัดหรือโมดูลควบคุม BSM (ขวา)</div>
+<div class="list">•&nbsp;&nbsp;เปิดไฟแสดงสถานะ BSM OFF โดยใช้ WL+IL ของโหมดคำสั่งการทำงานของแผงหน้าปัด M-MDS<div>(ดูที่ <font class="extxref-label"><a href="id0902e8960800.html">การตรวจสอบโหมดคำสั่งการทำงาน [แผงหน้าปัด]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ไฟแสดงสถานะ BSM OFF ติดสว่างตามโหมดคำสั่งการทำงานหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนโมดูลควบคุม BSM (ขวา)</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200013600.html">การถอด / การติดตั้งโมดูลควบคุมระบบตรวจสอบจุดบอด (BSM)</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนแผงหน้าปัด</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200010300.html">การถอด / การติดตั้งแผงหน้าปัด</a></font>)</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</body>
+</html>

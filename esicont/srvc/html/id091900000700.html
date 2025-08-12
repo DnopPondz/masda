@@ -1,0 +1,363 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>ระบบที่ปัดน้ำฝนกระจกบังลมหน้า</title>
+</head>
+<body><a name="id091900000700"></a><p class="servinfo-title"><span class="servinfo-head"></span>ระบบที่ปัดน้ำฝนกระจกบังลมหน้า</p>
+<hr>
+<p class="servinfo-title-id" align="right">id091900000700</p><br clear="all"><a name="id09190000070001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รายละเอียด</p>
+<div class="list">•&nbsp;&nbsp;มีที่ปัดน้ำฝนแบบต่อเนื่อง (ความเร็วต่ำ/ความเร็วสูง), แบบหยุดอัตโนมัติ, ที่ปัดน้ำฝนแบบกดครั้งเดียว, ที่ปัดน้ำฝนแบบเป็นจังหวะ (รุ่นที่ไม่มีระบบที่ปัดน้ำฝนอัตโนมัติ), ที่ปัดน้ำฝนอัตโนมัติ (รุ่นที่มีระบบที่ปัดน้ำฝนอัตโนมัติ) และการทำงานของที่ปัดน้ำฝนและที่ฉีดน้ำล้างกระจกแบบสอดคล้องกัน</div>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมตัวถังด้านหน้า (FBCM) จะสั่งงานโหมด Fail-safe ของระบบที่ปัดน้ำฝนกระจกบังลมหน้าและที่ฉีดน้ำล้างกระจก (ดูที่ <font class="extxref-label"><a href="id094000002500.html">โมดูลควบคุมตัวถังด้านหน้า (FBCM)</a></font>)</div><br clear="all"><a name="id09190000070002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ภาพโครงสร้าง</p>
+<p class="figure-title">L.H.D.</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001254.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001254</div>
+</td>
+</tr>
+</table>
+<p class="figure-title">R.H.D.</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001302.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001302</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id09190000070003"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ผังวงจรระบบ</p>
+<p class="figure-title">รุ่นที่มีสวิตช์ที่ปัดน้ำฝนและที่ฉีดน้ำล้างกระจกทางด้านขวา</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001256.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001256</div>
+</td>
+</tr>
+</table>
+<p class="figure-title">รุ่นที่มีสวิตช์ที่ปัดน้ำฝนและที่ฉีดน้ำล้างกระจกทางด้านซ้าย</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001290.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001290</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id09190000070004"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p><br clear="all"><p><a name="id09190000070005"></a><p class="topic-title"><span class="topic-head"></span>การทำงานที่ความเร็วต่ำแบบต่อเนื่อง</p>
+<p class="list">1.&nbsp;&nbsp;เมื่อเลื่อนสวิตช์ที่ปัดน้ำฝนและที่ฉีดล้างกระจกไปที่ตำแหน่ง LO ขณะที่บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน) (1) ชุดเปิด/ปิดการทำงานจะตรวจพบสัญญาณ (LO) สวิตช์ของที่ปัดน้ำฝนกระจกบังลมหน้า (2)</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;ชุดเปิด/ปิดการทำงานจะตรวจจับสัญญาณ (LO) สวิตช์ที่ปัดน้ำฝนกระจกบังลมหน้า ทำการส่งสัญญาณ (LO) ตำแหน่งสวิตช์ที่ปัดน้ำฝนกระจกบังลมหน้าไปยังโมดูลควบคุมตัวถังด้านหน้า (FBCM) ในรูปสัญญาณระบบ CAN (3)</p>
+<p class="list">
+</p>
+<p class="list">3.&nbsp;&nbsp;เมื่อโมดูลควบคุมตัวถังด้านหน้า (FBCM) ได้รับสัญญาณ (LO) ตำแหน่งสวิตช์ที่ปัดน้ำฝนกระจกบังลมหน้า จะทำการจ่ายกระแสไฟอ้างอิงจาก CPU ภายในไปยังทรานซิสเตอร์ A (4) และกระแสคอลเลคเตอร์จะไหลผ่านจากแหล่งจ่ายไฟภายใน (5) เพื่อเปิดใช้งานรีเลย์ต่ำของที่ปัดน้ำฝนกระจกบังลมหน้า (6)</p>
+<p class="list">
+</p>
+<p class="list">4.&nbsp;&nbsp;เมื่อเปิดใช้งานรีเลย์ต่ำของที่ปัดน้ำฝนกระจกบังลมหน้า กระแสไฟจะไหลผ่านจากแบตเตอรี่ไปยังมอเตอร์ที่ปัดน้ำฝนกระจกบังลมหน้า และที่ปัดน้ำฝนกระจกบังลมหน้าจะทำงานแบบต่อเนื่องที่ความเร็วต่ำ (7)</p>
+<p class="list">
+</p>
+<p class="figure-title">รุ่นที่มีสวิตช์ที่ปัดน้ำฝนและที่ฉีดน้ำล้างกระจกทางด้านขวา</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001257.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001257</div>
+</td>
+</tr>
+</table>
+<p class="figure-title">รุ่นที่มีสวิตช์ที่ปัดน้ำฝนและที่ฉีดน้ำล้างกระจกทางด้านซ้าย</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001291.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001291</div>
+</td>
+</tr>
+</table>
+</p><br clear="all"><p><a name="id09190000070006"></a><p class="topic-title"><span class="topic-head"></span>การทำงานที่ความเร็วสูงแบบต่อเนื่อง</p>
+<p class="list">1.&nbsp;&nbsp;เมื่อเลื่อนสวิตช์ที่ปัดน้ำฝนและที่ฉีดล้างกระจกไปที่ตำแหน่ง HI ขณะที่บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน) (1) ชุดเปิด/ปิดการทำงานจะตรวจพบสัญญาณ (HI) สวิตช์ของที่ปัดน้ำฝนกระจกบังลมหน้า (2)</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;เมื่อชุดเปิด/ปิดการทำงานตรวจพบสัญญาณ (HI) สวิตช์ที่ปัดน้ำฝนกระจกบังลมหน้า อุปกรณ์จะทำการส่งสัญญาณ (HI) ตำแหน่งสวิตช์ที่ปัดน้ำฝนกระจกบังลมหน้าไปยังโมดูลควบคุมตัวถังด้านหน้า (FBCM) ในรูปสัญญาณระบบ CAN (3)</p>
+<p class="list">
+</p>
+<p class="list">3.&nbsp;&nbsp;เมื่อโมดูลควบคุมตัวถังด้านหน้า (FBCM) ได้รับสัญญาณ (HI) ตำแหน่งสวิตช์ที่ปัดน้ำฝนกระจกบังลมหน้า จะทำการจ่ายกระแสไฟอ้างอิงจาก CPU ภายในไปยังทรานซิสเตอร์ A และ B (4) และกระแสคอลเลคเตอร์จะไหลผ่านจากแหล่งจ่ายไฟภายใน (5) เพื่อเปิดใช้งานรีเลย์สูงของที่ปัดน้ำฝนกระจกบังลมหน้า (6)</p>
+<p class="list">
+</p>
+<p class="list">4.&nbsp;&nbsp;เมื่อเปิดใช้งานรีเลย์ต่ำของที่ปัดน้ำฝนกระจกบังลมหน้าและรีเลย์สูงของที่ปัดน้ำฝนกระจกบังลมหน้า กระแสไฟจะไหลผ่านจากแบตเตอรี่ไปยังมอเตอร์ที่ปัดน้ำฝนกระจกบังลมหน้า และที่ปัดน้ำฝนกระจกบังลมหน้าจะทำงานแบบต่อเนื่องที่ความเร็วสูง (7)</p>
+<p class="list">
+</p>
+<p class="figure-title">รุ่นที่มีสวิตช์ที่ปัดน้ำฝนและที่ฉีดน้ำล้างกระจกทางด้านขวา</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001258.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001258</div>
+</td>
+</tr>
+</table>
+<p class="figure-title">รุ่นที่มีสวิตช์ที่ปัดน้ำฝนและที่ฉีดน้ำล้างกระจกทางด้านซ้าย</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001292.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001292</div>
+</td>
+</tr>
+</table>
+</p><br clear="all"><p><a name="id09190000070007"></a><p class="topic-title"><span class="topic-head"></span>การทำงานของระบบหยุดอัตโนมัติ</p>
+<p class="list">1.&nbsp;&nbsp;สวิตช์หยุดอัตโนมัติภายในมอเตอร์ที่ปัดน้ำฝนกระจกบังลมหน้าจะทำงานในลักษณะต่อไปนี้ตามตำแหน่งการทำงานของที่ปัดน้ำฝนกระจกบังลมหน้า</p>
+<p class="list">
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ที่ปัดน้ำฝนกระจกบังลมหน้าหยุดในตำแหน่งจอด: ON</div>
+<div class="list">•&nbsp;&nbsp;ที่ปัดน้ำฝนกระจกบังลมหน้าหยุดในตำแหน่งอื่นนอกเหนือจากตำแหน่งจอด: OFF</div>
+</dd>
+</dl>
+</p>
+<p class="list">2.&nbsp;&nbsp;เมื่อสวิตช์ที่ปัดน้ำฝนและที่ฉีดน้ำล้างกระจกอยู่ในตำแหน่ง OFF (1) ในระหว่างที่ที่ปัดน้ำฝนกระจกบังลมหน้าทำงาน ที่ปัดน้ำฝนกระจกบังลมหน้าจะทำงานต่อไปเนื่องจากสวิตช์หยุดอัตโนมัติอยู่ที่ตำแหน่ง OFF</p>
+<p class="list">
+</p>
+<p class="list">3.&nbsp;&nbsp;สวิตช์หยุดอัตโนมัติเปิดใช้งานเมื่อที่ปัดน้ำฝนกระจกบังลมหน้าเลื่อนไปที่ตำแหน่งจอด (2)</p>
+<p class="list">
+</p>
+<p class="list">4.&nbsp;&nbsp;เมื่อโมดูลควบคุมตัวถังด้านหน้า (FBCM) ตรวจพบว่าสวิตช์หยุดอัตโนมัติอยู่ที่ตำแหน่ง ON อุปกรณ์จะหยุดการจ่ายกระแสไฟอ้างอิงไปยังทรานซิสเตอร์ (3) และปิดใช้งานรีเลย์ต่ำของที่ปัดน้ำฝนกระจกบังลมหน้า และที่ปัดน้ำฝนกระจกบังลมหน้าจะหยุดที่ตำแหน่งจอด</p>
+<p class="list">
+</p>
+<p class="figure-title">รุ่นที่มีสวิตช์ที่ปัดน้ำฝนและที่ฉีดน้ำล้างกระจกทางด้านขวา</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001259.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001259</div>
+</td>
+</tr>
+</table>
+<p class="figure-title">รุ่นที่มีสวิตช์ที่ปัดน้ำฝนและที่ฉีดน้ำล้างกระจกทางด้านซ้าย</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001293.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001293</div>
+</td>
+</tr>
+</table>
+</p><br clear="all"><p><a name="id09190000070008"></a><p class="topic-title"><span class="topic-head"></span>การทำงานของที่ปัดน้ำฝนแบบกดครั้งเดียว</p>
+<p class="list">1.&nbsp;&nbsp;เมื่อเลื่อนสวิตช์ที่ปัดน้ำฝนและที่ฉีดล้างกระจกขึ้นขณะที่บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน) (1) ชุดเปิด/ปิดการทำงานจะตรวจพบสัญญาณ (LO) สวิตช์ที่ปัดน้ำฝนกระจกบังลมหน้า (2)</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;เมื่อชุดเปิด/ปิดการทำงานตรวจพบสัญญาณ (LO) สวิตช์ที่ปัดน้ำฝนกระจกบังลมหน้า อุปกรณ์จะทำการส่งสัญญาณ (LO) ตำแหน่งสวิตช์ที่ปัดน้ำฝนกระจกบังลมหน้าไปยังโมดูลควบคุมตัวถังด้านหน้า (FBCM) ในรูปสัญญาณระบบ CAN (3)</p>
+<p class="list">
+</p>
+<p class="list">3.&nbsp;&nbsp;เมื่อโมดูลควบคุมตัวถังด้านหน้า (FBCM) ได้รับสัญญาณ (LO) ตำแหน่งสวิตช์ที่ปัดน้ำฝนกระจกบังลมหน้า จะทำการจ่ายกระแสไฟอ้างอิงจาก CPU ภายในไปยังทรานซิสเตอร์ A (4) และกระแสคอลเลคเตอร์จะไหลผ่านจากแหล่งจ่ายไฟภายใน (5) เพื่อเปิดใช้งานรีเลย์ต่ำของที่ปัดน้ำฝนกระจกบังลมหน้า (6)</p>
+<p class="list">
+</p>
+<p class="list">4.&nbsp;&nbsp;เมื่อเปิดใช้งานรีเลย์ต่ำของที่ปัดน้ำฝนกระจกบังลมหน้า กระแสไฟจะไหลผ่านจากแบตเตอรี่ไปยังมอเตอร์ที่ปัดน้ำฝนกระจกบังลมหน้า และที่ปัดน้ำฝนกระจกบังลมหน้าจะทำงานที่ความเร็วต่ำ (7)</p>
+<p class="list">
+</p>
+<p class="figure-title">รุ่นที่มีสวิตช์ที่ปัดน้ำฝนและที่ฉีดน้ำล้างกระจกทางด้านขวา</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001260.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001260</div>
+</td>
+</tr>
+</table>
+<p class="figure-title">รุ่นที่มีสวิตช์ที่ปัดน้ำฝนและที่ฉีดน้ำล้างกระจกทางด้านซ้าย</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001294.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001294</div>
+</td>
+</tr>
+</table>
+</p><br clear="all"><p><a name="id09190000070009"></a><p class="topic-title"><span class="topic-head"></span>การทำงานของที่ปัดน้ำฝนแบบเป็นจังหวะ (รุ่นที่ไม่มีระบบที่ปัดน้ำฝนอัตโนมัติ)</p>
+<p class="list">1.&nbsp;&nbsp;เมื่อเลื่อนสวิตช์ที่ปัดน้ำฝนและที่ฉีดล้างกระจกไปที่ตำแหน่ง INT ขณะที่บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน) (1) ชุดเปิด/ปิดการทำงานจะตรวจพบสัญญาณ (INT) สวิตช์ของที่ปัดน้ำฝนกระจกบังลมหน้า (2)</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;เมื่อชุดเปิด/ปิดการทำงานตรวจพบสัญญาณ (INT) สวิตช์ที่ปัดน้ำฝนกระจกบังลมหน้า อุปกรณ์จะทำการส่งสัญญาณ (INT) ตำแหน่งสวิตช์ที่ปัดน้ำฝนกระจกบังลมหน้าและสัญญาณระดับ INT ไปยังโมดูลควบคุมตัวถังด้านหน้า (FBCM) ในรูปสัญญาณระบบ CAN (3)</p>
+<p class="list">
+</p>
+<p class="list">3.&nbsp;&nbsp;เมื่อโมดูลควบคุมตัวถังด้านหน้า (FBCM) ได้รับสัญญาณ ((INT) ตำแหน่งสวิตช์ที่ปัดน้ำฝนกระจกบังลมหน้า จะทำการจ่ายกระแสไฟอ้างอิงจาก CPU ภายในไปยังทรานซิสเตอร์ A (4) และกระแสคอลเลคเตอร์จะไหลผ่านจากแหล่งจ่ายไฟภายใน (5) เพื่อเปิดใช้งานรีเลย์ต่ำของที่ปัดน้ำฝนกระจกบังลมหน้า (6)</p>
+<p class="list">
+</p>
+<p class="list">4.&nbsp;&nbsp;เมื่อเปิดใช้งานรีเลย์ต่ำของที่ปัดน้ำฝนกระจกบังลมหน้า กระแสไฟจะไหลผ่านจากแบตเตอรี่ไปยังมอเตอร์ที่ปัดน้ำฝนกระจกบังลมหน้า และที่ปัดน้ำฝนกระจกบังลมหน้าจะทำงานแบบต่อเนื่องที่ความเร็วต่ำ (7)</p>
+<p class="list">
+</p>
+<p class="list">5.&nbsp;&nbsp;ที่ปัดน้ำฝนกระจกบังลมหน้าจะหยุดที่ตำแหน่งจอดเนื่องจากสวิตช์หยุดอัตโนมัติทำงาน และหลังจากผ่านไปช่วงระยะเวลาหนึ่งซึ่งคำนวณตามสัญญาณระดับ INT โมดูลควบคุมตัวถังด้านหน้า (FBCM) จะสั่งให้ที่ปัดน้ำฝนกระจกบังลมหน้าทำงานที่ความเร็วต่ำ เมื่อทำซ้ำขั้นตอนนี้ ที่ปัดน้ำฝนกระจกบังลมหน้าจะทำงานแบบเป็นจังหวะ (8)</p>
+<p class="list">
+</p>
+<p class="figure-title">รุ่นที่มีสวิตช์ที่ปัดน้ำฝนและที่ฉีดน้ำล้างกระจกทางด้านขวา</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001261.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001261</div>
+</td>
+</tr>
+</table>
+<p class="figure-title">รุ่นที่มีสวิตช์ที่ปัดน้ำฝนและที่ฉีดน้ำล้างกระจกทางด้านซ้าย</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001295.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001295</div>
+</td>
+</tr>
+</table>
+</p><br clear="all"><p><a name="id09190000070010"></a><p class="topic-title"><span class="topic-head"></span>การทำงานของที่ปัดน้ำฝนอัตโนมัติ (รุ่นที่มีระบบที่ปัดน้ำฝนอัตโนมัติ)</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ดูที่ระบบที่ปัดน้ำฝนอัตโนมัติสำหรับคำอธิบายอย่างละเอียดเกี่ยวกับการทำงานของที่ปัดน้ำฝนอัตโนมัติ (ดูที่ <font class="extxref-label"><a href="id091900000900.html">ระบบควบคุมระดับไฟหน้าอัตโนมัติ</a></font>)</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09190000070011"></a><p class="topic-title"><span class="topic-head"></span>การทำงานของที่ปัดน้ำฝนและที่ฉีดน้ำล้างกระจกแบบสอดคล้องกัน</p>
+<p class="list">1.&nbsp; เมื่อเปิดใช้งานสวิตช์ที่ฉีดล้างกระจกบังลมหน้าขณะที่บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน) และที่ปัดน้ำฝนกระจกบังลมหน้าไม่ทำงาน (1) ชุดเปิด/ปิดการทำงานจะตรวจพบสัญญาณ ON ของสวิตช์ที่ฉีดล้างกระจกบังลมหน้า (2)</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;เมื่อชุดเปิด/ปิดการทำงานตรวจพบสัญญาณ ON ของที่ฉีดล้างกระจกบังลมหน้า อุปกรณ์จะทำการส่งสัญญาณขอการทำงานของที่ฉีดล้างกระจกบังลมหน้าไปยังโมดูลควบคุมตัวถังด้านหน้า (FBCM) ในรูปสัญญาณระบบ CAN (3)</p>
+<p class="list">
+</p>
+<p class="list">3.&nbsp;&nbsp;เมื่อโมดูลควบคุมตัวถังด้านหน้า (FBCM) ได้รับสัญญาณขอการทำงานของที่ฉีดล้างกระจกบังลมหน้า จะทำการจ่ายกระแสไฟอ้างอิงจาก CPU ภายในไปยังทรานซิสเตอร์ C (4) และกระแสคอลเลคเตอร์จะไหลผ่านจากแหล่งจ่ายไฟภายใน (5) เพื่อเปิดใช้งานรีเลย์ของที่ฉีดล้างกระจกบังลมหน้า (6)</p>
+<p class="list">
+</p>
+<p class="list">4.&nbsp;&nbsp;เมื่อเปิดใช้งานรีเลย์ของที่ฉีดล้างกระจกบังลมหน้าแล้ว กระแสไฟฟ้าจะไหลผ่านจากแหล่งจ่ายไฟภายในโมดูลควบคุมตัวถังด้านหน้า (FBCM) ไปยังมอเตอร์ฉีดน้ำล้างกระจก และมอเตอร์ฉีดน้ำล้างกระจกจะทำงาน จากนั้นน้ำฉีดล้างกระจกจะฉีดออกจากหัวฉีดน้ำล้างกระจกด้านหน้า (7)</p>
+<p class="list">
+</p>
+<p class="list">5.&nbsp;&nbsp;เมื่อโมดูลควบคุมตัวถังด้านหน้า (FBCM) ได้รับสัญญาณขอการทำงานของที่ฉีดล้างกระจกบังลมหน้าในช่วงระยะเวลาหนึ่ง อุปกรณ์จะสั่งให้ที่ปัดน้ำฝนกระจกบังลมหน้าทำงานที่ความเร็วต่ำ (8)</p>
+<p class="list">
+</p>
+<p class="list">6.&nbsp;&nbsp;เมื่อปิดใช้งานสวิตช์ที่ฉีดล้างกระจกบังลมหน้า การทำงานจะหยุดลงหลังจากที่ปัดน้ำฝนกระจกบังลมหน้าทำงานสองครั้ง</p>
+<p class="list">
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;หากชุดทำความสะอาดไฟหน้าทำงานโดยอัตโนมัติขณะที่ที่ฉีดล้างกระจกบังลมหน้ากำลังทำงาน การทำงานจะหยุดลงหลังจากที่ปัดน้ำฝนกระจกบังลมหน้าทำงานสี่ครั้ง</div>
+<div class="list">•&nbsp;&nbsp;หากสวิตช์ที่ฉีดล้างกระจกบังลมหน้าทำงานขณะที่ที่ปัดน้ำฝนกระจกบังลมหน้ากำลังทำงาน ที่ปัดน้ำฝนกระจกบังลมหน้าจะทำงานต่อไปและที่ฉีดล้างกระจกบังลมหน้าจะทำงานตั้งแต่ขั้นตอน (3) ถึง (7)</div>
+</div>
+</dd>
+</dl>
+</p>
+<p class="figure-title">รุ่นที่มีสวิตช์ที่ปัดน้ำฝนและที่ฉีดน้ำล้างกระจกทางด้านขวา</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001309.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001309</div>
+</td>
+</tr>
+</table>
+<p class="figure-title">รุ่นที่มีสวิตช์ที่ปัดน้ำฝนและที่ฉีดน้ำล้างกระจกทางด้านซ้าย</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001296.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001296</div>
+</td>
+</tr>
+</table>
+</p><br clear="all"><a name="id09190000070012"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ฟังก์ชั่นการตรวจจับ LO/HI</p>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่นการตรวจจับ LO/HI นำมาใช้ในฟังก์ชั่น Fail-safe ระหว่างที่ระบบเกิดการบกพร่อง</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;โมดูลควบคุมตัวถังด้านหน้า (FBCM) จะตรวจหาว่าสวิตช์ที่ปัดน้ำฝนและที่ฉีดล้างกระจกอยู่ในตำแหน่ง LO หรือ HI และทำการตรวจสอบ<p class="figure-title">รุ่นที่มีสวิตช์ที่ปัดน้ำฝนและที่ฉีดน้ำล้างกระจกทางด้านขวา</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001310.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001310</div>
+</td>
+</tr>
+</table>
+<p class="figure-title">รุ่นที่มีสวิตช์ที่ปัดน้ำฝนและที่ฉีดน้ำล้างกระจกทางด้านซ้าย</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001263.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001263</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+</body>
+</html>

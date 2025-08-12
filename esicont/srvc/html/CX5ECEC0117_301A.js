@@ -1,0 +1,2 @@
+&txtLabel=CHARGING SYSTEM (SKYACTIV-G 2.0 / WITHOUT i-stop SYSTEM)&
+&txtData=S0117_3&

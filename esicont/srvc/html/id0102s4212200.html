@@ -1,0 +1,749 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>รหัสวิเคราะห์ปัญหา P02CA:00 [SKYACTIV-D 2.2]</title>
+</head>
+<body><a name="id0102s4212200"></a><p class="servinfo-title"><span class="servinfo-head"></span>รหัสวิเคราะห์ปัญหา P02CA:00 [SKYACTIV-D 2.2]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0102s4212200</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา P02CA:00</p>
+</th>
+<th id="" align="left">
+<p class="thead">สภาวะเทอร์โบชาร์จเจอร์ขนาดใหญ่มีกำลังอัดสูงเกินกำหนด</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สภาวะการตรวจพบ</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ความแตกต่างระหว่างแรงดันไอดีเป้าหมายและแรงดันไอดีจริงในช่วงการทำงานของเทอร์โบชาร์จเจอร์ขนาดใหญ่ต่ำกว่าค่าที่กำหนดต่อเนื่องเป็นเวลา <span>7 วินาที</span> เมื่อตรวจพบสภาวะต่างๆ ต่อไปนี้</div>
+<dl>
+<div class="list-title">สภาวะการตรวจสอบ</div>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;เทอร์โบชาร์จเจอร์ขนาดเล็กไม่ทำงาน</div>
+<div class="list">―&nbsp;&nbsp;ไม่มีการดำเนินการควบคุมการฟื้นฟูสภาพกรองเขม่าดีเซล</div>
+<div class="list">―&nbsp;&nbsp;ความเร็วรอบเครื่องยนต์: <span>2,000 rpm หรือมากกว่า</span></div>
+<div class="list">―&nbsp;&nbsp;ปริมาณการฉีดน้ำมันเชื้อเพลิง: <span>25 mm<sup>3</sup>/stroke หรือมากกว่า</span></div>
+</dd>
+</dl>
+<div class="list-title">ข้อมูลสนับสนุนการวิเคราะห์ปัญหา</div>
+<div class="list">•&nbsp;&nbsp;กรณีนี้คือ การตรวจสอบต่อเนื่อง (CCM)</div>
+<div class="list">•&nbsp;&nbsp;ไฟเตือนตรวจเช็คเครื่องยนต์จะติดสว่างขึ้นถ้า PCM ตรวจพบสภาวะความบกพร่องดังกล่าวด้านบนในรอบการขับขี่ติดต่อกันสองรอบ หรือในหนึ่งรอบการขับขี่ในขณะที่รหัสวิเคราะห์ปัญหาของความบกพร่องเดียวกันได้ถูกเก็บบันทึกไว้ใน PCM</div>
+<div class="list">•&nbsp;&nbsp;รหัสที่ค้างอยู่จะแสดงถ้า PCM ตรวจพบสภาวะความบกพร่องดังกล่าวด้านบนในระหว่างรอบการขับขี่แรก</div>
+<div class="list">•&nbsp;&nbsp;มีข้อมูลสภาพรถยนต์ (FREEZE FRAME DATA) (โหมด 2) / ข้อมูล Snapshot</div>
+<div class="list">•&nbsp;&nbsp;รหัสวิเคราะห์ปัญหาถูกเก็บไว้ในหน่วยความจำ PCM</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>ฟังก์ชั่น FAIL-SAFE</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ยับยั้งการควบคุม EGR</div>
+<div class="list">•&nbsp;&nbsp;ยับยั้งการดับเครื่องยนต์โดยการใช้งานฟังก์ชั่น i-stop</div>
+<div class="list">•&nbsp;&nbsp;PCM จำกัดการควบคุมระบบการรวมเครื่องยนต์-เกียร์</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สาเหตุที่เป็นไปได้</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ขั้วต่อหรือขั้วของโซลินอยด์วาล์วบายพาสคอมเพรสเซอร์บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อหรือขั้วของโซลินอยด์วาล์วเวสต์เกตบกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อหรือขั้วของโซลินอยด์วาล์วควบคุมบกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;วงจรแหล่งจ่ายไฟโซลินอยด์วาล์วบายพาสคอมเพรสเซอร์ขาดหรือลัดวงจรลงกราวด์</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ชุดสายไฟระหว่างขั้ว C ของรีเลย์หลักกับขั้ว A ของโซลินอยด์วาล์วบายพาสคอมเพรสเซอร์ลัดวงจรลงกราวด์</div>
+<div class="list">―&nbsp;&nbsp;ฟิวส์ ENGINE2 15 A บกพร่อง</div>
+<div class="list">―&nbsp;&nbsp;ชุดสายไฟระหว่างขั้ว C ของรีเลย์หลักกับขั้ว A ของโซลินอยด์วาล์วบายพาสคอมเพรสเซอร์ขาดวงจร</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;วงจรแหล่งจ่ายไฟโซลินอยด์วาล์วเวสต์เกตขาดหรือลัดวงจรลงกราวด์</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ชุดสายไฟระหว่างขั้ว C ของรีเลย์หลักกับขั้ว A ของโซลินอยด์วาล์วเวสต์เกตลัดวงจรลงกราวด์</div>
+<div class="list">―&nbsp;&nbsp;ฟิวส์ ENGINE2 15 A บกพร่อง</div>
+<div class="list">―&nbsp;&nbsp;ชุดสายไฟระหว่างขั้ว C ของรีเลย์หลักกับขั้ว A ของโซลินอยด์วาล์วเวสต์เกตขาดวงจร</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;วงจรแหล่งจ่ายไฟโซลินอยด์วาล์วควบคุมขาดหรือลัดวงจรลงกราวด์</div>
+<dl>
+<dd class="list">
+<div class="list">&nbsp;&nbsp;ชุดสายไฟระหว่างขั้ว C ของรีเลย์หลักกับขั้ว A ของโซลินอยด์วาล์วควบคุมลัดวงจรลงกราวด์</div>
+<div class="list">―&nbsp;&nbsp;ฟิวส์ ENGINE2 15 A บกพร่อง</div>
+<div class="list">―&nbsp;&nbsp;ชุดสายไฟระหว่างขั้ว C ของรีเลย์หลักกับขั้ว A ของโซลินอยด์วาล์วควบคุมขาดวงจร</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อหรือขั้วของเซ็นเซอร์ตำแหน่งวาล์วควบคุมบกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระหว่างขั้วต่างๆ ต่อไปนี้ลัดวงจรลงกราวด์:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ขั้ว B ของโซลินอยด์วาล์วบายพาสคอมเพรสเซอร์&mdash;ขั้ว 1CO ของ PCM</div>
+<div class="list">―&nbsp;&nbsp;ขั้ว B ของโซลินอยด์วาล์วเวสต์เกต&mdash;ขั้ว 1CL ของ PCM</div>
+<div class="list">―&nbsp;&nbsp;ขั้ว B ของโซลินอยด์วาล์วควบคุม&mdash;ขั้ว 1CP ของ PCM</div>
+<div class="list">―&nbsp;&nbsp;ขั้ว C ของเซ็นเซอร์ตำแหน่งวาล์วควบคุม&mdash;ขั้ว 1BO ของ PCM</div>
+<div class="list">―&nbsp;&nbsp;ขั้ว B ของเซ็นเซอร์ตำแหน่งวาล์วควบคุม&mdash;ขั้ว 1BP ของ PCM</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อหรือขั้วของ PCM บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;วงจรเซ็นเซอร์ตำแหน่งวาล์วควบคุมลัดวงจรกัน</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระหว่างขั้วต่างๆ ต่อไปนี้ขาดวงจร:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ขั้ว B ของโซลินอยด์วาล์วบายพาสคอมเพรสเซอร์&mdash;ขั้ว 1CO ของ PCM</div>
+<div class="list">―&nbsp;&nbsp;ขั้ว B ของโซลินอยด์วาล์วเวสต์เกต&mdash;ขั้ว 1CL ของ PCM</div>
+<div class="list">―&nbsp;&nbsp;ขั้ว B ของโซลินอยด์วาล์วควบคุม&mdash;ขั้ว 1CP ของ PCM</div>
+<div class="list">―&nbsp;&nbsp;ขั้ว C ของเซ็นเซอร์ตำแหน่งวาล์วควบคุม&mdash;ขั้ว 1BO ของ PCM</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ท่อสุญญากาศหรือท่อแรงดันอากาศของวาล์วบายพาสคอมเพรสเซอร์บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;ท่อสุญญากาศหรือท่อแรงดันอากาศของวาล์วเวสต์เกตบกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;ท่อสุญญากาศหรือท่อแรงดันอากาศของวาล์วควบคุมบกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;โซลินอยด์วาล์วบายพาสคอมเพรสเซอร์บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;โซลินอยด์วาล์วเวสต์เกตบกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;โซลินอยด์วาล์วควบคุมบกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;เซ็นเซอร์ตำแหน่งวาล์วควบคุมบกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;PCM บกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2"><img src="images/ac5wzw00005400.png"></td>
+</tr>
+</tbody>
+</table>
+</p>
+<p clear="all">
+<p class="table-title">ขั้นตอนการวิเคราะห์ปัญหา</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">การตรวจสอบ</p>
+</th>
+<th id="" align="center">
+<p class="thead">การดำเนินการ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">1</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบว่าข้อมูลสภาพรถยนต์ (FREEZE FRAME DATA) (โหมด 2) / ข้อมูล SNAPSHOT ได้รับการบันทึกแล้ว</div>
+<div class="list">•&nbsp;&nbsp;ข้อมูลสภาพรถยนต์ (FREEZE FRAME DATA) (โหมด 2) / ข้อมูล SNAPSHOT ได้รับการบันทึกแล้วหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">บันทึกข้อมูลสภาพรถยนต์ (FREEZE FRAME DATA) (โหมด 2) / ข้อมูล SNAPSHOT ตามคำสั่งซ่อม แล้วไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">2</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบว่ามีข้อมูลการบริการที่เกี่ยวข้อง</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบว่ามีข้อมูลการบริการที่เกี่ยวข้องหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;มีข้อมูลการบริการที่เกี่ยวข้องอื่นๆ หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ให้ทำการซ่อมหรือวิเคราะห์ปัญหาตามข้อมูลการบริการที่มี</div>
+<div class="list">•&nbsp;&nbsp;ถ้าแก้ไขปัญหาไม่ได้ ให้ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">3</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบรหัสวิเคราะห์ปัญหาและ/หรือรหัสที่ค้างอยู่ที่เกี่ยวข้อง</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF แล้วบิดไปที่ ON (เครื่องยนต์ไม่ทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;ให้ปฏิบัติตามขั้นตอนการเข้าถึงรหัสปัญหาที่ค้างอยู่และขั้นตอนการอ่านรหัสวิเคราะห์ปัญหา<div>(ดูที่ <font class="extxref-label"><a href="id0102s4801000.html">การทดสอบการวิเคราะห์ปัญหาบนรถ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีรหัสที่ค้างอยู่และ/หรือรหัสวิเคราะห์ปัญหาปรากฏขึ้นหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่การตรวจสอบรหัสที่ค้างอยู่หรือรหัสวิเคราะห์ปัญหานั้นๆ</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0102s4801500.html">ตารางรหัสวิเคราะห์ปัญหา [SKYACTIV-D 2.2]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">4</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบสภาพขั้วต่อโซลินอยด์วาล์วบายพาสคอมเพรสเซอร์</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อโซลินอยด์วาล์วบายพาสคอมเพรสเซอร์</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบการเชื่อมต่อที่ไม่สมบูรณ์ (เช่น ขั้วไฟฟ้าเสียหาย / หลุดออก การผุกร่อน)</div>
+<div class="list">•&nbsp;&nbsp;มีความบกพร่องใดๆ หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนขั้วต่อและ/หรือขั้วไฟฟ้า แล้วไปที่ขั้นตอน 20</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">5</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบสภาพขั้วต่อโซลินอยด์วาล์วเวสต์เกต</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อโซลินอยด์วาล์วเวสต์เกต</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบการเชื่อมต่อที่ไม่สมบูรณ์ (เช่น ขั้วไฟฟ้าเสียหาย / หลุดออก การผุกร่อน)</div>
+<div class="list">•&nbsp;&nbsp;มีความบกพร่องใดๆ หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนขั้วต่อและ/หรือขั้วไฟฟ้า แล้วไปที่ขั้นตอน 20</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">6</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบสภาพขั้วต่อโซลินอยด์วาล์วควบคุม</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อโซลินอยด์วาล์วควบคุม</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบการเชื่อมต่อที่ไม่สมบูรณ์ (เช่น ขั้วไฟฟ้าเสียหาย / หลุดออก การผุกร่อน)</div>
+<div class="list">•&nbsp;&nbsp;มีความบกพร่องใดๆ หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนขั้วต่อและ/หรือขั้วไฟฟ้า แล้วไปที่ขั้นตอน 20</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">7</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรลงกราวด์หรือการขาดวงจรของวงจรแหล่งจ่ายไฟโซลินอยด์วาล์วบายพาสคอมเพรสเซอร์</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบว่าขั้วต่อโซลินอยด์วาล์วบายพาสคอมเพรสเซอร์และโซลินอยด์วาล์วเวสต์เกต และโซลินอยด์วาล์วควบคุมถูกปลดออกหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;วัดแรงดันไฟฟ้าที่ขั้วต่างๆ ต่อไปนี้ (ด้านชุดสายไฟ):</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ขั้ว A ของโซลินอยด์วาล์วบายพาสคอมเพรสเซอร์</div>
+<div class="list">―&nbsp;&nbsp;ขั้ว A ของโซลินอยด์วาล์วเวสต์เกต</div>
+<div class="list">―&nbsp;&nbsp;ขั้ว A ของโซลินอยด์วาล์วควบคุม</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;มีแรงดันไฟฟ้าเท่ากับ <span>B+</span> หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจสอบฟิวส์ ENGINE2 15 A</div>
+<div class="list">•&nbsp;&nbsp;ถ้าฟิวส์ขาด:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ซ่อมหรือเปลี่ยนชุดสายไฟที่เกิดการลัดวงจรลงกราวด์</div>
+<div class="list">―&nbsp;&nbsp;เปลี่ยนฟิวส์</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ถ้าฟิวส์เสื่อมสภาพ:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;เปลี่ยนฟิวส์</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ถ้าฟิวส์ปกติ:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ซ่อมหรือเปลี่ยนชุดสายไฟที่เกิดการขาดวงจร</div>
+</dd>
+</dl>
+<div class="tbody">ไปที่ขั้นตอน 20</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">8</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบสภาพขั้วต่อเซ็นเซอร์ตำแหน่งวาล์วควบคุม</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อเซ็นเซอร์ตำแหน่งวาล์วควบคุม</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบการเชื่อมต่อที่ไม่สมบูรณ์ (เช่น ขั้วไฟฟ้าเสียหาย / หลุดออก การผุกร่อน)</div>
+<div class="list">•&nbsp;&nbsp;มีความบกพร่องใดๆ หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนขั้วต่อและ/หรือขั้วไฟฟ้า แล้วไปที่ขั้นตอน 20</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">9</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรลงกราวด์ของแต่ละวงจร</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบว่าขั้วต่อโซลินอยด์วาล์วบายพาสคอมเพรสเซอร์ และโซลินอยด์วาล์วเวสต์เกต และโซลินอยด์วาล์วควบคุม และเซ็นเซอร์ตำแหน่งวาล์วควบคุมถูกปลดออกหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต่อเนื่องระหว่างขั้วต่างๆ ต่อไปนี้ (ด้านชุดสายไฟ) กับกราวด์ตัวถัง:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ขั้ว B ของโซลินอยด์วาล์วบายพาสคอมเพรสเซอร์</div>
+<div class="list">―&nbsp;&nbsp;ขั้ว B ของโซลินอยด์วาล์วเวสต์เกต</div>
+<div class="list">―&nbsp;&nbsp;ขั้ว B ของโซลินอยด์วาล์วควบคุม</div>
+<div class="list">―&nbsp;&nbsp;ขั้ว C ของเซ็นเซอร์ตำแหน่งวาล์วควบคุม</div>
+<div class="list">―&nbsp;&nbsp;ขั้ว B ของเซ็นเซอร์ตำแหน่งวาล์วควบคุม</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ถ้าสามารถตรวจจับการลัดวงจรลงกราวด์ในชุดสายไฟได้:</div>
+<div class="list">•&nbsp;&nbsp;ซ่อมหรือเปลี่ยนชุดสายไฟที่เกิดการลัดวงจรลงกราวด์</div>
+<div class="tbody">ถ้าไม่สามารถตรวจจับการลัดวงจรลงกราวด์ในชุดสายไฟได้:</div>
+<div class="list">•&nbsp;&nbsp;เปลี่ยน PCM (การลัดวงจรลงกราวด์ของวงจรภายใน PCM)<div>(ดูที่ <font class="extxref-label"><a href="id0140z7802400.html">การถอด / การติดตั้ง PCM [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="tbody">ไปที่ขั้นตอน 20</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">10</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบสภาพขั้วต่อ PCM</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อ PCM</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบการเชื่อมต่อที่ไม่สมบูรณ์ (เช่น ขั้วไฟฟ้าเสียหาย / หลุดออก การผุกร่อน)</div>
+<div class="list">•&nbsp;&nbsp;มีความบกพร่องใดๆ หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนขั้วต่อและ/หรือขั้วไฟฟ้า แล้วไปที่ขั้นตอน 20</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">11</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรกันของวงจรสัญญาณเซ็นเซอร์ตำแหน่งวาล์วควบคุมและวงจรกราวด์</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบว่าขั้วต่อโซลินอยด์วาล์วบายพาสคอมเพรสเซอร์ และโซลินอยด์วาล์วเวสต์เกต และโซลินอยด์วาล์วควบคุม และเซ็นเซอร์ตำแหน่งวาล์วควบคุม และ PCM ถูกปลดออกหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต่อเนื่องระหว่างขั้ว B และ A ของเซ็นเซอร์ตำแหน่งวาล์วควบคุม (ด้านชุดสายไฟ)</div>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชุดสายไฟที่เกิดการลัดวงจรกัน แล้วไปที่ขั้นตอน 20</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">12</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการขาดวงจรของแต่ละวงจร</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบว่าขั้วต่อโซลินอยด์วาล์วบายพาสคอมเพรสเซอร์ และโซลินอยด์วาล์วเวสต์เกต และโซลินอยด์วาล์วควบคุม และเซ็นเซอร์ตำแหน่งวาล์วควบคุม และ PCM ถูกปลดออกหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต่อเนื่องระหว่างขั้วต่างๆ ต่อไปนี้ (ด้านชุดสายไฟ):</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ขั้ว B ของโซลินอยด์วาล์วบายพาสคอมเพรสเซอร์&mdash;ขั้ว 1CO ของ PCM</div>
+<div class="list">―&nbsp;&nbsp;ขั้ว B ของโซลินอยด์วาล์วเวสต์เกต&mdash;ขั้ว 1CL ของ PCM</div>
+<div class="list">―&nbsp;&nbsp;ขั้ว B ของโซลินอยด์วาล์วควบคุม&mdash;ขั้ว 1CP ของ PCM</div>
+<div class="list">―&nbsp;&nbsp;ขั้ว C ของเซ็นเซอร์ตำแหน่งวาล์วควบคุม&mdash;ขั้ว 1BO ของ PCM</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชุดสายไฟที่เกิดการขาดวงจร แล้วไปที่ขั้นตอน 20</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">13</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบท่อสุญญากาศและท่อแรงดันอากาศของวาล์วบายพาสคอมเพรสเซอร์</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบท่อสุญญากาศและท่อแรงดันอากาศของวาล์วบายพาสคอมเพรสเซอร์<div>(ดูที่ <font class="extxref-label"><a href="id0113z7705800.html">การถอด / การติดตั้งเทอร์โบชาร์จเจอร์ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีความเสียหายหรือการรั่วของท่อในท่อสุญญากาศและท่อแรงดันอากาศหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชิ้นส่วนที่บกพร่องตามผลที่ได้จากการตรวจสอบ แล้วไปที่ขั้นตอน 20</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">14</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบท่อสุญญากาศและท่อแรงดันอากาศของวาล์วเวสต์เกต</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบท่อสุญญากาศและท่อแรงดันอากาศของวาล์วเวสต์เกต<div>(ดูที่ <font class="extxref-label"><a href="id0113z7705800.html">การถอด / การติดตั้งเทอร์โบชาร์จเจอร์ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีความเสียหายหรือการรั่วของท่อในท่อสุญญากาศและท่อแรงดันอากาศหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชิ้นส่วนที่บกพร่องตามผลที่ได้จากการตรวจสอบ แล้วไปที่ขั้นตอน 20</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">15</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบท่อสุญญากาศและท่อแรงดันอากาศของวาล์วควบคุม</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบท่อสุญญากาศและท่อแรงดันอากาศของวาล์วควบคุม<div>(ดูที่ <font class="extxref-label"><a href="id0113z7705800.html">การถอด / การติดตั้งเทอร์โบชาร์จเจอร์ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีความเสียหายหรือการรั่วของท่อในท่อสุญญากาศและท่อแรงดันอากาศหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชิ้นส่วนที่บกพร่องตามผลที่ได้จากการตรวจสอบ แล้วไปที่ขั้นตอน 20</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">16</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบโซลินอยด์วาล์วบายพาสคอมเพรสเซอร์</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบโซลินอยด์วาล์วบายพาสคอมเพรสเซอร์<div>(ดูที่ <font class="extxref-label"><a href="id0113z7265500.html">การตรวจสอบโซลินอยด์วาล์วบายพาสคอมเพรสเซอร์ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีความบกพร่องใดๆ หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนโซลินอยด์วาล์วบายพาสคอมเพรสเซอร์ แล้วไปที่ขั้นตอน 20</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0113z7265600.html">การถอด / การติดตั้งโซลินอยด์วาล์วบายพาสคอมเพรสเซอร์ [SKYACTIV-D 2.2]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">17</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบโซลินอยด์วาล์วเวสต์เกต</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบโซลินอยด์วาล์วเวสต์เกต<div>(ดูที่ <font class="extxref-label"><a href="id0113z7265900.html">การตรวจสอบโซลินอยด์วาล์วเวสต์เกต [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีความบกพร่องใดๆ หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนโซลินอยด์วาล์วเวสต์เกต แล้วไปที่ขั้นตอน 20</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0113z7266100.html">การถอด / การติดตั้งโซลินอยด์วาล์วเวสต์เกต [SKYACTIV-D 2.2]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">18</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบโซลินอยด์วาล์วควบคุม</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบโซลินอยด์วาล์วควบคุม<div>(ดูที่ <font class="extxref-label"><a href="id0113z7265700.html">การตรวจสอบโซลินอยด์วาล์วควบคุม [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีความบกพร่องใดๆ หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนโซลินอยด์วาล์วควบคุม แล้วไปที่ขั้นตอน 20</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0113z7265800.html">การถอด / การติดตั้งโซลินอยด์วาล์วควบคุม [SKYACTIV-D 2.2]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">19</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบเซ็นเซอร์ตำแหน่งวาล์วควบคุม</div>
+<div class="list">•&nbsp;&nbsp;ต่อขั้วต่อที่ปลดออกทั้งหมดกลับเข้าที่</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบเซ็นเซอร์ตำแหน่งวาล์วควบคุม<div>(ดูที่ <font class="extxref-label"><a href="id0140z7217200.html">การตรวจสอบเซ็นเซอร์ตำแหน่งวาล์วควบคุม [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีความบกพร่องใดๆ หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนแอ็คชิวเอเตอร์วาล์วควบคุม แล้วไปที่ขั้นตอนถัดไป</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0113z7705800.html">การถอด / การติดตั้งเทอร์โบชาร์จเจอร์ [SKYACTIV-D 2.2]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">20</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบว่าการค้นหาสาเหตุปัญหาของรหัสวิเคราะห์ปัญหาเสร็จสมบูรณ์แล้ว</div>
+<div class="list">•&nbsp;&nbsp;ต่อขั้วต่อที่ปลดออกทั้งหมดกลับเข้าที่ทุกครั้ง</div>
+<div class="list">•&nbsp;&nbsp;ลบรหัสวิเคราะห์ปัญหาออกจากหน่วยความจำ PCM โดยใช้ M-MDS<div>(ดูที่ <font class="extxref-label"><a href="id0102s4801100.html">ขั้นตอนหลังจากงานซ่อม [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;สตาร์ทเครื่องยนต์ และอุ่นเครื่องจนถึงอุณหภูมิการทำงาน</div>
+<dl>
+<dd>
+<div class="attention2-label">ข้อควรระวัง</div>
+</dd>
+<dd>
+<div class="attention2">
+<div class="list">•&nbsp;&nbsp;ในขณะที่ปฏิบัติขั้นตอนนี้ ให้ใช้งานรถในที่ที่ปลอดภัยและถูกต้องตามกฎหมายทุกครั้ง</div>
+<div class="list">•&nbsp;&nbsp;เมื่อใช้ M-MDS เพื่อดูสถานะระบบตรวจสอบในขณะขับขี่ ให้แน่ใจว่ามีช่างอีกคนพร้อมกับท่าน หรือบันทึกข้อมูลใน M-MDS โดยใช้ฟังก์ชั่นการจับข้อมูล PID/DATA MONITOR และ RECORD แล้วตรวจสอบภายหลัง</div>
+</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ขับรถในสภาวะข้อมูล SNAPSHOT / ข้อมูลสภาพรถยนต์ (FREEZE FRAME DATA) (โหมด 2)</div>
+<div class="list">•&nbsp;&nbsp;ปฏิบัติตามขั้นตอนการเข้ารหัสปัญหาที่ค้างอยู่<div>(ดูที่ <font class="extxref-label"><a href="id0102s4801000.html">การทดสอบการวิเคราะห์ปัญหาบนรถ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;รหัสที่ค้างอยู่ของรหัสวิเคราะห์ปัญหานี้ปรากฏขึ้นหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ทำซ้ำการตรวจสอบตั้งแต่ขั้นตอน 1</div>
+<div class="list">•&nbsp;&nbsp;ถ้าความบกพร่องเกิดขึ้นอีกครั้ง ให้เปลี่ยน PCM<div>(ดูที่ <font class="extxref-label"><a href="id0140z7802400.html">การถอด / การติดตั้ง PCM [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">21</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบขั้นตอนหลังจากงานซ่อม</div>
+<div class="list">•&nbsp;&nbsp;ปฏิบัติตาม &ldquo;ขั้นตอนหลังจากงานซ่อม&rdquo;<div>(ดูที่ <font class="extxref-label"><a href="id0102s4801100.html">ขั้นตอนหลังจากงานซ่อม [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีรหัสวิเคราะห์ปัญหาปรากฏขึ้นหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่การตรวจสอบรหัสวิเคราะห์ปัญหานั้นๆ</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0102s4801500.html">ตารางรหัสวิเคราะห์ปัญหา [SKYACTIV-D 2.2]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การค้นหาสาเหตุปัญหาของรหัสวิเคราะห์ปัญหาเสร็จสมบูรณ์</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</body>
+</html>

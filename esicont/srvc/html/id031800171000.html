@@ -1,0 +1,123 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>โมดูลควบคุม 4WD</title>
+</head>
+<body><a name="id031800171000"></a><p class="servinfo-title"><span class="servinfo-head"></span>โมดูลควบคุม 4WD</p>
+<hr>
+<p class="servinfo-title-id" align="right">id031800171000</p><br clear="all"><a name="id03180017100001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>จุดประสงค์/การทำงาน</p>
+<div class="list">•&nbsp;&nbsp;4WD CM จะคำนวณปริมาณการกระจายแรงบิดที่เหมาะสมที่สุดสำหรับล้อหลังและส่งกระแสไฟฟ้าควบคุมที่สัมพันธ์กันไปที่คลับปิ้งควบคุมด้วยอิเล็กทรอนิกส์ (โซลินอยด์ 4WD) การคำนวณนี้ขึ้นอยู่กับมุมแป้นคันเร่ง ความเร็วล้อทั้ง 4 ความเร็วรอบเครื่องยนต์ และสัญญาณอินพุทที่เกี่ยวข้องอื่นๆ ที่ปรับเข้ากับสภาวะการขับขี่รถและสภาพพื้นผิวถนน</div><br clear="all"><p><a name="id03180017100002"></a><p class="topic-title"><span class="topic-head"></span>ตารางฟังก์ชั่นการทำงาน</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ชื่อฟังก์ชั่น</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายละเอียด</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">ฟังก์ชั่นควบคุมระบบ 4WD</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;กระแสไฟฟ้าควบคุมอิเล็กทรอนิกส์ที่ส่งไปยังคลับปิ้งควบคุมด้วยอิเล็กทรอนิกส์ (โซลินอยด์ 4WD) จะถูกควบคุมอย่างเหมาะสมที่สุดตามสัญญาณอินพุทแต่ละสัญญาณ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ระบบวิเคราะห์ปัญหา</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ถ้าระบบวิเคราะห์ตนเองตรวจพบความบกพร่อง ไฟเตือน 4WD จะติดสว่างเพื่อเตือนให้คนขับทราบ และในเวลาเดียวกันระบบจะยับยั้งการควบคุมหรือทำการปรับแก้อื่นๆ เพื่อป้องกันการสูญเสียเสถียรภาพการขับขี่และป้องกันระบบ</div>
+<div class="list">•&nbsp;&nbsp;ความบกพร่องที่ตรวจพบจะถูกเก็บบันทึกเป็นรหัสวิเคราะห์ปัญหาใน 4WD CM</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</p><br clear="all"><a name="id03180017100003"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>โครงสร้าง</p>
+<div class="list">•&nbsp;&nbsp;4WD CM จะติดตั้งอยู่ที่ด้านขวาของแผงหน้าปัด (ด้านผู้โดยสาร)</div><br clear="all"><a name="id03180017100004"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>แผนผังแบบบล็อก</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00002362.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00002362</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id03180017100005"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>Fail-safe</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา</p>
+</th>
+<th id="" align="center">
+<p class="thead">Fail-safe</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">P164D:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">4WD ทำงานโดยข้อมูลที่กำหนด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P182F:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สภาวะการป้องกัน 4WD (หยุดการควบคุม 4WD ชั่วคราว)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P187B:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ยกเลิกการควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P1886:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ยกเลิกการควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P188A:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สภาวะการป้องกัน 4WD (หยุดการควบคุม 4WD ชั่วคราว)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">U2100:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">4WD ทำงานโดยข้อมูลที่กำหนด</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</body>
+</html>

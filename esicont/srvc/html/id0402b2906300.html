@@ -1,0 +1,180 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>รหัสวิเคราะห์ปัญหา U0001:88/U0100:00/U0101:00/U0114:00/U0131:00/U0154:00/U0155:00/U0235:00 [ระบบควบคุมการทรงตัวของรถ (DSC)]</title>
+</head>
+<body><a name="id0402b2906300"></a><p class="servinfo-title"><span class="servinfo-head"></span>รหัสวิเคราะห์ปัญหา U0001:88/U0100:00/U0101:00/U0114:00/U0131:00/U0154:00/U0155:00/U0235:00 [ระบบควบคุมการทรงตัวของรถ (DSC)]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0402b2906300</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>รหัสวิเคราะห์ปัญหา</span></div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody"><span>U0001:88, U0100:00, U0101:00, U0114:00, U0131:00, U0154:00, U0155:00, U0235:00</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody"><span>สาย CAN</span></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody"><span>สภาวะการตรวจพบ</span></div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="list">•&nbsp;&nbsp;U0001:88</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ตรวจพบการขาดหรือลัดวงจรในชุดสายไฟระบบ CAN</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;U0100:00</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ตรวจพบสื่อสารกับ PCM ผิดพลาดในการสื่อสารระบบ CAN</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;U0101:00</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ตรวจพบสื่อสารกับ TCM ผิดพลาดในการสื่อสารระบบ CAN</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;U0114:00</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ตรวจพบการสื่อสารกับโมดูลควบคุม 4WD ผิดพลาดในการสื่อสาร CAN</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;U0131:00</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ตรวจพบสื่อสารกับ EPS CM ผิดพลาดในการสื่อสารระบบ CAN</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;U0154:00</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ตรวจพบการสื่อสารกับโมดูลควบคุม SAS ผิดพลาดในการสื่อสาร CAN</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;U0155:00</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ตรวจพบการสื่อสารกับแผงหน้าปัดผิดพลาดในการสื่อสารระบบ CAN</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;U0235:00</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ตรวจพบสื่อสารกับเซ็นเซอร์เลเซอร์ผิดพลาดในการสื่อสารระบบ CAN</div>
+</dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody"><span>ฟังก์ชั่น Fail-safe</span></div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="list">•&nbsp;&nbsp;U0001:88</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ไฟเตือนระบบ ABS, ไฟแสดงสถานะ TCS/DSC และไฟเตือนหลัก<sup>*1</sup> ติดสว่าง</div>
+<div class="list">―&nbsp;&nbsp;ไฟเตือนระบบเตือนแรงดันลมยางติดสว่างหลังจากกะพริบ</div>
+<div class="list">―&nbsp;&nbsp;ยับยั้งการควบคุมระบบ ABS, TCS, DSC, ระบบป้องกันการพลิกคว่ำ (ROM), ระบบควบคุมการช่วยเบรก, ฟังก์ชั่นการป้องกันรถยนต์พลิกคว่ำ<sup>*2</sup>, ระบบช่วยออกตัวบนทางชัน (HLA), TPMS, ระบบสมาร์ทซิตี้เบรก (SCBS)<sup>*1</sup> และการลดการชนปะทะระดับสอง (SCR)</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;U0100:00</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ไฟเตือนระบบ ABS<sup>*3</sup>, ไฟแสดงสถานะ TCS/DSC<sup>*3</sup> และไฟเตือนหลัก<sup>*1*3</sup> ติดสว่าง</div>
+<div class="list">―&nbsp;&nbsp;ไฟเตือนระบบเตือนแรงดันลมยางติดสว่างหลังจากกะพริบ (ไม่ติดสว่าง/กะพริบ ขึ้นอยู่กับข้อมูลความบกพร่อง)</div>
+<div class="list">―&nbsp;&nbsp;ยับยั้งการควบคุมระบบ ABS<sup>*4</sup>, TCS<sup>*4</sup>, DSC<sup>*4</sup>, ระบบป้องกันการพลิกคว่ำ (ROM)<sup>*4</sup>, ระบบควบคุมการช่วยเบรก<sup>*4</sup>, ฟังก์ชั่นการป้องกันรถยนต์พลิกคว่ำ<sup>*2*4</sup>, ระบบช่วยออกตัวบนทางชัน (HLA)<sup>*4</sup>, TPMS<sup>*4</sup>, ระบบสมาร์ทซิตี้เบรก (SCBS)<sup>*1*4</sup> และการลดการชนปะทะระดับสอง (SCR)<sup>*4</sup></div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;U0101:00</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ไฟแสดงสถานะ TCS/DSC และไฟเตือนหลัก<sup>*1</sup> ติดสว่าง</div>
+<div class="list">―&nbsp;&nbsp;ไฟเตือนระบบเตือนแรงดันลมยางติดสว่างหลังจากกะพริบ</div>
+<div class="list">―&nbsp;&nbsp;ยับยั้งการควบคุมระบบ TCS, DSC, ระบบป้องกันการพลิกคว่ำ (ROM), ฟังก์ชั่นการป้องกันรถยนต์พลิกคว่ำ, ระบบช่วยออกตัวบนทางชัน (HLA), TPMS, ระบบสมาร์ทซิตี้เบรก (SCBS)<sup>*1</sup> และการลดการชนปะทะระดับสอง (SCR)</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;U0114:00</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ไฟเตือนระบบเตือนแรงดันลมยางติดสว่างหลังจากกะพริบ</div>
+<div class="list">―&nbsp;&nbsp;ยับยั้งการควบคุม TPMS</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;U0131:00</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ไฟแสดงสถานะ TCS/DSC และไฟเตือนหลัก<sup>*1</sup> ติดสว่าง</div>
+<div class="list">ไฟเตือนระบบเตือนแรงดันลมยางติดสว่างหลังจากกะพริบ</div>
+<div class="list">―&nbsp;&nbsp;ยับยั้งการควบคุมระบบ TCS, DSC, ระบบป้องกันการพลิกคว่ำ (ROM), TPMS, ระบบสมาร์ทซิตี้เบรก (SCBS)<sup>*1</sup> และการลดการชนปะทะระดับสอง (SCR)</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;U0154:00</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ไฟแสดงสถานะ TCS/DSC ติดสว่าง</div>
+<div class="list">―&nbsp;&nbsp;ยับยั้งการควบคุมการลดการชนปะทะระดับสอง (SCR)</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;U0155:00</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ไฟเตือนระบบ ABS<sup>*3</sup>, ไฟแสดงสถานะ TCS/DSC<sup>*3</sup> และไฟเตือนหลัก<sup>*1*3</sup> ติดสว่าง</div>
+<div class="list">―&nbsp;&nbsp;ไฟเตือนระบบเตือนแรงดันลมยางติดสว่างหลังจากกะพริบ (ไม่ติดสว่าง/กะพริบ ขึ้นอยู่กับข้อมูลความบกพร่อง)</div>
+<div class="list">―&nbsp;&nbsp;ยับยั้งการควบคุมระบบ ABS<sup>*4</sup>, TCS<sup>*4</sup>, DSC<sup>*4</sup>, ระบบป้องกันการพลิกคว่ำ (ROM)<sup>*4</sup>, ระบบควบคุมการช่วยเบรก<sup>*4</sup>, ฟังก์ชั่นการป้องกันรถยนต์พลิกคว่ำ<sup>*2*4</sup>, ระบบช่วยออกตัวบนทางชัน (HLA)<sup>*4</sup>, TPMS<sup>*4</sup>, ระบบสมาร์ทซิตี้เบรก (SCBS)<sup>*1*4</sup> และการลดการชนปะทะระดับสอง (SCR)<sup>*4</sup></div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;U0235:00</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ไฟเตือนหลักติดสว่าง</div>
+<div class="list">―&nbsp;&nbsp;ยับยั้งการควบคุมระบบสมาร์ทซิตี้เบรก (SCBS)</div>
+</dd>
+</dl>
+<div class="list"><sup>*1</sup>&nbsp;&nbsp;:รุ่นที่มีระบบสมาร์ทซิตี้เบรก (SCBS)</div>
+<div class="list"><sup>*2</sup>&nbsp;&nbsp;:ATX เท่านั้น</div>
+<div class="list"><sup>*3</sup>: ไม่ติดสว่าง ขึ้นอยู่กับข้อมูลความบกพร่อง</div>
+<div class="list"><sup>*4</sup>&nbsp;&nbsp;:ใช้ตามรายละเอียดความบกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody"><span>สาเหตุที่เป็นไปได้</span></div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="list">•&nbsp;ชุดสายไฟระบบ CAN ขาดหรือลัดวงจร</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระบบ CAN ขาดหรือลัดวงจรกับ PCM</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระบบ CAN ขาดหรือลัดวงจรกับ TCM</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระบบ CAN ขาดหรือลัดวงจรกับโมดูลควบคุม 4WD</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระบบ CAN ขาดหรือลัดวงจรกับ EPS CM</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระบบ CAN ขาดหรือลัดวงจรกับโมดูลควบคุม SAS</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระบบ CAN ขาดหรือลัดวงจรกับแผงหน้าปัด</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระบบ CAN ขาดหรือลัดวงจรกับเซ็นเซอร์เลเซอร์</div>
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัดบกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody"><span>ผังวงจรระบบ</span></div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p><br clear="all"><a name="id0402b290630001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ขั้นตอนการวิเคราะห์ปัญหา</p>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบตามขั้นตอนการวิเคราะห์ในระบบการสื่อสารแบบมัลติเพล็กซ์ (ดูที่ <font class="extxref-label"><a href="id100208000000.html">คำนำ [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (L.H.D.)]</a></font>), (ดูที่ <font class="extxref-label"><a href="id100209000000.html">คำนำ [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (R.H.D.)]</a></font>), (ดูที่ <font class="extxref-label"><a href="id100205000000.html">คำนำ [SKYACTIV-D 2.2 (L.H.D.)]</a></font>), (ดูที่ <font class="extxref-label"><a href="id100206000000.html">คำนำ [SKYACTIV-D 2.2 (R.H.D.)]</a></font>)</div>
+</body>
+</html>

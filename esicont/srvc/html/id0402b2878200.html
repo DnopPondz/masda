@@ -1,0 +1,238 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>รหัสวิเคราะห์ปัญหา C0001:01/C0002:01/C0003:01/C0004:01/C0010:01/C0011:01/C0014:01/C0015:01/C0018:01/C0019:01/C001C:01/C001D:01 [ระบบควบคุมการทรงตัวของรถ (DSC)]</title>
+</head>
+<body><a name="id0402b2878200"></a><p class="servinfo-title"><span class="servinfo-head"></span>รหัสวิเคราะห์ปัญหา C0001:01/C0002:01/C0003:01/C0004:01/C0010:01/C0011:01/C0014:01/C0015:01/C0018:01/C0019:01/C001C:01/C001D:01 [ระบบควบคุมการทรงตัวของรถ (DSC)]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0402b2878200</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<tbody>
+<tr>
+<td id="" align="center" rowspan="10">
+<div class="tbody"><span>รหัสวิเคราะห์ปัญหา</span></div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody"><span>C0001:01, C0002:01</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody"><span>ระบบโซลินอยด์วาล์วการป้องกันการลื่นไถล</span></div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" colspan="2">
+<div class="tbody"><span>C0003:01, C0004:01</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody"><span>ระบบโซลินอยด์วาล์วการควบคุมการทรงตัว</span></div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" colspan="2">
+<div class="tbody"><span>C0010:01</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody"><span>ระบบโซลินอยด์วาล์วเข้าด้านหน้าซ้าย</span></div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" colspan="2">
+<div class="tbody"><span>C0011:01</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody"><span>ระบบโซลินอยด์วาล์วออกด้านหน้าซ้าย</span></div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" colspan="2">
+<div class="tbody"><span>C0014:01</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody"><span>ระบบโซลินอยด์วาล์วเข้าด้านหน้าขวา</span></div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" colspan="2">
+<div class="tbody"><span>C0015:01</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody"><span>ระบบโซลินอยด์วาล์วออกด้านหน้าขวา</span></div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" colspan="2">
+<div class="tbody"><span>C0018:01</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody"><span>ระบบโซลินอยด์วาล์วเข้าด้านหลังซ้าย</span></div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" colspan="2">
+<div class="tbody"><span>C0019:01</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody"><span>ระบบโซลินอยด์วาล์วออกด้านหลังซ้าย</span></div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" colspan="2">
+<div class="tbody"><span>C001C:01</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody"><span>ระบบโซลินอยด์วาล์วเข้าด้านหลังขวา</span></div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" colspan="2">
+<div class="tbody"><span>C001D:01</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody"><span>ระบบโซลินอยด์วาล์วออกด้านหลังขวา</span></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody"><span>สภาวะการตรวจพบ</span></div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="list">•&nbsp;&nbsp;ตรวจพบความบกพร่องในโซลินอยด์วาล์ว DSC HU/CM หรือวงจรภายในโดยฟังก์ชันการวิเคราะห์ปัญหาบนรถ DSC HU/CM</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody"><span>ฟังก์ชั่น Fail-safe</span></div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="list">•&nbsp;&nbsp;ไฟเตือนระบบ ABS, ไฟเตือนระบบเบรก, ไฟแสดงสถานะ TCS/DSC และไฟเตือนหลัก<sup>*1</sup> ติดสว่าง</div>
+<div class="list">•&nbsp;&nbsp;ยับยั้งการควบคุมระบบ ABS, EBD, TCS, DSC, ระบบป้องกันการพลิกคว่ำ (ROM), ระบบควบคุมการช่วยเบรก, ฟังก์ชั่นการป้องกันรถยนต์พลิกคว่ำ<sup>*2</sup>, ระบบช่วยออกตัวบนทางชัน (HLA), ระบบสมาร์ทซิตี้เบรก (SCBS)<sup>*1</sup> และการลดการชนปะทะระดับสอง (SCR)</div>
+<div class="list"><sup>*1</sup> &nbsp;&nbsp;:รุ่นที่มีระบบสมาร์ทซิตี้เบรก (SCBS)</div>
+<div class="list"><sup>*2</sup>&nbsp;&nbsp;:ATX เท่านั้น</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody"><span>สาเหตุที่เป็นไปได้</span></div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="list">•&nbsp;&nbsp;วงจรโซลินอยด์วาล์วภายใน DSC HU/CM ขาดหรือลัดวงจร</div>
+<div class="list">•&nbsp;&nbsp;โซลินอยด์วาล์วบกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody"><span>ผังวงจรระบบ</span></div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p clear="all">
+<p class="table-title">ขั้นตอนการวิเคราะห์ปัญหา</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">การตรวจสอบ</p>
+</th>
+<th id="" align="center">
+<p class="thead">การปฏิบัติ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">1</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการทำงานของโซลินอยด์วาล์ว</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;ต่อ M-MDS เข้ากับ DLC-2</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;เข้าถึงโหมดคำสั่งการทำงานของโซลินอยด์วาล์วโดยใช้ M-MDS<div>(ดูที่ <font class="extxref-label"><a href="id0402b2800200.html">การวิเคราะห์ปัญหาบนรถ [ระบบควบคุมการทรงตัวของรถ (DSC)]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;โซลินอยด์วาล์วทำงานหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยน DSC HU/CM แล้วไปที่ขั้นตอนถัดไป</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id041500801000.html">การถอด / การติดตั้ง DSC HU/CM</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">2</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบว่าการค้นหาสาเหตุปัญหาของรหัสวิเคราะห์ปัญหาเสร็จสมบูรณ์แล้ว</div>
+<div class="list">•&nbsp;&nbsp;ลบรหัสวิเคราะห์ปัญหาออกจากหน่วยความจำ<div>(ดูที่ <font class="extxref-label"><a href="id0402b2800200.html">การวิเคราะห์ปัญหาบนรถ [ระบบควบคุมการทรงตัวของรถ (DSC)]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;สตาร์ทเครื่องยนต์และขับรถด้วยความเร็ว <span>10km/h {6.2 mph}หรือมากกว่า</span>นั้น</div>
+<div class="list">•&nbsp;&nbsp;ค่อยๆ ลดความเร็วให้ช้าลงและหยุดรถ</div>
+<div class="list">•&nbsp;&nbsp;มีรหัสวิเคราะห์ปัญหาเดียวกันปรากฏขึ้นหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ทำซ้ำการตรวจสอบตั้งแต่ขั้นตอน 1</div>
+<div class="tbody">ถ้าความบกพร่องเกิดขึ้นอีกครั้ง ให้เปลี่ยน DSC HU/CM แล้วไปที่ขั้นตอนถัดไป</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id041500801000.html">การถอด / การติดตั้ง DSC HU/CM</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">3</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบขั้นตอนหลังจากงานซ่อม</div>
+<div class="list">•&nbsp;&nbsp;มีรหัสวิเคราะห์ปัญหาอื่นๆ ปรากฏขึ้นหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่การตรวจสอบรหัสวิเคราะห์ปัญหานั้นๆ</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0402b2800200.html">การวิเคราะห์ปัญหาบนรถ [ระบบควบคุมการทรงตัวของรถ (DSC)]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การค้นหาสาเหตุปัญหาของรหัสวิเคราะห์ปัญหาเสร็จสมบูรณ์</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</body>
+</html>

@@ -1,0 +1,1165 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>การลงโปรแกรมชิ้นส่วนที่เกี่ยวข้องกับระบบยับยั้งการทำงานของเครื่องยนต์</title>
+</head>
+<body><a name="id091400514700"></a><p class="servinfo-title"><span class="servinfo-head"></span>การลงโปรแกรมชิ้นส่วนที่เกี่ยวข้องกับระบบยับยั้งการทำงานของเครื่องยนต์</p>
+<hr>
+<p class="servinfo-title-id" align="right">id091400514700</p><br clear="all"><a name="id09140051470001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>คำนำ</p>
+<div class="list">•&nbsp;&nbsp;เมื่อเปลี่ยนชิ้นส่วนที่เกี่ยวข้องกับระบบยับยั้งการทำงานของเครื่องยนต์หรือลงโปรแกรมตัวส่งสัญญาณรีโมทเพิ่มเติม หรือลบตัวส่งสัญญาณรีโมท ให้ลงโปรแกรมชิ้นส่วนที่เกี่ยวข้องกับระบบยับยั้งการทำงานของเครื่องยนต์เพื่อให้ระบบทำงานได้ตามปกติ สำหรับการลงโปรแกรมชิ้นส่วนที่เกี่ยวข้องกับระบบยับยั้งการทำงานของเครื่องยนต์ ให้เลือกขั้นตอนการลงโปรแกรมตามลักษณะงาน (ดูที่ <font class="intxref-label"><a href="#id09140051470002">การเลือกขั้นตอนสำหรับการลงโปรแกรมชิ้นส่วนที่เกี่ยวข้องกับระบบยับยั้งการทำงานของเครื่องยนต์</a></font>)</div>
+<dl>
+<dd>
+<div class="attention2-label">ข้อควรระวัง</div>
+</dd>
+<dd>
+<div class="attention2">
+<div class="list">•&nbsp;&nbsp;ไม่สามารถสตาร์ทเครื่องยนต์ได้ หากมีการข้ามขั้นตอนการปฏิบัติงานซ่อมแซมแต่ละขั้นตอน ปฏิบัติตามขั้นตอนทั้งหมดตามลำดับขั้นตอน</div>
+<div class="list">•&nbsp;&nbsp;หากมีวัตถุที่เป็นโลหะหรือแม่เหล็กอยู่ใกล้กับตัวส่งสัญญาณรีโมท การสื่อสารระหว่างตัวส่งสัญญาณรีโมทกับตัวรถอาจถูกกีดขวาง ซึ่งจะทำให้การลงโปรแกรมชิ้นส่วนที่เกี่ยวข้องกับระบบยับยั้งการทำงานของเครื่องยนต์บกพร่องได้ นำวัตถุที่เป็นโลหะหรือแม่เหล็ก เช่น พวงกุญแจ ออกจากตัวส่งสัญญาณรีโมทขณะลงโปรแกรมชิ้นส่วนที่เกี่ยวข้องกับระบบยับยั้งการทำงานของเครื่องยนต์</div>
+<div class="list">•&nbsp;&nbsp;หากอุปกรณ์ใดๆ ต่อไปนี้อยู่ภายในรถ การลงโปรแกรมชิ้นส่วนที่เกี่ยวข้องกับระบบยับยั้งการทำงานของเครื่องยนต์อาจล้มเหลวได้ ห้ามนำอุปกรณ์ต่อไปนี้หรือผลิตภัณฑ์ที่ใกล้เคียงไว้ภายในรถขณะลงโปรแกรมชิ้นส่วนที่เกี่ยวข้องกับระบบยับยั้งการทำงานของเครื่องยนต์</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;M-MDS</div>
+<div class="list">―&nbsp;&nbsp;คอมพิวเตอร์ส่วนบุคคล</div>
+<div class="list">―&nbsp;&nbsp;อุปกรณ์ที่สามารถส่ง/รับคลื่นวิทยุ</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;หากสตาร์ทเครื่องยนต์ระหว่างลงโปรแกรมชิ้นส่วนที่เกี่ยวข้องกับระบบยับยั้งการทำงานของเครื่องยนต์ โหมดการลงโปรแกรมจะถูกยกเลิก ดังนั้น ห้ามสตาร์ทเครื่องยนต์ เว้นแต่จะมีระบุไว้ในขั้นตอน ทำซ้ำขั้นตอนตั้งแต่เริ่มต้น หากสตาร์ทเครื่องยนต์ระหว่างลงโปรแกรมชิ้นส่วนที่เกี่ยวข้องกับระบบยับยั้งการทำงานของเครื่องยนต์</div>
+<div class="list">•&nbsp;&nbsp;หากตัวส่งสัญญาณรีโมทอยู่ใกล้รถขณะลงโปรแกรมชิ้นส่วนที่เกี่ยวข้องกับระบบยับยั้งการทำงานของเครื่องยนต์ อาจทำให้ลงโปรแกรมผิดพลาด ควรเก็บตัวส่งสัญญาณรีโมทให้ห่างจากรถ 1 m เว้นแต่จะระบุไว้ในขั้นตอน</div>
+<div class="list">•&nbsp;&nbsp;SSU ในขั้นตอนจะแสดงถึงชุดเปิด/ปิดการทำงาน นอกจากนี้ กุญแจอัจฉริยะจะแสดงถึงตัวส่งสัญญาณรีโมท</div>
+</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;ต้องลงโปรแกรมตัวส่งสัญญาณรีโมทอย่างน้อยสองตัวเพื่อสตาร์ทเครื่องยนต์</div>
+<div class="list">•&nbsp;&nbsp;สามารถลงโปรแกรมตัวส่งสัญญาณรีโมทได้สูงสุดหกตัวในรถหนึ่งคัน</div>
+<div class="list">•&nbsp;&nbsp;สามารถตรวจสอบจำนวนหมายเลข ID กุญแจที่ลงโปรแกรมไว้ได้โดยใช้ M-MDS</div>
+<div class="list">•&nbsp;&nbsp;อย่าเลือกเมนูหน้าจออื่นๆ นอกเหนือจากที่ระบุไว้ในขั้นตอนระหว่างการทำงานของ M-MDS</div>
+<div class="list">•&nbsp;&nbsp;เมื่อลงโปรแกรมชิ้นส่วนที่เกี่ยวข้องกับระบบยับยั้งการทำงานของเครื่องยนต์ ต้องค้นหารหัส</div>
+</div>
+</dd>
+</dl><br clear="all"><a name="id09140051470002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การเลือกขั้นตอนสำหรับการลงโปรแกรมชิ้นส่วนที่เกี่ยวข้องกับระบบยับยั้งการทำงานของเครื่องยนต์</p>
+<p class="list">1.&nbsp;&nbsp;ตรวจสอบว่าได้ติดตั้งฟิวส์ ROOM, ฟิวส์ AT และฟิวส์ SRS2/ESCL แล้ว</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;เลือกขั้นตอนการลงโปรแกรมจากที่ใช้ได้จากรายละเอียดการบริการของชิ้นส่วนที่เกี่ยวข้องกับระบบยับยั้งการทำงานของเครื่องยนต์</p>
+<p class="list">
+</p>
+<p clear="all">
+<p class="table-title">ตารางขั้นตอนการลงโปรแกรมและการบริการของชิ้นส่วนที่เกี่ยวข้องกับระบบยับยั้งการทำงานของเครื่องยนต์</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">หมายเลข</p>
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">การบริการ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ขั้นตอนการลงโปรแกรม</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การลงโปรแกรมตัวส่งสัญญาณรีโมทเพิ่มเติม</div>
+</td>
+<td id="" align="left">
+<div class="tbody">มีตัวส่งสัญญาณรีโมทที่สามารถสตาร์ทเครื่องยนต์ได้</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูี่ที่ <font class="intxref-label"><a href="#id09140051470005">ขั้นตอนการลงโปรแกรมตัวส่งสัญญาณรีโมทเพิ่มเติม No.1 (โดยใช้ M-MDS)</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">การลงโปรแกรมเนื่องจากมีเปลี่ยน PCM</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="intxref-label"><a href="#id09140051470007">ขั้นตอนการลงโปรแกรม No.2 หลังการเปลี่ยน PCM</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">3</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">การลงโปรแกรมและการเปลี่ยนชุดเปิด/ปิดการทำงานเนื่องจากมีการเปลี่ยนชุดเปิด/ปิดการทำงาน/PCM พร้อมกัน</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูี่ที่ <font class="intxref-label"><a href="#id09140051470009">ขั้นตอนการลงโปรแกรมและการเปลี่ยนชุดเปิด/ปิดการทำงาน No.3 เนื่องจากมีการเปลี่ยนชุดเปิด/ปิดการทำงาน/PCM พร้อมกัน</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">4</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">การเปลี่ยนหรือการลบตัวส่งสัญญาณรีโมท</div>
+</td>
+<td id="" align="left">
+<div class="tbody">(ดูที่ <font class="intxref-label"><a href="#id09140051470011">การเปลี่ยนตัวส่งสัญญาณรีโมท No.4 หรือการลบตัวส่งสัญญาณรีโมท</a></font>)</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p><br clear="all"><a name="id09140051470003"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ขั้นตอนการเชื่อมต่อ M-MDS</p>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;ห้ามวาง M-MDS ไว้ในรถขณะลงโปรแกรมระบบยับยั้งการทำงานของเครื่องยนต์</div>
+</div>
+</dd>
+</dl>
+<p class="list">1.&nbsp;&nbsp;ลดกระจกประตูลงจนสุด</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;ต่อ M-MDS เข้ากับ DLC-2</p>
+<p class="list">
+</p>
+<p class="list">3.&nbsp;&nbsp;วาง M-MDS ไว้ด้านนอกตัวรถ</p>
+<p class="list">
+<dl>
+<dd>
+<div class="attention2-label">ข้อควรระวัง</div>
+</dd>
+<dd>
+<div class="attention2">
+<div class="list">•&nbsp;&nbsp;ใช้ผ้าคลุมตัวถังรถ เพื่อป้องกันไม่ให้ตัวถังรถเสียหายจากสายเคเบิล</div>
+</div>
+</dd>
+</dl>
+</p><br clear="all"><a name="id09140051470004"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ขั้นตอนสำหรับการสื่อสารระหว่างขดลวดเสาอากาศกับตัวส่งสัญญาณรีโมท</p>
+<div class="list">•&nbsp;&nbsp;ในขณะที่ไฟแสดงสถานะปุ่มกดสตาร์ท (สีเขียว) กะพริบ ให้กดส่วนด้านบนของตัวส่งสัญญาณรีโมทเข้าที่กึ่งกลางของปุ่มกดสตาร์ท<table class="figure-flame">
+<tr>
+<td width="10mm"></td>
+<td>
+<table class="figure-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzw00002924.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzw00002924</div>
+</td>
+</tr>
+</table>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;ขดลวดเสาอากาศจะถูกรวมอยู่กับปุ่มกดสตาร์ท</div>
+</div>
+</dd>
+</dl>
+</div><br clear="all"><a name="id09140051470005"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ขั้นตอนการลงโปรแกรมตัวส่งสัญญาณรีโมทเพิ่มเติม No.1 (โดยใช้ M-MDS)</p>
+<dl>
+<dd>
+<div class="attention2-label">ข้อควรระวัง</div>
+</dd>
+<dd>
+<div class="attention2">
+<div class="list">•&nbsp;&nbsp;ไม่สามารถสตาร์ทเครื่องยนต์ได้ หากมีการข้ามขั้นตอนใดๆ ปฏิบัติตามขั้นตอนทั้งหมดตามลำดับขั้นตอน</div>
+</div>
+</dd>
+</dl>
+<div class="list-title"> สภาวะรถ</div>
+<div class="list">•&nbsp;&nbsp;มีตัวส่งสัญญาณรีโมทที่สามารถสตาร์ทเครื่องยนต์ได้</div>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;หากไม่สามารถลงโปรแกรมตัวส่งสัญญาณรีโมทได้ ให้ตรวจสอบหมายเลขของตัวส่งสัญญาณรีโมทที่ลงโปรแกรมไว้โดยใช้ M-MDS</div>
+<div class="list">•&nbsp;&nbsp;ดำเนินการตรวจสอบรหัสวิเคราะห์ปัญหาของชุดเปิด/ปิดการทำงานโดยใช้ M-MDS</div>
+</div>
+</dd>
+</dl><br clear="all"><p><a name="id09140051470006"></a><p class="topic-title"><span class="topic-head"></span>ขั้นตอน</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzw00002385.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzw00002385</div>
+</td>
+</tr>
+</table>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">การปฏิบัติหลังขั้นตอนต่างๆ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="left">
+<div class="entry-title">ตรวจสอบว่าตัวส่งสัญญาณรีโมทที่สามารถสตาร์ทเครื่องยนต์ได้เป็นตัวส่งสัญญาณรีโมท 1</div>
+<div class="list">1.&nbsp;&nbsp;บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงาน) โดยใช้ตัวส่งสัญญาณรีโมท 1</div>
+<div class="list">2.&nbsp;&nbsp;ตรวจสอบว่าไฟแสดงระบบรักษาความปลอดภัยติดสว่างเป็นเวลาประมาณ 3 วินาที และดับไป</div>
+<div class="list">3.&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF (LOCK)</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">2</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ดำเนินการลงโปรแกรมเพิ่มเติมกับตัวส่งสัญญาณรีโมท 2</div>
+<div class="list">1.&nbsp;&nbsp;ต่อ M-MDS เข้ากับ DLC-2<div>(ดูที่ <font class="intxref-label"><a href="#id09140051470003">ขั้นตอนการเชื่อมต่อ M-MDS</a></font>)</div>
+</div>
+<div class="list">2.&nbsp;&nbsp;บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงาน) โดยใช้ตัวส่งสัญญาณรีโมท 1</div>
+<div class="list">3.&nbsp;&nbsp;หลังการระบุรถ ให้เลือกตัวเลือกต่อไปนี้จากหน้าจอเริ่มต้นของ M-MDS</div>
+<dl>
+<dd class="list">
+<div class="list">1.&nbsp;&nbsp;&ldquo;Body&rdquo;</div>
+<div class="list">2.&nbsp;&nbsp;&ldquo;Security&rdquo;</div>
+<div class="list">3.&nbsp;&nbsp;&ldquo;PATS (immobilizer) function&rdquo;</div>
+</dd>
+</dl>
+<div class="list">4.&nbsp;&nbsp;จากนั้น เลือกรายการต่อไปนี้จากเมนูหน้าจอ</div>
+<dl>
+<dd class="list">
+<div class="list">•&nbsp;&nbsp;การลงโปรแกรมกุญแจอัจฉริยะเพิ่มเติม</div>
+</dd>
+</dl>
+<div class="list">5.&nbsp;&nbsp;ป้อนรหัสชุดเปิด/ปิดการทำงานและยกเลิกการเข้าถึงระบบรักษาความปลอดภัยตามคำแนะนำบนหน้าจอ M-MDS<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;&quot;Security access permitted&quot; ปรากฏบนหน้าจอ M-MDS</div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="list">6.&nbsp;&nbsp;เหยียบคลัตช์ (MTX) หรือเบรก (ATX) ตามคำแนะนำบน M-MDS และกดตัวส่งสัญญาณรีโมท 2 เข้าที่ปุ่มกดสตาร์ทขณะที่ไฟแสดงสถานะปุ่มกดสตาร์ท (สีเขียว) กะพริบ (ดูที่ <font class="intxref-label"><a href="#id09140051470004">ขั้นตอนสำหรับการสื่อสารระหว่างขดลวดเสาอากาศกับตัวส่งสัญญาณรีโมท</a></font>)</div>
+<div class="list">7.&nbsp;&nbsp;ตรวจสอบว่าได้ลงโปรแกรมตัวส่งสัญญาณรีโมท 2 เสร็จสมบูรณ์บนหน้าจอ M-MDS และปล่อยแป้นคลัตช์ (MTX) หรือเบรก (ATX)</div>
+<div class="list">8.&nbsp;&nbsp;มีตัวส่งสัญญาณรีโมทอื่นที่ลงโปรแกรมไว้หรือไม่?</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนตัวส่งสัญญาณรีโมทและทำซ้ำขั้นตอนที่ 2</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">บิดสวิตช์สตาร์ท OFF (LOCK) แล้วไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">3</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ดำเนินการตรวจสอบฟังก์ชั่นระบบยับยั้งการทำงานของเครื่องยนต์</div>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;นำตัวส่งสัญญาณรีโมทเข้าภายในรถครั้งละหนึ่งตัวเพื่อสตาร์ทเครื่องยนต์</div>
+</div>
+</dd>
+</dl>
+<div class="list">1.&nbsp;&nbsp;เหยียบแป้นคลัตช์ (MTX)/เบรก (ATX)</div>
+<div class="list">2.&nbsp;&nbsp;หลังจากกดตัวส่งสัญญาณรีโมท 2 เข้าที่ปุ่มกดสตาร์ท ให้กดปุ่มกดสตาร์ทเื่พื่อสตาร์ทเครื่องยนต์ (ดูที่ <font class="intxref-label"><a href="#id09140051470004">ขั้นตอนสำหรับการสื่อสารระหว่างขดลวดเสาอากาศกับตัวส่งสัญญาณรีโมท</a></font>)</div>
+<div class="list">3.&nbsp;&nbsp;มีตัวส่งสัญญาณรีโมทอื่นที่ลงโปรแกรมไว้หรือไม่?</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนกุญแจและทำซ้ำขั้นตอนที่ 3</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">4</div>
+</td>
+<td id="" align="left">
+<div class="entry-title">ตรวจสอบว่าได้ลงโปรแกรมตัวส่งสัญญาณรีโมทแล้ว</div>
+<div class="tbody">วางเฉพาะตัวส่งสัญญาณรีโมทที่ลงโปรแกรมแล้วบนเบาะนั่งผู้โดยสาร และตรวจสอบว่าสามารถสตาร์ทเครื่องยนต์ได้ด้วยกุญแจที่ลงโปรแกรมแล้ว</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">5</div>
+</td>
+<td id="" align="left">
+<div class="entry-title">M-MDS ดำเนินการเสร็จสมบูรณ์</div>
+<div class="list">1.&nbsp;&nbsp;รอประมาณ 5 วินาทีหรือมากกว่านั้นหลังจากที่ M-MDS ดำเนินการเสร็จสมบูรณ์ และบิดสวิตช์สตาร์ทไปที่ OFF (LOCK)</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">ขั้นตอนเสร็จสมบูรณ์</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</p><br clear="all"><a name="id09140051470007"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ขั้นตอนการลงโปรแกรม No.2 หลังการเปลี่ยน PCM</p>
+<dl>
+<dd>
+<div class="attention2-label">ข้อควรระวัง</div>
+</dd>
+<dd>
+<div class="attention2">
+<div class="list">•&nbsp;&nbsp;ไม่สามารถสตาร์ทเครื่องยนต์ได้ หากมีการข้ามขั้นตอนใดๆ ปฏิบัติตามขั้นตอนทั้งหมดตามลำดับขั้นตอน</div>
+</div>
+</dd>
+</dl>
+<div class="list-title"> สภาวะรถ</div>
+<div class="list">•&nbsp;&nbsp;มีตัวส่งสัญญาณรีโมทที่สามารถสตาร์ทเครื่องยนต์ได้</div><br clear="all"><p><a name="id09140051470008"></a><p class="topic-title"><span class="topic-head"></span>ขั้นตอน</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzw00002386.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzw00002386</div>
+</td>
+</tr>
+</table>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">การปฏิบัติหลังขั้นตอนต่างๆ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="left">
+<div class="entry-title">เปลี่ยน PCM</div>
+<div class="tbody">ดูที่การถอด / การติดตั้ง PCM เพื่อดำเนินการเปลี่ยน PCM</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140g2802400.html">การถอด / การติดตั้ง PCM [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140z7802400.html">การถอด / การติดตั้ง PCM [SKYACTIV-D 2.2]</a></font>)</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="left">
+<div class="entry-title">ดำเนินการรีเซ็ทพารามิเตอร์</div>
+<div class="list">1.&nbsp;&nbsp;ต่อ M-MDS เข้ากับ DLC-2<div>(ดูที่ <font class="intxref-label"><a href="#id09140051470003">ขั้นตอนการเชื่อมต่อ M-MDS)</a></font></div>
+</div>
+<div class="list">2.&nbsp;&nbsp;บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงาน)<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;แม้ว่าไฟแสดงสถานะระบบรักษาความปลอดภัยติดสว่างประมาณ 3 วินาที แล้วดับลงหรือกะพริบ ให้ดำเนินการตามขั้นตอนที่แสดงอยู่ต่อไป</div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="list">3.&nbsp;&nbsp;หลังการระบุรถ ให้เลือกตัวเลือกต่อไปนี้จากหน้าจอเริ่มต้นของ M-MDS</div>
+<dl>
+<dd class="list">
+<div class="list">1.&nbsp;&nbsp;&ldquo;Body&rdquo;</div>
+<div class="list">2.&nbsp;&nbsp;&ldquo;Security&rdquo;</div>
+<div class="list">3.&nbsp;&nbsp;&ldquo;PATS (immobilizer) function&rdquo;</div>
+</dd>
+</dl>
+<div class="list">4.&nbsp;&nbsp;จากนั้น เลือกรายการต่อไปนี้จากเมนูหน้าจอ</div>
+<dl>
+<dd class="list">
+<div class="list">•&nbsp;&nbsp;&ldquo;Parameter reset&rdquo;</div>
+</dd>
+</dl>
+<div class="list">5.&nbsp;&nbsp;ป้อนชุดเปิด/ปิดการทำงานและรหัส PCM และยกเลิกการเข้าถึงระบบรักษาความปลอดภัยตามคำแนะนำบนหน้าจอ M-MDS<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;&quot;Security access permitted&quot; ปรากฏบนหน้าจอ M-MDS</div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="list">6.&nbsp;&nbsp;ดำเนินการตามคำแนะนำบนหน้าจอ M-MDS<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;&quot;Parameter reset completed&quot; ปรากฏบนหน้าจอ M-MDS</div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="list">7.&nbsp;&nbsp;เลือก &quot;No&quot; ตามคำแนะนำบน M-MDS<dl>
+<dd>
+<div class="attention2-label">ข้อควรระวัง</div>
+</dd>
+<dd>
+<div class="attention2">
+<div class="list">•&nbsp;&nbsp;เนื่องจากขั้นตอนเปลี่ยนเป็นขั้นตอนสำหรับการลบหมายเลข ID กุญแจ หากเลือก &quot;Yes&quot; บนหน้าจอ M-MDS ให้เลือก &quot;No&quot;</div>
+</div>
+</dd>
+</dl>
+</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">3</div>
+</td>
+<td id="" align="left">
+<div class="entry-title">M-MDS ดำเนินการเสร็จสมบูรณ์</div>
+<div class="list">1.&nbsp;&nbsp;รอประมาณ 5 วินาทีหรือมากกว่านั้นหลังจากที่ M-MDS ดำเนินการเสร็จสมบูรณ์ และบิดสวิตช์สตาร์ทไปที่ OFF (LOCK)</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">4</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ดำเนินการตรวจสอบฟังก์ชั่นระบบยับยั้งการทำงานของเครื่องยนต์</div>
+<div class="list">1.&nbsp;&nbsp;นำตัวส่งสัญญาณรีโมทไว้ในรถครั้งละหนึ่งตัว และบิดสวิตช์สตาร์ทไปที่ ON (เครื่องยนต์ไม่ืำทำงาน)</div>
+<div class="list">2.&nbsp;&nbsp;ตรวจสอบว่าไฟแสดงสถานะระบบรักษาึึความปลอดภัยติดสว่างและบิดสวิตช์สตาร์ทไปที่ OFF</div>
+<div class="list">3.&nbsp;&nbsp;มีตัวส่งสัญญาณรีโมทอื่นที่ลงโปรแกรมไว้หรือไม่?</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนกุญแจและทำซ้ำขั้นตอนที่ 4</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">5</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบว่าการรีเซ็ทพารามิเตอร์เสร็จสมบูรณ์</div>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;นำตัวส่งสัญญาณรีโมทเข้าภายในรถครั้งละหนึ่งตัวเพื่อสตาร์ทเครื่องยนต์</div>
+</div>
+</dd>
+</dl>
+<div class="list">1.&nbsp;&nbsp;วางเฉพาะตัวส่งสัญญาณรีโมทที่ลงโปรแกรมแล้วบนเบาะนั่งผู้โดยสารและตรวจสอบว่าสตาร์ทเครื่องยนต์ได้</div>
+<div class="list">2.&nbsp;&nbsp;สตาร์ทเครื่องยนต์ได้หรือไม่?</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ขั้นตอนเสร็จสมบูรณ์</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ดำเนินการตรวจสอบรหัสวิเคราะห์ปัญหาที่เกี่ยวข้องเพื่อซ่อมแซมส่วนที่ทำงานบกพร่อง</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</p><br clear="all"><a name="id09140051470009"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ขั้นตอนการลงโปรแกรมและการเปลี่ยนชุดเปิด/ปิดการทำงาน No.3 เนื่องจากมีการเปลี่ยนชุดเปิด/ปิดการทำงาน/PCM พร้อมกัน</p>
+<dl>
+<dd>
+<div class="attention2-label">ข้อควรระวัง</div>
+</dd>
+<dd>
+<div class="attention2">
+<div class="list">•&nbsp;&nbsp;ไม่สามารถสตาร์ทเครื่องยนต์ได้ หากมีการข้ามขั้นตอนใดๆ ปฏิบัติตามขั้นตอนทั้งหมดตามลำดับขั้นตอน</div>
+<div class="list">•&nbsp;&nbsp;เนื่องจากจำเป็นต้องลงโปรแกรมตัวส่งสัญญาณรีโมทอย่างน้อยสองตัวกับชิ้นส่วนที่เกี่ยวข้องกับระบบยับยั้งการทำงานของเครื่องยนต์เพื่อสตาร์ทเครื่องยนต์ ให้ดำเนินการลงโปรแกรมตัวส่งสัญญาณรีโมทหลังจากลบตัวส่งสัญญาณรีโมทแล้ว</div>
+</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;ก่อนเริ่มต้นขั้นตอน ให้ตรวจสอบว่าลูกค้าได้ให้ตัวส่งสัญญาณรีโมทของรถมาครบทั้งหมดแล้ว</div>
+<div class="list">•&nbsp;&nbsp;เครื่องยนต์ไม่สามารถสตาร์ทได้หากไม่มีการลงโปรแกรมตัวส่งสัญญาณรีโมทอย่างน้อยสองตัวหลังการเปลี่ยน</div>
+</div>
+</dd>
+</dl>
+<div class="list-title"> สภาวะรถ</div>
+<div class="list">•&nbsp;&nbsp;มีตัวส่งสัญญาณรีโมทอย่างน้อยสองตัวที่ลงโปรแกรมไว้แล้วหลังการเปลี่ยน</div><br clear="all"><p><a name="id09140051470010"></a><p class="topic-title"><span class="topic-head"></span>ขั้นตอน</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzw00002387.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzw00002387</div>
+</td>
+</tr>
+</table>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">การปฏิบัติหลังขั้นตอนต่างๆ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="left">
+<div class="entry-title">เปลี่ยนชุดเปิด/ปิดการทำงานและเปลี่ยนชุดเปิด/ปิดการทำงาน/PCM พร้อมกัน</div>
+<div class="tbody">ดูที่การถอด / การติดตั้งชุดเปิด/ปิดการำทงานเพื่อดำเนินการเปลี่ยนชุดเปิด/ปิดการทำงาน</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id091400110300.html">การถอด / การติดตั้งชุดเปิด/ปิดการทำงาน</a></font>)</div>
+<div class="tbody">ดูที่การถอด / การติดตั้ง PCM เพื่อดำเนินการเปลี่ยน PCM</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140g2802400.html">การถอด / การติดตั้ง PCM [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140z7802400.html">การถอด / การติดตั้ง PCM [SKYACTIV-D 2.2]</a></font>)</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="left">
+<div class="entry-title">ดำเนินการรีเซ็ทพารามิเตอร์</div>
+<div class="list">1.&nbsp;&nbsp;ต่อ M-MDS เข้ากับ DLC-2<div>(ดูที่ <font class="intxref-label"><a href="#id09140051470003">ขั้นตอนการเชื่อมต่อ M-MDS</a></font>)</div>
+</div>
+<div class="list">2.&nbsp;&nbsp;นำตัวส่งสัญญาณรีโมทออกจากรถ (เก็บให้ห่างจากรถ 1 m) และบิดสวิตช์สตาร์ทไปที่ ON (เครื่องยนต์ไม่ทำงาน) ตามคำแนะนำบนหน้าจอ M-MDS</div>
+<div class="list">3.&nbsp;&nbsp;เลือกตัวเลือกต่อไปนี้จากหน้าจอเริ่มต้นของ M-MDS</div>
+<dl>
+<dd class="list">
+<div class="list">1.&nbsp;&nbsp;&ldquo;Body&rdquo;</div>
+<div class="list">2.&nbsp;&nbsp;&ldquo;Forced ignition ON&rdquo;</div>
+</dd>
+</dl>
+<div class="list">4.&nbsp;&nbsp;กดปุ่มกดสตาร์ทและบิดสวิตช์สตาร์ทไปที่ ON (เครื่องยนต์ไม่ทำงาน) ตามคำแนะนำบน M-MDS</div>
+<div class="list">5.&nbsp;&nbsp;เลือกตัวเลือกต่อไปนี้จากหน้าจอเริ่มต้นของ M-MDS</div>
+<dl>
+<dd class="list">
+<div class="list">1.&nbsp;&nbsp;&ldquo;Body&rdquo;</div>
+<div class="list">2.&nbsp;&nbsp;&ldquo;Security&rdquo;</div>
+<div class="list">3.&nbsp;&nbsp;&ldquo;PATS (immobilizer) function&rdquo;</div>
+</dd>
+</dl>
+<div class="list">6.&nbsp;&nbsp;จากนั้น เลือกรายการต่อไปนี้จากเมนูหน้าจอ</div>
+<dl>
+<dd class="list">
+<div class="list">•&nbsp;&nbsp;&ldquo;Parameter reset&rdquo;</div>
+</dd>
+</dl>
+<div class="list">7.&nbsp;&nbsp;ป้อนชุดเปิด/ปิดการทำงานและรหัส PCM และยกเลิกการเข้าถึงระบบรักษาความปลอดภัยตามคำแนะนำบนหน้าจอ M-MDS<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;&quot;Security access permitted&quot; ปรากฏบนหน้าจอ M-MDS</div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="list">8.&nbsp;&nbsp;ดำเนินการตามคำแนะนำบนหน้าจอ M-MDS<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;&quot;Parameter reset completed&quot; ปรากฏบนหน้าจอ M-MDS</div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="list">9.&nbsp;&nbsp;เลือก &quot;ํYes&quot; ตามคำแนะนำบน M-MDS<dl>
+<dd>
+<div class="attention2-label">ข้อควรระวัง</div>
+</dd>
+<dd>
+<div class="attention2">
+<div class="list">•&nbsp;&nbsp;เนื่องจากขั้นตอนจะไม่เปลี่ยนเป็นขั้นตอนสำหรับการลบหมายเลข ID กุญแจ หากเลือก &quot;No&quot; บนหน้าจอ M-MDS ให้เลือก &quot;Yes&quot;</div>
+</div>
+</dd>
+</dl>
+</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">3</div>
+</td>
+<td id="" align="left">
+<div class="entry-title">ดำเนินการลบหมายเลข ID กุญแจ</div>
+<div class="list">1.&nbsp;&nbsp;ดำเนินการลบหมายเลข ID กุญแจและบิดสวิตช์สตาร์ทไปที่ OFF (LOCK) ตามคำแนะนำบนหน้าจอ M-MDS</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">4</div>
+</td>
+<td id="" align="left">
+<div class="entry-title">ดำเนินการลงโปรแกรมตัวส่งสัญญาณรีโมท 1</div>
+<div class="list">1.&nbsp;&nbsp;บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงาน)<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;แม้ว่าไฟแสดงสถานะระบบรักษาความปลอดภัยติดสว่างประมาณ 10 วินาที แล้วดับลงหรือกะพริบ ให้ดำเนินการตามขั้นตอนที่แสดงอยู่ต่อไป</div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="list">2.&nbsp;&nbsp;ในขณะที่ไฟแสดงสถานะปุ่มกดสตาร์ท (สีเขียว) กะพริบ ให้กดส่วนด้านบนของตัวส่งสัญญาณรีโมท 1 เข้าที่กึ่งกลางของปุ่มกดสตาร์ท (ดูที่ <font class="intxref-label"><a href="#id09140051470004">ขั้นตอนสำหรับการสื่อสารระหว่างขดลวดเสาอากาศกับตัวส่งสัญญาณรีโมท</a></font>)</div>
+<div class="list">3.&nbsp;&nbsp;ตรวจสอบว่าลงโปรแกรมตัวส่งสัญญาณรีโมท 1 เสร็จสมบูรณ์บนหน้าจอ M-MDS<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;เมื่อลงโปรแกรมเสร็จสมบูรณ์แล้ว ไฟแสดงสถานะระบบรักษาความปลอดภัยจะดับลงและรหัสวิเคราะห์ปัญหา 21 จะปรากฏขึ้นประมาณ 1 นาที</div>
+<div class="list">•&nbsp;&nbsp;เมื่อลงโปรแกรมไม่สำเร็จ ไฟแสดงสถานะระบบรักษาความปลอดภัยจะกะพริบและรหัสวิเคราะห์ปัญหา 13 จะปรากฏขึ้นประมาณ 1 นาที</div>
+</div>
+</dd>
+</dl>
+</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">บิดสวิตช์สตาร์ท OFF (LOCK) แล้วไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">5</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ดำเนินการลงโปรแกรมตัวส่งสัญญาณรีโมท 2</div>
+<div class="list">1.&nbsp;&nbsp;บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงาน)</div>
+<div class="list">2.&nbsp;&nbsp;ในขณะที่ไฟแสดงสถานะปุ่มกดสตาร์ท (สีเขียว) กะพริบ ให้กดส่วนด้านบนของตัวส่งสัญญาณรีโมท 2 เข้าที่กึ่งกลางของปุ่มกดสตาร์ท (ดูที่ <font class="intxref-label"><a href="#id09140051470004">ขั้นตอนสำหรับการสื่อสารระหว่างขดลวดเสาอากาศกับตัวส่งสัญญาณรีโมท</a></font>)</div>
+<div class="list">3.&nbsp;&nbsp;ตรวจสอบว่าลงโปรแกรมตัวส่งสัญญาณรีโมท 2 เสร็จสมบูรณ์บนหน้าจอ M-MDS<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;เมื่อลงโปรแกรมไม่สำเร็จ ไฟแสดงสถานะระบบรักษาความปลอดภัยจะกะพริบและรหัสวิเคราะห์ปัญหา 13 จะปรากฏขึ้นประมาณ 1 นาที</div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="list">4.&nbsp;&nbsp;มีตัวส่งสัญญาณรีโมทอื่นที่ลงโปรแกรมไว้หรือไม่?</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หากลงโปรแกรมตัวส่งสัญญาณรีโมทอื่นไว้ ให้ทำซ้ำขั้นตอนที่ 5</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">6</div>
+</td>
+<td id="" align="left">
+<div class="entry-title">M-MDS ดำเนินการเสร็จสมบูรณ์</div>
+<div class="list">1.&nbsp;&nbsp;รอประมาณ 5 วินาทีหรือมากกว่านั้นหลังจากที่ M-MDS ดำเนินการเสร็จสมบูรณ์ และบิดสวิตช์สตาร์ทไปที่ OFF (LOCK)</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">7</div>
+</td>
+<td id="" align="left">
+<div class="entry-title">ดำเนินการตรวจสอบฟังก์ชั่นระบบยับยั้งการทำงานของเครื่องยนต์ (ตัวส่งสัญญาณรีโมท 1)</div>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;นำตัวส่งสัญญาณรีโมทเข้าภายในรถครั้งละหนึ่งตัวเพื่อสตาร์ทเครื่องยนต์</div>
+</div>
+</dd>
+</dl>
+<div class="list">1.&nbsp;&nbsp;เหยียบแป้นคลัตช์ (MTX)/เบรก (ATX)</div>
+<div class="list">2.&nbsp;&nbsp;ในขณะที่ไฟแสดงสถานะปุ่มกดสตาร์ท (สีเขียว) กะพริบ ให้กดส่วนด้านบนของตัวส่งสัญญาณรีโมท 1 เข้าที่กึ่งกลางของปุ่มกดสตาร์ท (ดูที่ <font class="intxref-label"><a href="#id09140051470004">ขั้นตอนสำหรับการสื่อสารระหว่างขดลวดเสาอากาศกับตัวส่งสัญญาณรีโมท</a></font>)</div>
+<div class="list">3.&nbsp;&nbsp;หลังจากไฟแสดงสถานะปุ่มกดสตาร์ท (สีเขียว) เปลี่ยนจากกะพริบเป็นติดสว่าง ให้กดปุ่มกดสตาร์ทเพื่อสตาร์ทเครื่องยนต์</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">บิดสวิตช์สตาร์ท OFF (LOCK) แล้วไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">8</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ดำเนินการตรวจสอบฟังก์ชั่นระบบยับยั้งการทำงานของเครื่องยนต์ (ตัวส่งสัญญาณรีโมท 2)</div>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;นำตัวส่งสัญญาณรีโมทเข้าภายในรถครั้งละหนึ่งตัวเพื่อสตาร์ทเครื่องยนต์</div>
+</div>
+</dd>
+</dl>
+<div class="list">1.&nbsp;&nbsp;เหยียบแป้นคลัตช์ (MTX)/เบรก (ATX)</div>
+<div class="list">2.&nbsp;&nbsp;ในขณะที่ไฟแสดงสถานะปุ่มกดสตาร์ท (สีเขียว) กะพริบ ให้กดส่วนด้านบนของตัวส่งสัญญาณรีโมท 2 เข้าที่กึ่งกลางของปุ่มกดสตาร์ท (ดูที่ <font class="intxref-label"><a href="#id09140051470004">ขั้นตอนสำหรับการสื่อสารระหว่างขดลวดเสาอากาศกับตัวส่งสัญญาณรีโมท</a></font>)</div>
+<div class="list">3.&nbsp;&nbsp;หลังจากไฟแสดงสถานะปุ่มกดสตาร์ท (สีเขียว) เปลี่ยนจากกะพริบเป็นติดสว่าง ให้กดปุ่มกดสตาร์ทเพื่อสตาร์ทเครื่องยนต์</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หากมีการลงโปรแกรมตัวส่งสัญญาณรีโมทอื่นไว้ ให้ทำซ้ำขั้นตอนที่ 7</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">9</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบว่าได้ลงโปรแกรมตัวส่งสัญญาณรีโมทแล้ว</div>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;นำตัวส่งสัญญาณรีโมทเข้าภายในรถครั้งละหนึ่งตัวเพื่อสตาร์ทเครื่องยนต์</div>
+</div>
+</dd>
+</dl>
+<div class="list">1.&nbsp;&nbsp;วางเฉพาะตัวส่งสัญญาณรีโมทที่ลงโปรแกรมแล้วบนเบาะนั่งผู้โดยสารและตรวจสอบว่าสตาร์ทเครื่องยนต์ได้</div>
+<div class="list">2.&nbsp;&nbsp;สตาร์ทเครื่องยนต์ได้หรือไม่?</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ขั้นตอนเสร็จสมบูรณ์</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ดำเนินการตรวจสอบรหัสวิเคราะห์ปัญหาที่เกี่ยวข้องเพื่อซ่อมแซมส่วนที่ทำงานบกพร่อง</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</p><br clear="all"><a name="id09140051470011"></a><p class="servinfosub-title">ี่<span class="servinfosub-head"></span>การเปลี่ยนตัวส่งสัญญาณรีโมท No.4 หรือการลบตัวส่งสัญญาณรีโมท)</p>
+<dl>
+<dd>
+<div class="attention2-label">ข้อควรระวัง</div>
+</dd>
+<dd>
+<div class="attention2">
+<div class="list">•&nbsp;&nbsp;ไม่สามารถสตาร์ทเครื่องยนต์ได้ หากมีการข้ามขั้นตอนใดๆ ปฏิบัติตามขั้นตอนทั้งหมดตามลำดับขั้นตอน</div>
+<div class="list">•&nbsp;&nbsp;เนื่องจากจำเป็นต้องลงโปรแกรมตัวส่งสัญญาณรีโมทอย่างน้อยสองตัวกับชิ้นส่วนที่เกี่ยวข้องกับระบบยับยั้งการทำงานของเครื่องยนต์เพื่อสตาร์ทเครื่องยนต์ ให้ดำเนินการลงโปรแกรมตัวส่งสัญญาณรีโมทหลังจากลบตัวส่งสัญญาณรีโมทแล้ว</div>
+</div>
+</dd>
+</dl>
+<div class="list-title"> สภาวะรถ</div>
+<div class="list">•&nbsp;&nbsp;มีตัวส่งสัญญาณรีโมทอย่างน้อยสองตัวที่ลงโปรแกรมไว้</div><br clear="all"><p><a name="id09140051470012"></a><p class="topic-title"><span class="topic-head"></span>ขั้นตอน</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzw00002388.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzw00002388</div>
+</td>
+</tr>
+</table>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">การปฏิบัติหลังขั้นตอนต่างๆ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">1</div>
+</td>
+<td id="" align="left">
+<div class="entry-title">ดำเนินการลบหมายเลข ID กุญแจ</div>
+<div class="list">1.&nbsp;&nbsp;ต่อ M-MDS เข้ากับ DLC-2<div>(ดูที่ <font class="intxref-label"><a href="#id09140051470003">ขั้นตอนการเชื่อมต่อ M-MDS</a></font>)</div>
+</div>
+<div class="list">2.&nbsp;&nbsp;บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงาน)</div>
+<div class="list">3.&nbsp;&nbsp;หลังการระบุรถ ให้เลือกตัวเลือกต่อไปนี้จากหน้าจอเริ่มต้นของ M-MDS</div>
+<dl>
+<dd class="list">
+<div class="list">1.&nbsp;&nbsp;&ldquo;Body&rdquo;</div>
+<div class="list">2.&nbsp;&nbsp;&ldquo;Security&rdquo;</div>
+<div class="list">3.&nbsp;&nbsp;&ldquo;PATS (immobilizer) function&rdquo;</div>
+</dd>
+</dl>
+<div class="list">4.&nbsp;&nbsp;จากนั้น เลือกรายการต่อไปนี้จากเมนูหน้าจอ</div>
+<dl>
+<dd class="list">
+<div class="list">•&nbsp;&nbsp;&ldquo;Advanced key clearing&rdquo;</div>
+</dd>
+</dl>
+<div class="list">5.&nbsp;&nbsp;ป้อนรหัสชุดเปิด/ปิดการทำงานและยกเลิกการเข้าถึงระบบรักษาความปลอดภัยตามคำแนะนำบนหน้าจอ M-MDS<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;&quot;Security access permitted&quot; ปรากฏบนหน้าจอ M-MDS</div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="list">6.&nbsp;&nbsp;ดำเนินการลบตัวส่งสัญญาณรีโมทตามคำแนะนำบนหน้าจอ M-MDS<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;&quot;Advanced key clearing completed&quot; ปรากฏบนหน้าจอ M-MDS</div>
+</div>
+</dd>
+</dl>
+</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">บิดสวิตช์สตาร์ท OFF (LOCK) แล้วไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">2</div>
+</td>
+<td id="" align="left">
+<div class="entry-title">ดำเนินการลงโปรแกรมตัวส่งสัญญาณรีโมท 1</div>
+<div class="list">1.&nbsp;&nbsp;บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงาน)<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;แม้ว่าไฟแสดงสถานะระบบรักษาความปลอดภัยติดสว่างประมาณ 10 วินาที แล้วดับลงหรือกะพริบ ให้ดำเนินการตามขั้นตอนที่แสดงอยู่ต่อไป</div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="list">2.&nbsp;&nbsp;ในขณะที่ไฟแสดงสถานะปุ่มกดสตาร์ท (สีเขียว) กะพริบ ให้กดส่วนด้านบนของตัวส่งสัญญาณรีโมท 1 เข้าที่กึ่งกลางของปุ่มกดสตาร์ท (ดูที่ <font class="intxref-label"><a href="#id09140051470004">ขั้นตอนสำหรับการสื่อสารระหว่างขดลวดเสาอากาศกับตัวส่งสัญญาณรีโมท</a></font>)</div>
+<div class="list">3.&nbsp;&nbsp;ตรวจสอบว่าลงโปรแกรมตัวส่งสัญญาณรีโมท 1 เสร็จสมบูรณ์บนหน้าจอ M-MDS<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;เมื่อลงโปรแกรมเสร็จสมบูรณ์แล้ว ไฟแสดงสถานะระบบรักษาความปลอดภัยจะดับลงและรหัสวิเคราะห์ปัญหา 21 จะปรากฏขึ้นประมาณ 1 นาที</div>
+<div class="list">•&nbsp;&nbsp;เมื่อลงโปรแกรมไม่สำเร็จ ไฟแสดงสถานะระบบรักษาความปลอดภัยจะกะพริบและรหัสวิเคราะห์ปัญหา 13 จะปรากฏขึ้นประมาณ 1 นาที</div>
+</div>
+</dd>
+</dl>
+</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">บิดสวิตช์สตาร์ท OFF (LOCK) แล้วไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">3</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ดำเนินการลงโปรแกรมตัวส่งสัญญาณรีโมท 2</div>
+<div class="list">1.&nbsp;&nbsp;บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงาน)<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;แม้ว่าไฟแสดงสถานะระบบรักษาความปลอดภัยติดสว่างประมาณ 10 วินาที แล้วดับลงหรือกะพริบ ให้ดำเนินการตามขั้นตอนที่แสดงอยู่ต่อไป</div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="list">2.&nbsp;&nbsp;ในขณะที่ไฟแสดงสถานะปุ่มกดสตาร์ท (สีเขียว) กะพริบ ให้กดส่วนด้านบนของตัวส่งสัญญาณรีโมท 2 เข้าที่กึ่งกลางของปุ่มกดสตาร์ท (ดูที่ <font class="intxref-label"><a href="#id09140051470004">ขั้นตอนสำหรับการสื่อสารระหว่างขดลวดเสาอากาศกับตัวส่งสัญญาณรีโมท</a></font>)</div>
+<div class="list">3.&nbsp;&nbsp;ตรวจสอบว่าลงโปรแกรมตัวส่งสัญญาณรีโมท 2 เสร็จสมบูรณ์บนหน้าจอ M-MDS<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;เมื่อลงโปรแกรมไม่สำเร็จ ไฟแสดงสถานะระบบรักษาความปลอดภัยจะกะพริบและรหัสวิเคราะห์ปัญหา 13 จะปรากฏขึ้นประมาณ 1 นาที</div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="list">4.&nbsp;&nbsp;มีตัวส่งสัญญาณรีโมทอื่นที่ลงโปรแกรมไว้หรือไม่?</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนกุญแจและทำซ้ำขั้นตอนที่ 3</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">4</div>
+</td>
+<td id="" align="left">
+<div class="entry-title">M-MDS ดำเนินการเสร็จสมบูรณ์</div>
+<div class="list">1.&nbsp;&nbsp;รอประมาณ 5 วินาทีหรือมากกว่านั้นหลังจากที่ M-MDS ดำเนินการเสร็จสมบูรณ์ และบิดสวิตช์สตาร์ทไปที่ OFF (LOCK)</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">5</div>
+</td>
+<td id="" align="left">
+<div class="entry-title">ดำเนินการตรวจสอบฟังก์ชั่นระบบยับยั้งการทำงานของเครื่องยนต์ (ตัวส่งสัญญาณรีโมท 1)</div>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;นำตัวส่งสัญญาณรีโมทเข้าภายในรถครั้งละหนึ่งตัวเพื่อสตาร์ทเครื่องยนต์</div>
+</div>
+</dd>
+</dl>
+<div class="list">1.&nbsp;&nbsp;เหยียบแป้นคลัตช์ (MTX)/เบรก (ATX)</div>
+<div class="list">2.&nbsp;&nbsp;ในขณะที่ไฟแสดงสถานะปุ่มกดสตาร์ท (สีเขียว) กะพริบ ให้กดส่วนด้านบนของตัวส่งสัญญาณรีโมท 1 เข้าที่กึ่งกลางของปุ่มกดสตาร์ท (ดูที่ <font class="intxref-label"><a href="#id09140051470004">ขั้นตอนสำหรับการสื่อสารระหว่างขดลวดเสาอากาศกับตัวส่งสัญญาณรีโมท</a></font>)</div>
+<div class="list">3.&nbsp;&nbsp;หลังจากไฟแสดงสถานะปุ่มกดสตาร์ท (สีเขียว) เปลี่ยนจากกะพริบเป็นติดสว่าง ให้กดปุ่มกดสตาร์ทเพื่อสตาร์ทเครื่องยนต์</div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody">บิดสวิตช์สตาร์ท OFF (LOCK) แล้วไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">6</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ดำเนินการตรวจสอบฟังก์ชั่นระบบยับยั้งการทำงานของเครื่องยนต์ (ตัวส่งสัญญาณรีโมท 2)</div>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;นำตัวส่งสัญญาณรีโมทเข้าภายในรถครั้งละหนึ่งตัวเพื่อสตาร์ทเครื่องยนต์</div>
+</div>
+</dd>
+</dl>
+<div class="list">1.&nbsp;&nbsp;เหยียบแป้นคลัตช์ (MTX)/เบรก (ATX)</div>
+<div class="list">2.&nbsp;&nbsp;ในขณะที่ไฟแสดงสถานะปุ่มกดสตาร์ท (สีเขียว) กะพริบ ให้กดส่วนด้านบนของตัวส่งสัญญาณรีโมท 2 เข้าที่กึ่งกลางของปุ่มกดสตาร์ท (ดูที่ <font class="intxref-label"><a href="#id09140051470004">ขั้นตอนสำหรับการสื่อสารระหว่างขดลวดเสาอากาศกับตัวส่งสัญญาณรีโมท</a></font>)</div>
+<div class="list">3.&nbsp;&nbsp;หลังจากไฟแสดงสถานะปุ่มกดสตาร์ท (สีเขียว) เปลี่ยนจากกะพริบเป็นติดสว่าง ให้กดปุ่มกดสตาร์ทเพื่อสตาร์ทเครื่องยนต์</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">หากมีการลงโปรแกรมตัวส่งสัญญาณรีโมทอื่นไว้ ให้ทำซ้ำขั้นตอนที่ 5</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">7</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบว่าได้ลงโปรแกรมตัวส่งสัญญาณรีโมทแล้ว</div>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;นำตัวส่งสัญญาณรีโมทเข้าภายในรถครั้งละหนึ่งตัวเพื่อสตาร์ทเครื่องยนต์</div>
+</div>
+</dd>
+</dl>
+<div class="list">1.&nbsp;&nbsp;วางเฉพาะตัวส่งสัญญาณรีโมทที่ลงโปรแกรมแล้วบนเบาะนั่งผู้โดยสารและตรวจสอบว่าสตาร์ทเครื่องยนต์ได้</div>
+<div class="list">2.&nbsp;&nbsp;สตาร์ทเครื่องยนต์ได้หรือไม่?</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ขั้นตอนเสร็จสมบูรณ์</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ดำเนินการตรวจสอบรหัสวิเคราะห์ปัญหาที่เกี่ยวข้องเพื่อซ่อมแซมส่วนที่ทำงานบกพร่อง</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</p>
+</body>
+</html>

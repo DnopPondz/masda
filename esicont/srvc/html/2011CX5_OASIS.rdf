@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE rdf:RDF [
+  <!ENTITY core 'http://www.autorepaire.eu.com/2003/05/core#'>
+  <!ENTITY vid 'http://www.autorepair.eu.com/2003/05/vid#'>
+  <!ENTITY component 'http://www.autorepair.eu.com/2003/05/components#'>
+  <!ENTITY training 'http://www.autorepair.eu.com/2003/05/training#'>
+  <!ENTITY tool 'http://www.autorepair.eu.com/2003/05/toolInfo#'>
+  <!ENTITY access 'http://www.autorepaire.eu.com/2003/05/access#'>
+  <!ENTITY manufacturer 'http://www.autorepair.eu.com/2003/05/manufacturer#'>
+  <!ENTITY measure 'http://www.autorepair.eu.com/2003/05/measure#'>
+  <!ENTITY fordLex 'http://www.autorepair.eu.com/2003/05/fordLexicon#'>
+]>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:contact="http://www.w3.org/2000/10/swap/pim/contact#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:ubl="urn:oasis:names:tc:ubl:CommonAggregateTypes:1.0:0.70" xmlns:core="http://www.autorepair.eu.com/2003/05/core#" xmlns:access="http://www.autorepair.eu.com/2003/05/access#" xmlns:vid="http://www.autorepair.eu.com/2003/05/vid#" xmlns:component="http://www.autorepair.eu.com/2003/05/components#" xmlns:training="http://www.autorepair.eu.com/2003/05/training#" xmlns:tool="http://www.autorepair.eu.com/2003/05/toolInfo#" xmlns:diagnostic="http://www.autorepair.eu.com/2003/05/diagnostic#" xmlns:manufacturer="http://www.autorepair.eu.com/2003/05/manufacturer#" xmlns:measure="http://www.autorepair.eu.com/2003/05/measure#" xmlns:fordLex="http://www.autorepair.eu.com/2003/05/fordLexicon#">
+	<rdf:Description rdf:about="">
+		<dc:language></dc:language>
+		<dc:subject></dc:subject>
+		<dc:title></dc:title>
+		<dc:description></dc:description>
+		<core:Info rdf:resource="#CORINF1_CX5"/>
+		<vid:Vehicle rdf:resource="#VIDVEH1_CX5"/>
+		<access:Channel rdf:resource="#ACCCHA1_CX5"/>
+		<component:Component rdf:resource="#COMCOM1_CX5"/>
+		<training:CourseInfo rdf:resource="#TRACOU1_CX5"/>
+		<tool:ToolInfo rdf:resource="#TOOTOO1_CX5"/>
+		<diagnostic:DiagTest rdf:resource="#DIADIA1_CX5"/>
+	</rdf:Description>
+	<core:Info rdf:ID="CORINF1_CX5">
+		<core:infoType rdf:resource=""/>
+		<core:textFormat rdf:resource=""/>
+		<core:graphicFormat rdf:resource=""/>
+		<core:validFrom></core:validFrom>
+		<core:validTo></core:validTo>
+		<core:version></core:version>
+		<core:numberOfPages></core:numberOfPages>
+		<core:fileSize rdf:parseType="Resource">
+			<rdf:value></rdf:value>
+			<measure:unit rdf:resource=""/>
+		</core:fileSize>
+		<core:plugInType>
+			<core:PlugIn>
+				<dc:source></dc:source>
+				<dc:format></dc:format>
+			</core:PlugIn>
+		</core:plugInType>
+		<core:level></core:level>
+	</core:Info>
+	<vid:Vehicle rdf:ID="VIDVEH1_CX5">
+		<vid:vinStart>JM*KE************</vid:vinStart>
+		<vid:vinEnd></vid:vinEnd>
+		<vid:manufacturerID>JM</vid:manufacturerID>
+		<vid:modelType rdf:resource="#VIDMOD1_CX5"/>
+		<vid:Body rdf:resource="#VIDBOD1_CX5"/>
+		<vid:Engine rdf:resource="#VIDENG1_CX5"/>
+	</vid:Vehicle>
+	<vid:Model rdf:ID="VIDMOD1_CX5">
+		<vid:derivative></vid:derivative>
+		<vid:modelYearStart>2011</vid:modelYearStart>
+		<vid:modelYearEnd></vid:modelYearEnd>
+		<vid:landOfHomologation>EU</vid:landOfHomologation>
+		<vid:optionalEquipment></vid:optionalEquipment>
+		<vid:manufacturerType rdf:resource=""/>
+		<vid:vehicleMake rdf:resource=""/>
+	</vid:Model>
+	<vid:Body rdf:ID="VIDBOD1_CX5">
+		<vid:bodyStyle rdf:resource="5-door Wagon"/>
+		<vid:numberOfDoors>5</vid:numberOfDoors>
+		<vid:wheelBase rdf:parseType="Resource">
+			<rdf:value>2700</rdf:value>
+			<measure:unit rdf:resource=""/>
+		</vid:wheelBase>
+		<vid:axleRatio></vid:axleRatio>
+		<vid:grossVehicleWeight>1930, 2000, 2030, 2035, 2050, 2105, 2120</vid:grossVehicleWeight>
+	</vid:Body>
+	<vid:Engine rdf:ID="VIDENG1_CX5">
+		<vid:engineCapacity rdf:parseType="Resource">
+			<rdf:value>1997, 2188</rdf:value>
+			<measure:unit rdf:resource=""/>
+		</vid:engineCapacity>
+		<vid:engineCode>PE, SH</vid:engineCode>
+		<vid:engineType>Petrol, Disel</vid:engineType>
+		<vid:horsePower rdf:parseType="Resource">
+			<rdf:value>121kW, 118kW, 110kW, 129kW</rdf:value>
+			<measure:unit rdf:resource=""/>
+		</vid:horsePower>
+		<vid:cylinders>4</vid:cylinders>
+		<vid:valvesPerCylinder>4</vid:valvesPerCylinder>
+		<vid:camshaft rdf:resource="2"/>
+		<vid:fuelType rdf:resource="Petrol, Disel"/>
+		<vid:aspiration rdf:resource="Turbo, NA"/>
+		<vid:catalyst>Yes</vid:catalyst>
+		<vid:transmissionType rdf:resource="Auto, Manual"/>
+		<vid:driveType rdf:resource="FWD, AWD"/>
+		<vid:numberOfGears></vid:numberOfGears>
+	</vid:Engine>
+	<access:Channel rdf:ID="ACCCHA1_CX5">
+		<access:channelMedium rdf:resource="1"/>
+		<access:chargingModel rdf:resource=""/>
+	</access:Channel>
+	<component:Component rdf:ID="COMCOM1_CX5">
+		<component:majorFunctions>1</component:majorFunctions>
+		<component:auxiliaryFunctions></component:auxiliaryFunctions>
+		<component:manPartNumber></component:manPartNumber>
+		<component:manPartName></component:manPartName>
+		<component:isoPartName></component:isoPartName>
+		<component:componentInfoIncluded rdf:resource=""/>
+		<component:testInfoIncluded rdf:resource="0"/>
+	</component:Component>
+	<training:CourseInfo rdf:ID="TRACOU1_CX5">
+		<training:courseType rdf:resource="1"/>
+		<training:organiser></training:organiser>
+		<dc:subject></dc:subject>
+		<training:costingType rdf:resource="#TRACOS1_CX5"/>
+		<training:targetAudience></training:targetAudience>
+		<training:qualification></training:qualification>
+		<training:certification></training:certification>
+		<training:attendCertification></training:attendCertification>
+		<training:ClassroomCourse rdf:resource="#TRACLA1_CX5"/>
+		<training:OnlineCourse rdf:resource="#TRAONL1_CX5"/>
+	</training:CourseInfo>
+	<training:ClassroomCourse rdf:ID="TRACLA1_CX5">
+		<dc:date></dc:date>
+		<training:duration></training:duration>
+		<training:vacancies></training:vacancies>
+		<training:courseLocation rdf:resource="#TRACOU2_CX5" rdf:parseType="Resource"/>
+	</training:ClassroomCourse>
+	<training:OnlineCourse rdf:ID="TRAONL1_CX5">
+		<training:onlineMedia rdf:resource=""/>
+		<dc:source></dc:source>
+		<training:minimumSpeedInternetConnection></training:minimumSpeedInternetConnection>
+	</training:OnlineCourse>
+	<training:Cost rdf:ID="TRACOS1_CX5">
+		<ubl:CostInfo parseType="Resource">
+			<ubl:PriceAmount></ubl:PriceAmount>
+			<ubl:CurrencyID></ubl:CurrencyID>
+			<ubl:ID></ubl:ID>
+		</ubl:CostInfo>
+	</training:Cost>
+	<contact:ContactLocation rdf:ID="TRACOU2_CX5">
+		<contact:address rdf:resource="#CONADD1_CX5"/>
+		<contact:mailbox rdf:resource=""/>
+		<contact:fax rdf:resource=""/>
+		<contact:phone rdf:resource=""/>
+		<contact:homePage></contact:homePage>
+	</contact:ContactLocation>
+	<contact:Address rdf:ID="CONADD1_CX5">
+		<contact:country></contact:country>
+		<contact:city></contact:city>
+		<contact:postalCode></contact:postalCode>
+		<contact:street></contact:street>
+	</contact:Address>
+	<tool:ToolInfo rdf:ID="TOOTOO1_CX5">
+		<tool:toolType rdf:resource="1"/>
+		<tool:purpose></tool:purpose>
+		<tool:cost rdf:resource="#TOOCOS1_CX5"/>
+		<tool:orderInfo></tool:orderInfo>
+		<tool:delTimescale></tool:delTimescale>
+		<tool:instructions></tool:instructions>
+		<tool:manPartNumber></tool:manPartNumber>
+		<tool:manPartName></tool:manPartName>
+	</tool:ToolInfo>
+	<tool:Cost rdf:ID="TOOCOS1_CX5">
+		<ubl:CostInfo rdf:parseType="Resource">
+			<ubl:PriceAmount></ubl:PriceAmount>
+			<ubl:CurrencyID></ubl:CurrencyID>
+			<ubl:ID></ubl:ID>
+		</ubl:CostInfo>
+	</tool:Cost>
+	<diagnostic:DiagTest rdf:ID="DIADIA1_CX5">
+		<diagnostic:J2012Code>1</diagnostic:J2012Code>
+		<diagnostic:manufacturerCode></diagnostic:manufacturerCode>
+		<diagnostic:testDescription></diagnostic:testDescription>
+		<diagnostic:connectionDetails></diagnostic:connectionDetails>
+		<diagnostic:Symptom rdf:resource="#DIASYM1_CX5"/>
+		<diagnostic:JobInfo rdf:resource="#DIAJOB1_CX5"/>
+	</diagnostic:DiagTest>
+	<diagnostic:Symptom rdf:ID="DIASYM1_CX5">
+		<diagnostic:symDesc></diagnostic:symDesc>
+		<diagnostic:symName></diagnostic:symName>
+		<diagnostic:hintsTips></diagnostic:hintsTips>
+	</diagnostic:Symptom>
+	<diagnostic:JobInfo rdf:ID="DIAJOB1_CX5">
+		<diagnostic:jobDescription></diagnostic:jobDescription>
+		<diagnostic:jobTime></diagnostic:jobTime>
+	</diagnostic:JobInfo>
+</rdf:RDF>

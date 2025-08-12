@@ -1,0 +1,886 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>ฟังก์ชั่นการทำงานของระบบการวิเคราะห์ปัญหาบนรถ</title>
+</head>
+<body><a name="id030200108300"></a><p class="servinfo-title"><span class="servinfo-head"></span>ฟังก์ชั่นการทำงานของระบบการวิเคราะห์ปัญหาบนรถ</p>
+<hr>
+<p class="servinfo-title-id" align="right">id030200108300</p><br clear="all"><a name="id03020010830001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ฟังก์ชั่นการตรวจจับความบกพร่อง</p>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่นตรวจจับความบกพร่องจะตรวจจับความบกพร่องของระบบสัญญาณอินพุท/เอาท์พุทของโมดูลควบคุม (CM) การขับเคลื่อน 4 ล้อ (4WD) และแสดงขึ้นเมื่อสวิตช์สตาร์ทอยู่ที่ตำแหน่ง ON</div>
+<div class="list">•&nbsp;&nbsp;เมื่อบิดสวิตช์สตาร์ทไปที่ตำแหน่ง ON ระบบ 4WD CM จะเริ่มทำงาน และไฟเตือน 4WD จะติดสว่างเป็นเวลา 3 วินาทีขณะที่ฟังก์ชั่นตรวจเช็คการขาดวงจร ในขณะเดียวกันฟังก์ชั่นจะตรวจสอบสภาวะของแรงดันไฟฟ้าแหล่งจ่ายไฟและตรวจเช็คความบกพร่องภายใน (รุ่นที่ไม่มีจอ TFT LCD)</div>
+<div class="list">•&nbsp;&nbsp;จากนั้น เมื่อระบบทำงาน ฟังก์ชั่นจะตรวจเช็คสภาวะการทำงานของโซลินอยด์ 4WD และเซ็นเซอร์อุณหภูมิน้ำมันเฟืองท้ายเป็นช่วงๆ เพื่อตัดสินว่ามีความบกพร่องใดๆ หรือไม่</div>
+<div class="list">•&nbsp;&nbsp;ถ้าตรวจพบความบกพร่องใดๆ ในระหว่างการทดสอบการวิเคราะห์ปัญหาเหล่านี้ ไฟเตือนจะติดสว่างตามความบกพร่องเพื่อเตือนให้คนขับทราบ รหัสวิเคราะห์ปัญหาจะถูกส่งไปที่ DLC-2 ผ่านสาย CAN อีกด้วย อีกทั้ง ในเวลาเดียวกันผลการตรวจจับความบกพร่องจะถูกส่งไปที่หน่วยความจำและระบบ fail-safe จะทำงาน</div><br clear="all"><a name="id03020010830002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ฟังก์ชั่นหน่วยความจำ</p>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่นหน่วยความจำทำหน้าที่จัดเก็บรหัสวิเคราะห์ปัญหาของความบกพร่องที่เกิดในระบบสัญญาณอินพุท/เอาท์พุท เมื่อใช้ฟังก์ชั่นนี้ ระบบจะยังไม่ลบรหัสวิเคราะห์ปัญหาที่จัดเก็บไว้ในทันที หลังจากที่บิดสวิตช์สตาร์ทไปที่ OFF ถึงแม้ว่าระบบสัญญาณความบกพร่องจะกลับสู่สถานะปกติแล้วก็ตาม</div>
+<div class="list">•&nbsp;&nbsp;เนื่องจาก 4WD CM ได้ติดตั้งอยู่ในหน่วยความจำถาวร รหัสวิเคราะห์ปัญหาจะไม่ถูกลบออกแม้ว่าจะถอดแบตเตอรี่ก็ตาม ดังนั้น คุณจำเป็นต้องลบหน่วยความจำหลังจากดำเนินการซ่อมแซมเรียบร้อยแล้ว ดูที่คู่มือซ่อมสำหรับขั้นตอนการลบรหัสวิเคราะห์ปัญหา</div><br clear="all"><a name="id03020010830003"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>คำอธิบายรหัส 7 หลักของรหัสวิเคราะห์ปัญหา</p>
+<div class="list">•&nbsp;&nbsp;เมื่อระบบหรือส่วนประกอบที่เกี่ยวข้องทำงานผิดพลาด CM จะจัดเก็บรหัสวิเคราะห์ปัญหาของส่วนที่ทำงานบกพร่องไว้ในหน่วยความจำของ CM และสามารถเรียกดูข้อมูลที่จัดเก็บโดยใช้เครื่องมือสแกนได้เมื่อจำเป็น รหัสวิเคราะห์ปัญหาได้รับการกำหนดโดยใช้ตัวเลข 7 หลัก ซึ่งตัวเลขแต่ละหลักมีความหมายดังต่อไปนี้<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00002359.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00002359</div>
+</td>
+</tr>
+</table>
+</div><br clear="all"><a name="id03020010830004"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ตารางรหัสวิเคราะห์ปัญหา</p>
+<div class="list">•&nbsp;&nbsp;เมื่อฟังก์ชั่นการตรวจจับความบกพร่องตัดสินว่ามีความบกพร่อง ไฟเตือน 4WD จะติดสว่างขึ้นเพื่อเตือนให้คนขับทราบ ในขณะนั้น ฟังก์ชั่น fail-safe จะยับยั้งการควบคุมหรือใช้ฟังก์ชั่นควบคุมอื่นๆ เพื่อไม่ให้สูญเสียเสถียรภาพในการขับขี่</div>
+<p clear="all">
+<p>
+<div>x: มีอยู่</div>
+<div>&mdash;: ไม่มี</div>
+</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา</p>
+</th>
+<th id="" align="center">
+<p class="thead">ตำแหน่งความบกพร่อง</p>
+</th>
+<th id="" align="center">
+<p class="thead">สภาวะไฟเตือน 4WD</p>
+</th>
+<th id="" align="center">
+<p class="thead">Fail-safe</p>
+</th>
+<th id="" align="center">
+<p class="thead">รอบการขับ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ประเภทการทดสอบด้วยตนเอง<sup>*1</sup></p>
+</th>
+<th id="" align="center">
+<p class="thead">ฟังก์ชั่นหน่วยความจำ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">P164D:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การตั้งค่า 4WD CM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P182F:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">4WD CM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P1886:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">4WD CM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P1887:11</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรโซลินอยด์ 4WD</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P1887:12</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรโซลินอยด์ 4WD</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P1887:13</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรโซลินอยด์ 4WD</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P1887:14</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรโซลินอยด์ 4WD</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P187B:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรโซลินอยด์ 4WD</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P1888:11</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรเซ็นเซอร์อุณหภูมิน้ำมันเฟืองท้าย</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P1888:15</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรเซ็นเซอร์อุณหภูมิน้ำมันเฟืองท้าย</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P188A:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">4WD CM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0001:88</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารระบบ CAN ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0100:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ PCM ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0101:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารระบบ CAN ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0121:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารระบบ CAN ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0401:68</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความบกพร่องของสัญญาณจาก PCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0402:68</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความบกพร่องของสัญญาณจาก TCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0415:68</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความบกพร่องของสัญญาณจาก DSC HU/CM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2100:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การตั้งค่า 4WD CM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">X</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;:C: การทดสอบ CMDTC ด้วยตนเอง</div><br clear="all"><a name="id03020010830005"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ไบต์แสดงสถานะของรหัสวิเคราะห์ปัญหา</p>
+<div class="list">•&nbsp;&nbsp;ไบต์แสดงสถานะคือรหัสสองหลัก (สองหลักหลังเครื่องหมายขีด (-)) หลังรหัสวิเคราะห์ปัญหา<table class="figure-flame">
+<tr>
+<td width="10mm"></td>
+<td>
+<table class="figure-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00002360.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00002360</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="list">•&nbsp;&nbsp;ไบต์แสดงสถานะคือรหัสที่แสดงรหัสที่ค้างอยู่, สถานะความบกพร่องปัจจุบัน/ในอดีต หรือสถานะไฟเตือน</div>
+<div class="list">•&nbsp;&nbsp;ไบต์แสดงสถานะสามารถอ่านได้ด้วยการทดสอบ CMDTC ด้วยตนเองโดยใช้ระบบวิเคราะห์ปัญหาตามเกณฑ์ของ Mazda (M-MDS)</div>
+<div class="list">•&nbsp;&nbsp;สำหรับรายละเอียดเกี่ยวกับไบต์แสดงสถานะ ให้ดูที่คำอธิบายใน Mazda Modular Diagnostic System (M-MDS) เมื่ออ่านรหัสวิเคราะห์ปัญหา</div><br clear="all"><a name="id03020010830006"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ฟังก์ชั่น Fail-safe</p>
+<div class="list">•&nbsp;&nbsp;เมื่อฟังก์ชั่นการตรวจจับความบกพร่องตัดสินว่ามีความบกพร่อง ไฟเตือน 4WD จะติดสว่างขึ้นเพื่อเตือนให้คนขับทราบ ในขณะนั้น ฟังก์ชั่น fail-safe จะยับยั้งการควบคุมหรือใช้ฟังก์ชั่นควบคุมอื่นๆ เพื่อไม่ให้สูญเสียเสถียรภาพในการขับขี่</div>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา</p>
+</th>
+<th id="" align="center">
+<p class="thead">สถานะการควบคุมระบบ Fail-safe</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">P164D:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">4WD ทำงานโดยข้อมูลที่กำหนด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P182F:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สภาวะการป้องกัน 4WD (หยุดการควบคุม 4WD ชั่วคราว)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P1886:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P1887:11</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P1887:12</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P1887:13</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P1887:14</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P187B:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P1888:11</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P1888:15</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">P188A:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สภาวะการป้องกัน 4WD (หยุดการควบคุม 4WD ชั่วคราว)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0001:88</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0100:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">4WD ทำงานโดยข้อมูลที่กำหนด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0101:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณตำแหน่งเกียร์สูญหาย: 4WD ทำงานโดยข้อมูลที่กำหนด</div>
+<div class="tbody">ยกเว้นที่กล่าวไว้ด้านบน: ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0121:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0401:68</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ความบกพร่องของสัญญาณตำแหน่งเกียร์ (MTX)</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;4WD ทำงานโดยข้อมูลที่กำหนด</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ยกเว้นความบกพร่องของสัญญาณตำแหน่งเกียร์</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ปิดการควบคุม</div>
+</dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0402:68</div>
+</td>
+<td id="" align="left">
+<div class="tbody">4WD ทำงานโดยข้อมูลที่กำหนด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0415:68</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2100:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">4WD ทำงานโดยข้อมูลที่กำหนด</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p><br clear="all"><a name="id03020010830007"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ตารางข้อมูล Snapshot</p>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;รายการข้อมูล Snapshot ไม่ปรากฏขึ้นตามรหัสวิเคราะห์ปัญหาที่ตรวจพบ</div>
+</div>
+</dd>
+</dl>
+<p clear="all">
+<p>
+<div>&mdash;: ไม่มี</div>
+</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รายการข้อมูล Snapshot</p>
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">หน่วย</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายละเอียดข้อมูล</p>
+</th>
+<th id="" align="center">
+<p class="thead">วิธีการอ่าน/ใช้ข้อมูล</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายการตรวจสอบข้อมูลที่เกี่ยวข้อง</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">AAT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;F</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิภายนอก</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">IC_VPWR</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันแหล่งจ่ายไฟแผงหน้าปัด</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;4WD CM จะรับค่าแรงดันไฟฟ้าแหล่งจ่ายไฟของแผงหน้าปัดที่ส่งผ่านสัญญาณ CAN จากแผงหน้าปัดตลอดเวลา</div>
+<div class="list">•&nbsp;&nbsp;ถ้าตรวจพบรหัสวิเคราะห์ปัญหา 4WD CM จะบันทึกแรงดันไฟฟ้าแหล่งจ่ายไฟของแผงหน้าปัดเมื่อตรวจพบรหัสวิเคราะห์ปัญหา และแสดงใน M-MDS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">VPWR<sup>*1</sup></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">IG-ON_TIMER</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">hh:mm:ss<sup>*2</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระยะเวลาที่ผ่านไปตั้งแต่บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัดจะบันทึกข้อมูลช่วงเวลาที่ผ่านไปนับตั้งแต่บิดสวิตช์สตาร์ทไปที่ ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+</div>
+</dd>
+</dl>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;4WD CM จะรับระยะเวลาที่ผ่านไปตั้งแต่บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน) ที่ส่งผ่านสัญญาณ CAN จากแผงหน้าปัดตลอดเวลา</div>
+<div class="list">•&nbsp;&nbsp;ถ้าตรวจพบรหัสวิเคราะห์ปัญหา 4WD CM จะบันทึกระยะเวลาที่ผ่านไปตั้งแต่บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน) เมื่อตรวจพบรหัสวิเคราะห์ปัญหา และแสดงใน M-MDS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">PWR_MODE_KEY</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">Key Out/Key Recently Out (Position 0)/Accessory (Position 1)/Post Ignition (Position 2)/Ignition On (Position 2)/Running (Position 2)/Running - Starting</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Key Out: บิดสวิตช์สตาร์ท OFF</div>
+<div class="list">•&nbsp;&nbsp;Key Recently Out (Position 0): ช่วงเวลาที่ผ่านไป<span>ภายใน 3 วินาที</span>นับตั้งแต่บิดสวิตช์สตาร์ท OFF</div>
+<div class="list">•&nbsp;&nbsp;Accessory (Position 1): บิดสวิตช์สตาร์ทไปที่ ACC</div>
+<div class="list">•&nbsp;&nbsp;Post Ignition (Position 2): ช่วงเวลาที่ผ่านไป<span>ภายใน 3 วินาที</span>นับตั้งแต่บิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;Ignition On (Position 2): บิดสวิตช์สตาร์ทไปที่ ON (เครื่องยนต์ไม่ทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;Running (Position 2): บิดสวิตช์สตาร์ทไปที่ ON (เครื่องยนต์ทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;Running - Starting: สภาวะการสตาร์ท</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;4WD CM จะรับสถานะสวิตช์สตาร์ทผ่านสัญญาณ CAN จากแผงหน้าปัดตลอดเวลา</div>
+<div class="list">•&nbsp;&nbsp;ถ้าตรวจพบรหัสวิเคราะห์ปัญหา 4WD CM จะบันทึกสถานะสวิตช์สตาร์ทเมื่อตรวจพบรหัสวิเคราะห์ปัญหา และแสดงใน M-MDS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">TOTAL_DIST</div>
+</td>
+<td id="" align="center">
+<div class="tbody">km</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Miles</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระยะทางรวมสะสมจนกระทั่ง 4WD CM ตรวจพบรหัสวิเคราะห์ปัญหา (ค่ามาตรบันทึกระยะทางในแผงหน้าปัด)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระยะทางรวมตั้งแต่ 4WD CM ตรวจพบรหัสวิเคราะห์ปัญหาจนถึงปัจจุบันสามารถคำนวณได้โดยการปฏิบัติตามขั้นตอนดังต่อไปนี้</div>
+<div class="list">1.&nbsp;&nbsp;ตรวจสอบค่าจากมาตรบันทึกระยะทางในแผงหน้าปัด</div>
+<div class="list">2.&nbsp;&nbsp;ตรวจสอบรายการข้อมูล Snapshot TOTAL_DIST</div>
+<div class="list">3.&nbsp;&nbsp;ลบ 2 ออกจาก 1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">TOTAL_TIME</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">hh:mm:ss<sup>*2</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระยะเวลาที่ผ่านไปโดยรวมสะสมจนกระทั่ง 4WD CM ตรวจพบรหัสวิเคราะห์ปัญหา</div>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;เมื่อถอดฟิวส์ ROOM และบิดสวิตช์สตาร์ท OFF เวลาจะไม่ถูกนำไปรวมกับช่วงเวลาที่ผ่านไป</div>
+</div>
+</dd>
+</dl>
+</td>
+<td id="" align="left">
+<div class="tbody">ระยะเวลาที่ผ่านไปตั้งแต่ 4WD CM ตรวจพบรหัสวิเคราะห์ปัญหาจนถึงปัจจุบันสามารถคำนวณได้โดยการปฏิบัติตามขั้นตอนดังต่อไปนี้</div>
+<div class="list">1.&nbsp;&nbsp;ตรวจสอบรายการ PID TOTAL_TIME บนแผงหน้าปัด</div>
+<div class="list">2.&nbsp;&nbsp;ตรวจสอบรายการข้อมูล Snapshot TOTAL_TIME</div>
+<div class="list">3.&nbsp;&nbsp;ลบ 2 ออกจาก 1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">TOTAL_TIME<sup>*1</sup></div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;: PID แผงหน้าปัด (ดูที่ <font class="extxref-label"><a href="id092200021843.html">การวิเคราะห์ปัญหาบนรถ [แผงหน้าปัด]</a></font>)</div>
+<div class="deflist">*2&nbsp;&nbsp;:หน่วยวินาที (s) อาจแสดงอยู่หลังจุดทศนิยม</div><br clear="all"><a name="id03020010830008"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ฟังก์ชั่นการสื่อสารของเครื่องทดสอบภายนอก</p>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่นนี้จะทำให้สามารถเก็บบันทึกและลบรหัสวิเคราะห์ปัญหาได้เนื่องจากสายการสื่อสารระหว่าง 4WD CM กับเครื่องวิเคราะห์ปัญหาภายนอก</div>
+</body>
+</html>

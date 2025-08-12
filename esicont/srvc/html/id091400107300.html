@@ -1,0 +1,126 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>ระบบเปิดประตูท้าย</title>
+</head>
+<body><a name="id091400107300"></a><p class="servinfo-title"><span class="servinfo-head"></span>ระบบเปิดประตูท้าย</p>
+<hr>
+<p class="servinfo-title-id" align="right">id091400107300</p><br clear="all"><a name="id09140010730001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รายละเอียด</p>
+<div class="list">•&nbsp;&nbsp;ระบบเปิดประตูท้ายมีการนำมาใช้เพื่อให้สามารถเปิดประตูท้ายได้โดยการกดสวิตช์เปิดประตูท้ายเท่านั้น</div>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมตัวถังด้านหลัง (RBCM) จะสั่งงานโหมด Fail-Safe ของระบบเปิดประตูท้าย (ดูที่ <font class="extxref-label"><a href="id094000002600.html">โหมดควบคุมตัวถังด้านหลัง (RBCM)</a></font>)</div><br clear="all"><a name="id09140010730002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<div class="list">•&nbsp;&nbsp;เมื่อสวิตช์เปิดประตูท้ายถูกกด แอ็คชิวเอเตอร์ล็อคประตูท้ายจะทำงานเพื่อเปิดประตูท้าย</div>
+<div class="list">•&nbsp;&nbsp;ระบบเปิดประตูท้ายจะถูกควบคุมตามสัญญาณระบบ CAN ต่อไปนี้:</div>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">โมดูลการส่งสัญญาณระบบ CAN</p>
+</th>
+<th id="" align="center">
+<p class="thead">ชื่อสัญญาณ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">แผงหน้าปัด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">สัญญาณสถานะคันเบรกมือ (MTX)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ผ่านแผงหน้าปัดจาก TCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">สัญญาณคันเกียร์ (ATX)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ผ่านแผงหน้าปัดจาก PCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">สัญญาณความเร็วรถ</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p><br clear="all"><a name="id09140010730003"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ภาพโครงสร้าง</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00000858.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00000858</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id09140010730004"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ผังวงจรระบบ</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001205.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001205</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id09140010730005"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p><br clear="all"><p><a name="id09140010730006"></a><p class="topic-title"><span class="topic-head"></span>สภาวะการทำงาน</p>
+<div class="ptxt">เมื่อตรวจพบสภาวะต่อไปนี้ทั้งหมด ระบบเปิดประตูท้ายจะทำงาน</div>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;สวิตช์สตาร์ทอยู่ที่ ON (เครื่องยนต์ทำงานหรือไม่ทำงาน)</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;คันเกียร์อยู่ในตำแหน่ง P (ATX)</div>
+<div class="list">―&nbsp;&nbsp;คันเบรกมือถูกดึง (MTX)</div>
+<div class="list">―&nbsp;&nbsp;ความเร็วรถอยู่ที่ <span>3 km/h {2 mph} หรือน้อยกว่า</span></div>
+<div class="list">―&nbsp;&nbsp;ประตูด้านคนขับถูกปลดล็อค</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;สวิตช์สตาร์ทอยู่ที่ OFF (LOCK)</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;หยุดรถ (ไม่มีสัญญาณอินพุทความเร็วรถ)</div>
+<div class="list">―&nbsp;&nbsp;ประตูด้านคนขับถูกปลดล็อค</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09140010730007"></a><p class="topic-title"><span class="topic-head"></span>การเปิด</p>
+<p class="list">1.&nbsp;&nbsp;เมื่อสวิตช์เปิดประตูท้ายถูกกด จะเป็นการเปิดการทำงาน (1)</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;เมื่อตรวจพบสภาวะการทำงานของระบบเปิดประตูท้าย โมดูลควบคุมตัวถังด้านหลัง (RBCM) จะสลับทรานซิสเตอร์ไปที่ On เป็นเวลา<span>ประมาณ 0.7 วินาที</span> (2) และเปิดรีเลย์ปลดประตูท้าย</p>
+<p class="list">
+</p>
+<p class="list">3.&nbsp;&nbsp;เมื่อเปิดรีเลย์ปลดประตูท้าย แอ็คชิวเอเตอร์ล็อคประตูท้ายจะทำงาน (3)</p>
+<p class="list">
+</p>
+<p class="list">4.&nbsp;&nbsp;เมื่อแอ็คชิวเอเตอร์ล็อคประตูท้ายทำงาน คันล็อคจะถูกปลดและประตูท้ายจะยกขึ้นในเวลาเดียวกันจากแรงดันสปริงของยางขอบประตูท้าย และจุกยางกั้นประตู และเปิดขึ้น</p>
+<p class="list">
+</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001206.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001206</div>
+</td>
+</tr>
+</table>
+</p>
+</body>
+</html>

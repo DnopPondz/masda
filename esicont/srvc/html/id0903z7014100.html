@@ -1,0 +1,133 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>ไฟแสดงสถานะ RVM (สีเขียว) ไม่ติดสว่าง [ระบบตรวจจับรถด้านหลัง]</title>
+</head>
+<body><a name="id0903z7014100"></a><p class="servinfo-title"><span class="servinfo-head"></span>ไฟแสดงสถานะ RVM (สีเขียว) ไม่ติดสว่าง [ระบบตรวจจับรถด้านหลัง]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0903z7014100</p>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;หากมีปัญหาใดๆ เกี่ยวกับความบกพร่องของรถที่ลูกค้าระบุ ให้ดำเนินการวิเคราะห์ความบกพร่องใน<font class="extxref-label"><a href="id0903z7378400.html">คำนำ [ระบบตรวจจับรถด้านหลัง]</a></font> ตามขั้นตอนการค้นหาสาเหตุปัญหา</div>
+</div>
+</dd>
+</dl><br clear="all"><a name="id0903z701410001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>คำอธิบาย</p>
+<div class="list">•&nbsp;&nbsp;ไฟแสดงสถานะ RVM (สีเขียว) ไม่ติดสว่างแม้ว่าจะเปิดสวิตช์ RVM หลังจากบิดสวิตช์สตาร์ทไปที่ ON</div><br clear="all"><a name="id0903z701410002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ความบกพร่องที่เป็นไปได้</p>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุมตรวจจับรถด้านหลัง (ขวา) ไม่รู้ว่าสถานะสวิตช์ RVM เป็นเปิด/ปิด</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;สวิตช์ RVM บกพร่อง (สวิตช์ค้าง, ความบกพร่องภายใน)</div>
+<div class="list">―&nbsp;&nbsp;โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา) บกพร่อง</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัดไม่ส่องสว่างไฟแสดงสถานะ RVM (สีเขียว)</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ข้อบกพร่องภายในแผงหน้าปัด (วงจรการส่องสว่างของไฟแสดงสถานะ RVM (สีเขียว) ถูกปิดใช้งาน)</div>
+</dd>
+</dl><br clear="all"><a name="id0903z701410003"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ขั้นตอนการวิเคราะห์ปัญหา</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">การตรวจสอบ</p>
+</th>
+<th id="" align="center">
+<p class="thead">การปฏิบัติ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">1</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="list-title">ตัดสินว่าสาเหตุของความบกพร่องอยู่ที่สวิตช์ RVM หรือไฟแสดงสถานะ RVM (สีเขียว) ที่เกี่ยวข้อง</div>
+<div class="list">•&nbsp;&nbsp;แสดงรายการ PID MAIN_SW ของระบบตรวจจับรถด้านหลังโดยใช้ M-MDS<div>(ดูที่ <font class="extxref-label"><a href="id0902z2960600.html">การตรวจสอบ PID/DATA [ระบบตรวจจับรถด้านหลัง]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;เปิดและปิดสวิตช์ RVM</div>
+<div class="list">•&nbsp;&nbsp;ค่าการตรวจสอบ PID MAIN_SW เปิดและปิดตามการทำงานของสวิตช์ RVM หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอน 3</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">2</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="list-title">ตรวจสอบสวิตช์ RVM</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบสวิตช์ RVM<div>(ดูที่ <font class="extxref-label"><a href="id092200015200.html">การตรวจสอบสวิตช์ RVM</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;สวิตช์ RVM ทำงานเป็นปกติหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนสวิตช์ RVM</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200015100.html">การถอด / การติดตั้งสวิตช์ RVM</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">3</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="list-title">ตัดสินว่าสาเหตุของความบกพร่องอยู่ที่แผงหน้าปัด หรือโมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา)</div>
+<div class="list">•&nbsp;&nbsp;ทำให้ไฟแสดงสถานะและไฟเตือนทั้งหมดในแผงหน้าปัดติดสว่างโดยใช้ฟังก์ชันการจำลอง WL+IL ในแผงหน้าปัด M-MDS<div>(ดูที่ <font class="extxref-label"><a href="id0902e8960800.html">การตรวจสอบโหมดคำสั่งการทำงาน [แผงหน้าปัด]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ไฟแสดงสถานะ RVM (สีเขียว) ติดสว่างหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนโมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา)</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200014600.html">การถอด / การติดตั้งโมดูลควบคุมระบบตรวจจับรถด้านหลัง</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนแผงหน้าปัด</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id092200010300.html">การถอด / การติดตั้งแผงหน้าปัด</a></font>)</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</body>
+</html>

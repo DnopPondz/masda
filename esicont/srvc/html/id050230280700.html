@@ -1,0 +1,196 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>ฟังก์ชั่นการจำลองสภาพปัญหาของระบบการวิเคราะห์ปัญหาบนรถ [GW6A-EL, GW6AX-EL]</title>
+</head>
+<body><a name="id050230280700"></a><p class="servinfo-title"><span class="servinfo-head"></span>ฟังก์ชั่นการจำลองสภาพปัญหาของระบบการวิเคราะห์ปัญหาบนรถ [GW6A-EL, GW6AX-EL]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id050230280700</p><br clear="all"><a name="id05023028070001"></a><p class="servinfosub-title"><span class="servinfosub-head"> </span>จุดประสงค์, การทำงาน</p>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่นการจำลองสภาพปัญหาสามารถควบคุมชิ้นส่วนระบบส่งกำลังได้ตามการใช้งานของ M-MDS</div>
+<div class="list">•&nbsp;&nbsp;การตรวจสอบแต่ละชิ้นส่วนระบบส่งกำลังสามารถทำได้โดยฟังก์ชั่นการจำลองสภาพปัญหาเนื่องจากการบังคับให้ชิ้นส่วนระบบส่งกำลังทำงาน</div><br clear="all"><a name="id05023028070002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>โครงสร้าง, การทำงาน</p>
+<p clear="all">
+<p class="table-title">ตารางรายการการจำลองสภาพปัญหา</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รายการ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ชื่อส่วนสัญญาณอินพุท</p>
+</th>
+<th id="" align="center">
+<p class="thead">หน่วย / สภาวะ</p>
+</th>
+<th id="" align="center">
+<p class="thead">สภาวะการทำงาน</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">EOP</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สภาวะปั๊มน้ำมันเกียร์ AT ไฟฟ้า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;หยุดรถ</div>
+<div class="list">•&nbsp;&nbsp;แป้นคันเร่งปิดสุด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">EOP_DUTY</div>
+</td>
+<td id="" align="left">
+<div class="tbody">Duty cycle ของปั๊มน้ำมันเกียร์ AT ไฟฟ้า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">%</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;หยุดรถ</div>
+<div class="list">•&nbsp;&nbsp;แป้นคันเร่งปิดสุด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">EOP_RLY</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สภาวะรีเลย์ปั๊มน้ำมันเกียร์ AT ไฟฟ้า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;หยุดรถ</div>
+<div class="list">•&nbsp;&nbsp;แป้นคันเร่งปิดสุด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">SS_ON-OFF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สภาวะโซลินอยด์ ON/OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;หยุดรถ</div>
+<div class="list">•&nbsp;&nbsp;เดินเบาที่ตำแหน่ง P หรือ N</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">SS1_C</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กระแสไฟฟ้าเป้าหมายของชิพโซลินอยด์ No.1</div>
+</td>
+<td id="" align="center">
+<div class="tbody">A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;หยุดรถ</div>
+<div class="list">•&nbsp;&nbsp;เดินเบาที่ตำแหน่ง P หรือ N</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">SS2_C</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กระแสไฟฟ้าเป้าหมายของชิพโซลินอยด์ No.2</div>
+</td>
+<td id="" align="center">
+<div class="tbody">A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;หยุดรถ</div>
+<div class="list">•&nbsp;&nbsp;เดินเบาที่ตำแหน่ง P หรือ N</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">SS3_C</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กระแสไฟฟ้าเป้าหมายของชิพโซลินอยด์ No.3</div>
+</td>
+<td id="" align="center">
+<div class="tbody">A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;หยุดรถ</div>
+<div class="list">•&nbsp;&nbsp;เดินเบาที่ตำแหน่ง P หรือ N</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">SS4_C</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กระแสไฟฟ้าเป้าหมายของชิพโซลินอยด์ No.4</div>
+</td>
+<td id="" align="center">
+<div class="tbody">A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;หยุดรถ</div>
+<div class="list">•&nbsp;&nbsp;เดินเบาที่ตำแหน่ง P หรือ N</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">SSLU_C</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กระแสไฟฟ้าเป้าหมายของโซลินอยด์ควบคุม TCC</div>
+</td>
+<td id="" align="center">
+<div class="tbody">A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายใต้สภาวะต่อไปนี้:</div>
+<div class="list">•&nbsp;&nbsp;อุณหภูมิ ATF (PID: TFT) อยู่ที่ 20 &deg;C {68 &deg;F} หรือสูงกว่า</div>
+<div class="list">•&nbsp;&nbsp;ความเร็วในการหมุนของเพลาส่งกำลัง (PID: OSS) อยู่ที่ 10 rpm หรือสูงกว่า</div>
+<div class="list">•&nbsp;&nbsp;ความเร็วในการหมุนของเพลาเทอร์ไบน์ (PID: TSS) อยู่ที่ 1,000 rpm หรือสูงกว่า</div>
+<div class="list">•&nbsp;&nbsp;ปล่อยแป้นเบรก</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">SSP_C</div>
+</td>
+<td id="" align="left">
+<div class="tbody">กระแสไฟฟ้าเป้าหมายของโซลินอยด์ควบคุมแรงดัน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">A</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เดินเบาที่ตำแหน่ง P หรือ N</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</body>
+</html>

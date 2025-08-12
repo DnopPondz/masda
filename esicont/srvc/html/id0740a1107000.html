@@ -1,0 +1,176 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>การควบคุมอากาศเข้า [ระบบปรับอากาศแบบอัตโนมัติ]</title>
+</head>
+<body><a name="id0740a1107000"></a><p class="servinfo-title"><span class="servinfo-head"></span>การควบคุมอากาศเข้า [ระบบปรับอากาศแบบอัตโนมัติ]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0740a1107000</p><br clear="all"><a name="id0740a110700001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>จุดประสงค์:</p>
+<div class="list">•&nbsp;&nbsp;การควบคุมอากาศเข้าจะสลับช่องอากาศเข้า (FRESH/REC) ตามสภาพแวดล้อมของรถ</div><br clear="all"><a name="id0740a110700002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<div class="list">•&nbsp;&nbsp;การควบคุมอากาศเข้าจะสั่งการแอ็คชิวเอเตอร์อากาศและสลับตำแหน่งตัวปรับปริมาณอากาศเข้าตามการทำงานของสวิตช์ REC, FRESH และระบบไล่ฝ้าและสภาพแวดล้อมของรถ</div>
+<div class="list">•&nbsp;&nbsp;การควบคุมอากาศเข้าแบ่งเป็นการควบคุมแบบอัตโนมัติและแบบธรรมดา</div>
+<div class="list">•&nbsp;&nbsp;การควบคุมอากาศเข้าจะดำเนินการปรับแก้ต่อไปนี้:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;การปรับแก้ระบบไล่ฝ้า</div>
+<div class="list">―&nbsp;&nbsp;การปรับแก้อุณหภูมิภายนอก</div>
+</dd>
+</dl><br clear="all"><p><a name="id0740a110700003"></a><p class="topic-title"><span class="topic-head"></span>การควบคุมอากาศเข้าแบบอัตโนมัติ</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ชุดควบคุมอุณหภูมิจะดำเนินการควบคุมตามนั้น เพื่อให้อุณหภูมิห้องโดยสารลดลงอย่างรวดเร็วตามสภาพการทำความเย็น</div>
+</dd>
+</dl>
+<p class="list">1.&nbsp;&nbsp;คำนวณค่าอุณหภูมิห้องโดยสารตามอุณหภูมิภายนอกและความเข้มของแสงอาทิตย์</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;เปรียบเทียบค่าอุณหภูมิห้องโดยสารที่คำนวณกับอุณหภูมิห้องโดยสารปัจจุบัน</p>
+<p class="list">
+</p>
+<p class="list">3.&nbsp;&nbsp;กำหนดโหมดอากาศเข้า</p>
+<p class="list">
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00000686.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00000686</div>
+</td>
+</tr>
+</table>
+</p>
+</p><br clear="all"><p><a name="id0740a110700004"></a><p class="topic-title"><span class="topic-head"></span>การควบคุมอากาศเข้าแบบธรรมดา</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ชุดควบคุมอุณหภูมิจะสลับโหมดอากาศเข้าตามการทำงานของสวิตช์ REC/FRESH</div>
+</dd>
+</dl>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">โหมดอากาศเข้า</p>
+</th>
+<th id="" align="center">
+<p class="thead">การทำงานของสวิตช์ REC</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">FRESH</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กำหนดไว้ที่ FRESH เมื่อสวิตช์ FRESH ถูกเปิดขณะอยู่ในโหมด REC</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">REC</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กำหนดไว้ที่ REC เมื่อสวิตช์ RECIRCULATE ถูกเปิดขณะอยู่ในโหมด FRESH</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</p><br clear="all"><p><a name="id0740a110700005"></a><p class="topic-title"><span class="topic-head"></span>การควบคุมโหมด REC ภายใต้ภาวะความร้อนสูง</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เมื่อรถขับเคลื่อนที่ความเร็วต่ำโดยที่ A/C อยู่ในสภาวะมีความร้อนสูง ชุดควบคุมอุณหภูมิอาจเปลี่ยนโหมดอากาศเข้าจาก FRESH เป็น REC โดยอัตโนมัติ</div>
+<div class="list">•&nbsp;&nbsp;เนื่องจากโหลดของคอมเพรสเซอร์ A/C ถูกลดลง</div>
+<div class="list">•&nbsp;&nbsp;เมื่อโหมดอากาศเข้าถูกเปลี่ยนเป็น REC ไฟแสดงสถานะบนสวิตช์ REC จะติดสว่าง</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id0740a110700006"></a><p class="topic-title"><span class="topic-head"></span>การปรับแก้</p>
+<dl>
+<dd>
+<div class="list-title">การปรับแก้ระบบไล่ฝ้า</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;การปรับแก้ระบบไล่ฝ้าจะปรับปรุงประสิทธิภาพของไล่ฝ้า</div>
+<div class="list">•&nbsp;&nbsp;อากาศเข้าถูกกำหนดไว้ที่ FRESH เมื่อเปิดสวิตช์ไล่ฝ้า</div>
+<div class="list">•&nbsp;&nbsp;อากาศเข้าถูกกำหนดไว้ที่ FRESH แม้เมื่อมีการกำหนดเป็น REC ด้วยตนเอง</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">การปรับแก้อุณหภูมิภายนอก</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เมื่ออุณหภูมิภายนอกอยู่ที่ <span>5 &deg;C {41 &deg;F}</span> หรือน้อยกว่า อากาศเข้าถูกกำหนดไว้ที่ FRESH เพื่อป้องกันการเกิดฝ้าที่กระจกรถ (สเปคออสเตรเลีย, ทั่วไป (R.H.D.))</div>
+<div class="list">•&nbsp;&nbsp;เมื่ออุณหภูมิภายนอกอยู่ที่ <span>15 &deg;C {59 &deg;F}</span> หรือน้อยกว่า อากาศเข้าถูกกำหนดไว้ที่ FRESH เพื่อป้องกันการเกิดฝ้าที่กระจกรถ (ยกเว้นสเปคออสเตรเลีย, ทั่วไป (R.H.D.))</div>
+</dd>
+</dl>
+</p><br clear="all"><a name="id0740a110700007"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>โครงสร้าง</p>
+<div class="list">•&nbsp;&nbsp;การควบคุมอากาศเข้าประกอบด้วยชิ้นส่วนต่างๆ ตามที่แสดงในตาราง:</div>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">อุปกรณ์สัญญาณอินพุท</p>
+</th>
+<th id="" align="center">
+<p class="thead">ชิ้นส่วนการควบคุม</p>
+</th>
+<th id="" align="center">
+<p class="thead">อุปกรณ์สัญญาณเอาท์พุท</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;สวิตช์หมุนเวียนอากาศ (ชุดควบคุมอุณหภูมิ)</div>
+<div class="list">•&nbsp;&nbsp;สวิตช์อากาศจากภายนอก (ชุดควบคุมอุณหภูมิ)</div>
+<div class="list">•&nbsp;&nbsp;สวิตช์ระบบไล่ฝ้า (ชุดควบคุมอุณหภูมิ)</div>
+<div class="list">•&nbsp;&nbsp;เซ็นเซอร์อุณหภูมิภายนอก</div>
+<div class="list">•&nbsp;&nbsp;เซ็นเซอร์อุณหภูมิห้องโดยสาร</div>
+<div class="list">•&nbsp;&nbsp;โซล่าเรดิเอชั่นเซ็นเซอร์</div>
+<div class="list">•&nbsp;&nbsp;เซ็นเซอร์แรงดันสารทำความเย็น</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ชุดควบคุมอุณหภูมิ</div>
+<div class="list">•&nbsp;&nbsp;PCM</div>
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัด</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์อากาศเข้า</div>
+<div class="list">•&nbsp;&nbsp;ตัวปรับปริมาณอากาศเข้า</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p><br clear="all"><a name="id0740a110700008"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<p class="list">1.&nbsp;&nbsp;การควบคุมอุณหภูมิจะกำหนดโหมดอากาศเข้าตามการทำงานของสวิตช์ REC, FRESH, ระบบไล่ฝ้าและสัญญาณจากเซ็นเซอร์แต่ละตัวซึ่งจะเปลี่ยนแปลงตามสภาพแวดล้อมของรถ</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;ชุดควบคุมอุณหภูมิจะสั่งการแอ็คชิวเอเตอร์อากาศเข้าตามผลการกำหนดของโหมดอากาศเข้าและการปรับแก้</p>
+<p class="list">
+</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00000687.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00000687</div>
+</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,2 @@
+&txtLabel=A/C COMPRESSOR CONTROL&
+&txtData=S0740_3&

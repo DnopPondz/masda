@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>การควบคุมเจนเนอร์เรเตอร์ [SKYACTIV-D 2.2]</title>
+</head>
+<body><a name="id0140z7208900"></a><p class="servinfo-title"><span class="servinfo-head"></span>การควบคุมเจนเนอร์เรเตอร์ [SKYACTIV-D 2.2]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0140z7208900</p><br clear="all"><a name="id0140z720890001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รายละเอียด</p>
+<div class="list">•&nbsp;&nbsp;เสถียรภาพขณะเดินเบาได้รับการปรับให้ดียิ่งขึ้นโดยการควบคุมแรงดันไฟฟ้าเจนเนอร์เรเตอร์ที่เหมาะสมที่สุดตามสภาวะการทำงานของเครื่องยนต์และุโหลดไฟฟ้า</div>
+<div class="list">•&nbsp;&nbsp;PCM จะตัดสินสภาวะการทำงานของเครื่องยนต์และโหลดไฟฟ้าตามสัญญาณอินพุทจากแต่ละส่วนควบคุมเพื่อควบคุมระยะเวลาการให้กำลังไฟฟ้าของฟีลคอล์ยเจนเนอร์เรเตอร์</div><br clear="all"><a name="id0140z720890002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>แผนผังแบบบล็อก</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00002136.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00002136</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id0140z720890003"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p><br clear="all"><p><a name="id0140z720890004"></a><p class="topic-title"><span class="topic-head"></span>วิธีการกำหนดกระแสไฟฟ้ากระตุ้นการทำงานเป้าหมาย</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;สภาวะแบตเตอรี่จะถูกตัดสินตามสัญญาณเซ็นเซอร์กระแสไฟฟ้า และกระแสไฟฟ้ากระตุ้นการทำงานเป้าหมายจะถูกคำนวณตามสภาวะแบตเตอรี่</div>
+<div class="list">•&nbsp;&nbsp;ถ้าเซ็นเซอร์กระแสไฟฟ้าบกพร่อง กระแสไฟฟ้ากระตุ้นการทำงานเป้าหมายจะคำนวณได้จากปริมาณสัญญาณเอาท์พุทเป้าหมายของเจนเนอร์เรเตอร์ (กำหนดโดยอุณหภูมิไอดี ความเร็วรอบเครื่องยนต์ และความเร็วรถ) และความเร็วในการหมุนของเจนเนอร์เรเตอร์จริง</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id0140z720890005"></a><p class="topic-title"><span class="topic-head"></span>วิธีการกำหนดระยะเวลาการกระตุ้นการทำงานของฟีลคอล์ย</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;กระแสไฟฟ้ากระตุ้นการทำงานของฟีลคอล์ยจะเพิ่มขึ้นและลดลงโดยส่งสัญญาณ Duty ไปที่เพาเวอร์ทรานซิสเตอร์ที่ติดตั้งอยู่ในเจนเนอร์เรเตอร์</div>
+<div class="list">•&nbsp;&nbsp;กระแสไฟฟ้าที่จ่ายให้กับฟีลคอล์ยจะเปลี่ยนแปลงตามการเปลี่ยนแปลงของระยะเวลากระตุ้นการทำงานของเพาเวอร์ทรานซิสเตอร์โดยการเปลี่ยน duty ratio สัญญาณ duty ตัวอย่างเช่น เมื่อแรงดันไฟฟ้าขั้วบวกแบตเตอรี่ลดลง duty ratio ของสัญญาณ duty ที่ส่งไปยังเพาเวอร์ทรานซิสเตอร์จะมากขึ้น จึงเป็นการเพิ่มกระแสไฟฟ้ากระตุ้นการทำงานของฟีลคอล์ย<table class="figure-flame">
+<tr>
+<td width="10mm"></td>
+<td>
+<table class="figure-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00002147.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00002147</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="list">•&nbsp;&nbsp;ในระหว่างการตัดน้ำมันเชื้อเพลิงขณะลดความเร็ว PCM จะเพิ่มแรงดันไฟฟ้าของเจนเนอร์เรเตอร์และเก็บกระแสไฟฟ้าไว้ในแบตเตอรี่ ณ เวลาที่นอกเหนือจากการลดความเร็ว PCM จะทำการจ่ายไฟฟ้าจากแบตเตอรี่เพื่อลดภาระเจนเนอร์เรเตอร์</div>
+<div class="list">•&nbsp;&nbsp;ทันทีหลังจากสตาร์ทเครื่องยนต์ ภาระเจนเนอร์เรเตอร์จะลดลงจากการชาร์จไฟไปที่ระดับที่จำเป็นเท่านั้นตามสภาวะแบตเตอรี่โดยไม่มีการชาร์จไฟแบตเตอรี่ไปที่ค่าสูงสุด</div>
+</dd>
+</dl>
+</p>
+</body>
+</html>

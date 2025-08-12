@@ -1,0 +1,177 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>ระบบควบคุมระดับไฟหน้าอัตโนมัติ</title>
+</head>
+<body><a name="id091800010900"></a><p class="servinfo-title"><span class="servinfo-head"></span>ระบบควบคุมระดับไฟหน้าอัตโนมัติ</p>
+<hr>
+<p class="servinfo-title-id" align="right">id091800010900</p><br clear="all"><a name="id09180001090001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รายละเอียด</p>
+<div class="list">•&nbsp;&nbsp;ปรับแกนลำแสงไฟหน้าอัตโนมัติโดยตอบสนองต่อการเปลี่ยนแปลงของสภาวะน้ำหนักรับและผู้โดยสารเพื่อป้องกันไม่ให้คนขับตาพร่าจากแสงจ้าของไฟหน้าของรถที่ใกล้เข้ามาและเพื่อรักษาระดับความสามารถในการมองเห็น</div>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุม AFS จะสั่งงานโหมด Fail-safe ของระบบควบคุมระดับไฟหน้าอัตโนมัติ (ดูที่ <font class="extxref-label"><a href="id091800012900.html">โมดูลควบคุม AFS (ระบบปรับลำแสงไฟหน้า)</a></font>)</div><br clear="all"><a name="id09180001090002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<div class="list">•&nbsp;&nbsp;ระบบควบคุมระดับไฟหน้าอัตโนมัติถูกควบคุมโดยโมดูลควบคุม AFS</div>
+<div class="list">•&nbsp;&nbsp;และโมดูลควบคุม AFS ยังจะควบคุม AFS ที่ทำการเปลี่ยนแนวแกนลำแสงไปยังทิศทางที่รถเคลื่อนที่ตามการทำงานของพวงมาลัยและความเร็วรถขณะเปิดใช้งานไฟหน้า (ดูที่ <font class="extxref-label"><a href="id091800012800.html">ระบบ AFS (ระบบปรับลำแสงไฟหน้า)</a></font>)</div><br clear="all"><p><a name="id09180001090003"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นปรับแนวแกนลำแสง</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;หากบิดสวิตช์สตาร์ท ON (เครื่องยนต์ทำงานหรือไม่ทำงาน) และมีการเปลี่ยนแปลงความสูงของรถเมื่อไฟหน้า (LO) ติดสว่าง โมดูลควบคุม AFS จะปรับแนวแกนลำแสงของไฟหน้าโดยอัตโนมัติ</div>
+<div class="list">•&nbsp;&nbsp;โมดูลควบคุม AFS จะควบคุมฟังก์ชั่นปรับแนวแกนลำแสงตามสัญญาณระบบ CAN ต่อไปนี้</div>
+</dd>
+</dl>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">โมดูลการส่งสัญญาณระบบ CAN</p>
+</th>
+<th id="" align="center">
+<p class="thead">ชื่อสัญญาณ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">PCM</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณความเร็วรถ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">แผงหน้าปัด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณสถานะสวิตช์สตาร์ท</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมตัวถังด้านหน้า (FBCM)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณสถานะการติดสว่างของไฟหน้า</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</p><br clear="all"><a name="id09180001090004"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ภาพโครงสร้าง</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00000842.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00000842</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id09180001090005"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ผังวงจรระบบ</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001557.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001557</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id09180001090006"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p><br clear="all"><p><a name="id09180001090007"></a><p class="topic-title"><span class="topic-head"></span>การปรับแนวแกนลำแสงเมื่อความสูงของรถมีการเปลี่ยนแปลงขณะหยุดรถ</p>
+<dl>
+<dd>
+<div class="list-title">สภาวะการทำงาน</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ทำงานเมื่อตรวจพบสภาวะต่อไปนี้ทั้งหมด:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ความเร็วรถอยู่ที่ 0 km/h {0 mph}</div>
+<div class="list">―&nbsp;&nbsp;สวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน)</div>
+<div class="list">―&nbsp;&nbsp;การติดสว่าง LO ของไฟหน้า (การรับสัญญาณการติดสว่าง LO ของไฟหน้า)</div>
+<div class="list">―&nbsp;&nbsp;ตรวจพบปริมาณการเปลี่ยนแปลงความสูงของรถ <sup>*</sup> ที่ค่ากำหนดหรือมากกว่า</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">การทำงาน</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">1.&nbsp;&nbsp;เมื่อบิดสวิตช์สตาร์ท ON (เครื่องยนต์ไม่ทำงานหรือทำงาน) เซ็นเซอร์ควบคุมระดับอัตโนมัติจะอินพุทสัญญาณความสูงของรถไปยังโมดูลควบคุม AFS</div>
+<div class="list">2.&nbsp;&nbsp;เมื่อเปิดใช้งานไฟหน้า (LO) โมดูลควบคุม AFS จะคำนวณปริมาณการเปลี่ยนแปลงความสูงของรถ <sup>*</sup> ตามสัญญาณความสูงของรถ</div>
+<div class="list">3.&nbsp;&nbsp;เมื่อปริมาณการเปลี่ยนแปลงความสูงของรถ <sup>*</sup> อยู่ที่ค่ากำหนด หรือมากกว่า โมดูลควบคุม AFS จะคำนวณแนวแกนลำแสงเป้าหมายตามปริมาณการเปลี่ยนแปลงความสูงของรถ <sup>*</sup> ที่คำนวณได้</div>
+<div class="list">4.&nbsp;&nbsp;โมดูลควบคุม AFS จะเอาท์พุทสัญญาณแนวแกนลำแสงเป้าหมายที่คำนวณได้ไปยังแอ็คชิวเอเตอร์ควบคุมระดับไฟหน้า</div>
+<div class="list">5.&nbsp;&nbsp;แอ็คชิวเอเตอร์ควบคุมระดับไฟหน้าจะขับมอเตอร์เมื่อมีการอินพุทสัญญาณแนวแกนลำแสงเป้าหมาย</div>
+</dd>
+</dl>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00000903.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00000903</div>
+</td>
+</tr>
+</table>
+</p><br clear="all"><p><a name="id09180001090008"></a><p class="topic-title"><span class="topic-head"></span>การปรับแนวแกนลำแสงเมื่อความสูงของรถมีการเปลี่ยนแปลงขณะขับรถ</p>
+<dl>
+<dd>
+<div class="list-title">สภาวะการทำงาน</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ทำงานเมื่อตรวจพบสภาวะต่อไปนี้ทั้งหมด:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;การติดสว่าง LO ของไฟหน้า (การรับสัญญาณการติดสว่าง LO ของไฟหน้า)</div>
+<div class="list">―&nbsp;&nbsp;ความเร็วรถอยู่ที่ 30 km/h {19 mph} หรือมากกว่า</div>
+<div class="list">―&nbsp;&nbsp;ตรวจพบการเปลี่ยนแปลงความเร็วรถในช่วง 3 km/h {2 mph} หรือน้อยกว่า เป็นเวลาต่อเนื่อง 25 s</div>
+<div class="list">―&nbsp;&nbsp;ตรวจพบปริมาณการเปลี่ยนแปลงความสูงของรถ <sup>*</sup> ที่ค่ากำหนดหรือมากกว่า</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">การทำงาน</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">1.&nbsp;&nbsp;ขณะที่รถเคลื่อนที่ เซ็นเซอร์ควบคุมระดับอัตโนมัติจะอินพุทสัญญาณความสูงของรถไปยังโมดูลควบคุม AFS</div>
+<div class="list">2.&nbsp;&nbsp;เมื่อเปิดใช้งานไฟหน้า (LO) โมดูลควบคุม AFS จะคำนวณปริมาณการเปลี่ยนแปลงความสูงของรถ <sup>*</sup> ตามสัญญาณความสูงของรถ</div>
+<div class="list">3.&nbsp;&nbsp;เมื่อความเร็วรถอยู่ที่ 30 km/h {19 mph} หรือมากกว่า การเปลี่ยนแปลงความเร็วของรถที่ตรวจพบอยู่ที่ 3 km/h {2 mph} หรือน้อยกว่า เป็นเวลาต่อเนื่อง 25 วินาที และปริมาณการเปลี่ยนแปลงความสูงของรถ <sup>*</sup> อยู่ที่ค่ากำหนด หรือมากกว่า โมดูลควบคุม AFS จะคำนวณแนวแกนลำแสงเป้าหมายตามปริมาณการเปลี่ยนแปลงความสูงของรถ <sup>*</sup> ที่คำนวณได้</div>
+<div class="list">4.&nbsp;&nbsp;โมดูลควบคุม AFS จะเอาท์พุทสัญญาณแนวแกนลำแสงเป้าหมายที่คำนวณได้ไปยังแอ็คชิวเอเตอร์ควบคุมระดับไฟหน้า</div>
+<div class="list">5.&nbsp;&nbsp;แอ็คชิวเอเตอร์ควบคุมระดับไฟหน้าจะขับมอเตอร์เมื่อมีการอินพุทสัญญาณแนวแกนลำแสงเป้าหมาย</div>
+</dd>
+</dl>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00000903.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00000903</div>
+</td>
+</tr>
+</table>
+</p>
+<div class="deflist">*&nbsp;&nbsp;:การเปลี่ยนแปลงปริมาณความสูงของรถเป็นค่าเฉลี่ยของสัญญาณความสูงของรถภายใน 1 วินาทีที่คำนวณได้ซึ่งโมดูลควบคุม AFS ตรวจพบทุกๆ 0.1 วินาที</div>
+</body>
+</html>

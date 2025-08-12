@@ -1,0 +1,2 @@
+&txtLabel=STEERING ANGLE SENSOR&
+&txtData=S0918_11&

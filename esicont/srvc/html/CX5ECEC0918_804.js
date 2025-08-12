@@ -1,0 +1,2 @@
+&txtLabel=ILLUMINATION LIGHT&
+&txtData=S0918_8&

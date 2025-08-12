@@ -1,0 +1,1283 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>การวิเคราะห์ปัญหาบนรถ</title>
+</head>
+<body><a name="id100200001500"></a><p class="servinfo-title"><span class="servinfo-head"></span>การวิเคราะห์ปัญหาบนรถ</p>
+<hr>
+<p class="servinfo-title-id" align="right">id100200001500</p><br clear="all"><a name="id10020000150001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>คุณสมบัติ</p>
+<div class="list">•&nbsp;&nbsp;โมดูลที่เกี่ยวข้องกับระบบ CAN มีฟังก์ชั่นการวิเคราะห์ปัญหาบนรถ ฟังก์ชั่นการวิเคราะห์ปัญหาบนรถประกอบด้วยฟังก์ชั่นต่อไปนี้: ฟังก์ชั่นการตรวจจับความบกพร่อง ซึ่งจะตรวจจับความบกพร่องในส่วนที่เกี่ยวข้องกับระบบ CAN ฟังก์ชั่นหน่วยความจำ ซึ่งจะเก็บบันทึกรหัสวิเคราะห์ปัญหา ฟังก์ชั่นการแสดงผล ซึ่งจะแสดงบริเวณและสถานะที่บกพร่องผ่านจอแสดงรหัสวิเคราะห์ปัญหา</div><br clear="all"><a name="id10020000150002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ฟังก์ชันการวิเคราะห์ปัญหาบนรถ</p><br clear="all"><p><a name="id10020000150003"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นการตรวจจับความบกพร่อง</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ตรวจพบความผิดพลาดในสัญญาณอินพุทและเอาท์พุท</div>
+<div class="list">•&nbsp;&nbsp;หากตรวจพบความบกพร่อง รหัสวิเคราะห์ปัญหาจะถูกส่งไปยัง DLC-2 ผ่านทางฟังก์ชันการแสดงความบกพร่อง ในขณะเดียวกัน ผลการตรวจจับความบกพร่องจะถูกส่งไปที่ฟังก์ชั่นหน่วยความจำ</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id10020000150004"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นหน่วยความจำ</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่นหน่วยความจำจะเก็บบันทึกความบกพร่องในระบบสัญญาณอินพุท / เอาท์พุท ข้อมูลความบกพร่องจะไม่ถูกลบออกหลังจากบิดสวิตช์สตาร์ท OFF (LOCK) แม้ว่าระบบสัญญาณความบกพร่องได้กลับสู่ปกติแล้วก็ตามด้วยฟังก์ชั่นนี้</div>
+<div class="list">•&nbsp;&nbsp;ข้อมูลความบกพร่องที่เก็บบันทึกไว้สามารถลบออกได้โดยการต่อ Mazda Modular Diagnostic System (M-MDS) เข้ากับ DLC-2 โดยปฏิบัติตามขั้นตอนในคู่มือซ่อมเพื่อลบรหัส</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id10020000150005"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นการแสดงผล</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่นนี้ใช้สำหรับแสดงความบกพร่องปัจจุบันหรือความบกพร่องที่ผ่านมาผ่าน DLC-2 เป็นรหัสวิเคราะห์ปัญหา</div>
+<div class="list">•&nbsp;&nbsp;การอ่านรหัสวิเคราะห์ปัญหาที่ปรากฏออกมาที่ DLC-2 ให้ใช้ Mazda Modular Diagnostic System (M-MDS)</div>
+</dd>
+</dl>
+<p clear="all">
+<p class="table-title">ตารางรหัสวิเคราะห์ปัญหา (HS-CAN)</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">โมดูลที่รหัสวิเคราะห์ปัญหาแสดงออกมา (หน้าจอ Mazda Modular Diagnostic System (M-MDS))</p>
+</th>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา</p>
+</th>
+<th id="" align="center">
+<p class="thead">ตำแหน่งความบกพร่อง</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left" rowspan="9">
+<div class="tbody">PCM<sup>*1</sup></div>
+<div class="tbody">(PCM)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">U0073:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารของอุปกรณ์ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0101:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ TCM ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0121:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ DSC HU/CM ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0131:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุม EPS ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0140:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุมตัวถังด้านหน้า (FBCM) ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0151:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุม SAS ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับแผงหน้าปัดผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0214:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับชุดเปิด/ปิดการทำงานผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0235:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับเซ็นเซอร์เลเซอร์ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="9">
+<div class="tbody">PCM<sup>*2</sup></div>
+<div class="tbody">(PCM)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">U0073:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารของอุปกรณ์ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0101:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ TCM ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0120:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับชุดเปิด/ปิดการทำงานผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0121:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ DSC HU/CM ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0131:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุม EPS ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0140:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุมตัวถังด้านหน้า (FBCM) ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0151:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุม SAS ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับแผงหน้าปัดผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0235:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับเซ็นเซอร์เลเซอร์ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="8">
+<div class="tbody">DSC HU/CM</div>
+<div class="tbody">(ABS)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">U0001:88</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารของอุปกรณ์ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0100:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ PCM ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0101:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ TCM ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0114:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุม 4WD ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0131:00</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;การสื่อสารกับโมดูลควบคุม EPS ผิดพลาด<sup>*8</sup></div>
+<div class="list">•&nbsp;&nbsp;การสื่อสารกับชุดเปิด/ปิดการทำงานผิดพลาด<sup>*9</sup></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0154:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุม SAS ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับแผงหน้าปัดผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0235:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับเซ็นเซอร์เลเซอร์ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="5">
+<div class="tbody">TCM<sup>*3</sup></div>
+<div class="tbody">(TCM)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">U0073:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารของอุปกรณ์ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0100:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ PCM ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0121:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ DSC HU/CM ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0141:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุมตัวถังด้านหน้า (FBCM) ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับแผงหน้าปัดผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="5">
+<div class="tbody">โมดูลควบคุม AFS<sup>*4</sup></div>
+<div class="tbody">(AFS)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">U0001:88</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารของอุปกรณ์ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0100:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ PCM ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0131:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุม EPS ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0140:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุมตัวถังด้านหน้า (FBCM) ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับแผงหน้าปัดผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="7">
+<div class="tbody">โมดูลควบคุมตัวถังด้านหน้า (FBCM)</div>
+<div class="tbody">(F_BCM)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">U0001:88</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารของอุปกรณ์ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0100:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ PCM ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0101:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ TCM ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0121:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ DSC HU/CM ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับแผงหน้าปัดผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0214:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับชุดเปิด/ปิดการทำงานผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0515:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุม SAS ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="4">
+<div class="tbody">โมดูลควบคุม 4WD<sup>*5</sup></div>
+<div class="tbody">(4&times;4)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">U0001:88</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารของอุปกรณ์ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0100:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ PCM ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0101:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ TCM ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0121:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ DSC HU/CM ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="5">
+<div class="tbody">เซ็นเซอร์เลเซอร์<sup>*6</sup></div>
+<div class="tbody">(SCBS)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">U0001:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารของอุปกรณ์ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0100:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ PCM ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0121:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ DSC HU/CM ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0131:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุม EPS ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับแผงหน้าปัดผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="7">
+<div class="tbody">กล้องตรวจจับด้านหน้า<sup>*7</sup></div>
+<div class="tbody">(FSC)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">U0001:88</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารของอุปกรณ์ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0100:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ PCM ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0121:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ DSC HU/CM ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0131:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุม EPS ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0140:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุมตัวถังด้านหน้า (FBCM) ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับแผงหน้าปัดผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0214:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับชุดเปิด/ปิดการทำงานผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="10">
+<div class="tbody">ชุดเปิด/ปิดการทำงาน</div>
+<div class="tbody">(SSU)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">U0001:88</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารของอุปกรณ์ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0100:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ PCM ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0101:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ TCM ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0121:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ DSC HU/CM ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0121:87</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ DSC HU/CM ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0131:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุม EPS ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0140:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุมตัวถังด้านหน้า (FBCM) ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0146:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับแผงหน้าปัดผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0151:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุม SAS ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับแผงหน้าปัดผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="4">
+<div class="tbody">โมดูลควบคุม EPS</div>
+<div class="tbody">(EPS)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">U0001:88</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารของอุปกรณ์ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0100:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ PCM ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0121:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ DSC HU/CM ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับแผงหน้าปัดผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="2">
+<div class="tbody">โมดูลควบคุม SAS</div>
+<div class="tbody">(RCM)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">U0001:88</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารของอุปกรณ์ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับแผงหน้าปัดผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="12">
+<div class="tbody">แผงหน้าปัด</div>
+<div class="tbody">(IC)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">U0001:88</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารของอุปกรณ์ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0100:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ PCM ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0101:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ TCM ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0114:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุม 4WD ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0121:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ DSC HU/CM ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0131:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุม EPS ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0140:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุมตัวถังด้านหน้า (FBCM) ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0151:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุม SAS ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0182:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุม AFS ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0214:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับชุดเปิด/ปิดการทำงานผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0235:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับเซ็นเซอร์เลเซอร์ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U023A:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับกล้องตรวจจับด้านหน้าผิดพลาด</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;:SKYACTIV-G 2.0, SKYACTIV-G 2.5</div>
+<div class="deflist">*2&nbsp;&nbsp;:SKYACTIV-D 2.2</div>
+<div class="deflist">*3&nbsp;&nbsp;:รุ่น ATX</div>
+<div class="deflist">*4&nbsp;&nbsp;:รุ่นที่มีระบบ AFS</div>
+<div class="deflist">*5&nbsp;&nbsp;:รุ่น 4WD</div>
+<div class="deflist">*6&nbsp;&nbsp;: รุ่นที่มีระบบสมาร์ทซิตี้เบรก</div>
+<div class="deflist">*7&nbsp;&nbsp;:รุ่นที่มีระบบควบคุมไฟสูง (HBC)</div>
+<div class="deflist">*8&nbsp;&nbsp;:รุ่นที่ไม่มีระบบสมาร์ทซิตี้เบรกหรือเซ็นเซอร์มุมพวงมาลัย</div>
+<div class="deflist">*9&nbsp;&nbsp;:รุ่นที่มีระบบสมาร์ทซิตี้เบรกหรือเซ็นเซอร์มุมพวงมาลัย</div>
+<p clear="all">
+<p class="table-title">ตารางรหัสวิเคราะห์ปัญหา (MS-CAN)</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">โมดูลที่รหัสวิเคราะห์ปัญหาแสดงออกมา (หน้าจอ M-MDS)</p>
+</th>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา</p>
+</th>
+<th id="" align="center">
+<p class="thead">ตำแหน่งความบกพร่อง</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left" rowspan="2">
+<div class="tbody">โมดูลควบคุมตัวถังด้านหลัง (RBCM)</div>
+<div class="tbody">(R_BCM)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">U0010:88</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารของอุปกรณ์ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับแผงหน้าปัดผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="6">
+<div class="tbody">โมดูลควบคุม BSM (ด้านซ้าย)<sup>*1</sup></div>
+<div class="tbody">(BSML)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">U0001:88</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารของอุปกรณ์ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0100:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ PCM ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0131:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุม EPS ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับแผงหน้าปัดผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0214:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับชุดเปิด/ปิดการทำงานผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0233:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุม BSM (ด้านขวา) ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="6">
+<div class="tbody">โมดูลควบคุม BSM<sup></sup> (ด้านขวา)<sup>*1</sup></div>
+<div class="tbody">(BSMR)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">U0001:88</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารของอุปกรณ์ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0100:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ PCM ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0131:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุม EPS ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับแผงหน้าปัดผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0214:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับชุดเปิด/ปิดการทำงานผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0232:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุม BSM (ด้านซ้าย) ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="5">
+<div class="tbody">โมดูลควบคุมการตรวจจับรถด้านหลัง (ด้านขวา)<sup>*2</sup></div>
+<div class="tbody">(RVM)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">U0001:88</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารของอุปกรณ์ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0100:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ PCM ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0121:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ DSC HU/CM ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับแผงหน้าปัดผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0214:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับชุดเปิด/ปิดการทำงานผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="2">
+<div class="tbody">ชุดควบคุมอุณหภูมิ<sup>*3</sup></div>
+<div class="tbody">(EATC)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">U0010:88</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารของอุปกรณ์ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับแผงหน้าปัดผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="3">
+<div class="tbody">ชุดเครื่องเสียง<sup>*4</sup></div>
+<div class="tbody">(ACU)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">U0010:88</div>
+<div class="tbody">(16:Er12)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารของอุปกรณ์ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0142:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุมตัวถังด้านหลัง (RBCM) ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับแผงหน้าปัดผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left" rowspan="4">
+<div class="tbody">แผงหน้าปัด</div>
+<div class="tbody">(IC)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">U0010:88</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารของอุปกรณ์ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0142:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุมตัวถังด้านหลัง (RBCM) ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0232:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา) ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0233:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับโมดูลควบคุม BSM (ด้านขวา) ผิดพลาด</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;:รุ่นที่มีระบบ BSM</div>
+<div class="deflist">*2&nbsp;&nbsp;:รุ่นที่มีระบบตรวจจับรถด้านหลัง</div>
+<div class="deflist">*3&nbsp;&nbsp;:รุ่นที่มีระบบปรับอากาศแบบอัตโนมัติ</div>
+<div class="deflist">*4&nbsp;&nbsp;:รุ่นที่มีชุดเครื่องเสียง</div>
+</p><br clear="all"><a name="id10020000150006"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ขั้นตอนการวิเคราะห์ปัญหา</p>
+<div class="list">•&nbsp;&nbsp;หลังจากนำรถเข้ามา ให้ตรวจสอบใบสั่งซ่อมและอาการปัญหา และถ้าระบบ CAN เป็นสาเหตุของความบกพร่อง ให้ทำการวิเคราะห์ปัญหาระบบ CAN เพื่อตัดสินว่าความบกพร่องอยู่ในระบบ CAN หรือไม่</div>
+<div class="list">•&nbsp;&nbsp;สำหรับการวิเคราะห์ปัญหาระบบ CAN ให้วัดแรงดันไฟฟ้าที่ขั้วเชื่อมต่อระบบ CAN ที่ DLC-2 สามารถตรวจสอบวงจรระบบ CAN หรือสามารถตัดสินอาการปัญหาได้ขึ้นอยู่กับค่าที่วัดได้</div>
+<div class="list">•&nbsp;&nbsp;ถ้าอาการปัญหาไม่ใช่การขาดวงจร ให้ตรวจสอบแรงดันไฟฟ้าหรือความต่อเนื่องที่วงจรระบบ CAN และตัดสินชิ้นส่วนที่บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;ถ้าอาการปัญหาเป็นการขาดวงจร ให้ตัดสินบริเวณที่มีการขาดวงจรโดยใช้รหัสวิเคราะห์ปัญหาของการสื่อสารผิดพลาดที่ปรากฏขึ้น และโมดูลซึ่งมีการสื่อสารล้มเหลว</div><br clear="all"><p><a name="id10020000150007"></a><p class="topic-title"><span class="topic-head"></span>ตัวอย่าง การตัดสินตำแหน่งการขาดวงจร</p>
+<p class="list">1.&nbsp;&nbsp;ตรวจสอบรหัสวิเคราะห์ปัญหาของโมดูลที่เกี่ยวข้องกับระบบ CAN และโมดูลที่ทำงานล้มเหลวโดยใช้ Mazda Modular Diagnostic System (M-MDS)</p>
+<p class="list">
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">โมดูลที่รหัสวิเคราะห์ปัญหาแสดงออกมา</p>
+</th>
+<th id="" align="center">
+<p class="thead">หน้าจอแสดงผล Mazda Modular Diagnostic System (M-MDS)</p>
+</th>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหาที่แสดงออกมา</p>
+</th>
+<th id="" align="center">
+<p class="thead">ตำแหน่งความบกพร่องของระบบ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">PCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">PCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">U0121:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ DSC HU/CM ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">TCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">TCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">U0121:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ DSC HU/CM ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมตัวถังด้านหน้า (FBCM)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">F_BCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">U0121:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ DSC HU/CM ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุม 4WD</div>
+</td>
+<td id="" align="center">
+<div class="tbody">4&times;4</div>
+</td>
+<td id="" align="center">
+<div class="tbody">U0121:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ DSC HU/CM ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">เซ็นเซอร์เลเซอร์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">SCBS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">U0121:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ DSC HU/CM ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">กล้องตรวจจับด้านหน้า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">FSC</div>
+</td>
+<td id="" align="center">
+<div class="tbody">U0121:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ DSC HU/CM ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงาน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">SSU</div>
+</td>
+<td id="" align="center">
+<div class="tbody">U0121:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ DSC HU/CM ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุม EPS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">EPS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">U0121:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ DSC HU/CM ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">แผงหน้าปัด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">IC</div>
+</td>
+<td id="" align="center">
+<div class="tbody">U0121:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ DSC HU/CM ผิดพลาด</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">โมดูล</p>
+</th>
+<th id="" align="center">
+<p class="thead">Fail</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">DSC HU/CM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00000922.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00000922</div>
+</td>
+</tr>
+</table>
+</p>
+<p class="list">2.&nbsp;&nbsp;แม้ว่าการสื่อสารระหว่าง PCM กับแผงหน้าปัดปกติก็ตาม แต่รหัสวิเคราะห์ปัญหาการสื่อสารผิดพลาดแสดงออกมาสำหรับสัญญาณระหว่าง DSC HU/CM กับ PCM / TCM / โมดูลควบคุมตัวถังด้านหน้า (FBCM) / โมดูลควบคุม 4WD / เซ็นเซอร์เลเซอร์ / กล้องตรวจจับด้านหน้า / ชุดเปิด/ปิดการทำงาน / โมดูลควบคุม EPS / แผงหน้าปัด นอกจากนี้ ชุดสายไฟระหว่าง DSC HU/CM กับขั้วต่อ C-32 ยังมีความบกพร่องเนื่องจาก &ldquo;Fail&rdquo; แสดงออกมาสำหรับ DSC HU/CM</p>
+<p class="list">
+</p>
+</p>
+</body>
+</html>

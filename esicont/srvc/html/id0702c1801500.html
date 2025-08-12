@@ -1,0 +1,111 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>การแสดงผลรหัสวิเคราะห์ปัญหา [ระบบปรับอากาศแบบอัตโนมัติ])</title>
+</head>
+<body><a name="id0702c1801500"></a><p class="servinfo-title"><span class="servinfo-head"></span>การแสดงผลรหัสวิเคราะห์ปัญหา [ระบบปรับอากาศแบบอัตโนมัติ])</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0702c1801500</p>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;หากกำลังไฟจากแบตเตอรี่ขัดข้อง ชุดควบคุมฮีทเตอร์จะเข้าสู่สถานะไม่ได้กำหนดค่า เนื่องจากหน่วยความจำของข้อมูลการกำหนดค่าถูกลบออกไป หากสวิตช์สตาร์ทอยู่ที่ ON (เครื่องยนต์ไม่ทำงาน) ในตอนนี้ จะตรวจพบรหัสวิเคราะห์ปัญหา U2300:55</div>
+<div class="list">•&nbsp;&nbsp;โดยทั่วไปแล้ว ระบบจะมีการกำหนดค่าใหม่ภายใน 6 วินาทีหลังจากสวิตช์สตาร์ทอยู่ที่ ON (เครื่องยนต์ไม่ทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;หลังจากทำการกำหนดค่า รหัสวิเคราะห์ปัญหา U2300:55 จะถูกลบหากสวิตช์สตาร์ทอยู่ที่ ON (เครื่องยนต์ไม่ทำงาน) หลังจากสวิตช์สตาร์ทอยู่ที่ OFF</div>
+</div>
+</dd>
+</dl><br clear="all"><a name="id0702c180150001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทดสอบ CMDTC ด้วยตนเอง</p>
+<p class="list">1.&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF</p>
+<p class="list"></p>
+<p class="list">2.&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ ON (เครื่องยนต์ไม่ทำงาน) และรอ <span>6 วินาทีหรือมากกว่า</span></p>
+<p class="list"></p>
+<p class="list">3.&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF</p>
+<p class="list"></p>
+<p class="list">4.&nbsp;&nbsp;ต่อ M-MDS เข้ากับ DLC-2</p>
+<p class="list"></p>
+<p class="list">5.&nbsp;&nbsp;ให้โซล่าเรดิเอชั่นเซ็นเซอร์สัมผัสกับแสงแดด</p>
+<p class="list">
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;หากแสงแดดไม่ส่องมายังโซล่าเรดิเอชั่นเซ็นเซอร์ ชุดควบคุมอุณหภูมิจะตัดสินความบกพร่องและแสดงรหัสวิเคราะห์ปัญหา &ldquo;B1A63:12, B1A63:13, B1A64:12, B1A64:13&rdquo;</div>
+</div>
+</dd>
+</dl>
+</p>
+<p class="list">6.&nbsp;&nbsp;หลังจากรถได้รับการระบุแล้ว ให้เลือกรายการต่อไปนี้จากหน้าจอการตั้งค่าเริ่มต้นของ M-MDS</p>
+<p class="list">
+<dl class="list">
+<dd>(1)&nbsp;&nbsp;เลือก &ldquo;Self Test&rdquo;</dd>
+<dd></dd>
+</dl>
+<dl class="list">
+<dd>(2)&nbsp;เลือก &ldquo;All CMDTCs&rdquo;</dd>
+<dd></dd>
+</dl>
+</p>
+<p class="list">7.&nbsp;&nbsp;ทำการตรวจสอบรหัสวิเคราะห์ปัญหาตามคำแนะนำบนหน้าจอ</p>
+<p class="list">
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;หากมีรหัสวิเคราะห์ปัญหาปรากฏขึ้น ให้ดำเนินการแก้ไขปัญหาตามการตรวจสอบรหัสวิเคราะห์ปัญหานั้นๆ</div>
+</dd>
+</dl>
+</p>
+<p class="list">8.&nbsp;&nbsp;หลังจากซ่อมเสร็จเรียบร้อยแล้ว ให้ลบรหัสวิเคราะห์ปัญหาทั้งหมดที่เก็บอยู่ในชุดควบคุมอุณหภูมิ (ดูที่ <font class="extxref-label"><a href="id0702c1801600.html">การลบรหัสวิเคราะห์ปัญหา [ระบบปรับอากาศแบบอัตโนมัติ]</a></font>)</p>
+<p class="list"></p><br clear="all"><a name="id0702c180150002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทดสอบ ODDTC ด้วยตนเอง</p>
+<p class="list">1.&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF</p>
+<p class="list"></p>
+<p class="list">2.&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ ON (เครื่องยนต์ไม่ทำงาน) และรอ <span>6 วินาทีหรือมากกว่า</span></p>
+<p class="list"></p>
+<p class="list">3.&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF</p>
+<p class="list"></p>
+<p class="list">4.&nbsp;&nbsp;ต่อ M-MDS เข้ากับ DLC-2</p>
+<p class="list"></p>
+<p class="list">5.&nbsp;&nbsp;ให้โซล่าเรดิเอชั่นเซ็นเซอร์สัมผัสกับแสงแดด</p>
+<p class="list">
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;หากแสงแดดไม่ส่องมายังโซล่าเรดิเอชั่นเซ็นเซอร์ ชุดควบคุมอุณหภูมิจะตัดสินความบกพร่องและแสดงรหัสวิเคราะห์ปัญหา &ldquo;B1A63:12, B1A63:13, B1A64:12, B1A64:13&rdquo;</div>
+</div>
+</dd>
+</dl>
+</p>
+<p class="list">6.&nbsp;&nbsp;หลังจากรถได้รับการระบุแล้ว ให้เลือกรายการต่อไปนี้จากหน้าจอการตั้งค่าเริ่มต้นของ M-MDS</p>
+<p class="list">
+<dl class="list">
+<dd>(1)&nbsp;&nbsp;เลือก &ldquo;Self Test&rdquo;</dd>
+<dd></dd>
+</dl>
+<dl class="list">
+<dd>(2)&nbsp;&nbsp;เลือก &ldquo;Modules</dd>
+<dd></dd>
+</dl>
+<dl class="list">
+<dd>(3)&nbsp;&nbsp;เลือก &ldquo;EATC&rdquo;</dd>
+<dd></dd>
+</dl>
+</p>
+<p class="list">7.&nbsp;&nbsp;ทำการตรวจสอบรหัสวิเคราะห์ปัญหาตามคำแนะนำบนหน้าจอ</p>
+<p class="list">
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;หากมีรหัสวิเคราะห์ปัญหาปรากฏขึ้น ให้ดำเนินการแก้ไขปัญหาตามการตรวจสอบรหัสวิเคราะห์ปัญหานั้นๆ</div>
+</dd>
+</dl>
+</p>
+<p class="list">8.&nbsp;&nbsp;หลังจากซ่อมเสร็จเรียบร้อยแล้ว ให้ลบรหัสวิเคราะห์ปัญหาทั้งหมดที่เก็บอยู่ในชุดควบคุมอุณหภูมิ (ดูที่ <font class="extxref-label"><a href="id0702c1801600.html">การลบรหัสวิเคราะห์ปัญหา [ระบบปรับอากาศแบบอัตโนมัติ]</a></font>)</p>
+<p class="list"></p>
+</body>
+</html>

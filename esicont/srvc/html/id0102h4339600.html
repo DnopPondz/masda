@@ -1,0 +1,227 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>รหัสวิเคราะห์ปัญหา U0074:00 [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</title>
+</head>
+<body><a name="id0102h4339600"></a><p class="servinfo-title"><span class="servinfo-head"></span>รหัสวิเคราะห์ปัญหา U0074:00 [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0102h4339600</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา U0074:00</p>
+</th>
+<th id="" align="left">
+<p class="thead">การสื่อสารระบบ CAN ผิดพลาด (ระบบ CAN ควบคุมเฉพาะพื้นที่ระหว่าง PCM กับ TCM)</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สภาวะการตรวจพบ</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ความบกพร่องในสายบัสการสื่อสารระบบ CAN</div>
+<div class="list-title">ข้อมูลสนับสนุนการวิเคราะห์ปัญหา</div>
+<div class="list">•&nbsp;&nbsp;กรณีนี้คือ การตรวจสอบต่อเนื่อง (อื่นๆ)</div>
+<div class="list">•&nbsp;&nbsp;ไฟเตือนตรวจเช็คเครื่องยนต์ไม่ติดสว่าง</div>
+<div class="list">•&nbsp;&nbsp;ไม่มีข้อมูลสภาพรถยนต์ (FREEZE FRAME DATA) (โหมด 2) / ข้อมูล Snapshot</div>
+<div class="list">•&nbsp;&nbsp;รหัสวิเคราะห์ปัญหาถูกเก็บไว้ในหน่วยความจำ PCM</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>ฟังก์ชั่น FAIL-SAFE</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ไม่ได้</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สาเหตุที่เป็นไปได้</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;สายการสื่อสารระบบ CAN บกพร่องระหว่าง PCM กับ TCM (ระบบ CAN ควบคุมเฉพาะพื้นที่ระหว่าง PCM กับ TCM)</div>
+<div class="list">•&nbsp;&nbsp;รหัสวิเคราะห์ปัญหา TCM ถูกเก็บบันทึก</div>
+<div class="list">•&nbsp;&nbsp;PCM บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;TCM บกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2"><img src="images/ac5wzw00000556.png"></td>
+</tr>
+</tbody>
+</table>
+</p><br clear="all"><a name="id0102h433960001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ขั้นตอนการตรวจสอบการปรากฏซ้ำได้</p>
+<div class="list">1.&nbsp;&nbsp;ลบรหัสวิเคราะห์ปัญหาออกจากหน่วยความจำ PCM โดยใช้ M-MDS (ดูที่ <font class="extxref-label"><a href="id0102h4801100.html">ขั้นตอนหลังจากงานซ่อม [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div class="list">2.&nbsp; สตาร์ทเครื่องยนต์</div><br clear="all"><a name="id0102h433960002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ขั้นตอนการวิเคราะห์ปัญหา</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">การตรวจสอบ</p>
+</th>
+<th id="" align="center">
+<p class="thead">การดำเนินการ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">1</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบว่ามีข้อมูลการบริการที่เกี่ยวข้อง</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบว่ามีข้อมูลการบริการที่เกี่ยวข้องหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;มีข้อมูลการบริการที่เกี่ยวข้องอื่นๆ หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ให้ทำการซ่อมหรือวิเคราะห์ปัญหาตามข้อมูลการบริการที่มี</div>
+<div class="list">•&nbsp;&nbsp;ถ้าแก้ไขปัญหาไม่ได้ ให้ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">2</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบรหัสวิเคราะห์ปัญหาและ/หรือรหัสที่ค้างอยู่ที่เกี่ยวข้อง</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF แล้วบิดไปที่ ON (เครื่องยนต์ไม่ทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;ให้ปฏิบัติตามขั้นตอนการเข้าถึงรหัสปัญหาที่ค้างอยู่และขั้นตอนการอ่านรหัสวิเคราะห์ปัญหา<div>(ดูที่ <font class="extxref-label"><a href="id0102h4801000.html">การทดสอบการวิเคราะห์ปัญหาบนรถ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีรหัสที่ค้างอยู่และ/หรือรหัสวิเคราะห์ปัญหาปรากฏขึ้นหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่การตรวจสอบรหัสที่ค้างอยู่หรือรหัสวิเคราะห์ปัญหานั้นๆ</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0102h4801500.html">ตารางรหัสวิเคราะห์ปัญหา [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">3</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบรหัสวิเคราะห์ปัญหา TCM</div>
+<div class="list">•&nbsp;&nbsp;ทำการตรวจสอบรหัสวิเคราะห์ปัญหา TCM โดยใช้ M-MDS<div>(ดูที่ <font class="extxref-label"><a href="id050227290100.html">การตรวจสอบรหัสวิเคราะห์ปัญหาของระบบการวิเคราะห์ปัญหาบนรถ [FW6A-EL, FW6AX-EL]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีรหัสวิเคราะห์ปัญหาปรากฏขึ้นหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">รหัสวิเคราะห์ปัญหา U0074:00 หรือ U0115:00 ปรากฏขึ้น:</div>
+<div class="list">•&nbsp;&nbsp;อาจเป็นสาเหตุมาจากสายการสื่อสารแบบ CAN</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ซ่อมหรือเปลี่ยนชุดสายไฟระหว่าง PCM กับ TCM แล้วไปที่ขั้นตอนถัดไป</div>
+</dd>
+</dl>
+<div class="tbody">รหัสวิเคราะห์ปัญหานอกเหนือจาก U0074:00 และ U0115:00 ปรากฏขึ้น:</div>
+<div class="list">•&nbsp;&nbsp;ไปที่การตรวจสอบรหัสวิเคราะห์ปัญหานั้นๆ<div>(ดูที่ <font class="extxref-label"><a href="id050227290200.html">ตารางรหัสวิเคราะห์ปัญหาของระบบการวิเคราะห์ปัญหาบนรถ [FW6A-EL, FW6AX-EL]</a></font>)</div>
+</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อาจเป็นสาเหตุมาจาก TCM</div>
+<div class="list">•&nbsp;&nbsp;เปลี่ยนเรือนวาล์วควบคุม แล้วไปที่ขั้นตอนถัดไป<div>(ดูที่ <font class="extxref-label"><a href="id0517h2118000.html">การถอด / การติดตั้งเรือนวาล์วควบคุม [FW6A-EL, FW6AX-EL]</a></font>)</div>
+</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">4</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบว่าการค้นหาสาเหตุปัญหาของรหัสวิเคราะห์ปัญหาเสร็จสมบูรณ์แล้ว</div>
+<div class="list">•&nbsp;&nbsp;ลบรหัสวิเคราะห์ปัญหาออกจากหน่วยความจำ PCM โดยใช้ M-MDS<div>(ดูที่ <font class="extxref-label"><a href="id0102h4801100.html">ขั้นตอนหลังจากงานซ่อม [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;นำขั้นตอนการตรวจสอบการปรากฏซ้ำได้ไปใช้<div>(ดูที่ <font class="intxref-label"><a href="#id0102h433960001">ขั้นตอนการตรวจสอบการปรากฏซ้ำได้</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ปฏิบัติตามขั้นตอนการอ่านรหัสวิเคราะห์ปัญหา<div>(ดูที่ <font class="extxref-label"><a href="id0102h4801000.html">การทดสอบการวิเคราะห์ปัญหาบนรถ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีรหัสวิเคราะห์ปัญหาเดียวกันปรากฏขึ้นหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยน PCM แล้วไปที่ขั้นตอนถัดไป</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0140g2802400.html">การถอด / การติดตั้ง PCM [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">5</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบขั้นตอนหลังจากงานซ่อม</div>
+<div class="list">•&nbsp;&nbsp;ปฏิบัติตาม &ldquo;ขั้นตอนหลังจากงานซ่อม&rdquo;<div>(ดูที่ <font class="extxref-label"><a href="id0102h4801100.html">ขั้นตอนหลังจากงานซ่อม [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีรหัสวิเคราะห์ปัญหาปรากฏขึ้นหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่การตรวจสอบรหัสวิเคราะห์ปัญหานั้นๆ</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0102h4801500.html">ตารางรหัสวิเคราะห์ปัญหา [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การค้นหาสาเหตุปัญหาของรหัสวิเคราะห์ปัญหาเสร็จสมบูรณ์</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</body>
+</html>

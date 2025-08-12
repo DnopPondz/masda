@@ -1,0 +1,190 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>การควบคุมเทอร์โบคู่ [SKYACTIV-D 2.2]</title>
+</head>
+<body><a name="id0140z7987800"></a><p class="servinfo-title"><span class="servinfo-head"></span>การควบคุมเทอร์โบคู่ [SKYACTIV-D 2.2]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0140z7987800</p><br clear="all"><a name="id0140z798780001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รายละเอียด</p>
+<div class="list">•&nbsp;&nbsp;โดยการสับเปลี่ยนการอัดอากาศระหว่างเทอร์โบชาร์จเจอร์แบบใหญ่กับเทอร์โบชาร์จเจอร์แบบเล็ก จึงทำให้สมรรถนะการขับขี่ภายใต้ช่วงสภาวะต่างๆ และประสิทธิภาพการปล่อยมลพิษดียิ่งขึ้น</div>
+<div class="list">•&nbsp;&nbsp;โซลินอยด์วาล์ว 3 ตัวต่อไปนี้จะถูกควบคุมตามสภาวะการทำงานของเครื่องยนต์เพื่อสับเปลี่ยนการอัดอากาศระหว่างเทอร์โบชาร์จเจอร์แบบใหญ่กับเทอร์โบชาร์จเจอร์แบบเล็ก</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;โซลินอยด์วาล์วบายพาสคอมเพรสเซอร์</div>
+<dl>
+<dd class="list">
+<div class="list">•&nbsp;&nbsp;วาล์วบายพาสคอมเพรสเซอร์จะเปิด / ปิดตามสัญญาณ on/off จาก PCM</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;โซลินอยด์วาล์วควบคุม</div>
+<dl>
+<dd class="list">
+<div class="list">•&nbsp;&nbsp;วาล์วควบคุมจะเปิด / ปิดตามสัญญาณ duty จาก PCM</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;เวสเกตโซลินอยด์วาล์ว</div>
+<dl>
+<dd class="list">
+<div class="list">•&nbsp;&nbsp;เวสเกตวาล์วจะเปิด / ปิดตามสัญญาณ duty จาก PCM</div>
+</dd>
+</dl>
+</dd>
+</dl><br clear="all"><a name="id0140z798780002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>แผนผังแบบบล็อก</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00002123.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00002123</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id0140z798780003"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<div class="list">•&nbsp;&nbsp;การควบคุมเทอร์โบคู่จะแบ่งการทำงานระหว่างเทอร์โบชาร์จเจอร์แบบใหญ่และเทอร์โบชาร์จเจอร์แบบเล็กเป็น 5 ช่วงหลักๆ</div>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00002139.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00002139</div>
+</td>
+</tr>
+</table>
+<p clear="all">
+<p>
+<div>OFF: ไม่มีการจ่ายกำลังไฟฟ้า</div>
+<div>ON มีการจ่ายกำลังไฟฟ้า (มีการควบคุม)</div>
+</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center" rowspan="2">
+<p class="thead">รายการ</p>
+</th>
+<th id="" align="center" colspan="4">
+<p class="thead">สภาวะการทำงาน</p>
+</th>
+</tr>
+<tr>
+<th id="" align="center">
+<p class="thead">โซลินอยด์วาล์วบายพาสคอมเพรสเซอร์</p>
+</th>
+<th id="" align="center">
+<p class="thead">โซลินอยด์วาล์วควบคุม<sup>*1</sup></p>
+</th>
+<th id="" align="center">
+<p class="thead">เวสเกตโซลินอยด์วาล์ว<sup>*2</sup></p>
+</th>
+<th id="" align="center">
+<p class="thead">สภาวะการอัดอากาศของเทอร์โบ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">(1) การสตาร์ทเครื่องยนต์ / การอุ่นเครื่องยนต์ที่ไม่เพียงพอ / ช่วงเดินเบา</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON (เปิด)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Duty 0% (เปิด)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Duty 0% (เปิด)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่มีการอัดอากาศของเทอร์โบ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">(2) ช่วงความเร็วรอบเครื่องยนต์ต่ำ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF (ปิด)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Duty 50&mdash;95% (ปิด)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Duty 60&mdash;95% (ปิด)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การอัดอากาศของเทอร์โบคู่</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">(3) ช่วงความเร็วรอบเครื่องยนต์ปานกลาง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">OFF (ปิด)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Duty 0 ถึง 95% (ปิด ↔ เปิด)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Duty 60&mdash;95% (ปิด)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การอัดอากาศของเทอร์โบเดี่ยวถึงการอัดอากาศของเทอร์โบคู่ขึ้นอยู่กับเทอร์โบชาร์จเจอร์แบบใหญ่</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">(4) ช่วงความเร็วรอบเครื่องยนต์สูง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON (เปิด)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Duty 0% (เปิด)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Duty 60&mdash;95% (ปิด)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การอัดอากาศของเทอร์โบเดี่ยวขึ้นอยู่กับเทอร์โบชาร์จเจอร์แบบใหญ่</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">(5) ช่วงการควบคุมการอัดอากาศด้วยเวสเกตวาล์ว</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON (เปิด)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Duty 0% (เปิด)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Duty 0 ถึง 95% (ปิด ↔ เปิด)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การอัดอากาศของเทอร์โบเดี่ยวขึ้นอยู่กับไม่มีการอัดอากาศเทอร์โบไปที่เทอร์โบชาร์จเจอร์แบบใหญ่</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;: ค่า Duty ที่ต้องการเพื่อปิดวาล์วควบคุมอยู่ที่ 50% อย่างไรก็ตาม ถ้ายากที่จะปิดวาล์วควบคุมเนื่องจากแรงดันก๊าซไอเสีย PCM จะเพิ่มค่า Duty</div>
+<div class="deflist">*2&nbsp;&nbsp;: ค่า Duty ที่ต้องการเพื่อปิดเวสเกตวาล์วอยู่ที่ 60% อย่างไรก็ตาม ถ้ายากที่จะปิดเวสเกตวาล์วเนื่องจากแรงดันก๊าซไอเสีย PCM จะเพิ่มค่า Duty</div>
+<div class="list">•&nbsp;&nbsp;สำหรับรายละเอียดเกี่ยวกับการควบคุมเทอร์โบคู่ ให้อ้างอิงระบบการอัดอากาศ (ดูที่ <font class="extxref-label"><a href="id0113z7706400.html">ระบบการอัดอากาศ [SKYACTIV-D 2.2]</a></font>)</div>
+</body>
+</html>

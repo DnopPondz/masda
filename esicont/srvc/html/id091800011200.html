@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>แอ็คชิวเอเตอร์ควบคุมระดับไฟหน้า</title>
+</head>
+<body><a name="id091800011200"></a><p class="servinfo-title"><span class="servinfo-head"></span>แอ็คชิวเอเตอร์ควบคุมระดับไฟหน้า</p>
+<hr>
+<p class="servinfo-title-id" align="right">id091800011200</p><br clear="all"><a name="id09180001120001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>จุดประสงค์/การทำงาน</p>
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์ควบคุมระดับไฟหน้าจะขับมอเตอร์ตามแรงดันไฟฟ้าของแนวแกนลำแสงเป้าหมายซึ่งอินพุทจากโมดูลควบคุม AFS เพื่อทำการเปลี่ยนแปลงแนวแกนลำแสงของไฟหน้า </div><br clear="all"><a name="id09180001120002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>โครงสร้าง</p>
+<div class="list">•&nbsp;&nbsp;ติดตั้งอยู่ในไฟหน้ารวม</div>
+<div class="list">•&nbsp;&nbsp;ประกอบด้วยมอเตอร์ที่ยืด/หดเพลา, เพลา และไมโครคอมพิวเตอร์ที่คำนวณปริมาณการยืด/การหดตัวของเพลา</div>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5uun00000554.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5uun00000554</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id09180001120003"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<p class="list">1.&nbsp;&nbsp;เมื่อบิดสวิตช์สตาร์ท ON (เครื่องยนต์ทำงานหรือไม่ทำงาน) เซ็นเซอร์ควบคุมระดับอัตโนมัติจะอินพุทสัญญาณความสูงของรถไปยังโมดูลควบคุม AFS</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;เมื่อเปิดใช้งานไฟหน้า (LO) โมดูลควบคุม AFS จะคำนวณปริมาณการเปลี่ยนแปลงความสูงของรถ <sup>*</sup> ตามสัญญาณความสูงของรถ</p>
+<p class="list">
+</p>
+<p class="list">3.&nbsp;&nbsp;หากตรวจพบสภาวะการทำงาน โมดูลควบคุม AFS จะคำนวณแนวแกนลำแสงเป้าหมายตามค่าการเปลี่ยนแปลงความสูงของรถ <sup>*</sup> ที่คำนวณได้ สำหรับรายละเอียดเกี่ยวกับสภาวะการทำงาน ให้ดูที่ระบบควบคุมระดับไฟหน้าอัตโนมัติ (ดูที่ <font class="extxref-label"><a href="id091800010900.html">ระบบควบคุมระดับไฟหน้าอัตโนมัติ</a></font>)</p>
+<p class="list">
+</p>
+<p class="list">4.&nbsp;&nbsp;โมดูลควบคุม AFS จะเอาท์พุทสัญญาณแนวแกนลำแสงเป้าหมายที่คำนวณได้ไปยังแอ็คชิวเอเตอร์ควบคุมระดับไฟหน้า</p>
+<p class="list">
+</p>
+<p class="list">5.&nbsp;&nbsp;แอ็คชิวเอเตอร์ควบคุมระดับไฟหน้าจะขับมอเตอรตามแนวแกนลำแสงเป้าหมายที่อินพุท</p>
+<p class="list">
+</p>
+<p class="list">6.&nbsp;&nbsp;เมื่อมอเตอร์ถูกขับดัน เพลาจะยืด/หดและรีเฟล็กเตอร์จะยกขึ้นเพื่อเลื่อนแนวแกนลำแสง</p>
+<p class="list">
+</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5uun00000690.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5uun00000690</div>
+</td>
+</tr>
+</table>
+<div class="deflist">*&nbsp;&nbsp;:ปริมาณการเปลี่ยนแปลงความสูงของรถเป็นค่าเฉลี่ยของมุมตัวถังรถที่ตรวจพบภายใน 1 วินาทีที่คำนวณได้ซึ่งโมดูลควบคุม AFS ตรวจพบทุกๆ 0.1 วินาที</div><br clear="all"><a name="id09180001120004"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>Fail-safe</p>
+<div class="list">•&nbsp;&nbsp;ไม่มีฟังก์ชั่นนี้</div>
+</body>
+</html>

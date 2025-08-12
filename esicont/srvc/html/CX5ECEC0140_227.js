@@ -1,0 +1,2 @@
+&txtLabel=CONTROL SYSTEM (SKYACTIV-D 2.2) 7/7&
+&txtData=S0140_2g&

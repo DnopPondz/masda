@@ -1,0 +1,6303 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>ระบบการวิเคราะห์ปัญหาบนรถ [การควบคุมการทรงตัวของรถ (DSC)]</title>
+</head>
+<body><a name="id0402b2181300"></a><p class="servinfo-title"><span class="servinfo-head"></span>ระบบการวิเคราะห์ปัญหาบนรถ [การควบคุมการทรงตัวของรถ (DSC)]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0402b2181300</p><br clear="all"><a name="id0402b218130001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รายละเอียด</p>
+<div class="list">•&nbsp;&nbsp;ระบบการวิเคราะห์ปัญหาบนรถประกอบด้วยระบบตรวจจับความบกพร่อง ซึ่งคอยตรวจจับความบกพร่องที่เกิดขึ้นกับสัญญาณอินพุท/เอาท์พุทเมื่อบิดสวิตช์สตาร์ทไปที่ ON, ฟังก์ชันการตรวจสอบข้อมูล / PID ซึ่งคอยอ่านค่าสัญญาณอินพุท/เอาท์พุทที่ระบุ และฟังก์ชันโหมดคำสั่งการทำงานที่สามารถใช้ควบคุมส่วนที่ส่งสัญญาณเอาท์พุท (เช่น โซลินอยด์วาล์ว)</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อเชื่อมโยงข้อมูล 2 (DLC-2) ถูกนำมาใช้โดยการจัดกลุ่มขั้วต่อทั้งหมดที่ใช้สำหรับการวิเคราะห์ปัญหาและการตรวจจับ/ซ่อมแซมความบกพร่องรวมไว้ในตำแหน่งเดียวกัน เพื่อช่วยให้การซ่อมบำรุงง่ายยิ่งขึ้น ซึ่งการวิเคราะห์ปัญหาสามารถดำเนินการได้โดยการเชื่อมต่อ Mazda Modular Diagnostic System (M-MDS) เข้ากับ DLC-2</div>
+<div class="list">•&nbsp;&nbsp;นอกจากการอ่านค่ารหัสวิเคราะห์ปัญหาแล้ว Mazda Modular Diagnostic System (M-MDS) ยังทำหน้าที่ลบรหัสวิเคราะห์ปัญหาโดยใช้หน้าจอแสดงผลของเครื่องมือทดสอบการวิเคราะห์ปัญหา และเข้าถึงฟังก์ชั่นต่างๆ ของการตรวจสอบข้อมูล / PID และโหมดคำสั่งการทำงาน ซึ่งจะช่วยเพิ่มประสิทธิภาพการวิเคราะห์ความบกพร่องและทำให้การซ่อมบำรุงง่ายยิ่งขึ้น</div>
+<p class="figure-title">แผนผังแบบบล็อก</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00000981.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00000981</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id0402b218130002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p><br clear="all"><p><a name="id0402b218130003"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นการตรวจจับความบกพร่อง</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่นการตรวจจับความบกพร่องมีหน้าที่ตรวจสอบและแสดงผลความบกพร่องที่เกิดในระบบสัญญาณอินพุท/เอาท์พุทของ DSC HU/CM เมื่อบิดสวิตช์สตาร์ทไปที่ ON</div>
+<div class="list">•&nbsp;&nbsp;ขณะที่ DSC HU/CM ทำงาน ระบบจะดำเนินการตรวจจับความบกพร่องต่อไปนี้</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ไฟเตือน ABS, ไฟเตือนระบบเบรก, ไฟแสดงสถานะ TCS/DSC, ไฟแสดงสถานะ TSC OFF, ไฟเตือนระบบเตือนแรงดันลมยาง และไฟเตือนหลักจะติดสว่าง<span>ประมาณ 3.0 s</span> เมื่อบิดสวิตช์สตาร์ทไปที่ ON เพื่อตรวจสอบการขาดวงจรของไฟเตือนต่างๆ ในขณะเดียวกัน จะมีการตรวจสอบสัญญาณอินพุท/เอาท์พุทของแต่ละส่วนเพื่อวิเคราะห์ปัญหาความบกพร่อง หลังจากรถเริ่มแล่น ความเร็วรถในครั้งแรกจะอยู่ที่<span>ประมาณ 10 km/h {6.2 mph} หรือมากกว่า</span> มอเตอร์ปั๊มจะเริ่มทำงาน และระบบจะเริ่มการวิเคราะห์ปัญหาความบกพร่องอีกครั้ง จากนั้น ระบบจะตรวจสอบสัญญาณอินพุท/เอาท์พุทในแต่ละส่วนอย่างต่อเนื่อง ตลอดจนวิเคราะห์ปัญหาความบกพร่องต่างๆ<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;มอเตอร์ปั๊มจะส่งเสียงดังขณะที่กำลังทำงาน</div>
+</div>
+</dd>
+</dl>
+</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;หากระบบตรวจพบความบกพร่องข้างต้น ไฟเตือนที่เกี่ยวข้องจะติดสว่างเพื่อแจ้งเตือนผู้ขับขี่ สัญญาณเอาท์พุทรหัสวิเคราะห์ปัญหาสามารถส่งผ่าน CAN_H และ CAN_L ของ DLC-2 ได้ โดยใช้ฟังก์ชั่นการสื่อสารของเครื่องทดสอบภายนอก ในขณะเดียวกัน ผลการตรวจจับความบกพร่องจะถูกส่งไปยังฟังก์ชั่นหน่วยความจำและ fail-safe</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id0402b218130004"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นหน่วยความจำ</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่นหน่วยความจำทำหน้าที่จัดเก็บรหัสวิเคราะห์ปัญหาของความบกพร่องที่เกิดในระบบสัญญาณอินพุท/เอาท์พุท เมื่อใช้ฟังก์ชั่นนี้ ระบบจะยังไม่ลบรหัสวิเคราะห์ปัญหาที่จัดเก็บไว้ในทันที หลังจากที่บิดสวิตช์สตาร์ทไปที่ OFF ถึงแม้ว่าระบบสัญญาณความบกพร่องจะกลับสู่สถานะปกติแล้วก็ตาม</div>
+<div class="list">•&nbsp;&nbsp;เนื่องจาก DSC HU/CM มีหน่วยความจำถาวรที่ติดตั้งภายใน รหัสวิเคราะห์ปัญหาจึงไม่ถูกลบออก ถึงแม้ว่าจะถอดแบตเตอรี่ออกก็ตาม ดังนั้น คุณจำเป็นต้องลบหน่วยความจำหลังจากดำเนินการซ่อมแซมเรียบร้อยแล้ว ดูที่คู่มือซ่อมสำหรับขั้นตอนการลบรหัสวิเคราะห์ปัญหา</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id0402b218130005"></a><p class="topic-title"><span class="topic-head"></span>คำอธิบายรหัส 7 หลักของรหัสวิเคราะห์ปัญหา</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เมื่อระบบหรือส่วนประกอบที่เกี่ยวข้องทำงานผิดพลาด CM จะจัดเก็บรหัสวิเคราะห์ปัญหาของส่วนที่ทำงานบกพร่องไว้ในหน่วยความจำของ CM และสามารถเรียกดูข้อมูลที่จัดเก็บโดยใช้เครื่องมือสแกนได้เมื่อจำเป็น รหัสวิเคราะห์ปัญหาได้รับการกำหนดโดยใช้ตัวเลข 7 หลัก ซึ่งตัวเลขแต่ละหลักมีความหมายดังต่อไปนี้<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001215.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001215</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id0402b218130006"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่น Fail-safe</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ขณะที่ฟังก์ชั่นการตรวจจับความบกพร่องทำการตรวจสอบความบกพร่อง ไฟแสดงสถานะการเตือนจะติดสว่างเพื่อแจ้งเตือนผู้ขับขี่ ในขณะเดียวกัน ฟังก์ชั่น fail-safe จะทำหน้าที่ควบคุมการทำงานตามที่แสดงในตารางรายละเอียดความบกพร่องของฟังก์ชั่น fail-safe</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="attention1-label">คำเตือน</div>
+</dd>
+<dd>
+<div class="attention1">
+<div class="list">•&nbsp;&nbsp;หากมีการยับยั้งการควบคุม EBD ล้อหลังอาจล็อคก่อนล้อหน้า หากเกิดเหตุการณ์นี้ขึ้น อาจทำให้รถโคลงและสูญเสียการทรงตัว ดังนั้น จึงควรตรวจสอบระบบทันทีเมื่อมีการยับยั้งการควบคุม EBD</div>
+</div>
+</dd>
+</dl>
+<p clear="all">
+<p class="table-title">ตารางรหัสวิเคราะห์ปัญหา</p>
+<p>
+<div>&times;: สามารถทำได้</div>
+<div>-: ใช้ไม่ได้/ไม่ติดสว่าง</div>
+</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟเตือน ABS</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟเตือนระบบเบรก (เมื่อปลดเบรกมือ)</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟแสดงสถานะ TCS/DSC</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟแสดงสถานะ TCS OFF</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟเตือนระบบเตือนแรงดันลมยาง</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟเตือนหลัก<sup>*1</sup></p>
+</th>
+<th id="" align="center">
+<p class="thead">ตำแหน่งความบกพร่อง</p>
+</th>
+<th id="" align="center">
+<p class="thead">Fail-safe</p>
+</th>
+<th id="" align="center">
+<p class="thead">รอบการขับ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ประเภทการทดสอบด้วยตนเอง<sup>*2</sup></p>
+</th>
+<th id="" align="center">
+<p class="thead">ฟังก์ชั่นหน่วยความจำ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10DF:46</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">DSC HU/CM (ความบกพร่องภายใน)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B11D4:08<sup>*1</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เซ็นเซอร์เลเซอร์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0001:01</div>
+</td>
+<td id="" align="center" rowspan="12">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center" rowspan="12">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center" rowspan="12">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center" rowspan="12">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="12">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="12">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left" rowspan="12">
+<div class="tbody">ภายใน DSC HU/CM บกพร่อง (ระบบโซลินอยด์วาล์ว)</div>
+</td>
+<td id="" align="center" rowspan="12">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center" rowspan="12">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="12">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center" rowspan="12">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0002:01</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0003:01</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0004:01</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0010:01</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0011:01</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0014:01</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0015:01</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0018:01</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0019:01</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C001C:01</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C001D:01</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0020:11</div>
+</td>
+<td id="" align="center" rowspan="4">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center" rowspan="4">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="4">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center" rowspan="4">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="4">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="4">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left" rowspan="4">
+<div class="tbody">มอเตอร์ปั๊ม, รีเลย์มอเตอร์</div>
+</td>
+<td id="" align="center" rowspan="4">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center" rowspan="4">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="4">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center" rowspan="4">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0020:12</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0020:13</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0020:71</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0023:62<sup>*1</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ไฟเบรก</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0030:07</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">-<sup>*3</sup></div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">กะพริบ<sup>*4</sup></div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โรเตอร์เซ็นเซอร์ล้อหน้าด้านซ้ายของระบบ ABS</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0031:07</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เซ็นเซอร์ความเร็วล้อหน้าด้านซ้ายของระบบ ABS/โรเตอร์เซ็นเซอร์ล้อหน้าด้านซ้ายของระบบ ABS</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0031:11</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">-<sup>*3</sup></div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">กะพริบ<sup>*4</sup></div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="tbody">เซ็นเซอร์ความเร็วล้อหน้าด้านซ้ายของระบบ ABS</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0031:15</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0031:29</div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">-<sup>*3</sup></div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">กะพริบ<sup>*4</sup></div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left" rowspan="3">
+<div class="tbody">เซ็นเซอร์ความเร็วล้อหน้าด้านซ้ายของระบบ ABS/โรเตอร์เซ็นเซอร์ล้อหน้าด้านซ้ายของระบบ ABS</div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0031:2F</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0031:64</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0033:07</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">-<sup>*3</sup></div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">กะพริบ<sup>*4</sup></div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โรเตอร์เซ็นเซอร์ล้อหลังด้านขวาของระบบ ABS</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0034:07</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เซ็นเซอร์ความเร็วล้อหลังด้านขวาของระบบ ABS/โรเตอร์เซ็นเซอร์ล้อหลังด้านขวาของระบบ ABS</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0034:11</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">-<sup>*3</sup></div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">กะพริบ<sup>*4</sup></div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="tbody">เซ็นเซอร์ความเร็วล้อหน้าด้านขวาของระบบ ABS</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0034:15</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0034:29</div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">-<sup>*3</sup></div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">กะพ ริบ<sup>*4</sup></div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left" rowspan="3">
+<div class="tbody">เซ็นเซอร์ความเร็วล้อหลังด้านขวาของระบบ ABS/โรเตอร์เซ็นเซอร์ล้อหลังด้านขวาของระบบ ABS</div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0034:2F</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0034:64</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0036:07</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">-<sup>*3</sup></div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">กะพริบ<sup>*4</sup></div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โรเตอร์เซ็นเซอร์ล้อหลังด้านซ้ายของระบบ ABS</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0037:07</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เซ็นเซอร์ความเร็วล้อหลังด้านซ้ายของระบบ ABS/โรเตอร์เซ็นเซอร์ล้อหลังด้านซ้ายของระบบ ABS</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0037:11</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">-<sup>*3</sup></div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">กะพริบ<sup>*4</sup></div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="tbody">เซ็นเซอร์ความเร็วล้อหลังด้านซ้ายของระบบ ABS</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0037:15</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0037:29</div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">-<sup>*3</sup></div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">กะพริบ<sup>*4</sup></div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left" rowspan="3">
+<div class="tbody">เซ็นเซอร์ความเร็วล้อหลังด้านซ้ายของระบบ ABS/โรเตอร์เซ็นเซอร์ล้อหลังด้านซ้ายของระบบ ABS</div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0037:2F</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0037:64</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0039:07</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">-<sup>*3</sup></div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">กะพริบ<sup>*4</sup></div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โรเตอร์เซ็นเซอร์ล้อหลังด้านขวาของระบบ ABS</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C003A:07</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เซ็นเซอร์ความเร็วล้อหน้าด้านขวาของระบบ ABS/โรเตอร์เซ็นเซอร์ล้อหน้าด้านขวาของระบบ ABS</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C003A:11</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">-<sup>*3</sup></div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">กะพริบ<sup>*4</sup></div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="tbody">เซ็นเซอร์ความเร็วล้อหลังด้านขวาของระบบ ABS</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C003A:15</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C003A:29</div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">-<sup>*3</sup></div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">กะพริบ<sup>*4</sup></div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left" rowspan="3">
+<div class="tbody">เซ็นเซอร์ความเร็วล้อหน้าด้านขวาของระบบ ABS/โรเตอร์เซ็นเซอร์ล้อหน้าด้านขวาของระบบ ABS</div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C003A:2F</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C003A:64</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0040:64</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ไฟเบรก</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0044:01</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ<sup>*4</sup><sup>*5</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง<sup>*6</sup></div>
+</td>
+<td id="" align="left" rowspan="4">
+<div class="tbody">เซ็นเซอร์แรงดันน้ำมันเบรก</div>
+</td>
+<td id="" align="center" rowspan="4">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center" rowspan="4">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="4">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center" rowspan="4">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0044:28</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0044:54</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ<sup>*4</sup><sup>*5</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง<sup>*6</sup></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0044:64</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0051:62</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">กะพริบ<sup>*4</sup></div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left" rowspan="4">
+<div class="tbody">เซ็นเซอร์มุมบังคับเลี้ยว</div>
+</td>
+<td id="" align="center" rowspan="4">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center" rowspan="4">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="4">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center" rowspan="4">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0051:64</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0051:67</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0051:85</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0061:28</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระบบโมดูลควบคุม SAS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0061:54</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง<sup>*6</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ<sup>*4</sup><sup>*5</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง<sup>*6</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระบบ DSC HU/CM (ขั้นตอนการตั้งค่าเริ่มต้นที่ยังไม่ดำเนินการ)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0061:64</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="tbody">ระบบโมดูลควบคุม SAS</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0062:28</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง<sup>*6</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง<sup>*6</sup></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0062:54</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง<sup>*6</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ<sup>*4</sup><sup>*5</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง<sup>*6</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระบบ DSC HU/CM (ขั้นตอนการตั้งค่าเริ่มต้นที่ยังไม่ดำเนินการ)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0062:64</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง<sup>*6</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง<sup>*6</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระบบโมดูลควบคุม SAS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0062:76</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง<sup>*6</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ<sup>*4</sup><sup>*5</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง<sup>*6</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระบบโมดูลควบคุม SAS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0063:28</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระบบโมดูลควบคุม SAS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0063:54</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง<sup>*6</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ<sup>*4</sup><sup>*5</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง<sup>*6</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระบบ DSC HU/CM (ขั้นตอนการตั้งค่าเริ่มต้นที่ยังไม่ดำเนินการ)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0063:64</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระบบโมดูลควบคุม SAS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C006B:00</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="tbody">ระบบควบคุม TCS/DSC</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0072:68</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-<sup>*9</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0089:64</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ TCS OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C1031:35</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ตั้งค่าระบบเตือนแรงดันลมยาง (TPMS)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C1031:41</div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">กะพริบ<sup>*4</sup></div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">-</div>
+</td>
+<td id="" align="left" rowspan="3">
+<div class="tbody">ระบบเตือนแรงดันลมยาง (TPMS)</div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C1031:54</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C1031:68</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C1A08:1C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">DSC HU/CM (ความบกพร่องภายใน)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0001:88</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left" rowspan="5">
+<div class="tbody">สาย CAN</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0100:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง<sup>*6</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง<sup>*6</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ<sup>*4</sup><sup>*5</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง<sup>*6</sup></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0101:00<sup>*7</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0114:00<sup>*8</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0131:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0151:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง<sup>*6</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ<sup>*4</sup><sup>*5</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง<sup>*6</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระบบโมดูลควบคุม SAS (สาย CAN2 บกพร่อง)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0154:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="left" rowspan="3">
+<div class="tbody">สาย CAN</div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง<sup>*6</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง<sup>*6</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ<sup>*4</sup><sup>*5</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง<sup>*6</sup></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0235:00<sup>*1</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0401:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง<sup>*6</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ<sup>*4</sup><sup>*5</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง<sup>*6</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ข้อความผิดปกติจาก PCM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0402:00<sup>*7</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ข้อความผิดปกติจากชุดส่งกำลัง/เกียร์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0420:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ข้อความผิดปกติจาก EPS CM</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0423:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ข้อความผิดปกติจากแผงหน้าปัด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0433:00<sup>*1</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ข้อความผิดปกติจากเซ็นเซอร์เลเซอร์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0443:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ข้อความผิดปกติจากแผงหน้าปัด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0452:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="tbody">ข้อความผิดปกติจากโมดูลควบคุม SAS</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0452:86</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง<sup>*6</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ<sup>*4</sup><sup>*5</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง<sup>*6</sup></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2007:46</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">DSC HU/CM (ความบกพร่องภายใน)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2007:62</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">DSC HU/CM (ความบกพร่องภายใน)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2101:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่ได้บันทึกข้อมูลการกำหนดค่า</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2107:68<sup>*1</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เซ็นเซอร์เลเซอร์</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2300:52</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">กะพริบ<sup>*4</sup></div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left" rowspan="5">
+<div class="tbody">ไม่ได้บันทึกข้อมูลการกำหนดค่า</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2300:54</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2300:55</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2300:56</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2300:64</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:49</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง<sup>*6</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง<sup>*6</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ<sup>*4</sup><sup>*5</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">DSC HU/CM (ความบกพร่องภายใน)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3003:08</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="left" rowspan="4">
+<div class="tbody">ระบบแหล่งจ่ายไฟ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="4">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="4">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center" rowspan="4">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">U3003:16</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-<sup>*10</sup></div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">กะพริบ<sup>*4</sup></div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center" rowspan="3">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง<sup>*11</sup><sup>*12</sup></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3003:17</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">-</div>
+</td>
+<td id="" align="center">
+<div class="tbody">กะพริบ<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ติดสว่าง</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;:รุ่นที่มีระบบสมาร์ทซิตี้เบรก (SCBS)</div>
+<div class="deflist">*2&nbsp;&nbsp;:C: การทดสอบ CMDTC ด้วยตนเอง, D: การทดสอบ ODDTC ด้วยตนเอง</div>
+<div class="deflist">*3&nbsp;&nbsp;:ติดสว่างเมื่อล้อทำงานบกพร่องตั้งแต่สองล้อขึ้นไป</div>
+<div class="deflist">*4&nbsp;&nbsp;:ไฟเตือนระบบเตือนแรงดันลมยางติดสว่างหลังจากกะพริบ</div>
+<div class="deflist">*5&nbsp;&nbsp;:ไฟเตือนไม่ติดสว่าง/กะพริบตามรายละเอียดความบกพร่อง</div>
+<div class="deflist">*6&nbsp;&nbsp;:ไฟเตือนไม่ติดสว่างตามรายละเอียดความบกพร่อง</div>
+<div class="deflist">*7&nbsp;&nbsp;:ATX เท่านั้น</div>
+<div class="deflist">*8&nbsp;&nbsp;:4WD เท่านั้น</div>
+<div class="deflist">*9&nbsp;&nbsp;:ไฟติดเมื่อเกิดการลื่นไถลของล้อใดล้อหนึ่งด้วยความเร็ว <span>10km/h {6.2 mph} หรือมากกว่า</span></div>
+<div class="deflist">*10&nbsp;&nbsp;:เมื่อแรงดันแหล่งจ่ายไฟอยู่ที่ <span>7.9&mdash;9.6 V</span> เป็นเวลา <span>550 ms หรือมากกว่า</span></div>
+<div class="deflist">*11&nbsp;&nbsp;:เมื่อแรงดันแหล่งจ่ายไฟอยู่ที่ <span>6.0&mdash;7.9 V</span> เป็นเวลา <span>630 ms หรือมากกว่า</span></div>
+<div class="deflist">*12&nbsp;&nbsp;:เมื่อแรงดันแหล่งจ่ายไฟ<span>ต่ำกว่า 6 V</span> เป็นเวลา <span>50 ms หรือมากกว่า</span></div>
+<p clear="all">
+<p class="table-title">รายละเอียดความบกพร่องของฟังก์ชั่น Fail-safe</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center" rowspan="4">
+<p class="thead">รหัสวิเคราะห์ปัญหา</p>
+</th>
+<th id="" align="center" colspan="12">
+<p class="thead">ฟังก์ชั่น Fail-safe</p>
+</th>
+</tr>
+<tr>
+<th id="" align="center" colspan="12">
+<p class="thead">สถานะการควบคุม</p>
+</th>
+</tr>
+<tr>
+<th id="" align="center" rowspan="2">
+<p class="thead">ระบบควบคุม ABS</p>
+</th>
+<th id="" align="center" rowspan="2">
+<p class="thead">ระบบควบคุม EBD</p>
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">ระบบควบคุม TCS</p>
+</th>
+<th id="" align="center" rowspan="2">
+<p class="thead">ระบบควบคุม DSC</p>
+</th>
+<th id="" align="left" rowspan="2">
+<p class="thead">ระบบป้องกันล้อยก (ROM)</p>
+</th>
+<th id="" align="center" rowspan="2">
+<p class="thead">ระบบควบคุมการช่วยเบรก</p>
+</th>
+<th id="" align="left" rowspan="2">
+<p class="thead">ฟังก์ชั่นป้องกันรถพลิกคว่ำ<sup>*1</sup></p>
+</th>
+<th id="" align="left" rowspan="2">
+<p class="thead">ระบบช่วยออกตัวบนทางชัน (HLA)</p>
+</th>
+<th id="" align="left" rowspan="2">
+<p class="thead">ระบบเตือนแรงดันลมยาง (TPMS)</p>
+</th>
+<th id="" align="left" rowspan="2">
+<p class="thead">ระบบสมาร์ทซิตี้เบรก (SCBS)<sup>*2</sup></p>
+</th>
+<th id="" align="left" rowspan="2">
+<p class="thead">การลดการชนปะทะระดับสอง (SCR)</p>
+</th>
+</tr>
+<tr>
+<th id="" align="center">
+<p class="thead">ระบบควบคุมเบรก</p>
+</th>
+<th id="" align="center">
+<p class="thead">ระบบควบคุมเครื่องยนต์</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10DF:46</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B11D4:08<sup>*2</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0001:01</div>
+</td>
+<td id="" align="center" rowspan="12">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="12">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2" rowspan="12">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="12">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="12">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="12">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="12">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="12">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="12">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="12">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="12">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0002:01</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0003:01</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0004:01</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0010:01</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0011:01</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0014:01</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0015:01</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0018:01</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0019:01</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C001C:01</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C001D:01</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0020:11</div>
+</td>
+<td id="" align="center" rowspan="4">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="4">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2" rowspan="4">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="4">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="4">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="4">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="4">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="4">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="4">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="4">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="4">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0020:12</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0020:13</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0020:71</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0023:62<sup>*2</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0030:07</div>
+</td>
+<td id="" align="center" rowspan="7">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="7">
+<div class="tbody">ใช้ระบบควบคุม<sup>*3</sup></div>
+</td>
+<td id="" align="center" colspan="2" rowspan="7">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="7">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="7">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="7">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="7">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="7">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="7">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="7">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="7">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0031:07</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0031:11</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0031:15</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0031:29</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0031:2F</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0031:64</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0033:07</div>
+</td>
+<td id="" align="center" rowspan="7">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="7">
+<div class="tbody">ใช้ระบบควบคุม<sup>*3</sup></div>
+</td>
+<td id="" align="center" colspan="2" rowspan="7">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="7">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="7">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="7">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="7">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="7">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="7">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="7">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="7">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0034:07</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0034:11</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0034:15</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0034:29</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0034:2F</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0034:64</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0036:07</div>
+</td>
+<td id="" align="center" rowspan="7">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="7">
+<div class="tbody">ใช้ระบบควบคุม<sup>*3</sup></div>
+</td>
+<td id="" align="center" colspan="2" rowspan="7">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="7">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="7">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="7">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="7">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="7">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="7">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="7">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="7">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0037:07</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0037:11</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0037:15</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0037:29</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0037:2F</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0037:64</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0039:07</div>
+</td>
+<td id="" align="center" rowspan="7">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="7">
+<div class="tbody">ใช้ระบบควบคุม<sup>*3</sup></div>
+</td>
+<td id="" align="center" colspan="2" rowspan="7">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="7">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="7">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="7">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="7">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="7">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="7">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="7">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="7">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C003A:07</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C003A:11</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C003A:15</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C003A:29</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C003A:2F</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C003A:64</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0040:64</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0044:01</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0044:28</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0044:54</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0044:64</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0051:62</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2" rowspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0051:64</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0051:67</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0051:85</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0061:28</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0061:54</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0061:64</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0062:28</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0062:54</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0062:64</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0062:76</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0063:28</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0063:54</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0063:64</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C006B:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0072:68</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C0089:64</div>
+</td>
+<td id="" align="center" colspan="12">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C1031:35</div>
+</td>
+<td id="" align="center" colspan="9" rowspan="4">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="4">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2" rowspan="4">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C1031:41</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C1031:54</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C1031:68</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">C1A08:1C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0001:88</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0100:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0101:00<sup>*1</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><sup></sup>U0114:00<sup>*5</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0131:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0151:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0154:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0235:00<sup>*2</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0401:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0402:00<sup>*1</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0420:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0423:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0433:00<sup>*2</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0443:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0452:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0452:86</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม*<sup>4</sup></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2007:46</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2007:62</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2101:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2107:68<sup>*2</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2300:52</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2" rowspan="5">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="5">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2300:54</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2300:55</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2300:56</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2300:64</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:49</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*4</sup></div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3003:08</div>
+</td>
+<td id="" align="center" colspan="12">
+<div class="tbody">ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">U3003:16</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช้ระบบควบคุม<sup>*6</sup></div>
+</td>
+<td id="" align="center" colspan="2" rowspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม<sup>*7</sup><sup>*8</sup></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3003:17</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ไม่ใช้ระบบควบคุม</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;:ATX เท่านั้น</div>
+<div class="deflist">*2&nbsp;&nbsp;:รุ่นที่มีระบบสมาร์ทซิตี้เบรก (SCBS)</div>
+<div class="deflist">*3&nbsp;&nbsp;:ไม่ใช้ระบบควบคุมเมื่อล้อทำงานบกพร่องตั้งแต่สองล้อขึ้นไป</div>
+<div class="deflist">*4&nbsp;&nbsp;:ใช้ตามรายละเอียดความบกพร่อง</div>
+<div class="deflist">*5&nbsp;&nbsp;:4WD เท่านั้น</div>
+<div class="deflist">*6&nbsp;&nbsp;:เมื่อแรงดันแหล่งจ่ายไฟอยู่ที่ <span>7.9&mdash;9.6 V</span> เป็นเวลา <span>550 ms หรือมากกว่า</span></div>
+<div class="deflist">*7&nbsp;&nbsp;:เมื่อแรงดันแหล่งจ่ายไฟอยู่ที่ <span>6.0&mdash;7.9 V</span> เป็นเวลา <span>630 ms หรือมากกว่า</span></div>
+<div class="deflist">*8&nbsp;&nbsp;:เมื่อแรงดันแหล่งจ่ายไฟ<span>ต่ำกว่า 6 V</span> เป็นเวลา <span>50 ms หรือมากกว่า</span></div>
+</p><br clear="all"><p><a name="id0402b218130007"></a><p class="topic-title"><span class="topic-head"></span>ไบต์แสดงสถานะของรหัสวิเคราะห์ปัญหา</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ไบต์แสดงสถานะคือรหัสสองหลัก (สองหลักหลังเครื่องหมายขีด (-)) หลังรหัสวิเคราะห์ปัญหา<table class="figure-flame">
+<tr>
+<td width="10mm"></td>
+<td>
+<table class="figure-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/am5ezn00002077.png"></td>
+</tr>
+</table>
+<div class="figure-caption">am5ezn00002077</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="list">•&nbsp;&nbsp;ไบต์แสดงสถานะคือรหัสที่แสดงรหัสที่ค้างอยู่, สถานะความบกพร่องปัจจุบัน/ในอดีต หรือสถานะไฟเตือน</div>
+<div class="list">•&nbsp;&nbsp;ไบต์แสดงสถานะสามารถอ่านได้ด้วยการทดสอบ CMDTC ด้วยตนเองโดยใช้ระบบวิเคราะห์ปัญหาตามเกณฑ์ของ Mazda (M-MDS)</div>
+<div class="list">•&nbsp;&nbsp;สำหรับรายละเอียดเกี่ยวกับไบต์แสดงสถานะ ให้ดูที่คำอธิบายใน Mazda Modular Diagnostic System (M-MDS) เมื่ออ่านรหัสวิเคราะห์ปัญหา</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id0402b218130008"></a><p class="topic-title"><span class="topic-head"></span>ข้อมูล Snapshot</p>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;DSC HU/CM จะจัดเก็บข้อมูลสองชนิดดังต่อไปนี้ เมื่อมีการตรวจพบรหัสวิเคราะห์ปัญหา และจะแสดงผลข้อมูล Snapshot ใน M-MDS</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ข้อมูลรถที่ตรวจพบโดย DSC HU/CM</div>
+<div class="list">―&nbsp;&nbsp;ข้อมูลรถที่ตรวจพบโดยแผงหน้าปัด และได้รับจากชุดเปิด/ปิดการทำงานผ่านสัญญาณ CAN</div>
+</dd>
+</dl>
+</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ข้อมูล Snapshot จะจัดเก็บข้อมูลรหัสวิเคราะห์ปัญหาที่ตรวจพบในปัจจุบัน</div>
+</dd>
+</dl>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รายการข้อมูล Snapshot</p>
+</th>
+<th id="" align="center">
+<p class="thead">หน่วย</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายละเอียดข้อมูล</p>
+</th>
+<th id="" align="center">
+<p class="thead">วิธีการอ่าน/ใช้ข้อมูล</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายการตรวจสอบข้อมูลที่เกี่ยวข้อง</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">AAT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C,&deg;F</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิอากาศภายนอก</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ไม่ได้</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ไม่ได้</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ABS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Inactive/</div>
+<div class="tbody">Active</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระบบเบรกป้องกันล้อล็อค</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ไม่ได้</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ไม่ได้</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">APP_STATUS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Accelerator Pedal Off/</div>
+<div class="tbody">Under 20%/</div>
+<div class="tbody">Over 20%/</div>
+<div class="tbody">FAIL</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตำแหน่งแป้นคันเร่ง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ไม่ได้</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ไม่ได้</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">AYC</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Inactive/</div>
+<div class="tbody">Active</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระบบควบคุมรถโคลง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ไม่ได้</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ไม่ได้</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">BRK_F_P_R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Pa, psi</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันไฮดรอลิกในสายน้ำมันเบรก (ค่าข้อมูลดิบ)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">BRK_F_P_R</div>
+</td>
+<td id="" align="left">
+<div class="tbody">BRK_F_P_R</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">BTCS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Inactive/</div>
+<div class="tbody">Active</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระบบควบคุมการลื่นไถลของเบรก</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ไม่ได้</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ไม่ได้</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">CFG_STATUS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Config Complete/</div>
+<div class="tbody">ไม่ได้กำหนดค่า</div>
+<div class="tbody">Config Error</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สถานะของการกำหนดค่าแผงหน้าปัด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ไม่ได้</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ไม่ได้</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ECT_STATUS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Under 0 degrees C/</div>
+<div class="tbody">0 - Under 80 degrees C/</div>
+<div class="tbody">Over 80 degrees C/</div>
+<div class="tbody">FAIL</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สถานะของอุณหภูมิน้ำหล่อเย็นเครื่องยนต์</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ไม่ได้</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ไม่ได้</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">EDC</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Inactive/</div>
+<div class="tbody">Active</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การควบคุมการลากเครื่องยนต์</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ไม่ได้</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ไม่ได้</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">IC_VPWR</div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แหล่งจ่ายไฟแผงหน้าปัด</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;DSC HU/CM รับค่าแรงดันแหล่งจ่ายไฟของแผงหน้าปัดที่ส่งผ่านสัญญาณ CAN จากแผงหน้าปัดอย่างสม่ำเสมอ</div>
+<div class="list">•&nbsp;&nbsp;หากมีการตรวจพบรหัสวิเคราะห์ปัญหา DSC HU/CM จะบันทึกข้อมูลแรงดันแหล่งจ่ายไฟของแผงหน้าปัดทันทีที่ตรวจพบรหัสวิเคราะห์ปัญหา และจะแสดงข้อมูลใน M-MDS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">VRWR<sup>*2</sup></div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">IG-ON_TIMER</div>
+</td>
+<td id="" align="center">
+<div class="tbody">hh:mm:ss*<sup>1</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ช่วงเวลาที่ผ่านไปตั้งแต่บิดสวิตช์สตาร์ทไปที่ ON</div>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัดจะบันทึกข้อมูลช่วงเวลาที่ผ่านไปนับตั้งแต่บิดสวิตช์สตาร์ทไปที่ ON</div>
+</div>
+</dd>
+</dl>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;DSC HU/CM รับค่าช่วงเวลาที่ผ่านไปนับตั้งแต่บิดสวิตช์สตาร์ทไปที่ ON ที่ส่งผ่านสัญญาณ CAN จากแผงหน้าปัดอย่างสม่ำเสมอ</div>
+<div class="list">•&nbsp;&nbsp;หากมีการตรวจพบรหัสวิเคราะห์ปัญหา DSC HU/CM จะบันทึกข้อมูลช่วงเวลาที่ผ่านไปนับตั้งแต่บิดสวิตช์สตาร์ทไปที่ ON ทันทีที่ตรวจพบรหัสวิเคราะห์ปัญหา และจะแสดงข้อมูลใน M-MDS</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ไม่ได้</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">LAT_ACCL_R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">G</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อัตราเร่งแนวข้าง (ค่าข้อมูลดิบ)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">LAT_ACCL_R</div>
+</td>
+<td id="" align="left">
+<div class="tbody">LAT_ACCL_R</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">LON_ACCL_R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">G</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อัตราเร่งแนวยาว (ค่าข้อมูลดิบ)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">LON_ACCL_R</div>
+</td>
+<td id="" align="left">
+<div class="tbody">LON_ACCL_R</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">PMP_MT</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="tbody">มอเตอร์ปั๊ม</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ไม่ได้</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ไม่ได้</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">PWR_MODE_KEY</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Key Out/</div>
+<div class="tbody">Key Recently Out/</div>
+<div class="tbody">Key Approved(Position 0)/</div>
+<div class="tbody">Post Accessory (Position 0)/</div>
+<div class="tbody">Accessory (Position 1)/</div>
+<div class="tbody">Post Ignition (Position 1)/</div>
+<div class="tbody">Ignition On (Position 2)/</div>
+<div class="tbody">Running (Position 2)/</div>
+<div class="tbody">Running - Starting In Progress (Position 2)/</div>
+<div class="tbody">Crank (Position 3)</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Key Out: บิดสวิตช์สตาร์ทไปที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;Key Recently Out (Position 0): ช่วงเวลาที่ผ่านไป<span>ภายใน 3 s</span> นับตั้งแต่บิดสวิตช์สตาร์ทไปที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;Accessory (Position 1): บิดสวิตช์สตาร์ทไปที่ ACC</div>
+<div class="list">•&nbsp;&nbsp;Post Ignition (Position 2): ช่วงเวลาที่ผ่านไป<span>ภายใน 3 s</span> นับตั้งแต่บิดสวิตช์สตาร์ทไปที่ ON</div>
+<div class="list">•&nbsp;&nbsp;Ignition On (Position 2): บิดสวิตช์สตาร์ทไปที่ ON (เครื่องยนต์ไม่ทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;Running (Position 2): บิดสวิตช์สตาร์ทไปที่ ON (เครื่องยนต์ทำงาน)</div>
+<div class="list">•&nbsp;&nbsp;Running - Starting: สภาวะการสตาร์ท</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;DSC HU/CM รับค่าสถานะของสวิตช์สตาร์ทที่ส่งผ่านสัญญาณ CAN จากแผงหน้าปัดอย่างสม่ำเสมอ</div>
+<div class="list">•&nbsp;&nbsp;หากมีการตรวจพบรหัสวิเคราะห์ปัญหา DSC HU/CM จะบันทึกข้อมูลสถานะของสวิตช์สตาร์ททันทีที่ตรวจพบรหัสวิเคราะห์ปัญหา และจะแสดงข้อมูลใน M-MDS</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ไม่ได้</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">RPM_STATUS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Engine Stop/</div>
+<div class="tbody">Under 1500rpm/</div>
+<div class="tbody">Over 1500rpm/</div>
+<div class="tbody">FAIL</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สถานะความเร็ว RPM ของเครื่องยนต์</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;DSC HU/CM รับค่าสถานะของสวิตช์สตาร์ทที่ส่งผ่านสัญญาณ CAN จากแผงหน้าปัดอย่างสม่ำเสมอ</div>
+<div class="list">•&nbsp;&nbsp;หากมีการตรวจพบรหัสวิเคราะห์ปัญหา DSC HU/CM จะบันทึกข้อมูลสถานะของสวิตช์สตาร์ททันทีที่ตรวจพบรหัสวิเคราะห์ปัญหา และจะแสดงข้อมูลใน M-MDS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">TACHOMTR<sup>*2</sup></div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">SHIFT_STATUS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">P/N</div>
+<div class="tbody">D/</div>
+<div class="tbody">R</div>
+<div class="tbody">FAIL</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สถานะของตำแหน่งเกียร์</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;DSC HU/CM รับค่าตำแหน่งคันเกียร์ที่ส่งผ่านสัญญาณ CAN จากแผงหน้าปัดอย่างสม่ำเสมอ</div>
+<div class="list">•&nbsp;&nbsp;หากมีการตรวจพบรหัสวิเคราะห์ปัญหา DSC HU/CM จะบันทึกข้อมูลตำแหน่งคันเกียร์ทันทีที่ตรวจพบรหัสวิเคราะห์ปัญหา และจะแสดงข้อมูลใน M-MDS</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ไม่ได้</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">STR_ANG_C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">มุมในการบังคับเลี้ยว (ค่าที่คำนวณได้)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">STR_ANG_C</div>
+</td>
+<td id="" align="left">
+<div class="tbody">STR_ANG_C</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">TCS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Inactive/</div>
+<div class="tbody">Active</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระบบป้องกันการลื่นไถล</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ไม่ได้</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ไม่ได้</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">TOTAL_DIST</div>
+</td>
+<td id="" align="center">
+<div class="tbody">km, ft, mi</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระยะการเคลื่อนที่สะสมรวมนับตั้งแต่ผลิตรถเสร็จจนกระทั่ง DSC HU/CM ตรวจพบรหัสวิเคราะห์ปัญหา (ค่าจากมาตรบันทึกระยะทางในแผงหน้าปัด)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ระยะทางเมื่อ DSC HU/CM ตรวจพบรหัสวิเคราะห์ปัญหาสามารถคำนวณได้ด้วยขั้นตอนต่อไปนี้</div>
+<div class="list">1.&nbsp;&nbsp;ตรวจสอบค่าจากมาตรบันทึกระยะทางในแผงหน้าปัด</div>
+<div class="list">2.&nbsp;&nbsp;ตรวจสอบรายการข้อมูล Snapshot TOTAL_DIST</div>
+<div class="list">3.&nbsp;&nbsp;ลบ 2 ออกจาก 1</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ไม่ได้</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">TOTAL_TIME</div>
+</td>
+<td id="" align="center">
+<div class="tbody">hh:mm:ss*<sup>1</sup></div>
+</td>
+<td id="" align="left">
+<div class="tbody">ช่วงเวลาที่ผ่านไปสะสมรวมนับตั้งแตผลิตรถเสร็จจนกระทั่ง DSC HU/CM ตรวจพบรหัสวิเคราะห์ปัญหา</div>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;เมื่อถอดฟิวส์ ROOM และบิดสวิตช์สตาร์ทไปที่ OFF เวลาจะไม่ถูกนำไปรวมกับช่วงเวลาที่ผ่านไป</div>
+</div>
+</dd>
+</dl>
+</td>
+<td id="" align="left">
+<div class="tbody">ช่วงเวลาที่ผ่านไปเมื่อ DSC HU/CM ตรวจพบรหัสวิเคราะห์ปัญหาสามารถคำนวณได้ด้วยขั้นตอนต่อไปนี้</div>
+<div class="list">1.&nbsp;&nbsp;ตรวจสอบรายการ PID TOTAL_TIME บนแผงหน้าปัด</div>
+<div class="list">2.&nbsp;&nbsp;ตรวจสอบรายการข้อมูล Snapshot TOTAL_TIME</div>
+<div class="list">3.&nbsp;&nbsp;ลบ 2 ออกจาก 1</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ใช้ไม่ได้</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">VPWR</div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แหล่งจ่ายไฟ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">VPWR</div>
+</td>
+<td id="" align="left">
+<div class="tbody">VPWR</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">VSPD</div>
+</td>
+<td id="" align="center">
+<div class="tbody">KPH, MPH</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความเร็วรถ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">VSPD</div>
+</td>
+<td id="" align="left">
+<div class="tbody">VSPD</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">VSPD_STATUS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">หยุด</div>
+<div class="tbody">0 - 10km/h/</div>
+<div class="tbody">Over 10km/h/</div>
+<div class="tbody">FAIL</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เมื่อมีการตรวจพบรหัสวิเคราะห์ปัญหา DSC HU/CM จะได้รับค่าความเร็วรถที่ตรวจพบโดยแผงหน้าปัดผ่านสัญญาณ CAN และจะแสดงข้อมูลใน M-MDS</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;DSC HU/CM รับค่าความเร็วรถที่ส่งผ่านสัญญาณ CAN จากแผงหน้าปัดอย่างสม่ำเสมอ</div>
+<div class="list">•&nbsp;&nbsp;หากมีการตรวจพบรหัสวิเคราะห์ปัญหา DSC HU/CM จะบันทึกข้อมูลความเร็วรถทันทีที่ตรวจพบรหัสวิเคราะห์ปัญหา และจะแสดงข้อมูลใน M-MDS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">SPEEDOMTR<sup>*2</sup></div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">YAW_RATE_R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;/S</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อัตราโคลง (ค่าข้อมูลดิบ)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">YAW_RATE_R</div>
+</td>
+<td id="" align="left">
+<div class="tbody">YAW_RATE_R</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;:หน่วยวินาที (s) อาจแสดงอยู่หลังจุดทศนิยม</div>
+<div class="deflist">*2&nbsp;&nbsp;: PID แผงหน้าปัด (ดูที่ <font class="extxref-label"><a href="id092200021843.html">การวิเคราะห์ปัญหาบนรถ [แผงหน้าปัด]</a></font>)</div>
+</p><br clear="all"><p><a name="id0402b218130009"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นการตรวจสอบข้อมูล / PID</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่นการตรวจสอบข้อมูล / PID ใช้สำหรับการเลือกรายการตรวจสอบสัญญาณอินพุท / เอาท์พุทที่ตั้งไว้ล่วงหน้าใน DSC HU/CM และสำหรับการอ่านค่าสัญญาณแบบเรียลไทม์</div>
+</dd>
+</dl>
+<p clear="all">
+<p class="table-title">ตารางการตรวจสอบข้อมูล / PID</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">หน้าจอแสดงผล Mazda Modular Diagnostic System (M-MDS)</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายละเอียดข้อมูล</p>
+</th>
+<th id="" align="center">
+<p class="thead">หน่วย/การทำงาน (หน้าจอแสดงผล Mazda Modular Diagnostic System (M-MDS))</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">BRAKE_SW</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณสวิตช์ไฟเบรก</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">BRK_F_P_C</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณเซ็นเซอร์แรงดันน้ำมันเบรก (ค่าที่คำนวณได้)</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">Pa, psi</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">BRK_F_P_R</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณเซ็นเซอร์แรงดันน้ำมันเบรก (ค่าข้อมูลดิบ)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">DDS_MODE</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โหมดระบบตรวจจับการปล่อยลม</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Not_Learned/Learning/Learned</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">DSC_OFF_SW</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สภาวะสวิตช์ TCS OFF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">DSC_ST</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สถานะระบบ DSC</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">LAT_ACCL_C</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรง G ด้านข้าง (ค่าที่คำนวณได้)</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">G</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">LAT_ACCL_R</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรง G ด้านข้าง (ค่าข้อมูลดิบ)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">LON_ACCL_C</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ค่าแรง G แนวยาว (ค่าที่คำนวณได้)</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">G</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">LON_ACCL_R</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ค่าแรง G แนวยาว (ค่าข้อมูลดิบ)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">P_BRAKE_SW</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณสวิตช์ไฟเบรกมือ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">PMP_MT</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สภาวะมอเตอร์ปั๊ม</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">Off/On</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">PMP_MT_SP</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สภาวะการจ่ายไฟมอเตอร์ปั๊ม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">R_GEAR_SW</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณคันเกียร์อยู่ที่ตำแหน่ง R:</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">STR_ANG_C</div>
+</td>
+<td id="" align="left">
+<div class="tbody">มุมในการบังคับเลี้ยว (ค่าที่คำนวณได้)</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">&deg;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">STR_ANG_R</div>
+</td>
+<td id="" align="left">
+<div class="tbody">มุมในการบังคับเลี้ยว (ค่าข้อมูลดิบ)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">TPMS_TYPE</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชนิด TPMS</div>
+</td>
+<td id="" align="center">
+<div class="tbody">No_DDS/DDS+TOM_EU/DDS+TOM_US</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">V_INLET_LF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สภาวะโซลินอยด์วาล์วทางเข้าด้านหน้าซ้าย</div>
+</td>
+<td id="" align="center" rowspan="8">
+<div class="tbody">Off/On</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">V_INLET_LR</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สภาวะโซลินอยด์วาล์วทางเข้าด้านหลังซ้าย</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">V_INLET_RF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สภาวะโซลินอยด์วาล์วทางเข้าด้านหน้าขวา</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">V_INLET_RR</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สภาวะโซลินอยด์วาล์วทางเข้าด้านหลังขวา</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">V_OUTLET_LF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สภาวะโซลินอยด์วาล์วทางออกด้านหน้าซ้าย</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">V_OUTLET_LR</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สภาวะโซลินอยด์วาล์วทางออกด้านหลังซ้าย</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">V_OUTLET_RF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สภาวะโซลินอยด์วาล์วทางออกด้านหน้าขวา</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">V_OUTLET_RR</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สภาวะโซลินอยด์วาล์วทางออกด้านหลังขวา</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">V_STB_LF/RR</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สภาวะโซลินอยด์วาล์วควบคุมการทรงตัว (ด้านหน้าซ้าย/ด้านหลังขวา)</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">Off/On</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">V_STB_RF/LR</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สภาวะโซลินอยด์วาล์วควบคุมการทรงตัว (ด้านหน้าขวา/ด้านหลังซ้าย)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">V_TRC_LF/RR</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สภาวะโซลินอยด์วาล์วป้องกันการลื่นไถล (ด้านหน้าซ้าย/ด้านหลังขวา)</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">Off/On</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">V_TRC_RF/LR</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สภาวะโซลินอยด์วาล์วป้องกันการลื่นไถล (ด้านหน้าขวา/ด้านหลังซ้าย)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">VPWR_B_SOL</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันไฟฟ้าของโมดูล</div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">VSPD</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความเร็วรถ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">KPH, MPH</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">WSPD_SEN_LF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณเซ็นเซอร์ความเร็วล้อหน้าด้านซ้ายของระบบ ABS</div>
+</td>
+<td id="" align="center" rowspan="4">
+<div class="tbody">KPH, MPH</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">WSPD_SEN_LR</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณเซ็นเซอร์ความเร็วล้อหลังด้านซ้ายของระบบ ABS</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">WSPD_SEN_RF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณเซ็นเซอร์ความเร็วล้อหน้าด้านขวาของระบบ ABS</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">WSPD_SEN_RR</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณเซ็นเซอร์ความเร็วล้อหลังด้านขวาของระบบ ABS</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">YAW_RATE_C</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ค่าอัตราโคลง (ค่าที่คำนวณได้)</div>
+</td>
+<td id="" align="center" rowspan="2">
+<div class="tbody">&deg;/s</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">YAW_RATE_R</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ค่าอัตราโคลง (ค่าข้อมูลดิบ)</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</p><br clear="all"><p><a name="id0402b218130010"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นโหมดคำสั่งการทำงาน</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่นโหมดคำสั่งการทำงานใช้สำหรับการเลือกรายการการจำลองของส่วนที่ส่งสัญญาณอินพุท/เอาท์พุทที่ตั้งไว้ล่วงหน้าใน DSC HU/CM และเพื่อให้ส่วนต่างๆ ทำงานโดยไม่ต้องใช้ระบบควบคุม CM</div>
+<div class="list">•&nbsp;&nbsp;ในการป้องกันส่วนภายในของชุดไฮดรอลิก ให้ใช้งานส่วนส่งสัญญาณเอาท์พุทที่เกี่ยวข้องเป็นเวลา <span>2 s หรือน้อยกว่า</span> เมื่อใช้ฟังก์ชั่นโหมดคำสั่งการทำงาน</div>
+</dd>
+</dl>
+<p clear="all">
+<p class="table-title">ตารางโหมดคำสั่งการทำงาน</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ชื่อคำสั่ง</p>
+</th>
+<th id="" align="center">
+<p class="thead">ส่วนส่งสัญญาณเอาท์พุท</p>
+</th>
+<th id="" align="center">
+<p class="thead">การทำงาน</p>
+</th>
+<th id="" align="center">
+<p class="thead">สภาวะการทำงาน</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">PMP_MT_SP</div>
+</td>
+<td id="" align="left">
+<div class="tbody">มอเตอร์ปั๊ม</div>
+</td>
+<td id="" align="center" rowspan="13">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="center" rowspan="13">
+<div class="tbody">บิดสวิตช์สตาร์ทไปที่ ON</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">V_INLET_LF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โซลินอยด์วาล์วทางเข้าด้านหน้าซ้าย</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">V_INLET_LR</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โซลินอยด์วาล์วทางเข้าด้านหลังซ้าย</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">V_INLET_RF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โซลินอยด์วาล์วทางเข้าด้านหน้าขวา</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">V_INLET_RR</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โซลินอยด์วาล์วทางเข้าด้านหลังขวา</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">V_OUTLET_LF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โซลินอยด์วาล์วทางออกด้านหน้าซ้าย</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">V_OUTLET_LR</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โซลินอยด์วาล์วทางออกด้านหลังซ้าย</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">V_OUTLET_RF</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โซลินอยด์วาล์วทางออกด้านหน้าขวา</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">V_OUTLET_RR</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โซลินอยด์วาล์วทางออกด้านหลังขวา</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">V_STB_LF/RR</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โซลินอยด์วาล์วควบคุมการทรงตัวล้อหน้าด้านซ้าย/ล้อหลังด้านขวา</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">V_STB_RF/LR</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โซลินอยด์วาล์วควบคุมการทรงตัวล้อหน้าด้านขวา/ล้อหลังด้านซ้าย</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">V_TRC_LF/RR</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โซลินอยด์วาล์วป้องกันการลื่นไถลล้อหน้าด้านซ้าย/ล้อหลังด้านขวา</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">V_TRC_RF/LR</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โซลินอยด์วาล์วป้องกันการลื่นไถลล้อหน้าด้านขวา/ล้อหลังด้านซ้าย</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</p><br clear="all"><p><a name="id0402b218130011"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นการสื่อสารของเครื่องทดสอบภายนอก</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่นการสื่อสารของเครื่องทดสอบภายนอกมีหน้าที่ช่วยสื่อสารข้อมูลการวิเคราะห์ปัญหาต่างๆ (การอ่านค่ารหัสวิเคราะห์ปัญหา, การอ่านค่าสัญญาณอินพุท/เอาท์พุท, การทำงานของส่วนส่งสัญญาณอินพุท/เอาท์พุท) ระหว่าง DSC HU/CM และเครื่องมือทดสอบภายนอก</div>
+</dd>
+</dl>
+<p clear="all">
+<p class="table-title">ข้อมูลการเชื่อมต่อ/การสื่อสาร</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center" rowspan="3">
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">เครื่องมือทดสอบภายนอก</p>
+</th>
+</tr>
+<tr>
+<th id="" align="center" colspan="2">
+<p class="thead">Mazda Modular Diagnostic System (M-MDS)</p>
+</th>
+</tr>
+<tr>
+<th id="" align="center">
+<p class="thead">การเชื่อมต่อ</p>
+</th>
+<th id="" align="center">
+<p class="thead">วิธีการสื่อสาร</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">ฟังก์ชั่นการวิเคราะห์ปัญหาบนรถ (การตรวจจับความบกพร่อง)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อินพุท/เอาท์พุท: ขั้ว CAN_H (HS), CAN_L (HS)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การสื่อสารแบบอนุกรม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ฟังก์ชั่นการตรวจสอบข้อมูล / PID</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อินพุท/เอาท์พุท: ขั้ว CAN_H (HS), CAN_L (HS)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การสื่อสารแบบอนุกรม</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ฟังก์ชั่นโหมดคำสั่งการทำงาน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">อินพุท/เอาท์พุท: ขั้ว CAN_H (HS), CAN_L (HS)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">การสื่อสารแบบอนุกรม</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<dl>
+<dd>
+<div class="list-title">การสื่อสารแบบอนุกรม</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;การสื่อสารแบบอนุกรม (การสื่อสารแบบสองทาง) ช่วยให้การรับและส่งข้อมูลจำนวนมากสามารถทำได้พร้อมกันในสายการสื่อสารเดียวกัน</div>
+<div class="list">•&nbsp;&nbsp;เมื่อเชื่อมต่อ Mazda Modular Diagnostic System (M-MDS) กับ DLC-2 การรับและส่งข้อมูลการวิเคราะห์ปัญหาระหว่าง Mazda Modular Diagnostic System (M-MDS) และ DSC HU/CM จะสามารถทำได้โดยใช้ขั้ว CAN_H และ CAN_L (ภายใน DLC-2)</div>
+<div class="list">•&nbsp;&nbsp;DSC HU/CM จะรับสัญญาณคำสั่งของฟังก์ชั่นการตรวจจับความบกพร่อง, ฟังก์ชั่นการตรวจสอบข้อมูล / PID และฟังก์ชั่นโหมดคำสั่งการทำงานตาม Mazda Modular Diagnostic System (M-MDS) และจะส่งรหัสวิเคราะห์ปัญหาและข้อมูลต่างๆ ที่เกี่ยวกับสภาวะการทำงานและสถานะของส่วนส่งสัญญาณอินพุท/เอาท์พุทไปยัง Mazda Modular Diagnostic System (M-MDS)</div>
+</dd>
+</dl>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ชื่อฟังก์ชั่นการวิเคราะห์ปัญหา</p>
+</th>
+<th id="" align="center">
+<p class="thead">สัญญาณที่ได้รับ</p>
+</th>
+<th id="" align="center">
+<p class="thead">สัญญาณที่ส่ง</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">ฟังก์ชั่นการตรวจจับความบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณการตรวจสอบรหัสวิเคราะห์ปัญหา</div>
+</td>
+<td id="" align="left">
+<div class="tbody">รหัสวิเคราะห์ปัญหา</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ฟังก์ชั่นการตรวจสอบข้อมูล / PID</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณคำสั่งที่ใช้อ่านรายการตรวจสอบที่เลือก</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ข้อมูลที่ตรวจสอบสำหรับรายการตรวจสอบที่ขอ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ฟังก์ชั่นโหมดคำสั่งการทำงาน</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณคำสั่งการทำงานสำหรับรายการโหมดคำสั่งการทำงานที่เลือก</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณควบคุมส่วนส่งสัญญาณเอาท์พุท</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</p>
+</body>
+</html>

@@ -1,0 +1,583 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>ระบบวิเคราะห์ปัญหาบนรถ [ระบบกุญแจรีโมทอัจฉริยะ]</title>
+</head>
+<body><a name="id091400111233"></a><p class="servinfo-title"><span class="servinfo-head"></span>ระบบวิเคราะห์ปัญหาบนรถ [ระบบกุญแจรีโมทอัจฉริยะ]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id091400111233</p><br clear="all"><a name="id09140011123301"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รายละเอียด</p>
+<div class="list">•&nbsp;&nbsp;ระบบกุญแจรีโมทอัจฉริยะจะมีฟังก์ชั่นการวิเคราะห์ปัญหาบนรถเพื่อช่วยในการวิเคราะห์ระบบ</div><br clear="all"><a name="id09140011123302"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รายละเอียด</p>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่นการวิเคราะห์ปัญหาบนรถจะประกอบด้วยฟังก์ชั่นต่อไปนี้: ฟังก์ชั่นตรวจจับความบกพร่องซึ่งจะตรวจจับความบกพร่องทั้งหมดในชิ้นส่วนที่เกี่ยวข้องกับระบบกุญแจรีโมทอัจฉริยะ ฟังก์ชั่นหน่วยความจำซึ่งจะบันทึกรหัสวิเคราะห์ปัญหาที่ตรวจพบ ฟังก์ชั่นการแสดงผลซึ่งจะบ่งชี้ตำแหน่งและสถานะความบกพร่องผ่านรหัสวิเคราะห์ปัญหาที่แสดง และฟังก์ชั่นการตรวจสอบ PID/DATA ซึ่งจะอ่านสัญญาณอินพุท/เอาท์พุทจำเพาะและตรวจสอบสภาวะอินพุท/เอาท์พุทดังกล่าว</div>
+<div class="list">•&nbsp;&nbsp;เมื่อใช้ Mazda Modular Diagnostic System (M-MDS) สามารถอ่านและลบรหัสวิเคราะห์ปัญหา และสามารถเปิดใช้งานฟังก์ชั่นการตรวจสอบ PID/DATA ได้</div><br clear="all"><p><a name="id09140011123303"></a><p class="topic-title"><span class="topic-head"></span>ฟังก์ชั่นการตรวจจับความบกพร่อง</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความบกพร่องในสัญญาณอินพุทและเอาท์พุท</div>
+<div class="list">•&nbsp;&nbsp;หากมีความบกพร่องเกิดขึ้น ชุดเปิด/ปิดการทำงานจะบันทึกความบกพร่องดังกล่าวเป็นรหัสวิเคราะห์ปัญหา สามารถอ่านรหัสวิเคราะห์ปัญหาที่บันทึกไว้โดย Mazda Modular Diagnostic System (M-MDS)</div>
+</dd>
+</dl>
+</p>
+<p clear="all">
+<p>
+<div>&times;: สามารถทำได้</div>
+<div>&mdash;: ไม่มี</div>
+</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟเตือนกุญแจ (สีแดง)</p>
+</th>
+<th id="" align="center">
+<p class="thead">คำอธิบาย</p>
+</th>
+<th id="" align="center">
+<p class="thead">ฟังก์ชั่น Fail-safe</p>
+</th>
+<th id="" align="center">
+<p class="thead">รอบการขับ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ประเภทการทดสอบด้วยตนเอง<sup>*1</sup></p>
+</th>
+<th id="" align="center">
+<p class="thead">ฟังก์ชั่นหน่วยความจำ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10C6:1F</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสายอากาศกุญแจรีโมท (ภายนอก, ด้านหลัง) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10C7:1F</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสายอากาศกุญแจรีโมท (ภายใน, ด้านหลัง) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10C9:1F</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรเสาอากาศกุญแจรีโมท (ภายใน, ด้านหน้า) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10D1:23</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ส่งคำขอ (ด้านหน้าซ้าย) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10D3:23</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ส่งคำขอ (ด้านหน้าขวา) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B11C4:23</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ส่งคำขอ (ประตูท้าย) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B11FD:1F</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรเสาอากาศกุญแจรีโมท (ภายนอก, ด้านหน้าซ้าย) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1210:1F</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรเสาอากาศกุญแจรีโมท (ภายนอก, ด้านหน้าขวา) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B13C3:04</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในชุดควบคุมด้านหน้าซ้ายบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B13C3:09</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดควบคุมด้านหน้าซ้ายบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B13C3:16</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันไฟฟ้าแหล่งจ่ายไฟชุดควบคุมด้านหน้าซ้ายลดการส่งสัญญาณ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B13C3:29</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับชุดควบคุมด้านหน้าซ้ายบกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;:C: การทดสอบ CMDTC ด้วยตนเอง, การทดสอบ D:ODDTC ด้วยตนเอง</div><br clear="all"><a name="id09140011123304"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>คำอธิบายรหัส 7 หลักของรหัสวิเคราะห์ปัญหา</p>
+<div class="list">•&nbsp;&nbsp;เมื่อระบบหรือส่วนประกอบที่เกี่ยวข้องทำงานผิดพลาด CM จะจัดเก็บรหัสวิเคราะห์ปัญหาของส่วนที่ทำงานบกพร่องไว้ในหน่วยความจำของ CM และสามารถเรียกดูข้อมูลที่จัดเก็บโดยใช้เครื่องมือสแกนได้เมื่อจำเป็น รหัสวิเคราะห์ปัญหาได้รับการกำหนดโดยใช้ตัวเลข 7 หลัก ซึ่งตัวเลขแต่ละหลักมีความหมายดังต่อไปนี้<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5uun00001109.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5uun00001109</div>
+</td>
+</tr>
+</table>
+</div><br clear="all"><a name="id09140011123305"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ไบต์แสดงสถานะของรหัสวิเคราะห์ปัญหา</p>
+<div class="list">•&nbsp;&nbsp;ไบต์แสดงสถานะคือรหัสสองหลัก (สองหลักหลังเครื่องหมายขีด (-)) หลังรหัสวิเคราะห์ปัญหา 7 หลัก<table class="figure-flame">
+<tr>
+<td width="10mm"></td>
+<td>
+<table class="figure-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00002015.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00002015</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="list">•&nbsp;&nbsp;ไบต์แสดงสถานะคือรหัสที่แสดงรหัสที่ค้างอยู่, สถานะความบกพร่องปัจจุบัน/ในอดีต หรือสถานะไฟเตือน</div>
+<div class="list">•&nbsp;&nbsp;ไบต์แสดงสถานะสามารถอ่านได้ด้วยการทดสอบ CMDTC ด้วยตนเองโดยใช้ Mazda Modular Diagnostic System (M-MDS)</div>
+<div class="list">•&nbsp;&nbsp;สำหรับรายละเอียดเกี่ยวกับไบต์แสดงสถานะ ให้ดูที่คำอธิบายใน M-MDS เมื่ออ่านรหัสวิเคราะห์ปัญหา</div><br clear="all"><a name="id09140011123306"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>สภาวะการตรวจพบสำหรับรหัสวิเคราะห์ปัญหานั้นๆ</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา</p>
+</th>
+<th id="" align="center">
+<p class="thead">ตำแหน่งความบกพร่องของระบบ</p>
+</th>
+<th id="" align="center">
+<p class="thead">สภาวะการตรวจพบ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10C6:1F</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสายอากาศกุญแจรีโมท (ภายนอก, ด้านหลัง) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานตรวจพบวงจรขาดในเสาอากาศกุญแจรีโมท (ภายนอก, ด้านหลัง) หรือการลัดวงจรลงกราวด์ขณะสวิตช์สตาร์ทอยู่ที่ Off</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10C7:1F</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสายอากาศกุญแจรีโมท (ภายใน, ด้านหลัง) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานตรวจพบวงจรขาดในเสาอากาศกุญแจรีโมท (ภายใน, ด้านหลัง) หรือลัดวงจรลงกราวด์ขณะสวิตช์สตาร์ทอยู่ที่ Off</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10C9:1F</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรเสาอากาศกุญแจรีโมท (ภายใน, ด้านหน้า) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานตรวจพบวงจรขาดในเสาอากาศกุญแจรีโมท (ภายใน, ด้านหน้า) หรือลัดวงจรลงกราวด์ขณะสวิตช์สตาร์ทอยู่ที่ Off</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10D1:23</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ส่งคำขอ (ด้านหน้าซ้าย) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ขณะสวิตช์สตาร์ทอยู่ที่ ON (เครื่องยนต์ทำงาน) ชุดเปิด/ปิดการทำงานตรวจพบว่าความเร็วรถเท่ากับ 5 km/h {3 mph} หรือมากกว่าต่อเนื่องเป็นเวลา 2 นาทีหรือมากกว่า และสวิตช์ขอการทำงาน (ด้านหน้าซ้าย) อยู่ที่ On 7 ครั้งหรือมากกว่าจนกระทั่งความเร็วรถต่ำกว่า 5 km/h {3 mph}</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B10D3:23</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ส่งคำขอ (ด้านหน้าขวา) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ขณะสวิตช์สตาร์ทอยู่ที่ ON (เครื่องยนต์ทำงาน) ชุดเปิด/ปิดการทำงานตรวจพบว่าความเร็วรถเท่ากับ 5 km/h {3 mph} หรือมากกว่าต่อเนื่องเป็นเวลา 2 นาทีหรือมากกว่า และสวิตช์ขอการทำงาน (ด้านหน้าขวา) อยู่ที่ On 7 ครั้งหรือมากกว่าจนกระทั่งความเร็วรถต่ำกว่า 5 km/h {3 mph}</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B11C4:23</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ส่งคำขอ (ประตูท้าย) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ขณะสวิตช์สตาร์ทอยู่ที่ ON (เครื่องยนต์ทำงาน) ชุดเปิด/ปิดการทำงานตรวจพบว่าความเร็วรถเท่ากับ 5 km/h {3 mph} หรือมากกว่าต่อเนื่องเป็นเวลา 2 นาทีหรือมากกว่า และสวิตช์ขอการทำงาน (ประตูท้าย) อยู่ที่ On 7 ครั้งหรือมากกว่าจนกระทั่งความเร็วรถต่ำกว่า 5 km/h {3 mph}</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B11FD:1F</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สายอากาศกุญแจรีโมท (ภายนอก, ด้านหน้าซ้าย) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานตรวจพบการขาดวงจรในเสาอากาศกุญแจรีโมท (ภายนอก, ด้านหน้าซ้าย) หรือลัดวงจรลงกราวด์ขณะสวิตช์สตาร์ทอยู่ที่ Off</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B1210:1F</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เสาอากาศกุญแจรีโมท (ภายนอก, ด้านด้านขวา) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานตรวจพบการขาดวงจรในเสาอากาศกุญแจรีโมท (ภายนอก, ด้านหน้าขวา) หรือลัดวงจรลงกราวด์ขณะสวิตช์สตาร์ทอยู่ที่ Off</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B13C3:04</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ภายในชุดควบคุมด้านหน้าซ้ายบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบความบกพร่องภายในชุดควบคุมด้านหน้าซ้าย</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B13C3:09</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดควบคุมด้านหน้าซ้ายบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ชุดเปิด/ปิดการทำงานตรวจพบว่าสัญญาณ LF State ของชุดควบคุมด้านหน้าซ้ายต่ำเป็นเวลา 5 วินาทีหรือมากกว่า</div>
+<div class="list">•&nbsp;&nbsp;ขณะที่การสื่อสารระหว่างชุดเปิด/ปิดการทำงาน และชุดควบคุมด้านหน้าซ้ายกำลังถูกดำเนินการเป็นปกติ ไม่มีการตอบกลับจากชุดควบคุมด้านหน้าซ้ายแม้ว่าจะมีคำขอการส่งสัญญาณจากชุดเปิด/ปิดการทำงานไปยังชุดควบคุมด้านหน้าซ้าย และสัญญาณสถานะด้านหน้าซ้ายจะต่ำลง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B13C3:16</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แรงดันไฟฟ้าแหล่งจ่ายไฟชุดควบคุมด้านหน้าซ้ายลดการส่งสัญญาณ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ขณะสวิตช์สตาร์ทอยู่ที่ ON (เครื่องยนต์ไม่ทำงาน) ตรวจพบแรงดันไฟของวงจรแหล่งจ่ายไฟของชุดเปิด/ปิดการทำงาน (+B1) เท่ากับ 8.5 V หรือมากกว่าหรือต่ำกว่า 16.5 V และแรงดันไฟของวงจรแหล่งจ่ายไฟชุดควบคุมด้านหน้าซ้ายเท่ากับ 5 V หรือมากกว่า หรือต่ำกว่า 8.5 V เป็นเวลา 5 วินาทีหรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B13C3:29</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับชุดควบคุมด้านหน้าซ้ายบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ชุดเปิด/ปิดการทำงานตรวจพบข้อผิดพลาดของการสื่อสารกับชุดควบคุมด้านหน้าซ้าย 10 ครั้งติดต่อกัน</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p><br clear="all"><a name="id09140011123307"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ฟังก์ชั่นการตรวจสอบข้อมูล</p>
+<div class="list">•&nbsp;&nbsp;เมื่อใช้ฟังก์ชั่นการตรวจสอบข้อมูล/PID สามารถเลือกและอ่านค่ารายการตรวจสอบสัญญาณอินพุท/เอาท์พุทที่กำหนดไว้ในชุดเปิด/ปิดการทำงานได้แบบเรียลไทม์</div>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">PID</p>
+</th>
+<th id="" align="center">
+<p class="thead">หน่วย/การทำงาน</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายละเอียดข้อมูล</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายการการตรวจสอบ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">LG/T_LK_SW</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์ขอการทำงาน (ประตูท้าย) อยู่ที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;On: สวิตช์ขอการทำงาน (ประตูท้าย) อยู่ที่ On</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ขอการทำงาน (ประตูท้าย)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">RQ_SW_LF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์ขอการทำงาน (ด้านหน้าซ้าย) อยู่ที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;On: สวิตช์ขอการทำงาน (ด้านหน้าซ้าย) อยู่ที่ On</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ขอการทำงาน (ด้านหน้าซ้าย)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">RQ_SW_RF</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์ขอการทำงาน (ด้านหน้าขวา) อยู่ที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;On: สวิตช์ขอการทำงาน (ด้านหน้าขวา) อยู่ที่ On</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ขอการทำงาน (ด้านหน้าขวา)</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</body>
+</html>

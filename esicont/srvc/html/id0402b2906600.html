@@ -1,0 +1,185 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>รหัสวิเคราะห์ปัญหา C1031:35 [ระบบควบคุมการทรงตัวของรถ (DSC)]</title>
+</head>
+<body><a name="id0402b2906600"></a><p class="servinfo-title"><span class="servinfo-head"></span>รหัสวิเคราะห์ปัญหา C1031:35 [ระบบควบคุมการทรงตัวของรถ (DSC)]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0402b2906600</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>รหัสวิเคราะห์ปัญหา</span></div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="tbody"><span>C1031:35</span></div>
+</td>
+<td id="" align="left">
+<div class="tbody"><span>สวิตช์ตั้งระบบเตือนแรงดันลมยาง (TPMS)</span></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody"><span>สภาวะการตรวจพบ</span></div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="list">•&nbsp;&nbsp;ตรวจพบสัญญาณ ON ต่อเนื่องจากสวิตช์ตั้ง TPMS เป็นเวลา <span>60 s หรือนานกว่า</span>นั้น</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody"><span>ฟังก์ชั่น Fail-safe</span></div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="list">•&nbsp;&nbsp;ไฟเตือนระบบเตือนแรงดันลมยางติดสว่างหลังจากกะพริบ</div>
+<div class="list">•&nbsp;&nbsp;ยับยั้งการควบคุม TPMS</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody"><span>สาเหตุที่เป็นไปได้</span></div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="list">•&nbsp;&nbsp;ผู้ขับขี่กดสวิตช์ตั้ง TPMS ค้างไว้เป็นเวลา <span>60 s หรือนานกว่า</span>นั้น</div>
+<div class="list">•&nbsp;&nbsp;สวิตช์ตั้ง TPMS บกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody"><span>ผังวงจรระบบ</span></div>
+</td>
+<td id="" align="center" colspan="2">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p clear="all">
+<p class="table-title">ขั้นตอนการวิเคราะห์ปัญหา</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">การตรวจสอบ</p>
+</th>
+<th id="" align="center">
+<p class="thead">การปฏิบัติ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">1</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบรหัสวิเคราะห์ปัญหาสำหรับแผงหน้าปัด</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;ใช้ M-MDS ทำการตรวจสอบรหัสวิเคราะห์ปัญหาของแผงหน้าปัด<div>(ดูที่ <font class="extxref-label"><a href="id0902e8960300.html">การตรวจสอบรหัสวิเคราะห์ปัญหา [แผงหน้าปัด]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ตรวจพบรหัสวิเคราะห์ปัญหาหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่การตรวจสอบรหัสวิเคราะห์ปัญหานั้นๆ</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0902e8960500.html">ตารางรหัสวิเคราะห์ปัญหา [แผงหน้าปัด]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">2</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบสวิตช์ตั้ง TPMS</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบสวิตช์ตั้ง TPMS<div>(ดูที่ <font class="extxref-label"><a href="id021200206000.html">ขั้นตอนการตรวจสอบสวิตช์ตั้งระบบเตือนแรงดันลมยาง</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;สวิตช์ตั้ง TPMS เป็นปกติหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนสวิตช์ตั้ง TPMS แล้วไปที่ขั้นตอนถัดไป</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id021200205000.html">ขั้นตอนการถอด / การติดตั้งสวิตช์ตั้งระบบเตือนแรงดันลมยาง</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">3</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบว่าไม่มีรหัสวิเคราะห์ปัญหาเดียวกันปรากฏขึ้น</div>
+<div class="list">•&nbsp;&nbsp;ต่อขั้วต่อที่ปลดออกทั้งหมดกลับเข้าที่</div>
+<div class="list">•&nbsp;&nbsp;ลบรหัสวิเคราะห์ปัญหาออกจากหน่วยความจำ<div>(ดูที่ <font class="extxref-label"><a href="id0402b2800200.html">การวิเคราะห์ปัญหาบนรถ [ระบบควบคุมการทรงตัวของรถ (DSC)]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีรหัสวิเคราะห์ปัญหาเดียวกันปรากฏขึ้นหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ทำซ้ำการตรวจสอบตั้งแต่ขั้นตอน 1</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">4</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบว่าไม่มีรหัสวิเคราะห์ปัญหาอื่นปรากฏขึ้น</div>
+<div class="list">•&nbsp;&nbsp;มีรหัสวิเคราะห์ปัญหาอื่นๆ ปรากฏขึ้นหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่การตรวจสอบรหัสวิเคราะห์ปัญหานั้นๆ</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0402b2800200.html">การวิเคราะห์ปัญหาบนรถ [ระบบควบคุมการทรงตัวของรถ (DSC)]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การค้นหาสาเหตุปัญหาของรหัสวิเคราะห์ปัญหาเสร็จสมบูรณ์</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</body>
+</html>

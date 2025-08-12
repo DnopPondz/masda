@@ -1,0 +1,2 @@
+&txtLabel=CAR-NAVIGATION SYSTEM (WITHOUT Bose TYPE AUDIO) 4/4&
+&txtData=S0920_4d&

@@ -1,0 +1,341 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>รหัสวิเคราะห์ปัญหา P1887:11/P1887:12/P1887:13/P1887:14</title>
+</head>
+<body><a name="id030200200500"></a><p class="servinfo-title"><span class="servinfo-head"></span>รหัสวิเคราะห์ปัญหา P1887:11/P1887:12/P1887:13/P1887:14</p>
+<hr>
+<p class="servinfo-title-id" align="right">id030200200500</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<tbody>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody"><span>รหัสวิเคราะห์ปัญหา P1887:11</span></div>
+</td>
+<td id="" align="left" colspan="2" rowspan="4">
+<div class="tbody"><span>วงจรโซลินอยด์ 4WD</span></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody"><span>รหัสวิเคราะห์ปัญหา P1887:12</span></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody"><span>รหัสวิเคราะห์ปัญหา P1887:13</span></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody"><span>รหัสวิเคราะห์ปัญหา P1887:14</span></div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody"><span>สภาวะการตรวจพบ</span></div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="list">•&nbsp;&nbsp;P1887:11</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ตรวจพบการลัดวงจรลงกราวด์ของวงจรโซลินอยด์ 4WD</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;P1887:12</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ตรวจพบการลัดวงจรกับแบตเตอรี่ของวงจรโซลินอยด์ 4WD</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;P1887:13</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ตรวจพบการขาดวงจรของวงจรโซลินอยด์ 4WD</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;P1887:14</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ตรวจพบการขาดวงจรหรือการลัดวงจรลงกราวด์ของวงจรแหล่งจ่ายไฟ</div>
+</dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody"><span>ฟังก์ชั่น Fail-safe</span></div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="list">•&nbsp;&nbsp;ยกเลิกการควบคุม</div>
+<div class="list">•&nbsp;&nbsp;ไฟเตือน 4WD: ติดสว่าง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2">
+<div class="tbody"><span>สาเหตุที่เป็นไปได้</span></div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="list">•&nbsp;&nbsp;ความบกพร่องของโซลินอยด์ 4WD</div>
+<div class="list">•&nbsp;&nbsp;การขาดวงจรหรือการลัดวงจรลงกราวด์ระหว่างขั้ว O ของ 4WD CM และขั้ว A ของโซลินอยด์ 4WD</div>
+<div class="list">•&nbsp;&nbsp;การขาดวงจรหรือการลัดวงจรลงกราวด์ระหว่างขั้ว P ของ 4WD CM และขั้ว B ของโซลินอยด์ 4WD</div>
+<div class="list">•&nbsp;&nbsp;การขาดวงจรหรือการลัดวงจรลงกราวด์ของชุดสายไฟระหว่างแบตเตอรี่กับขั้ว K ของ 4WD CM</div>
+<div class="list">•&nbsp;&nbsp;การขาดวงจรระหว่างขั้ว N ของ 4WD CM กับกราวด์ตัวถัง</div>
+<div class="list">•&nbsp;&nbsp;การขาดวงจรหรือการลัดวงจรของวงจรภายใน 4WD CM</div>
+<div class="list">•&nbsp;&nbsp;ฟิวส์ AT (15A) บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;4WD CM บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;การต่อไม่แน่นของขั้วต่อ (ขั้วตัวเมีย)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="4"><img src="images/ac5wzw00002549.png"></td>
+</tr>
+</tbody>
+</table>
+</p>
+<p clear="all">
+<p class="table-title">ขั้นตอนการวิเคราะห์ปัญหา</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">การตรวจสอบ</p>
+</th>
+<th id="" align="center">
+<p class="thead">การปฏิบัติ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">1</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบสภาวะโซลินอยด์ 4WD</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อโซลินอยด์ 4WD</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบโซลินอยด์ 4WD<div>(ดูที่ <font class="extxref-label"><a href="id031800805800.html">การตรวจสอบโซลินอยด์ 4WD</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;โซลินอยด์ 4WD ปกติหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนโซลินอยด์ 4WD แล้วไปที่ขั้นตอน 8</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">2</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการขาดวงจรของโซลินอยด์ 4WD กับ 4WD CM (วงจรแหล่งจ่ายไฟ)</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อ 4WD CM</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต่อเนื่องระหว่างขั้ว O ของ 4WD CM และขั้ว A ของโซลินอยด์ 4WD</div>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องหรือไม่?</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชุดสายไฟของการขาดวงจรระหว่าง 4WD CM กับโซลินอยด์ 4WD แล้วไปที่ขั้นตอน 8</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">3</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรลงกราวด์ของโซลินอยด์ 4WD กับ 4WD CM (วงจรแหล่งจ่ายไฟ)</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต่อเนื่องระหว่างขั้ว O ของ 4WD CM กับกราวด์</div>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องหรือไม่?</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชุดสายไฟของการลัดวงจรลงกราวด์ระหว่าง 4WD CM กับโซลินอยด์ 4WD แล้วไปที่ขั้นตอน 8</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">4</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการขาดวงจรของโซลินอยด์ 4WD กับ 4WD CM (วงจรกราวด์)</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต่อเนื่องระหว่างขั้ว P ของ 4WD CM และขั้ว B ของโซลินอยด์ 4WD</div>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องหรือไม่?</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชุดสายไฟของการขาดวงจรระหว่าง 4WD CM กับโซลินอยด์ 4WD แล้วไปที่ขั้นตอน 8</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">5</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการลัดวงจรลงกราวด์ของโซลินอยด์ 4WD กับ 4WD CM (วงจรกราวด์)</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความต่อเนื่องระหว่างขั้ว P ของ 4WD CM กับกราวด์</div>
+<div class="list">•&nbsp;&nbsp;มีความต่อเนื่องหรือไม่?</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชุดสายไฟของการลัดวงจรลงกราวด์ระหว่าง 4WD CM กับโซลินอยด์ 4WD แล้วไปที่ขั้นตอน 8</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">6</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการขาดวงจรของวงจรแหล่งจ่ายไฟ 4WD CM</div>
+<div class="list">•&nbsp;&nbsp;วัดแรงดันไฟฟ้าระหว่างขั้ว K ของ 4WD CM กับกราวด์</div>
+<div class="list">•&nbsp;&nbsp;มีแรงดันไฟฟ้าเท่ากับ B+ หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยน 4WD CM แล้วไปที่ขั้นตอน 8</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชุดสายไฟของการขาดวงจรระหว่าง 4WD CM กับโซลินอยด์ 4WD แล้วไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">7</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบสภาพของฟิวส์</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;ฟิวส์ AT (15A) ปกติหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนฟิวส์ แล้วไปที่ขั้นตอน 9</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">8</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบว่าการค้นหาสาเหตุปัญหาเสร็จสมบูรณ์แล้ว</div>
+<div class="list">•&nbsp;&nbsp;ให้แน่ใจว่าได้ต่อขั้วต่อที่ปลดออกทั้งหมดกลับเข้าที่</div>
+<div class="list">•&nbsp;&nbsp;ลบรหัสวิเคราะห์ปัญหาออกจากหน่วยความจำ<div>(ดูที่ <font class="extxref-label"><a href="id030200802500.html">การวิเคราะห์ปัญหาบนรถของระบบควบคุม 4WD อิเล็กทรอนิกส์</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ขับรถ</div>
+<div class="list">•&nbsp;&nbsp;มีรหัสวิเคราะห์ปัญหาเดียวกันปรากฏขึ้นหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยน 4WD CM แล้วไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">9</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบขั้นตอนหลังจากงานซ่อม</div>
+<div class="list">•&nbsp;&nbsp;มีรหัสวิเคราะห์ปัญหาใดๆ ปรากฏขึ้นหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่การตรวจสอบรหัสวิเคราะห์ปัญหานั้นๆ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การค้นหาสาเหตุปัญหาเสร็จสมบูรณ์แล้ว</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</body>
+</html>

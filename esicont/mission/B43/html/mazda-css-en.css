@@ -1,0 +1,202 @@
+body {
+	font-family: CordiaUPC;
+	font-size: 18;
+	background-color: ffffff;
+}
+p.servinfo-title {
+	font-family: CordiaUPC;
+	font-size: 22;
+	font-weight: bold;
+	text-align: center;
+}
+p.servinfo-title-id {
+	font-family: CordiaUPC;
+	font-size: 18;
+}
+span.servinfo-head {
+}
+p.servinfosub-title {
+	font-family: CordiaUPC;
+	font-size: 20;
+	font-weight: bold;
+}
+span.servinfosub-head {
+}
+p.topic-title {
+	font-family: CordiaUPC;
+	font-size: small;
+	font-weight: bold;
+}
+span.topic-head {
+}
+p.list {
+	font-family: CordiaUPC;
+	font-size: 18;
+}
+dl.list {
+	font-family: CordiaUPC;
+	font-size: 18;
+}
+div.list {
+	font-family: CordiaUPC;
+	font-size: 18;
+}
+div.list-title {
+	font-family: CordiaUPC;
+	font-size: 18;
+	font-weight: bold;
+}
+p.table-title {
+	font-family: CordiaUPC;
+	font-size: 18;
+	font-weight: bold;
+}
+p.thead {
+	font-family: CordiaUPC;
+	font-size: 18;
+	font-weight: bold;
+}
+p.tbody {
+	font-family: CordiaUPC;
+	font-size: 18;
+}
+div.tbody {
+	font-family: CordiaUPC;
+	font-size: 18;
+}
+div.entry-title {
+	font-family: CordiaUPC;
+	font-size: 18;
+	font-weight: bold;
+}
+p.figure-title {
+	font-family: CordiaUPC;
+	font-size: 18;
+	font-weight: bold;
+}
+div.figure-caption {
+	font-family: CordiaUPC;
+	font-size: 6pt;
+	text-align: right;
+}
+div.attention1-label {
+	font-family: CordiaUPC;
+	font-size: small;
+	font-weight: bold;
+	color: red;
+}
+div.attention1 {
+	font-family: CordiaUPC;
+	font-size: 18;
+}
+div.attention2-label {
+	font-family: CordiaUPC;
+	font-size: small;
+	font-weight: bold;
+	color: red;
+}
+div.attention2 {
+	font-family: CordiaUPC;
+	font-size: 18;
+}
+div.attention3-label {
+	font-family: CordiaUPC;
+	font-size: small;
+	font-weight: bold;
+	color: blue;
+}
+div.attention3 {
+	font-family: CordiaUPC;
+	font-size: 18;
+}
+font.intxref-label {
+	font-family: CordiaUPC;
+	font-size: 18;
+}
+font.extxref-label {
+	font-family: CordiaUPC;
+	font-size: 18;
+}
+div.ptxt {
+	font-family: CordiaUPC;
+	font-size: 18;
+}
+div.deflist {
+	font-family: CordiaUPC;
+	font-size: 18;
+}
+div.spec {
+	font-family: CordiaUPC;
+	font-size: 18;
+}
+p.symbol {
+	font-family: CordiaUPC;
+	font-size: 18;
+}
+span.bold {
+	font-weight: bold;
+}
+table.figure-float {
+	width:90mm;
+	height:45mm;
+	border-top-width:0.15mm;
+	border-bottom-width:0.15mm;
+	border-left-width:0.15mm;
+	border-right-width:0.15mm;
+	border-style:solid;
+}
+table.figure-non-float {
+	width:170mm;
+	height:45mm;
+	border-top-width:0.15mm;
+	border-bottom-width:0.15mm;
+	border-left-width:0.15mm;
+	border-right-width:0.15mm;
+	border-style:solid;
+}
+table.continuity-1 {
+	width:170mm;
+	height:45mm;
+	text-align: center;
+}
+table.continuity-2 {
+	width:90mm;
+	height:45mm;
+}
+table.figure-flame {
+}
+table.figure-flame-non {
+}
+table.table-flame {
+}
+th {
+}
+span.wingdings {
+	font-family: Wingdings;
+}
+span.msgothic {
+	font-family: CordiaUPC;
+}
+span.Times_New_Roman {
+	font-family: CordiaUPC;
+}
+span.ZapfDingbats {
+	font-family: CordiaUPC;
+}
+span.Symbol {
+	font-family: CordiaUPC;
+}
+div.rotate {
+	writing-mode: tb-rl ;
+	filter:fliph() flipv();
+}
+a:link
+{
+    /* ñ¢ñKñ‚ÉäÉìÉN */
+    color: #3366CC;
+}
+a:visited
+{
+    /* ñKñ‚çœÇ›ÉäÉìÉN */
+    color: #9999CC;
+}

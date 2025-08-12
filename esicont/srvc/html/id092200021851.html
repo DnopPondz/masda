@@ -1,0 +1,1816 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>การวิเคราะห์ปัญหาบนรถ [ระบบตรวจจับรถด้านหลัง (RVM)]</title>
+</head>
+<body><a name="id092200021851"></a><p class="servinfo-title"><span class="servinfo-head"></span>การวิเคราะห์ปัญหาบนรถ [ระบบตรวจจับรถด้านหลัง (RVM)]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id092200021851</p><br clear="all"><a name="id09220002185101"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รายละเอียด</p>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่นการวิเคราะห์ปัญหาบนรถจะประกอบด้วยฟังก์ชั่นต่อไปนี้: ฟังก์ชั่นตรวจจับความบกพร่องซึ่งจะตรวจจับความบกพร่องทั้งหมดในชิ้นส่วนที่เกี่ยวข้องกับโมดูลควบคุมระบบตรวจจับรถด้านหลัง ฟังก์ชั่นหน่วยความจำซึ่งจะบันทึกรหัสวิเคราะห์ปัญหาที่ตรวจพบ ฟังก์ชั่นการแสดงผลซึ่งจะบ่งชี้ตำแหน่งและสถานะความบกพร่องผ่านรหัสวิเคราะห์ปัญหาที่เอาท์พุท และฟังก์ชั่นการตรวจสอบ PID/DATA ซึ่งจะอ่านสัญญาณอินพุท/เอาท์พุทจำเพาะและตรวจสอบสภาวะอินพุท/เอาท์พุทดังกล่าว</div>
+<div class="list">•&nbsp;&nbsp;เมื่อใช้ Mazda Modular Diagnostic System (M-MDS) สามารถอ่านและลบรหัสวิเคราะห์ปัญหา และสามารถเปิดใช้งานฟังก์ชั่นการตรวจสอบ PID/DATA ได้</div><br clear="all"><a name="id09220002185102"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ฟังก์ชั่นการตรวจจับความบกพร่อง</p>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบความบกพร่องในสัญญาณอินพุทและเอาท์พุท</div>
+<div class="list">•&nbsp;&nbsp;หากมีความบกพร่องเกิดขึ้น โมดูลควบคุมระบบตรวจจับรถด้านหลังจะบันทึกความบกพร่องดังกล่าวเป็นรหัสวิเคราะห์ปัญหา สามารถอ่านรหัสวิเคราะห์ปัญหาที่บันทึกไว้โดย Mazda Modular Diagnostic System (M-MDS)</div>
+<p clear="all">
+<p>
+<div>&times;: สามารถทำได้</div>
+<div>&mdash;: ไม่มี</div>
+</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา</p>
+</th>
+<th id="" align="center">
+<p class="thead">ไฟเตือนระบบตรวจจับรถด้านหลัง (RVM) (สีเหลือง)</p>
+</th>
+<th id="" align="center">
+<p class="thead">คำอธิบาย</p>
+</th>
+<th id="" align="center">
+<p class="thead">ฟังก์ชั่น Fail-safe</p>
+</th>
+<th id="" align="center">
+<p class="thead">รอบการขับ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ประเภทการทดสอบด้วยตนเอง<sup>*1</sup></p>
+</th>
+<th id="" align="center">
+<p class="thead">ฟังก์ชั่นหน่วยความจำ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">B11CB:11</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรไฟแสดงสถานะการเตือน RVM (ขวา) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B11CB:15</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรไฟแสดงสถานะการเตือน RVM (ขวา) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B11D3:11</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรไฟแสดงสถานะการเตือน RVM (ซ้าย) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B11D3:15</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรไฟแสดงสถานะการเตือน RVM (ซ้าย) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B11F2:23</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ RVM บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0001:88</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารชุดอุปกรณ์ผิดพลาด (MS-CAN)</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0028:87</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารของโมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย) และ (ขวา) ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0100:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ PCM ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0121:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ DSC HU/CM ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับแผงหน้าปัดผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0214:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับชุดเปิด/ปิดการทำงานผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0401:68</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณที่ได้รับจาก PCM ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0415:68</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณที่ได้รับจาก DSC HU/CM ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0423:68</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ได้รับสัญญาณข้อผิดพลาดจากแผงหน้าปัด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0515:68</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณที่ได้รับจากชุดเปิด/ปิดการทำงานผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U1A4B:16</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อินพุทแหล่งจ่ายไฟโมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย) ต่ำ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U1A4B:17</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อินพุทแหล่งจ่ายไฟโมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย) สูง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U1A4B:43</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U1A4B:44</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U1A4B:45</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U1A4B:46</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U1A4B:47</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U1A4B:48</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U1A4B:49</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U1A4B:54</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การปรับเรดาร์ไม่ถูกดำเนินการ หรือแกนเซ็นเซอร์เรดาร์เบี้ยว (โมดูลควบคุมระบบการตรวจจับรถด้านหลัง (ซ้าย))</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U1A4B:96</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U1A4B:97</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความไวของเรดาร์เซ็นเซอร์ลดลงชั่วคราวขึ้นอยู่กับปัจจัยภายนอกและสิ่งแวดล้อมต่างๆ (โมดูลควบคุมระบบการตรวจจับรถด้านหลัง (ซ้าย))</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2100:00</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การตั้งค่าโมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา) ผิดพลาด</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:43</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:44</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:45</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:46</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:47</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:48</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:49</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:4B</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิจะลดลงชั่วคราวตามปัจจัยภายนอกและสิ่งแวดล้อมต่างๆ (โมดูลควบคุมระบบการตรวจจับรถด้านหลัง (ซ้าย) หรือ (ขวา))</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:54</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การปรับเรดาร์ไม่ถูกดำเนินการ หรือแกนเซ็นเซอร์เรดาร์เบี้ยว (โมดูลควบคุมระบบการตรวจจับรถด้านหลัง (ขวา))</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:96</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา) บกพร่อง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:97</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความไวของเรดาร์เซ็นเซอร์ลดลงชั่วคราวขึ้นอยู่กับปัจจัยภายนอกและสิ่งแวดล้อมต่างๆ (โมดูลควบคุมระบบการตรวจจับรถด้านหลัง (ขวา))</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3003:16</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อินพุทแหล่งจ่ายไฟโมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา) ต่ำ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3003:17</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ON</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อินพุทแรงดันไฟฟ้าของแหล่งจ่ายไฟโมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา) สูง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="center">
+<div class="tbody">C, D</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&times;</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="deflist">*1&nbsp;&nbsp;:C: การทดสอบ CMDTC ด้วยตนเอง, D: การทดสอบ ODDTC ด้วยตนเอง</div><br clear="all"><p><a name="id09220002185103"></a><p class="topic-title"><span class="topic-head"></span>คำอธิบายรหัส 7 หลักของรหัสวิเคราะห์ปัญหา</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เมื่อระบบหรือส่วนประกอบที่เกี่ยวข้องทำงานผิดพลาดของกล่องควบคุม จะจัดเก็บรหัสวิเคราะห์ปัญหาของส่วนที่ทำงานบกพร่องไว้ในหน่วยความจำของกล่องควบคุม และสามารถเรียกดูข้อมูลที่จัดเก็บโดยใช้เครื่องมือสแกนได้เมื่อจำเป็น รหัสวิเคราะห์ปัญหาได้รับการกำหนดโดยใช้ตัวเลข 7 หลัก ซึ่งตัวเลขแต่ละหลักมีความหมายดังต่อไปนี้<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/am6xun00000789.png"></td>
+</tr>
+</table>
+<div class="figure-caption">am6xun00000789</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09220002185104"></a><p class="topic-title"><span class="topic-head"></span>ไบต์แสดงสถานะของรหัสวิเคราะห์ปัญหา</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ไบต์แสดงสถานะคือรหัสสองหลัก (สองหลักหลังเครื่องหมายขีด (-)) หลังรหัสวิเคราะห์ปัญหา 7 หลัก<table class="figure-flame">
+<tr>
+<td width="10mm"></td>
+<td>
+<table class="figure-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00002010.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00002010</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="list">•&nbsp;&nbsp;ไบต์แสดงสถานะคือรหัสที่แสดงรหัสที่ค้างอยู่, สถานะความบกพร่องปัจจุบัน/ในอดีต หรือสถานะไฟเตือน</div>
+<div class="list">•&nbsp;&nbsp;ไบต์แสดงสถานะสามารถอ่านได้ด้วยการทดสอบ CMDTC ด้วยตนเองโดยใช้ Mazda Modular Diagnostic System (M-MDS)</div>
+<div class="list">•&nbsp;&nbsp;สำหรับรายละเอียดเกี่ยวกับไบต์แสดงสถานะ ให้ดูที่คำอธิบายใน M-MDS เมื่ออ่านรหัสวิเคราะห์ปัญหา</div>
+</dd>
+</dl>
+</p>
+<p clear="all">
+<p class="table-title">สภาวะการตรวจพบสำหรับรหัสวิเคราะห์ปัญหานั้นๆ</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รหัสวิเคราะห์ปัญหา</p>
+</th>
+<th id="" align="center">
+<p class="thead">ตำแหน่งความบกพร่องของระบบ</p>
+</th>
+<th id="" align="center">
+<p class="thead">สภาวะการตรวจพบ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody">B11CB:11</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรไฟแสดงสถานะการเตือน RVM (ขวา) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย) ตรวจพบการลัดวงจรลงกราวด์ในไฟแสดงสถานะการเตือน RVM (ขวา)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B11CB:15</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรไฟแสดงสถานะการเตือน RVM (ขวา) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย) ตรวจพบการขาดหรือการลัดวงจรลงกราวด์ของวงจรแหล่งจ่ายไฟสำหรับไฟแสดงสถานะการเตือน RVM (ขวา)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B11D3:11</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรไฟแสดงสถานะการเตือน RVM (ซ้าย) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย) ตรวจพบการลัดวงจรลงกราวด์ของไฟแสดงสถานะการเตือน RVM (ซ้าย)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B11D3:15</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรไฟแสดงสถานะการเตือน RVM (ซ้าย) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย) ตรวจพบการขาดหรือการลัดวงจรลงกราวด์ของวงจรแหล่งจ่ายไฟสำหรับไฟแสดงสถานะการเตือน RVM (ซ้าย)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">B11F2:23</div>
+</td>
+<td id="" align="left">
+<div class="tbody">วงจรสวิตช์ RVM บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา) ได้รับสัญญาณ ON ของสวิตช์ RVM จากแผงหน้าปัดเป็นเวลา 2 นาที หรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0001:88</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารชุดอุปกรณ์ผิดพลาด (MS-CAN)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา) จะตรวจจับความบกพร่องในสายบัสการสื่อสารระบบ CAN (MS-CAN)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0028:87</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารของโมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย) และ (ขวา) ผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไม่มีการสื่อสารระหว่างโมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย) กับ (ขวา) เป็นเวลา 1 วินาที หรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0100:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ PCM ผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา) ไม่ได้รับสัญญาณระบบ CAN จาก PCM เป็นเวลา 2 วินาที หรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0121:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับ DSC HU/CM ผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา) ไม่ได้รับสัญญาณระบบ CAN จาก DSC HU/CM เป็นเวลา 2 วินาที หรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0155:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับแผงหน้าปัดผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา) ไม่ได้รับสัญญาณระบบ CAN จากแผงหน้าปัดเป็นเวลา 2 วินาที หรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0214:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การสื่อสารกับชุดเปิด/ปิดการทำงานผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา) ไม่ได้รับสัญญาณระบบ CAN จากชุดเปิด/ปิดการทำงานเป็นเวลา 2 วินาที หรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0401:68</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณที่ได้รับจาก PCM ผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา) ได้รับสัญญาณความบกพร่องจาก PCM เป็นเวลา 2 วินาที หรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0415:68</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณที่ได้รับจาก DSC HU/CM ผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา) ได้รับสัญญาณความบกพร่องจาก DSC HU/CM เป็นเวลา 2 วินาที หรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0423:68</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ได้รับสัญญาณข้อผิดพลาดจากแผงหน้าปัด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา) ได้รับสัญญาณความบกพร่องจากแผงหน้าปัดเป็นเวลา 2 วินาที หรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U0515:68</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณที่ได้รับจากชุดเปิด/ปิดการทำงานผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา) ได้รับสัญญาณความบกพร่องจากชุดเปิด/ปิดการทำงานเป็นเวลา 2 วินาที หรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U1A4B:16</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อินพุทแรงดันไฟฟ้าของแหล่งจ่ายไฟโมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย) ต่ำ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อินพุทแรงดันไฟฟ้าของแหล่งจ่ายไฟโมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย) ต่ำ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U1A4B:17</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อินพุทแรงดันไฟฟ้าของแหล่งจ่ายไฟโมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย) สูง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบแรงดันไฟฟ้าของวงจรแหล่งจ่ายไฟ 16 V ขึ้นไปในโมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย) เป็นเวลา 1 วินาที หรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U1A4B:43</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบความบกพร่องของ RAM ภายนอกที่โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U1A4B:44</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบความบกพร่องของ RAM ภายในที่โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U1A4B:45</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบความบกพร่องของ ROM ที่โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U1A4B:46</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบความบกพร่องของ EEPROM ที่โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U1A4B:47</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบความบกพร่องของระบบตรวจสอบที่โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U1A4B:48</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบความบกพร่องของวงจรสื่อสารที่โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U1A4B:49</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบความบกพร่องของวงจรควบคุมแรงดันไฟฟ้าที่โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U1A4B:54</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การปรับเรดาร์ไม่ถูกดำเนินการ หรือแกนเซ็นเซอร์เรดาร์เบี้ยว (โมดูลควบคุมระบบการตรวจจับรถด้านหลัง (ซ้าย))</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบความบกพร่องในการปรับเรดาร์ของโมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย) เป็นเวลา 1 วินาที หรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U1A4B:96</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody"> ตรวจพบความบกพร่องของวงจรภายในที่โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U1A4B:97</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความไวของเรดาร์เซ็นเซอร์ลดลงชั่วคราวขึ้นอยู่กับปัจจัยภายนอกและสิ่งแวดล้อมต่างๆ (โมดูลควบคุมระบบการตรวจจับรถด้านหลัง (ซ้าย))</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความไวของเรดาร์เซ็นเซอร์ในโมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย) ลดลงชั่วคราว</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U2100:00</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การตั้งค่าโมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา) ผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบการกำหนดค่าโมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย) ผิดพลาด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:43</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา) บกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:44</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบความบกพร่องของ RAM ภายในที่โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:45</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบความบกพร่องของ ROM ที่โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:46</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบความบกพร่องของ EEPROM ที่โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:47</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบความบกพร่องของระบบตรวจสอบที่โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:48</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบความบกพร่องของวงจรสื่อสารที่โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:49</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบความบกพร่องของวงจรควบคุมแรงดันไฟฟ้าที่โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:4B</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อุณหภูมิจะลดลงชั่วคราวตามปัจจัยภายนอกและสิ่งแวดล้อมต่างๆ (โมดูลควบคุมระบบการตรวจจับรถด้านหลัง (ซ้าย) หรือ (ขวา))</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบอุณหภูมิภายในโมดูลควบคุมระบบตรวจจับรถด้านหลังที่ระดับ 85 &deg;C {185 &deg;F} หรือสูงกว่า เป็นเวลา 10 วินาที หรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:54</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การปรับเรดาร์ไม่ถูกดำเนินการ หรือแกนเซ็นเซอร์เรดาร์เบี้ยว (โมดูลควบคุมระบบการตรวจจับรถด้านหลัง (ขวา))</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบความบกพร่องในการปรับเรดาร์ของโมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา) เป็นเวลา 1 วินาที หรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:96</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา) บกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ยับยั้งระบบตรวจจับรถด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3000:97</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความไวของเรดาร์เซ็นเซอร์ลดลงชั่วคราวขึ้นอยู่กับปัจจัยภายนอกและสิ่งแวดล้อมต่างๆ (โมดูลควบคุมระบบการตรวจจับรถด้านหลัง (ขวา))</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความไวของเรดาร์เซ็นเซอร์ในโมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา) ลดลงชั่วคราว</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3003:16</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อินพุทแรงดันไฟฟ้าของแหล่งจ่ายไฟโมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา) ต่ำ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบแรงดันไฟฟ้าของวงจรแหล่งจ่ายไฟ 9 V หรือน้อยกว่าในโมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา) เป็นเวลา 1 วินาที หรือมากกว่า</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">U3003:17</div>
+</td>
+<td id="" align="left">
+<div class="tbody">อินพุทแรงดันไฟฟ้าของแหล่งจ่ายไฟโมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา) สูง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ตรวจพบแรงดันไฟฟ้าของวงจรแหล่งจ่ายไฟ 16 V ขึ้นไปในโมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา) เป็นเวลา 1 วินาที หรือมากกว่า</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p><br clear="all"><a name="id09220002185105"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ฟังก์ชั่นการตรวจสอบข้อมูล</p>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่นการตรวจสอบข้อมูล/PID ทำการอ่านค่ารายการตรวจสอบสัญญาณอินพุท/เอาท์พุทที่อาจเลือกไว้ซึ่งได้ตั้งค่าไว้ในโมดูลควบคุมระบบตรวจจับรถด้านหลังแบบเรียลไทม์</div>
+<p clear="all">
+<p class="table-title">ตารางการตรวจสอบข้อมูล / PID</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ชื่อ PID</p>
+</th>
+<th id="" align="center">
+<p class="thead">หน่วย/สถานะ</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายละเอียดข้อมูล</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายการการตรวจสอบ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">AIM_ANGL_L</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg; (deg)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แสดงมุมการปรับเรดาร์โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">AIM_ANGL_R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg; (deg)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แสดงมุมการปรับเรดาร์โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">เสียงเตือน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สัญญาณเตือนระบบตรวจจับรถด้านหลังไม่ดัง</div>
+<div class="list">•&nbsp;&nbsp;On: สัญญาณเตือนระบบตรวจจับรถด้านหลังดัง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แผงหน้าปัด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">INTNL_TMP_L</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C,&deg;F</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แสดงอุณหภูมิภายในโมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">INTNL_TMP_R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;C,&deg;F</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แสดงอุณหภูมิภายในโมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">MAIN_SW</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์ RVM ไม่ถูกกด</div>
+<div class="list">•&nbsp;&nbsp;On: สวิตช์ RVM ถูกกด</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ RVM</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">OP_BRT_L</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แสดงความสว่างเอาท์พุทของไฟแสดงสถานะการเตือน RVM (ซ้าย)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะการเตือน RVM (ซ้าย)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">OP_BRT_R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แสดงความสว่างเอาท์พุทของไฟแสดงสถานะการเตือน RVM (ขวา)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะการเตือน RVM (ขวา)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">RVM_SYS_ST</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/Passive_On/Active_On/Failure</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: ระบบตรวจจับรถด้านหลังไม่ทำงาน</div>
+<div class="list">•&nbsp;&nbsp;Passive_On: ระบบตรวจจับรถด้านหลังพร้อมทำงาน</div>
+<div class="list">•&nbsp;&nbsp;Active_On: ระบบตรวจจับรถด้านหลังทำงานอยู่</div>
+<div class="list">•&nbsp;&nbsp;Failure: ระบบตรวจจับรถด้านหลังทำงานบกพร่อง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">TURN_SW_L</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์ไฟเลี้ยวอยู่ในตำแหน่งอื่นที่ไม่ใช่ LH (ด้านซ้าย)</div>
+<div class="list">•&nbsp;&nbsp;On: สวิตช์ไฟเลี้ยวอยู่ในตำแหน่ง LH (ด้านซ้าย)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ไฟเลี้ยว</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">TURN_SW_R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สวิตช์ไฟเลี้ยวอยู่ในตำแหน่งอื่นที่ไม่ใช่ RH (ด้านขวา)</div>
+<div class="list">•&nbsp;&nbsp;On: สวิตช์ไฟเลี้ยวอยู่ในตำแหน่ง RH (ด้านขวา)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สวิตช์ไฟเลี้ยว</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">VPWR_L</div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แสดงแรงดันไฟฟ้าของแหล่งจ่ายไฟโมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ซ้าย)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">VPWR_R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">V</div>
+</td>
+<td id="" align="left">
+<div class="tbody">แสดงแรงดันไฟฟ้าของแหล่งจ่ายไฟโมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา)</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุมระบบตรวจจับรถด้านหลัง (ขวา)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">VSPD</div>
+</td>
+<td id="" align="center">
+<div class="tbody">KPH, MPH</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ความเร็วรถปรากฏขึ้น</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&mdash;</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">YAW_RATE</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg;/s</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;&mdash;: หยุดรถหรือขณะเคลื่อนที่ตรงไปข้างหน้า</div>
+<div class="list">•&nbsp;&nbsp;เกินกว่า 0&deg;/วินาที: รถเอียงซ้าย</div>
+<div class="list">•&nbsp;&nbsp;ต่ำกว่า 0&deg;/วินาที: รถเอียงขวา</div>
+</td>
+<td id="" align="left">
+<div class="tbody">โมดูลควบคุม SAS</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p><br clear="all"><a name="id09220002185106"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ฟังก์ชั่นโหมดคำสั่งการทำงาน</p>
+<div class="list">•&nbsp;&nbsp;ฟังก์ชั่น Active Command Mode แสดงไว้ทางด้านล่างนี้</div>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ชื่อคำสั่ง</p>
+</th>
+<th id="" align="center">
+<p class="thead">หน่วย/การทำงาน</p>
+</th>
+<th id="" align="center">
+<p class="thead">รายละเอียดข้อมูล</p>
+</th>
+<th id="" align="center">
+<p class="thead">ชื่อส่วนสัญญาณอินพุท</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">เสียงเตือน</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: สัญญาณเตือนระบบตรวจจับรถด้านหลังไม่ดัง</div>
+<div class="list">•&nbsp;&nbsp;On: สัญญาณเตือนระบบตรวจจับรถด้านหลังดัง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สัญญาณเตือนระบบตรวจจับรถด้านหลัง (แผงหน้าปัด)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">WRN_IND_L</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: ปิดไฟแสดงสถานะการเตือน RVM (ซ้าย)</div>
+<div class="list">•&nbsp;&nbsp;On: ไฟแสดงสถานะการเตือน RVM (ซ้าย) ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะการเตือน RVM (ซ้าย)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">WRN_IND_R</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Off/On</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;Off: ปิดไฟแสดงสถานะการเตือน RVM (ขวา)</div>
+<div class="list">•&nbsp;&nbsp;On: ไฟแสดงสถานะการเตือน RVM (ขวา) ติดสว่าง</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไฟแสดงสถานะการเตือน RVM (ขวา)</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>สัญญาณเตือนของตัวเตือนการเปิดไฟส่องสว่าง</title>
+</head>
+<body><a name="id092200019200"></a><p class="servinfo-title"><span class="servinfo-head"></span>สัญญาณเตือนของตัวเตือนการเปิดไฟส่องสว่าง</p>
+<hr>
+<p class="servinfo-title-id" align="right">id092200019200</p><br clear="all"><a name="id09220001920001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>จุดประสงค์:</p>
+<div class="list">•&nbsp;&nbsp;สัญญาณเตือนของตัวเตือนการเปิดไฟส่องสว่างแจ้งให้ผู้ขับขี่ทราบว่าไม่ได้ปิด TNS และไฟหน้า</div><br clear="all"><a name="id09220001920002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัดจะได้รับสัญญาณสภาวะรถต่อไปนี้ผ่านสัญญาณระบบ CAN จากชุดเปิด/ปิดการทำงานและโมดูลควบคุมตัวถังด้านหลัง (RBCM)</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;สัญญาณ ON ของสวิตช์ TNS จากชุดเปิด/ปิดการทำงาน (TNS และไฟหน้าติดสว่าง)</div>
+<div class="list">―&nbsp;&nbsp;สัญญาณ ON สวิตช์ล็อคประตูหน้าด้านคนขับจากโมดูลควบคุมตัวถังด้านหลัง (RBCM)</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;หากบิดสวิตช์สตาร์ทไปที่ OFF หรือ ACC เมื่อได้รับสัญญาณสภาวะรถข้างต้นทั้งหมด แผงหน้าปัดจะสั่งให้สัญญาณเตือนการเปิดไฟส่องสว่างทำงาน</div>
+<div class="list">•&nbsp;&nbsp;รูปแบบเสียงของสัญญาณเตือนของตัวเตือนการเปิดไฟส่องสว่างเป็นดังที่แสดงไว้ในรูปภาพ<table class="figure-flame">
+<tr>
+<td width="10mm"></td>
+<td>
+<table class="figure-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00000614.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00000614</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="list">•&nbsp;&nbsp;แผงหน้าปัดที่ติดตั้งจอ TFT LCD จะแสดงข้อความเตือนในจอแสดงผล TFT LCD ขณะเดียวกันกับที่มีเสียงสัญญาณเตือนของตัวเตือนการเปิดไฟส่องสว่าง<table class="figure-flame">
+<tr>
+<td width="10mm"></td>
+<td>
+<table class="figure-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00002052.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00002052</div>
+</td>
+</tr>
+</table>
+</div><br clear="all"><a name="id09220001920003"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>โครงสร้าง</p>
+<div class="list">•&nbsp;&nbsp;สัญญาณเตือนของตัวเตือนการเปิดไฟส่องสว่างทำงานโดยใช้เสียงเตือนที่อยู่ในแผงหน้าปัด</div><br clear="all"><a name="id09220001920004"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<p class="list">1.&nbsp;&nbsp;แผงหน้าปัดจะได้รับ (1) สัญญาณ ON สวิตช์ TNS จากชุดเปิด/ปิดการทำงานและสัญญาณ ON สวิตช์ล็อคประตูหน้าด้านคนขับจากโมดูลควบคุมตัวถังด้านหลัง (RBCM)</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;เมื่อบิดสวิตช์สตาร์ทไปที่ OFF หรือ ACC ขณะที่ได้รับสัญญาณแต่ละตัว แผงหน้าปัดจะเปิดใช้งาน (2) ทรานซิสเตอร์</p>
+<p class="list">
+</p>
+<p class="list">3.&nbsp;&nbsp;เมื่อทรานซิสเตอร์เปิดใช้งาน วงจรกราวด์ของสัญญาณเตือนจะถูกสร้างขึ้นและมีเสียงสัญญาณเตือน (3)</p>
+<p class="list">
+</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5uun00000887.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5uun00000887</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id09220001920005"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>Fail-safe</p>
+<div class="list">•&nbsp;&nbsp;ไม่มีฟังก์ชั่นนี้</div>
+</body>
+</html>

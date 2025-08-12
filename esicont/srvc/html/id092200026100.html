@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>จอแสดงผลผลของระบบ i-stop</title>
+</head>
+<body><a name="id092200026100"></a><p class="servinfo-title"><span class="servinfo-head"></span>จอแสดงผลผลของระบบ i-stop</p>
+<hr>
+<p class="servinfo-title-id" align="right">id092200026100</p><br clear="all"><a name="id09220002610001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>จุดประสงค์:</p>
+<div class="list">•&nbsp;&nbsp;จอแสดงผลผลของระบบ i-stop แสดงให้ผู้ขับขี่ทราบการทำงานของผลของระบบ i-stop</div><br clear="all"><a name="id09220002610002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<div class="list">•&nbsp;&nbsp;ผลของระบบ i-stop แสดงระยะเวลาทั้งหมดของระบบ i-stop และเวลาปัจจุบันของระบบ i-stop ตามสัญญาณข้อมูลที่เกี่ยวข้องของระบบ i-stop จาก PCM</div><br clear="all"><p><a name="id09220002610003"></a><p class="topic-title"><span class="topic-head"></span>ระยะเวลาทั้งหมดของระบบ i-stop</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ระยะเวลาทั้งหมดของระบบ i-stop จะแสดงถึงระยะเวลาทั้งหมดที่ระบบ i-stop ทำงาน</div>
+<div class="list">•&nbsp;&nbsp;ช่วงระยะเวลาทั้งหมดของระบบ i-stop มีค่าตั้งแต่ 0 ชั่วโมง 00 นาที ถึง 1999 ชั่วโมง 59 นาที</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09220002610004"></a><p class="topic-title"><span class="topic-head"></span>เวลาของระบบ i-stop</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เวลาของระบบ i-stop จะแสดงถึงเวลาทั้งหมดทั้งหมดของระบบ i-stop นับจากสตาร์ทเครื่องยนต์ (สวิตช์สตาร์ท: ON) จนถึงดับเครื่องยนต์ (สวิตช์สตาร์ท: OFF)</div>
+<div class="list">•&nbsp;&nbsp;ช่วงเวลาของระบบ i-stop มีค่าตั้งแต่ 0 ชั่วโมง 00 นาที 00 วินาที ถึง 99 ชั่วโมง 59 นาที 59 วินาที</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id09220002610005"></a><p class="topic-title"><span class="topic-head"></span>เวลาปัจจุบันของระบบ i-stop</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;เวลาปัจจุบันของระบบ i-stop จะแสดงถึงเวลาของระบบ i-stop ที่กำลังใช้งานระบบ i-stop</div>
+<div class="list">•&nbsp;&nbsp;ช่วงเวลาปัจจุบันของระบบ i-stop มีค่าตั้งแต่ 0 นาที 00 วินาที ถึง 59 นาที 59 วินาที</div>
+</dd>
+</dl>
+</p><br clear="all"><a name="id09220002610006"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>โครงสร้าง</p>
+<div class="list">•&nbsp;&nbsp;ผลของระบบ i-stop ปรากฏบนจอ TFT LCD บนแผงหน้าปัด</div>
+<div class="list">•&nbsp;&nbsp;จอแสดงผลผลของระบบ i-stop และเวลาที่ระบบ i-stop คำนวณดำเนินการโดยไมโครคอมพิวเตอร์ของแผงหน้าปัด</div>
+<div class="list">•&nbsp;&nbsp;เมื่อบิดสวิตช์สตาร์ทไปที่ ON (เครื่องยนต์ทำงาน) เวลาของระบบ i-stop และเวลาทั้งหมดจะปรากฏขึ้นในจอแสดงผลผลของระบบ i-stop<table class="figure-flame">
+<tr>
+<td width="10mm"></td>
+<td>
+<table class="figure-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001476.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001476</div>
+</td>
+</tr>
+</table>
+</div><br clear="all"><a name="id09220002610007"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p>
+<p class="list">1.&nbsp;&nbsp;แผงหน้าปัดจะได้รับ (1) สัญญาณข้อมูลที่เกี่ยวข้องกับระบบ i-stop จาก PCM ผ่านสัญญาณ CAN</p>
+<p class="list">
+</p>
+<p class="list">2.&nbsp;&nbsp;แผงหน้าปัดจะคำนวณ (2) เวลาของระบบ i-stop ตามสัญญาณข้อมูลที่เกี่ยวข้องกับระบบ i-stop ที่ได้รับ</p>
+<p class="list">
+</p>
+<p class="list">3.&nbsp;&nbsp;แผงหน้าปัดจะแสดง (3) ข้อมูลผลของระบบ i-stop ที่คำนวณได้ในจอ TFT LCD</p>
+<p class="list">
+</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001477.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001477</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id09220002610008"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>Fail-safe</p>
+<div class="list">•&nbsp;&nbsp;ไม่มีฟังก์ชั่นนี้</div>
+</body>
+</html>

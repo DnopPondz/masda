@@ -1,0 +1,273 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>รหัสวิเคราะห์ปัญหา B1086:71 [ระบบปรับอากาศแบบอัตโนมัติ]</title>
+</head>
+<body><a name="id0702c1816700"></a><p class="servinfo-title"><span class="servinfo-head"></span>รหัสวิเคราะห์ปัญหา B1086:71 [ระบบปรับอากาศแบบอัตโนมัติ]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0702c1816700</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ตำแหน่งความบกพร่องของระบบ</p>
+</th>
+<th id="" align="left">
+<div class="list">•&nbsp;&nbsp;มอเตอร์แอ็คชิวเอเตอร์โหมดทิศทางการไหลของอากาศล็อก</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สภาวะการตรวจพบ</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;มอเตอร์แอ็คชิวเอเตอร์โหมดทิศทางการไหลของอากาศล็อก</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>Fail-safe</span></div>
+</td>
+<td id="" align="left">
+<div class="list-title">ความบกพร่องถูกกำหนดเมื่อ IG SW อยู่ที่ ON</div>
+<div class="list">•&nbsp;&nbsp;สัญญาณขับแอ็คชิวเอเตอร์โหมดทิศทางการไหลของอากาศหยุดลงทันทีเมื่อมีการกำหนดความบกพร่อง</div>
+<div class="list-title">มีความบกพร่องอยู่แล้วเมื่อบิด IG SW ไปที่ ON</div>
+<div class="list">•&nbsp;&nbsp;สัญญาณขับแอ็คชิวเอเตอร์โหมดทิศทางการไหลของอากาศถูกส่งตามปกติอีกครั้งหลังจากสวิตช์สตาร์ทอยู่ที่ ON ผ่านไปเก้าวินาที หลังจากนั้น เอาท์พุทของมอเตอร์จะหยุดลงระหว่างการกำหนดความบกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สาเหตุที่เป็นไปได้</span></div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ขั้วต่อหรือขั้วบกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์โหมดทิศทางการไหลของอากาศบกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;ชุด A/C (แกนเชื่อมต่อของโหมดทิศทางการไหลของอากาศและข้อเหวี่ยงโหมดทิศทางการไหลของอากาศ) บกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระหว่างชุดควบคุมอุณหภูมิกับแอ็คชิวเอเตอร์โหมดทิศทางการไหลของอากาศขาดวงจร</div>
+<div class="list">•&nbsp;&nbsp;ชุดสายไฟระหว่างชุดควบคุมอุณหภูมิกับแอ็คชิวเอเตอร์โหมดทิศทางการไหลของอากาศลัดวงจรลงกราวด์</div>
+<div class="list">•&nbsp;&nbsp;ชุดควบคุมอุณหภูมิบกพร่อง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" colspan="2"><img src="images/ac5wzw00001753.png"></td>
+</tr>
+</tbody>
+</table>
+</p><br clear="all"><a name="id0702c181670001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ขั้นตอนการวิเคราะห์ปัญหา</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center" colspan="2">
+<p class="thead">การตรวจสอบ</p>
+</th>
+<th id="" align="center">
+<p class="thead">การปฏิบัติ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">1</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบข้อต่อแอ็คชิวเอเตอร์โหมดทิศทางการไหลของอากาศ</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;ปลดสายขั้วลบแบตเตอรี่<div>(ดูที่ <font class="extxref-label"><a href="id0117i0800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div>(ดูที่ <font class="extxref-label"><a href="id0117i08008i1.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (รุ่นที่ไม่มีระบบ i-stop)]</a></font>)</div>
+<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อแอ็คชิวเอเตอร์โหมดทิศทางการไหลของอากาศ (ดูที่ <font class="extxref-label"><a href="id0740a1801600.html">การถอด / การติดตั้งแอ็คชิวเอเตอร์โหมดทิศทางการไหลของอากาศ [ระบบปรับอากาศแบบอัตโนมัติ]</a></font>)</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบขั้วต่อและขั้ว (การกัดกร่อน, ชำรุดเสียหาย, การต่อสลักผิด)</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อและขั้วเป็นปกติหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อม/เปลี่ยนขั้วต่อหรือขั้ว </div>
+<div class="tbody">หลังจากการขั้นตอนการซ่อม ให้ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">2</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการทำงานของแอ็คชิวเอเตอร์โหมดทิศทางการไหลของอากาศ</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อแอ็คชิวเอเตอร์โหมดทิศทางการไหลของอากาศ</div>
+<div class="list">•&nbsp;&nbsp;ใช้แรงดันไฟฟ้าขั้วบวกของแบตเตอรี่และต่อกราวด์เข้ากับขั้ว F และ D ของแอ็คชิวเอเตอร์โหมดทิศทางการไหลของอากาศ แล้วตรวจสอบแอ็คชิวเอเตอร์โหมดทิศทางการไหลของอากาศ</div>
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์โหมดทิศทางการไหลของอากาศทำงานหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ต่อขั้วต่อ แล้วไปที่ขั้นตอน 4</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">3</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการทำงานของแกนเชื่อมต่อหลักของโหมดทิศทางการไหลของอากาศ</div>
+<div class="list">•&nbsp;&nbsp;ถอดแอ็คชิวเอเตอร์โหมดทิศทางการไหลของอากาศ</div>
+<div class="list">•&nbsp;&nbsp;ควบคุมแกนเชื่อมต่อหลักของโหมดทิศทางการไหลของอากาศด้วยตนเอง</div>
+<div class="list">•&nbsp;&nbsp;แกนเชื่อมต่อหลักของโหมดทิศทางการไหลของอากาศทำงานราบรื่นหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนแอ็คชิวเอเตอร์โหมดทิศทางการไหลของอากาศ</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0740a1801600.html">การถอด / การติดตั้งแอ็คชิวเอเตอร์โหมดทิศทางการไหลของอากาศ [ระบบปรับอากาศแบบอัตโนมัติ]</a></font>)</div>
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนแกนเชื่อมต่อหลัก แกนเชื่อมต่อรอง และข้อเหวี่ยงโหมดทิศทางการไหลของอากาศ</div>
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">4</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบการขาดวงจรหรือการลัดวงจรลงกราวด์ของวงจรแอ็คชิวเอเตอร์โหมดทิศทางการไหลของอากาศ</div>
+<div class="list">•&nbsp;&nbsp;ปลดขั้วต่อชุดควบคุมอุณหภูมิ (ดูที่ <font class="extxref-label"><a href="id0740a1807400.html">การถอด / การติดตั้งชุดควบคุมอุณหภูมิ [ระบบปรับอากาศแบบอัตโนมัติ]</a></font>)</div>
+<div class="list">•&nbsp;&nbsp;ใช้แรงดันไฟฟ้าขั้วบวกของแบตเตอรี่และต่อกราวด์เข้ากับขั้ว 2K และ 2I ของขั้วต่อชุดควบคุมอุณหภูมิ แล้วตรวจสอบแอ็คชิวเอเตอร์โหมดทิศทางการไหลของอากาศ</div>
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์โหมดทิศทางการไหลของอากาศทำงานหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อม/เปลี่ยนชุดสายไฟที่บกพร่องของรถ</div>
+<div class="tbody">หลังจากการขั้นตอนการซ่อม ให้ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">5</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบสภาพขั้วต่อของชุดควบคุมอุณหภูมิ</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบขั้วต่อและขั้ว (การกัดกร่อน, ชำรุดเสียหาย, การต่อสลักผิด)</div>
+<div class="list">•&nbsp;&nbsp;ขั้วต่อและขั้วเป็นปกติหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อม/เปลี่ยนชุดสายไฟ ขั้วต่อ หรือขั้วที่บกพร่องของรถ</div>
+<div class="tbody">หลังจากการขั้นตอนการซ่อม ให้ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">6</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบว่ารหัสวิเคราะห์ปัญหาเดิมไม่ปรากฏขึ้นอีก</div>
+<div class="list">•&nbsp;&nbsp;ต่อขั้วต่อที่ปลดออกกลับเข้าที่ </div>
+<div class="list">•&nbsp;&nbsp;ต่อสายขั้วลบแบตเตอรี่<div>(ดูที่ <font class="extxref-label"><a href="id0117i0800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div>(ดูที่ <font class="extxref-label"><a href="id0117i08008i1.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-G 2.0, SKYACTIV-G 2.5 (รุ่นที่ไม่มีระบบ i-stop)]</a></font>)</div>
+<div>(ดูที่ <font class="extxref-label"><a href="id0117h6800800.html">การปลด / ต่อสายขั้วลบแบตเตอรี่ [SKYACTIV-D 2.2]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ลบความบกพร่องในอดีตออกจากหน่วยความจำ</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบรหัสวิเคราะห์ปัญหา </div>
+<div class="list">•&nbsp;&nbsp;รหัสวิเคราะห์ปัญหา B1086:71 ปรากฏขึ้นหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ทำซ้ำการตรวจสอบตั้งแต่ขั้นตอน 1</div>
+<div class="list">•&nbsp;&nbsp;หากความบกพร่องไม่ปรากฏซ้ำ ให้ไปที่ขั้นตอนถัดไป</div>
+<div class="list">•&nbsp;&nbsp;หากความบกพร่องเกิดขึ้นอีก ให้เปลี่ยนชุดควบคุมอุณหภูมิ (ดูที่ <font class="extxref-label"><a href="id0740a1807400.html">การถอด / การติดตั้งชุดควบคุมอุณหภูมิ [ระบบปรับอากาศแบบอัตโนมัติ]</a></font>)</div>
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">7</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">ตรวจสอบว่าไม่มีรหัสวิเคราะห์ปัญหาอื่นปรากฏขึ้น</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบรหัสวิเคราะห์ปัญหาอื่นที่ปรากฏ</div>
+<div class="list">•&nbsp;&nbsp;มีรหัสวิเคราะห์ปัญหาอื่นๆ ปรากฏขึ้นหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ทำการตรวจสอบรหัสวิเคราะห์ปัญหาที่สัมพันธ์กัน</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">ไม่ใช่</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การค้นหาสาเหตุปัญหาของรหัสวิเคราะห์ปัญหาเสร็จสมบูรณ์</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</body>
+</html>

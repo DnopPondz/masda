@@ -1,0 +1,2 @@
+&txtLabel=CHARGING SYSTEM (SKYACTIV-D 2.2) 2/2&
+&txtData=S0117_2b&

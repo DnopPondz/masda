@@ -1,0 +1,2 @@
+&txtLabel=COOLING SYSTEM (SKYACTIV-D 2.2)&
+&txtData=S0112_2&

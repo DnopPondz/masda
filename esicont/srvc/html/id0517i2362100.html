@@ -1,0 +1,149 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>การควบคุมจุดเปลี่ยนเกียร์ (การควบคุมการเปลี่ยนเกียร์อัตโนมัติ) [GW6A-EL, GW6AX-EL]</title>
+</head>
+<body><a name="id0517i2362100"></a><p class="servinfo-title"><span class="servinfo-head"></span>การควบคุมจุดเปลี่ยนเกียร์ (การควบคุมการเปลี่ยนเกียร์อัตโนมัติ) [GW6A-EL, GW6AX-EL]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0517i2362100</p><br clear="all"><a name="id0517i236210001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รายละเอียด</p>
+<div class="list">•&nbsp;&nbsp;TCM จะช่วยเสริมการควบคุมการเปลี่ยนเกียร์อัตโนมัติตามความเร็วรถและปริมาณการเหยียบแป้นคันเร่งขณะอยู่ในตำแหน่ง D</div>
+<div class="list">•&nbsp;&nbsp;เมื่อหยุดรถขณะที่คันเกียร์อยู่ในตำแหน่ง D และเหยียบแป้นเบรก การควบคุมรอบเดินเบาเกียร์ว่างจะทำงานซึ่งจะควบคุมเกียร์อัตโนมัติภายในให้อยู่ในสภาวะเกียร์ว่างในขณะคันเกียร์อยู่ในตำแหน่ง D เมื่อปล่อยแป้นเบรก คลัตช์จะจับทันทีและเกียร์อัตโนมัติจะกลับไปที่สภาวะตำแหน่ง D ปกติ</div>
+<div class="list">•&nbsp;&nbsp;เมื่อทำการควบคุมการเปลี่ยนเกียร์อัตโนมัติ TCM จะตัดสินสภาวะการขับขี่ตามสัญญาณอินพุทแต่ละสัญญาณและเลือกโหมดขับขี่ให้เหมาะกับสภาวะการขับขี่ นอกจากนี้ ข้อมูล เช่น แรงบิดและการเปลี่ยนเกียร์จะถูกแลกเปลี่ยนผ่านการสื่อสาร PCM และ CAN และทำการควบคุมเพื่อให้ได้แรงขับที่เหมาะสมที่สุดตามสภาวะการขับขี่</div><br clear="all"><a name="id0517i236210002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>โครงสร้าง</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00002319.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00002319</div>
+</td>
+</tr>
+</table><br clear="all"><a name="id0517i236210003"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การทำงาน</p><br clear="all"><p><a name="id0517i236210004"></a><p class="topic-title"><span class="topic-head"></span>การกำหนดช่วงการขับขี่</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ถ้าสัญญาณตำแหน่ง D ถูกป้อน และสัญญาณตำแหน่ง M ไม่ถูกป้อน TCM จะทำการควบคุมการเปลี่ยนเกียร์อัตโนมัติ</div>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id0517i236210005"></a><p class="topic-title"><span class="topic-head"></span>การกำหนดโหมดการขับขี่</p>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;สำหรับการควบคุมการเปลี่ยนเกียร์อัตโนมัติ โดยปกติแล้ว โหมดปกติจะถูกเลือก อย่างไรก็ตามโหมดจะเปลี่ยนไปที่โหมดการขับขี่ตามสภาวะการขับขี่โดยอัตโนมัติ</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;โหมด AAS (การเปลี่ยนเกียร์ที่ปรับให้เหมาะสม): ควบคุมจุดเปลี่ยนเกียร์ที่เหมาะสมที่สุดตามสภาพถนนและการใช้งานของคนขับโดยอัตโนมัติ</div>
+<div class="list">―&nbsp;&nbsp;โหมดอุณหภูมิ ATF สูง: เมื่ออุณหภูมิ ATF สูงขึ้นไปที่อุณหภูมิสูง แรงบิดเครื่องยนต์จะถูกจำกัดเพื่อให้การเพิ่มขึ้นของอุณหภูมิ ATF ถูกยับยั้งเพื่อป้องกันเกียร์</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">การทำงานของโหมด AAS (การเปลี่ยนเกียร์ที่ปรับให้เหมาะสม)</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;ปล่อยแป้นคันเร่งย้อนกลับจนสุดทันที</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;เมื่อปล่อยแป้นคันเร่งย้อนกลับจนสุดที่ความเร็วที่กำหนดหรือมากกว่า การเปลี่ยนเกียร์ขึ้นจะถูกยับยั้งเป็นระยะเวลาที่กำหนดเพื่อทำให้การควบคุมความเร็วและสมรรถนะการเร่งความเร็วอีกครั้งดียิ่งขึ้น</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;เหยียบเบรกอย่างแรง</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;เมื่อลดความเร็วลงที่ความเร็วที่กำหนดหรือมากกว่า เกียร์ต่ำกว่าจะถูกเลือกเพื่อให้การเร่งความเร็วอีกครั้งทำได้อย่างราบรื่น</div>
+<div class="list">―&nbsp;&nbsp;ในระหว่างการเปลี่ยนเกียร์ขณะที่เหยียบแป้นเบรกไว้อย่างมั่นคง การควบคุมการกระตุก (การปรับให้เข้ากับความเร็วรอบเครื่องยนต์) จะทำงานเพื่อทำให้ระยะเวลาการเปลี่ยนเกียร์สั้นลง</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ขณะเข้าโค้ง</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ในขณะเข้าโค้งด้วยวงเลี้ยวที่มีรัศมีน้อยกว่าค่าที่กำหนด การเปลี่ยนเกียร์ขึ้นจะถูกยับยั้งเพื่อทำให้ประสิทธิภาพความเร็วรถขณะเข้าโค้งและสมรรถนะการเร่งความเร็วอีกครั้งหลังจากเข้าโค้งดียิ่งขึ้น</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ในระหว่างระดับความลาดชัน / ความลาดลงสูง</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ในระหว่างระดับหนึ่งของความลาดชัน / ความลาดลง เกียร์จะถูกเลือกให้เหมาะสมกับสภาวะการขับขี่เพื่อความสะดวกสบายในการขับขี่</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ในระหว่างการขับขึ้นทางลาดชัน</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ในขณะขับขึ้นทางลาดชันที่ความลาดชันที่กำหนดหรือมากกว่า การควบคุมโหมดทางลาดชันจะป้องกันการเปลี่ยนเกียร์ขึ้นที่ไม่จำเป็นโดยการรักษาเกียร์ที่เหมาะสมที่สุด</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ในระหว่างการขับลงทางลาดชัน</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ในขณะขับลงทางลาดชันที่ความลาดชันที่กำหนดหรือมากกว่า และเหยียบแป้นเบรก เกียร์จะถูกเปลี่ยนลงอย่างเหมาะสมตามมุมลาดชันที่คาดคะเนไว้เพื่อการใช้งานเบรกด้วยเครื่องยนต์ที่มีประสิทธิภาพ ด้วยเหตุนี้ จึงทำให้ใช้งานเบรกลดลง</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list-title">ผลและสภาวะการทำงานของ AAS (การเปลี่ยนเกียร์ที่ปรับให้เหมาะสม)</div>
+</dd>
+</dl>
+<dl>
+<dd>
+<div class="list">•&nbsp;&nbsp;AAS (การเปลี่ยนเกียร์ที่ปรับให้เหมาะสม) เป็นโหมดซึ่งจะคาดคะเนสภาวะการขับขี่และเจตนาของคนขับตามสภาวะการขับขี่รถ และการใช้งานของคนขับ และเลือกเกียร์ที่เหมาะสมที่สุดสำหรับการขับขี่</div>
+<dl>
+<div class="list-title">ตัวอย่าง 1: การเข้าโค้ง</div>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ในระหว่างการเข้าโค้ง การเปลี่ยนเกียร์ขึ้นจะถูกยับยั้งเพื่อทำให้สมรรถนะการเร่งความเร็วหลังจากการเข้าโค้งดียิ่งขึ้น<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/am3uun00002430.png"></td>
+</tr>
+</table>
+<div class="figure-caption">am3uun00002430</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+<dl>
+<div class="list-title">ตัวอย่าง 2) การขับขี่บนทางด่วนความเร็วสูง</div>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ในสถานการณ์ เช่น การลดความเร็วชั่วคราวในขณะขับขี่บนทางด่วนความเร็วสูง การเปลี่ยนเกียร์ขึ้นจะถูกยับยั้งโดยตรงต่อจากนั้นเพื่อทำให้สมรรถนะการเร่ิงความเร็วอีกครั้งดียิ่งขึ้น<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/am3uun00002431.png"></td>
+</tr>
+</table>
+<div class="figure-caption">am3uun00002431</div>
+</td>
+</tr>
+</table>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</p><br clear="all"><p><a name="id0517i236210006"></a><p class="topic-title"><span class="topic-head"></span>ตารางการทำงานของเกียร์อัตโนมัติ</p>
+<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/ac5wzn00001724.png"></td>
+</tr>
+</table>
+<div class="figure-caption">ac5wzn00001724</div>
+</td>
+</tr>
+</table>
+</p>
+</body>
+</html>

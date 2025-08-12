@@ -1,0 +1,784 @@
+<html lang="en">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="mazda-css-en.css" type="text/css">
+<title>รหัสวิเคราะห์ปัญหา P0015:00 [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</title>
+</head>
+<body><a name="id0102h4008100"></a><p class="servinfo-title"><span class="servinfo-head"></span>รหัสวิเคราะห์ปัญหา P0015:00 [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</p>
+<hr>
+<p class="servinfo-title-id" align="right">id0102h4008100</p>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;ในการกำหนดชิ้นส่วนที่บกพร่อง ให้ดำเนินการต่อด้วยการวิเคราะห์ปัญหาจาก &ldquo;การตรวจสอบฟังก์ชั่นโดยใช้ M-MDS&rdquo;</div>
+</div>
+</dd>
+</dl><br clear="all"><a name="id0102h400810001"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รายละเอียดเกี่ยวกับรหัสวิเคราะห์ปัญหา</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">คำอธิบาย</p>
+</th>
+<th id="" align="left" colspan="2">
+<p class="thead">ระบบควบคุมไทม์มิ่งวาล์วแปรผันแบบไฮดรอลิก: หน่วงมากเกินไป</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center" rowspan="6">
+<div class="tbody">สภาวะการตรวจพบ</div>
+</td>
+<td id="" align="left">
+<div class="tbody">สภาพการกำหนด</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;สภาวะที่จังหวะเปิด/ปิดวาล์วไอเสียจริงหน่วง (หน่วงมากเกินไป) เปรียบเทียบกับจังหวะการเปิด/ปิดวาล์วไอเสียเป้าหมายตามระยะเวลาที่กำหนด</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">สภาพก่อนหน้า</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;แรงดันไฟฟ้าแบตเตอรี่: <span>สูงกว่า 11 V</span><sup>*1</sup></div>
+<div class="list">•&nbsp;&nbsp;ความเร็วรอบเครื่องยนต์: <span>5,000 rpm หรือต่ำกว่า<sup>*1</sup></span></div>
+<div class="list">•&nbsp;&nbsp;อุณหภูมิน้ำหล่อเย็นเครื่องยนต์: <span>60 &deg;C {140 &deg;F} หรือมากกว่า</span><sup>*1</sup></div>
+<div class="list">•&nbsp;&nbsp;การควบคุมไทม์มิ่งวาล์วแปรผันแบบไฮดรอลิก: โหมดล่วงหน้าลูกเบี้ยวสูงสุด</div>
+<div class="list">•&nbsp;&nbsp;ตรวจไม่พบรหัสวิเคราะห์ปัญหาต่อไปนี้:</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;P0335:00, P0365:00</div>
+</dd>
+</dl>
+<div class="list"><sup>*1</sup>: สามารถตรวจสอบค่าได้ด้วยการแสดง PID โดยใช้ M-MDS</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ระยะเวลาการกำหนดการทำงานผิดพลาด</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;ช่วงเวลา <span>5 วินาที</span></div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">รอบการขับ</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;2</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">ประเภทการทดสอบด้วยตนเอง</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;การทดสอบ CMDTC ด้วยตนเอง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">เซ็นเซอร์ที่ใช้</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;เซ็นเซอร์ CKP</div>
+<div class="list">•&nbsp;&nbsp;เซ็นเซอร์ CMP ไอเสีย</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>ฟังก์ชั่น FAIL-SAFE</span></div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="list">•&nbsp;&nbsp;ใช้ไม่ได้</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สถานะของรถเมื่อแสดงค่ารหัสวิเคราะห์ปัญหา</span></div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="list">•&nbsp;&nbsp;ไฟเตือนตรวจเช็คเครื่องยนต์ติดสว่าง</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody"><span>สาเหตุที่เป็นไปได้</span></div>
+</td>
+<td id="" align="left" colspan="2">
+<div class="list">•&nbsp;&nbsp;OCV บกพร่อง</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;สปูลวาล์วใน OCV ติดขัดในตำแหน่งหน่วง</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;แอ็คชิวเอเตอร์ไทม์มิ่งวาล์วแปรผันแบบไฮดรอลิกบกพร่อง</div>
+<div class="list">•&nbsp;&nbsp;โซ่ไทม์มิ่งบกพร่อง</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;การประกอบโซ่ไทม์มิ่งไม่ดี</div>
+<div class="list">―&nbsp;&nbsp;หลวมหรือหลุด</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;การตรวจจับที่ผิดพลาดของเซ็นเซอร์ CMP ไอเสีย</div>
+<div class="list">•&nbsp;&nbsp;น้ำมันเครื่องบกพร่อง</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;การใช้น้ำมันเครื่องนอกเหนือจากที่กำหนด</div>
+<div class="list">―&nbsp;&nbsp;ระดับน้ำมันเครื่องขาด</div>
+<div class="list">―&nbsp;&nbsp;แรงดันน้ำมันเครื่องต่ำ</div>
+<div class="list">―&nbsp;&nbsp;เส้นทางน้ำมันเครื่องอุดตันหรือมีการรั่ว</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;PCM บกพร่อง</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p><br clear="all"><a name="id0102h400810002"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ผังวงจรไฟฟ้าระบบ</p>
+<div class="list">•&nbsp;&nbsp;ใช้ไม่ได้</div><br clear="all"><a name="id0102h400810003"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>คำอธิบายฟังก์ชั่น (รายละเอียดการตรวจพบรหัสวิเคราะห์ปัญหา)</p>
+<div class="list">•&nbsp;&nbsp;เมื่อตรงตามสภาพก่อนหน้า PCM จะตรวจสอบความสอดคล้องกันของจังหวะเปิด/ปิดตามจริงกับจังหวะเปิด/ปิดวาล์วเป้าหมาย ถ้าค่าที่ได้ไม่สอดคล้องกับช่วงการกำหนดปกติ (ส่วนต่างระหว่างจังหวะเปิด/ปิดวาล์วเป้าหมายและจังหวะเปิด/ปิดวาล์วตามจริงเท่ากับ <span>20 degrees หรือน้อยกว่า</span>) ระหว่างช่วงระยะเวลาการกำหนดการทำงานผิดพลาด (<span>5 วินาทีโดยประมาณ</span>) PCM จะตัดสินว่าเป็นสภาวะการทำงานผิดพลาดแบบหน่วงเวลามากเกินไป และจะจัดเก็บข้อมูลรหัสวิเคราะห์ปัญหา ถึงแม้ว่าจะมีการตั้งจังหวะเปิด/ปิดวาล์วเป้าหมายไว้ที่ด้านล่วงหน้าก็ตาม<table class="figure-flame-non">
+<tr>
+<td>
+<table class="figure-non-float" cellspacing="0" bordercolor="black">
+<tr>
+<td align="center"><img src="images/am6xuw00006279.png"></td>
+</tr>
+</table>
+<div class="figure-caption">am6xuw00006279</div>
+</td>
+</tr>
+</table>
+</div><br clear="all"><a name="id0102h400810004"></a><p class="servinfosub-title">ขั้นตอนการตรวจสอบการปรากฏซ้ำได้<span class="servinfosub-head"></span></p>
+<div class="list">1.&nbsp;อุ่นเครื่องยนต์เพื่อทำให้อุณหภูมิน้ำหล่อเย็นเครื่องยนต์ขึ้นถึง <span>80 &deg;C {176 &deg;F} หรือมากกว่านั้น</span></div>
+<div class="list">2.&nbsp;&nbsp;เข้าเกียร์ 2 และเร่งความเร็วรถให้อยู่ในระดับ <span>50 km/h {31 mph}</span> ด้วยความรวดเร็ว (เพื่อให้การควบคุมไทม์มิ่งวาล์วแปรผันแบบไฮดรอลิกทำงาน)</div>
+<div class="list">3.&nbsp;&nbsp;ลดความเร็วจนถึงรอบเดินเบา</div>
+<div class="list">4.&nbsp;&nbsp;เข้าเกียร์ 2 และเร่งความเร็วรถให้อยู่ในระดับ <span>50 km/h {31 mph}</span> ด้วยความรวดเร็วอีกครั้ง</div><br clear="all"><a name="id0102h400810005"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>รายการ PID/รายการการจำลองที่ใช้ในการวิเคราะห์ปัญหา</p>
+<p clear="all">
+<p class="table-title">ตารางรายการตรวจสอบ PID/DATA</p>
+<p>
+<div>
+</div>
+</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รายการ</p>
+</th>
+<th id="" align="center">
+<p class="thead">คำอธิบาย</p>
+</th>
+<th id="" align="center">
+<p class="thead">ชุดอุปกรณ์/สภาวะ</p>
+</th>
+<th id="" align="center">
+<p class="thead">สภาวะ/ค่าที่กำหนด (ค่าอ้างอิง)</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">VT EX_DES</div>
+</td>
+<td id="" align="left">
+<div class="tbody">จังหวะการเปิด/ปิดวาล์วไอเสียที่ต้องการ</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg; (องศา)</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;แสดงจังหวะการเปิด/ปิดวาล์วไอเสียที่ต้องการ</div>
+</td>
+</tr>
+<tr>
+<td id="" align="left">
+<div class="tbody">VT_EX_ACT</div>
+</td>
+<td id="" align="left">
+<div class="tbody">จังหวะการเปิด/ปิดวาล์วไอเสียตามจริง</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg; (องศา)</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;แสดงจังหวะการเปิด/ปิดวาล์วไอเสียตามจริง</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+<p clear="all">
+<p class="table-title">ตารางรายการการจำลอง</p>
+<p>
+<div>
+</div>
+</p>
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">รายการ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ส่วนประกอบที่ใช้ได้</p>
+</th>
+<th id="" align="center">
+<p class="thead">ชุดอุปกรณ์/สภาวะ</p>
+</th>
+<th id="" align="center">
+<p class="thead">การทำงาน</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="left">
+<div class="tbody">VT EX_DES</div>
+</td>
+<td id="" align="left">
+<div class="tbody">OCV</div>
+</td>
+<td id="" align="center">
+<div class="tbody">&deg; (องศา)</div>
+</td>
+<td id="" align="left">
+<div class="list">•&nbsp;&nbsp;เปลี่ยน &deg; (องศา) และบังคับการขับเคลื่อน/หยุด OCV</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p><br clear="all"><a name="id0102h400810006"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>การตรวจสอบฟังก์ชั่นโดยใช้ M-MDS</p>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center">
+<p class="thead">การตรวจสอบ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ผลลัพธ์</p>
+</th>
+<th id="" align="center">
+<p class="thead">การดำเนินการ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">1</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">จุดประสงค์: ตรวจสอบว่ามีข้อมูลการบริการที่เกี่ยวข้อง</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบว่ามีข้อมูลการบริการที่เกี่ยวข้องหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;มีข้อมูลการบริการที่เกี่ยวข้องอื่นๆ หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ให้ทำการซ่อมหรือวิเคราะห์ปัญหาตามข้อมูลการบริการที่มี</div>
+<div class="list">•&nbsp;&nbsp;ถ้าแก้ไขปัญหาไม่ได้ ให้ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">2</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">จุดประสงค์: บันทึกข้อมูลสถานะของรถเมื่อมีการตรวจพบรหัสวิเคราะห์ปัญหา เพื่อนำไปใช้กับการตรวจสอบการปรากฏซ้ำได้</div>
+<div class="list">•&nbsp;&nbsp;ข้อมูลสภาพรถยนต์ (FREEZE FRAME DATA) (โหมด 2) / ข้อมูล SNAPSHOT ได้รับการบันทึกแล้วหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">บันทึกข้อมูลสภาพรถยนต์ (FREEZE FRAME DATA) (โหมด 2) / ข้อมูล SNAPSHOT ตามคำสั่งซ่อม แล้วไปที่ขั้นตอนถัดไป</div>
+<dl>
+<dd>
+<div class="attention3-label">หมายเหตุ</div>
+</dd>
+<dd>
+<div class="attention3">
+<div class="list">•&nbsp;&nbsp;การบันทึกข้อมูลสามารถทำได้ง่ายๆ โดยการใช้ฟังก์ชั่นจับภาพหน้าจอของ PC</div>
+</div>
+</dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">3</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">จุดประสงค์: ตรวจสอบว่าผลการวิเคราะห์ปัญหาได้รับผลกระทบจากการเกิดรหัสวิเคราะห์ปัญหาอื่นๆ ที่เกี่ยวข้องหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;ให้ปฏิบัติตามขั้นตอนการเข้าถึงรหัสปัญหาที่ค้างอยู่และขั้นตอนการอ่านรหัสวิเคราะห์ปัญหา<div>(ดูที่ <font class="extxref-label"><a href="id0102h4801000.html">การทดสอบการวิเคราะห์ปัญหาบนรถ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีรหัสที่ค้างอยู่ / รหัสวิเคราะห์ปัญหา P0335:00, P0365:00, P2090:00 หรือ P2091:00 ปรากฏขึ้นด้วยหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่การตรวจสอบรหัสที่ค้างอยู่หรือรหัสวิเคราะห์ปัญหานั้นๆ</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0102h4703600.html">รหัสวิเคราะห์ปัญหา P0335:00 [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0102h4008700.html">รหัสวิเคราะห์ปัญหา P0365:00 [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0102h4009800.html">รหัสวิเคราะห์ปัญหา P2090:00 [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0102h4010000.html">รหัสวิเคราะห์ปัญหา P2091:00 [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">4</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">จุดประสงค์: ตรวจสอบว่าผลการวิเคราะห์ปัญหาได้รับผลกระทบจากรหัสวิเคราะห์ปัญหาที่เกิดจากสวิตช์แรงดันน้ำมันเครื่องหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;ให้ปฏิบัติตามขั้นตอนการเข้าถึงรหัสปัญหาที่ค้างอยู่และขั้นตอนการอ่านรหัสวิเคราะห์ปัญหา<div>(ดูที่ <font class="extxref-label"><a href="id0102h4801000.html">การทดสอบการวิเคราะห์ปัญหาบนรถ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;รหัสที่ค้างอยู่ / รหัสวิเคราะห์ปัญหา P0524:00 ปรากฏขึ้นด้วยหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่การตรวจสอบรหัสที่ค้างอยู่หรือรหัสวิเคราะห์ปัญหานั้นๆ</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0102h4339700.html">รหัสวิเคราะห์ปัญหา P0524:00 [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">5</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">จุดประสงค์: ตรวจสอบความสอดคล้องกันของจังหวะการเปิด/ปิดวาล์วไอเสียตามจริง และตัดสินว่าความบกพร่องเกิดจาก OCV หรือขั้วต่อที่เกี่ยวข้องหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;สตาร์ทเครื่องยนต์และปล่อยทำงานในรอบเดินเบา</div>
+<div class="list">•&nbsp;&nbsp;เข้า PID ต่อไปนี้โดยใช้ M-MDS:<div>(ดูที่ <font class="extxref-label"><a href="id0102h4801000.html">การทดสอบการวิเคราะห์ปัญหาบนรถ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;VT_EX_ACT</div>
+<div class="list">―&nbsp;&nbsp;VT EX_DES</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ปฏิบัติดังนี้:</div>
+<dl>
+<dd class="list">
+<div class="list">1.&nbsp;&nbsp;เร่งรอบเครื่องยนต์ที่ความเร็ว <span>3,000 rpm หรือน้อยกว่า</span></div>
+<div class="list">2.&nbsp;&nbsp;ปล่อยทำงานในรอบเดินเบา</div>
+<div class="list">3.&nbsp;&nbsp;ปฏิบัติซ้ำขั้นตอน 1 และ 2 มากกว่า 5 ครั้งติดต่อกัน</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ค่าที่ตรวจสอบของรายการ PID VT_EX_ACT สอดคล้องกับค่า VT EX_DES PID หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอน 7</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">6</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">จุดประสงค์: ตรวจสอบว่าสปูลวาล์วใน OCV ติดขัดหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;บิดสวิตช์สตาร์ทไปที่ OFF</div>
+<div class="list">•&nbsp;&nbsp;ถอด OCV โดยไม่ต้องปลดขั้วต่อ<div>(ดูที่ <font class="extxref-label"><a href="id0110h3801300.html">การถอด / การติดตั้งวาล์วควบคุมน้ำมันเครื่อง (OCV) [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;เข้ารายการการจำลอง VT EX_DES โดยใช้ M-MDS<div>(ดูที่ <font class="extxref-label"><a href="id0102h4801000.html">การทดสอบการวิเคราะห์ปัญหาบนรถ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;การใช้ฟังก์ชั่นการจำลอง ให้บังคับการขับเคลื่อน OCV</div>
+<div class="list">•&nbsp;&nbsp;สามารถตรวจสอบสปูลวาล์วในการทำงานของ OCV ได้หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนการค้นหาสาเหตุปัญหาเพื่อดำเนินการตามขั้นตอนตั้งแต่ขั้นตอน 1</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยน OCV</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0110h3801300.html">การถอด / การติดตั้งวาล์วควบคุมน้ำมันเครื่อง (OCV) [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+<div class="tbody">ไปที่ขั้นตอนการค้นหาสาเหตุปัญหาเพื่อดำเนินการตามขั้นตอนตั้งแต่ขั้นตอน 8</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">7</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">จุดประสงค์: ตรวจสอบการต่อขั้วต่อ</div>
+<div class="list">•&nbsp;&nbsp;สตาร์ทเครื่องยนต์</div>
+<div class="list">•&nbsp;&nbsp;เข้า VT_EX_ACT PID โดยใช้ M-MDS<div>(ดูที่ <font class="extxref-label"><a href="id0102h4801000.html">การทดสอบการวิเคราะห์ปัญหาบนรถ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ค่า PID ผันผวนหรือไม่เมื่อขยับขั้วต่อดังต่อไปนี้</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;OCV</div>
+<div class="list">―&nbsp;&nbsp;PCM</div>
+</dd>
+</dl>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชุดสายไฟหรือชิ้นส่วนของขั้วต่อนั้นๆ</div>
+<div class="tbody">ไปที่ขั้นตอนการค้นหาสาเหตุปัญหาเพื่อดำเนินการตามขั้นตอนตั้งแต่ขั้นตอน 8</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนการค้นหาสาเหตุปัญหาเพื่อดำเนินการตามขั้นตอนตั้งแต่ขั้นตอน 3</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p><br clear="all"><a name="id0102h400810007"></a><p class="servinfosub-title"><span class="servinfosub-head"></span>ขั้นตอนการวิเคราะห์แก้ไขปัญหา</p>
+<div class="list-title">จุดประสงค์ของขั้นตอนการค้นหาสาเหตุปัญหา</div>
+<div class="list">•&nbsp;&nbsp;ขั้นตอนที่ 1&mdash;2</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ทำการตรวจสอบชิ้นส่วนขับเคลื่อนไทม์มิ่งวาล์วแปรผันแบบไฮดรอลิก</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ขั้นตอน 3</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ตรวจสอบบริเวณการตรวจจับของเซ็นเซอร์ CMP ไอเสียเพื่อหาวัสดุแปลกปลอมที่ติดอยู่</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ขั้นตอน 4&mdash;7</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ทำการตรวจสอบน้ำมันเครื่องยนต์</div>
+</dd>
+</dl>
+<div class="list">•&nbsp;&nbsp;ขั้นตอน 8&mdash;9</div>
+<dl>
+<dd class="list">
+<div class="list">―&nbsp;&nbsp;ตรวจสอบว่าความบกพร่องหลักได้รับการแก้ไขเรียบร้อยแล้ว และไม่มีความบกพร่องอื่นๆ</div>
+</dd>
+</dl>
+<p clear="all">
+<table class="table-flame" border="1">
+<thead>
+<tr>
+<th id="" align="center">
+<p class="thead">ขั้นตอน</p>
+</th>
+<th id="" align="center">
+<p class="thead">การตรวจสอบ</p>
+</th>
+<th id="" align="center">
+<p class="thead">ผลลัพธ์</p>
+</th>
+<th id="" align="center">
+<p class="thead">การดำเนินการ</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">1</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">จุดประสงค์: ระบุความสมบูรณ์ของแอ็คชิวเอเตอร์ไทม์มิ่งวาล์วแปรผันแบบไฮดรอลิก</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบแอ็คชิวเอเตอร์ไทม์มิ่งวาล์วแปรผันแบบไฮดรอลิก<div>(ดูที่ <font class="extxref-label"><a href="id0110h3126800.html">การตรวจสอบแอ็คชิวเอเตอร์ไทม์มิ่งวาล์วแปรผันแบบไฮดรอลิก [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีความบกพร่องใดๆ หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนแอ็คชิวเอเตอร์ไทม์มิ่งวาล์วแปรผันแบบไฮดรอลิก แล้วไปที่ขั้นตอน 8</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0110h3126900.html">การถอด / การติดตั้งแอ็คชิวเอเตอร์ไทม์มิ่งวาล์วแปรผันแบบไฟฟ้า, แอ็คชิวเอเตอร์ไทม์มิ่งวาล์วแปรผันแบบไฮดรอลิก [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">2</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">จุดประสงค์: ตรวจสอบสภาพการประกอบของโซ่ไทม์มิ่ง</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบสภาพของการประกอบโซ่ไทม์มิ่ง (จังหวะการเปิด/ปิดวาล์วไอเสีย, ความหลวม, การหลุด)<div>(ดูที่ <font class="extxref-label"><a href="id0110h3801000.html">การถอด / การติดตั้งโซ่ไทม์มิ่ง [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีความบกพร่องใดๆ หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชิ้นส่วนที่บกพร่อง</div>
+<div class="tbody">ประกอบโซ่ไทม์มิ่งโดยใช้ไทม์มิ่งที่ถูกต้อง แล้วไปที่ขั้นตอน 8</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0110h3801000.html">การถอด / การติดตั้งโซ่ไทม์มิ่ง [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">3</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">จุดประสงค์: ตรวจสอบว่าวัสดุแปลกปลอมในบริเวณการตรวจจับของเซ็นเซอร์ CMP ไอเสียส่งผลกระทบต่อผลการวิเคราะห์ปัญหาหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบเซ็นเซอร์ CMP ไอเสียด้วยสายตา<div>(ดูที่ <font class="extxref-label"><a href="id0140g2801400.html">การตรวจสอบเซ็นเซอร์ตำแหน่งเพลาลูกเบี้ยว (CMP) [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีวัสดุแปลกปลอม เช่น ผงโลหะติดอยู่ในบริเวณการตรวจจับของเซ็นเซอร์ CMP ไอเสียหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ขจัดวัสดุแปลกปลอมออก แล้วไปที่ขั้นตอน 8</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">4</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">จุดประสงค์: ตรวจสอบว่าแรงดันไฮดรอลิกที่ไม่เพียงพอมีสาเหตุจากการใช้น้ำมันเครื่องที่นอกเหนือจากที่กำหนดไว้หรือไม่</div>
+<div class="list">•&nbsp;&nbsp;มีการใช้น้ำมันเครื่องที่นอกเหนือจากที่กำหนดไว้หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เปลี่ยนน้ำมันเครื่องเป็นน้ำมันเครื่องแท้ แล้วไปที่ขั้นตอน 8</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0111h5800400.html">การเปลี่ยนน้ำมันเครื่อง [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">5</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">จุดประสงค์: ตรวจสอบระดับน้ำมันเครื่อง</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบระดับน้ำมันเครื่อง<div>(ดูที่ <font class="extxref-label"><a href="id0111h5800500.html">การตรวจสอบระดับน้ำมันเครื่อง [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ระดับน้ำมันเครื่องพอหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">เติมน้ำมันเครื่องแท้ แล้วไปที่ขั้นตอน 8</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0111h5800400.html">การเปลี่ยนน้ำมันเครื่อง [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">6</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">จุดประสงค์: ตรวจสอบแรงดันน้ำมันเครื่อง</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบแรงดันน้ำมันเครื่อง<div>(ดูที่ <font class="extxref-label"><a href="id0111h5800300.html">การตรวจสอบแรงดันน้ำมันเครื่อง [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;มีความบกพร่องใดๆ หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอน 8</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">7</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">จุดประสงค์: ตรวจสอบว่าความบกพร่องที่เกี่ยวกับการรั่วหรือการอุดตันของน้ำมันเครื่องส่งผลกระทบต่อผลการวิเคราะห์ปัญหาหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;สตาร์ทเครื่องยนต์</div>
+<div class="list">•&nbsp;&nbsp;ตรวจสอบว่ามีการรั่วหรือการอุดตันของน้ำมันเครื่องในช่องน้ำมันหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;มีการรั่วหรือการอุดตันของน้ำมันเครื่องในช่องน้ำมันหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ซ่อมหรือเปลี่ยนชิ้นส่วนที่บกพร่องตามผลการตรวจสอบ</div>
+<div class="tbody">เติมน้ำมันเครื่องแท้ แล้วไปที่ขั้นตอนถัดไป</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0111h5800400.html">การเปลี่ยนน้ำมันเครื่อง [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">8</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">จุดประสงค์: การตรวจสอบความสมบูรณ์ของการซ่อมแซมรถยนต์</div>
+<div class="list">•&nbsp;&nbsp;ต่อขั้วต่อที่ปลดออกทั้งหมดกลับเข้าที่ทุกครั้ง</div>
+<div class="list">•&nbsp;&nbsp;ลบรหัสวิเคราะห์ปัญหาออกจากหน่วยความจำ PCM โดยใช้ M-MDS<div>(ดูที่ <font class="extxref-label"><a href="id0102h4801100.html">ขั้นตอนหลังจากงานซ่อม [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;นำขั้นตอนการตรวจสอบการปรากฏซ้ำได้ไปใช้<div>(ดูที่ <font class="intxref-label"><a href="#id0102h400810004">ขั้นตอนการตรวจสอบการปรากฏซ้ำได้</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;ปฏิบัติตามขั้นตอนการเข้ารหัสปัญหาที่ค้างอยู่<div>(ดูที่ <font class="extxref-label"><a href="id0102h4801000.html">การทดสอบการวิเคราะห์ปัญหาบนรถ [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</div>
+<div class="list">•&nbsp;&nbsp;รหัสที่ค้างอยู่ของรหัสวิเคราะห์ปัญหานี้ปรากฏขึ้นหรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ทำซ้ำการตรวจสอบตั้งแต่ขั้นตอน 1</div>
+<div class="list">•&nbsp;&nbsp;ถ้าความบกพร่องเกิดขึ้นอีกครั้ง ให้เปลี่ยน PCM<div>(ดูที่ <font class="extxref-label"><a href="id0140g2802400.html">การถอด / การติดตั้ง PCM [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</div>
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่ขั้นตอนถัดไป</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center" rowspan="2">
+<div class="tbody">9</div>
+</td>
+<td id="" align="left" rowspan="2">
+<div class="entry-title">จุดประสงค์: ตรวจสอบว่ามีความบกพร่องในส่วนอื่นๆ อีกหรือไม่</div>
+<div class="list">•&nbsp;&nbsp;รหัสวิเคราะห์หรือรหัสที่ค้างอยู่อื่นๆ ได้รับการจัดเก็บไว้หรือไม่</div>
+</td>
+<td id="" align="center">
+<div class="tbody">Yes</div>
+</td>
+<td id="" align="left">
+<div class="tbody">ไปที่การตรวจสอบรหัสวิเคราะห์ปัญหานั้นๆ</div>
+<div class="tbody">(ดูที่ <font class="extxref-label"><a href="id0102h4801500.html">ตารางรหัสวิเคราะห์ปัญหา [SKYACTIV-G 2.0, SKYACTIV-G 2.5]</a></font>)</div>
+</td>
+</tr>
+<tr>
+<td id="" align="center">
+<div class="tbody">No</div>
+</td>
+<td id="" align="left">
+<div class="tbody">การค้นหาสาเหตุปัญหาของรหัสวิเคราะห์ปัญหาเสร็จสมบูรณ์</div>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+</body>
+</html>
